@@ -29,3 +29,13 @@ The shared source corpus has upstream calibration overlap with reporting years. 
 ## Actual-data interface check
 
 The standalone commands generated five annual profiles from the recorded native models and exact corpus, selected orthogonal cases and exported the average-yield/normal case to nine unit arrays (three solar, five wind, one hror). Solar and wind mean absolute capacity-weighted mapping errors were below the 1e-4 tolerance. The input hashes and numerical diagnostics are retained in `provenance/spatial_export_verification.json`. This is a five-member interface smoke test, not a regenerated manuscript ensemble or solver validation.
+
+## Cross-project interface extensions
+
+The reusable interface includes a complete offline demonstration on labelled illustrative signals, a wide availability CSV and a `(unit, period, year)` parameter adapter. Injection rejects absent runtime keys and preserves unrelated entries. The thermal adapter requires explicit baseline temperature and complete baseline demand/COP keys, returns copies and preserves annual demand totals. It does not depend on Croatian unit names or implicit country-file lookup.
+
+The temperature module adds an optional explicit-baseline argument; the scenario manager adds optional hydro exclusion. Their original default behavior is retained and exact earlier versions are under `provenance/executed/`. These API extensions do not replace recorded research results. The strict exporter validates transfer rows, weights, zone coverage and input calendars before legacy loaders can apply fallbacks. Explicit NUTS3 requests cannot become macro exports silently. New training requires an explicit latitude.
+
+Generator library import no longer performs country-specific configuration, creates output directories or invokes dependency installation. The maintained entry point supplies dataset paths and latitude. The installed adapter resolves its thermal code through the distinct `h2res_climate` package to avoid a collision with an integrating H2RES project's own `scripts` package.
+
+Twenty regression tests and the executable offline walkthrough cover these contracts. The stricter exporter was also rerun with existing Croatian inputs. Full calibration after a corrected-model refit, arbitrary external H2RES variants and unrestricted reuse permissions remain outside that evidence; see [validation coverage](docs/VALIDATION.md).

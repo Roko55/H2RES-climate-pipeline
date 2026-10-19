@@ -785,7 +785,8 @@ def decompose_to_h2res_units(scenario_profile: np.ndarray,
                               ncre_csv_path: str = None,
                               country_code: str = "HR",
                               wind_resolution_mode: str = "auto",
-                              return_diagnostics: bool = False) -> dict:
+                              return_diagnostics: bool = False,
+                              include_hror: bool = True) -> dict:
     """
     Decompose one aggregate scenario into per-unit H2RES profiles.
 
@@ -811,7 +812,7 @@ def decompose_to_h2res_units(scenario_profile: np.ndarray,
     cc = _normalize_country_code(country_code)
     solar_units = _get_solar_units(cc)
     wind_units = _get_wind_units(cc)
-    hror_profile = _load_hror_profile(cc, ncre_csv_path=ncre_csv_path)
+    hror_profile = _load_hror_profile(cc, ncre_csv_path=ncre_csv_path) if include_hror else None
 
     result = {}
     diagnostics = {}
@@ -905,7 +906,8 @@ def decompose_to_h2res_units(scenario_profile: np.ndarray,
             f"mass_err={mean_abs_err:.6f}"
         )
 
-    result[HROR_UNIT] = hror_profile
+    if include_hror:
+        result[HROR_UNIT] = hror_profile
     if return_diagnostics:
         return result, diagnostics
     return result

@@ -14,5 +14,10 @@
     "Source corpus calibration overlaps reporting years",
     "Causal rolling warmup corrected for new fitting; published results are original-version results",
     "No joint physical weather coherence or improved downstream investment outcome is established by these checks"
+  ],
+  "reuse_extensions": [
+    "Explicit baseline-temperature API",
+    "Optional hydro exclusion",
+    "Strict transfer input checks and H2RES availability adapters"
   ]
 }

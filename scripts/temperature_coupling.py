@@ -274,6 +274,7 @@ def apply_temperature_coupling_to_runtime(
     max_cop: float = 5.5,
     cop_temperature_sensitivity: float = 0.85,
     calibrate_cop_to_baseline_mean: bool = True,
+    baseline_temp_profile: Sequence[float] | None = None,
 ) -> dict:
     """
     Update H2RES heat/cooling/COP dictionaries using a climate temperature year.
@@ -285,15 +286,21 @@ def apply_temperature_coupling_to_runtime(
     - cooling keeps its original annual total but follows CDD shape
     - heat-pump COP becomes temperature-sensitive against a climatological baseline
 
+    ``baseline_temp_profile`` supplies an explicit baseline instead of the legacy
+    country-file lookup. The reusable adapter requires this baseline.
+
     Set ``scale_annual_totals=True`` only for explicit thermal-stress
     sensitivity runs where annual heat/cooling demand should vary.
     """
     periods = [int(period) for period in periods[:8760]]
     temp_c = _as_hourly_array(temp_profile, len(periods))
-    baseline_temp_c = _as_hourly_array(
-        _load_country_baseline_temp_profile(country_code),
-        len(periods),
-    )
+    if baseline_temp_profile is None:
+        baseline_temp_c = _as_hourly_array(
+            _load_country_baseline_temp_profile(country_code), len(periods))
+    else:
+        baseline_temp_c = np.asarray(baseline_temp_profile, dtype=float)
+        if baseline_temp_c.shape != (len(periods),) or not np.isfinite(baseline_temp_c).all():
+            raise ValueError("Explicit baseline temperature must match the selected hours and be finite")
 
     heating_signal = _degree_day_signal(temp_c, heating_base_c, mode="heating")
     cooling_signal = _degree_day_signal(temp_c, cooling_base_c, mode="cooling")

@@ -146,7 +146,9 @@ def get_config(config_path: str = None, latitude: float = None) -> ClimateConfig
     return cfg
 
 
-CONFIG = get_config()
+# Importing the library must not select a country or create output directories.
+# The maintained entry point supplies latitude and paths explicitly.
+CONFIG = ClimateConfig(country="Unspecified")
 
 
 def setup_environment(cfg: ClimateConfig):
@@ -160,7 +162,7 @@ def setup_environment(cfg: ClimateConfig):
             subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", pkg])
 
 
-setup_environment(CONFIG)
+# Dependencies are installed explicitly from requirements.txt, never on import.
 
 HOURS_PER_YEAR = CONFIG.hours_per_year
 RESULTS_DIR = CONFIG.results_dir

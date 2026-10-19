@@ -1,9 +1,10 @@
 {
   "training_source_sha256": "111e0aefc0ccb4fd4d034f28cf9f539bfb82995bf053bbba0582d09fd1f828e2",
-  "generation_source_sha256": "84731426b25e6da37d04b7bf56607de4906ca36d5df585e38005edcf5d3f95f8",
+  "generation_source_sha256": "e34b6eda270bda5e64a2514740b2e4b715ebc9eb7bf25a8fd2d06d2cedeb4086",
   "changes": [
     "Strictly causal rolling means for new fitting/calibration; first post-warmup row corrected",
-    "Missing wind training pool now raises an error"
+    "Missing wind training pool now raises an error",
+    "Library import does not perform country lookup, create directories or install dependencies; entry point supplies latitude explicitly"
   ],
   "compatibility_scope": "Generation from complete native model bundle and exact training corpus; measured fitting records remain original-version records",
   "generation_replay_evidence": "provenance/generation_replay.json"

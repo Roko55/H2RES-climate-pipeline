@@ -1,92 +1,106 @@
 # H2RES climate pipeline
 
-A variable-specific generator and scenario interface for annual hourly H2RES inputs. Solar and temperature use autoregressive XGBoost quantile models; wind uses season-aware historical block resampling. Representative annual cases are selected by renewable yield and thermal stress, then mapped to generation-unit availability profiles. Temperature-coupling utilities redistribute heat demand and adjust heat-pump COP.
+Generate annual hourly solar capacity factor, wind capacity factor and temperature profiles; select representative sensitivity cases; prepare generation-unit and temperature-dependent inputs for H2RES.
 
-Companion experiment: [H2RES autoencoder](https://github.com/Roko55/H2RES-autoencoder).
+Solar and temperature use autoregressive XGBoost quantile models. Wind uses seasonal historical block resampling. Channels are generated independently. This tool prepares climate inputs; the H2RES optimizer, solver licence and complete solver database are separate.
 
-## Repository scope
+## Start here
 
-| Component | Implementation | Output |
+| Goal | Start with | Inputs |
 |---|---|---|
-| Solar and temperature | Three quantile regressors per channel, autoregressive generation, calibrated correlated noise | Hourly solar CF and temperature |
-| Wind | Season-aware 144-hour historical block resampling with boundary blending | Hourly wind CF |
-| Representative cases | Renewable-yield and thermal-stress clustering, explicit selection method | Low/average/high resource and cold/normal/hot cases |
-| Spatial interface | Source-zone ratio profiles and transfer matrices | H2RES unit availability arrays |
-| Temperature coupling | Demand-shape normalization and temperature-dependent COP | Runtime demand/COP dictionaries in an H2RES application |
+| Try the interface after cloning | Offline demonstration below | Installed packages only |
+| Replay the delivered Croatian model | [Recorded model](docs/USAGE.md#recorded-model) | Exact historical corpus identified by hash |
+| Use another dataset / H2RES project | [Own-data workflow](docs/USAGE.md#own-data-workflow) | Your hourly CF/temperature data and spatial mapping inputs |
+| Connect output to H2RES | [Integration examples](docs/INTEGRATION.md) | Your unit names and runtime dictionaries |
 
-The profile array has shape `[annual_profiles, 8760, 3]`, with channels `[solar, wind, temperature]`, in capacity factor, capacity factor and degrees Celsius. Leap days are excluded. Channels are generated independently; combined cases are designed sensitivities, not physically coherent multivariate weather samples.
+## Install
 
-This repository covers climate generation, case selection and interface preparation. The H2RES optimization model, Gurobi licence and complete solver input database are separate dependencies. Running these commands does not reproduce or revalidate the manuscript's investment or operational results.
+Python 3.11 is the clean-environment CI target. Run commands from the repository root:
 
-## Installation and verification
+```bash
+git clone https://github.com/Roko55/H2RES-climate-pipeline.git
+cd H2RES-climate-pipeline
+python -m venv .venv
+```
 
-Use Python 3.11 in a dedicated environment:
+Activate on Windows PowerShell with `.\.venv\Scripts\Activate.ps1`, or on Linux/macOS with `source .venv/bin/activate`. Then:
 
 ```bash
 python -m pip install -r requirements.txt
+python -m pip install -e . --no-deps
 python -m unittest discover -s tests -v
 python audit.py
 ```
 
-No dataset download, fitting or solver execution occurs during installation or the synthetic tests. Native XGBoost model files are included; raw training weather and spatial source datasets are not redistributed. See [data requirements](docs/DATA.md) and [rights](RIGHTS.md).
+If activation is unavailable, invoke the environment's Python executable directly. Access and reuse conditions are described in [RIGHTS.md](RIGHTS.md).
 
-## Generate annual profiles
+The editable installation makes `h2res_interface` importable from your own project. The CLI, models and evidence remain in this checkout. Installing the adapter does not copy or configure an H2RES optimizer.
 
-Supply the exact `HR_data.parquet` identified in [data provenance](provenance/data_provenance.json). The default model bundle is the recorded seed-42 comparison refit, not a certified copy of the original manuscript checkpoint.
-
-```bash
-python pipeline.py generate --data data/SC/HR_data.parquet --count 15 --seed 101 --output exports/profiles_101.npy
-```
-
-The entry point checks complete hourly chronology, source-data identity, all six model hashes, calibration metadata and source compatibility. Wind is resampled from the training partition only. Generation uses one CPU thread. Changed input data, missing models and existing outputs are rejected; missing wind data are not replaced by noise.
-
-## Select annual sensitivity cases
-
-Choose the combination rule explicitly:
+## Offline demonstration
 
 ```bash
-python pipeline.py select --profiles exports/profiles_101.npy --method orthogonal --output exports/cases_101.npz
+python examples/demo.py --output exports/demo_01
 ```
 
-`orthogonal` combines the renewable representative with the temperature representative from separate axes, allowing controlled channel comparisons. `joint_medoid` retains complete generated annual profiles, selecting within joint clusters or the nearest available member when a cluster is empty. These are different experimental designs. Cluster fractions are ensemble summaries, not calibrated probabilities. Selection here applies no future climate scaling. The legacy module's optional future-year scaling is separate from baseline case selection.
+This uses **illustrative data, not trained-model output or research results**. It runs selection, spatial mapping, CSV export and temperature coupling without downloading data, fitting models or calling a solver.
 
-## Export to H2RES units
+| Output | Contents |
+|---|---|
+| `exports/demo_01/inputs/` | Inspectable spatial Parquet files, unit/transfer CSVs and fabricated profiles |
+| `exports/demo_01/cases.npz` | Representative annual solar/wind/temperature cases |
+| `exports/demo_01/units.npz` | Five unit profiles: two solar, two wind, one fixed hydro |
+| `exports/demo_01/availability_2030.csv` | `year,period,<unit columns>`; periods 1–8760 |
+| `exports/demo_01/demo_summary.json` | 43,800 availability entries, preserved demand totals and COP range |
 
-Provide the spatial source profiles, transfer matrices and existing H2RES unit definitions described in [DATA.md](docs/DATA.md):
+Country code `ZZ` and unit names are placeholders. Reruns need a new directory, e.g. `exports/demo_02`. GitHub Actions runs this complete demo, regression tests and artifact audit.
 
-```bash
-python pipeline.py export-units --scenarios exports/cases_101.npz --scenario avg_yield__normal --mapping-dir data/SC --country HR --wind-resolution auto --output exports/units_101.npz
+## Processing stages
+
+```mermaid
+flowchart LR
+    A[Historical hourly CF and temperature] --> B[Fit models and validation calibration]
+    B --> C[Native model bundle]
+    A --> D[Training climatology and wind blocks]
+    C --> E[Generate annual arrays]
+    D --> E
+    E --> F[Select annual sensitivity cases]
+    F --> G[Spatial unit mapping]
+    H[Zone profiles, transfer weights and capacities] --> G
+    G --> J[H2RES availability parameters or CSV]
+    F --> I[Temperature demand and COP coupling]
+    K[Explicit baseline weather and demand] --> I
 ```
 
-The output contains one 8,760-hour capacity-factor array per unit and a JSON record of input hashes and capacity-weighted mapping errors. Missing spatial artifacts, invalid unit arrays and mapping error beyond the requested tolerance cause failure. Temperature is passed separately to `scripts/temperature_coupling.py` by the external H2RES runtime. See [integration](docs/INTEGRATION.md).
+Profiles have shape `[number_of_years, 8760, 3]`, channel order `[solar, wind, temperature]` and units capacity factor, capacity factor, degrees Celsius. Leap days are removed. Irradiance and wind speed cannot be supplied in place of electrical capacity factors.
 
-## Fit a new model bundle
+Trees alone cannot reproduce the complete pipeline: historical data also supply the wind pool and training climatology. Croatian replay requires the exact corpus; users with other data fit a new bundle with an explicit latitude. Raw source data are not redistributed. [USAGE.md](docs/USAGE.md) gives commands; [DATA.md](docs/DATA.md) defines schemas.
 
-```bash
-python pipeline.py train --data data/SC/HR_data.parquet --seed 42 --latitude 44.52 --output exports/new_fit
-python pipeline.py generate --data data/SC/HR_data.parquet --model-dir exports/new_fit --count 15 --seed 101 --output exports/new_profiles.npy
-```
+## Integration choices
 
-New CPU fitting uses the maintained causal-feature implementation, chronological 80%/10%/remainder splits by complete years, training-only climatology and validation calibration. For the 45-year source corpus these correspond to 1980–2015, 2016–2019 and 2020–2024. New training results are separate from the delivered results. The recorded default bundle used the original implementation; [AUDIT.md](AUDIT.md) identifies the warmup correction and generation compatibility evidence.
+- `orthogonal` combines separate renewable and temperature representatives; `joint_medoid` retains whole generated annual profiles. The CLI requires an explicit choice.
+- `h2res_interface.py` creates `aval_factor_plant[(unit, period, year)]` or a wide CSV and rejects mismatched runtime keys.
+- Temperature coupling requires explicit baseline weather and complete demand/COP dictionaries. It preserves annual heat/cooling totals and returns copies without changing caller inputs.
+- `export-units --exclude-hror` supports solar/wind-only projects without hydro input files.
 
-## Application comparison
+Cold/normal/hot and low/average/high are relative ensemble labels, not calibrated event probabilities. Spatial ratios are historical climatologies, not new spatial weather realizations. Apply the annual interface before project-specific time aggregation; see [INTEGRATION.md](docs/INTEGRATION.md).
 
-For annual H2RES resource cases, the primary comparison concerns interannual wind variability. The validation-selected autoencoder produced wind annual-mean SD equal to 14.0% of the reporting-year reference; the default hybrid produced 74.8%. The autoencoder performs better on several other statistics. Both methods have limitations, including annual solar/temperature diversity.
+## Validation and research evidence
 
-![Annual wind and renewable-yield variability](figures/application_comparison.png)
+[VALIDATION.md](docs/VALIDATION.md) separates tested functionality, scientific claims and external dependencies. [AUDIT.md](AUDIT.md) records the causal warmup correction and replay limits. Models, source/data hashes and execution records are under `models/` and `provenance/`.
 
-The grey bars represent five historical reporting years, not an older H2RES model. Orange is one selected autoencoder; blue is this pipeline's default refit. Heights show SD across annual averages, not hourly error or training loss. The renewable-yield index is annual mean solar CF + wind CF, not actual system generation.
+The [recorded comparison](docs/RESEARCH_RESULTS.md) and [autoencoder experiment](https://github.com/Roko55/H2RES-autoencoder) evaluate annual wind diversity and other metrics. Results are retrospective because upstream calibration overlaps reporting years. New fits are separate from those measurements.
 
-| Recorded measurement | Autoencoder | Current pipeline |
-|---|---:|---:|
-| Training / preparation | 3,600 s | 131 s |
-| Peak process RAM during preparation | 1,477 MiB | 1,012 MiB |
-| Generate 15 years on the common CPU, after load/warmup | 2.386 s | 52.285 s |
+## Repository map
 
-Preparation uses different fitting stages and hardware: Quadro P2000 CVAE training versus hybrid GPU fitting plus CPU calibration/preparation. These are measured workflows, not a matched-hardware time-to-equal-quality benchmark. Full tables remain in [results](results/), including separate configurations and favourable autoencoder results.
+| Path | Purpose |
+|---|---|
+| `pipeline.py` | Validated train/generate/select/export commands |
+| `h2res_interface.py` | Availability and temperature adapters |
+| `examples/demo.py` | Complete offline interface demonstration |
+| `scripts/` | Generation, scenario-selection and thermal methods |
+| `tests/` | Synthetic regression and cross-project checks |
+| `models/default/` | Six native quantile models and calibration |
+| `docs/` | Usage, schemas, integration, validation and recorded results |
+| `provenance/`, `results/` | Source identity, replay evidence and measurements |
 
-**Evaluation scope:** upstream calibration used years overlapping the reporting period. The comparison is retrospective on a common pre-calibrated corpus, not an independent temporal holdout. The audit does not quantify the effect on model ranking. No downstream optimization was rerun for this comparison.
-
-## Source and evidence
-
-`scripts/` contains the generator, scenario manager and temperature coupling. `pipeline.py` supplies validated commands. `tests/` contains synthetic regression checks. `models/default/` contains native quantile models and calibration metadata. `provenance/` records measured execution, source hashes, source compatibility and manuscript correspondence. [AUDIT.md](AUDIT.md) defines validation coverage and limits.
+See [troubleshooting](docs/USAGE.md#troubleshooting) for input and environment errors.

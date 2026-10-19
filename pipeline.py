@@ -1,8 +1,8 @@
 """Validated entry points for the H2RES climate profile pipeline.
 
-The maintained model includes a causal-feature warmup correction; its original
-execution source is retained in provenance. Scenario-selection and temperature-
-coupling modules are unchanged. Inputs are validated before module calls.
+The maintained model includes a causal-feature warmup correction. Optional
+explicit-baseline and hydro-export extensions support other H2RES projects.
+Original sources are retained in provenance. Inputs are validated before calls.
 """
 from pathlib import Path
 import os
@@ -16,6 +16,7 @@ import argparse
 import hashlib
 import json
 import tempfile
+import sys
 import numpy as np
 import pandas as pd
 
@@ -79,6 +80,55 @@ def validated_frame(frame):
 
 def load_data(path):
     return validated_frame(pd.read_parquet(path))
+
+
+def validate_spatial_transfer(profile_path, transfer_path, units):
+    """Reject mappings that legacy loaders would repair with implicit fallbacks."""
+    profiles = pd.read_parquet(profile_path)
+    transfer = pd.read_csv(transfer_path)
+    if not {"unit_name", "source_zone", "weight"}.issubset(transfer.columns):
+        raise ValueError("Transfer CSV requires unit_name, source_zone, weight")
+    if transfer[["unit_name", "source_zone"]].isna().any().any():
+        raise ValueError("Transfer names must not be missing")
+    for column in ("unit_name", "source_zone"):
+        if transfer[column].astype(str).str.strip().eq("").any():
+            raise ValueError("Transfer names must not be empty")
+        transfer[column] = transfer[column].astype(str).str.strip()
+    weights = pd.to_numeric(transfer.weight, errors="coerce")
+    if not np.isfinite(weights).all() or (weights < 0).any():
+        raise ValueError("Transfer weights must be finite and nonnegative")
+    if transfer.duplicated(["unit_name", "source_zone"]).any():
+        raise ValueError("Each unit/source-zone pair must have one explicit weight")
+    if set(transfer.unit_name) != set(units):
+        raise ValueError("Transfer unit names must exactly match the selected solver units")
+    if (transfer.assign(weight=weights).groupby("unit_name").weight.sum() <= 0).any():
+        raise ValueError("Every solver unit requires a positive total transfer weight")
+    zones = set(transfer.source_zone)
+    if not zones.issubset(profiles.columns):
+        raise ValueError("Transfer references source zones missing from the profile table")
+    values = profiles[sorted(zones)].to_numpy(dtype=float)
+    if not np.isfinite(values).all() or (values < 0).any() or (values > 1).any():
+        raise ValueError("Spatial source capacity factors must be finite and within [0, 1]")
+    if "time" in profiles:
+        dates = pd.to_datetime(profiles.time)
+    elif isinstance(profiles.index, pd.DatetimeIndex):
+        dates = pd.Series(profiles.index)
+    else:
+        raise ValueError("Spatial profiles require a time column or DatetimeIndex")
+    if dates.isna().any() or dates.duplicated().any() or not dates.is_monotonic_increasing:
+        raise ValueError("Spatial timestamps must be ordered, unique and finite")
+    if dates.dt.tz is not None:
+        utc = dates.dt.tz_convert("UTC").dt.tz_localize(None)
+        if not utc.equals(dates.dt.tz_localize(None)):
+            raise ValueError("Convert spatial timestamps to UTC before writing the input file")
+        dates = utc
+    if (dates.dt.minute != 0).any() or (dates.dt.second != 0).any():
+        raise ValueError("Spatial timestamps must fall on whole hours")
+    dates = dates.loc[~((dates.dt.month == 2) & (dates.dt.day == 29))]
+    ordinal = dates.dt.dayofyear - (dates.dt.is_leap_year & (dates.dt.month > 2)).astype(int)
+    hours = (ordinal-1)*24 + dates.dt.hour
+    if set(hours) != set(range(8760)):
+        raise ValueError("Spatial data must cover every non-leap hour of year; no gap interpolation is allowed")
 
 
 def verify_sources():
@@ -159,7 +209,9 @@ def generate(args):
         "model_metadata_sha256": digest(Path(args.model_dir) / "metadata.json"),
         "output_sha256": digest(output), "data_years": years,
         "prediction_device": "cpu", "CPU_threads": 1,
-        "evaluation_scope": "See provenance/data_provenance.json; supplied corpus is retrospective"})
+        "evaluation_scope": ("Retrospective shared corpus; see provenance/data_provenance.json"
+            if digest(args.data) == "d92748ca6625d0092b073b9bc16345da960a04c42da29926da5b125a63ad122d"
+            else "User-supplied corpus; upstream calibration and external validation not audited")})
     print(f"Generated {len(values)} annual profiles: {output}")
 
 
@@ -243,19 +295,51 @@ def export_units(args):
     for cache in (manager._solar_units_cache, manager._wind_units_cache, manager._ratio_cache):
         cache.clear()
     cc = args.country
-    for name in (f"genco_data_{cc}_sdewes.csv", f"ncre_aval_factor_{cc}_2020_2050_sdewes.csv"):
+    required = [f"genco_data_{cc}_sdewes.csv"]
+    if not args.exclude_hror:
+        required.append(f"ncre_aval_factor_{cc}_2020_2050_sdewes.csv")
+    for name in required:
         if not (Path(args.mapping_dir) / name).is_file():
             raise FileNotFoundError("Required mapping input: " + name)
     ncre_path = Path(args.mapping_dir) / f"ncre_aval_factor_{cc}_2020_2050_sdewes.csv"
-    ncre = pd.read_csv(ncre_path)
-    if "hror" not in ncre or "period" not in ncre:
-        raise ValueError("Explicit period and hror columns required in the existing H2RES availability input")
+    if not args.exclude_hror:
+        ncre = pd.read_csv(ncre_path)
+        if "hror" not in ncre or "period" not in ncre:
+            raise ValueError("Explicit period and hror columns required in the existing H2RES availability input")
+        hydro = pd.to_numeric(ncre.hror, errors="coerce")
+        if not np.isfinite(hydro).all() or (hydro < 0).any() or (hydro > 1).any():
+            raise ValueError("Hydro availability must be finite capacity factors in [0, 1]")
+        periods = pd.to_numeric(ncre.period, errors="coerce")
+        if not np.isfinite(periods).all() or (periods % 1 != 0).any() or (periods < 1).any():
+            raise ValueError("Hydro period values must be positive integers")
+        if set((periods.astype(int)-1) % 8760) != set(range(8760)):
+            raise ValueError("Hydro availability must cover all 8760 hour-of-year periods")
+    genco = pd.read_csv(Path(args.mapping_dir)/f"genco_data_{cc}_sdewes.csv")
+    if not {"unit_name", "technology", "fuel_type", "cap_mw"}.issubset(genco.columns):
+        raise ValueError("Unit table requires unit_name, technology, fuel_type, cap_mw")
+    if genco[genco.technology == "PHOT"].empty or genco[genco.fuel_type == "Wind"].empty:
+        raise ValueError("Unit table must explicitly identify PHOT solar and Wind fuel units")
+    capacities = pd.to_numeric(genco.cap_mw, errors="coerce")
+    if not np.isfinite(capacities).all() or (capacities < 0).any() or genco.unit_name.isna().any():
+        raise ValueError("Unit names and finite nonnegative capacities are required")
     if not manager._get_solar_units(cc) or not manager._get_wind_units(cc):
         raise ValueError("Mapping requires explicit solar and wind solver units")
+    solar_units, wind_units = manager._get_solar_units(cc), manager._get_wind_units(cc)
+    if set(solar_units) & set(wind_units) or sum(solar_units.values()) <= 0 or sum(wind_units.values()) <= 0:
+        raise ValueError("Solar/wind unit names must be disjoint and each group needs positive capacity")
+    solar_paths, wind_paths = manager._solar_artifact_paths(cc), manager._wind_artifact_paths(cc)
+    validate_spatial_transfer(solar_paths["macro_profiles"], solar_paths["transfer_macro"], solar_units)
+    if args.wind_resolution == "auto" and not Path(wind_paths["sites_meta"]).is_file():
+        raise FileNotFoundError("Wind auto resolution requires sites metadata; otherwise choose macro or nuts3 explicitly")
+    if args.wind_resolution == "nuts3" and not all(Path(wind_paths[k]).is_file() for k in ("nuts_profiles", "transfer_nuts")):
+        raise FileNotFoundError("Requested NUTS3 resolution requires both NUTS3 profiles and transfer CSV")
+    resolution, _ = manager._resolve_wind_resolution(cc, args.wind_resolution)
+    prefix = "nuts" if resolution == "nuts3" else "macro"
+    validate_spatial_transfer(wind_paths[prefix+"_profiles"], wind_paths["transfer_"+prefix], wind_units)
     if manager._load_solar_spatial_components(cc, manager._get_solar_units(cc)) is None:
         raise ValueError("Spatial solar artifacts required; legacy fallback is not an audited export")
     units, diagnostics = manager.decompose_to_h2res_units(profile, country_code=cc,
-        wind_resolution_mode=args.wind_resolution, return_diagnostics=True)
+        wind_resolution_mode=resolution, return_diagnostics=True, include_hror=not args.exclude_hror)
     for name, array in units.items():
         if array.shape != (8760,) or not np.isfinite(array).all() or (array < 0).any() or (array > 1).any():
             raise ValueError("Invalid unit profile: " + name)
@@ -269,7 +353,8 @@ def export_units(args):
     used.update(genco=str(Path(args.mapping_dir)/f"genco_data_{cc}_sdewes.csv"), ncre=str(ncre_path))
     save_json(output.with_suffix(".json"), {"scenario": args.scenario, "diagnostics": diagnostics,
         "mapping_inputs": {Path(p).name: digest(p) for p in used.values() if Path(p).is_file()},
-        "input_sha256": digest(args.scenarios), "output_sha256": digest(output)})
+        "input_sha256": digest(args.scenarios), "output_sha256": digest(output),
+        "includes_hror": not args.exclude_hror})
 
 
 def main(argv=None):
@@ -285,7 +370,7 @@ def main(argv=None):
     fit = commands.add_parser("train", help="Fit six CPU quantile models and validation calibration")
     fit.add_argument("--data", required=True)
     fit.add_argument("--seed", type=int, default=42)
-    fit.add_argument("--latitude", type=float, default=44.52)
+    fit.add_argument("--latitude", type=float, required=True)
     fit.add_argument("--output", required=True)
     fit.set_defaults(function=train)
     choice = commands.add_parser("select", help="Select representative annual scenarios")
@@ -300,9 +385,12 @@ def main(argv=None):
     export.add_argument("--country", default="HR")
     export.add_argument("--wind-resolution", choices=("auto", "nuts3", "macro"), default="auto")
     export.add_argument("--mass-tolerance", type=float, default=1e-4)
+    export.add_argument("--exclude-hror", action="store_true", help="Export only solar/wind; no hydro input required")
     export.add_argument("--output", required=True)
     export.set_defaults(function=export_units)
     args = parser.parse_args(argv)
+    if hasattr(args, "latitude") and (not np.isfinite(args.latitude) or not -90 <= args.latitude <= 90):
+        parser.error("Latitude must be finite and between -90 and 90 degrees")
     if hasattr(args, "country") and (len(args.country) != 2 or not args.country.isalpha() or args.country != args.country.upper()):
         parser.error("Country must be a two-letter uppercase code")
     if getattr(args, "mass_tolerance", 1e-4) <= 0 or not np.isfinite(getattr(args, "mass_tolerance", 1e-4)):
@@ -311,4 +399,8 @@ def main(argv=None):
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except (ValueError, KeyError, FileNotFoundError, FileExistsError) as error:
+        print(f"Error: {error}", file=sys.stderr)
+        raise SystemExit(2)

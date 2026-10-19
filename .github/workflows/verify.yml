@@ -21,9 +21,14 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install -r requirements.txt
+          python -m pip install -e . --no-deps
+      - name: Installed adapter from another project
+        run: python examples/check_installed_api.py
       - name: Synthetic regression checks
         run: python -m unittest discover -s tests -v
       - name: Verify publication artifacts
         run: python audit.py
       - name: Validate command interface
         run: python pipeline.py --help
+      - name: Offline end-to-end walkthrough
+        run: python examples/demo.py --output exports/ci_walkthrough

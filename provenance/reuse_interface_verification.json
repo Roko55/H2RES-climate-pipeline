@@ -1,0 +1,22 @@
+{
+  "data_kind": "illustrative_only",
+  "research_result": false,
+  "ensemble_size": 18,
+  "unit_count": 5,
+  "availability_parameter_count": 43800,
+  "first_parameter_key": [
+    "solar_west",
+    1,
+    2030
+  ],
+  "heat_total_before": 87600.0,
+  "heat_total_after": 87599.99999999994,
+  "cooling_total_before": 35040.0,
+  "cooling_total_after": 35040.0,
+  "minimum_cop": 2.2554641454974163,
+  "maximum_cop": 3.9616318157446706,
+  "solver_called": false,
+  "training_called": false,
+  "local_regression_tests_passed": 20,
+  "scope": "Illustrative offline interface demonstration; scientific result arrays unchanged"
+}

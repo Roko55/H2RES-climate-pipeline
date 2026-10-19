@@ -27,5 +27,8 @@
     "xgboost": "2.1.4",
     "pandas": "2.3.3"
   },
-  "interpretation": "Source changes preserve generation on the controlled same-runtime check. Archived faculty arrays differ on this runtime; the remaining cause has not been isolated. No historical result is replaced."
+  "interpretation": "Source changes preserve generation on the controlled same-runtime check. Archived faculty arrays differ on this runtime; the remaining cause has not been isolated. No historical result is replaced.",
+  "reusable_entrypoint_source_sha256": "e34b6eda270bda5e64a2514740b2e4b715ebc9eb7bf25a8fd2d06d2cedeb4086",
+  "reuse_revision_vs_previous_local_replay_bitwise_equal": true,
+  "reuse_revision_count": 5
 }

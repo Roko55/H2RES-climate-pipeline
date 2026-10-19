@@ -1,9 +1,74 @@
 # H2RES integration
 
-The standalone pipeline exports aggregate annual profiles, representative scenarios and generation-unit availability arrays. The NPZ unit keys are H2RES unit names. Arrays are ordered non-leap hours 0–8759; the H2RES runtime supplies its own period/year indexing and unit database.
+The interface prepares inputs before optimization. It does not import Gurobi or modify solver constraints. Use this full-year interface before any project-specific time aggregation or rolling-window slicing.
 
-For temperature integration, call `apply_temperature_coupling_to_runtime` from `scripts/temperature_coupling.py` with the selected temperature path and the runtime heat-demand, cooling-demand and heat-pump COP dictionaries. Supply explicit baseline dictionaries and the country source data. The default mode preserves annual heating/cooling totals while redistributing demand across hours. Annual-total scaling is a separate option, disabled by default. COP adjustment uses a baseline temperature climatology and documented bounds.
+Install the adapter with `python -m pip install -e . --no-deps` after the requirements. You can then import `h2res_interface` from a separate H2RES project. The installed thermal implementation uses the distinct `h2res_climate` namespace to avoid conflicts with that project's own `scripts` directory. CLI/model files remain in this checkout; the Python adapter package does not install a complete optimization application.
 
-The original temperature module contains legacy missing-data fallbacks, including a zero baseline when the country source is absent. An integrating runtime must supply the actual baseline weather and demand inputs; missing baseline weather is not an evaluated physical scenario. Synthetic regression tests verify demand-total preservation, not the calibration of the thermal model.
+## Availability arrays to parameters
 
-The manuscript describes separately generated channels and designed sensitivity combinations. Use an explicit selection rule and preserve generated-case metadata with any planning run. Neither `pipeline.py` nor the tests invoke Gurobi. Full solver reproduction additionally needs the external H2RES version, solver licence, complete input database, scenario switches and archived run manifests. The native model bundle here is the documented comparison refit and must not be described as the exact original manuscript checkpoint.
+After running the offline demo, this example is executable from the repository root:
+
+```python
+import numpy as np
+from h2res_interface import availability_frame, availability_parameters, inject_availability
+
+with np.load("exports/demo_01/units.npz", allow_pickle=False) as archive:
+    units = {name: archive[name] for name in archive.files}
+
+frame = availability_frame(units, year=2030)
+# Columns: year, period, solar_west, solar_east, wind_inland, wind_coast, hror
+# Row 0: year=2030, period=1. Last row: period=8760.
+entries = availability_parameters(units, year=2030)
+assert entries["wind_inland", 1, 2030] == float(units["wind_inland"][0])
+```
+
+`frame.to_csv(...)` writes the wide availability-table format. The demo has already written `availability_2030.csv`. `entries` uses `(unit_name, period, planning_year)` keys matching the H2RES `aval_factor_plant` convention. NumPy hour 0 maps to H2RES period 1; no modulo, daylight-saving or planning-year shift is applied. Weather and planning years are separate concepts: a generated annual chronology can be assigned to planning year 2030.
+
+In an actual H2RES runtime, validate against its unit list and existing parameter keys:
+
+```python
+# Replace expected_units with the climate-dependent unit names in your model.
+entries = availability_parameters(units, 2030, expected_units=list(units))
+# In your initialized runtime:
+# aval_factor_plant = inject_availability(aval_factor_plant, entries)
+```
+
+`inject_availability` returns a copy, preserves unrelated units/years and raises if any generated key is absent. It does not silently skip misspelled units or create units in the optimizer. Supply actual expected unit names rather than `list(units)` when connecting a project. Do not insert MW values here: capacity is a separate H2RES parameter; availability remains in [0, 1]. For a solar/wind-only project, export with `--exclude-hror`.
+
+## Temperature, heat demand and COP
+
+Use explicit unit names and an explicit 8,760-hour baseline temperature. This complete example uses simple illustrative baseline dictionaries:
+
+```python
+import numpy as np
+from h2res_interface import couple_temperature
+
+with np.load("exports/demo_01/cases.npz", allow_pickle=False) as cases:
+    temperature = cases["avg_yield__normal"][:, 2]
+
+year = 2030
+heat = {("my_heat", p, year): 10.0 for p in range(1, 8761)}
+cooling = {("my_cooling", p, year): 4.0 for p in range(1, 8761)}
+cop = {("my_heat_pump", p, year): 3.0 for p in range(1, 8761)}
+result = couple_temperature(
+    temperature, baseline_temp_profile=np.full(8760, 12.0), year=year,
+    heat_demand=heat, cooling_demand=cooling, hp_cop_period=cop,
+    general_heat_units=["my_heat"], cooling_units=["my_cooling"],
+    heat_pump_units=["my_heat_pump"],
+)
+assert np.isclose(sum(result["heat_demand"].values()), sum(heat.values()))
+# In your runtime, replace the illustrative inputs with actual baseline data:
+# heat_demand = result["heat_demand"]
+# cooling_demand = result["cooling_demand"]
+# hp_cop_period = result["hp_cop_period"]
+```
+
+The wrapper requires complete finite baseline keys for every selected unit. Demand must be nonnegative and COP positive. It rejects missing hours, partial temperature arrays and duplicate/overlapping heat-unit groups. Caller dictionaries remain unchanged. Empty groups can be omitted, but at least one group must be selected.
+
+Annual heat/cooling totals are preserved. Temperature changes hourly demand shape through degree-day signals and adjusts COP with the source method's bounded theoretical relationship and baseline-mean calibration. Default heating/cooling bases are 18/22 degrees C; COP bounds are 1.2–5.5. These are model assumptions requiring application-specific validation, not measurements of a particular heat pump. The zero/constant baseline arrays in the example are illustrative; use your permitted baseline climatology and real runtime demand/COP data in an energy study.
+
+The recommended adapter passes baseline temperature directly and never loads a country file implicitly. The original module's country-file path remains for backwards compatibility; calling that legacy API without the required country data is outside this strict adapter contract.
+
+## Scope of reuse
+
+The interface supports complete annual arrays and the documented dictionary/CSV contract. Other H2RES versions may use different parameter names, time indexing, units or thermal assumptions; align those contracts explicitly. The bundle supplies no transmission topology, demand database, optimization constraints or solver licence. Runtime integration is tested with illustrative parameter dictionaries and the existing Croatian spatial artifacts; arbitrary external H2RES variants have not been exhaustively validated.

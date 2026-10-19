@@ -1,5 +1,5 @@
 {
-  "scope": "Standalone pipeline research repository; excludes manifest and local generated exports",
+  "scope": "Standalone research repository; excludes this manifest and ignored local outputs",
   "strict_temporal_holdout": false,
   "files": {
     ".gitattributes": {
@@ -7,28 +7,60 @@
       "sha256": "2430fdd7d7f49cace0ff01eb8ce04fe222632d393913cc76dce8c6f73c18906c"
     },
     ".github/workflows/verify.yml": {
-      "bytes": 902,
-      "sha256": "66ba6b370115e426185f69606b13c553e086e7c6634f5f917bcbb967641627ad"
+      "bytes": 1168,
+      "sha256": "f645ccb290d4ee736f44bd865907e8f1eb814e41cb68eade5a388319aa7398cf"
     },
     ".gitignore": {
-      "bytes": 84,
-      "sha256": "41946200af8e131c8d6cdaf90812a72760f114a757592a24985fde25e3e7a65b"
+      "bytes": 120,
+      "sha256": "9858104907a2dc5fea92967c494a3994f164b60e0d629f7dfe83770043a212ac"
     },
     "AUDIT.md": {
-      "bytes": 5281,
-      "sha256": "73db02773fb4bdfb9ee1a05456db6fee825b6fa4d0536e5b75c197bedb68c93c"
+      "bytes": 7049,
+      "sha256": "c1e0fdd480fb882e6ed80294aa7a3f013cca3ccdf2e0db472d87a0f45d05c100"
+    },
+    "README.md": {
+      "bytes": 6302,
+      "sha256": "c268442e4704fc470328a2f74a5fe8e71f697226861155275fa487458baf29c9"
+    },
+    "RIGHTS.md": {
+      "bytes": 373,
+      "sha256": "51096f0884f210678ea239ea71b411d9899d470c150fe8dfe1caefb648fb969c"
     },
     "audit.py": {
       "bytes": 1654,
       "sha256": "9e824026a106024a5efb3ce167e270deb22a9f70b9adeea49cb2260ddc03fb81"
     },
     "docs/DATA.md": {
-      "bytes": 2524,
-      "sha256": "bcc15626f4e7d3222f64ab009ae0cb0943f68ac109a379c052554fdc147ef986"
+      "bytes": 5270,
+      "sha256": "80201c86a327b24dfb1d4899852dad9b78ab33639f10ad955ccc9a10d58001dc"
     },
     "docs/INTEGRATION.md": {
-      "bytes": 1761,
-      "sha256": "50a4a6fb6baa445138a63c885ea1cb6a70ad55d16cd5b787a0d1fb98f53883dd"
+      "bytes": 5436,
+      "sha256": "7ac6d9090dfa90318bcc4e8c44f2e49d8bd3404fc06c342fe879070c47141551"
+    },
+    "docs/RESEARCH_RESULTS.md": {
+      "bytes": 1763,
+      "sha256": "26af075cf301997736609524d3aa3b2e17ff71ed82470ebf0054cfd5e885655f"
+    },
+    "docs/USAGE.md": {
+      "bytes": 4740,
+      "sha256": "dbea9dd71aea9788dabb74bec2b01e4d74ac2f1ef665dad56acb630ac8acde74"
+    },
+    "docs/VALIDATION.md": {
+      "bytes": 3727,
+      "sha256": "7cab429b4d5075a4b418ddd76f526a1f521ac73cead21173d1faaf8c1af4e321"
+    },
+    "examples/__init__.py": {
+      "bytes": 76,
+      "sha256": "15f3a6f735b5ec8c0773f2b49de73da7e43f84c99304541d2160a01c87248e79"
+    },
+    "examples/check_installed_api.py": {
+      "bytes": 954,
+      "sha256": "3f66b2441d67c90fef17420ac128dd891fe63bad16ed90cb73d3c1e240b7fdda"
+    },
+    "examples/demo.py": {
+      "bytes": 5421,
+      "sha256": "93bfe6c8327f66d30843a25d108e758311af7368bc0c876360d9aeeb230401eb"
     },
     "figures/application_comparison.pdf": {
       "bytes": 20173,
@@ -37,6 +69,10 @@
     "figures/application_comparison.png": {
       "bytes": 160192,
       "sha256": "04f707f5ae198db498c8a93eed7c35771f88b948beb8807ae01d5aefb53db617"
+    },
+    "h2res_interface.py": {
+      "bytes": 5629,
+      "sha256": "e13064016f10dac9f8df2367203a836104601e5c2566a6dde6f1d0fde862d597"
     },
     "models/default/metadata.json": {
       "bytes": 2407,
@@ -67,8 +103,8 @@
       "sha256": "4ccc2670d7c03f29fa5c5c6f0c7c48ccb85e11beb727c8f3036ca4ec2f108d96"
     },
     "pipeline.py": {
-      "bytes": 16345,
-      "sha256": "681ea7801831e08662cc9b88cf1ee7f53c4f2972e2484163c6ae1291057f58ba"
+      "bytes": 22783,
+      "sha256": "587edf9c3a18f3840063ae41cfa5a529a1234ec1bb799f064ae09ca5245ded65"
     },
     "provenance/data_provenance.json": {
       "bytes": 1855,
@@ -78,37 +114,53 @@
       "bytes": 13111,
       "sha256": "82e2ddef17cbc4551c10baa084c78ffcf5a5e24b7b2052ea48c7a4b50ecaa057"
     },
+    "provenance/executed/scenario_manager.py": {
+      "bytes": 42251,
+      "sha256": "f742ef99429b28e849df2c7abc6472a5094683ed841df619d484f034a4a51f9b"
+    },
+    "provenance/executed/temperature_coupling.py": {
+      "bytes": 16136,
+      "sha256": "61b59a38ad51d311016e6574576703112b4813304ea0cc392138f4d93eecaaf4"
+    },
     "provenance/executed/xgboost_climate_model.py": {
       "bytes": 68915,
       "sha256": "111e0aefc0ccb4fd4d034f28cf9f539bfb82995bf053bbba0582d09fd1f828e2"
     },
     "provenance/generation_compatibility.json": {
-      "bytes": 602,
-      "sha256": "be9b5bc30a15adfca26b0e71f3a5b8823fb90f3dbde0fe2e441accc365b992cc"
+      "bytes": 743,
+      "sha256": "0b4322a3daa6c7c82cf2ea9eb6ddf95f1b99441b622466aac509ca1530821cd5"
     },
     "provenance/generation_replay.json": {
-      "bytes": 883,
-      "sha256": "bd25bd7a1b17835fb72acd969a2d10a1dff63982e04e197c2e842301282bdaa7"
+      "bytes": 1087,
+      "sha256": "d6c1bf4755a138d7f421327a63e1de9a7e2c626a6830ccc3bd9fa6fce2ed7f62"
     },
     "provenance/manuscript_correspondence.json": {
-      "bytes": 1026,
-      "sha256": "6cef1226e29483603bbd0f1bc4e3c96e4568b43d24bdb3d48ac6f40cb608289f"
+      "bytes": 1200,
+      "sha256": "d57316a35bb2e50cd99f51a2e5d991431662d94b764403c64030bfc25af1429c"
     },
     "provenance/report_serialization.json": {
       "bytes": 372,
       "sha256": "57ccb93d47adda7929a22b8be79204b87a30eb53a5ed62c72835bd5f7bc6c7a8"
     },
+    "provenance/reuse_export_verification.json": {
+      "bytes": 1934,
+      "sha256": "eb9b52d268ae53e7381a164e144af42d8df56b30cb26985ea3f53feb52abb74c"
+    },
+    "provenance/reuse_interface_verification.json": {
+      "bytes": 640,
+      "sha256": "c7a51e725f80f76be8cb060f3a4cc243db89fbedb965eebc9c98dbdfb20ec958"
+    },
     "provenance/source_manifest.json": {
-      "bytes": 813,
-      "sha256": "48d2744ed0b5ddf6a5ad6d15049d5630497da372e29dbe63668c92a6728bceeb"
+      "bytes": 1427,
+      "sha256": "024fb48e834965b2fdb54956dc86a9d5a78091c7d80b583049c1da099a34267a"
     },
     "provenance/spatial_export_verification.json": {
       "bytes": 2002,
       "sha256": "c25652985d6294a45bc745827633935d248d5f3eb91e1395f5c28c4d5033fc2c"
     },
-    "README.md": {
-      "bytes": 7627,
-      "sha256": "f5a22096a81cd3bcc56d7546ffed22a04221bdfb88a2030f2b0767bded0201cc"
+    "pyproject.toml": {
+      "bytes": 511,
+      "sha256": "236af59ae3589f501c98ccf2b1f747ef093c5f1b7fcf25de870bca1a3b532718"
     },
     "requirements.txt": {
       "bytes": 133,
@@ -142,29 +194,29 @@
       "bytes": 1775,
       "sha256": "d190e46d3401b9d0d8f5654889698c873ee3116beb89bbf96347c1180b169905"
     },
-    "RIGHTS.md": {
-      "bytes": 373,
-      "sha256": "51096f0884f210678ea239ea71b411d9899d470c150fe8dfe1caefb648fb969c"
-    },
     "scripts/__init__.py": {
       "bytes": 66,
       "sha256": "fd2695b78dfa8027cf4c00f38eefd51ae46c3f94743bee21fb2dbf9b78a8c2cd"
     },
     "scripts/scenario_manager.py": {
-      "bytes": 42251,
-      "sha256": "f742ef99429b28e849df2c7abc6472a5094683ed841df619d484f034a4a51f9b"
+      "bytes": 42359,
+      "sha256": "158d1edc79d1c614fa1d3fd727ef3c8ad359f62551afffeaa8c4b583c1850953"
     },
     "scripts/temperature_coupling.py": {
-      "bytes": 16136,
-      "sha256": "61b59a38ad51d311016e6574576703112b4813304ea0cc392138f4d93eecaaf4"
+      "bytes": 16663,
+      "sha256": "e379ae1a1f093d1f595e54888e1ad23e6656446e8d686bddc68e6854f404b237"
     },
     "scripts/xgboost_climate_model.py": {
-      "bytes": 67307,
-      "sha256": "84731426b25e6da37d04b7bf56607de4906ca36d5df585e38005edcf5d3f95f8"
+      "bytes": 67534,
+      "sha256": "e34b6eda270bda5e64a2514740b2e4b715ebc9eb7bf25a8fd2d06d2cedeb4086"
     },
     "tests/test_pipeline.py": {
-      "bytes": 9408,
-      "sha256": "bad9daa445d78351a19e4c8c61de0ebca1249699838809b8dfa2f88e147e35c9"
+      "bytes": 9428,
+      "sha256": "ba8fce7e76dae7c4081e50762d73130561cf1dfe98bbe6919c485c670f2db18d"
+    },
+    "tests/test_reuse.py": {
+      "bytes": 5321,
+      "sha256": "fc785af21bea3b5fdad1a4175c06962137389cca795c012c4f47cb93f4fbd0d4"
     }
   }
 }

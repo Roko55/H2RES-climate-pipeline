@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "h2res-climate-pipeline"
+version = "0.1.0"
+description = "Annual climate profile preparation and validated H2RES input adapters"
+requires-python = ">=3.11,<3.13"
+dynamic = ["dependencies"]
+
+[tool.setuptools]
+py-modules = ["h2res_interface"]
+packages = ["h2res_climate"]
+
+[tool.setuptools.package-dir]
+h2res_climate = "scripts"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
