@@ -1,0 +1,31 @@
+{
+  "status": "passed_same_runtime_source_compatibility",
+  "count": 5,
+  "sampling_seed": 101,
+  "shape": [
+    5,
+    8760,
+    3
+  ],
+  "native_models_training_seed": 42,
+  "same_runtime_original_vs_maintained_bitwise_equal": true,
+  "same_runtime_max_absolute_difference": 0.0,
+  "archived_faculty_replay_bitwise_equal": false,
+  "archived_faculty_replay_max_difference_per_channel": [
+    5.960464477539063e-08,
+    0.0,
+    0.009199857711791992
+  ],
+  "channels": [
+    "solar",
+    "wind",
+    "temperature"
+  ],
+  "runtime": {
+    "Python": "3.9.25",
+    "numpy": "2.0.2",
+    "xgboost": "2.1.4",
+    "pandas": "2.3.3"
+  },
+  "interpretation": "Source changes preserve generation on the controlled same-runtime check. Archived faculty arrays differ on this runtime; the remaining cause has not been isolated. No historical result is replaced."
+}

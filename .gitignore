@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.cache/
+cache/
+tmp/
+exports/
+data/
+*.joblib
+.env
+*.lic

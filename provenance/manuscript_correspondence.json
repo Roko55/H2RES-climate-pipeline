@@ -1,0 +1,18 @@
+{
+  "manuscript_version": "H2RES Climate Profile Manuscript V5.1",
+  "document_sha256": "14830a4ca0a8e33dd720193e20c76291400805978039e0651455e01cbc94e663",
+  "scope": "Implementation-level correspondence; planning outcomes not rerun",
+  "implementation_stages": [
+    "Per-channel autoregressive XGBoost for solar and temperature",
+    "Season-aware historical block resampling for wind",
+    "Renewable-yield and thermal-stress representative cases",
+    "Spatial source-zone ratios and transfer weights to H2RES solver units",
+    "Temperature-dependent demand shapes and heat-pump COP"
+  ],
+  "qualification": [
+    "Default native models are the documented comparison refit, not a certified original manuscript checkpoint",
+    "Source corpus calibration overlaps reporting years",
+    "Causal rolling warmup corrected for new fitting; published results are original-version results",
+    "No joint physical weather coherence or improved downstream investment outcome is established by these checks"
+  ]
+}

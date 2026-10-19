@@ -1,0 +1,10 @@
+{
+  "training_source_sha256": "111e0aefc0ccb4fd4d034f28cf9f539bfb82995bf053bbba0582d09fd1f828e2",
+  "generation_source_sha256": "84731426b25e6da37d04b7bf56607de4906ca36d5df585e38005edcf5d3f95f8",
+  "changes": [
+    "Strictly causal rolling means for new fitting/calibration; first post-warmup row corrected",
+    "Missing wind training pool now raises an error"
+  ],
+  "compatibility_scope": "Generation from complete native model bundle and exact training corpus; measured fitting records remain original-version records",
+  "generation_replay_evidence": "provenance/generation_replay.json"
+}

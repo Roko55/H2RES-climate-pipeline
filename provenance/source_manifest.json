@@ -1,0 +1,18 @@
+{
+  "scripts/xgboost_climate_model.py": {
+    "sha256": "84731426b25e6da37d04b7bf56607de4906ca36d5df585e38005edcf5d3f95f8",
+    "source_role": "Maintained generator; causal rolling warmup and missing-wind checks"
+  },
+  "scripts/scenario_manager.py": {
+    "sha256": "f742ef99429b28e849df2c7abc6472a5094683ed841df619d484f034a4a51f9b",
+    "source_role": "Unmodified project implementation"
+  },
+  "scripts/temperature_coupling.py": {
+    "sha256": "61b59a38ad51d311016e6574576703112b4813304ea0cc392138f4d93eecaaf4",
+    "source_role": "Unmodified project implementation"
+  },
+  "provenance/executed/xgboost_climate_model.py": {
+    "sha256": "111e0aefc0ccb4fd4d034f28cf9f539bfb82995bf053bbba0582d09fd1f828e2",
+    "source_role": "Exact implementation used for reported native-model fitting"
+  }
+}

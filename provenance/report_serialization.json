@@ -1,0 +1,6 @@
+{
+  "source_report_sha256": "a69f39f320863e97bdb1068a3cfff0be7b6601d23f3ffe2cf9b4ecdeef72328a",
+  "published_report_sha256": "82e2ddef17cbc4551c10baa084c78ffcf5a5e24b7b2052ea48c7a4b50ecaa057",
+  "normalization": "Nonstandard JSON NaN sentinels in XGBoost missing-value parameter serialized as null; finite measurements unchanged",
+  "nonstandard_values_replaced": 6
+}

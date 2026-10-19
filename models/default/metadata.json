@@ -1,0 +1,73 @@
+{
+  "model": "Current XGBoost/seasonal block-bootstrap generator",
+  "training_seed": 42,
+  "device_for_replay": "cpu",
+  "CPU_threads": 1,
+  "xgboost": "2.1.4",
+  "source_sha256": "111e0aefc0ccb4fd4d034f28cf9f539bfb82995bf053bbba0582d09fd1f828e2",
+  "data_sha256": "d92748ca6625d0092b073b9bc16345da960a04c42da29926da5b125a63ad122d",
+  "latitude": 44.52,
+  "calibration": {
+    "Solar": {
+      "sigma_calibration": 0.8646045327186584,
+      "rho": 0.08930603110033923,
+      "residual_mean": -0.02853984199464321,
+      "residual_std": 1.2519360780715942,
+      "drift_alpha": 0.4000000059604645
+    },
+    "Temperature": {
+      "sigma_calibration": 0.8490670919418335,
+      "rho": 0.17625606536589677,
+      "residual_mean": 0.014723791740834713,
+      "residual_std": 1.7377701997756958,
+      "drift_alpha": 0.4000000059604645
+    }
+  },
+  "models": [
+    {
+      "channel": "Solar",
+      "quantile": 0.16,
+      "file": "solar_q16.ubj",
+      "sha256": "4123933cf0107c5bf7e65d69777c202693c598c0926e273b156b3715d2f05169",
+      "bytes": 4426343
+    },
+    {
+      "channel": "Solar",
+      "quantile": 0.5,
+      "file": "solar_q50.ubj",
+      "sha256": "832e72a557737cd7241bf81c862deb4d67a2c5243a408320fcff96e8a724ce40",
+      "bytes": 4396580
+    },
+    {
+      "channel": "Solar",
+      "quantile": 0.84,
+      "file": "solar_q84.ubj",
+      "sha256": "cc22d8056b0ddcfe3b77e5631d96ba465338f1415fcc9b3c518da643cb3a7992",
+      "bytes": 4310441
+    },
+    {
+      "channel": "Temperature",
+      "quantile": 0.16,
+      "file": "temperature_q16.ubj",
+      "sha256": "5341c340a18517a6a3e6f5bc1a7ac7f32860580c5ce1c8f654e44327fb0d724a",
+      "bytes": 4324701
+    },
+    {
+      "channel": "Temperature",
+      "quantile": 0.5,
+      "file": "temperature_q50.ubj",
+      "sha256": "22dfdb7989d7e3ede660ee89792aa762f1edda56d901ca7b8f8355316a260ef0",
+      "bytes": 4476499
+    },
+    {
+      "channel": "Temperature",
+      "quantile": 0.84,
+      "file": "temperature_q84.ubj",
+      "sha256": "4ccc2670d7c03f29fa5c5c6f0c7c48ccb85e11beb727c8f3036ca4ec2f108d96",
+      "bytes": 4372624
+    }
+  ],
+  "native_model_roundtrip_matches_preserved_seed101_five_paths_bitwise": true,
+  "raw_training_wind_pool_included": false,
+  "inference_input": "Supply the exact input Parquet to reconstruct training-only anchors/bounds/wind pool."
+}

@@ -1,0 +1,4 @@
+* -text whitespace=cr-at-eol
+*.ubj binary
+*.png binary
+*.pdf binary

@@ -1,0 +1,170 @@
+{
+  "scope": "Standalone pipeline research repository; excludes manifest and local generated exports",
+  "strict_temporal_holdout": false,
+  "files": {
+    ".gitattributes": {
+      "bytes": 72,
+      "sha256": "2430fdd7d7f49cace0ff01eb8ce04fe222632d393913cc76dce8c6f73c18906c"
+    },
+    ".github/workflows/verify.yml": {
+      "bytes": 902,
+      "sha256": "66ba6b370115e426185f69606b13c553e086e7c6634f5f917bcbb967641627ad"
+    },
+    ".gitignore": {
+      "bytes": 84,
+      "sha256": "41946200af8e131c8d6cdaf90812a72760f114a757592a24985fde25e3e7a65b"
+    },
+    "AUDIT.md": {
+      "bytes": 5281,
+      "sha256": "73db02773fb4bdfb9ee1a05456db6fee825b6fa4d0536e5b75c197bedb68c93c"
+    },
+    "audit.py": {
+      "bytes": 1654,
+      "sha256": "9e824026a106024a5efb3ce167e270deb22a9f70b9adeea49cb2260ddc03fb81"
+    },
+    "docs/DATA.md": {
+      "bytes": 2524,
+      "sha256": "bcc15626f4e7d3222f64ab009ae0cb0943f68ac109a379c052554fdc147ef986"
+    },
+    "docs/INTEGRATION.md": {
+      "bytes": 1761,
+      "sha256": "50a4a6fb6baa445138a63c885ea1cb6a70ad55d16cd5b787a0d1fb98f53883dd"
+    },
+    "figures/application_comparison.pdf": {
+      "bytes": 20173,
+      "sha256": "2cd4ee7a1561c2a7f803e0e0ab6c772e197de59da0aea9072b7fbdfe7e27aab8"
+    },
+    "figures/application_comparison.png": {
+      "bytes": 160192,
+      "sha256": "04f707f5ae198db498c8a93eed7c35771f88b948beb8807ae01d5aefb53db617"
+    },
+    "models/default/metadata.json": {
+      "bytes": 2407,
+      "sha256": "341f2d081733820ed968016c139a09c6250f35149db61f1852f71f1aa4739c61"
+    },
+    "models/default/solar_q16.ubj": {
+      "bytes": 4426343,
+      "sha256": "4123933cf0107c5bf7e65d69777c202693c598c0926e273b156b3715d2f05169"
+    },
+    "models/default/solar_q50.ubj": {
+      "bytes": 4396580,
+      "sha256": "832e72a557737cd7241bf81c862deb4d67a2c5243a408320fcff96e8a724ce40"
+    },
+    "models/default/solar_q84.ubj": {
+      "bytes": 4310441,
+      "sha256": "cc22d8056b0ddcfe3b77e5631d96ba465338f1415fcc9b3c518da643cb3a7992"
+    },
+    "models/default/temperature_q16.ubj": {
+      "bytes": 4324701,
+      "sha256": "5341c340a18517a6a3e6f5bc1a7ac7f32860580c5ce1c8f654e44327fb0d724a"
+    },
+    "models/default/temperature_q50.ubj": {
+      "bytes": 4476499,
+      "sha256": "22dfdb7989d7e3ede660ee89792aa762f1edda56d901ca7b8f8355316a260ef0"
+    },
+    "models/default/temperature_q84.ubj": {
+      "bytes": 4372624,
+      "sha256": "4ccc2670d7c03f29fa5c5c6f0c7c48ccb85e11beb727c8f3036ca4ec2f108d96"
+    },
+    "pipeline.py": {
+      "bytes": 16345,
+      "sha256": "681ea7801831e08662cc9b88cf1ee7f53c4f2972e2484163c6ae1291057f58ba"
+    },
+    "provenance/data_provenance.json": {
+      "bytes": 1855,
+      "sha256": "8c093dacde0f3d0cb30ee03ff75daae53c6e5cb7d9a23b87d56427470f140c62"
+    },
+    "provenance/default_refit_report.json": {
+      "bytes": 13111,
+      "sha256": "82e2ddef17cbc4551c10baa084c78ffcf5a5e24b7b2052ea48c7a4b50ecaa057"
+    },
+    "provenance/executed/xgboost_climate_model.py": {
+      "bytes": 68915,
+      "sha256": "111e0aefc0ccb4fd4d034f28cf9f539bfb82995bf053bbba0582d09fd1f828e2"
+    },
+    "provenance/generation_compatibility.json": {
+      "bytes": 602,
+      "sha256": "be9b5bc30a15adfca26b0e71f3a5b8823fb90f3dbde0fe2e441accc365b992cc"
+    },
+    "provenance/generation_replay.json": {
+      "bytes": 883,
+      "sha256": "bd25bd7a1b17835fb72acd969a2d10a1dff63982e04e197c2e842301282bdaa7"
+    },
+    "provenance/manuscript_correspondence.json": {
+      "bytes": 1026,
+      "sha256": "6cef1226e29483603bbd0f1bc4e3c96e4568b43d24bdb3d48ac6f40cb608289f"
+    },
+    "provenance/report_serialization.json": {
+      "bytes": 372,
+      "sha256": "57ccb93d47adda7929a22b8be79204b87a30eb53a5ed62c72835bd5f7bc6c7a8"
+    },
+    "provenance/source_manifest.json": {
+      "bytes": 813,
+      "sha256": "48d2744ed0b5ddf6a5ad6d15049d5630497da372e29dbe63668c92a6728bceeb"
+    },
+    "provenance/spatial_export_verification.json": {
+      "bytes": 2002,
+      "sha256": "c25652985d6294a45bc745827633935d248d5f3eb91e1395f5c28c4d5033fc2c"
+    },
+    "README.md": {
+      "bytes": 7627,
+      "sha256": "f5a22096a81cd3bcc56d7546ffed22a04221bdfb88a2030f2b0767bded0201cc"
+    },
+    "requirements.txt": {
+      "bytes": 133,
+      "sha256": "7ba472f2fb00e716568292fccd6673e2c7907ea6505dd0beb78c4f3795a1695b"
+    },
+    "results/aggregate_individual_metrics.csv": {
+      "bytes": 8674,
+      "sha256": "b8ae67df36c1f4f865f077711d80cf8da6a96f212032544b02a1e51e5cff6c0e"
+    },
+    "results/aggregate_scores.csv": {
+      "bytes": 606,
+      "sha256": "45893485463f5a1c3d1b43491ef6f5d2ae59c589d332b72673b1ab0a12bbf1dc"
+    },
+    "results/annual_mean_spread.csv": {
+      "bytes": 4603,
+      "sha256": "e69e432b7165e712365fb73ca378bf6814398b8f0e20e2e9c394bd9940625d33"
+    },
+    "results/application_comparison.csv": {
+      "bytes": 492,
+      "sha256": "2cfa281e4c4022407cb432f84b770a0bc8c50e02e9c528d5f9d35b507eb333d4"
+    },
+    "results/inference_resources.csv": {
+      "bytes": 538,
+      "sha256": "9935a0483981b3ba583c71e09dd312c12b54692cc5fc4c414f687d50400577c8"
+    },
+    "results/renewable_yield_index_spread.csv": {
+      "bytes": 2411,
+      "sha256": "1bff93c687ffd3efb4d96148f9ad609fb49c54659b0e5670c89bb6307af99f4b"
+    },
+    "results/training_resources.csv": {
+      "bytes": 1775,
+      "sha256": "d190e46d3401b9d0d8f5654889698c873ee3116beb89bbf96347c1180b169905"
+    },
+    "RIGHTS.md": {
+      "bytes": 373,
+      "sha256": "51096f0884f210678ea239ea71b411d9899d470c150fe8dfe1caefb648fb969c"
+    },
+    "scripts/__init__.py": {
+      "bytes": 66,
+      "sha256": "fd2695b78dfa8027cf4c00f38eefd51ae46c3f94743bee21fb2dbf9b78a8c2cd"
+    },
+    "scripts/scenario_manager.py": {
+      "bytes": 42251,
+      "sha256": "f742ef99429b28e849df2c7abc6472a5094683ed841df619d484f034a4a51f9b"
+    },
+    "scripts/temperature_coupling.py": {
+      "bytes": 16136,
+      "sha256": "61b59a38ad51d311016e6574576703112b4813304ea0cc392138f4d93eecaaf4"
+    },
+    "scripts/xgboost_climate_model.py": {
+      "bytes": 67307,
+      "sha256": "84731426b25e6da37d04b7bf56607de4906ca36d5df585e38005edcf5d3f95f8"
+    },
+    "tests/test_pipeline.py": {
+      "bytes": 9408,
+      "sha256": "bad9daa445d78351a19e4c8c61de0ebca1249699838809b8dfa2f88e147e35c9"
+    }
+  }
+}
