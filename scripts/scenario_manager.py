@@ -31,6 +31,7 @@ from typing import Optional
 # =============================================================================
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(os.path.dirname(SCRIPT_DIR), "data", "SC")
+SPATIAL_REFERENCE_END_YEAR = None
 
 NUM_SYNTHETIC_YEARS = 100
 NUM_CLUSTERS = 3  # Low, Average, High yield scenarios
@@ -543,6 +544,11 @@ def _hourly_mean_8760(df: pd.DataFrame) -> pd.DataFrame:
     if work.index.tz is not None:
         work.index = work.index.tz_localize(None)
 
+    if SPATIAL_REFERENCE_END_YEAR is not None:
+        work = work.loc[work.index.year <= SPATIAL_REFERENCE_END_YEAR]
+        if work.empty:
+            raise ValueError("No spatial observations in the reference period")
+
     work = work.select_dtypes(include=[np.number]).copy()
     if work.empty:
         return pd.DataFrame(index=np.arange(8760))
@@ -686,7 +692,7 @@ def _load_hror_profile(country_code: str, ncre_csv_path: str = None) -> np.ndarr
 
 def _load_solar_spatial_components(country_code: str, solar_units: dict) -> Optional[dict]:
     cc = _normalize_country_code(country_code)
-    cache_key = ("solar_spatial", cc)
+    cache_key = ("solar_spatial", cc, SPATIAL_REFERENCE_END_YEAR)
     if cache_key in _ratio_cache:
         return _ratio_cache[cache_key]
 
@@ -734,7 +740,7 @@ def _load_solar_spatial_components(country_code: str, solar_units: dict) -> Opti
 def _load_wind_spatial_components(country_code: str, resolution: str, wind_units: dict) -> dict:
     cc = _normalize_country_code(country_code)
     res = str(resolution).lower()
-    cache_key = ("wind_spatial", cc, res)
+    cache_key = ("wind_spatial", cc, res, SPATIAL_REFERENCE_END_YEAR)
     if cache_key in _ratio_cache:
         return _ratio_cache[cache_key]
 

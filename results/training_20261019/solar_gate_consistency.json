@@ -1,0 +1,27 @@
+{
+  "interpretation": "Input-consistency diagnostic. No assumed timezone or longitude correction has been applied.",
+  "gate_source": "Frozen calculate_solar_elevation at latitude 44.52, zeroing when elevation <= -1 degree",
+  "partitions": {
+    "training": {
+      "solar_energy_fraction_at_zeroed_hours": 0.023277029920706988,
+      "maximum_observed_CF_at_zeroed_hours": 0.30741350447932125,
+      "observed_CF_above_0_005_at_zeroed_hours": 15307,
+      "zeroed_observation_count": 155844,
+      "calendar_hours_with_observed_CF_above_0_005_but_zeroed_by_gate": 500
+    },
+    "validation": {
+      "solar_energy_fraction_at_zeroed_hours": 0.02379480568649515,
+      "maximum_observed_CF_at_zeroed_hours": 0.2487883781209091,
+      "observed_CF_above_0_005_at_zeroed_hours": 1718,
+      "zeroed_observation_count": 17316,
+      "calendar_hours_with_observed_CF_above_0_005_but_zeroed_by_gate": 480
+    },
+    "reporting": {
+      "solar_energy_fraction_at_zeroed_hours": 0.02399277822059757,
+      "maximum_observed_CF_at_zeroed_hours": 0.27278730941927326,
+      "observed_CF_above_0_005_at_zeroed_hours": 2137,
+      "zeroed_observation_count": 21645,
+      "calendar_hours_with_observed_CF_above_0_005_but_zeroed_by_gate": 479
+    }
+  }
+}

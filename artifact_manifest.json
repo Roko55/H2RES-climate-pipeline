@@ -15,20 +15,20 @@
       "sha256": "9858104907a2dc5fea92967c494a3994f164b60e0d629f7dfe83770043a212ac"
     },
     "AUDIT.md": {
-      "bytes": 7049,
-      "sha256": "c1e0fdd480fb882e6ed80294aa7a3f013cca3ccdf2e0db472d87a0f45d05c100"
+      "bytes": 7202,
+      "sha256": "049746274de01145131f70a3118d3bdc5ae50db2a26815b421c2627b56a258c0"
     },
     "README.md": {
-      "bytes": 6302,
-      "sha256": "c268442e4704fc470328a2f74a5fe8e71f697226861155275fa487458baf29c9"
+      "bytes": 6874,
+      "sha256": "e07d1078703af5f83a9961ec85730d4899c03d0c0563e6492f75d588ab9883c5"
     },
     "RIGHTS.md": {
       "bytes": 373,
       "sha256": "51096f0884f210678ea239ea71b411d9899d470c150fe8dfe1caefb648fb969c"
     },
     "audit.py": {
-      "bytes": 1654,
-      "sha256": "9e824026a106024a5efb3ce167e270deb22a9f70b9adeea49cb2260ddc03fb81"
+      "bytes": 1771,
+      "sha256": "1787f92253a4eeb3e47158deb00dfbc7d5493430110caf1e51d747bc52cb5c56"
     },
     "docs/DATA.md": {
       "bytes": 5270,
@@ -43,8 +43,8 @@
       "sha256": "26af075cf301997736609524d3aa3b2e17ff71ed82470ebf0054cfd5e885655f"
     },
     "docs/USAGE.md": {
-      "bytes": 4740,
-      "sha256": "dbea9dd71aea9788dabb74bec2b01e4d74ac2f1ef665dad56acb630ac8acde74"
+      "bytes": 6948,
+      "sha256": "5c82eaf7f052e09df0fa4a2cf0dbe3e7ab81ca91687a755b5087a966a2fb5ae8"
     },
     "docs/VALIDATION.md": {
       "bytes": 3727,
@@ -102,9 +102,37 @@
       "bytes": 4372624,
       "sha256": "4ccc2670d7c03f29fa5c5c6f0c7c48ccb85e11beb727c8f3036ca4ec2f108d96"
     },
+    "models/training_20261019/metadata.json": {
+      "bytes": 2516,
+      "sha256": "375b14aefeeb00b9790f12ca972a9d00a7dc30981c1aefd19b4292efa17fed1d"
+    },
+    "models/training_20261019/solar_q16.ubj": {
+      "bytes": 4349096,
+      "sha256": "282e5027e1c48738ed036061d4da43f59df9457eb8185ac8153601b2ab5bbdc0"
+    },
+    "models/training_20261019/solar_q50.ubj": {
+      "bytes": 4378356,
+      "sha256": "a7a114b84cb7effc09991d4f63a87df2e56ed5e0816d276999c1dd32aad3bde2"
+    },
+    "models/training_20261019/solar_q84.ubj": {
+      "bytes": 4377267,
+      "sha256": "79293653d9f37941c54b7c429541db54d48ed66619d6c3afefeb012ce1af74a8"
+    },
+    "models/training_20261019/temperature_q16.ubj": {
+      "bytes": 4328858,
+      "sha256": "bbabd2db4590cfc777395c7572abb54024471866236704030a944718a8eb6e3f"
+    },
+    "models/training_20261019/temperature_q50.ubj": {
+      "bytes": 4467041,
+      "sha256": "b565391cdd22d1a8560b02fa48f2fdf1219c240f8e295dbd07b899658c58fc61"
+    },
+    "models/training_20261019/temperature_q84.ubj": {
+      "bytes": 4345310,
+      "sha256": "c9231f97f5967c0be3db118a1d2281f65126ee7ea4060d273db104c7fd433b60"
+    },
     "pipeline.py": {
-      "bytes": 22783,
-      "sha256": "587edf9c3a18f3840063ae41cfa5a529a1234ec1bb799f064ae09ca5245ded65"
+      "bytes": 23826,
+      "sha256": "c1df73730497d3062349c7148759e3e0c12e65b9d72b74582fcd0f88aee89c93"
     },
     "provenance/data_provenance.json": {
       "bytes": 1855,
@@ -151,20 +179,36 @@
       "sha256": "c7a51e725f80f76be8cb060f3a4cc243db89fbedb965eebc9c98dbdfb20ec958"
     },
     "provenance/source_manifest.json": {
-      "bytes": 1427,
-      "sha256": "024fb48e834965b2fdb54956dc86a9d5a78091c7d80b583049c1da099a34267a"
+      "bytes": 1622,
+      "sha256": "9e5293fd58478f5ab9530533b40e6024877c8884c2afddff689c9f5b0d97d1f3"
     },
     "provenance/spatial_export_verification.json": {
       "bytes": 2002,
       "sha256": "c25652985d6294a45bc745827633935d248d5f3eb91e1395f5c28c4d5033fc2c"
     },
+    "provenance/training_20261019/ensemble_freeze.json": {
+      "bytes": 178,
+      "sha256": "d5a9cf935bf9281033fbb5e0460273bbb8830d06b8878b60ebd9687926c6258e"
+    },
+    "provenance/training_20261019/model_freeze.json": {
+      "bytes": 1092,
+      "sha256": "7e876d6dc0d67db27733e90465d6d9a8ad09b9fe1ef0fe72193d4d78d686842d"
+    },
+    "provenance/training_20261019/preprocessing_audit.json": {
+      "bytes": 9002,
+      "sha256": "9e22ea9b5cd82f4c4630a1970c1549c85f7dc108ec7db3d237141eb41890b876"
+    },
+    "provenance/training_20261019/saved_model_replay.json": {
+      "bytes": 868,
+      "sha256": "35df63daf143604688995bf26bc551f2f7d70516de898629f5d01abbb6bfa8b4"
+    },
     "pyproject.toml": {
       "bytes": 511,
-      "sha256": "236af59ae3589f501c98ccf2b1f747ef093c5f1b7fcf25de870bca1a3b532718"
+      "sha256": "159044e00361505b1c789e9f94721e9c9c29d5959c715d11ac39bb6f0693f2ff"
     },
     "requirements.txt": {
-      "bytes": 133,
-      "sha256": "7ba472f2fb00e716568292fccd6673e2c7907ea6505dd0beb78c4f3795a1695b"
+      "bytes": 150,
+      "sha256": "9cfd734008cceeb6f83e72d8fa4495047e266761c916d82d5d471830f66f2eb7"
     },
     "results/aggregate_individual_metrics.csv": {
       "bytes": 8674,
@@ -190,6 +234,22 @@
       "bytes": 2411,
       "sha256": "1bff93c687ffd3efb4d96148f9ad609fb49c54659b0e5670c89bb6307af99f4b"
     },
+    "results/training_20261019/distribution_metrics.csv": {
+      "bytes": 446,
+      "sha256": "9d9e3c90d4f3dc01fab04fc742b6a95c9a5ef064644530bd956319db98ce62c3"
+    },
+    "results/training_20261019/intervals_and_CRPS.csv": {
+      "bytes": 992,
+      "sha256": "1208e7e3b0772c3f51dd4130499e4488dd8268b2831e90cb474d3d17f2c4d7ba"
+    },
+    "results/training_20261019/solar_gate_consistency.json": {
+      "bytes": 1271,
+      "sha256": "454ce5f18d56059ed2b77a219f43e9dc8dcb25aad8a3c276e03129836ce1c853"
+    },
+    "results/training_20261019/validation_metrics.csv": {
+      "bytes": 2201,
+      "sha256": "29a8e2466e76812139ee09e45c123b5fdd307505891ae7ba15844306385e37ea"
+    },
     "results/training_resources.csv": {
       "bytes": 1775,
       "sha256": "d190e46d3401b9d0d8f5654889698c873ee3116beb89bbf96347c1180b169905"
@@ -198,9 +258,13 @@
       "bytes": 66,
       "sha256": "fd2695b78dfa8027cf4c00f38eefd51ae46c3f94743bee21fb2dbf9b78a8c2cd"
     },
+    "scripts/capacity_factor_calibration.py": {
+      "bytes": 7498,
+      "sha256": "a8d4ffa1a30df14c9c12eef014e7e7c98dd4775692ab60c98820ce55f280ad1f"
+    },
     "scripts/scenario_manager.py": {
-      "bytes": 42359,
-      "sha256": "158d1edc79d1c614fa1d3fd727ef3c8ad359f62551afffeaa8c4b583c1850953"
+      "bytes": 42679,
+      "sha256": "8b4837cfe36de9157c69bb6f55c7c257714322358924bfbcc3d665a7e001ee79"
     },
     "scripts/temperature_coupling.py": {
       "bytes": 16663,
@@ -209,6 +273,10 @@
     "scripts/xgboost_climate_model.py": {
       "bytes": 67534,
       "sha256": "e34b6eda270bda5e64a2514740b2e4b715ebc9eb7bf25a8fd2d06d2cedeb4086"
+    },
+    "tests/test_calibration.py": {
+      "bytes": 6021,
+      "sha256": "c16f48d45ae714471a810d4603f60df32bdb42a4e14d4d625498c7edc59bfd69"
     },
     "tests/test_pipeline.py": {
       "bytes": 9428,

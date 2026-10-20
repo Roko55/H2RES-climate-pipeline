@@ -4,8 +4,8 @@
     "source_role": "Maintained generator: causal rolling, missing-wind rejection, explicit library configuration without installation on import"
   },
   "scripts/scenario_manager.py": {
-    "sha256": "158d1edc79d1c614fa1d3fd727ef3c8ad359f62551afffeaa8c4b583c1850953",
-    "source_role": "Scenario manager with optional hydro inclusion; default decomposition unchanged"
+    "sha256": "8b4837cfe36de9157c69bb6f55c7c257714322358924bfbcc3d665a7e001ee79",
+    "source_role": "Scenario selection and training-bounded spatial climatologies"
   },
   "scripts/temperature_coupling.py": {
     "sha256": "e379ae1a1f093d1f595e54888e1ad23e6656446e8d686bddc68e6854f404b237",
@@ -22,5 +22,9 @@
   "provenance/executed/scenario_manager.py": {
     "sha256": "f742ef99429b28e849df2c7abc6472a5094683ed841df619d484f034a4a51f9b",
     "source_role": "Original scenario manager before optional hydro export extension"
+  },
+  "scripts/capacity_factor_calibration.py": {
+    "source_role": "Training-period national capacity-factor calibration",
+    "sha256": "a8d4ffa1a30df14c9c12eef014e7e7c98dd4775692ab60c98820ce55f280ad1f"
   }
 }

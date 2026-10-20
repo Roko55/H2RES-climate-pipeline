@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "bitwise_equal": false,
+  "within_predeclared_absolute_1e_5": false,
+  "maximum_absolute_difference_by_channel": [
+    0.004521802067756653,
+    0.0,
+    0.8943023681640625
+  ],
+  "mean_absolute_difference_by_channel": [
+    1.3479669824789653e-08,
+    0.0,
+    0.0030301709193736315
+  ],
+  "original_saved_parameters_unchanged": true,
+  "model_weights_changed": false,
+  "production_ensemble_replaced": false,
+  "free_running_quantile_crossings": {
+    "Solar": {
+      "points": 443100,
+      "q16_above_q50": 19130,
+      "q50_above_q84": 50096,
+      "q16_above_q84": 18263
+    },
+    "Temperature": {
+      "points": 876000,
+      "q16_above_q50": 61417,
+      "q50_above_q84": 61681,
+      "q16_above_q84": 2658
+    }
+  },
+  "seconds": 138.38218910002615,
+  "xgboost": "2.1.4",
+  "numpy": "1.26.4"
+}

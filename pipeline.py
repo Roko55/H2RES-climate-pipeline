@@ -82,7 +82,7 @@ def load_data(path):
     return validated_frame(pd.read_parquet(path))
 
 
-def validate_spatial_transfer(profile_path, transfer_path, units):
+def validate_spatial_transfer(profile_path, transfer_path, units, reference_end_year=None):
     """Reject mappings that legacy loaders would repair with implicit fallbacks."""
     profiles = pd.read_parquet(profile_path)
     transfer = pd.read_csv(transfer_path)
@@ -125,6 +125,8 @@ def validate_spatial_transfer(profile_path, transfer_path, units):
     if (dates.dt.minute != 0).any() or (dates.dt.second != 0).any():
         raise ValueError("Spatial timestamps must fall on whole hours")
     dates = dates.loc[~((dates.dt.month == 2) & (dates.dt.day == 29))]
+    if reference_end_year is not None:
+        dates = dates.loc[dates.dt.year <= reference_end_year]
     ordinal = dates.dt.dayofyear - (dates.dt.is_leap_year & (dates.dt.month > 2)).astype(int)
     hours = (ordinal-1)*24 + dates.dt.hour
     if set(hours) != set(range(8760)):
@@ -147,9 +149,10 @@ def core():
 def load_native(folder, data):
     import xgboost as xgb
     metadata = json.loads((folder / "metadata.json").read_text())
-    if folder.resolve() == (ROOT / "models/default").resolve():
+    if folder.resolve() in {(ROOT / "models/default").resolve(), (ROOT / "models/training_20261019").resolve()}:
         inventory = json.loads((ROOT / "artifact_manifest.json").read_text())
-        if digest(folder / "metadata.json") != inventory["files"]["models/default/metadata.json"]["sha256"]:
+        metadata_name = (folder.resolve() / "metadata.json").relative_to(ROOT.resolve()).as_posix()
+        if digest(folder / "metadata.json") != inventory["files"][metadata_name]["sha256"]:
             raise ValueError("Default model metadata differs from the publication record")
     if digest(data) != metadata["data_sha256"]:
         raise ValueError("Data hash differs from the fitted training/calibration record")
@@ -245,6 +248,13 @@ def train(args):
     print(f"Saved native models: {output}")
 
 
+def calibrate(args):
+    from scripts.capacity_factor_calibration import prepare_archive
+    output = new_output(args.output)
+    path = prepare_archive(args.source_dir, output)
+    print(f"Prepared training-calibrated archive: {path}")
+
+
 def select(args):
     values = validate_profiles(np.load(args.profiles, allow_pickle=False))
     if len(values) < 3:
@@ -292,6 +302,7 @@ def export_units(args):
     verify_sources()
     from scripts import scenario_manager as manager
     manager.DATA_DIR = str(Path(args.mapping_dir).resolve())
+    manager.SPATIAL_REFERENCE_END_YEAR = args.reference_end_year
     for cache in (manager._solar_units_cache, manager._wind_units_cache, manager._ratio_cache):
         cache.clear()
     cc = args.country
@@ -328,14 +339,14 @@ def export_units(args):
     if set(solar_units) & set(wind_units) or sum(solar_units.values()) <= 0 or sum(wind_units.values()) <= 0:
         raise ValueError("Solar/wind unit names must be disjoint and each group needs positive capacity")
     solar_paths, wind_paths = manager._solar_artifact_paths(cc), manager._wind_artifact_paths(cc)
-    validate_spatial_transfer(solar_paths["macro_profiles"], solar_paths["transfer_macro"], solar_units)
+    validate_spatial_transfer(solar_paths["macro_profiles"], solar_paths["transfer_macro"], solar_units, args.reference_end_year)
     if args.wind_resolution == "auto" and not Path(wind_paths["sites_meta"]).is_file():
         raise FileNotFoundError("Wind auto resolution requires sites metadata; otherwise choose macro or nuts3 explicitly")
     if args.wind_resolution == "nuts3" and not all(Path(wind_paths[k]).is_file() for k in ("nuts_profiles", "transfer_nuts")):
         raise FileNotFoundError("Requested NUTS3 resolution requires both NUTS3 profiles and transfer CSV")
     resolution, _ = manager._resolve_wind_resolution(cc, args.wind_resolution)
     prefix = "nuts" if resolution == "nuts3" else "macro"
-    validate_spatial_transfer(wind_paths[prefix+"_profiles"], wind_paths["transfer_"+prefix], wind_units)
+    validate_spatial_transfer(wind_paths[prefix+"_profiles"], wind_paths["transfer_"+prefix], wind_units, args.reference_end_year)
     if manager._load_solar_spatial_components(cc, manager._get_solar_units(cc)) is None:
         raise ValueError("Spatial solar artifacts required; legacy fallback is not an audited export")
     units, diagnostics = manager.decompose_to_h2res_units(profile, country_code=cc,
@@ -354,15 +365,20 @@ def export_units(args):
     save_json(output.with_suffix(".json"), {"scenario": args.scenario, "diagnostics": diagnostics,
         "mapping_inputs": {Path(p).name: digest(p) for p in used.values() if Path(p).is_file()},
         "input_sha256": digest(args.scenarios), "output_sha256": digest(output),
+        "spatial_reference_end_year": args.reference_end_year,
         "includes_hror": not args.exclude_hror})
 
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
+    preparation = commands.add_parser("calibrate", help="Prepare the Croatian archive with training-period CF targets")
+    preparation.add_argument("--source-dir", required=True)
+    preparation.add_argument("--output", required=True)
+    preparation.set_defaults(function=calibrate)
     gen = commands.add_parser("generate", help="Generate with hash-checked native models")
     gen.add_argument("--data", required=True)
-    gen.add_argument("--model-dir", default=str(ROOT / "models/default"))
+    gen.add_argument("--model-dir", default=str(ROOT / "models/training_20261019"))
     gen.add_argument("--count", type=int, default=15)
     gen.add_argument("--seed", type=int, default=101)
     gen.add_argument("--output", required=True)
@@ -383,6 +399,7 @@ def main(argv=None):
     export.add_argument("--scenario", required=True)
     export.add_argument("--mapping-dir", required=True)
     export.add_argument("--country", default="HR")
+    export.add_argument("--reference-end-year", type=int, default=2015)
     export.add_argument("--wind-resolution", choices=("auto", "nuts3", "macro"), default="auto")
     export.add_argument("--mass-tolerance", type=float, default=1e-4)
     export.add_argument("--exclude-hror", action="store_true", help="Export only solar/wind; no hydro input required")

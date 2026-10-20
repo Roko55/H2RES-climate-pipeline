@@ -6,3 +6,4 @@ xgboost==2.1.4
 scikit-learn==1.6.1
 pyarrow==21.0.0
 joblib==1.5.2
+openpyxl==3.1.5

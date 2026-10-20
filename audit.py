@@ -21,18 +21,21 @@ def main():
     for name, record in source.items():
         if digest(ROOT / name) != record["sha256"]:
             raise ValueError("Source mismatch: " + name)
-    metadata = json.loads((ROOT / "models/default/metadata.json").read_text())
     expected = {(c, q) for c in ("Solar", "Temperature") for q in (.16, .5, .84)}
-    found = {(entry["channel"], entry["quantile"]) for entry in metadata["models"]}
-    if len(metadata["models"]) != 6 or found != expected:
-        raise ValueError("Incomplete native model bundle")
-    for entry in metadata["models"]:
-        path = (ROOT / "models/default" / entry["file"]).resolve()
-        path.relative_to((ROOT / "models/default").resolve())
-        if digest(path) != entry["sha256"]:
-            raise ValueError("Native model mismatch: " + entry["file"])
+    verified = 0
+    for folder in (ROOT / "models/default", ROOT / "models/training_20261019"):
+        metadata = json.loads((folder / "metadata.json").read_text())
+        found = {(entry["channel"], entry["quantile"]) for entry in metadata["models"]}
+        if len(metadata["models"]) != 6 or found != expected:
+            raise ValueError("Incomplete native model bundle")
+        for entry in metadata["models"]:
+            path = (folder / entry["file"]).resolve()
+            path.relative_to(folder.resolve())
+            if digest(path) != entry["sha256"]:
+                raise ValueError("Native model mismatch: " + entry["file"])
+            verified += 1
     print(json.dumps({"status": "passed", "files_verified": len(manifest["files"]),
-                      "native_models_verified": 6, "strict_temporal_holdout": False}, indent=2))
+                      "native_models_verified": verified, "strict_temporal_holdout": False}, indent=2))
 
 
 if __name__ == "__main__":

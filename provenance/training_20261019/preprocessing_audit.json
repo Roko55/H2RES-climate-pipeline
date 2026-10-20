@@ -1,0 +1,91 @@
+{
+  "raw_sources": {
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\HR_macro_climate_metadata.csv": "c708b73964da4a85d1ddeb8d4a802136b41ea0a057642636167d32d1cb31a9c6",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\solar_Zone1_Dalmacija.parquet": "ca8eb44820f0861c3bb30374e3e84c780f2528145ef327aefc902f95d3f41ad0",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\solar_Zone2_Slavonija.parquet": "10e0d4ce9e567486137500114cef657f486e8d0a8630c203bf44a8801aca190c",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\solar_Zone3_Sjever.parquet": "37a5ee80d436a3e84d770d91c52f77726e42529729efdfb938663c9a48fa1967",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\temp_Zone1_Zagreb.parquet": "308831b58579a68a3e196278911946d9a7f585402f90f63a60052729601e64fd",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\temp_Zone2_Split.parquet": "456230a512df21ab550bf0381ccaaa65bfb5de72a74b83c4c046cfd057f42464",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\temp_Zone3_Osijek.parquet": "4165b53d632970a4d840365fba348bc7e35565c318e1898a15458e2111241128",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\HR_wind_sites_meta.csv": "6eedad10f4dd439fd92253c6b404987260c3a5b22e22a58f09bdf9d5e6de2404",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP1_Boraja_43.642_16.030.parquet": "bcd757115875e3c6da7be11e59711e0e5be8b18a166ee13467c21a847b33ede3",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP1_Danilo_43.738_16.088.parquet": "1c817a27ff041c6a85d37f4afe79627ddd579031044815cdacb6e2cb1af5e83e",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP1_Danilo_Biranj_43.707_16.009.parquet": "bcd757115875e3c6da7be11e59711e0e5be8b18a166ee13467c21a847b33ede3",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP1_Glunca_43.640_16.097.parquet": "fa7581f877f4191d036ed43df22ba58f14d97cc95f5c2988dfe15f16cfc543e2",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP_Jasenice_44.224_15.659.parquet": "7ebe33ea829031754bfc0b41a484c29e239b80ebb466129c88d6d1a27629508c",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP2_Jelinak_43.620_16.847.parquet": "e7cd3dae714fa629ff72e77d94555b35ecd0688780c8a5818285947c5e36f82c",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP2_Katuni_43.472_16.903.parquet": "cfbeae72b4b401e9555853a126524ac57a0d96a0de8d067d46c777b0868bc884",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP_Korlat_44.100_15.566.parquet": "91e00301410653a4e90656abab9642b6db07be272061b3934e83badb78ddbe6b",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP1_Ljubac_44.022_16.158.parquet": "38789b4920e587568e972c8777effc8a100daf7c9ce16e8818b7f5d4c93d389b",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP2_Lukovac_43.538_16.920.parquet": "5c9adcc4071d415f54f3d1ce319f8e292eb4cddabf98c6628cc824aeeaa16d5f",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP_Obrovac_44.155_15.670.parquet": "7ebe33ea829031754bfc0b41a484c29e239b80ebb466129c88d6d1a27629508c",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP2_Ogorje_43.719_16.527.parquet": "ee9f1d17bba33fd95bf3a6b70632a328c06f8ed904d971cc492f8c8496f7c181",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP3_Ogorje_43.719_16.527.parquet": "9239928fdb8039e94d0ba5b5db04013747e2ee4446d0a59b2ac58d1d88eba178",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP1_Opor_43.603_16.133.parquet": "c046eb34a2c125bf9af5c79fb439d04fa72ff0b8ad053bee56dc50c53fa6b7b4",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP2_Orjak_43.470_16.816.parquet": "d7fae2b06c8ec8dc2e9ea66f8dcdef82cc2f6945c2c116b3efec919393671188",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP1_Orlice_43.638_16.025.parquet": "3267096b8e3f2dfd24bc149ece351e78c28cedfe9caa881befe2801328977fc4",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP1_Padjene_44.060_16.088.parquet": "18ca7300e805a3f6ef92ea3f3cc1aab45574ad1207227e0c00e2b4cee4a3c43b",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP2_Pometeno_Brdo_43.609_16.475.parquet": "fb32e7092d730c955556e9367d71ef2e549215af086ef84b9b31554fda522ddb",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP3_Ponikve_42.868_17.601.parquet": "8e57404e66d33309e4f5e8aacc4f60f59c756a100fa84861c2265191cccf78bf",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP_Raven_1_44.440_15.085.parquet": "cc7f4d22c7ed4c02647d583d076b7b8403f1332cba11df36a2b7959fa9214d13",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP3_Rudine_42.825_17.796.parquet": "b1a997f835bebce3526baf417d31bfcc253076b595aefee9b62d6899e0f5306e",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP1_Senj_Wind_45.038_15.023.parquet": "4250d3253b3ef90f5c9988e585a4f166e08e360cbe34ede5c12f1f09502395f9",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP_Senj_45.038_15.023.parquet": "ce715c79521c26cbb42821efba2293cf3348ed56e53bf5aaed64adcf20a16ceb",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP1_Sibenik-Knin_43.928_16.104.parquet": "02a64f95ea96e8f121670a3362aa32cf9219aa402fdaacb6125fef4b5a81fa3c",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP2_\u0160ibenik-Knin_43.928_16.104.parquet": "181e619ea8c09e430786c1e18e9ed926cfed6393a83c2917f6baf8f7e4c1d207",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP2_ST1-1-ST1-2_43.624_16.880.parquet": "d05ba8e7593decbc63dfcb50bdf3bd89b1ccb28f2fdce1a99d8087965a410924",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP1_Trtar-Krtolin_43.752_15.969.parquet": "c28f25760a155a59e9436460e11acba1fa5f4fcae434279da5b30d3e1b4f35fe",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP_Zadar_II_44.106_15.716.parquet": "91517a553f9f43ebef86f114fa4d8136875e0842740ca5c9d917cf04af01cbd4",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP_Zadar_III_44.067_15.784.parquet": "f2fd624a110e4165f28eef5bf951097dbcd7f9483d652f228bc1bce34c67a514",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP_Zadar_VI_44.067_15.784.parquet": "f2fd624a110e4165f28eef5bf951097dbcd7f9483d652f228bc1bce34c67a514",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP_Zadar_IV_44.087_15.608.parquet": "91e00301410653a4e90656abab9642b6db07be272061b3934e83badb78ddbe6b",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP_Zadar_Kunovac_44.128_15.239.parquet": "1c365f1eea82192083b846af430c2c54d957148b4554005fbefd8879f8756a5a",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\raw_data\\openmeteo_wind\\HR_WindPP_Zadar_VI_44.300_15.850.parquet": "05a4a361ad2d28f92e3da5cd6f2f0943efd122a57f210f9ceae6ab70cfce5f09",
+    "H2RES_SingleZone_Myopic_v1.2\\data\\SC\\IRENA_Statistics_Extract_2025H2.xlsx": "176e3083f9e03bdcfd6a177a4b302b1af5a00060117cf654ab3aba548dea8794"
+  },
+  "original_data_sha256": "d92748ca6625d0092b073b9bc16345da960a04c42da29926da5b125a63ad122d",
+  "new_data_sha256": "9a21558378d6359f308e3b7b7a3068d053195fa9123792c1d8aa9ac177101022",
+  "calibration_targets": {
+    "solar": {
+      "2013": 0.06779019466474405,
+      "2014": 0.1216756607167566,
+      "2015": 0.13675703559351177
+    },
+    "wind": {
+      "2004": 0.0380517503805175,
+      "2005": 0.1902587519025875,
+      "2006": 0.1275852806876175,
+      "2007": 0.23435401557883428,
+      "2008": 0.2679290894439968,
+      "2009": 0.08838878016960208,
+      "2010": 0.20099994219987283,
+      "2011": 0.17650158061116966,
+      "2012": 0.20848934550989345,
+      "2013": 0.23248435983173338,
+      "2014": 0.24581094004660498,
+      "2015": 0.21746711891809223
+    }
+  },
+  "calibration_alpha": {
+    "solar": 0.6959344568615558,
+    "wind": 0.3963789320795856
+  },
+  "raw_calibration_denominator_years": [
+    1980,
+    2015
+  ],
+  "source_replay": {
+    "solar_max_abs": 1.9841936294007212e-07,
+    "wind_max_abs": 4.3255701126510004e-07,
+    "temperature_max_abs": 7.105427357601002e-15
+  },
+  "future_perturbation_checks": {
+    "solar_perturb_from_2016": true,
+    "solar_perturb_from_2020": true,
+    "wind_perturb_from_2016": true,
+    "wind_perturb_from_2020": true
+  },
+  "geography": "Same fixed source locations and asset/population weights as the archived study; not a real-time historical fleet forecast.",
+  "reporting_period_previously_inspected": true,
+  "new_untouched_test_claim": false
+}

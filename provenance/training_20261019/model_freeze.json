@@ -1,0 +1,39 @@
+{
+  "model_files": {
+    "xgb_models.joblib": "ee96b6bf0934a7ce1e5f992ffb54f2e01336102ab65abcc345d364b164f11873",
+    "xgb_norm_params.npz": "405ce71be84d30ecc59eb849b2c6bbd19f22f1d636c0aa291e877e7431a335ec"
+  },
+  "calibration": {
+    "Solar": {
+      "sigma_calibration": 0.8524376749992371,
+      "rho": 0.08672283701052144,
+      "residual_mean": -0.02626154012978077,
+      "residual_std": 1.2954730987548828,
+      "drift_alpha": 0.4000000059604645
+    },
+    "Temperature": {
+      "sigma_calibration": 0.8573236465454102,
+      "rho": 0.17153420454436824,
+      "residual_mean": 0.009389081969857216,
+      "residual_std": 1.8281614780426025,
+      "drift_alpha": 0.4000000059604645
+    }
+  },
+  "generator_sha256": "e34b6eda270bda5e64a2514740b2e4b715ebc9eb7bf25a8fd2d06d2cedeb4086",
+  "seed": 42,
+  "members": 100,
+  "frozen_before_reporting_metrics": true,
+  "training_years": [
+    1980,
+    2015
+  ],
+  "validation_years": [
+    2016,
+    2019
+  ],
+  "reporting_years": [
+    2020,
+    2024
+  ],
+  "fitting_has_no_reporting_partition": true
+}

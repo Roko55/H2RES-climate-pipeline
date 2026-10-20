@@ -6,10 +6,13 @@ Solar and temperature use autoregressive XGBoost quantile models. Wind uses seas
 
 ## Start here
 
+The current bundle is `models/training_20261019/`, using national CF calibration from 1980-2015 and residual calibration from 2016-2019. The earlier bundle remains under `models/default/`. The two bundles require different input archives. Commands and input identities are in [USAGE.md](docs/USAGE.md#training-period-calibrated-model).
+
 | Goal | Start with | Inputs |
 |---|---|---|
 | Try the interface after cloning | Offline demonstration below | Installed packages only |
-| Replay the delivered Croatian model | [Recorded model](docs/USAGE.md#recorded-model) | Exact historical corpus identified by hash |
+| Use the current Croatian model | [Training-period calibrated model](docs/USAGE.md#training-period-calibrated-model) | Exact training-calibrated corpus identified by hash |
+| Replay the earlier comparison | [Recorded model](docs/USAGE.md#recorded-model) | Earlier corpus and explicit model directory |
 | Use another dataset / H2RES project | [Own-data workflow](docs/USAGE.md#own-data-workflow) | Your hourly CF/temperature data and spatial mapping inputs |
 | Connect output to H2RES | [Integration examples](docs/INTEGRATION.md) | Your unit names and runtime dictionaries |
 
@@ -99,7 +102,8 @@ The [recorded comparison](docs/RESEARCH_RESULTS.md) and [autoencoder experiment]
 | `examples/demo.py` | Complete offline interface demonstration |
 | `scripts/` | Generation, scenario-selection and thermal methods |
 | `tests/` | Synthetic regression and cross-project checks |
-| `models/default/` | Six native quantile models and calibration |
+| `models/training_20261019/` | Current native quantile models and calibration |
+| `models/default/` | Earlier native model bundle |
 | `docs/` | Usage, schemas, integration, validation and recorded results |
 | `provenance/`, `results/` | Source identity, replay evidence and measurements |
 
