@@ -1,8 +1,8 @@
 """Validated entry points for the H2RES climate profile pipeline.
 
-The maintained model includes a causal-feature warmup correction. Optional
-explicit-baseline and hydro-export extensions support other H2RES projects.
-Original sources are retained in provenance. Inputs are validated before calls.
+Features use past values only. Explicit thermal baselines and configurable
+renewable-unit export support different H2RES projects. Inputs are validated
+before model generation, scenario selection and runtime mapping.
 """
 from pathlib import Path
 import os
@@ -149,7 +149,7 @@ def core():
 def load_native(folder, data):
     import xgboost as xgb
     metadata = json.loads((folder / "metadata.json").read_text())
-    if folder.resolve() in {(ROOT / "models/default").resolve(), (ROOT / "models/training_20261019").resolve()}:
+    if folder.resolve() in {(ROOT / "models/default").resolve(), (ROOT / "models/default").resolve()}:
         inventory = json.loads((ROOT / "artifact_manifest.json").read_text())
         metadata_name = (folder.resolve() / "metadata.json").relative_to(ROOT.resolve()).as_posix()
         if digest(folder / "metadata.json") != inventory["files"][metadata_name]["sha256"]:
@@ -378,7 +378,7 @@ def main(argv=None):
     preparation.set_defaults(function=calibrate)
     gen = commands.add_parser("generate", help="Generate with hash-checked native models")
     gen.add_argument("--data", required=True)
-    gen.add_argument("--model-dir", default=str(ROOT / "models/training_20261019"))
+    gen.add_argument("--model-dir", default=str(ROOT / "models/default"))
     gen.add_argument("--count", type=int, default=15)
     gen.add_argument("--seed", type=int, default=101)
     gen.add_argument("--output", required=True)

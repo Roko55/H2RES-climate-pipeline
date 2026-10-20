@@ -1,6 +1,6 @@
 {
-  "scope": "Standalone research repository; excludes this manifest and ignored local outputs",
-  "strict_temporal_holdout": false,
+  "scope": "Delivered files and research evidence",
+  "reporting_period_previously_inspected": true,
   "files": {
     ".gitattributes": {
       "bytes": 72,
@@ -14,41 +14,37 @@
       "bytes": 120,
       "sha256": "9858104907a2dc5fea92967c494a3994f164b60e0d629f7dfe83770043a212ac"
     },
-    "AUDIT.md": {
-      "bytes": 7202,
-      "sha256": "049746274de01145131f70a3118d3bdc5ae50db2a26815b421c2627b56a258c0"
-    },
     "README.md": {
-      "bytes": 6874,
-      "sha256": "e07d1078703af5f83a9961ec85730d4899c03d0c0563e6492f75d588ab9883c5"
+      "bytes": 3621,
+      "sha256": "e9d874239bc8a2bacc7fa76504ecc4c92ab648a7cc739dec1eb8799106fd63e0"
     },
     "RIGHTS.md": {
       "bytes": 373,
       "sha256": "51096f0884f210678ea239ea71b411d9899d470c150fe8dfe1caefb648fb969c"
     },
     "audit.py": {
-      "bytes": 1771,
-      "sha256": "1787f92253a4eeb3e47158deb00dfbc7d5493430110caf1e51d747bc52cb5c56"
+      "bytes": 2225,
+      "sha256": "294cb474b9b892ac44d1b9c7fb2931377879a42836933399c14bef7917b6bf8a"
     },
     "docs/DATA.md": {
-      "bytes": 5270,
-      "sha256": "80201c86a327b24dfb1d4899852dad9b78ab33639f10ad955ccc9a10d58001dc"
+      "bytes": 5237,
+      "sha256": "f2e09f57361e8df3757e6e926884f66f3ff039e17992008ba2a336f5021c1767"
     },
     "docs/INTEGRATION.md": {
-      "bytes": 5436,
-      "sha256": "7ac6d9090dfa90318bcc4e8c44f2e49d8bd3404fc06c342fe879070c47141551"
+      "bytes": 5319,
+      "sha256": "26f3e88daf7da27f8622c6c1010b843c6665430a47b5fa1893b4e02a744a0aaf"
     },
     "docs/RESEARCH_RESULTS.md": {
-      "bytes": 1763,
-      "sha256": "26af075cf301997736609524d3aa3b2e17ff71ed82470ebf0054cfd5e885655f"
+      "bytes": 1589,
+      "sha256": "71d20d3cafbfda75659bf532470784d52872a55718155e5b9330a14b86f00764"
     },
     "docs/USAGE.md": {
-      "bytes": 6948,
-      "sha256": "5c82eaf7f052e09df0fa4a2cf0dbe3e7ab81ca91687a755b5087a966a2fb5ae8"
+      "bytes": 4257,
+      "sha256": "effdab271f706f7f6fba8a209d44d2cdbbb78ee7b492511f3bfec9184b1bb2ab"
     },
     "docs/VALIDATION.md": {
-      "bytes": 3727,
-      "sha256": "7cab429b4d5075a4b418ddd76f526a1f521ac73cead21173d1faaf8c1af4e321"
+      "bytes": 2354,
+      "sha256": "003f042bf36451b7277ef052aed378ffdb6f138ea98c9e8c62f9d2f6d364a65e"
     },
     "examples/__init__.py": {
       "bytes": 76,
@@ -62,145 +58,73 @@
       "bytes": 5421,
       "sha256": "93bfe6c8327f66d30843a25d108e758311af7368bc0c876360d9aeeb230401eb"
     },
-    "figures/application_comparison.pdf": {
-      "bytes": 20173,
-      "sha256": "2cd4ee7a1561c2a7f803e0e0ab6c772e197de59da0aea9072b7fbdfe7e27aab8"
+    "figures/annual_wind_comparison.png": {
+      "bytes": 152849,
+      "sha256": "14af4fccd76da9933719c0acf2888574bc237b324748e8bf65e28bd030becdb7"
     },
-    "figures/application_comparison.png": {
-      "bytes": 160192,
-      "sha256": "04f707f5ae198db498c8a93eed7c35771f88b948beb8807ae01d5aefb53db617"
+    "figures/wind_week.png": {
+      "bytes": 235654,
+      "sha256": "c5a879932c802876addfe5db42a67fed30622b6ed5258beb977291b6c5d86535"
     },
     "h2res_interface.py": {
       "bytes": 5629,
       "sha256": "e13064016f10dac9f8df2367203a836104601e5c2566a6dde6f1d0fde862d597"
     },
     "models/default/metadata.json": {
-      "bytes": 2407,
-      "sha256": "341f2d081733820ed968016c139a09c6250f35149db61f1852f71f1aa4739c61"
-    },
-    "models/default/solar_q16.ubj": {
-      "bytes": 4426343,
-      "sha256": "4123933cf0107c5bf7e65d69777c202693c598c0926e273b156b3715d2f05169"
-    },
-    "models/default/solar_q50.ubj": {
-      "bytes": 4396580,
-      "sha256": "832e72a557737cd7241bf81c862deb4d67a2c5243a408320fcff96e8a724ce40"
-    },
-    "models/default/solar_q84.ubj": {
-      "bytes": 4310441,
-      "sha256": "cc22d8056b0ddcfe3b77e5631d96ba465338f1415fcc9b3c518da643cb3a7992"
-    },
-    "models/default/temperature_q16.ubj": {
-      "bytes": 4324701,
-      "sha256": "5341c340a18517a6a3e6f5bc1a7ac7f32860580c5ce1c8f654e44327fb0d724a"
-    },
-    "models/default/temperature_q50.ubj": {
-      "bytes": 4476499,
-      "sha256": "22dfdb7989d7e3ede660ee89792aa762f1edda56d901ca7b8f8355316a260ef0"
-    },
-    "models/default/temperature_q84.ubj": {
-      "bytes": 4372624,
-      "sha256": "4ccc2670d7c03f29fa5c5c6f0c7c48ccb85e11beb727c8f3036ca4ec2f108d96"
-    },
-    "models/training_20261019/metadata.json": {
       "bytes": 2516,
       "sha256": "375b14aefeeb00b9790f12ca972a9d00a7dc30981c1aefd19b4292efa17fed1d"
     },
-    "models/training_20261019/solar_q16.ubj": {
+    "models/default/solar_q16.ubj": {
       "bytes": 4349096,
       "sha256": "282e5027e1c48738ed036061d4da43f59df9457eb8185ac8153601b2ab5bbdc0"
     },
-    "models/training_20261019/solar_q50.ubj": {
+    "models/default/solar_q50.ubj": {
       "bytes": 4378356,
       "sha256": "a7a114b84cb7effc09991d4f63a87df2e56ed5e0816d276999c1dd32aad3bde2"
     },
-    "models/training_20261019/solar_q84.ubj": {
+    "models/default/solar_q84.ubj": {
       "bytes": 4377267,
       "sha256": "79293653d9f37941c54b7c429541db54d48ed66619d6c3afefeb012ce1af74a8"
     },
-    "models/training_20261019/temperature_q16.ubj": {
+    "models/default/temperature_q16.ubj": {
       "bytes": 4328858,
       "sha256": "bbabd2db4590cfc777395c7572abb54024471866236704030a944718a8eb6e3f"
     },
-    "models/training_20261019/temperature_q50.ubj": {
+    "models/default/temperature_q50.ubj": {
       "bytes": 4467041,
       "sha256": "b565391cdd22d1a8560b02fa48f2fdf1219c240f8e295dbd07b899658c58fc61"
     },
-    "models/training_20261019/temperature_q84.ubj": {
+    "models/default/temperature_q84.ubj": {
       "bytes": 4345310,
       "sha256": "c9231f97f5967c0be3db118a1d2281f65126ee7ea4060d273db104c7fd433b60"
     },
     "pipeline.py": {
-      "bytes": 23826,
-      "sha256": "c1df73730497d3062349c7148759e3e0c12e65b9d72b74582fcd0f88aee89c93"
+      "bytes": 23792,
+      "sha256": "ab84363d37dbc6b820cd48a917f7419c80ef5916634e98d86230012f18b6a9ac"
     },
-    "provenance/data_provenance.json": {
-      "bytes": 1855,
-      "sha256": "8c093dacde0f3d0cb30ee03ff75daae53c6e5cb7d9a23b87d56427470f140c62"
-    },
-    "provenance/default_refit_report.json": {
-      "bytes": 13111,
-      "sha256": "82e2ddef17cbc4551c10baa084c78ffcf5a5e24b7b2052ea48c7a4b50ecaa057"
-    },
-    "provenance/executed/scenario_manager.py": {
-      "bytes": 42251,
-      "sha256": "f742ef99429b28e849df2c7abc6472a5094683ed841df619d484f034a4a51f9b"
-    },
-    "provenance/executed/temperature_coupling.py": {
-      "bytes": 16136,
-      "sha256": "61b59a38ad51d311016e6574576703112b4813304ea0cc392138f4d93eecaaf4"
-    },
-    "provenance/executed/xgboost_climate_model.py": {
-      "bytes": 68915,
-      "sha256": "111e0aefc0ccb4fd4d034f28cf9f539bfb82995bf053bbba0582d09fd1f828e2"
-    },
-    "provenance/generation_compatibility.json": {
-      "bytes": 743,
-      "sha256": "0b4322a3daa6c7c82cf2ea9eb6ddf95f1b99441b622466aac509ca1530821cd5"
-    },
-    "provenance/generation_replay.json": {
-      "bytes": 1087,
-      "sha256": "d6c1bf4755a138d7f421327a63e1de9a7e2c626a6830ccc3bd9fa6fce2ed7f62"
-    },
-    "provenance/manuscript_correspondence.json": {
-      "bytes": 1200,
-      "sha256": "d57316a35bb2e50cd99f51a2e5d991431662d94b764403c64030bfc25af1429c"
-    },
-    "provenance/report_serialization.json": {
-      "bytes": 372,
-      "sha256": "57ccb93d47adda7929a22b8be79204b87a30eb53a5ed62c72835bd5f7bc6c7a8"
-    },
-    "provenance/reuse_export_verification.json": {
-      "bytes": 1934,
-      "sha256": "eb9b52d268ae53e7381a164e144af42d8df56b30cb26985ea3f53feb52abb74c"
-    },
-    "provenance/reuse_interface_verification.json": {
-      "bytes": 640,
-      "sha256": "c7a51e725f80f76be8cb060f3a4cc243db89fbedb965eebc9c98dbdfb20ec958"
-    },
-    "provenance/source_manifest.json": {
-      "bytes": 1622,
-      "sha256": "9e5293fd58478f5ab9530533b40e6024877c8884c2afddff689c9f5b0d97d1f3"
-    },
-    "provenance/spatial_export_verification.json": {
-      "bytes": 2002,
-      "sha256": "c25652985d6294a45bc745827633935d248d5f3eb91e1395f5c28c4d5033fc2c"
-    },
-    "provenance/training_20261019/ensemble_freeze.json": {
+    "provenance/model/ensemble_freeze.json": {
       "bytes": 178,
       "sha256": "d5a9cf935bf9281033fbb5e0460273bbb8830d06b8878b60ebd9687926c6258e"
     },
-    "provenance/training_20261019/model_freeze.json": {
+    "provenance/model/model_freeze.json": {
       "bytes": 1092,
       "sha256": "7e876d6dc0d67db27733e90465d6d9a8ad09b9fe1ef0fe72193d4d78d686842d"
     },
-    "provenance/training_20261019/preprocessing_audit.json": {
+    "provenance/model/preprocessing_audit.json": {
       "bytes": 9002,
       "sha256": "9e22ea9b5cd82f4c4630a1970c1549c85f7dc108ec7db3d237141eb41890b876"
     },
-    "provenance/training_20261019/saved_model_replay.json": {
+    "provenance/model/saved_model_replay.json": {
       "bytes": 868,
       "sha256": "35df63daf143604688995bf26bc551f2f7d70516de898629f5d01abbb6bfa8b4"
+    },
+    "provenance/source_manifest.json": {
+      "bytes": 1007,
+      "sha256": "6f848332f503a8e2944c2c18abe7218cffa28bff3d23cd613f04815531813970"
+    },
+    "provenance/split_integrity.json": {
+      "bytes": 1311,
+      "sha256": "b1dea976bafe8bcd084da4347aed27eaf4f6e3d70bec4a9d079b836041d9bc05"
     },
     "pyproject.toml": {
       "bytes": 511,
@@ -210,49 +134,65 @@
       "bytes": 150,
       "sha256": "9cfd734008cceeb6f83e72d8fa4495047e266761c916d82d5d471830f66f2eb7"
     },
-    "results/aggregate_individual_metrics.csv": {
-      "bytes": 8674,
-      "sha256": "b8ae67df36c1f4f865f077711d80cf8da6a96f212032544b02a1e51e5cff6c0e"
-    },
-    "results/aggregate_scores.csv": {
-      "bytes": 606,
-      "sha256": "45893485463f5a1c3d1b43491ef6f5d2ae59c589d332b72673b1ab0a12bbf1dc"
-    },
-    "results/annual_mean_spread.csv": {
-      "bytes": 4603,
-      "sha256": "e69e432b7165e712365fb73ca378bf6814398b8f0e20e2e9c394bd9940625d33"
-    },
-    "results/application_comparison.csv": {
-      "bytes": 492,
-      "sha256": "2cfa281e4c4022407cb432f84b770a0bc8c50e02e9c528d5f9d35b507eb333d4"
-    },
-    "results/inference_resources.csv": {
-      "bytes": 538,
-      "sha256": "9935a0483981b3ba583c71e09dd312c12b54692cc5fc4c414f687d50400577c8"
-    },
-    "results/renewable_yield_index_spread.csv": {
-      "bytes": 2411,
-      "sha256": "1bff93c687ffd3efb4d96148f9ad609fb49c54659b0e5670c89bb6307af99f4b"
-    },
-    "results/training_20261019/distribution_metrics.csv": {
+    "results/profile_validation/distribution_metrics.csv": {
       "bytes": 446,
       "sha256": "9d9e3c90d4f3dc01fab04fc742b6a95c9a5ef064644530bd956319db98ce62c3"
     },
-    "results/training_20261019/intervals_and_CRPS.csv": {
+    "results/profile_validation/intervals_and_CRPS.csv": {
       "bytes": 992,
       "sha256": "1208e7e3b0772c3f51dd4130499e4488dd8268b2831e90cb474d3d17f2c4d7ba"
     },
-    "results/training_20261019/solar_gate_consistency.json": {
+    "results/profile_validation/solar_gate_consistency.json": {
       "bytes": 1271,
       "sha256": "454ce5f18d56059ed2b77a219f43e9dc8dcb25aad8a3c276e03129836ce1c853"
     },
-    "results/training_20261019/validation_metrics.csv": {
+    "results/profile_validation/validation_metrics.csv": {
       "bytes": 2201,
       "sha256": "29a8e2466e76812139ee09e45c123b5fdd307505891ae7ba15844306385e37ea"
     },
-    "results/training_resources.csv": {
-      "bytes": 1775,
-      "sha256": "d190e46d3401b9d0d8f5654889698c873ee3116beb89bbf96347c1180b169905"
+    "results/wind_comparison/annual_wind_paths.csv": {
+      "bytes": 3902,
+      "sha256": "16610bee2a6f44c85c8d739eb5fd91855d21119264836a33c21eaea9ce0fe6af"
+    },
+    "results/wind_comparison/annual_wind_summary.json": {
+      "bytes": 1579,
+      "sha256": "424484239c9b6e941f8cd178269de7f3b62c2e83932abbcf7357eaab3f4740fe"
+    },
+    "results/wind_comparison/hybrid_metrics.csv": {
+      "bytes": 52069,
+      "sha256": "f80f4355864f5b85a8c3d12be8d1bf069cbe22a45315fb9bd9712f43e400de00"
+    },
+    "results/wind_comparison/plot_sources.json": {
+      "bytes": 493,
+      "sha256": "24562937027f68385995c8e78498ccfb5f6d5a8133dcd3b0f3ae78ef7c316f29"
+    },
+    "results/wind_comparison/sample_verification.json": {
+      "bytes": 316,
+      "sha256": "a89276dbe8bcdb39c00077510366c24671ef089779fb87928cf61080c9e03623"
+    },
+    "results/wind_comparison/selected_autoencoder_metrics.csv": {
+      "bytes": 83012,
+      "sha256": "d1b6fe112d1b3ef3cb25d781fd75dfb476768c1f83dcd3da402e260d17e84beb"
+    },
+    "results/wind_comparison/selected_run.json": {
+      "bytes": 4171,
+      "sha256": "dc4d1c75ae1ee516795739b1ebe52cc886473aa2405331167e01cb0211f15851"
+    },
+    "results/wind_comparison/split_integrity.json": {
+      "bytes": 1311,
+      "sha256": "b1dea976bafe8bcd084da4347aed27eaf4f6e3d70bec4a9d079b836041d9bc05"
+    },
+    "results/wind_comparison/test_freeze.json": {
+      "bytes": 2398,
+      "sha256": "e9bd5edeeea4cc44c2c380cb1e121031179079f43e4fc53c87e2f6558e2ee724"
+    },
+    "results/wind_comparison/verification.json": {
+      "bytes": 1081,
+      "sha256": "61434ebb34be8af6ae217f9cbe2369ff89b48fdca976b01ab861c51cf335fc5a"
+    },
+    "results/wind_comparison/wind_week.csv": {
+      "bytes": 21718,
+      "sha256": "6ede36d733d522c8af8743206030b03fc5bbcf0b0ceffbf19012b656d1a4c0b2"
     },
     "scripts/__init__.py": {
       "bytes": 66,

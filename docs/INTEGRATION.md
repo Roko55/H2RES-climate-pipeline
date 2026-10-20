@@ -67,7 +67,7 @@ The wrapper requires complete finite baseline keys for every selected unit. Dema
 
 Annual heat/cooling totals are preserved. Temperature changes hourly demand shape through degree-day signals and adjusts COP with the source method's bounded theoretical relationship and baseline-mean calibration. Default heating/cooling bases are 18/22 degrees C; COP bounds are 1.2–5.5. These are model assumptions requiring application-specific validation, not measurements of a particular heat pump. The zero/constant baseline arrays in the example are illustrative; use your permitted baseline climatology and real runtime demand/COP data in an energy study.
 
-The recommended adapter passes baseline temperature directly and never loads a country file implicitly. The original module's country-file path remains for backwards compatibility; calling that legacy API without the required country data is outside this strict adapter contract.
+The adapter passes baseline temperature directly and never loads a country file implicitly. The separate country-file API requires its corresponding country data.
 
 ## Scope of reuse
 
