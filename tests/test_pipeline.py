@@ -108,7 +108,8 @@ class PipelineTests(unittest.TestCase):
             with patch.object(pipeline, "load_data", return_value=(raw, list(range(2000, 2010)))), \
                  patch.object(self.model, "get_default_params", return_value=params), \
                  patch.object(self.model, "calibrate_residuals", return_value=calibration):
-                pipeline.main(["train", "--data", str(data), "--seed", "23", "--latitude", "45", "--output", str(folder/"fit")])
+                pipeline.main(["train", "--data", str(data), "--seed", "23", "--latitude", "45", "--longitude", "16",
+                               "--conditional-fit-only", "--output", str(folder/"fit")])
             models, metadata = pipeline.load_native(folder/"fit", data)
             self.assertEqual(sum(map(len, models.values())), 6)
             self.assertFalse(metadata["reporting_used_for_fit_or_calibration"])

@@ -1,5 +1,5 @@
 {
-  "scope": "Delivered files and research evidence",
+  "scope": "Delivered code, native models and evaluation evidence",
   "reporting_period_previously_inspected": true,
   "files": {
     ".gitattributes": {
@@ -14,37 +14,33 @@
       "bytes": 120,
       "sha256": "9858104907a2dc5fea92967c494a3994f164b60e0d629f7dfe83770043a212ac"
     },
-    "README.md": {
-      "bytes": 3621,
-      "sha256": "e9d874239bc8a2bacc7fa76504ecc4c92ab648a7cc739dec1eb8799106fd63e0"
-    },
-    "RIGHTS.md": {
-      "bytes": 373,
-      "sha256": "51096f0884f210678ea239ea71b411d9899d470c150fe8dfe1caefb648fb969c"
-    },
     "audit.py": {
-      "bytes": 2225,
-      "sha256": "294cb474b9b892ac44d1b9c7fb2931377879a42836933399c14bef7917b6bf8a"
+      "bytes": 3462,
+      "sha256": "3e1a034a810cd817bf5885dd2fbbe644169fc4d106e7e22494c42e0d947d2629"
+    },
+    "config/rollout_calibration.json": {
+      "bytes": 739,
+      "sha256": "8c0c11dc767be64ac81cc6600c79da611ececc9b393fa672b8dc58fb6946f3ba"
     },
     "docs/DATA.md": {
-      "bytes": 5237,
-      "sha256": "f2e09f57361e8df3757e6e926884f66f3ff039e17992008ba2a336f5021c1767"
+      "bytes": 5813,
+      "sha256": "4223845137df12ca78c2347b6b2ac447c8883b5e0f4be39f07c790240c12d3b8"
     },
     "docs/INTEGRATION.md": {
-      "bytes": 5319,
-      "sha256": "26f3e88daf7da27f8622c6c1010b843c6665430a47b5fa1893b4e02a744a0aaf"
+      "bytes": 7122,
+      "sha256": "73da370a114fe501dab1650731fb01de2501532f4e7974eb0607ad6582e6e081"
     },
     "docs/RESEARCH_RESULTS.md": {
-      "bytes": 1589,
-      "sha256": "71d20d3cafbfda75659bf532470784d52872a55718155e5b9330a14b86f00764"
+      "bytes": 2350,
+      "sha256": "0d9d58aa51d5b189d03170a365a9cfbc1ea89b63debfa377b405ba0eef1061b9"
     },
     "docs/USAGE.md": {
-      "bytes": 4257,
-      "sha256": "effdab271f706f7f6fba8a209d44d2cdbbb78ee7b492511f3bfec9184b1bb2ab"
+      "bytes": 4824,
+      "sha256": "e6f3f4313a3b5ee51ff7494744358bb1dbd4c893ad34bce94864fa3b31162070"
     },
     "docs/VALIDATION.md": {
-      "bytes": 2063,
-      "sha256": "8edfe819163fb3934f22bad1ce09a1346dc3264f563ff5146a3e86b3f0ba6893"
+      "bytes": 3358,
+      "sha256": "73a3f4c24f65198b38c415136cc577ba7c5d9af4330b9c1528e45c50913194fb"
     },
     "examples/__init__.py": {
       "bytes": 76,
@@ -59,8 +55,8 @@
       "sha256": "93bfe6c8327f66d30843a25d108e758311af7368bc0c876360d9aeeb230401eb"
     },
     "figures/annual_wind_comparison.png": {
-      "bytes": 152849,
-      "sha256": "14af4fccd76da9933719c0acf2888574bc237b324748e8bf65e28bd030becdb7"
+      "bytes": 149293,
+      "sha256": "896c5ad096f02bd65ed4dcb0758e9c8045bf58fbf99fea27644ca61df0779a87"
     },
     "figures/wind_week.png": {
       "bytes": 235654,
@@ -71,56 +67,60 @@
       "sha256": "e13064016f10dac9f8df2367203a836104601e5c2566a6dde6f1d0fde862d597"
     },
     "models/default/metadata.json": {
-      "bytes": 2516,
-      "sha256": "375b14aefeeb00b9790f12ca972a9d00a7dc30981c1aefd19b4292efa17fed1d"
+      "bytes": 5278,
+      "sha256": "7dafa9bc59ad31c44db91995097ce34c79cd376bed774c26be133135961ee232"
     },
     "models/default/solar_q16.ubj": {
-      "bytes": 4349096,
-      "sha256": "282e5027e1c48738ed036061d4da43f59df9457eb8185ac8153601b2ab5bbdc0"
+      "bytes": 4302663,
+      "sha256": "b65c3b31e032e0af5246486975060b2459a42acbe73bd00d9589272209b101a0"
     },
     "models/default/solar_q50.ubj": {
-      "bytes": 4378356,
-      "sha256": "a7a114b84cb7effc09991d4f63a87df2e56ed5e0816d276999c1dd32aad3bde2"
+      "bytes": 4346426,
+      "sha256": "c6c55c1a33306b86e93cdf2fa0c7fc7391b8cc748fbc9b673dc08bf7af854024"
     },
     "models/default/solar_q84.ubj": {
-      "bytes": 4377267,
-      "sha256": "79293653d9f37941c54b7c429541db54d48ed66619d6c3afefeb012ce1af74a8"
+      "bytes": 3984639,
+      "sha256": "859000b27a0f069928317ccabb6450bca060bda83f3d121fed037bc2da56e62d"
     },
     "models/default/temperature_q16.ubj": {
-      "bytes": 4328858,
-      "sha256": "bbabd2db4590cfc777395c7572abb54024471866236704030a944718a8eb6e3f"
+      "bytes": 4340145,
+      "sha256": "8f1c2c9a793761355377739f738312af3459f5edeff5468e7e24193f1717902f"
     },
     "models/default/temperature_q50.ubj": {
-      "bytes": 4467041,
-      "sha256": "b565391cdd22d1a8560b02fa48f2fdf1219c240f8e295dbd07b899658c58fc61"
+      "bytes": 4495757,
+      "sha256": "86a1cb7a6fa9502305673eedc95cfd73b17bb5d96cb96497abbc7a746641a163"
     },
     "models/default/temperature_q84.ubj": {
-      "bytes": 4345310,
-      "sha256": "c9231f97f5967c0be3db118a1d2281f65126ee7ea4060d273db104c7fd433b60"
+      "bytes": 4397862,
+      "sha256": "1f22e2c6adc1ee061a757bfc0843f566189f732c3ee23bfe3c07a8ae594a51d6"
     },
     "pipeline.py": {
-      "bytes": 23792,
-      "sha256": "ab84363d37dbc6b820cd48a917f7419c80ef5916634e98d86230012f18b6a9ac"
+      "bytes": 26621,
+      "sha256": "509e7d81b890a1194d7c36faed40e7fb9a790bc0544ea8fac2b06a39cf13e8c5"
     },
     "provenance/model/ensemble_freeze.json": {
-      "bytes": 178,
-      "sha256": "d5a9cf935bf9281033fbb5e0460273bbb8830d06b8878b60ebd9687926c6258e"
+      "bytes": 2637,
+      "sha256": "cbeff9467fa5db58cb0276316cf419d60ed13f9d9429c12f93f2c01710807d9c"
     },
     "provenance/model/model_freeze.json": {
-      "bytes": 1092,
-      "sha256": "7e876d6dc0d67db27733e90465d6d9a8ad09b9fe1ef0fe72193d4d78d686842d"
+      "bytes": 1562,
+      "sha256": "8ebfe158e40d50a2638f7a7f4bf0cd1926fd7fc526b00891f596f73e75c75b49"
     },
     "provenance/model/preprocessing_audit.json": {
       "bytes": 9002,
       "sha256": "9e22ea9b5cd82f4c4630a1970c1549c85f7dc108ec7db3d237141eb41890b876"
     },
+    "provenance/model/rollout_calibration.json": {
+      "bytes": 3094,
+      "sha256": "88a09c6f2d3398c4719243892e5eba21051ad8bb264aee1e35fe1316972ea586"
+    },
     "provenance/model/saved_model_replay.json": {
-      "bytes": 868,
-      "sha256": "35df63daf143604688995bf26bc551f2f7d70516de898629f5d01abbb6bfa8b4"
+      "bytes": 3174,
+      "sha256": "8684b5a2cdaec38cf39acf62eed6197f56a41a93167f91022184774e74c44add"
     },
     "provenance/source_manifest.json": {
-      "bytes": 1007,
-      "sha256": "6f848332f503a8e2944c2c18abe7218cffa28bff3d23cd613f04815531813970"
+      "bytes": 1370,
+      "sha256": "8db02b7d529dc19615733d396b7f05ea37543f05bed96820b8cde2cf52eb9b2b"
     },
     "provenance/split_integrity.json": {
       "bytes": 1311,
@@ -128,27 +128,47 @@
     },
     "pyproject.toml": {
       "bytes": 511,
-      "sha256": "159044e00361505b1c789e9f94721e9c9c29d5959c715d11ac39bb6f0693f2ff"
+      "sha256": "3fcb55d9095d52b8353b89b05db9a9a2482a4c36200db1705654b626f5950192"
+    },
+    "README.md": {
+      "bytes": 3704,
+      "sha256": "400b0adb8b9fca667b35c658a80dd555103a6a3eaf391e1f2e35836a93a88575"
     },
     "requirements.txt": {
       "bytes": 150,
       "sha256": "9cfd734008cceeb6f83e72d8fa4495047e266761c916d82d5d471830f66f2eb7"
     },
     "results/profile_validation/distribution_metrics.csv": {
-      "bytes": 446,
-      "sha256": "9d9e3c90d4f3dc01fab04fc742b6a95c9a5ef064644530bd956319db98ce62c3"
+      "bytes": 698,
+      "sha256": "aa20e35d0a7cde819649742b073351d727bf3671be83d15070ea402ecf862591"
     },
     "results/profile_validation/intervals_and_CRPS.csv": {
-      "bytes": 992,
-      "sha256": "1208e7e3b0772c3f51dd4130499e4488dd8268b2831e90cb474d3d17f2c4d7ba"
+      "bytes": 981,
+      "sha256": "f74af64552c33efda418072be027dbf99a9935601e0b2dc020b8b964ffeea393"
+    },
+    "results/profile_validation/low_output_duration.csv": {
+      "bytes": 19726,
+      "sha256": "1639c9c984f251aa8bb42ae72ff65f84f77a1c6d44d17eda0b5c1882d480a50f"
+    },
+    "results/profile_validation/manifest.json": {
+      "bytes": 1320,
+      "sha256": "656060e40e004f68c9c1570de47ddc356a3b220a072912d3085b77ef823b9937"
+    },
+    "results/profile_validation/path_behavior.csv": {
+      "bytes": 105635,
+      "sha256": "41c8a7e8a22eedce6b5d450d1608d83d1718feb220a16c9982366b9481124f10"
+    },
+    "results/profile_validation/seasonal_dependencies.csv": {
+      "bytes": 3487,
+      "sha256": "70b9427138ff2107e58b5c7457abb71d3cbd03e0642f2546114ee51ff7a5d3b7"
     },
     "results/profile_validation/solar_gate_consistency.json": {
-      "bytes": 1271,
-      "sha256": "454ce5f18d56059ed2b77a219f43e9dc8dcb25aad8a3c276e03129836ce1c853"
+      "bytes": 582,
+      "sha256": "3a9ebe63e8d5bf7060ee3b714970a65c1693c98cb3a80e34563e9641259178d8"
     },
     "results/profile_validation/validation_metrics.csv": {
-      "bytes": 2201,
-      "sha256": "29a8e2466e76812139ee09e45c123b5fdd307505891ae7ba15844306385e37ea"
+      "bytes": 772,
+      "sha256": "17ed9395c78526fd8af3bede80eeab2e2094f23cce3bc4e704cf7a697b4fc6c2"
     },
     "results/wind_comparison/annual_wind_paths.csv": {
       "bytes": 3902,
@@ -158,13 +178,21 @@
       "bytes": 1579,
       "sha256": "424484239c9b6e941f8cd178269de7f3b62c2e83932abbcf7357eaab3f4740fe"
     },
+    "results/wind_comparison/current_pipeline_identity.json": {
+      "bytes": 551,
+      "sha256": "d895a096c69c7499434eb02534a9e70ada8ecd98daaec950ac4006266100eb18"
+    },
+    "results/wind_comparison/current_wind_replay.json": {
+      "bytes": 499,
+      "sha256": "e1ac44b86b3cb85e05e5dc602f4069bf79c0bd06adc04a1c8497ce46cf543e86"
+    },
     "results/wind_comparison/hybrid_metrics.csv": {
-      "bytes": 52069,
-      "sha256": "f80f4355864f5b85a8c3d12be8d1bf069cbe22a45315fb9bd9712f43e400de00"
+      "bytes": 20915,
+      "sha256": "09c4d506b990101e2e3ef2014421405a387f94b95f0ad42f8b8f0a2a05c8da8b"
     },
     "results/wind_comparison/plot_sources.json": {
-      "bytes": 493,
-      "sha256": "24562937027f68385995c8e78498ccfb5f6d5a8133dcd3b0f3ae78ef7c316f29"
+      "bytes": 935,
+      "sha256": "834bb66208898d778261545b665e3ef5667ed92b936fd9e331574c92c3a38fc9"
     },
     "results/wind_comparison/sample_verification.json": {
       "bytes": 316,
@@ -194,6 +222,10 @@
       "bytes": 21718,
       "sha256": "6ede36d733d522c8af8743206030b03fc5bbcf0b0ceffbf19012b656d1a4c0b2"
     },
+    "RIGHTS.md": {
+      "bytes": 373,
+      "sha256": "51096f0884f210678ea239ea71b411d9899d470c150fe8dfe1caefb648fb969c"
+    },
     "scripts/__init__.py": {
       "bytes": 66,
       "sha256": "fd2695b78dfa8027cf4c00f38eefd51ae46c3f94743bee21fb2dbf9b78a8c2cd"
@@ -201,6 +233,10 @@
     "scripts/capacity_factor_calibration.py": {
       "bytes": 7498,
       "sha256": "a8d4ffa1a30df14c9c12eef014e7e7c98dd4775692ab60c98820ce55f280ad1f"
+    },
+    "scripts/rollout_sampling.py": {
+      "bytes": 8313,
+      "sha256": "f9dacb04d553c5a556be48a8ed973910fe21f6dfb18ea7df3050a9584f5403c7"
     },
     "scripts/scenario_manager.py": {
       "bytes": 42679,
@@ -210,21 +246,37 @@
       "bytes": 16663,
       "sha256": "e379ae1a1f093d1f595e54888e1ad23e6656446e8d686bddc68e6854f404b237"
     },
+    "scripts/temperature_scope.py": {
+      "bytes": 877,
+      "sha256": "e83b96e6940d4ec346664734c89b4a7f6df01baf1631bb5607f8c53d8d8b38ec"
+    },
     "scripts/xgboost_climate_model.py": {
-      "bytes": 67534,
-      "sha256": "e34b6eda270bda5e64a2514740b2e4b715ebc9eb7bf25a8fd2d06d2cedeb4086"
+      "bytes": 63634,
+      "sha256": "04fca503e18fb007a63d5f70d3681bf1c2c91baef1156aed28f4240ca4b6e73a"
     },
     "tests/test_calibration.py": {
       "bytes": 6021,
       "sha256": "c16f48d45ae714471a810d4603f60df32bdb42a4e14d4d625498c7edc59bfd69"
     },
     "tests/test_pipeline.py": {
-      "bytes": 9428,
-      "sha256": "ba8fce7e76dae7c4081e50762d73130561cf1dfe98bbe6919c485c670f2db18d"
+      "bytes": 9506,
+      "sha256": "d4cf76eab26a4657b65117755cd357b5e8408d4c4784a7416c39d64b15deb753"
     },
     "tests/test_reuse.py": {
       "bytes": 5321,
       "sha256": "fc785af21bea3b5fdad1a4175c06962137389cca795c012c4f47cb93f4fbd0d4"
+    },
+    "tests/test_rollout.py": {
+      "bytes": 5334,
+      "sha256": "31c6a64c2899b52ccfae09ee1a818bc406a3c42d953c0672bdc7d8dd8cfdd546"
+    },
+    "tests/test_temperature_scope.py": {
+      "bytes": 1115,
+      "sha256": "4ecbc2b533df53bb5ad43158ffbe7423e73c1b1d1e3a9d3c2da04a0166c4c7fc"
+    },
+    "tests/test_thermal_index.py": {
+      "bytes": 1107,
+      "sha256": "fefef2a1cde4a9e07a1285495582a67bfdb72cf04fea28e3abb3308163a74982"
     }
   }
 }

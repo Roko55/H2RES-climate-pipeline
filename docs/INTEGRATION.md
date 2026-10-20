@@ -2,6 +2,39 @@
 
 The interface prepares inputs before optimization. It does not import Gurobi or modify solver constraints. Use this full-year interface before any project-specific time aggregation or rolling-window slicing.
 
+For zone-indexed heat-demand dictionaries, `scripts.temperature_scope` provides
+`reshape_demand_for_zones(demand, zones, transform)`. Obtain `zones` from the model's
+explicit country-to-zone mapping, using the same country as renewable input
+mapping and heat-pump COP. The callback transforms a separate target-zone
+subset; all other zones retain their configured values. The transformation
+must preserve demand keys. Annual-total normalization belongs inside the
+supplied temperature-demand transformation and uses the modeled hours.
+After installation, import the helper from `h2res_climate.temperature_scope`
+when working inside a separate H2RES checkout with its own `scripts` package.
+
+In a myopic planning loop, select the corresponding climate year before each
+planning subproblem and reload pristine heat-demand and COP baselines before
+applying the temperature transformation. Preserve the inherited-capacity state
+separately. This makes the prepared planning-year temperature inputs active in
+each solve and prevents repeated transformations of an already modified profile.
+
+The corresponding integration pattern inside the existing myopic loop is:
+
+```python
+for years in chunks:
+    inherited_years = set(globals().get("previous_years_set", set()))
+    os.environ["H2RES_CLIMATE_PLANNING_YEAR"] = str(min(years))
+    _reload_data_for_current_mode()
+    globals()["previous_years_set"] = inherited_years
+    globals()["years"] = list(years)
+    # Existing model construction, solution and state export follow here.
+```
+
+Here `_reload_data_for_current_mode` is the model's data loader, including the
+climate-input hook, and the copied inherited-year set retains the original
+investment handoff. Activate this pattern for prepared climate inputs; the
+optimization formulation stays unchanged.
+
 Install the adapter with `python -m pip install -e . --no-deps` after the requirements. You can then import `h2res_interface` from a separate H2RES project. The installed thermal implementation uses the distinct `h2res_climate` namespace to avoid conflicts with that project's own `scripts` directory. CLI/model files remain in this checkout; the Python adapter package does not install a complete optimization application.
 
 ## Availability arrays to parameters

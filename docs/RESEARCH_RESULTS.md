@@ -2,14 +2,26 @@
 
 The research evaluation distinguishes the repeated central generated profile
 from individual annual paths. Against the fixed H2RES baseline, reporting-period
-solar and wind MAE decrease by 47.5% and 44.6%. Temperature MAE changes from
-3.177 to 3.168 degrees Celsius. These are central-profile comparisons, not
+solar and wind MAE decrease by 52.5% and 44.6%. Temperature MAE changes from
+3.177 to 2.909 degrees Celsius. These are central-profile comparisons, not
 event forecasts. Full metrics are in `results/profile_validation/`.
+
+The empirical 95% calendar-hour interval covers 97.38% of solar daylight
+observations and 93.51% of temperature observations in the previously inspected
+2020-2024 reporting period. The 80% coverages are 86.63% and 78.58%, respectively.
+Solar daylight uses one shared mask derived exclusively from training data;
+including night-time zeros would otherwise inflate coverage. Interval width,
+CRPS, path statistics and distribution distances accompany these measured
+coverages. They describe separate channel distributions, not joint weather
+event probabilities.
 
 For annual wind resource diversity, five historical years are compared with
 15 individual autoencoder paths and 15 pipeline members. The autoencoder
 checkpoint is validation-selected. Both generators use the same
-training-calibrated corpus, sampling settings and reporting reference.
+training-calibrated corpus and reporting reference.
+Autoencoder sampling uses prior scale 1 and seeds 101-103. The pipeline
+comparison selects recorded member indices from its frozen ensemble using
+these seeds; it does not generate a new ensemble for each comparison row.
 
 | Wind diagnostic | Historical | Autoencoder | Pipeline |
 |---|---:|---:|---:|

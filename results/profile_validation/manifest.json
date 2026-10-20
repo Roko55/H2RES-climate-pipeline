@@ -1,0 +1,30 @@
+{
+  "status": "completed",
+  "fitting_performed": false,
+  "ensemble_sha256": "1737c4704e3fa412f521d9e9059362be183d70e2539d891d5f5969de0f6f3aae",
+  "data_sha256": "9a21558378d6359f308e3b7b7a3068d053195fa9123792c1d8aa9ac177101022",
+  "source_sha256": "2987ff55c1cfe47a87e4c14688281d0e589e70e0fa232b6e9185e8991f007ed0",
+  "training_years": [
+    1980,
+    2015
+  ],
+  "validation_years": [
+    2016,
+    2019
+  ],
+  "reporting_years": [
+    2020,
+    2024
+  ],
+  "reporting_previously_inspected": true,
+  "interval_hours": "All 8760 non-leap hours; common training-derived solar daylight mask",
+  "CRPS": "Calendar-hour conditioned empirical distribution, not event forecasting",
+  "outputs": {
+    "distribution_metrics.csv": "aa20e35d0a7cde819649742b073351d727bf3671be83d15070ea402ecf862591",
+    "intervals_and_CRPS.csv": "f74af64552c33efda418072be027dbf99a9935601e0b2dc020b8b964ffeea393",
+    "low_output_duration.csv": "1639c9c984f251aa8bb42ae72ff65f84f77a1c6d44d17eda0b5c1882d480a50f",
+    "path_behavior.csv": "41c8a7e8a22eedce6b5d450d1608d83d1718feb220a16c9982366b9481124f10",
+    "seasonal_dependencies.csv": "70b9427138ff2107e58b5c7457abb71d3cbd03e0642f2546114ee51ff7a5d3b7",
+    "solar_gate_consistency.json": "3a9ebe63e8d5bf7060ee3b714970a65c1693c98cb3a80e34563e9641259178d8"
+  }
+}

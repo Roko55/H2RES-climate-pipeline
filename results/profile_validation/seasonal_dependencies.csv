@@ -1,0 +1,25 @@
+group,season,channel_a,channel_b,spearman,interpretation
+historical_reporting,winter,solar,wind,0.01246217408452925,Descriptive dependence diagnostic; no joint sampling or probability calibration
+historical_reporting,winter,solar,temperature,0.3615307669457578,Descriptive dependence diagnostic; no joint sampling or probability calibration
+historical_reporting,winter,wind,temperature,-0.014375391012694649,Descriptive dependence diagnostic; no joint sampling or probability calibration
+historical_reporting,spring,solar,wind,0.11596942900854303,Descriptive dependence diagnostic; no joint sampling or probability calibration
+historical_reporting,spring,solar,temperature,0.4977502725973326,Descriptive dependence diagnostic; no joint sampling or probability calibration
+historical_reporting,spring,wind,temperature,0.143518066835287,Descriptive dependence diagnostic; no joint sampling or probability calibration
+historical_reporting,summer,solar,wind,0.1644682346422791,Descriptive dependence diagnostic; no joint sampling or probability calibration
+historical_reporting,summer,solar,temperature,0.6335165107799584,Descriptive dependence diagnostic; no joint sampling or probability calibration
+historical_reporting,summer,wind,temperature,0.21209893313725806,Descriptive dependence diagnostic; no joint sampling or probability calibration
+historical_reporting,autumn,solar,wind,0.0217914525124972,Descriptive dependence diagnostic; no joint sampling or probability calibration
+historical_reporting,autumn,solar,temperature,0.42824954710663937,Descriptive dependence diagnostic; no joint sampling or probability calibration
+historical_reporting,autumn,wind,temperature,0.09513411265438906,Descriptive dependence diagnostic; no joint sampling or probability calibration
+synthetic_members,winter,solar,wind,0.005333951985136181,Descriptive dependence diagnostic; no joint sampling or probability calibration
+synthetic_members,winter,solar,temperature,0.2934937478791547,Descriptive dependence diagnostic; no joint sampling or probability calibration
+synthetic_members,winter,wind,temperature,-0.003959834786984158,Descriptive dependence diagnostic; no joint sampling or probability calibration
+synthetic_members,spring,solar,wind,0.002875830442152033,Descriptive dependence diagnostic; no joint sampling or probability calibration
+synthetic_members,spring,solar,temperature,0.4592463209767708,Descriptive dependence diagnostic; no joint sampling or probability calibration
+synthetic_members,spring,wind,temperature,0.01710897543103693,Descriptive dependence diagnostic; no joint sampling or probability calibration
+synthetic_members,summer,solar,wind,-0.005649907560114725,Descriptive dependence diagnostic; no joint sampling or probability calibration
+synthetic_members,summer,solar,temperature,0.6255927264281882,Descriptive dependence diagnostic; no joint sampling or probability calibration
+synthetic_members,summer,wind,temperature,0.001413183697583466,Descriptive dependence diagnostic; no joint sampling or probability calibration
+synthetic_members,autumn,solar,wind,-0.0032108110048992633,Descriptive dependence diagnostic; no joint sampling or probability calibration
+synthetic_members,autumn,solar,temperature,0.393101278115876,Descriptive dependence diagnostic; no joint sampling or probability calibration
+synthetic_members,autumn,wind,temperature,0.007022825328088618,Descriptive dependence diagnostic; no joint sampling or probability calibration

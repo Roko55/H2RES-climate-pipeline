@@ -3,66 +3,154 @@
   "training_seed": 42,
   "xgboost": "2.1.4",
   "latitude": 44.52,
+  "longitude": 16.798,
+  "solar_sites": [
+    [
+      43.788,
+      16.001
+    ],
+    [
+      45.311,
+      18.235
+    ],
+    [
+      45.865,
+      16.206
+    ]
+  ],
   "data_sha256": "9a21558378d6359f308e3b7b7a3068d053195fa9123792c1d8aa9ac177101022",
-  "source_sha256": "e34b6eda270bda5e64a2514740b2e4b715ebc9eb7bf25a8fd2d06d2cedeb4086",
+  "source_sha256": "04fca503e18fb007a63d5f70d3681bf1c2c91baef1156aed28f4240ca4b6e73a",
+  "training_source_sha256": "45ec3aa0e4709e0be1b2329e18e6eff456621f0555c9d656dc26b117de2a5c4c",
+  "training_function_fingerprint": "c44f5458ed93412835077d44c6c9cb48349cc034745bd36d2cf3dd9a10c23b6f",
+  "rollout_sampling_source_sha256": "f9dacb04d553c5a556be48a8ed973910fe21f6dfb18ea7df3050a9584f5403c7",
   "models": [
     {
       "channel": "Solar",
       "quantile": 0.16,
       "file": "solar_q16.ubj",
-      "sha256": "282e5027e1c48738ed036061d4da43f59df9457eb8185ac8153601b2ab5bbdc0",
-      "bytes": 4349096
+      "sha256": "b65c3b31e032e0af5246486975060b2459a42acbe73bd00d9589272209b101a0",
+      "best_iteration": 996,
+      "bytes": 4302663
     },
     {
       "channel": "Solar",
       "quantile": 0.5,
       "file": "solar_q50.ubj",
-      "sha256": "a7a114b84cb7effc09991d4f63a87df2e56ed5e0816d276999c1dd32aad3bde2",
-      "bytes": 4378356
+      "sha256": "c6c55c1a33306b86e93cdf2fa0c7fc7391b8cc748fbc9b673dc08bf7af854024",
+      "best_iteration": 998,
+      "bytes": 4346426
     },
     {
       "channel": "Solar",
       "quantile": 0.84,
       "file": "solar_q84.ubj",
-      "sha256": "79293653d9f37941c54b7c429541db54d48ed66619d6c3afefeb012ce1af74a8",
-      "bytes": 4377267
+      "sha256": "859000b27a0f069928317ccabb6450bca060bda83f3d121fed037bc2da56e62d",
+      "best_iteration": 997,
+      "bytes": 3984639
     },
     {
       "channel": "Temperature",
       "quantile": 0.16,
       "file": "temperature_q16.ubj",
-      "sha256": "bbabd2db4590cfc777395c7572abb54024471866236704030a944718a8eb6e3f",
-      "bytes": 4328858
+      "sha256": "8f1c2c9a793761355377739f738312af3459f5edeff5468e7e24193f1717902f",
+      "best_iteration": 999,
+      "bytes": 4340145
     },
     {
       "channel": "Temperature",
       "quantile": 0.5,
       "file": "temperature_q50.ubj",
-      "sha256": "b565391cdd22d1a8560b02fa48f2fdf1219c240f8e295dbd07b899658c58fc61",
-      "bytes": 4467041
+      "sha256": "86a1cb7a6fa9502305673eedc95cfd73b17bb5d96cb96497abbc7a746641a163",
+      "best_iteration": 999,
+      "bytes": 4495757
     },
     {
       "channel": "Temperature",
       "quantile": 0.84,
       "file": "temperature_q84.ubj",
-      "sha256": "c9231f97f5967c0be3db118a1d2281f65126ee7ea4060d273db104c7fd433b60",
-      "bytes": 4345310
+      "sha256": "1f22e2c6adc1ee061a757bfc0843f566189f732c3ee23bfe3c07a8ae594a51d6",
+      "best_iteration": 999,
+      "bytes": 4397862
     }
   ],
   "calibration": {
     "Solar": {
-      "sigma_calibration": 0.8524376749992371,
-      "rho": 0.08672283701052144,
-      "residual_mean": -0.02626154012978077,
-      "residual_std": 1.2954730987548828,
-      "drift_alpha": 0.4000000059604645
+      "sigma_calibration": 0.8256572484970093,
+      "rho": 0.10589581076365644,
+      "residual_mean": -0.00932440347969532,
+      "residual_std": 0.9785916805267334,
+      "drift_alpha": 0.0
     },
     "Temperature": {
-      "sigma_calibration": 0.8573236465454102,
-      "rho": 0.17153420454436824,
-      "residual_mean": 0.009389081969857216,
-      "residual_std": 1.8281614780426025,
-      "drift_alpha": 0.4000000059604645
+      "sigma_calibration": 0.8073752522468567,
+      "rho": 0.20236328353874863,
+      "residual_mean": 0.020038457587361336,
+      "residual_std": 1.3536463975906372,
+      "drift_alpha": 0.0
+    }
+  },
+  "rollout_calibration": {
+    "Solar": {
+      "channel": "Solar",
+      "drift_alpha": 0.05,
+      "noise_multiplier": 2.0,
+      "bias": {
+        "kind": "scale",
+        "value": 1.033496797084835
+      },
+      "calendar_sd_ratio": 1.1762726939947068,
+      "ramp95_ratio": 1.0542478617427309,
+      "annual_sd_ratio": 0.6223457536881121,
+      "mean_bias": -0.0015186130028992384,
+      "coverage80": 0.8635830007043908,
+      "width80": 0.20775408011237337,
+      "coverage95": 0.9671871331298427,
+      "width95": 0.27555409784223156,
+      "acf24": 0.8571016909803735,
+      "acf24_abs_error": 0.05152621929621837,
+      "score": 0.6196054704114534,
+      "accepted": true,
+      "acceptance_checks": {
+        "coverage95": true,
+        "coverage80": true,
+        "ramp95_ratio": true,
+        "calendar_sd_ratio": true,
+        "annual_sd_ratio": true,
+        "mean_bias": true
+      }
+    },
+    "Temperature": {
+      "channel": "Temperature",
+      "drift_alpha": 0.0,
+      "noise_multiplier": 1.0,
+      "bias": {
+        "kind": "offset",
+        "value": 1.3883848786353958,
+        "bounds": [
+          -29.372774378585085,
+          49.13479732313575
+        ]
+      },
+      "calendar_sd_ratio": 1.034921118450079,
+      "ramp95_ratio": 0.9562056172888017,
+      "annual_sd_ratio": 0.7266697961036968,
+      "mean_bias": -0.03547248927005775,
+      "coverage80": 0.7628424657534246,
+      "width80": 9.129196211094861,
+      "coverage95": 0.925,
+      "width95": 13.68690245183448,
+      "acf24": 0.9436094228850875,
+      "acf24_abs_error": 0.019063361786706645,
+      "score": 0.4106253701332908,
+      "accepted": true,
+      "acceptance_checks": {
+        "coverage95": true,
+        "coverage80": true,
+        "ramp95_ratio": true,
+        "calendar_sd_ratio": true,
+        "annual_sd_ratio": true,
+        "mean_bias": true
+      }
     }
   },
   "training_years": [
@@ -79,6 +167,8 @@
   ],
   "reporting_period_previously_inspected": true,
   "reporting_used_for_fit_or_calibration": false,
-  "native_prediction_roundtrip_verified": true,
-  "frozen_ensemble_sha256": "0196ff09652440a1a5365a7d962f457dfab44839b2d3bc97c4dd83394b3b5fb9"
+  "frozen_ensemble_sha256": "1737c4704e3fa412f521d9e9059362be183d70e2539d891d5f5969de0f6f3aae",
+  "generation_CPU_threads": 2,
+  "calibration_mean_reference": "Validation-period mean; common scale/offset across paths",
+  "solar_timestamp_convention": "UTC interval start; daylight support evaluated over the complete hour"
 }

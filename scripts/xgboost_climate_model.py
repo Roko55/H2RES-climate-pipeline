@@ -89,6 +89,8 @@ CHANNEL_IDX = {"Solar": 0, "Wind": 1, "Temperature": 2}
 class ClimateConfig:
     hours_per_year: int = 8760
     latitude: float = 45.0
+    longitude: float = 0.0
+    solar_sites: tuple = ()
     country: str = "Croatia"
     data_path: str = ""
     models_dir: str = ""
@@ -269,18 +271,37 @@ def split_data(raw_data: np.ndarray, train_ratio: float = 0.8,
 # =============================================================================
 # SOLAR PHYSICS
 # =============================================================================
-def calculate_solar_elevation(day_of_year, hour, lat=None):
-    """Compute solar elevation angle in degrees (scalar or array inputs)."""
+def calculate_solar_elevation(day_of_year, hour, lat=None, longitude=None):
+    """NOAA solar elevation for UTC clock time and east-positive longitude."""
     if lat is None:
         lat = CONFIG.latitude
-    declination = 23.44 * np.sin(np.radians(360 / 365 * (day_of_year - 81)))
-    hour_angle = (hour - 12) * 15
+    if longitude is None:
+        longitude = CONFIG.longitude
+    gamma = 2 * np.pi / 365 * (np.asarray(day_of_year) - 1 + (np.asarray(hour)-12)/24)
+    equation_of_time = 229.18 * (.000075 + .001868*np.cos(gamma) - .032077*np.sin(gamma)
+                                - .014615*np.cos(2*gamma) - .040849*np.sin(2*gamma))
+    dec_rad = (.006918 - .399912*np.cos(gamma) + .070257*np.sin(gamma)
+               - .006758*np.cos(2*gamma) + .000907*np.sin(2*gamma)
+               - .002697*np.cos(3*gamma) + .00148*np.sin(3*gamma))
+    hour_angle = (np.asarray(hour)*60 + equation_of_time + 4*longitude)/4 - 180
     lat_rad = np.radians(lat)
-    dec_rad = np.radians(declination)
     sha_rad = np.radians(hour_angle)
     sin_elev = (np.sin(lat_rad) * np.sin(dec_rad) +
                 np.cos(lat_rad) * np.cos(dec_rad) * np.cos(sha_rad))
     return np.degrees(np.arcsin(np.clip(sin_elev, -1, 1)))
+
+
+def solar_interval_elevation(day_of_year, hour, lat=None):
+    """Keep an hourly mean supported whenever any source site has daylight."""
+    sites = CONFIG.solar_sites or ((lat if lat is not None else CONFIG.latitude, CONFIG.longitude),)
+    values = [calculate_solar_elevation(day_of_year, np.asarray(hour)+offset, latitude, longitude)
+              for latitude, longitude in sites for offset in (0.0, 0.5, 1.0)]
+    return np.maximum.reduce(values)
+
+
+def ordered_quantiles(q16, q50, q84):
+    """Use the same monotone rearrangement during calibration and sampling."""
+    return np.sort(np.stack((q16, q50, q84), axis=0), axis=0)
 
 
 # =============================================================================
@@ -384,7 +405,7 @@ class ChannelFeatureEngineer:
             np.cos(2 * np.pi * hours / 24),
             np.sin(2 * np.pi * days / 365),
             np.cos(2 * np.pi * days / 365),
-            (calculate_solar_elevation(days + 1, hours.astype(float), self.latitude) > 0).astype(np.float32),
+            (solar_interval_elevation(days + 1, hours.astype(float), self.latitude) > 0).astype(np.float32),
             ((days >= 91) & (days <= 273)).astype(np.float32) if self.latitude >= 0
             else ((days < 91) | (days > 273)).astype(np.float32),
             hours / 24.0,
@@ -628,6 +649,7 @@ def calibrate_residuals(models: Dict, feature_engineers: Dict,
         q50 = models[channel][0.50].predict(X_val)
         q16 = models[channel][0.16].predict(X_val)
         q84 = models[channel][0.84].predict(X_val)
+        q16, q50, q84 = ordered_quantiles(q16, q50, q84)
 
         predicted_sigma = np.maximum((q84 - q16) / 2.0, 1e-6)
         actual_residual = np.abs(Y_val - q50)
@@ -637,10 +659,10 @@ def calibrate_residuals(models: Dict, feature_engineers: Dict,
         if channel == "Solar":
             # DAYTIME-ONLY calibration: nighttime zeros destroy rho and sigma_cal
             n_val = len(Y_val)
-            val_hours = np.arange(n_val) % 8760
+            val_hours = (np.arange(n_val) + 168) % 8760
             val_doy = (val_hours // 24) + 1
             val_hod = (val_hours % 24).astype(float)
-            val_elev = calculate_solar_elevation(val_doy, val_hod)
+            val_elev = solar_interval_elevation(val_doy, val_hod)
             daytime = (val_elev > 5.0) & (Y_val > 0.01)
 
             if daytime.sum() > 100:
@@ -740,7 +762,7 @@ def _compute_drift_alpha(models: Dict, channel: str,
     if channel == "Solar":
         _pilot_doy = np.arange(n_hours) // 24 + 1
         _pilot_hod = (np.arange(n_hours) % 24).astype(float)
-        _pilot_elev = calculate_solar_elevation(_pilot_doy, _pilot_hod)
+        _pilot_elev = solar_interval_elevation(_pilot_doy, _pilot_hod)
 
     # Pre-generate AR(1) noise ONCE (identical for all alphas)
     np.random.seed(42)
@@ -762,6 +784,7 @@ def _compute_drift_alpha(models: Dict, channel: str,
                 q50 = bst_q50.inplace_predict(X_batch)
                 q16 = bst_q16.inplace_predict(X_batch)
                 q84 = bst_q84.inplace_predict(X_batch)
+                q16, q50, q84 = ordered_quantiles(q16, q50, q84)
                 sig = np.maximum(0.0, (q84 - q16) / 2.0) * sigma_cal
                 values = q50 + sig * float(ar1[t, 0])
                 # Apply different drift alpha per candidate
@@ -774,6 +797,7 @@ def _compute_drift_alpha(models: Dict, channel: str,
             q50 = bst_q50.inplace_predict(X_batch)
             q16 = bst_q16.inplace_predict(X_batch)
             q84 = bst_q84.inplace_predict(X_batch)
+            q16, q50, q84 = ordered_quantiles(q16, q50, q84)
             sig = np.maximum(0.0, (q84 - q16) / 2.0) * sigma_cal
             values = q50 + sig * float(ar1[t, 0])
             anchor_val = anchor[t]
@@ -1023,131 +1047,14 @@ def generate_scenarios(models: Dict, norm_params: Dict,
     np.ndarray
         Shape ``(num_scenarios, 8760, 3)`` — [Solar, Wind, Temperature].
     """
-    # Set random seed for full reproducibility (AR(1) noise + history buffer seeding)
-    np.random.seed(seed)
-
-    n_hours = HOURS_PER_YEAR
-    hourly_mean = norm_params['hourly_mean']
-    hourly_std = norm_params['hourly_std']
-
-    # Temperature bounds
-    temp_floor = float(norm_params.get('temp_train_min', -30.0)) - 10.0
-    temp_ceil = float(norm_params.get('temp_train_max', 50.0)) + 10.0
-
-    scenarios = np.zeros((num_scenarios, n_hours, 3), dtype=np.float32)
-
-    # =====================================================================
-    # WIND: Season-aware block bootstrap
-    # =====================================================================
-    wind_train = norm_params.get('wind_train_data', None)
-    if wind_train is not None:
-        print("  [WIND] Season-aware block bootstrap of historical data...")
-        scenarios[:, :, CHANNEL_IDX['Wind']] = _generate_wind_bootstrap(
-            wind_train, n_hours, num_scenarios, seed=seed)
-        print(f"    Generated {num_scenarios} wind scenarios (resampled, not modeled).")
-    else:
-        raise ValueError("Training wind pool is required for seasonal resampling")
-
-    # =====================================================================
-    # SOLAR & TEMPERATURE: XGBoost autoregressive with AR(1) noise
-    # =====================================================================
-    for channel in XGBOOST_CHANNELS:
-        ch_idx = CHANNEL_IDX[channel]
-        ch_lower = channel.lower()
-
-        sigma_cal = float(norm_params.get(f'{ch_lower}_sigma_cal', 1.5))
-        rho = float(norm_params.get(f'{ch_lower}_rho', 0.3))
-        drift_alpha = float(norm_params.get(f'{ch_lower}_drift_alpha', 0.0))
-
-        print(f"  [{channel.upper()}] XGBoost generation (sigma_cal={sigma_cal:.3f}, "
-              f"rho={rho:.3f}, drift_alpha={drift_alpha:.3f})...")
-
-        # Create feature engineer
-        anchor = hourly_mean[:, ch_idx]
-        fe = ChannelFeatureEngineer(channel, anchor_profile=anchor, latitude=CONFIG.latitude)
-
-        # Generate AR(1) noise
-        ar1_noise = _generate_ar1_noise(n_hours, num_scenarios, rho)
-
-        # Initialize history buffer (single channel)
-        hist_len = 170
-        history_batch = np.zeros((num_scenarios, hist_len), dtype=np.float32)
-
-        # Seed from historical data or climatology
-        if history_data is not None and len(history_data) > hist_len:
-            for s in range(num_scenarios):
-                start = np.random.randint(0, len(history_data) - hist_len)
-                history_batch[s] = history_data[start:start + hist_len, ch_idx]
-        else:
-            seed_mean = hourly_mean[-hist_len:, ch_idx]
-            seed_std = hourly_std[-hist_len:, ch_idx]
-            for s in range(num_scenarios):
-                seed = seed_mean + seed_std * np.random.randn(hist_len)
-                if channel == "Solar":
-                    seed = np.clip(seed, 0, 1)
-                elif channel == "Temperature":
-                    seed = np.clip(seed, temp_floor, temp_ceil)
-                history_batch[s] = seed
-
-        # Pre-extract Boosters for fast inplace_predict (avoids DMatrix overhead)
-        bst_q50 = models[channel][0.50].get_booster()
-        bst_q16 = models[channel][0.16].get_booster()
-        bst_q84 = models[channel][0.84].get_booster()
-
-        # Pre-compute solar elevation for all hours (avoids 8760 repeated trig calls)
-        if channel == "Solar":
-            _gen_doy = np.arange(n_hours) // 24 + 1
-            _gen_hod = (np.arange(n_hours) % 24).astype(float)
-            _gen_elev = calculate_solar_elevation(_gen_doy, _gen_hod)
-
-        # Autoregressive generation
-        for t in range(n_hours):
-            X_batch = fe.get_batch_feature_vector(t, history_batch)
-
-            if channel == "Solar":
-                if _gen_elev[t] <= -1.0:
-                    # Nighttime: solar is exactly 0
-                    values = np.zeros(num_scenarios, dtype=np.float32)
-                else:
-                    q50 = bst_q50.inplace_predict(X_batch)
-                    q16 = bst_q16.inplace_predict(X_batch)
-                    q84 = bst_q84.inplace_predict(X_batch)
-                    sigma = np.maximum(0, (q84 - q16) / 2.0) * sigma_cal
-                    values = q50 + sigma * ar1_noise[t]
-                    # Drift correction toward climatological anchor
-                    anchor_val = anchor[t % 8760]
-                    if drift_alpha > 0 and anchor_val > 0.01:
-                        values = (1.0 - drift_alpha) * values + drift_alpha * anchor_val
-                    values = np.clip(values, 0.0, 1.0)
-            else:
-                # Temperature
-                q50 = bst_q50.inplace_predict(X_batch)
-                q16 = bst_q16.inplace_predict(X_batch)
-                q84 = bst_q84.inplace_predict(X_batch)
-                sigma = np.maximum(0, (q84 - q16) / 2.0) * sigma_cal
-                values = q50 + sigma * ar1_noise[t]
-                # Drift correction for temperature
-                if drift_alpha > 0:
-                    values = (1.0 - drift_alpha) * values + drift_alpha * anchor[t % 8760]
-                values = np.clip(values, temp_floor, temp_ceil)
-
-            scenarios[:, t, ch_idx] = values
-
-            # Update history buffer
-            history_batch[:, :-1] = history_batch[:, 1:]
-            history_batch[:, -1] = values
-
-            if (t + 1) % 2000 == 0:
-                print(f"    {channel} progress: {t+1}/{n_hours}...")
-
-    # Final physical constraints
-    scenarios[:, :, 0] = np.clip(scenarios[:, :, 0], 0.0, 1.0)
-    scenarios[:, :, 1] = np.clip(scenarios[:, :, 1], 0.0, 1.0)
-
-    # No CDF matching: the calibrated model does not require post-processing.
-    print("  [POST] No CDF matching applied.")
-
-    return scenarios
+    if norm_params.get('wind_train_data') is None:
+        raise ValueError('Training wind pool is required for seasonal resampling')
+    settings=norm_params.get('rollout_calibration')
+    if settings is None:
+        raise ValueError('Annual rollout calibration is required; use the maintained pipeline train command')
+    from .rollout_sampling import generate_profiles
+    return generate_profiles(sys.modules[__name__],models,norm_params,history_data,
+                             settings,num_scenarios,seed)
 
 
 # =============================================================================

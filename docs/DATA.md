@@ -13,7 +13,14 @@ The hourly source Parquet must contain `time`, `solar`, `wind`, `temperature`, w
 
 Supply generation capacity factors, not irradiance in W/m2, wind speed in m/s or temperature in Kelvin. There is no automatic weather-to-power conversion in this repository. For your own data the filename is arbitrary; pass it with `--data`. Upstream conversions, regional aggregation and calibration are your data-preparation responsibility.
 
-The delivered model bundle requires SHA256 `9a21558378d6359f308e3b7b7a3068d053195fa9123792c1d8aa9ac177101022`: 1980–2024, 45 complete non-leap years after removal. Training anchors, temperature bounds and the wind pool use 1980–2015 only. Validation 2016–2019 is used for stopping and residual calibration. Reporting 2020–2024 supplies the profile comparison and was previously inspected during development.
+The delivered model bundle requires SHA256 `9a21558378d6359f308e3b7b7a3068d053195fa9123792c1d8aa9ac177101022`: 1980–2024, 45 complete non-leap years after removal. Training anchors, temperature bounds and the wind pool use 1980–2015 only. Validation 2016–2019 is used for stopping, residual calibration and annual-rollout selection, including a common channel scale or offset. Reporting 2020–2024 supplies the profile comparison and was previously inspected during development.
+
+Solar observations represent mean power over an hour, labelled by its UTC start.
+The generator checks daylight support over that interval using the actual source
+coordinates. See the [Renewables.ninja dataset documentation](https://www.renewables.ninja/documentation/datasets)
+for the clock convention. The delivered model metadata records all three solar
+source coordinates. The training-derived daylight mask used for evaluating
+solar coverage is separate from this astronomical generation gate.
 
 National CF calibration uses training-period IRENA targets: solar 2013–2015 and wind 2004–2015. The preparation command reconstructs profiles from the original raw caches and training-period targets. Source identities and the selected targets are recorded in `provenance/model/preprocessing_audit.json`. New datasets require their own upstream temporal-boundary checks.
 

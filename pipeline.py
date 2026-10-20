@@ -192,6 +192,10 @@ def generate(args):
     module = core()
     models, metadata = load_native(Path(args.model_dir), args.data)
     module.CONFIG.latitude = float(metadata["latitude"])
+    module.CONFIG.longitude = float(metadata["longitude"])
+    module.CONFIG.solar_sites = tuple(tuple(pair) for pair in metadata.get("solar_sites", []))
+    if not metadata.get("rollout_calibration"):
+        raise ValueError("The bundle requires annual rollout calibration before generation")
     splits = module.split_data(raw)
     params = {name: splits[name] for name in ("hourly_mean", "hourly_std")}
     params.update(wind_train_data=splits["train"][:, 1],
@@ -201,19 +205,22 @@ def generate(args):
         calibration = metadata["calibration"][channel]
         for key, source in (("sigma_cal", "sigma_calibration"), ("rho", "rho"), ("drift_alpha", "drift_alpha")):
             params[channel.lower() + "_" + key] = calibration[source]
+    params['rollout_calibration'] = metadata['rollout_calibration']
     values = validate_profiles(module.generate_scenarios(models, params,
         num_scenarios=args.count, history_data=splits["train"], seed=args.seed))
     with output.open("xb") as stream:
         np.save(stream, values)
     save_json(output.with_suffix(".json"), {
         "shape": list(values.shape), "channels": CHANNELS, "units": ["capacity factor", "capacity factor", "degrees C"],
-        "seed": args.seed, "data_sha256": digest(args.data), "model_training_source_sha256": metadata["source_sha256"],
+        "seed": args.seed, "data_sha256": digest(args.data),
+        "model_training_source_sha256": metadata.get("training_source_sha256", metadata["source_sha256"]),
         "generation_source_sha256": digest(ROOT / "scripts/xgboost_climate_model.py"),
+        "rollout_sampling_source_sha256": digest(ROOT / "scripts/rollout_sampling.py"),
         "model_metadata_sha256": digest(Path(args.model_dir) / "metadata.json"),
         "output_sha256": digest(output), "data_years": years,
-        "prediction_device": "cpu", "CPU_threads": 1,
-        "evaluation_scope": ("Retrospective shared corpus; see provenance/data_provenance.json"
-            if digest(args.data) == "d92748ca6625d0092b073b9bc16345da960a04c42da29926da5b125a63ad122d"
+        "prediction_device": "cpu", "CPU_threads": 2,
+        "evaluation_scope": ("Retrospective fixed-period comparison; see provenance/model/preprocessing_audit.json"
+            if digest(args.data) == "9a21558378d6359f308e3b7b7a3068d053195fa9123792c1d8aa9ac177101022"
             else "User-supplied corpus; upstream calibration and external validation not audited")})
     print(f"Generated {len(values)} annual profiles: {output}")
 
@@ -225,13 +232,38 @@ def train(args):
     output.mkdir(exist_ok=False)
     module = core()
     module.CONFIG.latitude = args.latitude
+    module.CONFIG.longitude = args.longitude
+    if args.solar_sites:
+        locations = pd.read_csv(args.solar_sites)
+        coordinates = locations[['lat','lon']].to_numpy(float)
+        if not np.isfinite(coordinates).all() or len(coordinates)==0:
+            raise ValueError('Solar sites require finite lat/lon coordinates')
+        if (np.abs(coordinates[:,0])>90).any() or (np.abs(coordinates[:,1])>180).any():
+            raise ValueError('Solar-site coordinates are outside geographic bounds')
+        module.CONFIG.solar_sites = tuple(map(tuple,coordinates))
+    else:
+        module.CONFIG.solar_sites = ((args.latitude,args.longitude),)
     np.random.seed(args.seed)
     splits = module.split_data(raw)
     params = module.get_default_params(False)
-    params.update(n_jobs=1, random_state=args.seed)
-    models, engineers = module.train_models(splits, use_gpu=False,
+    params.update(n_jobs=2, random_state=args.seed)
+    fitting = {key:splits[key] for key in ('train','val','hourly_mean','hourly_std')}
+    models, engineers = module.train_models(fitting, use_gpu=False,
         custom_params={channel: params.copy() for channel in ("Solar", "Temperature")})
-    calibration = module.calibrate_residuals(models, engineers, splits)
+    calibration = module.calibrate_residuals(models, engineers, fitting, fast=True)
+    rollout = None
+    if not args.conditional_fit_only:
+        from scripts.rollout_sampling import fit_settings
+        protocol = json.loads((ROOT / 'config/rollout_calibration.json').read_text())
+        parameters = {key:fitting[key] for key in ('hourly_mean','hourly_std')}
+        parameters.update(temp_train_min=float(fitting['train'][:,2].min()),
+                          temp_train_max=float(fitting['train'][:,2].max()))
+        for channel, values in calibration.items():
+            prefix=channel.lower()
+            parameters.update({prefix+'_sigma_cal':values['sigma_calibration'],prefix+'_rho':values['rho']})
+        rollout, records = fit_settings(module,models,parameters,fitting['train'],fitting['val'],protocol,
+            progress=lambda channel,stage:print(channel,stage,flush=True))
+        save_json(output/'rollout_validation.json',records)
     entries = []
     for channel, quantiles in models.items():
         for quantile, model in quantiles.items():
@@ -241,8 +273,10 @@ def train(args):
                             "sha256": digest(output / name), "bytes": (output / name).stat().st_size})
     save_json(output / "metadata.json", {
         "training_seed": args.seed, "xgboost": xgb.__version__, "latitude": args.latitude,
+        "longitude": args.longitude, "solar_sites": module.CONFIG.solar_sites,
         "data_sha256": digest(args.data), "source_sha256": digest(ROOT / "scripts/xgboost_climate_model.py"),
-        "models": entries, "calibration": calibration, "data_years": years,
+        "models": entries, "calibration": calibration, "rollout_calibration": rollout,
+        "rollout_sampling_source_sha256": digest(ROOT/'scripts/rollout_sampling.py'), "data_years": years,
         "split_hours": {key: len(splits[key]) for key in ("train", "val", "test")},
         "reporting_used_for_fit_or_calibration": False})
     print(f"Saved native models: {output}")
@@ -387,6 +421,9 @@ def main(argv=None):
     fit.add_argument("--data", required=True)
     fit.add_argument("--seed", type=int, default=42)
     fit.add_argument("--latitude", type=float, required=True)
+    fit.add_argument("--longitude", type=float, required=True)
+    fit.add_argument("--solar-sites", help="Optional CSV of lat/lon source coordinates")
+    fit.add_argument("--conditional-fit-only", action="store_true", help="Fit trees only; generation remains disabled until rollout calibration")
     fit.add_argument("--output", required=True)
     fit.set_defaults(function=train)
     choice = commands.add_parser("select", help="Select representative annual scenarios")
@@ -408,6 +445,8 @@ def main(argv=None):
     args = parser.parse_args(argv)
     if hasattr(args, "latitude") and (not np.isfinite(args.latitude) or not -90 <= args.latitude <= 90):
         parser.error("Latitude must be finite and between -90 and 90 degrees")
+    if hasattr(args, "longitude") and (not np.isfinite(args.longitude) or not -180 <= args.longitude <= 180):
+        parser.error("Longitude must be finite and between -180 and 180 degrees")
     if hasattr(args, "country") and (len(args.country) != 2 or not args.country.isalpha() or args.country != args.country.upper()):
         parser.error("Country must be a two-letter uppercase code")
     if getattr(args, "mass_tolerance", 1e-4) <= 0 or not np.isfinite(getattr(args, "mass_tolerance", 1e-4)):

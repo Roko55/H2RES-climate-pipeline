@@ -34,6 +34,22 @@ def main():
         raise ValueError('National calibration crosses training boundary')
     if preparation['new_data_sha256']!=metadata['data_sha256'] or metadata['reporting_used_for_fit_or_calibration']:
         raise ValueError('Model and calibration corpus mismatch')
+    calibration=json.loads((ROOT/'provenance/model/rollout_calibration.json').read_text())
+    if calibration['reporting_used_for_selection'] or set(calibration['selected'])!={'Solar','Temperature'}:
+        raise ValueError('Invalid annual calibration provenance')
+    for channel in ('Solar','Temperature'):
+        selected=calibration['selected'][channel]
+        if not selected['accepted'] or not all(selected['acceptance_checks'].values()):
+            raise ValueError('Annual calibration acceptance failed: '+channel)
+        if metadata['rollout_calibration'][channel]!=selected:
+            raise ValueError('Native model and calibration settings differ')
+    replays=json.loads((ROOT/'provenance/model/saved_model_replay.json').read_text())
+    replay=replays['native_portable_replay']
+    if replay['status']!='passed' or not replay['bitwise_equal'] or replay['actual_sha256']!=metadata['frozen_ensemble_sha256']:
+        raise ValueError('Full native model replay is not confirmed')
+    clean=replays['clean_supported_runtime']
+    if clean['status']!='passed' or not clean['bitwise_equal'] or clean['source_sha256']!=digest(ROOT/'pipeline.py'):
+        raise ValueError('Supported-runtime release check is not confirmed')
     print(json.dumps({'status':'passed','files_verified':len(manifest['files']),
                       'native_models_verified':6,'data_sha256':metadata['data_sha256'],
                       'reporting_used_for_fit_or_calibration':False,

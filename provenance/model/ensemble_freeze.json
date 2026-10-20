@@ -1,4 +1,78 @@
 {
-  "sha256": "0196ff09652440a1a5365a7d962f457dfab44839b2d3bc97c4dd83394b3b5fb9",
-  "model_freeze_sha256": "7e876d6dc0d67db27733e90465d6d9a8ad09b9fe1ef0fe72193d4d78d686842d"
+  "sha256": "1737c4704e3fa412f521d9e9059362be183d70e2539d891d5f5969de0f6f3aae",
+  "model_freeze_sha256": "24df51c66ee18590948348c4fde05e9bf8442177f9206fe455bc3aaef14ca842",
+  "calibration_freeze_sha256": "24afca59b8da95d8cdd76cd39f1352ec5c83de2dd297dac5a00b94166cef86fb",
+  "production_source_sha256": "eb2e88457c4290b47590540a77f125cda1e6d100f6d0c4c0548c0d22bb4c7bb0",
+  "generator_sha256": "45ec3aa0e4709e0be1b2329e18e6eff456621f0555c9d656dc26b117de2a5c4c",
+  "calibration_source_sha256": "ba0bfe7519cfb06c2e1528a6166d777eb137f989e49841cd1421fa9fe72647cd",
+  "seed": 42,
+  "members": 100,
+  "frozen_before_reporting_evaluation": true,
+  "runtime_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "xgboost": "2.1.4"
+  },
+  "reporting_previously_inspected": true,
+  "wind_bitwise_unchanged": true,
+  "exact_replay": {
+    "Solar": {
+      "bitwise_equal": true,
+      "maximum_absolute_difference": 0.0
+    },
+    "Temperature": {
+      "bitwise_equal": true,
+      "maximum_absolute_difference": 0.0
+    }
+  },
+  "production_validation": {
+    "Solar": {
+      "accepted": true,
+      "checks": {
+        "coverage95": true,
+        "coverage80": true,
+        "ramp95_ratio": true,
+        "calendar_sd_ratio": true,
+        "annual_sd_ratio": true,
+        "mean_bias": true
+      },
+      "metrics": {
+        "calendar_sd_ratio": 1.1803966284062848,
+        "ramp95_ratio": 1.0577623695681044,
+        "annual_sd_ratio": 0.706450224189805,
+        "mean_bias": -0.0006791486364632338,
+        "coverage80": 0.8746771542615638,
+        "width80": 0.20962274621304988,
+        "coverage95": 0.9724700633951632,
+        "width95": 0.2799614831365183,
+        "acf24": 0.8597553806438133,
+        "acf24_abs_error": 0.04887252963277855,
+        "score": 0.6340891352801631
+      }
+    },
+    "Temperature": {
+      "accepted": true,
+      "checks": {
+        "coverage95": true,
+        "coverage80": true,
+        "ramp95_ratio": true,
+        "calendar_sd_ratio": true,
+        "annual_sd_ratio": true,
+        "mean_bias": true
+      },
+      "metrics": {
+        "calendar_sd_ratio": 1.0373780073174714,
+        "ramp95_ratio": 0.9601393459085449,
+        "annual_sd_ratio": 0.7092561191417336,
+        "mean_bias": -0.02491340723880775,
+        "coverage80": 0.7690924657534246,
+        "width80": 9.215383995186249,
+        "coverage95": 0.9394977168949772,
+        "width95": 13.9291166805168,
+        "acf24": 0.9445532308164285,
+        "acf24_abs_error": 0.018119553855365678,
+        "score": 0.3311808775069494
+      }
+    }
+  }
 }

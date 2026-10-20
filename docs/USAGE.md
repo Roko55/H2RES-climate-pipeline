@@ -8,7 +8,7 @@ by Git and protected against overwriting.
 `models/default/` requires `HR_data_training_calibrated.parquet`, SHA256
 `9a21558378d6359f308e3b7b7a3068d053195fa9123792c1d8aa9ac177101022`.
 National CF targets and reference weather use 1980-2015. Stopping and
-residual calibration use 2016-2019. Reporting years 2020-2024 were previously
+residual and annual-rollout calibration use 2016-2019. Reporting years 2020-2024 were previously
 inspected and do not enter fitting or calibration.
 
 ```bash
@@ -17,7 +17,8 @@ python pipeline.py generate --data data/SC/HR_data_training_calibrated.parquet -
 
 Trees require the training climatology and wind pool supplied by the exact
 corpus. The frozen research ensemble SHA256 is
-`0196ff09652440a1a5365a7d962f457dfab44839b2d3bc97c4dd83394b3b5fb9`.
+`1737c4704e3fa412f521d9e9059362be183d70e2539d891d5f5969de0f6f3aae`.
+Native CLI generation reproduces this array bit for bit in the recorded runtime.
 Autoregressive numerical differences can accumulate between runtimes. Use the
 frozen array and corresponding solver configuration for exact reproduction of
 reported energy inputs. Replay measurements are in `provenance/model/`.
@@ -26,11 +27,14 @@ To prepare data from the permitted Croatian raw cache and IRENA workbook:
 
 ```bash
 python pipeline.py calibrate --source-dir data/SC --output exports/archive
-python pipeline.py train --data exports/archive/HR_data_training_calibrated.parquet --seed 42 --latitude 44.52 --output exports/fit
+python pipeline.py train --data exports/archive/HR_data_training_calibrated.parquet --seed 42 --latitude 44.52 --longitude 16.798 --solar-sites data/solar_sites.csv --output exports/fit
 python pipeline.py generate --data exports/archive/HR_data_training_calibrated.parquet --model-dir exports/fit --count 100 --seed 42 --output exports/new_profiles.npy
 ```
 
-Preparation requires the original zone/site metadata, Parquet caches and
+`data/solar_sites.csv` must contain the actual source-site `lat,lon` columns;
+the Croatian research coordinates are (43.788,16.001), (45.311,18.235) and
+(45.865,16.206). Solar timestamps are UTC interval starts. Preparation requires
+the original zone/site metadata, Parquet caches and
 `IRENA_Statistics_Extract_2025H2.xlsx`. It refuses an existing output directory.
 Serialization can change hashes: pair a newly serialized corpus with its own
 fit instead of bypassing the recorded bundle's identity checks.
@@ -38,10 +42,10 @@ fit instead of bypassing the recorded bundle's identity checks.
 ## Other datasets
 
 Supply at least ten complete consecutive years according to [DATA.md](DATA.md)
-and an appropriate latitude. The following latitude is illustrative:
+and appropriate coordinates. The following coordinates are illustrative:
 
 ```bash
-python pipeline.py train --data data/my_climate.parquet --seed 42 --latitude 45.0 --output exports/my_fit
+python pipeline.py train --data data/my_climate.parquet --seed 42 --latitude 45.0 --longitude 16.0 --output exports/my_fit
 python pipeline.py generate --data data/my_climate.parquet --model-dir exports/my_fit --count 100 --seed 101 --output exports/my_profiles.npy
 python pipeline.py select --profiles exports/my_profiles.npy --method orthogonal --output exports/my_cases.npz
 ```
@@ -50,8 +54,10 @@ The split is chronological: 80% training, 10% validation and the remaining
 complete years for reporting, using integer year counts. Climatology and wind
 blocks use training; stopping and residual/drift calibration use validation.
 User-supplied upstream calibration requires its own temporal-boundary check.
-Training uses one CPU thread by default; annual calibration can outlast tree
-fitting. No universal runtime estimate is implied.
+Training and prediction use two CPU threads. Full annual calibration is part
+of the default training command and can outlast tree fitting. A bundle created
+with `--conditional-fit-only` is a fitting fixture and cannot generate until
+annual calibration is performed. No universal runtime estimate is implied.
 
 ## Selection and spatial export
 

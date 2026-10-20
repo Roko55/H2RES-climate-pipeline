@@ -1,28 +1,29 @@
 {
-  "model_files": {
-    "xgb_models.joblib": "ee96b6bf0934a7ce1e5f992ffb54f2e01336102ab65abcc345d364b164f11873",
-    "xgb_norm_params.npz": "405ce71be84d30ecc59eb849b2c6bbd19f22f1d636c0aa291e877e7431a335ec"
+  "executed_training_source_sha256": "45ec3aa0e4709e0be1b2329e18e6eff456621f0555c9d656dc26b117de2a5c4c",
+  "maintained_source_sha256": "04fca503e18fb007a63d5f70d3681bf1c2c91baef1156aed28f4240ca4b6e73a",
+  "identical_training_function_fingerprint": "c44f5458ed93412835077d44c6c9cb48349cc034745bd36d2cf3dd9a10c23b6f",
+  "compared_definitions": [
+    "ClimateConfig",
+    "calculate_solar_elevation",
+    "solar_interval_elevation",
+    "ordered_quantiles",
+    "_safe_shift",
+    "_past_rolling",
+    "ChannelFeatureEngineer",
+    "get_default_params",
+    "train_models",
+    "calibrate_residuals"
+  ],
+  "native_model_hashes": {
+    "solar_q16.ubj": "b65c3b31e032e0af5246486975060b2459a42acbe73bd00d9589272209b101a0",
+    "solar_q50.ubj": "c6c55c1a33306b86e93cdf2fa0c7fc7391b8cc748fbc9b673dc08bf7af854024",
+    "solar_q84.ubj": "859000b27a0f069928317ccabb6450bca060bda83f3d121fed037bc2da56e62d",
+    "temperature_q16.ubj": "8f1c2c9a793761355377739f738312af3459f5edeff5468e7e24193f1717902f",
+    "temperature_q50.ubj": "86a1cb7a6fa9502305673eedc95cfd73b17bb5d96cb96497abbc7a746641a163",
+    "temperature_q84.ubj": "1f22e2c6adc1ee061a757bfc0843f566189f732c3ee23bfe3c07a8ae594a51d6"
   },
-  "calibration": {
-    "Solar": {
-      "sigma_calibration": 0.8524376749992371,
-      "rho": 0.08672283701052144,
-      "residual_mean": -0.02626154012978077,
-      "residual_std": 1.2954730987548828,
-      "drift_alpha": 0.4000000059604645
-    },
-    "Temperature": {
-      "sigma_calibration": 0.8573236465454102,
-      "rho": 0.17153420454436824,
-      "residual_mean": 0.009389081969857216,
-      "residual_std": 1.8281614780426025,
-      "drift_alpha": 0.4000000059604645
-    }
-  },
-  "generator_sha256": "e34b6eda270bda5e64a2514740b2e4b715ebc9eb7bf25a8fd2d06d2cedeb4086",
-  "seed": 42,
-  "members": 100,
-  "frozen_before_reporting_metrics": true,
+  "execution_record_sha256": "24df51c66ee18590948348c4fde05e9bf8442177f9206fe455bc3aaef14ca842",
+  "calibration_record_sha256": "24afca59b8da95d8cdd76cd39f1352ec5c83de2dd297dac5a00b94166cef86fb",
   "training_years": [
     1980,
     2015
@@ -31,9 +32,5 @@
     2016,
     2019
   ],
-  "reporting_years": [
-    2020,
-    2024
-  ],
-  "fitting_has_no_reporting_partition": true
+  "reporting_used_for_fit_or_selection": false
 }
