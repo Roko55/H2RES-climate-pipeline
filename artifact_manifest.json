@@ -43,8 +43,8 @@
       "sha256": "effdab271f706f7f6fba8a209d44d2cdbbb78ee7b492511f3bfec9184b1bb2ab"
     },
     "docs/VALIDATION.md": {
-      "bytes": 2354,
-      "sha256": "003f042bf36451b7277ef052aed378ffdb6f138ea98c9e8c62f9d2f6d364a65e"
+      "bytes": 2063,
+      "sha256": "8edfe819163fb3934f22bad1ce09a1346dc3264f563ff5146a3e86b3f0ba6893"
     },
     "examples/__init__.py": {
       "bytes": 76,

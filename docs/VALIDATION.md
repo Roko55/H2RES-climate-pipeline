@@ -1,40 +1,40 @@
-# Validation coverage
+# Verification and reproduction
 
-The regression suite checks past-only features, chronological partitions,
-training-bounded calibration, native serialization, wind sampling, scenario
-selection, mapping conservation, runtime keys and thermal normalization.
-Run `python -m unittest discover -s tests -v`, `python audit.py` and the offline
-demo. The demo uses illustrative data. A small fitting fixture checks model
-serialization; it is not a research refit or a performance benchmark.
+Run the regression checks and artifact audit from the repository root:
 
-GitHub Actions targets clean Ubuntu with Python 3.11. Local checks also use
-Windows. The adapter is importable from a separate H2RES project, including
-projects with another `scripts` package. The complete external solver model,
-input database and licence are not included or exercised by these unit tests.
+```bash
+python -m unittest discover -s tests -v
+python audit.py
+```
 
-Research inputs use training-only national CF calibration. The reporting
-period was previously inspected; it is not an untouched final test. Source,
-model and data hashes, split checks and replay records are under `provenance/`.
+The tests cover past-only features, chronological partitions, training-bounded
+calibration, native serialization, wind sampling, scenario selection, spatial
+conservation, runtime keys and annual thermal totals. GitHub Actions uses
+Python 3.11 on Ubuntu; local checks also use Windows. The offline demo uses
+illustrative inputs and exercises the adapter independently of the solver.
+H2RES optimization requires the separate model, input database and licence.
 
-Central-profile errors describe the calendar-conditioned ensemble mean, not
-forecasts of specific historical events. Individual-profile diversity and
-temporal behaviour answer different questions. Independent channel generation
-defines sensitivity combinations, not a calibrated joint meteorological
-distribution. No calibrated tail probabilities or universal method superiority
-are established. The pipeline has narrow annual solar/temperature diversity.
+## Evaluation records
 
-The saved solar geometry gate is approximate; its consistency with source
-timestamps is quantified in `results/profile_validation/solar_gate_consistency.json`.
-Separate quantile trees may cross; archived counts are in
-`provenance/model/saved_model_replay.json`. Physical CF bounds are imposed on
-generated values, but the quantile levels are not calibrated uncertainty
-coverage guarantees. Runtime differences can accumulate autoregressively;
-exact solver-input reproduction uses the frozen ensemble.
+Training covers 1980-2015, validation 2016-2019 and reporting 2020-2024.
+Reporting years were inspected during development. National CF calibration
+uses training years; stopping and residual calibration use validation years.
+Source identities, split checks and replay records are under `provenance/`.
 
-Spatial mapping uses historical ratios, not newly simulated spatial weather.
-Thermal demand normalization preserves annual totals; COP uses a bounded
-model relationship rather than measured heat-pump efficiency. These modelling
-assumptions must match the intended application.
+Central-profile errors evaluate the calendar-conditioned ensemble mean.
+Individual-path statistics evaluate diversity and temporal behaviour.
+Independent channels define designed sensitivity combinations. Distribution
+results are recorded in `results/profile_validation/`, including empirical
+interval coverage in `intervals_and_CRPS.csv`. These measured coverages, rather
+than quantile labels alone, determine the interpretation of ensemble ranges.
 
-Raw data and reuse rights remain separate from technical reproducibility.
-See [RIGHTS.md](../RIGHTS.md).
+The archived solar gate uses a latitude-based clock approximation. Its
+agreement with input timestamps is measured in `solar_gate_consistency.json`.
+Separate quantile trees can cross; generation clips negative half-widths to
+zero. Counts are in `provenance/model/saved_model_replay.json`. Exact replay
+of the reported solver inputs uses the frozen ensemble identified in
+`provenance/model/ensemble_freeze.json`.
+
+Spatial mapping applies historical ratios. Thermal normalization preserves
+annual totals and reshapes their hourly distribution; COP follows the stated
+bounded relationship. Data access and reuse conditions are in [RIGHTS.md](../RIGHTS.md).
