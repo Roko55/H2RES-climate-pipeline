@@ -21,6 +21,7 @@ import numpy as np
 import pandas as pd
 
 CHANNELS = ["solar", "wind", "temperature"]
+DRIFT_ALPHA = float(np.float32(0.4))
 
 
 def digest(path):
@@ -149,7 +150,7 @@ def core():
 def load_native(folder, data):
     import xgboost as xgb
     metadata = json.loads((folder / "metadata.json").read_text())
-    if folder.resolve() in {(ROOT / "models/default").resolve(), (ROOT / "models/default").resolve()}:
+    if folder.resolve() == (ROOT / "models/default").resolve():
         inventory = json.loads((ROOT / "artifact_manifest.json").read_text())
         metadata_name = (folder.resolve() / "metadata.json").relative_to(ROOT.resolve()).as_posix()
         if digest(folder / "metadata.json") != inventory["files"][metadata_name]["sha256"]:
@@ -157,11 +158,7 @@ def load_native(folder, data):
     if digest(data) != metadata["data_sha256"]:
         raise ValueError("Data hash differs from the fitted training/calibration record")
     if digest(ROOT / "scripts/xgboost_climate_model.py") != metadata["source_sha256"]:
-        compatibility = json.loads((ROOT / "provenance/generation_compatibility.json").read_text())
-        if (metadata["source_sha256"] != compatibility["training_source_sha256"] or
-            digest(ROOT / "scripts/xgboost_climate_model.py") != compatibility["generation_source_sha256"] or
-            digest(ROOT / "provenance/executed/xgboost_climate_model.py") != metadata["source_sha256"]):
-            raise ValueError("Generator source differs from native model metadata and compatibility record")
+        raise ValueError("Generator source differs from native model metadata")
     if xgb.__version__ != metadata["xgboost"]:
         raise ValueError("Use the recorded XGBoost version: " + metadata["xgboost"])
     models = {channel: {} for channel in ("Solar", "Temperature")}
@@ -194,8 +191,6 @@ def generate(args):
     module.CONFIG.latitude = float(metadata["latitude"])
     module.CONFIG.longitude = float(metadata["longitude"])
     module.CONFIG.solar_sites = tuple(tuple(pair) for pair in metadata.get("solar_sites", []))
-    if not metadata.get("rollout_calibration"):
-        raise ValueError("The bundle requires annual rollout calibration before generation")
     splits = module.split_data(raw)
     params = {name: splits[name] for name in ("hourly_mean", "hourly_std")}
     params.update(wind_train_data=splits["train"][:, 1],
@@ -205,7 +200,6 @@ def generate(args):
         calibration = metadata["calibration"][channel]
         for key, source in (("sigma_cal", "sigma_calibration"), ("rho", "rho"), ("drift_alpha", "drift_alpha")):
             params[channel.lower() + "_" + key] = calibration[source]
-    params['rollout_calibration'] = metadata['rollout_calibration']
     values = validate_profiles(module.generate_scenarios(models, params,
         num_scenarios=args.count, history_data=splits["train"], seed=args.seed))
     with output.open("xb") as stream:
@@ -215,7 +209,6 @@ def generate(args):
         "seed": args.seed, "data_sha256": digest(args.data),
         "model_training_source_sha256": metadata.get("training_source_sha256", metadata["source_sha256"]),
         "generation_source_sha256": digest(ROOT / "scripts/xgboost_climate_model.py"),
-        "rollout_sampling_source_sha256": digest(ROOT / "scripts/rollout_sampling.py"),
         "model_metadata_sha256": digest(Path(args.model_dir) / "metadata.json"),
         "output_sha256": digest(output), "data_years": years,
         "prediction_device": "cpu", "CPU_threads": 2,
@@ -251,19 +244,8 @@ def train(args):
     models, engineers = module.train_models(fitting, use_gpu=False,
         custom_params={channel: params.copy() for channel in ("Solar", "Temperature")})
     calibration = module.calibrate_residuals(models, engineers, fitting, fast=True)
-    rollout = None
-    if not args.conditional_fit_only:
-        from scripts.rollout_sampling import fit_settings
-        protocol = json.loads((ROOT / 'config/rollout_calibration.json').read_text())
-        parameters = {key:fitting[key] for key in ('hourly_mean','hourly_std')}
-        parameters.update(temp_train_min=float(fitting['train'][:,2].min()),
-                          temp_train_max=float(fitting['train'][:,2].max()))
-        for channel, values in calibration.items():
-            prefix=channel.lower()
-            parameters.update({prefix+'_sigma_cal':values['sigma_calibration'],prefix+'_rho':values['rho']})
-        rollout, records = fit_settings(module,models,parameters,fitting['train'],fitting['val'],protocol,
-            progress=lambda channel,stage:print(channel,stage,flush=True))
-        save_json(output/'rollout_validation.json',records)
+    for values in calibration.values():
+        values['drift_alpha'] = DRIFT_ALPHA
     entries = []
     for channel, quantiles in models.items():
         for quantile, model in quantiles.items():
@@ -275,8 +257,9 @@ def train(args):
         "training_seed": args.seed, "xgboost": xgb.__version__, "latitude": args.latitude,
         "longitude": args.longitude, "solar_sites": module.CONFIG.solar_sites,
         "data_sha256": digest(args.data), "source_sha256": digest(ROOT / "scripts/xgboost_climate_model.py"),
-        "models": entries, "calibration": calibration, "rollout_calibration": rollout,
-        "rollout_sampling_source_sha256": digest(ROOT/'scripts/rollout_sampling.py'), "data_years": years,
+        "models": entries, "calibration": calibration, "data_years": years,
+        "generation_policy": {"drift_alpha": DRIFT_ALPHA, "noise_multiplier": 1,
+                              "solar_scale": 1, "temperature_offset_C": 0},
         "split_hours": {key: len(splits[key]) for key in ("train", "val", "test")},
         "reporting_used_for_fit_or_calibration": False})
     print(f"Saved native models: {output}")
@@ -423,7 +406,6 @@ def main(argv=None):
     fit.add_argument("--latitude", type=float, required=True)
     fit.add_argument("--longitude", type=float, required=True)
     fit.add_argument("--solar-sites", help="Optional CSV of lat/lon source coordinates")
-    fit.add_argument("--conditional-fit-only", action="store_true", help="Fit trees only; generation remains disabled until rollout calibration")
     fit.add_argument("--output", required=True)
     fit.set_defaults(function=train)
     choice = commands.add_parser("select", help="Select representative annual scenarios")

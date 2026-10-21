@@ -1,28 +1,18 @@
 {
-  "research_runtime_exact_replay": {
-    "Solar": {
-      "bitwise_equal": true,
-      "maximum_absolute_difference": 0.0
-    },
-    "Temperature": {
-      "bitwise_equal": true,
-      "maximum_absolute_difference": 0.0
-    }
-  },
   "native_portable_replay": {
     "status": "passed",
-    "phase": "complete",
     "bitwise_equal": true,
+    "expected_sha256": "614ae284579ce6564ab5743f7b2adad481f3bea11152843e0b4cbee013632850",
+    "actual_sha256": "614ae284579ce6564ab5743f7b2adad481f3bea11152843e0b4cbee013632850",
     "maximum_absolute_difference": [
       0.0,
       0.0,
       0.0
     ],
-    "expected_sha256": "1737c4704e3fa412f521d9e9059362be183d70e2539d891d5f5969de0f6f3aae",
-    "actual_sha256": "1737c4704e3fa412f521d9e9059362be183d70e2539d891d5f5969de0f6f3aae",
+    "entry_point_sha256": "417cad4ca8fa7a4e617400af39771a4f55d55b4a5e87bc8964d9080f7eb03807",
+    "generator_sha256": "a0e5c054f18afe1f8eaca36c11e37ef93d4b8d83d715269ca4779795dd44dc99",
     "independent_native_bundle_entry_point": true
   },
-  "effective_quantile_ordering": "Monotone rearrangement in calibration and generation",
   "seed": 42,
   "count": 100,
   "versions": {
@@ -32,50 +22,13 @@
   },
   "clean_supported_runtime": {
     "status": "passed",
-    "phase": "complete",
-    "expected_sha256": "1737c4704e3fa412f521d9e9059362be183d70e2539d891d5f5969de0f6f3aae",
-    "actual_sha256": "1737c4704e3fa412f521d9e9059362be183d70e2539d891d5f5969de0f6f3aae",
     "bitwise_equal": true,
+    "actual_sha256": "614ae284579ce6564ab5743f7b2adad481f3bea11152843e0b4cbee013632850",
+    "expected_sha256": "614ae284579ce6564ab5743f7b2adad481f3bea11152843e0b4cbee013632850",
+    "runtime": "Existing isolated Windows Python 3.12 environment with pinned requirements",
+    "source_sha256": "417cad4ca8fa7a4e617400af39771a4f55d55b4a5e87bc8964d9080f7eb03807",
     "requirements_sha256": "9cfd734008cceeb6f83e72d8fa4495047e266761c916d82d5d471830f66f2eb7",
-    "regression_tests": "34 passed",
-    "artifact_audit": "passed",
-    "installed_api": "passed",
-    "offline_demo": "passed",
-    "source_sha256": "509e7d81b890a1194d7c36faed40e7fb9a790bc0544ea8fac2b06a39cf13e8c5",
-    "runtime": "Windows Python 3.12 with pinned requirements installed in an isolated environment"
-  },
-  "country_scope_package_verification": {
-    "status": "passed",
-    "phase": "complete",
-    "generation_code_unchanged": {
-      "pipeline.py": true,
-      "scripts/xgboost_climate_model.py": true,
-      "scripts/rollout_sampling.py": true
-    },
-    "regression_tests": 36,
-    "artifact_audit": "passed",
-    "installed_api": "passed",
-    "installed_scope": "passed",
-    "native_100_member_replay": "Reused exact clean-runtime proof; all generation code hashes unchanged",
-    "expected_ensemble_sha256": "1737c4704e3fa412f521d9e9059362be183d70e2539d891d5f5969de0f6f3aae",
-    "source_sha256": "509e7d81b890a1194d7c36faed40e7fb9a790bc0544ea8fac2b06a39cf13e8c5",
-    "scope_source_sha256": "e83b96e6940d4ec346664734c89b4a7f6df01baf1631bb5607f8c53d8d8b38ec"
-  },
-  "final_package_verification": {
-    "status": "passed",
-    "phase": "complete",
-    "generation_code_unchanged": {
-      "pipeline.py": true,
-      "scripts/xgboost_climate_model.py": true,
-      "scripts/rollout_sampling.py": true
-    },
-    "regression_tests": 38,
-    "artifact_audit": "passed",
-    "installed_api": "passed",
-    "installed_scope": "passed",
-    "native_100_member_replay": "Reused exact clean-runtime proof; all generation code hashes unchanged",
-    "expected_ensemble_sha256": "1737c4704e3fa412f521d9e9059362be183d70e2539d891d5f5969de0f6f3aae",
-    "source_sha256": "509e7d81b890a1194d7c36faed40e7fb9a790bc0544ea8fac2b06a39cf13e8c5",
-    "scope_source_sha256": "e83b96e6940d4ec346664734c89b4a7f6df01baf1631bb5607f8c53d8d8b38ec"
+    "regression_tests": 35,
+    "installed_adapter": "passed"
   }
 }

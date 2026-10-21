@@ -19,9 +19,9 @@ H2RES optimization requires the separate model, input database and licence.
 
 Training covers 1980-2015, validation 2016-2019 and reporting 2020-2024.
 Reporting years were inspected during development. National CF calibration
-uses training years; early stopping, residual calibration and annual-rollout
-selection use validation years. A single solar scale and temperature offset
-match validation-period means and are frozen before reporting evaluation.
+uses training years; early stopping and residual calibration use validation
+years. Generation retains the fixed drift weight of 0.4 for both channels,
+without an additional noise multiplier, solar scale or temperature offset.
 Source identities, split checks and replay records are under `provenance/`.
 
 Central-profile errors evaluate the calendar-conditioned ensemble mean.
@@ -36,25 +36,24 @@ timestamp marks the start of an hourly averaging interval; daylight support
 is checked across that interval. Both calibration and generation reorder
 the three predicted quantiles before forming the median and noise width.
 Initial autoregressive histories come from calendar-aligned training-year
-endings. Independently seeded channel streams preserve separate generation.
+endings. Solar and temperature consume consecutive reproducible random draws;
+wind uses its own seeded bootstrap. Generation does not condition one channel
+on another.
 
-Annual calibration screens 24 drift/noise settings per channel with 12 paths
-and confirms three finalists with 64 fresh paths. Coverage, calendar spread,
-annual-mean spread, ramps and mean bias must satisfy the declared checks in
-`config/rollout_calibration.json`. The delivered bundle includes the selected
-settings. Complete 100-member native-model CLI replay matches the frozen
-research array bit for bit in the recorded runtime; its evidence is in
-`provenance/model/saved_model_replay.json`.
+The generation policy and six native model identities are recorded under
+`provenance/model/`. Complete 100-member native-model CLI replay is checked
+against the frozen research array; the result, runtime versions and actual
+source hashes are in `provenance/model/saved_model_replay.json`. GitHub Actions
+checks the regression suite, artifact inventory, installed adapter and offline
+walkthrough. It does not run the private weather corpus or H2RES solver.
 
-The same 100-member array is also reproduced bit for bit after installing the
-pinned requirements and package in a separate clean Python 3.12 environment.
-That check includes the regression suite, the artifact audit, the offline
-walkthrough and adapter import from an unrelated project with its own `scripts`
-package. It verifies both the native-model entry point and installed namespace.
+The complete 100-member CLI replay also matches bit for bit in the isolated
+Python 3.12 environment with the pinned requirements. That environment passes
+the same 35 regression tests and an installation into a separate private target
+directory; the installed adapter is checked outside the repository.
 
 Country-scoped temperature integration additionally verifies that heat-demand
-updates preserve all non-target zones exactly. The complete regression suite
-contains 36 tests.
+updates preserve all non-target zones exactly.
 
 Spatial mapping applies historical ratios. Thermal normalization preserves
 annual totals and reshapes their hourly distribution; COP follows the stated

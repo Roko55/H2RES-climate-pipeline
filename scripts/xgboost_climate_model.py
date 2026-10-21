@@ -1047,14 +1047,138 @@ def generate_scenarios(models: Dict, norm_params: Dict,
     np.ndarray
         Shape ``(num_scenarios, 8760, 3)`` — [Solar, Wind, Temperature].
     """
-    if norm_params.get('wind_train_data') is None:
-        raise ValueError('Training wind pool is required for seasonal resampling')
-    settings=norm_params.get('rollout_calibration')
-    if settings is None:
-        raise ValueError('Annual rollout calibration is required; use the maintained pipeline train command')
-    from .rollout_sampling import generate_profiles
-    return generate_profiles(sys.modules[__name__],models,norm_params,history_data,
-                             settings,num_scenarios,seed)
+    # Set random seed for full reproducibility (AR(1) noise + history buffer seeding)
+    np.random.seed(seed)
+
+    n_hours = HOURS_PER_YEAR
+    hourly_mean = norm_params['hourly_mean']
+    hourly_std = norm_params['hourly_std']
+
+    # Temperature bounds
+    temp_floor = float(norm_params.get('temp_train_min', -30.0)) - 10.0
+    temp_ceil = float(norm_params.get('temp_train_max', 50.0)) + 10.0
+
+    scenarios = np.zeros((num_scenarios, n_hours, 3), dtype=np.float32)
+
+    # =====================================================================
+    # WIND: Season-aware block bootstrap
+    # =====================================================================
+    wind_train = norm_params.get('wind_train_data', None)
+    if wind_train is not None:
+        print("  [WIND] Season-aware block bootstrap of historical data...")
+        scenarios[:, :, CHANNEL_IDX['Wind']] = _generate_wind_bootstrap(
+            wind_train, n_hours, num_scenarios, seed=seed)
+        print(f"    Generated {num_scenarios} wind scenarios (resampled, not modeled).")
+    else:
+        raise ValueError("Training wind pool is required for seasonal resampling")
+
+    # =====================================================================
+    # SOLAR & TEMPERATURE: XGBoost autoregressive with AR(1) noise
+    # =====================================================================
+    for channel in XGBOOST_CHANNELS:
+        ch_idx = CHANNEL_IDX[channel]
+        ch_lower = channel.lower()
+
+        sigma_cal = float(norm_params.get(f'{ch_lower}_sigma_cal', 1.5))
+        rho = float(norm_params.get(f'{ch_lower}_rho', 0.3))
+        drift_alpha = float(norm_params.get(f'{ch_lower}_drift_alpha', 0.0))
+
+        print(f"  [{channel.upper()}] XGBoost generation (sigma_cal={sigma_cal:.3f}, "
+              f"rho={rho:.3f}, drift_alpha={drift_alpha:.3f})...")
+
+        # Create feature engineer
+        anchor = hourly_mean[:, ch_idx]
+        fe = ChannelFeatureEngineer(channel, anchor_profile=anchor, latitude=CONFIG.latitude)
+
+        # Generate AR(1) noise
+        ar1_noise = _generate_ar1_noise(n_hours, num_scenarios, rho)
+
+        # Initialize history buffer (single channel)
+        hist_len = 170
+        history_batch = np.zeros((num_scenarios, hist_len), dtype=np.float32)
+
+        # Seed from historical data or climatology
+        if history_data is not None and len(history_data) > hist_len:
+            if len(history_data) % n_hours:
+                raise ValueError("Training history must contain complete non-leap years")
+            for s in range(num_scenarios):
+                year = np.random.randint(0, len(history_data) // n_hours)
+                start = (year + 1) * n_hours - hist_len
+                history_batch[s] = history_data[start:start + hist_len, ch_idx]
+        else:
+            seed_mean = hourly_mean[-hist_len:, ch_idx]
+            seed_std = hourly_std[-hist_len:, ch_idx]
+            for s in range(num_scenarios):
+                seed = seed_mean + seed_std * np.random.randn(hist_len)
+                if channel == "Solar":
+                    seed = np.clip(seed, 0, 1)
+                elif channel == "Temperature":
+                    seed = np.clip(seed, temp_floor, temp_ceil)
+                history_batch[s] = seed
+
+        # Pre-extract Boosters for fast inplace_predict (avoids DMatrix overhead)
+        bst_q50 = models[channel][0.50].get_booster()[:models[channel][0.50].best_iteration + 1]
+        bst_q16 = models[channel][0.16].get_booster()[:models[channel][0.16].best_iteration + 1]
+        bst_q84 = models[channel][0.84].get_booster()[:models[channel][0.84].best_iteration + 1]
+        for booster in (bst_q50, bst_q16, bst_q84):
+            booster.set_param({'device': 'cpu', 'nthread': 2})
+
+        # Pre-compute solar elevation for all hours (avoids 8760 repeated trig calls)
+        if channel == "Solar":
+            _gen_doy = np.arange(n_hours) // 24 + 1
+            _gen_hod = (np.arange(n_hours) % 24).astype(float)
+            _gen_elev = solar_interval_elevation(_gen_doy, _gen_hod)
+
+        # Autoregressive generation
+        for t in range(n_hours):
+            X_batch = fe.get_batch_feature_vector(t, history_batch)
+
+            if channel == "Solar":
+                if _gen_elev[t] <= -1.0:
+                    # Nighttime: solar is exactly 0
+                    values = np.zeros(num_scenarios, dtype=np.float32)
+                else:
+                    q50 = bst_q50.inplace_predict(X_batch)
+                    q16 = bst_q16.inplace_predict(X_batch)
+                    q84 = bst_q84.inplace_predict(X_batch)
+                    q16, q50, q84 = ordered_quantiles(q16, q50, q84)
+                    sigma = np.maximum(0, (q84 - q16) / 2.0) * sigma_cal
+                    values = q50 + sigma * ar1_noise[t]
+                    # Drift correction toward climatological anchor
+                    anchor_val = anchor[t % 8760]
+                    if drift_alpha > 0 and anchor_val > 0.01:
+                        values = (1.0 - drift_alpha) * values + drift_alpha * anchor_val
+                    values = np.clip(values, 0.0, 1.0)
+            else:
+                # Temperature
+                q50 = bst_q50.inplace_predict(X_batch)
+                q16 = bst_q16.inplace_predict(X_batch)
+                q84 = bst_q84.inplace_predict(X_batch)
+                q16, q50, q84 = ordered_quantiles(q16, q50, q84)
+                sigma = np.maximum(0, (q84 - q16) / 2.0) * sigma_cal
+                values = q50 + sigma * ar1_noise[t]
+                # Drift correction for temperature
+                if drift_alpha > 0:
+                    values = (1.0 - drift_alpha) * values + drift_alpha * anchor[t % 8760]
+                values = np.clip(values, temp_floor, temp_ceil)
+
+            scenarios[:, t, ch_idx] = values
+
+            # Update history buffer
+            history_batch[:, :-1] = history_batch[:, 1:]
+            history_batch[:, -1] = values
+
+            if (t + 1) % 2000 == 0:
+                print(f"    {channel} progress: {t+1}/{n_hours}...")
+
+    # Final physical constraints
+    scenarios[:, :, 0] = np.clip(scenarios[:, :, 0], 0.0, 1.0)
+    scenarios[:, :, 1] = np.clip(scenarios[:, :, 1], 0.0, 1.0)
+
+    # No CDF matching: the calibrated model does not require post-processing.
+    print("  [POST] No CDF matching applied.")
+
+    return scenarios
 
 
 # =============================================================================

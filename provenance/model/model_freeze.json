@@ -1,6 +1,6 @@
 {
   "executed_training_source_sha256": "45ec3aa0e4709e0be1b2329e18e6eff456621f0555c9d656dc26b117de2a5c4c",
-  "maintained_source_sha256": "04fca503e18fb007a63d5f70d3681bf1c2c91baef1156aed28f4240ca4b6e73a",
+  "maintained_source_sha256": "a0e5c054f18afe1f8eaca36c11e37ef93d4b8d83d715269ca4779795dd44dc99",
   "identical_training_function_fingerprint": "c44f5458ed93412835077d44c6c9cb48349cc034745bd36d2cf3dd9a10c23b6f",
   "compared_definitions": [
     "ClimateConfig",

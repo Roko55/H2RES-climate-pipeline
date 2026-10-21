@@ -27,8 +27,10 @@ training. Use a new output directory for each run.
 ## Generate with the delivered model
 
 The single delivered bundle is `models/default/`. National CF calibration
-uses 1980-2015; model stopping, residual and annual-rollout calibration use
-2016-2019. Solar support follows UTC hourly intervals and source coordinates.
+uses 1980-2015; model stopping and residual calibration use 2016-2019.
+Both autoregressive channels use a fixed climatological drift weight of 0.4,
+with no additional noise multiplier, solar scaling or temperature offset.
+Solar support follows UTC hourly intervals and source coordinates.
 Generation needs the exact input corpus for the training climatology and
 wind-resampling pool, in addition to the supplied native tree models:
 

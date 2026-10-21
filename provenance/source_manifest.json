@@ -16,12 +16,8 @@
     "source_role": "Delivered generation or integration implementation"
   },
   "scripts/xgboost_climate_model.py": {
-    "sha256": "04fca503e18fb007a63d5f70d3681bf1c2c91baef1156aed28f4240ca4b6e73a",
+    "sha256": "a0e5c054f18afe1f8eaca36c11e37ef93d4b8d83d715269ca4779795dd44dc99",
     "source_role": "Delivered generation or integration implementation"
-  },
-  "scripts/rollout_sampling.py": {
-    "sha256": "f9dacb04d553c5a556be48a8ed973910fe21f6dfb18ea7df3050a9584f5403c7",
-    "source_role": "Annual sampling and validation calibration"
   },
   "scripts/temperature_scope.py": {
     "source_role": "Delivered implementation",

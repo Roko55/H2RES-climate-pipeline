@@ -19,10 +19,9 @@
     ]
   ],
   "data_sha256": "9a21558378d6359f308e3b7b7a3068d053195fa9123792c1d8aa9ac177101022",
-  "source_sha256": "04fca503e18fb007a63d5f70d3681bf1c2c91baef1156aed28f4240ca4b6e73a",
+  "source_sha256": "a0e5c054f18afe1f8eaca36c11e37ef93d4b8d83d715269ca4779795dd44dc99",
   "training_source_sha256": "45ec3aa0e4709e0be1b2329e18e6eff456621f0555c9d656dc26b117de2a5c4c",
   "training_function_fingerprint": "c44f5458ed93412835077d44c6c9cb48349cc034745bd36d2cf3dd9a10c23b6f",
-  "rollout_sampling_source_sha256": "f9dacb04d553c5a556be48a8ed973910fe21f6dfb18ea7df3050a9584f5403c7",
   "models": [
     {
       "channel": "Solar",
@@ -79,78 +78,14 @@
       "rho": 0.10589581076365644,
       "residual_mean": -0.00932440347969532,
       "residual_std": 0.9785916805267334,
-      "drift_alpha": 0.0
+      "drift_alpha": 0.4000000059604645
     },
     "Temperature": {
       "sigma_calibration": 0.8073752522468567,
       "rho": 0.20236328353874863,
       "residual_mean": 0.020038457587361336,
       "residual_std": 1.3536463975906372,
-      "drift_alpha": 0.0
-    }
-  },
-  "rollout_calibration": {
-    "Solar": {
-      "channel": "Solar",
-      "drift_alpha": 0.05,
-      "noise_multiplier": 2.0,
-      "bias": {
-        "kind": "scale",
-        "value": 1.033496797084835
-      },
-      "calendar_sd_ratio": 1.1762726939947068,
-      "ramp95_ratio": 1.0542478617427309,
-      "annual_sd_ratio": 0.6223457536881121,
-      "mean_bias": -0.0015186130028992384,
-      "coverage80": 0.8635830007043908,
-      "width80": 0.20775408011237337,
-      "coverage95": 0.9671871331298427,
-      "width95": 0.27555409784223156,
-      "acf24": 0.8571016909803735,
-      "acf24_abs_error": 0.05152621929621837,
-      "score": 0.6196054704114534,
-      "accepted": true,
-      "acceptance_checks": {
-        "coverage95": true,
-        "coverage80": true,
-        "ramp95_ratio": true,
-        "calendar_sd_ratio": true,
-        "annual_sd_ratio": true,
-        "mean_bias": true
-      }
-    },
-    "Temperature": {
-      "channel": "Temperature",
-      "drift_alpha": 0.0,
-      "noise_multiplier": 1.0,
-      "bias": {
-        "kind": "offset",
-        "value": 1.3883848786353958,
-        "bounds": [
-          -29.372774378585085,
-          49.13479732313575
-        ]
-      },
-      "calendar_sd_ratio": 1.034921118450079,
-      "ramp95_ratio": 0.9562056172888017,
-      "annual_sd_ratio": 0.7266697961036968,
-      "mean_bias": -0.03547248927005775,
-      "coverage80": 0.7628424657534246,
-      "width80": 9.129196211094861,
-      "coverage95": 0.925,
-      "width95": 13.68690245183448,
-      "acf24": 0.9436094228850875,
-      "acf24_abs_error": 0.019063361786706645,
-      "score": 0.4106253701332908,
-      "accepted": true,
-      "acceptance_checks": {
-        "coverage95": true,
-        "coverage80": true,
-        "ramp95_ratio": true,
-        "calendar_sd_ratio": true,
-        "annual_sd_ratio": true,
-        "mean_bias": true
-      }
+      "drift_alpha": 0.4000000059604645
     }
   },
   "training_years": [
@@ -167,8 +102,13 @@
   ],
   "reporting_period_previously_inspected": true,
   "reporting_used_for_fit_or_calibration": false,
-  "frozen_ensemble_sha256": "1737c4704e3fa412f521d9e9059362be183d70e2539d891d5f5969de0f6f3aae",
+  "frozen_ensemble_sha256": "614ae284579ce6564ab5743f7b2adad481f3bea11152843e0b4cbee013632850",
   "generation_CPU_threads": 2,
-  "calibration_mean_reference": "Validation-period mean; common scale/offset across paths",
-  "solar_timestamp_convention": "UTC interval start; daylight support evaluated over the complete hour"
+  "solar_timestamp_convention": "UTC interval start; daylight support evaluated over the complete hour",
+  "generation_policy": {
+    "drift_alpha": 0.4000000059604645,
+    "noise_multiplier": 1,
+    "solar_scale": 1,
+    "temperature_offset_C": 0
+  }
 }

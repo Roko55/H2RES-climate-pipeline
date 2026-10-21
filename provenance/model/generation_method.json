@@ -1,0 +1,71 @@
+{
+  "source_model_freeze_sha256": "24df51c66ee18590948348c4fde05e9bf8442177f9206fe455bc3aaef14ca842",
+  "engine_sha256": "a0e5c054f18afe1f8eaca36c11e37ef93d4b8d83d715269ca4779795dd44dc99",
+  "protocol_sha256": "8092a5c870af8a199e444affd231b0d5ff89dcab223cfb79520942189deb0b69",
+  "models_retrained_in_this_run": false,
+  "source_training_hash": "d039afe759a32745732c3df58a461b3c3d894e5aeb51197669ffa22f017ebc25",
+  "source_validation_hash": "cdfe4b4adb4a58718296efd3d166950c383718ef7e0d125a6c3ded99dd13d6b2",
+  "reporting_used_for_fit_or_calibration": false,
+  "drift_alpha": {
+    "solar": 0.4000000059604645,
+    "temperature": 0.4000000059604645
+  },
+  "noise_multiplier": 1,
+  "solar_scale": 1,
+  "temperature_offset_C": 0,
+  "initial_history": "Last 170 hours of sampled training years, aligned to January 1",
+  "calibration": {
+    "solar": {
+      "sigma_cal": 0.8256572484970093,
+      "rho": 0.10589581076365644
+    },
+    "temperature": {
+      "sigma_cal": 0.8073752522468567,
+      "rho": 0.20236328353874863
+    }
+  },
+  "model_files": [
+    {
+      "channel": "Solar",
+      "quantile": 0.16,
+      "file": "solar_q16.ubj",
+      "sha256": "b65c3b31e032e0af5246486975060b2459a42acbe73bd00d9589272209b101a0",
+      "best_iteration": 996
+    },
+    {
+      "channel": "Solar",
+      "quantile": 0.5,
+      "file": "solar_q50.ubj",
+      "sha256": "c6c55c1a33306b86e93cdf2fa0c7fc7391b8cc748fbc9b673dc08bf7af854024",
+      "best_iteration": 998
+    },
+    {
+      "channel": "Solar",
+      "quantile": 0.84,
+      "file": "solar_q84.ubj",
+      "sha256": "859000b27a0f069928317ccabb6450bca060bda83f3d121fed037bc2da56e62d",
+      "best_iteration": 997
+    },
+    {
+      "channel": "Temperature",
+      "quantile": 0.16,
+      "file": "temperature_q16.ubj",
+      "sha256": "8f1c2c9a793761355377739f738312af3459f5edeff5468e7e24193f1717902f",
+      "best_iteration": 999
+    },
+    {
+      "channel": "Temperature",
+      "quantile": 0.5,
+      "file": "temperature_q50.ubj",
+      "sha256": "86a1cb7a6fa9502305673eedc95cfd73b17bb5d96cb96497abbc7a746641a163",
+      "best_iteration": 999
+    },
+    {
+      "channel": "Temperature",
+      "quantile": 0.84,
+      "file": "temperature_q84.ubj",
+      "sha256": "1f22e2c6adc1ee061a757bfc0843f566189f732c3ee23bfe3c07a8ae594a51d6",
+      "best_iteration": 999
+    }
+  ]
+}

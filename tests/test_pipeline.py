@@ -109,10 +109,13 @@ class PipelineTests(unittest.TestCase):
                  patch.object(self.model, "get_default_params", return_value=params), \
                  patch.object(self.model, "calibrate_residuals", return_value=calibration):
                 pipeline.main(["train", "--data", str(data), "--seed", "23", "--latitude", "45", "--longitude", "16",
-                               "--conditional-fit-only", "--output", str(folder/"fit")])
+                               "--output", str(folder/"fit")])
             models, metadata = pipeline.load_native(folder/"fit", data)
             self.assertEqual(sum(map(len, models.values())), 6)
             self.assertFalse(metadata["reporting_used_for_fit_or_calibration"])
+            for channel in ("Solar", "Temperature"):
+                self.assertEqual(metadata["calibration"][channel]["drift_alpha"], pipeline.DRIFT_ALPHA)
+            self.assertEqual(metadata["generation_policy"]["noise_multiplier"], 1)
             self.assertEqual(metadata["split_hours"], {"train": 8*8760, "val": 8760, "test": 8760})
 
     def test_output_cannot_overwrite_or_escape_exports(self):

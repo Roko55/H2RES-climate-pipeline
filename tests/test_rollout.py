@@ -1,22 +1,23 @@
-"""Physical clock, quantile and annual sampling regression checks."""
+"""Physical clock, quantile and autoregressive sampling regression checks."""
 import unittest
 from types import SimpleNamespace
-from unittest.mock import patch
 import numpy as np
 import pipeline
-from scripts import rollout_sampling as sampler
 
 
 class ConstantBooster:
     def __init__(self, value):
         self.value = value
-        self.iteration_ranges = set()
+        self.retained_trees = set()
+
+    def __getitem__(self, selected):
+        self.retained_trees.add(selected.stop)
+        return self
 
     def set_param(self, values):
         pass
 
-    def inplace_predict(self, values, iteration_range):
-        self.iteration_ranges.add(iteration_range)
+    def inplace_predict(self, values):
         return np.full(len(values), self.value, dtype=np.float32)
 
 
@@ -50,60 +51,29 @@ class RolloutTests(unittest.TestCase):
         self.assertTrue((np.diff(result,axis=0)>=0).all())
         np.testing.assert_array_equal(result,self.g.ordered_quantiles(*result))
 
-    def test_common_bias_preserves_bounds_and_night_zeros(self):
-        training = np.zeros((2,8760,3))
-        training[:,:,2] = np.linspace(-5,25,8760)
-        solar = np.tile([0.,.1,.3,.4],(8,2190))
-        bias = sampler.fit_bias(solar,training,0,.25)
-        corrected = sampler.apply_bias(solar,bias)
-        self.assertAlmostEqual(corrected.mean(),.25,places=7)
-        self.assertTrue((corrected[:,::4]==0).all())
-        self.assertTrue(((corrected>=0)&(corrected<=1)).all())
-        temperature = np.full((8,8760),10.)
-        bias = sampler.fit_bias(temperature,training,2,12.)
-        self.assertAlmostEqual(sampler.apply_bias(temperature,bias).mean(),12.,places=7)
-        self.assertEqual(bias['bounds'],[-15.,35.])
-
-    def test_sampling_replays_uses_best_trees_and_channel_streams_differ(self):
-        training = np.zeros((2,8760,3))
-        training[:,:,0] = .2
-        training[:,:,2] = 10.
-        parameters = {'hourly_mean':training.mean(axis=0),'temp_train_min':-5.,'temp_train_max':25.,
-            'solar_rho':.4,'solar_sigma_cal':1.,'temperature_rho':.4,'temperature_sigma_cal':1.}
-        # Deliberately crossed predictions exercise rearrangement in sampling.
+    def test_sampling_replays_uses_best_trees_and_physical_bounds(self):
+        training = np.zeros((2*8760,3))
+        training[:,0] = .2
+        training[:,1] = .15
+        training[:,2] = 10.
+        parameters = {'hourly_mean':training.reshape(2,8760,3).mean(axis=0),
+            'hourly_std':np.zeros((8760,3)), 'wind_train_data':training[:,1],
+            'temp_train_min':-5.,'temp_train_max':25.}
+        for c in ('solar','temperature'):
+            parameters.update({c+'_rho':.4,c+'_sigma_cal':1.,c+'_drift_alpha':pipeline.DRIFT_ALPHA})
         boosters = [ConstantBooster(v) for v in (.3,.1,.2)]
         estimators = {q:SimpleNamespace(best_iteration=1,get_booster=lambda b=b:b)
                       for q,b in zip((.16,.5,.84),boosters)}
         models = {'Solar':estimators,'Temperature':estimators}
-        options = [{'drift_alpha':0.,'noise_multiplier':1.}]
-        a = sampler.generate_candidates(self.g,models,parameters,training,'Solar',options,2,42)
-        b = sampler.generate_candidates(self.g,models,parameters,training,'Solar',options,2,42)
-        c = sampler.generate_candidates(self.g,models,parameters,training,'Temperature',options,2,42)
+        a = self.g.generate_scenarios(models,parameters,2,training,42)
+        b = self.g.generate_scenarios(models,parameters,2,training,42)
         np.testing.assert_array_equal(a,b)
-        hours = np.arange(8760)
-        dark = self.g.solar_interval_elevation(hours//24+1,hours%24)<=-1
-        self.assertTrue((a[:,:,dark]==0).all())
-        self.assertTrue((a>=0).all() and (a<=1).all())
-        self.assertFalse(np.array_equal(a[0,0],a[0,1]))
-        self.assertFalse(np.array_equal(a[0,0,~dark],c[0,0,~dark]))
-        self.assertTrue(all(booster.iteration_ranges=={(0,2)} for booster in boosters))
-
-    def test_generation_requires_complete_frozen_settings(self):
-        with self.assertRaisesRegex(ValueError,'Training history'):
-            sampler.generate_profiles(self.g,{}, {},None,{},1,42)
-        with self.assertRaisesRegex(ValueError,'Both channels'):
-            sampler.generate_profiles(self.g,{}, {},np.zeros((1,8760,3)),{},1,42)
-
-    def test_acceptance_rejects_collapsed_spread(self):
-        protocol = {'validation_acceptance':{
-            **{key+suffix:value for key in ('coverage95','coverage80','ramp95_ratio','calendar_sd_ratio','annual_sd_ratio')
-               for suffix,value in (('_min',.5),('_max',2.))},
-            'mean_solar_bias_CF_max':.01,'mean_temperature_bias_C_max':.5}}
-        good = {key:1. for key in ('coverage95','coverage80','ramp95_ratio','calendar_sd_ratio','annual_sd_ratio')}
-        good['mean_bias'] = 0.
-        self.assertTrue(sampler.accepted(good,protocol,0)[0])
-        bad = dict(good,calendar_sd_ratio=.05)
-        self.assertFalse(sampler.accepted(bad,protocol,0)[0])
+        dark = self.g.solar_interval_elevation(np.arange(8760)//24+1,np.arange(8760)%24)<=-1
+        self.assertTrue((a[:,dark,0]==0).all())
+        self.assertTrue((a[:,:,:2]>=0).all() and (a[:,:,:2]<=1).all())
+        self.assertFalse(np.array_equal(a[0,:,0],a[1,:,0]))
+        self.assertTrue(all(booster.retained_trees=={2} for booster in boosters))
+        np.testing.assert_array_equal(a[:,:,1],self.g._generate_wind_bootstrap(training[:,1],8760,2,seed=42))
 
 
 if __name__ == '__main__':

@@ -1,9 +1,9 @@
 channel,mask,method,wasserstein,KS
 solar,all_hours,fixed_baseline,0.04707461149359496,0.13438356164383558
-solar,all_hours,individual_synthetic_paths,0.003133157951069378,0.021232876712328763
+solar,all_hours,individual_synthetic_paths,0.01031880252291302,0.05165410958904115
 solar,training_daylight_mask,fixed_baseline,0.09025726152913871,0.18361117633247248
-solar,training_daylight_mask,individual_synthetic_paths,0.006528561473147584,0.022716600140878174
+solar,training_daylight_mask,individual_synthetic_paths,0.021214437891675656,0.10624324958910536
 wind,all_hours,fixed_baseline,0.040770492141430095,0.14367579908675798
 wind,all_hours,individual_synthetic_paths,0.02300686443632919,0.12864383561643833
 temperature,all_hours,fixed_baseline,1.823253254562087,0.08684931506849317
-temperature,all_hours,individual_synthetic_paths,0.5432704860309504,0.03251255707762557
+temperature,all_hours,individual_synthetic_paths,1.7984131433702166,0.08667237442922376

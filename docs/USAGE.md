@@ -8,7 +8,7 @@ by Git and protected against overwriting.
 `models/default/` requires `HR_data_training_calibrated.parquet`, SHA256
 `9a21558378d6359f308e3b7b7a3068d053195fa9123792c1d8aa9ac177101022`.
 National CF targets and reference weather use 1980-2015. Stopping and
-residual and annual-rollout calibration use 2016-2019. Reporting years 2020-2024 were previously
+residual calibration use 2016-2019. Reporting years 2020-2024 were previously
 inspected and do not enter fitting or calibration.
 
 ```bash
@@ -17,7 +17,7 @@ python pipeline.py generate --data data/SC/HR_data_training_calibrated.parquet -
 
 Trees require the training climatology and wind pool supplied by the exact
 corpus. The frozen research ensemble SHA256 is
-`1737c4704e3fa412f521d9e9059362be183d70e2539d891d5f5969de0f6f3aae`.
+`614ae284579ce6564ab5743f7b2adad481f3bea11152843e0b4cbee013632850`.
 Native CLI generation reproduces this array bit for bit in the recorded runtime.
 Autoregressive numerical differences can accumulate between runtimes. Use the
 frozen array and corresponding solver configuration for exact reproduction of
@@ -52,12 +52,12 @@ python pipeline.py select --profiles exports/my_profiles.npy --method orthogonal
 
 The split is chronological: 80% training, 10% validation and the remaining
 complete years for reporting, using integer year counts. Climatology and wind
-blocks use training; stopping and residual/drift calibration use validation.
+blocks use training; stopping and residual calibration use validation.
 User-supplied upstream calibration requires its own temporal-boundary check.
-Training and prediction use two CPU threads. Full annual calibration is part
-of the default training command and can outlast tree fitting. A bundle created
-with `--conditional-fit-only` is a fitting fixture and cannot generate until
-annual calibration is performed. No universal runtime estimate is implied.
+Training and prediction use two CPU threads. The drift weight is fixed at 0.4
+for both autoregressive channels. Generation uses calibrated residual width
+without an additional noise multiplier or mean adjustment. Training writes a
+complete native model bundle that the generation command can load directly.
 
 ## Selection and spatial export
 
