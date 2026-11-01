@@ -32,3 +32,5 @@ jobs:
         run: python pipeline.py --help
       - name: Offline end-to-end walkthrough
         run: python examples/demo.py --output exports/ci_walkthrough
+      - name: Exact accepted solar replay and cohort identity
+        run: python pipeline.py replay --output exports/accepted.npy

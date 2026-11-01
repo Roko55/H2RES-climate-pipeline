@@ -7,20 +7,48 @@
     "sha256": "a8d4ffa1a30df14c9c12eef014e7e7c98dd4775692ab60c98820ce55f280ad1f",
     "source_role": "Delivered generation or integration implementation"
   },
+  "scripts/channel_runtime.py": {
+    "sha256": "5cf7c8a17131c80c84af5e2222dcb0397910983d60196b50f69a0fe192512342",
+    "source_role": "Delivered generation or integration implementation"
+  },
+  "scripts/final_selection.py": {
+    "sha256": "23cb770e1023c42265c5536212e9ac3d9e5df26d36203238dcd8c3640540b61d",
+    "source_role": "Delivered generation or integration implementation"
+  },
+  "scripts/prepared_thermal.py": {
+    "sha256": "39842d4bc9d828086efdaf70d75991bb5da31bb62542619081d823f97a962c49",
+    "source_role": "Delivered generation or integration implementation"
+  },
+  "scripts/release_runtime.py": {
+    "sha256": "4dab709b61c3c1a109928180d09f1a07de95439d5353a087178ab866f28d2264",
+    "source_role": "Delivered generation or integration implementation"
+  },
+  "scripts/resource_selection.py": {
+    "sha256": "4548954f984f207eb31174ff09b38954c796de3c86406e6f5dfe655e9baffa19",
+    "source_role": "Delivered generation or integration implementation"
+  },
   "scripts/scenario_manager.py": {
     "sha256": "8b4837cfe36de9157c69bb6f55c7c257714322358924bfbcc3d665a7e001ee79",
+    "source_role": "Delivered generation or integration implementation"
+  },
+  "scripts/spatial_mapping.py": {
+    "sha256": "dfa292118fe770e4ec2216681ba73cf8714e8ed4145e5de5a593771db7e5c0e1",
     "source_role": "Delivered generation or integration implementation"
   },
   "scripts/temperature_coupling.py": {
     "sha256": "e379ae1a1f093d1f595e54888e1ad23e6656446e8d686bddc68e6854f404b237",
     "source_role": "Delivered generation or integration implementation"
   },
+  "scripts/temperature_scope.py": {
+    "sha256": "e83b96e6940d4ec346664734c89b4a7f6df01baf1631bb5607f8c53d8d8b38ec",
+    "source_role": "Delivered generation or integration implementation"
+  },
+  "scripts/wind_conversion.py": {
+    "sha256": "347b0d1b24341f96c6f939b2136eabfdbfc31a046e5cacb722b3f58b9ddd7de3",
+    "source_role": "Delivered generation or integration implementation"
+  },
   "scripts/xgboost_climate_model.py": {
     "sha256": "a0e5c054f18afe1f8eaca36c11e37ef93d4b8d83d715269ca4779795dd44dc99",
     "source_role": "Delivered generation or integration implementation"
-  },
-  "scripts/temperature_scope.py": {
-    "source_role": "Delivered implementation",
-    "sha256": "e83b96e6940d4ec346664734c89b4a7f6df01baf1631bb5607f8c53d8d8b38ec"
   }
 }

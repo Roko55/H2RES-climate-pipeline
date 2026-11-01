@@ -1,0 +1,11 @@
+{
+  "selected_directory": "solar_final_20261031",
+  "selected_solar_sha256": "4e87e12baa22dede50d905392ee02467fcf27b83e1483b8b8c4c9d9365bd6b3e",
+  "criterion": "Budget candidate replaces first accepted candidate only when confirmation score and fixed-production score both improve by more than 0.001; both must pass independent development audits. Reporting remains unopened at this decision.",
+  "first_confirmation": 0.005808483338188034,
+  "budget_confirmation": 0.0014005234114732867,
+  "first_production": -0.012001930373106269,
+  "budget_production": -0.009472930782582774,
+  "reporting_used": false,
+  "finish_script_sha256": "936aa8a4080d7ff5d576b4128d518380904ede449200a0aa010d5b4eaed23ed5"
+}

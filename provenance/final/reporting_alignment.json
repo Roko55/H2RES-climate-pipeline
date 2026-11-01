@@ -1,0 +1,248 @@
+{
+  "utc": "2026-10-31T16:51:24.275449+00:00",
+  "ensemble_sha256": "d86a855166c24d699d511010184db12d0baf1551f83254b41f661c602d7ae728",
+  "history_sha256": "b700263a2868b20cc8f7fe95e0a7d22c48ea31c89cedbc0889a55ca870972d8a",
+  "point_rows": [
+    {
+      "channel": "solar",
+      "method": "fixed_H2RES_profile",
+      "mask": "complete_reporting",
+      "n_hours": 43800,
+      "MAE": 0.06126987665772892,
+      "RMSE": 0.1066827850410813,
+      "R2": 0.5408607397414469,
+      "wMAPE_percent": 55.11955172700936
+    },
+    {
+      "channel": "solar",
+      "method": "ensemble_mean",
+      "mask": "complete_reporting",
+      "n_hours": 43800,
+      "MAE": 0.028440290053321483,
+      "RMSE": 0.05585839167458196,
+      "R2": 0.8741269966923227,
+      "wMAPE_percent": 25.58542834160342
+    },
+    {
+      "channel": "solar",
+      "method": "training_calendar_mean",
+      "mask": "complete_reporting",
+      "n_hours": 43800,
+      "MAE": 0.02848493070238008,
+      "RMSE": 0.055899476919083875,
+      "R2": 0.8739417631095322,
+      "wMAPE_percent": 25.625587922447004
+    },
+    {
+      "channel": "solar",
+      "method": "training_calendar_median",
+      "mask": "complete_reporting",
+      "n_hours": 43800,
+      "MAE": 0.027972222561199595,
+      "RMSE": 0.057672142061892306,
+      "R2": 0.8658199636411302,
+      "wMAPE_percent": 25.16434588230832
+    },
+    {
+      "channel": "solar",
+      "method": "fixed_H2RES_profile",
+      "mask": "legacy_first168_excluded_once",
+      "n_hours": 43632,
+      "MAE": 0.06133192165767817,
+      "RMSE": 0.10677302722829739,
+      "R2": 0.5400757536755953,
+      "wMAPE_percent": 55.15264992346115
+    },
+    {
+      "channel": "solar",
+      "method": "ensemble_mean",
+      "mask": "legacy_first168_excluded_once",
+      "n_hours": 43632,
+      "MAE": 0.02837723697758764,
+      "RMSE": 0.055724869371699584,
+      "R2": 0.8747258941824896,
+      "wMAPE_percent": 25.51819304725885
+    },
+    {
+      "channel": "solar",
+      "method": "training_calendar_mean",
+      "mask": "legacy_first168_excluded_once",
+      "n_hours": 43632,
+      "MAE": 0.02842199018775082,
+      "RMSE": 0.05576766475274539,
+      "R2": 0.8745334051996185,
+      "wMAPE_percent": 25.55843731266533
+    },
+    {
+      "channel": "solar",
+      "method": "training_calendar_median",
+      "mask": "legacy_first168_excluded_once",
+      "n_hours": 43632,
+      "MAE": 0.027909724753908606,
+      "RMSE": 0.057555384709940975,
+      "R2": 0.866360415823755,
+      "wMAPE_percent": 25.097783294709046
+    },
+    {
+      "channel": "wind",
+      "method": "fixed_H2RES_profile",
+      "mask": "complete_reporting",
+      "n_hours": 43800,
+      "MAE": 0.22459261059715793,
+      "RMSE": 0.30117117855445275,
+      "R2": -0.24938882100054793,
+      "wMAPE_percent": 91.48987203763242
+    },
+    {
+      "channel": "wind",
+      "method": "ensemble_mean",
+      "mask": "complete_reporting",
+      "n_hours": 43800,
+      "MAE": 0.21362791821404684,
+      "RMSE": 0.26594526932261037,
+      "R2": 0.025783821044999655,
+      "wMAPE_percent": 87.02330343417042
+    },
+    {
+      "channel": "wind",
+      "method": "training_calendar_mean",
+      "mask": "complete_reporting",
+      "n_hours": 43800,
+      "MAE": 0.21253286399409693,
+      "RMSE": 0.26555065781896087,
+      "R2": 0.02867277407739155,
+      "wMAPE_percent": 86.57722299460873
+    },
+    {
+      "channel": "wind",
+      "method": "training_calendar_median",
+      "mask": "complete_reporting",
+      "n_hours": 43800,
+      "MAE": 0.2021558970145569,
+      "RMSE": 0.28410340464457,
+      "R2": -0.1117923344757239,
+      "wMAPE_percent": 82.35006975669687
+    },
+    {
+      "channel": "wind",
+      "method": "fixed_H2RES_profile",
+      "mask": "legacy_first168_excluded_once",
+      "n_hours": 43632,
+      "MAE": 0.22457866293594625,
+      "RMSE": 0.3012900910195701,
+      "R2": -0.24949975746252484,
+      "wMAPE_percent": 91.48647162365543
+    },
+    {
+      "channel": "wind",
+      "method": "ensemble_mean",
+      "mask": "legacy_first168_excluded_once",
+      "n_hours": 43632,
+      "MAE": 0.2136011001503889,
+      "RMSE": 0.2660047309670608,
+      "R2": 0.026030851344056583,
+      "wMAPE_percent": 87.01454863173598
+    },
+    {
+      "channel": "wind",
+      "method": "training_calendar_mean",
+      "mask": "legacy_first168_excluded_once",
+      "n_hours": 43632,
+      "MAE": 0.2124314210851051,
+      "RMSE": 0.26549366365165245,
+      "R2": 0.029769774532229287,
+      "wMAPE_percent": 86.538057191205
+    },
+    {
+      "channel": "wind",
+      "method": "training_calendar_median",
+      "mask": "legacy_first168_excluded_once",
+      "n_hours": 43632,
+      "MAE": 0.20204375288741144,
+      "RMSE": 0.28411803072213926,
+      "R2": -0.11112794579001717,
+      "wMAPE_percent": 82.3064391942838
+    },
+    {
+      "channel": "temperature",
+      "method": "fixed_H2RES_profile",
+      "mask": "complete_reporting",
+      "n_hours": 43800,
+      "MAE": 3.169946171855674,
+      "RMSE": 3.931311822761721,
+      "R2": 0.8142933104778148,
+      "wMAPE_percent": 24.39233680750414
+    },
+    {
+      "channel": "temperature",
+      "method": "ensemble_mean",
+      "mask": "complete_reporting",
+      "n_hours": 43800,
+      "MAE": 2.9059569478839964,
+      "RMSE": 3.577727711200277,
+      "R2": 0.8461961761813755,
+      "wMAPE_percent": 22.360972956016635
+    },
+    {
+      "channel": "temperature",
+      "method": "training_calendar_mean",
+      "mask": "complete_reporting",
+      "n_hours": 43800,
+      "MAE": 3.169946171855674,
+      "RMSE": 3.931311822761721,
+      "R2": 0.8142933104778148,
+      "wMAPE_percent": 24.39233680750414
+    },
+    {
+      "channel": "temperature",
+      "method": "training_calendar_median",
+      "mask": "complete_reporting",
+      "n_hours": 43800,
+      "MAE": 3.164793322070597,
+      "RMSE": 3.926146086384013,
+      "R2": 0.8147810263232697,
+      "wMAPE_percent": 24.352686276970843
+    },
+    {
+      "channel": "temperature",
+      "method": "fixed_H2RES_profile",
+      "mask": "legacy_first168_excluded_once",
+      "n_hours": 43632,
+      "MAE": 3.176711174482007,
+      "RMSE": 3.9376247633083388,
+      "R2": 0.8131157046606088,
+      "wMAPE_percent": 24.3645331022983
+    },
+    {
+      "channel": "temperature",
+      "method": "ensemble_mean",
+      "mask": "legacy_first168_excluded_once",
+      "n_hours": 43632,
+      "MAE": 2.908923618939719,
+      "RMSE": 3.5799136730038335,
+      "R2": 0.8455281811264785,
+      "wMAPE_percent": 22.310673496236532
+    },
+    {
+      "channel": "temperature",
+      "method": "training_calendar_mean",
+      "mask": "legacy_first168_excluded_once",
+      "n_hours": 43632,
+      "MAE": 3.176711174482007,
+      "RMSE": 3.9376247633083388,
+      "R2": 0.8131157046606088,
+      "wMAPE_percent": 24.3645331022983
+    },
+    {
+      "channel": "temperature",
+      "method": "training_calendar_median",
+      "mask": "legacy_first168_excluded_once",
+      "n_hours": 43632,
+      "MAE": 3.171708893160667,
+      "RMSE": 3.932479670573968,
+      "R2": 0.8136037698736589,
+      "wMAPE_percent": 24.326166929817834
+    }
+  ],
+  "note": "Both masks explicitly retained; complete-reporting is preferred for common ensemble scoring. No fitting or energy inputs changed."
+}

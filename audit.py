@@ -1,63 +1,77 @@
-"""Verify the delivered model bundle, calibration boundary and source inventory."""
+"""Verify delivered assets and the final archived experiment evidence."""
 from pathlib import Path
 import hashlib
 import json
+import numpy as np
+import pandas as pd
+from scripts.release_runtime import accepted_array, solar_context, ENSEMBLE_SHA
 
-ROOT=Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent
+
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
-def main():
-    manifest=json.loads((ROOT/'artifact_manifest.json').read_text())
-    for name,record in manifest['files'].items():
-        path=(ROOT/name).resolve()
-        path.relative_to(ROOT)
-        if path.stat().st_size!=record['bytes'] or digest(path)!=record['sha256']:
-            raise ValueError('Artifact mismatch: '+name)
-    sources=json.loads((ROOT/'provenance/source_manifest.json').read_text())
-    for name,record in sources.items():
-        if digest(ROOT/name)!=record['sha256']:
-            raise ValueError('Source mismatch: '+name)
-    folder=ROOT/'models/default'
-    metadata=json.loads((folder/'metadata.json').read_text())
-    expected={(c,q) for c in ('Solar','Temperature') for q in (.16,.5,.84)}
-    if {(r['channel'],r['quantile']) for r in metadata['models']}!=expected or len(metadata['models'])!=6:
-        raise ValueError('Incomplete model bundle')
-    for entry in metadata['models']:
-        path=(folder/entry['file']).resolve()
-        path.relative_to(folder.resolve())
-        if digest(path)!=entry['sha256']:
-            raise ValueError('Native model mismatch: '+entry['file'])
-    preparation=json.loads((ROOT/'provenance/model/preprocessing_audit.json').read_text())
-    if any(int(y)>2015 for values in preparation['calibration_targets'].values() for y in values):
-        raise ValueError('National calibration crosses training boundary')
-    if preparation['new_data_sha256']!=metadata['data_sha256'] or metadata['reporting_used_for_fit_or_calibration']:
-        raise ValueError('Model and calibration corpus mismatch')
-    policy=metadata['generation_policy']
-    if policy!={'drift_alpha':0.4000000059604645,'noise_multiplier':1,
-                'solar_scale':1,'temperature_offset_C':0}:
-        raise ValueError('Unexpected generation policy')
-    for channel in ('Solar','Temperature'):
-        if metadata['calibration'][channel]['drift_alpha']!=policy['drift_alpha']:
-            raise ValueError('Channel drift differs from the generation policy')
-    replays=json.loads((ROOT/'provenance/model/saved_model_replay.json').read_text())
-    replay=replays['native_portable_replay']
-    if replay['status']!='passed' or not replay['bitwise_equal'] or replay['actual_sha256']!=metadata['frozen_ensemble_sha256']:
-        raise ValueError('Full native model replay is not confirmed')
-    if replay['entry_point_sha256']!=digest(ROOT/'pipeline.py'):
-        raise ValueError('Replay entry point differs from this release')
-    if replay['generator_sha256']!=digest(ROOT/'scripts/xgboost_climate_model.py'):
-        raise ValueError('Replay generator differs from this release')
-    supported=replays['clean_supported_runtime']
-    if (supported['status']!='passed' or not supported['bitwise_equal']
-            or supported['actual_sha256']!=metadata['frozen_ensemble_sha256']
-            or supported['source_sha256']!=digest(ROOT/'pipeline.py')
-            or supported['requirements_sha256']!=digest(ROOT/'requirements.txt')):
-        raise ValueError('Supported-runtime replay differs from this release')
-    print(json.dumps({'status':'passed','files_verified':len(manifest['files']),
-                      'native_models_verified':6,'data_sha256':metadata['data_sha256'],
-                      'reporting_used_for_fit_or_calibration':False,
-                      'scope':'File, model and recorded calibration boundaries; reporting years previously inspected.'},indent=2))
 
-if __name__=='__main__':main()
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
+def main():
+    manifest = json.loads((ROOT/'artifact_manifest.json').read_text())
+    for name, record in manifest['files'].items():
+        path = (ROOT/name).resolve()
+        path.relative_to(ROOT)
+        require(path.stat().st_size == record['bytes'] and digest(path) == record['sha256'],
+                'Artifact mismatch: '+name)
+    sources = json.loads((ROOT/'provenance/source_manifest.json').read_text())
+    for name, record in sources.items():
+        require(digest(ROOT/name) == record['sha256'], 'Source mismatch: '+name)
+    metadata = json.loads((ROOT/'models/default/metadata.json').read_text())
+    expected = {('Solar', q) for q in (.025, .1, .16, .5, .84, .9, .975)}
+    expected |= {('Temperature', q) for q in (.16, .5, .84)}
+    require(len(metadata['models']) == 10 and
+            {(r['channel'], r['quantile']) for r in metadata['models']} == expected,
+            'Incomplete final native model bundle')
+    for row in metadata['models']:
+        path = (ROOT/'models/default'/row['file']).resolve()
+        path.relative_to((ROOT/'models/default').resolve())
+        require(digest(path) == row['sha256'], 'Native model mismatch: '+row['file'])
+    accepted_array(ROOT)
+    solar_context(ROOT/'models/default/solar')
+    require(metadata['ensemble_sha256'] == ENSEMBLE_SHA and
+            not metadata['reporting_used_for_selection'], 'Invalid final cohort identity or selection boundary')
+    final = json.loads((ROOT/'provenance/final/final_integrity.json').read_text())
+    require(final['all_required_checks_passed'] and final['planning_windows'] == 63
+            and final['operational_cases'] == 45 and final['verified_infeasible'] == 0
+            and final['input_ensemble_sha256'] == ENSEMBLE_SHA, 'Final cohort integrity failed')
+    mapping = json.loads((ROOT/'provenance/final/mapping_max_error_audit.json').read_text())
+    require(mapping['passed'] and len(mapping['checks']) == 126 and
+            all(row['passed'] and row['max_abs_error'] <= 1e-12 for row in mapping['checks']),
+            'Archived spatial aggregate conservation failed')
+    plan = pd.read_csv(ROOT/'results/planning_objectives.csv')
+    require(len(plan) == 63 and not plan.duplicated(['configuration', 'case', 'year']).any(),
+            'Planning table dimensions differ')
+    require(np.isfinite(plan.objective).all() and (plan.constraint_violation <= 1e-7).all()
+            and (plan.bound_violation <= 1e-7).all(), 'Planning solution quality failed')
+    operations = pd.read_csv(ROOT/'results/operational_checks.csv')
+    require(len(operations) == 45 and (operations.solver_status == 2).all()
+            and (operations.status == 'verified_optimal').all()
+            and (operations.HR_unserved_MWh.abs() <= 1e-6).all()
+            and operations.verified_fixed_stock.all(), 'Operational evidence failed')
+    counts = operations.groupby('availability_fraction').size().to_dict()
+    require(counts == {0.: 15, .5: 15, 1.: 15}, 'Grid stress dimensions differ')
+    require((operations.constraint_violation <= 1e-7).all()
+            and (operations.bound_violation <= 1e-7).all(), 'Operational solution quality failed')
+    metrics = pd.read_csv(ROOT/'results/profile_metrics.csv')
+    require((metrics['mask'] == 'complete_reporting').all() and (metrics.n_hours == 43800).all()
+            and not metrics.duplicated(['channel', 'method']).any(), 'Mixed reporting masks')
+    print(json.dumps({'status': 'passed', 'files_verified': len(manifest['files']),
+        'native_models_verified': 10, 'ensemble_sha256': ENSEMBLE_SHA,
+        'planning_windows': len(plan), 'operational_cases': len(operations),
+        'scope': 'Artifact identities, solar runtime assets and archived solver evidence; optimizer not rerun.'}, indent=2))
+
+
+if __name__ == '__main__':
+    main()

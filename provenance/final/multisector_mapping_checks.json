@@ -1,0 +1,742 @@
+{
+  "passed": true,
+  "profiles": [
+    {
+      "year": 2020,
+      "case": "avg",
+      "solar_mean": 0.1103043332695961,
+      "wind_mean": 0.24482586979866028,
+      "temperature_mean": 12.337486267089844,
+      "temperature_sha256": "bbdebf75460954029bd50b6a8fec7e954a22308934c68be9eb52e19ae0ef7578",
+      "profile_sha256": "e949b70fb42b996d9c905a84b8cb6c64e46f158029508923d6f6ee5fc3524f99",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 5.820543059692582e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.197002671713162e-17
+      }
+    },
+    {
+      "year": 2020,
+      "case": "low",
+      "solar_mean": 0.10802996158599854,
+      "wind_mean": 0.2277834117412567,
+      "temperature_mean": 12.337486267089844,
+      "temperature_sha256": "bbdebf75460954029bd50b6a8fec7e954a22308934c68be9eb52e19ae0ef7578",
+      "profile_sha256": "fb615db4c06b7de3d1a243e714921b910e749c353eeb45cdbe0afa480d180f0e",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 5.806660902195535e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.1074701288692766e-17
+      }
+    },
+    {
+      "year": 2020,
+      "case": "high",
+      "solar_mean": 0.10831807553768158,
+      "wind_mean": 0.26132917404174805,
+      "temperature_mean": 12.337486267089844,
+      "temperature_sha256": "bbdebf75460954029bd50b6a8fec7e954a22308934c68be9eb52e19ae0ef7578",
+      "profile_sha256": "b2abe5481154ae317d34ef0a197527e4aaeaa8d989f83f3153c12f43911e6bad",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 5.809001362525248e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.3492357648516999e-17
+      }
+    },
+    {
+      "year": 2025,
+      "case": "avg",
+      "solar_mean": 0.11085585504770279,
+      "wind_mean": 0.24156154692173004,
+      "temperature_mean": 12.587486267089844,
+      "temperature_sha256": "7aa148e17b257df753a4677a42b5ced21d5ec307fb5eef8384a3d165c286d4a4",
+      "profile_sha256": "1eb99c716c138e674d100863fd49633b83e56c366c82aa87585e1af36310e06b",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 6.197368292501221e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.2425933111824918e-17
+      }
+    },
+    {
+      "year": 2025,
+      "case": "low",
+      "solar_mean": 0.10857010632753372,
+      "wind_mean": 0.22474630177021027,
+      "temperature_mean": 12.587486267089844,
+      "temperature_sha256": "7aa148e17b257df753a4677a42b5ced21d5ec307fb5eef8384a3d165c286d4a4",
+      "profile_sha256": "ae8171860466f635d2ee1cfea8fea8772c08f84f2f76eb3dde0d24e791022c07",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 5.64971575316823e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.1189276612024697e-17
+      }
+    },
+    {
+      "year": 2025,
+      "case": "high",
+      "solar_mean": 0.10885967314243317,
+      "wind_mean": 0.2578447759151459,
+      "temperature_mean": 12.587486267089844,
+      "temperature_sha256": "7aa148e17b257df753a4677a42b5ced21d5ec307fb5eef8384a3d165c286d4a4",
+      "profile_sha256": "7d8fccc635b487fdf6331f53138c2439235e3aadf16dde18fc906d3f37b3a976",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 5.851884145958656e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.3234209080306358e-17
+      }
+    },
+    {
+      "year": 2030,
+      "case": "avg",
+      "solar_mean": 0.11140737682580948,
+      "wind_mean": 0.23829719424247742,
+      "temperature_mean": 12.837485313415527,
+      "temperature_sha256": "b00447bda902000a310ccdf946b45eec535ea4069181dfabdeb3e4dcb7c265aa",
+      "profile_sha256": "351994eab631e044c18be217a9173f29f447b3fe8f2cdd9f8d1bd88a392c7694",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 6.080942160480571e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.2004547757622138e-17
+      }
+    },
+    {
+      "year": 2030,
+      "case": "low",
+      "solar_mean": 0.1091102659702301,
+      "wind_mean": 0.22170919179916382,
+      "temperature_mean": 12.837485313415527,
+      "temperature_sha256": "b00447bda902000a310ccdf946b45eec535ea4069181dfabdeb3e4dcb7c265aa",
+      "profile_sha256": "e52986afdbf9082f8dfc3261de3a4a49293bc000c0f355ddbd2d9c7f34a5a523",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 5.849516998289508e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.1011285981828923e-17
+      }
+    },
+    {
+      "year": 2030,
+      "case": "high",
+      "solar_mean": 0.10940126329660416,
+      "wind_mean": 0.2543603479862213,
+      "temperature_mean": 12.837485313415527,
+      "temperature_sha256": "b00447bda902000a310ccdf946b45eec535ea4069181dfabdeb3e4dcb7c265aa",
+      "profile_sha256": "172249b1f507e21f03559429130374a8f4ed79c61b44c6370ea77bdb5e5f3cf4",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 5.7928179084899735e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.2874087027799144e-17
+      }
+    },
+    {
+      "year": 2035,
+      "case": "avg",
+      "solar_mean": 0.11195889115333557,
+      "wind_mean": 0.2350328117609024,
+      "temperature_mean": 13.087485313415527,
+      "temperature_sha256": "ae663acbc6a6f412e42da982e06f45afc04f49a7374a0d46c831d0ce4b726f8f",
+      "profile_sha256": "3bcd563ffec06f42a523cb637fd15348725aea2bd5d6b4320052a5b1e9a75171",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 5.900444473513466e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.1720489263778361e-17
+      }
+    },
+    {
+      "year": 2035,
+      "case": "low",
+      "solar_mean": 0.10965041071176529,
+      "wind_mean": 0.21867208182811737,
+      "temperature_mean": 13.087485313415527,
+      "temperature_sha256": "ae663acbc6a6f412e42da982e06f45afc04f49a7374a0d46c831d0ce4b726f8f",
+      "profile_sha256": "793180cf7275b3d75192cdaf2853df907255433bfeb98457c443eebf40053feb",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 5.9023927399420816e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.0698954379106476e-17
+      }
+    },
+    {
+      "year": 2035,
+      "case": "high",
+      "solar_mean": 0.10994285345077515,
+      "wind_mean": 0.2508760094642639,
+      "temperature_mean": 13.087485313415527,
+      "temperature_sha256": "ae663acbc6a6f412e42da982e06f45afc04f49a7374a0d46c831d0ce4b726f8f",
+      "profile_sha256": "8c3a53e294f190c4878861e969bed6170d825b73ad2d9e299e7edf46f3461bcc",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 5.7654109778238036e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.3006788856202319e-17
+      }
+    },
+    {
+      "year": 2040,
+      "case": "avg",
+      "solar_mean": 0.11251041293144226,
+      "wind_mean": 0.23176848888397217,
+      "temperature_mean": 13.337485313415527,
+      "temperature_sha256": "cfe5143e4f4f2db52ada2820890ee20e068c6990bfd742f73307e9b11b579c63",
+      "profile_sha256": "d7ffe9f69173bb652834824e932bcc37ccd47e703f7f31bfe8435fc9e9fcfb38",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 5.922502441881687e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.1033107716479192e-17
+      }
+    },
+    {
+      "year": 2040,
+      "case": "low",
+      "solar_mean": 0.11019055545330048,
+      "wind_mean": 0.21563495695590973,
+      "temperature_mean": 13.337485313415527,
+      "temperature_sha256": "cfe5143e4f4f2db52ada2820890ee20e068c6990bfd742f73307e9b11b579c63",
+      "profile_sha256": "270ce9a8218e352715327ec2278dc55ad520170b0a5fd903a3b3f4d7f5f0b5c8",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 5.7727990317370424e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.0589130949285945e-17
+      }
+    },
+    {
+      "year": 2040,
+      "case": "high",
+      "solar_mean": 0.11048443615436554,
+      "wind_mean": 0.24739159643650055,
+      "temperature_mean": 13.337485313415527,
+      "temperature_sha256": "cfe5143e4f4f2db52ada2820890ee20e068c6990bfd742f73307e9b11b579c63",
+      "profile_sha256": "299c199ce859e8ac9cf84ce323dc1fddbf581c9065c6d96d36a8c3cc68e41c9c",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 5.641006023273509e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.2425494511202914e-17
+      }
+    },
+    {
+      "year": 2045,
+      "case": "avg",
+      "solar_mean": 0.11306193470954895,
+      "wind_mean": 0.22850415110588074,
+      "temperature_mean": 13.587485313415527,
+      "temperature_sha256": "da8c14010416f6b6957f762ac47246b51b79909252a9931f3076b4971ff30bdb",
+      "profile_sha256": "ed5e0a1cc7ccfbd2e84e54a2eac5af177c58c93889075c3bd4044dd1f7417b8e",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 5.86630566147506e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.0426474322846719e-17
+      }
+    },
+    {
+      "year": 2045,
+      "case": "low",
+      "solar_mean": 0.11073071509599686,
+      "wind_mean": 0.21259784698486328,
+      "temperature_mean": 13.587485313415527,
+      "temperature_sha256": "da8c14010416f6b6957f762ac47246b51b79909252a9931f3076b4971ff30bdb",
+      "profile_sha256": "804bb56992a3d1f14db495d74bb470f854c921aa12508b4796d5139090a69c63",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 5.410659462297914e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 9.766351765527728e-18
+      }
+    },
+    {
+      "year": 2045,
+      "case": "high",
+      "solar_mean": 0.11102602630853653,
+      "wind_mean": 0.24390721321105957,
+      "temperature_mean": 13.587485313415527,
+      "temperature_sha256": "da8c14010416f6b6957f762ac47246b51b79909252a9931f3076b4971ff30bdb",
+      "profile_sha256": "4ba880a3d1c1a1b1d04e9234b758feecc0c98b60bcecf1277d468348e5b36bb0",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 5.82743815626404e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.144284269331339e-17
+      }
+    },
+    {
+      "year": 2050,
+      "case": "avg",
+      "solar_mean": 0.11361346393823624,
+      "wind_mean": 0.2252398133277893,
+      "temperature_mean": 13.837486267089844,
+      "temperature_sha256": "284d40af6be60cb3b7c27dce50dc63e6bc6e417aee8750be9bba7a9d9d1bc517",
+      "profile_sha256": "b2051dccc8530da5a28716a9acb22761c39e7e81ad953294783dcb3da07bcc12",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 6.306656522112525e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.1570951205149627e-17
+      }
+    },
+    {
+      "year": 2050,
+      "case": "low",
+      "solar_mean": 0.11127085983753204,
+      "wind_mean": 0.20956073701381683,
+      "temperature_mean": 13.837486267089844,
+      "temperature_sha256": "284d40af6be60cb3b7c27dce50dc63e6bc6e417aee8750be9bba7a9d9d1bc517",
+      "profile_sha256": "5035730e5d5904b9607484c86a95baebf7992ec147f85fd075b75023f0515d8c",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 5.890037276841024e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.0434699438214898e-17
+      }
+    },
+    {
+      "year": 2050,
+      "case": "high",
+      "solar_mean": 0.11156760901212692,
+      "wind_mean": 0.2404228299856186,
+      "temperature_mean": 13.837486267089844,
+      "temperature_sha256": "284d40af6be60cb3b7c27dce50dc63e6bc6e417aee8750be9bba7a9d9d1bc517",
+      "profile_sha256": "e17a75902cf1355e8331e2274a4bcf0c024c52dbd939b94916494913f2a274c7",
+      "diagnostics": {
+        "solar_resolution_selected": "macro",
+        "solar_source_zone_count": 3,
+        "solar_mass_mean_abs_error": 5.8187228060736504e-18,
+        "country_code": "HR",
+        "wind_resolution_selected": "nuts3",
+        "wind_site_count": 29,
+        "active_wind_nuts3_count": 5,
+        "wind_mass_mean_abs_error": 1.1771070667785678e-17
+      }
+    }
+  ],
+  "selection": [
+    {
+      "year": 2020,
+      "case": "avg",
+      "metadata": {
+        "probability": 0.19,
+        "cluster_size": 19,
+        "total_energy": 3110.9404296875,
+        "thermal_index": -0.1866546869277954,
+        "temperature_mean": 12.337486267089844,
+        "hdd_sum": 61009.8359375,
+        "cdd_sum": 4441.5224609375,
+        "representative_idx": 65,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2020,
+      "case": "low",
+      "metadata": {
+        "probability": 0.15,
+        "cluster_size": 15,
+        "total_energy": 2941.72509765625,
+        "thermal_index": -0.41419506072998047,
+        "temperature_mean": 12.212870597839355,
+        "hdd_sum": 63288.4921875,
+        "cdd_sum": 4714.1318359375,
+        "representative_idx": 69,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2020,
+      "case": "high",
+      "metadata": {
+        "probability": 0.13,
+        "cluster_size": 13,
+        "total_energy": 3238.10986328125,
+        "thermal_index": -0.27454137802124023,
+        "temperature_mean": 12.051128387451172,
+        "hdd_sum": 64804.828125,
+        "cdd_sum": 5134.97900390625,
+        "representative_idx": 24,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2025,
+      "case": "avg",
+      "metadata": {
+        "probability": 0.19,
+        "cluster_size": 19,
+        "total_energy": 3110.9404296875,
+        "thermal_index": -0.1866546869277954,
+        "temperature_mean": 12.337486267089844,
+        "hdd_sum": 61009.8359375,
+        "cdd_sum": 4441.5224609375,
+        "representative_idx": 65,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2025,
+      "case": "low",
+      "metadata": {
+        "probability": 0.15,
+        "cluster_size": 15,
+        "total_energy": 2941.72509765625,
+        "thermal_index": -0.41419506072998047,
+        "temperature_mean": 12.212870597839355,
+        "hdd_sum": 63288.4921875,
+        "cdd_sum": 4714.1318359375,
+        "representative_idx": 69,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2025,
+      "case": "high",
+      "metadata": {
+        "probability": 0.13,
+        "cluster_size": 13,
+        "total_energy": 3238.10986328125,
+        "thermal_index": -0.27454137802124023,
+        "temperature_mean": 12.051128387451172,
+        "hdd_sum": 64804.828125,
+        "cdd_sum": 5134.97900390625,
+        "representative_idx": 24,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2030,
+      "case": "avg",
+      "metadata": {
+        "probability": 0.19,
+        "cluster_size": 19,
+        "total_energy": 3110.9404296875,
+        "thermal_index": -0.1866546869277954,
+        "temperature_mean": 12.337486267089844,
+        "hdd_sum": 61009.8359375,
+        "cdd_sum": 4441.5224609375,
+        "representative_idx": 65,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2030,
+      "case": "low",
+      "metadata": {
+        "probability": 0.15,
+        "cluster_size": 15,
+        "total_energy": 2941.72509765625,
+        "thermal_index": -0.41419506072998047,
+        "temperature_mean": 12.212870597839355,
+        "hdd_sum": 63288.4921875,
+        "cdd_sum": 4714.1318359375,
+        "representative_idx": 69,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2030,
+      "case": "high",
+      "metadata": {
+        "probability": 0.13,
+        "cluster_size": 13,
+        "total_energy": 3238.10986328125,
+        "thermal_index": -0.27454137802124023,
+        "temperature_mean": 12.051128387451172,
+        "hdd_sum": 64804.828125,
+        "cdd_sum": 5134.97900390625,
+        "representative_idx": 24,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2035,
+      "case": "avg",
+      "metadata": {
+        "probability": 0.19,
+        "cluster_size": 19,
+        "total_energy": 3110.9404296875,
+        "thermal_index": -0.1866546869277954,
+        "temperature_mean": 12.337486267089844,
+        "hdd_sum": 61009.8359375,
+        "cdd_sum": 4441.5224609375,
+        "representative_idx": 65,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2035,
+      "case": "low",
+      "metadata": {
+        "probability": 0.15,
+        "cluster_size": 15,
+        "total_energy": 2941.72509765625,
+        "thermal_index": -0.41419506072998047,
+        "temperature_mean": 12.212870597839355,
+        "hdd_sum": 63288.4921875,
+        "cdd_sum": 4714.1318359375,
+        "representative_idx": 69,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2035,
+      "case": "high",
+      "metadata": {
+        "probability": 0.13,
+        "cluster_size": 13,
+        "total_energy": 3238.10986328125,
+        "thermal_index": -0.27454137802124023,
+        "temperature_mean": 12.051128387451172,
+        "hdd_sum": 64804.828125,
+        "cdd_sum": 5134.97900390625,
+        "representative_idx": 24,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2040,
+      "case": "avg",
+      "metadata": {
+        "probability": 0.19,
+        "cluster_size": 19,
+        "total_energy": 3110.9404296875,
+        "thermal_index": -0.1866546869277954,
+        "temperature_mean": 12.337486267089844,
+        "hdd_sum": 61009.8359375,
+        "cdd_sum": 4441.5224609375,
+        "representative_idx": 65,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2040,
+      "case": "low",
+      "metadata": {
+        "probability": 0.15,
+        "cluster_size": 15,
+        "total_energy": 2941.72509765625,
+        "thermal_index": -0.41419506072998047,
+        "temperature_mean": 12.212870597839355,
+        "hdd_sum": 63288.4921875,
+        "cdd_sum": 4714.1318359375,
+        "representative_idx": 69,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2040,
+      "case": "high",
+      "metadata": {
+        "probability": 0.13,
+        "cluster_size": 13,
+        "total_energy": 3238.10986328125,
+        "thermal_index": -0.27454137802124023,
+        "temperature_mean": 12.051128387451172,
+        "hdd_sum": 64804.828125,
+        "cdd_sum": 5134.97900390625,
+        "representative_idx": 24,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2045,
+      "case": "avg",
+      "metadata": {
+        "probability": 0.19,
+        "cluster_size": 19,
+        "total_energy": 3110.9404296875,
+        "thermal_index": -0.1866546869277954,
+        "temperature_mean": 12.337486267089844,
+        "hdd_sum": 61009.8359375,
+        "cdd_sum": 4441.5224609375,
+        "representative_idx": 65,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2045,
+      "case": "low",
+      "metadata": {
+        "probability": 0.15,
+        "cluster_size": 15,
+        "total_energy": 2941.72509765625,
+        "thermal_index": -0.41419506072998047,
+        "temperature_mean": 12.212870597839355,
+        "hdd_sum": 63288.4921875,
+        "cdd_sum": 4714.1318359375,
+        "representative_idx": 69,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2045,
+      "case": "high",
+      "metadata": {
+        "probability": 0.13,
+        "cluster_size": 13,
+        "total_energy": 3238.10986328125,
+        "thermal_index": -0.27454137802124023,
+        "temperature_mean": 12.051128387451172,
+        "hdd_sum": 64804.828125,
+        "cdd_sum": 5134.97900390625,
+        "representative_idx": 24,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2050,
+      "case": "avg",
+      "metadata": {
+        "probability": 0.19,
+        "cluster_size": 19,
+        "total_energy": 3110.9404296875,
+        "thermal_index": -0.1866546869277954,
+        "temperature_mean": 12.337486267089844,
+        "hdd_sum": 61009.8359375,
+        "cdd_sum": 4441.5224609375,
+        "representative_idx": 65,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2050,
+      "case": "low",
+      "metadata": {
+        "probability": 0.15,
+        "cluster_size": 15,
+        "total_energy": 2941.72509765625,
+        "thermal_index": -0.41419506072998047,
+        "temperature_mean": 12.212870597839355,
+        "hdd_sum": 63288.4921875,
+        "cdd_sum": 4714.1318359375,
+        "representative_idx": 69,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    },
+    {
+      "year": 2050,
+      "case": "high",
+      "metadata": {
+        "probability": 0.13,
+        "cluster_size": 13,
+        "total_energy": 3238.10986328125,
+        "thermal_index": -0.27454137802124023,
+        "temperature_mean": 12.051128387451172,
+        "hdd_sum": 64804.828125,
+        "cdd_sum": 5134.97900390625,
+        "representative_idx": 24,
+        "fallback_used": false,
+        "orthogonal_axes": false
+      }
+    }
+  ]
+}

@@ -186,6 +186,24 @@ def generate(args):
     if output.suffix != ".npy":
         raise ValueError("Choose a .npy output")
     raw, years = load_data(args.data)
+    metadata = json.loads((Path(args.model_dir) / "metadata.json").read_text())
+    if metadata.get("schema_version") == 2:
+        from scripts.release_runtime import generate_with_data
+        verify_sources()
+        if Path(args.model_dir).resolve() != (ROOT / "models/default").resolve():
+            raise ValueError("Final release generation requires the delivered default bundle")
+        inventory = json.loads((ROOT / "artifact_manifest.json").read_text())
+        if digest(ROOT / "models/default/metadata.json") != inventory["files"]["models/default/metadata.json"]["sha256"]:
+            raise ValueError("Default model metadata differs from the publication record")
+        if digest(args.data) != metadata["data_sha256"] or years != list(range(1980, 2025)):
+            raise ValueError("Final generation requires the exact 1980-2024 corpus recorded in metadata")
+        values = validate_profiles(generate_with_data(ROOT, raw, args.count, args.seed))
+        with output.open("xb") as stream:
+            np.save(stream, values)
+        save_json(output.with_suffix(".json"), {"output_sha256": digest(output),
+            "data_sha256": digest(args.data), "count": args.count, "seed": args.seed,
+            "scope": "Frozen final models and independent-channel sampling"})
+        return
     module = core()
     models, metadata = load_native(Path(args.model_dir), args.data)
     module.CONFIG.latitude = float(metadata["latitude"])
@@ -366,8 +384,21 @@ def export_units(args):
     validate_spatial_transfer(wind_paths[prefix+"_profiles"], wind_paths["transfer_"+prefix], wind_units, args.reference_end_year)
     if manager._load_solar_spatial_components(cc, manager._get_solar_units(cc)) is None:
         raise ValueError("Spatial solar artifacts required; legacy fallback is not an audited export")
-    units, diagnostics = manager.decompose_to_h2res_units(profile, country_code=cc,
-        wind_resolution_mode=resolution, return_diagnostics=True, include_hror=not args.exclude_hror)
+    if args.reference_end_year != 2015:
+        raise ValueError("The final spatial mapping uses the training reference through 2015")
+    from scripts.spatial_mapping import _spatial_unit_profiles
+    solar, solar_diag = _spatial_unit_profiles(profile[:, 0],
+        Path(solar_paths['macro_profiles']), Path(solar_paths['transfer_macro']), solar_units)
+    wind, wind_diag = _spatial_unit_profiles(profile[:, 1],
+        Path(wind_paths[prefix+'_profiles']), Path(wind_paths['transfer_'+prefix]), wind_units)
+    units = {name: solar[name].to_numpy() for name in solar}
+    units.update({name: wind[name].to_numpy() for name in wind})
+    if not args.exclude_hror:
+        units[manager.HROR_UNIT] = manager._load_hror_profile(cc, str(ncre_path))
+    diagnostics = {'solar_mass_mean_abs_error': solar_diag['mass_mean_abs_error'],
+                   'wind_mass_mean_abs_error': wind_diag['mass_mean_abs_error'],
+                   'solar': solar_diag, 'wind': wind_diag,
+                   'wind_resolution_selected': resolution}
     for name, array in units.items():
         if array.shape != (8760,) or not np.isfinite(array).all() or (array < 0).any() or (array > 1).any():
             raise ValueError("Invalid unit profile: " + name)
@@ -386,9 +417,46 @@ def export_units(args):
         "includes_hror": not args.exclude_hror})
 
 
+def replay_release(args):
+    from scripts.release_runtime import replay
+    output = new_output(args.output)
+    if output.suffix != ".npy":
+        raise ValueError("Choose a .npy output")
+    verify_sources()
+    values = replay(ROOT)
+    with output.open("xb") as stream:
+        np.save(stream, values)
+    save_json(output.with_suffix(".json"), {"output_sha256": digest(output),
+        "solar": "regenerated from seven native quantile models",
+        "wind_temperature": "retained from the hash-checked accepted cohort",
+        "training_called": False, "solver_called": False})
+
+
+def select_release(args):
+    from scripts.final_selection import select_cases
+    verify_sources()
+    output = new_output(args.output)
+    if output.suffix != ".npz":
+        raise ValueError("Choose a .npz output")
+    profiles = select_cases(ROOT, args.design, args.year)
+    with output.open("xb") as stream:
+        np.savez_compressed(stream, **profiles)
+    save_json(output.with_suffix(".json"), {"output_sha256": digest(output),
+        "design": args.design, "year": args.year,
+        "interpretation": "Designed sensitivity cases, not calibrated weather-event probabilities"})
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
+    frozen = commands.add_parser("replay", help="Reproduce the accepted cohort: regenerate solar and retain frozen wind/temperature")
+    frozen.add_argument("--output", required=True)
+    frozen.set_defaults(function=replay_release)
+    final_cases = commands.add_parser("select-final", help="Select the exact final multisector or electricity sensitivity cases")
+    final_cases.add_argument("--design", required=True, choices=("multisector", "electricity"))
+    final_cases.add_argument("--year", type=int, default=2020)
+    final_cases.add_argument("--output", required=True)
+    final_cases.set_defaults(function=select_release)
     preparation = commands.add_parser("calibrate", help="Prepare the Croatian archive with training-period CF targets")
     preparation.add_argument("--source-dir", required=True)
     preparation.add_argument("--output", required=True)
@@ -396,11 +464,11 @@ def main(argv=None):
     gen = commands.add_parser("generate", help="Generate with hash-checked native models")
     gen.add_argument("--data", required=True)
     gen.add_argument("--model-dir", default=str(ROOT / "models/default"))
-    gen.add_argument("--count", type=int, default=15)
-    gen.add_argument("--seed", type=int, default=101)
+    gen.add_argument("--count", type=int, default=100)
+    gen.add_argument("--seed", type=int, default=42)
     gen.add_argument("--output", required=True)
     gen.set_defaults(function=generate)
-    fit = commands.add_parser("train", help="Fit six CPU quantile models and validation calibration")
+    fit = commands.add_parser("train", help="Fit a six-model reference bundle for custom data; not the final seven-quantile solar protocol")
     fit.add_argument("--data", required=True)
     fit.add_argument("--seed", type=int, default=42)
     fit.add_argument("--latitude", type=float, required=True)

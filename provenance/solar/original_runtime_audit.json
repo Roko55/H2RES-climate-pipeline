@@ -1,0 +1,12 @@
+{
+  "exact_replay": true,
+  "solar_sha256": "4e87e12baa22dede50d905392ee02467fcf27b83e1483b8b8c4c9d9365bd6b3e",
+  "shape": [
+    100,
+    8760
+  ],
+  "raw_observations_loaded": false,
+  "runtime_recipe_sha256": "46dc6bf977964ae48a13cbbf1633e2510b3d44536c106f5ba179277e29fe2068",
+  "runtime_script_sha256": "175fc5948fbe711262104e97f304e3557e72f1db3b75af77b318c79a80a81004",
+  "feature_source_sha256": "45ec3aa0e4709e0be1b2329e18e6eff456621f0555c9d656dc26b117de2a5c4c"
+}

@@ -1,0 +1,92 @@
+{
+  "family": {
+    "id": "DENSE",
+    "config": {
+      "id": "A1",
+      "normalized": false,
+      "max_depth": 5,
+      "learning_rate": 0.04,
+      "min_child_weight": 30,
+      "reg_lambda": 10,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9
+    },
+    "core_inner_score": 0.002952171562552371,
+    "models": [
+      {
+        "q": 0.025,
+        "path": "models/DENSE/q0.025.ubj",
+        "sha256": "f4631ab989540d3b375a47cff64f8386540870153e2e8290847ae9a1ff6e71e0",
+        "trees": 1499
+      },
+      {
+        "q": 0.1,
+        "path": "models/DENSE/q0.1.ubj",
+        "sha256": "228be82671eef227bdabb0577162b9b5b603cba3cab07faa86bb64868976703b",
+        "trees": 1500
+      },
+      {
+        "q": 0.16,
+        "path": "models/A1/q0.16.ubj",
+        "sha256": "de349105e0e763fabdb94680a6b107791b57a38975474a5d6731920da5ee4084",
+        "trees": 1500
+      },
+      {
+        "q": 0.5,
+        "path": "models/A1/q0.5.ubj",
+        "sha256": "e92c2c75bc7fdfd0ead8938f49e225d62919afba82ca6f7897ecc1ab2f3afdee",
+        "trees": 1492
+      },
+      {
+        "q": 0.84,
+        "path": "models/A1/q0.84.ubj",
+        "sha256": "a06936abe4bc270627daa6bc4ea1796ca858d71d668ac3989c592e04fd879c17",
+        "trees": 1456
+      },
+      {
+        "q": 0.9,
+        "path": "models/DENSE/q0.9.ubj",
+        "sha256": "6a9a3ecc06fd42fc53aec33dc5710fbc8e93291bf4d2784fa4eea4025f663f3d",
+        "trees": 1500
+      },
+      {
+        "q": 0.975,
+        "path": "models/DENSE/q0.975.ubj",
+        "sha256": "2575231e4cefc6fcb5eef7d33d7e9c0dd2435151393b682fcdfe6080a1c822e1",
+        "trees": 1500
+      }
+    ],
+    "envelope_path": "models/A1/context.npz"
+  },
+  "option": {
+    "id": "C074",
+    "rollout": {
+      "id": "G024",
+      "family": "DENSE",
+      "noise": 1.1,
+      "alpha": 0,
+      "rho": 0
+    },
+    "post": "seasonal_partial_central_blend"
+  },
+  "scale": 1.0064752697944905,
+  "coeff_file": "coeff_G024.npz",
+  "expected_solar_sha256": "4e87e12baa22dede50d905392ee02467fcf27b83e1483b8b8c4c9d9365bd6b3e",
+  "count": 100,
+  "seed": 42,
+  "raw_reporting_data_required": false,
+  "xgboost_version": "2.1.4",
+  "pinned_files": {
+    "feature_runtime.py": "2d8b2b72d7ec283331cd3c69ef37934c0fd78ac3a2c06cd40dee49734cf3c1ff",
+    "runtime_inputs.npz": "5c9371b9427a56ea48a8c3f237ec3179fff3b1ce0d2e34cee802489778d7001e",
+    "coeff_G024.npz": "ebdba6be527e768b68f79e3614befeeb8a050ac97784d7875614a5d568752d8d",
+    "models/A1/context.npz": "cb20453b8c2bbf21d763840d172c2cdf2cc647797de9ecca266afd91ee915d6c",
+    "models/DENSE/q0.025.ubj": "f4631ab989540d3b375a47cff64f8386540870153e2e8290847ae9a1ff6e71e0",
+    "models/DENSE/q0.1.ubj": "228be82671eef227bdabb0577162b9b5b603cba3cab07faa86bb64868976703b",
+    "models/A1/q0.16.ubj": "de349105e0e763fabdb94680a6b107791b57a38975474a5d6731920da5ee4084",
+    "models/A1/q0.5.ubj": "e92c2c75bc7fdfd0ead8938f49e225d62919afba82ca6f7897ecc1ab2f3afdee",
+    "models/A1/q0.84.ubj": "a06936abe4bc270627daa6bc4ea1796ca858d71d668ac3989c592e04fd879c17",
+    "models/DENSE/q0.9.ubj": "6a9a3ecc06fd42fc53aec33dc5710fbc8e93291bf4d2784fa4eea4025f663f3d",
+    "models/DENSE/q0.975.ubj": "2575231e4cefc6fcb5eef7d33d7e9c0dd2435151393b682fcdfe6080a1c822e1"
+  }
+}

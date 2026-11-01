@@ -1,60 +1,41 @@
-# Verification and reproduction
+# Verification scope
 
-Run the regression checks and artifact audit from the repository root:
+Run tests, `python audit.py`, the offline demo and `python pipeline.py replay`
+as listed in README. CI repeats these checks from a clean Python 3.11 checkout.
 
-```bash
-python -m unittest discover -s tests -v
-python audit.py
-```
+Executable checks cover artifact hashes, native-model identities, accepted-array
+shape/bounds, exact native solar replay, final multisector selection hashes,
+causal features, split isolation, rejected malformed inputs, mapping conservation
+under saturation, availability key contracts and thermal annual totals.
+The illustrative demo exercises selection through unit/thermal export without
+an optimizer. It is not evidence of meteorological quality or investment benefit.
 
-The tests cover past-only features, chronological partitions, training-bounded
-national calibration, UTC solar geometry, quantile ordering, native serialization,
-wind sampling, scenario selection, spatial conservation, runtime keys and annual
-thermal totals. GitHub Actions uses
-Python 3.11 on Ubuntu; local checks also use Windows. The offline demo uses
-illustrative inputs and exercises the adapter independently of the solver.
-H2RES optimization requires the separate model, input database and licence.
+`replay` regenerates solar and retains the frozen wind/temperature channels.
+Full three-channel generation additionally requires the hash-bound raw corpus.
+No dataset-free full native regeneration or full retraining claim is made.
 
-## Evaluation records
+The final archive was verified against its package manifest before extracting
+publication tables. `provenance/final/source_records.json` records original record
+hashes. Public tables normalize source path columns for portability; their hashes
+therefore differ from the original delivery tables listed in final integrity.
+No scientific values are changed by this normalization.
 
-Training covers 1980-2015, validation 2016-2019 and reporting 2020-2024.
-Reporting years were inspected during development. National CF calibration
-uses training years; early stopping and residual calibration use validation
-years. Generation retains the fixed drift weight of 0.4 for both channels,
-without an additional noise multiplier, solar scale or temperature offset.
-Source identities, split checks and replay records are under `provenance/`.
+`provenance/final/final_integrity.json` reports 63 planning and 45 operational
+cases. Its `publication_ready:false` field records outstanding **manuscript and
+price-year interpretation** conditions, not a failed solver run. This repository
+does not assert that the manuscript was updated. Jobspec/dependency records were
+created before execution; completed integrity and delivery tables determine final
+run status. Frozen executed adapter source is retained separately from portable
+entry points, whose hashes are recorded in `source_manifest.json`.
 
-Central-profile errors evaluate the calendar-conditioned ensemble mean.
-Individual-path statistics evaluate diversity and temporal behaviour.
-Independent channels define designed sensitivity combinations. Distribution
-results are recorded in `results/profile_validation/`, including empirical
-interval coverage in `intervals_and_CRPS.csv`. These measured coverages, rather
-than quantile labels alone, determine the interpretation of ensemble ranges.
+Training/normalization uses 1980-2015; validation is 2016-2019. Accepted solar uses
+inner 1980-2011 fitting and 2012-2015 tree-count tuning before refitting on the full
+training period. The seven solar quantiles and frozen postprocessing are recorded
+in `models/default/solar/runtime_recipe.json`. Temperature calibration is the
+Temperature entry of `provenance/final/temperature_calibration.json`; its older Solar
+entry is superseded by the accepted solar recipe. Reporting 2020-2024 had previously
+been inspected and is retrospective, not a newly untouched test.
 
-Solar geometry uses source coordinates, UTC and the equation of time. Each
-timestamp marks the start of an hourly averaging interval; daylight support
-is checked across that interval. Both calibration and generation reorder
-the three predicted quantiles before forming the median and noise width.
-Initial autoregressive histories come from calendar-aligned training-year
-endings. Solar and temperature consume consecutive reproducible random draws;
-wind uses its own seeded bootstrap. Generation does not condition one channel
-on another.
-
-The generation policy and six native model identities are recorded under
-`provenance/model/`. Complete 100-member native-model CLI replay is checked
-against the frozen research array; the result, runtime versions and actual
-source hashes are in `provenance/model/saved_model_replay.json`. GitHub Actions
-checks the regression suite, artifact inventory, installed adapter and offline
-walkthrough. It does not run the private weather corpus or H2RES solver.
-
-The complete 100-member CLI replay also matches bit for bit in the isolated
-Python 3.12 environment with the pinned requirements. That environment passes
-the same 35 regression tests and an installation into a separate private target
-directory; the installed adapter is checked outside the repository.
-
-Country-scoped temperature integration additionally verifies that heat-demand
-updates preserve all non-target zones exactly.
-
-Spatial mapping applies historical ratios. Thermal normalization preserves
-annual totals and reshapes their hourly distribution; COP follows the stated
-bounded relationship. Data access and reuse conditions are in [RIGHTS.md](../RIGHTS.md).
+The channels are generated independently. Wind uses seasonal six-day blocks with
+four-hour boundary blending. This is not a fitted spatial storm model or proof of
+seam-free weather dynamics. No method is claimed best possible or uniformly superior.

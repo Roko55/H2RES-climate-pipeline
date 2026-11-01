@@ -1,51 +1,49 @@
 {
-  "model": "Independent XGBoost and seasonal wind bootstrap",
-  "training_seed": 42,
+  "schema_version": 2,
+  "model": "Frozen independent solar, wind and temperature pipeline",
   "xgboost": "2.1.4",
-  "latitude": 44.52,
-  "longitude": 16.798,
-  "solar_sites": [
-    [
-      43.788,
-      16.001
-    ],
-    [
-      45.311,
-      18.235
-    ],
-    [
-      45.865,
-      16.206
-    ]
-  ],
-  "data_sha256": "9a21558378d6359f308e3b7b7a3068d053195fa9123792c1d8aa9ac177101022",
-  "source_sha256": "a0e5c054f18afe1f8eaca36c11e37ef93d4b8d83d715269ca4779795dd44dc99",
-  "training_source_sha256": "45ec3aa0e4709e0be1b2329e18e6eff456621f0555c9d656dc26b117de2a5c4c",
-  "training_function_fingerprint": "c44f5458ed93412835077d44c6c9cb48349cc034745bd36d2cf3dd9a10c23b6f",
   "models": [
     {
       "channel": "Solar",
+      "quantile": 0.025,
+      "file": "solar/models/DENSE/q0.025.ubj",
+      "sha256": "f4631ab989540d3b375a47cff64f8386540870153e2e8290847ae9a1ff6e71e0"
+    },
+    {
+      "channel": "Solar",
+      "quantile": 0.1,
+      "file": "solar/models/DENSE/q0.1.ubj",
+      "sha256": "228be82671eef227bdabb0577162b9b5b603cba3cab07faa86bb64868976703b"
+    },
+    {
+      "channel": "Solar",
       "quantile": 0.16,
-      "file": "solar_q16.ubj",
-      "sha256": "b65c3b31e032e0af5246486975060b2459a42acbe73bd00d9589272209b101a0",
-      "best_iteration": 996,
-      "bytes": 4302663
+      "file": "solar/models/A1/q0.16.ubj",
+      "sha256": "de349105e0e763fabdb94680a6b107791b57a38975474a5d6731920da5ee4084"
     },
     {
       "channel": "Solar",
       "quantile": 0.5,
-      "file": "solar_q50.ubj",
-      "sha256": "c6c55c1a33306b86e93cdf2fa0c7fc7391b8cc748fbc9b673dc08bf7af854024",
-      "best_iteration": 998,
-      "bytes": 4346426
+      "file": "solar/models/A1/q0.5.ubj",
+      "sha256": "e92c2c75bc7fdfd0ead8938f49e225d62919afba82ca6f7897ecc1ab2f3afdee"
     },
     {
       "channel": "Solar",
       "quantile": 0.84,
-      "file": "solar_q84.ubj",
-      "sha256": "859000b27a0f069928317ccabb6450bca060bda83f3d121fed037bc2da56e62d",
-      "best_iteration": 997,
-      "bytes": 3984639
+      "file": "solar/models/A1/q0.84.ubj",
+      "sha256": "a06936abe4bc270627daa6bc4ea1796ca858d71d668ac3989c592e04fd879c17"
+    },
+    {
+      "channel": "Solar",
+      "quantile": 0.9,
+      "file": "solar/models/DENSE/q0.9.ubj",
+      "sha256": "6a9a3ecc06fd42fc53aec33dc5710fbc8e93291bf4d2784fa4eea4025f663f3d"
+    },
+    {
+      "channel": "Solar",
+      "quantile": 0.975,
+      "file": "solar/models/DENSE/q0.975.ubj",
+      "sha256": "2575231e4cefc6fcb5eef7d33d7e9c0dd2435151393b682fcdfe6080a1c822e1"
     },
     {
       "channel": "Temperature",
@@ -72,23 +70,46 @@
       "bytes": 4397862
     }
   ],
-  "calibration": {
-    "Solar": {
-      "sigma_calibration": 0.8256572484970093,
-      "rho": 0.10589581076365644,
-      "residual_mean": -0.00932440347969532,
-      "residual_std": 0.9785916805267334,
-      "drift_alpha": 0.4000000059604645
+  "solar_recipe": "solar/runtime_recipe.json",
+  "temperature": {
+    "drift_alpha": 0.0,
+    "noise_multiplier": 1.0,
+    "bias": {
+      "kind": "offset",
+      "value": 1.3883848786353958,
+      "bounds": [
+        -29.372774378585085,
+        49.13479732313575
+      ]
     },
-    "Temperature": {
-      "sigma_calibration": 0.8073752522468567,
-      "rho": 0.20236328353874863,
-      "residual_mean": 0.020038457587361336,
-      "residual_std": 1.3536463975906372,
-      "drift_alpha": 0.4000000059604645
-    }
+    "sigma_calibration": 0.8073752522468567,
+    "rho": 0.20236328353874863,
+    "residual_mean": 0.020038457587361336,
+    "residual_std": 1.3536463975906372
   },
-  "training_years": [
+  "data_sha256": "b700263a2868b20cc8f7fe95e0a7d22c48ea31c89cedbc0889a55ca870972d8a",
+  "temperature_training_source_sha256": "45ec3aa0e4709e0be1b2329e18e6eff456621f0555c9d656dc26b117de2a5c4c",
+  "latitude": 44.52,
+  "longitude": 16.798,
+  "solar_sites": [
+    [
+      43.788,
+      16.001
+    ],
+    [
+      45.311,
+      18.235
+    ],
+    [
+      45.865,
+      16.206
+    ]
+  ],
+  "production_seed": 42,
+  "production_members": 100,
+  "ensemble_sha256": "d86a855166c24d699d511010184db12d0baf1551f83254b41f661c602d7ae728",
+  "solar_sha256": "4e87e12baa22dede50d905392ee02467fcf27b83e1483b8b8c4c9d9365bd6b3e",
+  "train_years": [
     1980,
     2015
   ],
@@ -100,15 +121,7 @@
     2020,
     2024
   ],
-  "reporting_period_previously_inspected": true,
-  "reporting_used_for_fit_or_calibration": false,
-  "frozen_ensemble_sha256": "614ae284579ce6564ab5743f7b2adad481f3bea11152843e0b4cbee013632850",
-  "generation_CPU_threads": 2,
-  "solar_timestamp_convention": "UTC interval start; daylight support evaluated over the complete hour",
-  "generation_policy": {
-    "drift_alpha": 0.4000000059604645,
-    "noise_multiplier": 1,
-    "solar_scale": 1,
-    "temperature_offset_C": 0
-  }
+  "reporting_used_for_selection": false,
+  "reporting_previously_inspected": true,
+  "reference_channels": "The packaged accepted array preserves the frozen wind/temperature channels; raw wind training pool is not distributed."
 }

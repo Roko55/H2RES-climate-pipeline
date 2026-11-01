@@ -1,50 +1,53 @@
-# Profile comparison
+# Final experiment results
 
-The research evaluation distinguishes the repeated central generated profile
-from individual annual paths. Against the fixed H2RES baseline, reporting-period
-solar and wind MAE decrease by 53.8% and 44.6%. Temperature MAE changes from
-3.177 to 3.170 degrees Celsius. These are central-profile comparisons, not
-event forecasts. Full metrics are in `results/profile_validation/`.
+The final accepted input is `profiles/accepted.npy`, SHA256
+`d86a855166c24d699d511010184db12d0baf1551f83254b41f661c602d7ae728`.
+The archived completed cohort contains **63 optimal planning windows and 45
+optimal operational cases**, with no verified infeasible case. This release
+checks the archived evidence; it does not rerun those optimizations.
 
-The empirical central 95% calendar-hour range covers 24.18% of solar daylight
-observations and 8.24% of temperature observations in the previously inspected
-2020-2024 reporting period. The 80% coverages are 16.85% and 5.38%, respectively.
-Thus these generated ranges are not calibrated prediction intervals. The fixed
-climatological drift produces narrow solar and temperature ensembles; improved
-central-profile error should not be interpreted as complete weather variability.
-Solar daylight uses one shared mask derived exclusively from training data;
-including night-time zeros would otherwise inflate coverage. Interval width,
-CRPS, path statistics and distribution distances accompany these measured
-coverages. They describe separate channel distributions, not joint weather
-event probabilities.
+| CSV | Row interpretation and units |
+|---|---|
+| `planning_objectives.csv` | Configuration, resource/thermal case and five-year planning anchor; objective in that configuration's model units |
+| `objective_components.csv` | Native objective decomposition; component units and configuration must be retained |
+| `objective_deltas.csv` | Within-configuration case differences; compare corresponding anchors |
+| `operational_checks.csv` | Fixed updated portfolio, observed weather year and grid-availability stress; energy fields in MWh |
+| `profile_metrics.csv` | Channel/method point metrics over the **complete 43800 reporting hours** |
+| `solar_comparison.csv` | Solar validation/reporting diagnostics for the previous reference, accepted solar and historical ensemble |
 
-For annual wind resource diversity, five historical years are compared with
-15 individual autoencoder paths and 15 pipeline members. The autoencoder
-checkpoint is validation-selected. Both generators use the same
-training-calibrated corpus and reporting reference.
-Autoencoder sampling uses prior scale 1 and seeds 101-103. The pipeline
-comparison selects recorded member indices from its frozen ensemble using
-these seeds; it does not generate a new ensemble for each comparison row.
+In `profile_metrics.csv`, `fixed_H2RES_profile` is the prior fixed solver profile;
+`ensemble_mean` is the accepted ensemble's calendar-aligned mean, and
+`training_calendar_mean` is the historical training climatology. A central-profile
+MAE is not an individual-weather-path error or a diversity measure. Solar/wind
+MAE and RMSE use CF units; temperature uses degrees Celsius. R2 is dimensionless;
+wMAPE is a percentage. These are retrospective reporting comparisons.
 
-| Wind diagnostic | Historical | Autoencoder | Pipeline |
-|---|---:|---:|---:|
-| SD of annual mean CF | 0.007968 | 0.002258 | 0.005439 |
-| Fraction of historical annual-mean SD | 100% | 28.3% | 68.3% |
-| Mean 95th-percentile absolute hourly ramp | 0.090553 | 0.057743 | 0.085004 |
+The final Low multisector path costs more than Average at every planning anchor.
+All paths begin from common 2020 stock and then inherit their own investments;
+objective differences must not be interpreted as matched-state causal effects.
+Cross-configuration currency comparisons and cost-per-MWh claims remain conditional
+on shared price-year and normalization provenance.
 
-![Annual wind diversity](../figures/annual_wind_comparison.png)
+Operational grid availability 100%, 50%, 0% has 15 cases per level. Maximum HR
+CEEP is respectively 0, 0.574591588 and 4.658303801 TWh; HR unserved energy is zero.
+Operational portfolios are the corresponding updated 2030 portfolios.
 
-The autoencoder is better on mean wind path score (0.302637 versus 0.345773)
-and Wasserstein distance (0.022452 versus 0.025282). The pipeline better
-represents annual wind diversity and ramps in this sample; no uniform
-superiority or better H2RES investment outcome is inferred. Plotting values
-and metrics are in `results/wind_comparison/`.
+Solar spread improves substantially over the previous narrow reference: reporting
+80% interval coverage increases from about 16.9% to 79.6%. This comes with worse
+member MAE (about +30.5%) and slightly worse ensemble-mean MAE (about +0.12%).
+The historical ensemble has slightly better fair CRPS than the accepted solar.
+The complete comparison table retains these regressions; no method dominates all
+metrics. Coverage is empirical and does not establish joint-weather calibration.
 
-Central-profile errors use five concatenated non-leap years with the first
-168 hours removed (43,632 observations per channel). Distribution and range
-diagnostics use all five years (43,800 observations per channel), with the
-shared daylight mask applied where indicated.
+## Separate autoencoder study
 
-National calibration uses 1980-2015, validation uses 2016-2019 and reporting
-uses 2020-2024. The reporting period was previously inspected. Descriptive
-sample spreads are not calibrated rare-event probabilities.
+The autoencoder repository retains one validation-selected CVAE and its original
+comparison corpus. Its annual wind-mean SD is 28.3% of the historical reference,
+versus 68.3% for that historical pipeline comparator. Limited annual resource
+diversity is relevant for Low/Average/High resource sensitivities. Some other
+autoencoder metrics are better and remain reported there.
+
+That comparison is historical, not a fresh comparison with this final solar
+cohort. It does not prove overfitting, global optimality, that RAM was the sole
+limitation, or that longer/larger training would necessarily solve the problem.
+The supported conclusion is limited variability under the tested training protocol.

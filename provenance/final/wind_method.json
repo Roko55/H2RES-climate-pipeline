@@ -1,0 +1,14 @@
+{
+  "input_product": "ERA5 wind speed at 100 m",
+  "input_unit": "m/s",
+  "curve": "Nordex N131/3600 IEC S Mode 0, qualified high-wind branch",
+  "reference_density_kg_m3": 1.1,
+  "reference_height_m": 100,
+  "speed_correction": 1.3247997658871304,
+  "correction_domain": "wind_speed_before_curve",
+  "selection": "2015 January-July training fit; 17.5 MW Pometeno exposure assumption; central chart reading",
+  "scope": "Fixed resource-catalogue approximation for sensitivity inputs; not exact historical turbine-fleet reconstruction",
+  "reporting_used_for_coefficient": false,
+  "seasonal_block_hours": 144,
+  "boundary_overlap_hours": 4
+}

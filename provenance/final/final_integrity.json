@@ -1,0 +1,27 @@
+{
+  "utc": "2026-11-01T07:34:21.837207+00:00",
+  "all_required_checks_passed": true,
+  "planning_windows": 63,
+  "operational_cases": 45,
+  "verified_infeasible": 0,
+  "input_ensemble_sha256": "d86a855166c24d699d511010184db12d0baf1551f83254b41f661c602d7ae728",
+  "fence": "1f0d07c1c5beacc304b86a7a74186bc49d2df98b840cc707d5649c593b5eec7e",
+  "profile_benchmark_verified": true,
+  "multisector_post_audit_sha256": "b3bccb2b6ab972672d4f34e5ab496fe61467d344bdc5d8a20be79265c894e0a7",
+  "objective_closure_tolerance": 0.01,
+  "solver_constraint_bound_tolerance": 1e-07,
+  "delivery_files": {
+    "delivery\\objective_components.csv": "a5762c399069b1d06a1eb8f7792bae15f89ca85f2a3973448b7bebad3b0b1ee3",
+    "delivery\\objective_deltas.csv": "a1bfccb1421b6423b386f49b834bdc0ff96f52cf83ee89b1af49061cb8fea60f",
+    "delivery\\operational_checks.csv": "ecc5de26a38072723db2a5387fc17fcb9ce142ad3e62996ffeb026294dc61ddb",
+    "delivery\\planning_objectives.csv": "af274f80cf66765f38905124fb20cdd87e51caa063c3fd3eac43644b2a47811a",
+    "delivery\\updated_stock_export_proofs.json": "7d278f590107c165474bdeb702838d6a5ed915c3441e48c7e5e5f2a0d93fc9bd"
+  },
+  "scientific_scope": "Native independent paths; updated portfolios; no extra matched-state optimizations",
+  "publication_ready": false,
+  "remaining_publication_work": [
+    "Manuscript must be updated to this exact cohort",
+    "Shared price-year provenance and matched cost-per-MWh interpretation remain independently conditional",
+    "No claim of generator dominance on every metric or of energy advantage over unpaired historical ensemble"
+  ]
+}

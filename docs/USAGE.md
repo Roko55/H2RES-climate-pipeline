@@ -1,87 +1,61 @@
 # Usage
 
-Run commands from the repository root. Outputs under `exports/` are ignored
-by Git and protected against overwriting.
+Commands are run from the repository root after installation (see README).
+Run `python pipeline.py --help` for the complete interface. CLI files are written
+only below `exports/`; existing outputs and JSON sidecars are never overwritten.
 
-## Delivered model
-
-`models/default/` requires `HR_data_training_calibrated.parquet`, SHA256
-`9a21558378d6359f308e3b7b7a3068d053195fa9123792c1d8aa9ac177101022`.
-National CF targets and reference weather use 1980-2015. Stopping and
-residual calibration use 2016-2019. Reporting years 2020-2024 were previously
-inspected and do not enter fitting or calibration.
+## Accepted experiment
 
 ```bash
-python pipeline.py generate --data data/SC/HR_data_training_calibrated.parquet --count 100 --seed 42 --output exports/profiles.npy
+python pipeline.py replay --output exports/accepted.npy
+python pipeline.py select-final --design multisector --year 2030 --output exports/multisector_2030.npz
+python pipeline.py select-final --design electricity --year 2030 --output exports/electricity_2030.npz
 ```
 
-Trees require the training climatology and wind pool supplied by the exact
-corpus. The frozen research ensemble SHA256 is
-`614ae284579ce6564ab5743f7b2adad481f3bea11152843e0b4cbee013632850`.
-Native CLI generation reproduces this array bit for bit in the recorded runtime.
-Autoregressive numerical differences can accumulate between runtimes. Use the
-frozen array and corresponding solver configuration for exact reproduction of
-reported energy inputs. Replay measurements are in `provenance/model/`.
+The accepted array is also included directly in `profiles/accepted.npy`; `replay`
+independently regenerates its solar channel. Each selected NPZ contains `low`,
+`avg`, `high` arrays of shape `[8760,3]`. Multisector selection is checked against
+all three archived input hashes at the requested anchor (2020, 2025, ..., 2050).
+The electricity selector uses float64 and planning-year scaling before clustering;
+the multisector selector retains the executed float32 path and scaling order.
 
-To prepare data from the permitted Croatian raw cache and IRENA workbook:
+## Your own H2RES mapping
 
 ```bash
-python pipeline.py calibrate --source-dir data/SC --output exports/archive
-python pipeline.py train --data exports/archive/HR_data_training_calibrated.parquet --seed 42 --latitude 44.52 --longitude 16.798 --solar-sites data/solar_sites.csv --output exports/fit
-python pipeline.py generate --data exports/archive/HR_data_training_calibrated.parquet --model-dir exports/fit --count 100 --seed 42 --output exports/new_profiles.npy
+python pipeline.py export-units --scenarios exports/multisector_2030.npz --scenario avg --mapping-dir data/SC --country HR --wind-resolution nuts3 --exclude-hror --output exports/units_2030.npz
 ```
 
-`data/solar_sites.csv` must contain the actual source-site `lat,lon` columns;
-the Croatian research coordinates are (43.788,16.001), (45.311,18.235) and
-(45.865,16.206). Solar timestamps are UTC interval starts. Preparation requires
-the original zone/site metadata, Parquet caches and
-`IRENA_Statistics_Extract_2025H2.xlsx`. It refuses an existing output directory.
-Serialization can change hashes: pair a newly serialized corpus with its own
-fit instead of bypassing the recorded bundle's identity checks.
+Replace the mapping folder and country with your own declared inputs. Supply the
+required schemas in DATA.md. Omit `--exclude-hror` only when an explicit valid
+hydro availability column is present. The spatial reference ends in 2015.
+Aggregate conservation and finite [0,1] bounds are verified before export.
 
-## Other datasets
-
-Supply at least ten complete consecutive years according to [DATA.md](DATA.md)
-and appropriate coordinates. The following coordinates are illustrative:
+## Full model regeneration with the original corpus
 
 ```bash
-python pipeline.py train --data data/my_climate.parquet --seed 42 --latitude 45.0 --longitude 16.0 --output exports/my_fit
-python pipeline.py generate --data data/my_climate.parquet --model-dir exports/my_fit --count 100 --seed 101 --output exports/my_profiles.npy
-python pipeline.py select --profiles exports/my_profiles.npy --method orthogonal --output exports/my_cases.npz
+python pipeline.py generate --data data/SC/HR_data.parquet --count 100 --seed 42 --output exports/regenerated.npy
 ```
 
-The split is chronological: 80% training, 10% validation and the remaining
-complete years for reporting, using integer year counts. Climatology and wind
-blocks use training; stopping and residual calibration use validation.
-User-supplied upstream calibration requires its own temporal-boundary check.
-Training and prediction use two CPU threads. The drift weight is fixed at 0.4
-for both autoregressive channels. Generation uses calibrated residual width
-without an additional noise multiplier or mean adjustment. Training writes a
-complete native model bundle that the generation command can load directly.
+This requires the exact final corpus SHA256
+`b700263a2868b20cc8f7fe95e0a7d22c48ea31c89cedbc0889a55ca870972d8a`.
+The corpus supplies temperature climatology/initial histories and the wind
+resampling pool. It is not bundled. Wrong hashes are rejected. Full three-channel
+regeneration through this portable command requires a corpus-enabled verification;
+the dataset-free release test verifies solar replay and retained cohort identity.
+Other seeds/counts do not reproduce the published H2RES experiments.
 
-## Selection and spatial export
+## Training on another dataset
 
-Select `orthogonal` to combine separate renewable and thermal representatives,
-or `joint_medoid` to retain whole generated annual profiles. Single-axis
-arrays include `low_yield`, `avg_yield`, `high_yield`, `cold`, `normal`, `hot`;
-combined arrays include `avg_yield__normal`. Each has shape `[8760,3]`.
-The sidecar records source hashes, member indices and cluster shares. These
-shares are descriptive, not calibrated event probabilities.
+`train` fits a six-model reference bundle (three quantiles per autoregressive
+channel). `--data`, `--latitude`, `--longitude` and `--output` are required;
+`--solar-sites` accepts a CSV with `lat,lon` columns. This is a generic baseline,
+**not** a reproduction of the accepted seven-quantile solar training/selection
+protocol. Its calibration helper also does not recreate the final Nordex wind
+conversion. Do not label custom outputs as the accepted study model.
+The accepted solar protocol and selected configuration are recorded in
+`provenance/solar/`; the executed base engine/calibration source is preserved in
+`provenance/executed_final/`. Full retraining needs licensed source data and an
+independent validation of the complete training/selection workflow.
 
-```bash
-python pipeline.py export-units --scenarios exports/my_cases.npz --scenario avg_yield__normal --mapping-dir data/my_mapping --country CC --wind-resolution macro --exclude-hror --output exports/my_units.npz
-```
-
-`CC` is a project/country code. Supply actual capacities, zone profiles and
-transfer weights. NUTS3 requires the corresponding artifacts; it never silently
-becomes macro mapping when explicitly requested. Spatial climatologies default
-to observations through 2015; use `--reference-end-year` for another training
-cutoff. Default capacity-weighted mapping tolerance is 0.0001 CF, not a model
-accuracy tolerance. Use [INTEGRATION.md](INTEGRATION.md) for solver dictionaries.
-
-## Troubleshooting
-
-Use the exact corpus matching model metadata or fit a new bundle. Missing or
-unordered hours, inconsistent unit names, invalid weights and incomplete
-thermal baselines are rejected. Existing outputs require a new path. Use
-`python pipeline.py <command> --help` for precise arguments.
+`select` provides generic `orthogonal` and `joint_medoid` case selection on a
+caller-provided ensemble. For the published final experiments use `select-final`.

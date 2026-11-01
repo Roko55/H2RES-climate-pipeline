@@ -1,16 +1,13 @@
 # H2RES climate pipeline
 
-Generate annual hourly solar capacity factors, wind capacity factors and
-temperature profiles, select representative sensitivity cases and prepare
-generation-unit and temperature-dependent inputs for H2RES.
+Prepare annual hourly solar capacity factors, wind capacity factors and ambient
+temperature for H2RES. This release contains the **accepted final ensemble used
+in the completed planning and operational experiments**, its native models,
+input adapters and numerical verification records.
 
-Solar and temperature use autoregressive XGBoost quantile models. Wind uses
-seasonal historical block resampling. Channels are generated independently.
-The H2RES optimizer, solver licence and solver database are separate.
+## Install and check
 
-## Install
-
-Use Python 3.11 and run from this repository:
+Use Python 3.11 in a separate virtual environment. Run from this checkout:
 
 ```bash
 python -m pip install -r requirements.txt
@@ -20,63 +17,61 @@ python audit.py
 python examples/demo.py --output exports/demo_01
 ```
 
-The offline demo uses illustrative inputs, not research results. It exercises
-selection, mapping, CSV export and thermal coupling without a solver or model
-training. Use a new output directory for each run.
+The demo uses fabricated inputs and calls no solver or training routine.
+Use a new output name for each run. All CLI outputs stay under `exports/`.
 
-## Generate with the delivered model
-
-The single delivered bundle is `models/default/`. National CF calibration
-uses 1980-2015; model stopping and residual calibration use 2016-2019.
-Both autoregressive channels use a fixed climatological drift weight of 0.4,
-with no additional noise multiplier, solar scaling or temperature offset.
-Solar support follows UTC hourly intervals and source coordinates.
-Generation needs the exact input corpus for the training climatology and
-wind-resampling pool, in addition to the supplied native tree models:
+## Reproduce the accepted profiles
 
 ```bash
-python pipeline.py generate --data data/SC/HR_data_training_calibrated.parquet --count 100 --seed 42 --output exports/profiles.npy
-python pipeline.py select --profiles exports/profiles.npy --method orthogonal --output exports/cases.npz
+python pipeline.py replay --output exports/accepted.npy
+python pipeline.py select-final --design multisector --year 2030 --output exports/cases_2030.npz
 ```
 
-The corpus SHA256 is
-`9a21558378d6359f308e3b7b7a3068d053195fa9123792c1d8aa9ac177101022`.
-Raw source data are not redistributed. For other datasets, fit a new bundle
-using [USAGE.md](docs/USAGE.md); data contracts are in [DATA.md](docs/DATA.md).
+`replay` regenerates solar from seven native quantile models and checks exact
+array identity. Wind and temperature are retained from the included, hash-checked
+accepted ensemble; this command does **not** claim to regenerate those channels.
+It needs no external dataset or optimizer. Arrays have shape `[100, 8760, 3]`,
+channel order **solar CF, wind CF, temperature in degrees Celsius**, dtype float32.
+Leap days are removed; the hourly clock is UTC. Treat individual paths as
+alternative weather years, not forecasts of particular observed years.
 
-Arrays have shape `[number_of_profiles, 8760, 3]`, channel order
-`solar, wind, temperature` and units CF, CF and degrees Celsius. Leap days
-are removed. Wind speed and irradiance are not electrical capacity factors.
+The ensemble SHA256 is
+`d86a855166c24d699d511010184db12d0baf1551f83254b41f661c602d7ae728`.
+This release supersedes the older fixed-drift bundle preserved at `v0.3.1`.
 
-## H2RES integration
+## Use with H2RES
 
-`h2res_interface.py` prepares availability dictionaries or CSVs and temperature
-coupling. Unit names and baseline inputs are supplied explicitly. Annual
-heat/cooling totals are preserved; temperature changes hourly shape and COP.
-The interface does not change solver constraints or silently create units.
-See [INTEGRATION.md](docs/INTEGRATION.md) for complete examples.
+Export selected cases to your explicitly named solver units, then use
+`h2res_interface.py` for validated availability dictionaries or CSVs.
+[Usage](docs/USAGE.md), [input schemas](docs/DATA.md) and
+[integration examples](docs/INTEGRATION.md) explain the required files.
+The H2RES optimizer, solver licence and solver database are separate.
 
-Scenario selection requires `orthogonal` or `joint_medoid` explicitly.
-These select designed sensitivities; low/average/high labels and cluster
-shares are not calibrated joint-weather probabilities. Spatial mapping
-conserves the declared capacity-weighted aggregate within its tolerance.
+The final multisector experiment holds Average temperature/heat/COP common
+within each planning anchor. Electricity and thermal experiments use their own
+executed selector and thermal adapter. These designs must not be interchanged.
+Low/Average/High are designed sensitivities, not calibrated event probabilities.
 
-## Results and verification
+## Scientific scope
 
-[Research results](docs/RESEARCH_RESULTS.md) distinguish central-profile error
-from individual-profile diversity. [Validation coverage](docs/VALIDATION.md)
-describes executable checks and interpretation. Reporting years 2020-2024
-were previously inspected; model fitting and calibration use earlier years.
-No claim of an untouched test, calibrated joint-weather distribution or
-universal superiority is made.
+[Results](docs/RESEARCH_RESULTS.md) identify the final 63 planning windows and
+45 operational cases. [Verification](docs/VALIDATION.md) separates executable
+replay from archived optimizer evidence. Reporting years 2020-2024 had previously
+been inspected and are retrospective. There is no claim of an untouched test,
+universal model superiority or calibrated joint-weather distribution.
 
-| Path | Contents |
+The [autoencoder study](https://github.com/Roko55/H2RES-autoencoder/tree/ee89222)
+is a separate, historical comparison; its comparator is not this final solar
+release. Its variability results remain unchanged.
+
+| Directory | Contents |
 |---|---|
-| `pipeline.py`, `h2res_interface.py` | CLI and integration adapter |
-| `scripts/` | Generator, selection, mapping and thermal methods |
-| `models/default/` | Six native quantile models and calibration metadata |
-| `examples/`, `tests/` | Offline example and regression checks |
-| `results/`, `provenance/` | Metrics, model identities and verification records |
-| `docs/` | Usage, schemas, integration and evaluation scope |
+| `models/default/` | Seven solar and three temperature native XGBoost models |
+| `profiles/accepted.npy` | Exact accepted 100-member final ensemble |
+| `scripts/` | Portable generation, selection, spatial and thermal methods |
+| `results/` | Final profile and energy-system result tables |
+| `provenance/` | Frozen protocols, identities and executed adapter sources |
+| `examples/`, `tests/` | Offline walkthrough and regression checks |
 
-Technical reproducibility does not assign reuse rights. See [RIGHTS.md](RIGHTS.md).
+Raw weather and full solver inputs are not redistributed. No new licence is
+granted by this release; consult [RIGHTS.md](RIGHTS.md) before reuse.
