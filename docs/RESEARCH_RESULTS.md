@@ -1,53 +1,67 @@
-# Final experiment results
+# Research results
 
-The final accepted input is `profiles/accepted.npy`, SHA256
+The analyses share the accepted ensemble in `profiles/accepted.npy`, SHA256
 `d86a855166c24d699d511010184db12d0baf1551f83254b41f661c602d7ae728`.
-The archived completed cohort contains **63 optimal planning windows and 45
-optimal operational cases**, with no verified infeasible case. This release
-checks the archived evidence; it does not rerun those optimizations.
 
-| CSV | Row interpretation and units |
+## Individual channels
+
+The [single-channel multisector analyses](CHANNEL_RESULTS.md) contain 49 optimal
+planning windows: 42 new windows and seven reused Average windows. Complete solar,
+wind or temperature chronologies change independently against common Average.
+All paths share initial 2020 stock and inherit their own later stock histories.
+Their tables and figures are in `results/channel_investments/`.
+
+## Combined resource and separate applications
+
+The earlier completed package contains 63 optimal planning windows and 45 optimal
+operational cases. The 63 windows cover combined-resource multisector paths,
+the separate electricity application and the separate thermal application.
+These earlier tables remain at `results/`:
+
+| CSV | Definition |
 |---|---|
-| `planning_objectives.csv` | Configuration, resource/thermal case and five-year planning anchor; objective in that configuration's model units |
-| `objective_components.csv` | Native objective decomposition; component units and configuration must be retained |
-| `objective_deltas.csv` | Within-configuration case differences; compare corresponding anchors |
-| `operational_checks.csv` | Fixed updated portfolio, observed weather year and grid-availability stress; energy fields in MWh |
-| `profile_metrics.csv` | Channel/method point metrics over the **complete 43800 reporting hours** |
-| `solar_comparison.csv` | Solar validation/reporting diagnostics for the previous reference, accepted solar and historical ensemble |
+| `planning_objectives.csv` | Configuration, case, anchor and objective in the configuration's native units |
+| `objective_components.csv` | Native objective components and activity flags |
+| `objective_deltas.csv` | Within-configuration differences at corresponding anchors |
+| `operational_checks.csv` | Updated 2030 electricity portfolio, observed weather and grid-availability stress; energy in MWh |
 
-In `profile_metrics.csv`, `fixed_H2RES_profile` is the prior fixed solver profile;
-`ensemble_mean` is the accepted ensemble's calendar-aligned mean, and
-`training_calendar_mean` is the historical training climatology. A central-profile
-MAE is not an individual-weather-path error or a diversity measure. Solar/wind
-MAE and RMSE use CF units; temperature uses degrees Celsius. R2 is dimensionless;
-wMAPE is a percentage. These are retrospective reporting comparisons.
+The earlier **combined-resource** Low multisector path has a higher objective than
+Average at every anchor. Its Average temperature/heat/COP inputs are shared within
+each anchor. This result describes combined renewable changes; individual-channel
+responses are reported separately in CHANNEL_RESULTS.md.
 
-The final Low multisector path costs more than Average at every planning anchor.
-All paths begin from common 2020 stock and then inherit their own investments;
-objective differences must not be interpreted as matched-state causal effects.
-Cross-configuration currency comparisons and cost-per-MWh claims remain conditional
-on shared price-year and normalization provenance.
+The 45 operational cases use their original updated electricity portfolios, with
+15 cases at each grid-availability level (100%, 50%, 0%). Maximum HR CEEP is
+0, 0.574591588 and 4.658303801 TWh respectively; HR unserved energy is zero.
+These tests do not evaluate the seven new single-channel multisector portfolios.
+The shared seven Average windows appear in both planning packages and must be
+counted once when counting distinct solves.
 
-Operational grid availability 100%, 50%, 0% has 15 cases per level. Maximum HR
-CEEP is respectively 0, 0.574591588 and 4.658303801 TWh; HR unserved energy is zero.
-Operational portfolios are the corresponding updated 2030 portfolios.
+## Climate profile diagnostics
 
-Solar spread improves substantially over the previous narrow reference: reporting
-80% interval coverage increases from about 16.9% to 79.6%. This comes with worse
-member MAE (about +30.5%) and slightly worse ensemble-mean MAE (about +0.12%).
-The historical ensemble has slightly better fair CRPS than the accepted solar.
-The complete comparison table retains these regressions; no method dominates all
-metrics. Coverage is empirical and does not establish joint-weather calibration.
+`profile_metrics.csv` uses all 43800 reporting hours (2020-2024). Rows distinguish
+the prior fixed H2RES profile, accepted ensemble mean, training calendar mean
+and any additional declared central profile. Solar/wind MAE and RMSE are in CF;
+temperature uses degrees Celsius. R2 is dimensionless and wMAPE is a percentage.
 
-## Separate autoencoder study
+`solar_comparison.csv` retains the previous solar reference, accepted solar and
+historical ensemble on validation and reporting diagnostics. Reporting 80% interval
+coverage increases from about 16.9% to 79.6%; member MAE worsens by about 30.5%
+and ensemble-mean MAE by about 0.12%. The historical ensemble has slightly better
+fair CRPS. Central-profile error and variation between individual years describe
+different properties. All reported regressions remain in the comparison.
 
-The autoencoder repository retains one validation-selected CVAE and its original
-comparison corpus. Its annual wind-mean SD is 28.3% of the historical reference,
-versus 68.3% for that historical pipeline comparator. Limited annual resource
-diversity is relevant for Low/Average/High resource sensitivities. Some other
-autoencoder metrics are better and remain reported there.
+Reporting years had previously been inspected and are retrospective. Native
+objective comparisons retain their configuration-specific units; cross-configuration
+currency and cost-per-MWh comparisons require common price-year and normalization
+provenance. Overlapping window objectives are reported separately.
 
-That comparison is historical, not a fresh comparison with this final solar
-cohort. It does not prove overfitting, global optimality, that RAM was the sole
-limitation, or that longer/larger training would necessarily solve the problem.
-The supported conclusion is limited variability under the tested training protocol.
+## Autoencoder study
+
+The separate autoencoder repository retains one validation-selected CVAE and its
+historical comparison corpus. Its annual wind-mean SD is 28.3% of that historical
+reference, compared with 68.3% for its pipeline comparator. Other diagnostics,
+including those favorable to the autoencoder, remain reported there. That study
+is a historical benchmark and does not compare the CVAE with the final solar
+release. The measured annual resource diversity supports the application choice
+under the tested training protocol.

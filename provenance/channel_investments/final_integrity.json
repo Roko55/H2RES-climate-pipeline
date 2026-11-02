@@ -1,0 +1,359 @@
+{
+  "utc": "2026-11-02T03:03:20.683673+00:00",
+  "status": "completed_independently_verified",
+  "planning_windows": 49,
+  "new_planning_windows": 42,
+  "reused_windows": 7,
+  "optimal": 49,
+  "proofs": [
+    {
+      "case": "average",
+      "year": 2020,
+      "accepted_sha256": "38f2a9b9a996c16cdd878d14493523730b7a13c8373fc04dcd2e83159a6f02b1",
+      "terms_sha256": "bda0838605ae76d56698df0b2e068a4b51238fef58d7063c6981f7c758e5d2be",
+      "reused": true
+    },
+    {
+      "case": "average",
+      "year": 2025,
+      "accepted_sha256": "cb30c239e8430c97c5eb5e10290ba8cb683270ce5f59712effb32c1fdc6e21fc",
+      "terms_sha256": "895a0bc04773b90dce27425c0ea79bc55448ea913c03cf51f260f6eb239df549",
+      "reused": true
+    },
+    {
+      "case": "average",
+      "year": 2030,
+      "accepted_sha256": "9be290f165e3c36e691ef2549629685b4f468c38a93ea67cf88bf37ab87a3b9f",
+      "terms_sha256": "4729eb7fd12b3c3b7e11ff35ec972d0a5f0822d050abdcaec15b8d58abfa6469",
+      "reused": true
+    },
+    {
+      "case": "average",
+      "year": 2035,
+      "accepted_sha256": "2c199c47ae85251d53caf5fe8ce034f996d3d6fb7b136ed212598586195fb6b0",
+      "terms_sha256": "8fd929954ceeddcfd49b7a754b94d49a88b7df7d6d1e75a592b5079a66f97e01",
+      "reused": true
+    },
+    {
+      "case": "average",
+      "year": 2040,
+      "accepted_sha256": "bda796c4a1943730295738fdaa218e5322ee557e3c4fa37a9d5b12579d5a2d79",
+      "terms_sha256": "1834c79eb2cc30e65742a43794fa56cb9841cafdc902306ad8e4696b89c51b9a",
+      "reused": true
+    },
+    {
+      "case": "average",
+      "year": 2045,
+      "accepted_sha256": "1b30291eaa6b0726ef412d3c937c838e3c66ccad3b9db58004b48a0df801a574",
+      "terms_sha256": "7b29db4796e455d9b00a047203f1de51a0724ac3c1656f7331a70acca35e5c97",
+      "reused": true
+    },
+    {
+      "case": "average",
+      "year": 2050,
+      "accepted_sha256": "755ea7485e7ec91959fa8d37276aed984dbe171b5921b2eafc95f98ce54c2949",
+      "terms_sha256": "bbf67d93ba833d634c0b91192246d75486da2eb102580dbbf0d59ecd3537d444",
+      "reused": true
+    },
+    {
+      "case": "solar_low",
+      "year": 2020,
+      "accepted_sha256": "a566e46e646ad1d755eadbf76ee48c4acb6ac7bf0ec1c5a0c84915e15530805b",
+      "terms_sha256": "bda0838605ae76d56698df0b2e068a4b51238fef58d7063c6981f7c758e5d2be",
+      "reused": false
+    },
+    {
+      "case": "solar_low",
+      "year": 2025,
+      "accepted_sha256": "022beec9ceebd2f4c915297cc1cccb510388f91b7046305ef173dbe44548856d",
+      "terms_sha256": "895a0bc04773b90dce27425c0ea79bc55448ea913c03cf51f260f6eb239df549",
+      "reused": false
+    },
+    {
+      "case": "solar_low",
+      "year": 2030,
+      "accepted_sha256": "66a0bc731ea3301650394a22e0a9dcaac03b71935168310381e8e06a7989db89",
+      "terms_sha256": "dc2654ff4f64ca7818a8c0bb245d1d315a16518ef743c65d9aaef5b6ba1c0a58",
+      "reused": false
+    },
+    {
+      "case": "solar_low",
+      "year": 2035,
+      "accepted_sha256": "3794341a8b676444c41e7bedd547ce95dc601cae01519190a0158f8383b779ec",
+      "terms_sha256": "538dbb0db6636811d2f2eb33a0a0355903c2c1e86a0a441eff2aa257a81f1041",
+      "reused": false
+    },
+    {
+      "case": "solar_low",
+      "year": 2040,
+      "accepted_sha256": "fbc13e5b3fba3c225acdd5f5f6b151639d3f675d19b59e3df62e0d301a2baf6d",
+      "terms_sha256": "9cc911570f0f36a088e21749a8448a5d5ea0aa8f3dc1486dcc3722bcddbb355d",
+      "reused": false
+    },
+    {
+      "case": "solar_low",
+      "year": 2045,
+      "accepted_sha256": "5f6f241fd52d487e8a1f4aba13db4e22b843bb381a3c7afe0e38bc90179657fd",
+      "terms_sha256": "0525d8272ec1f63c5489a70c665513f61faed5048c1f0f462c930f8c4541f23f",
+      "reused": false
+    },
+    {
+      "case": "solar_low",
+      "year": 2050,
+      "accepted_sha256": "155eb795117eb0339ef80d3876108539d7225f48dd02fcdb2b4215395d2573a4",
+      "terms_sha256": "80ba93145deddab6571411d5ec4764b740ea6ae80422534446aa7262277063f4",
+      "reused": false
+    },
+    {
+      "case": "solar_high",
+      "year": 2020,
+      "accepted_sha256": "bbf7d4ba1b9e8f9cd8f9ce7eb680d0002df906d675880e41bd224f12e63bafeb",
+      "terms_sha256": "bda0838605ae76d56698df0b2e068a4b51238fef58d7063c6981f7c758e5d2be",
+      "reused": false
+    },
+    {
+      "case": "solar_high",
+      "year": 2025,
+      "accepted_sha256": "ba3c6fa2c6935cc6f64e79ae6dc2853641753920b8d9d79c49cacb0d7b74fd08",
+      "terms_sha256": "895a0bc04773b90dce27425c0ea79bc55448ea913c03cf51f260f6eb239df549",
+      "reused": false
+    },
+    {
+      "case": "solar_high",
+      "year": 2030,
+      "accepted_sha256": "2b5042c41a2561267972b04220982cab7b37d14366dc2fce14365b0d46b4a62d",
+      "terms_sha256": "459d5b36047e0c5510be0b6fa20dfe13611a5a20f221bae6804ac857f3b2479c",
+      "reused": false
+    },
+    {
+      "case": "solar_high",
+      "year": 2035,
+      "accepted_sha256": "e3fa57e376e50a978cfa4ab7ea814516bb45a3a39363012863eaedfdab17cb18",
+      "terms_sha256": "e6e4042fda2ded7a35a3f63252ea8a052cf4aefba8e409a7f84d62ecf0abd38f",
+      "reused": false
+    },
+    {
+      "case": "solar_high",
+      "year": 2040,
+      "accepted_sha256": "80d8ecab819195a0ac81cc43113c0adaf2af971c2a462cd8099c508958ead594",
+      "terms_sha256": "d2c36e9a6d09ec31e06b867528eaa0e3a67b1b796e77a842bb723858f4e8df6b",
+      "reused": false
+    },
+    {
+      "case": "solar_high",
+      "year": 2045,
+      "accepted_sha256": "37bf12aa34ea73bd585d0ff93e1d3b2052a74c9ed9b0918b7b69ec1c08e2774f",
+      "terms_sha256": "1216bb0c9b116b17d03d5cd2fc87ff44f345320a558c4142706f8cb93acd5263",
+      "reused": false
+    },
+    {
+      "case": "solar_high",
+      "year": 2050,
+      "accepted_sha256": "0d42a30f2cf69051a96653d9307d48e3f587b12938d0f9705af813a8d8341675",
+      "terms_sha256": "bb426097953739636fcd4968b529ff947c14405725b9b02ae28e942dca0bc980",
+      "reused": false
+    },
+    {
+      "case": "wind_low",
+      "year": 2020,
+      "accepted_sha256": "6e5e55470e4be9b8544e8d0ad1fea13e0cfdebbcd507d2eca97a6c0a54e3fea0",
+      "terms_sha256": "bda0838605ae76d56698df0b2e068a4b51238fef58d7063c6981f7c758e5d2be",
+      "reused": false
+    },
+    {
+      "case": "wind_low",
+      "year": 2025,
+      "accepted_sha256": "35b53fb94e39f469c513905b1aacdd1c3d5c4b3536bcd1f25ee9939b1e6cb4e7",
+      "terms_sha256": "895a0bc04773b90dce27425c0ea79bc55448ea913c03cf51f260f6eb239df549",
+      "reused": false
+    },
+    {
+      "case": "wind_low",
+      "year": 2030,
+      "accepted_sha256": "244e20717b9308954421907c0482efab80ef9e209dc963262841b17682c00f88",
+      "terms_sha256": "434c85b60664d6d7b21ce518fcfb7499a4c469415e78c4acd5a9bf3c60ebf864",
+      "reused": false
+    },
+    {
+      "case": "wind_low",
+      "year": 2035,
+      "accepted_sha256": "bbda5baa7787f05f5f54bc9b67582c96417dab22d16e27e31c3164b140275982",
+      "terms_sha256": "c8fc0b8c0557602061168e88aeae84aa5bc9203519ea45ac3d0b50266e52494c",
+      "reused": false
+    },
+    {
+      "case": "wind_low",
+      "year": 2040,
+      "accepted_sha256": "16453533e11f53d8642f89e33bc777e4d4bc7107bd6130354bff1024129310ad",
+      "terms_sha256": "05c5765fa1f6dae2c53463011fc9d8cbad197616b93d4430de9f5485bf1151c9",
+      "reused": false
+    },
+    {
+      "case": "wind_low",
+      "year": 2045,
+      "accepted_sha256": "4e101042443df310fa853e77ae1d587c47a7f2ae1219f0fe05b53616c5a54a1e",
+      "terms_sha256": "d1ae06ce4330568df3d846d867d59c7689aa40dd9392b92e04a8bc37ec03ed46",
+      "reused": false
+    },
+    {
+      "case": "wind_low",
+      "year": 2050,
+      "accepted_sha256": "3eaaecc539194018050409293574552ed37a32897b836b113ec92ef9a0f8f5c0",
+      "terms_sha256": "3c4fee32819bbf2177516faabe654a93f434e9fc433c93ce1e2c80cbe5494058",
+      "reused": false
+    },
+    {
+      "case": "wind_high",
+      "year": 2020,
+      "accepted_sha256": "b7b1bd6120e50d9c5532cd622412c488ade420bd7255376cc4cfdc55bf7c5b19",
+      "terms_sha256": "bda0838605ae76d56698df0b2e068a4b51238fef58d7063c6981f7c758e5d2be",
+      "reused": false
+    },
+    {
+      "case": "wind_high",
+      "year": 2025,
+      "accepted_sha256": "2c9729df3b4ecd2e728f4026e03ddbb739047f7b7ca53997a70416dcbb637280",
+      "terms_sha256": "895a0bc04773b90dce27425c0ea79bc55448ea913c03cf51f260f6eb239df549",
+      "reused": false
+    },
+    {
+      "case": "wind_high",
+      "year": 2030,
+      "accepted_sha256": "06e3c5d30df022bb1ba53c190accad586087fcf9384ad3c5612dc5d393fe03e0",
+      "terms_sha256": "3294dec19e07373b0326917b581b9e214248f9816f1f00c256f466c0c1f2a3da",
+      "reused": false
+    },
+    {
+      "case": "wind_high",
+      "year": 2035,
+      "accepted_sha256": "79a6b89dd2d496169e46e11598b2874e9e107944fe4ca5571f83a2730a1dba9c",
+      "terms_sha256": "25810c3b89be9dd5c3f9d70fcab7108e450bfc27afcbc4aacd807dff67c34f66",
+      "reused": false
+    },
+    {
+      "case": "wind_high",
+      "year": 2040,
+      "accepted_sha256": "43ccbd2e6a59bfac2ea4981168bf800ea4413425993d9fdea80ebbf8e9630f26",
+      "terms_sha256": "7bf62a55c620bc6c13f806dcaf7502e2bb97658fa0d1d699a7b12114f562e745",
+      "reused": false
+    },
+    {
+      "case": "wind_high",
+      "year": 2045,
+      "accepted_sha256": "598f668d21ec1761ef41f3c5b67db8a0c668e2c936cdac7d9cf88cdccc4e74b5",
+      "terms_sha256": "03a0002ced9bdf8582bfee046e26a280dca3293a6cf5978f47504ad51d9070fe",
+      "reused": false
+    },
+    {
+      "case": "wind_high",
+      "year": 2050,
+      "accepted_sha256": "46249bc238e0160231b831a59e6dd55cf37be6846230903acf4c3d386f47be40",
+      "terms_sha256": "872e2d1785dcb3762c82fc42df68f6cc7d9f1fb451dbfce5928ab34b80eace6b",
+      "reused": false
+    },
+    {
+      "case": "temperature_cold",
+      "year": 2020,
+      "accepted_sha256": "b4acca5d2260d079812dc8b189d24d2235bf6237c77554b32d7223c203444f6f",
+      "terms_sha256": "0e883d32af974a8aec245cd4d6ea40d86f0bfda96578c2ebb387ef58ce626b70",
+      "reused": false
+    },
+    {
+      "case": "temperature_cold",
+      "year": 2025,
+      "accepted_sha256": "769eb36d480024cc03776d9574a012b2d9a4009f7398c515489e64173ed51543",
+      "terms_sha256": "8a4a4d77def1402df5540d328368105309de85d1b8dad7f57b1766d7d7a98c4e",
+      "reused": false
+    },
+    {
+      "case": "temperature_cold",
+      "year": 2030,
+      "accepted_sha256": "6ebb362d9e7facd339e448e2e34564137f14aa95057dce9dd1a15c89f38f7115",
+      "terms_sha256": "fc2cbc622a8e99916ae49024b00a1f1e1317879714c17d3a83158e488b309e5d",
+      "reused": false
+    },
+    {
+      "case": "temperature_cold",
+      "year": 2035,
+      "accepted_sha256": "cc463676cd1994a966123c5630933849aefb58ba4e1ad39a51c07b8454ff7ce1",
+      "terms_sha256": "5f4b3f74826fb5553be00c56ef42081a3ddb6b4c49c3db62eddd561bc80444a3",
+      "reused": false
+    },
+    {
+      "case": "temperature_cold",
+      "year": 2040,
+      "accepted_sha256": "2b0f85c4f8cf083e28951a25c2fb716c13eba95f86ee6e58edfcfe04f4c9836b",
+      "terms_sha256": "80f4bf14d1e55a9c1cae38310307ae155d69858eb596b0a863ed0b5f92df1d71",
+      "reused": false
+    },
+    {
+      "case": "temperature_cold",
+      "year": 2045,
+      "accepted_sha256": "b0ba2980d876dafd3a0a4e53790dae6f00d190fd1b43ad4d5585fd76425b6c8d",
+      "terms_sha256": "b82e1a70f5f5f2bb00180c72ffd58d4c2bdf5be64dfe365f08cde08a87fa6b63",
+      "reused": false
+    },
+    {
+      "case": "temperature_cold",
+      "year": 2050,
+      "accepted_sha256": "da82bd16c2f07f77d9fb191256f66bc95d74c395e74d19fbbdce4d2fe3dca7c5",
+      "terms_sha256": "c8df19be96e0eece37770ffc2080c3c93fd7e231b1f60a552eea8f6b31dc8f97",
+      "reused": false
+    },
+    {
+      "case": "temperature_hot",
+      "year": 2020,
+      "accepted_sha256": "3fc36a785749aedbeaf819f7f4686cc8a1d7e62ad276786f184bb82248b2bac2",
+      "terms_sha256": "c45bd7f45c487d71d3064616102f3f7f1700ce8a0e4c0b56dcb4fca4ab2bd8b5",
+      "reused": false
+    },
+    {
+      "case": "temperature_hot",
+      "year": 2025,
+      "accepted_sha256": "2a5e35234879a3fcb18500dbbf89d4f4c36dd0ed5800d63e4416f2a6757c585b",
+      "terms_sha256": "91dd9d2d54f5f8cac2ff62859301c0f6135702a154ae17fb6ba2040248a42f89",
+      "reused": false
+    },
+    {
+      "case": "temperature_hot",
+      "year": 2030,
+      "accepted_sha256": "414c9a60f8a71470600ad6e0c9e3abe5d544ea5fc96157e009aed33ece4b261d",
+      "terms_sha256": "4fe158149b1ed211523dddcebba13449a3b2f053afb4be81cb9e2726dec4e520",
+      "reused": false
+    },
+    {
+      "case": "temperature_hot",
+      "year": 2035,
+      "accepted_sha256": "dae064848384e8ed573a2a4acdb495400acd57ea205dc09f40c4d65b60a8e8ec",
+      "terms_sha256": "3fb50e11906765f65d96e2684999cd2757992c67be5c4d232de22f3739dd27ed",
+      "reused": false
+    },
+    {
+      "case": "temperature_hot",
+      "year": 2040,
+      "accepted_sha256": "64e72ee647564814573794c6443cf617ef597aead8cc9f0722ebba66cbfbb709",
+      "terms_sha256": "7f686520f479fef4d09dc5eb6f98d8a507ab10f3b26355544640df7a759b8f7e",
+      "reused": false
+    },
+    {
+      "case": "temperature_hot",
+      "year": 2045,
+      "accepted_sha256": "4bd8651133355d9a26f99b54893bb86ae1e70bc8efd0e493192070d68c51a75d",
+      "terms_sha256": "c28f70f39bc8705f5f075cd1ef047f061e411425db1ce1250c4dceded02ce96e",
+      "reused": false
+    },
+    {
+      "case": "temperature_hot",
+      "year": 2050,
+      "accepted_sha256": "4dea94e5d848d9a50b0d4c3dd9a77dac1c34b5d4447c7e2159f997df60548e58",
+      "terms_sha256": "8d0877b4e438896faced316b1467e81cea967c9193d6dcea2a8362d524fc0a2d",
+      "reused": false
+    }
+  ],
+  "stock_checks": 2009,
+  "emission_checks": 273,
+  "balance_checks": 49,
+  "all_passed": true,
+  "manuscript_updated": false,
+  "new_historical_stress_tests": 0
+}

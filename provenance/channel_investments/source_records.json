@@ -1,0 +1,87 @@
+{
+  "archive_sha256": "34c87f8be8f8333f17e4331bb3cfe687e3c4b354246fec9aa7b9b227916c1d81",
+  "archive_members_verified": 20,
+  "records": {
+    "delivery/channel_comparison.csv": {
+      "sha256": "8203b978aa78130693396a471366baa2170339a42ce879e674e9bd2c02279286",
+      "published_as": "results/channel_investments/channel_comparison.csv"
+    },
+    "delivery/installed_stock.csv": {
+      "sha256": "fcaaebbbecfbeca11f84e119cff1b54ab75e9a62c1faf62b4f0d3164149c19b9",
+      "published_as": "results/channel_investments/installed_stock.csv"
+    },
+    "delivery/interpretation.json": {
+      "sha256": "46b1604c074abde822489a7f22780d22c50783a775cdf3c145c284214636992b"
+    },
+    "delivery/investments_by_technology.csv": {
+      "sha256": "fb23704390f5019eb6459662e2ff835919801d57b4ba57414f08307b47a85283",
+      "published_as": "results/channel_investments/investments_by_technology.csv"
+    },
+    "delivery/investment_changes_MW.pdf": {
+      "sha256": "678bfa0832b6fe106f07634cea766dac63cdcceefb0f74165b1850c378eb8f9f"
+    },
+    "delivery/investment_changes_MW.png": {
+      "sha256": "fdef0ffe8e11cc9e54dc46100741c7a030328df5ad3ffffded7743f6c2698809"
+    },
+    "delivery/investment_changes_MWh.pdf": {
+      "sha256": "5799feb943b049bb8f507099d0411214837ef9ba222c65f9d74c0a84a08d3d70"
+    },
+    "delivery/investment_changes_MWh.png": {
+      "sha256": "705b7ea98b6717ee39e04258a3f3cceba1fae23b05a6083bfb4922ae4da485bf"
+    },
+    "delivery/objective_comparison.csv": {
+      "sha256": "9d68ecb198395dc1b8383b6cda03376d0c2450ee67b61334cb518c9bc245aa70",
+      "transformation": "Source path made relative; numerical values unchanged",
+      "published_as": "results/channel_investments/objective_comparison.csv"
+    },
+    "delivery/objective_components.csv": {
+      "sha256": "3c1e5e92a880d1cda4b421bf31654fe2edccc31662efa4129d25c08d215c9c82",
+      "published_as": "results/channel_investments/objective_components.csv"
+    },
+    "delivery/session_recovery_manifest.json": {
+      "sha256": "4cbf8dd856eab456f30fc837acfbf22c6e0a598e43f241b1e8929c5b9e223ace",
+      "published_as": "provenance/channel_investments/execution_notes.json",
+      "transformation": "Scientific execution and observer compatibility fields retained; scheduling history omitted"
+    },
+    "delivery/system_outcomes.csv": {
+      "sha256": "9d8ddcd5c1240a2ac2edfc328887ab5551a489b13de79053fb5a5e4e9c22a50c",
+      "published_as": "results/channel_investments/system_outcomes.csv"
+    },
+    "delivery/thermal_inputs.csv": {
+      "sha256": "96f342a530e7fbfff5566c7228625c365bf309d6bf67a555b61494824f9ca1b9",
+      "published_as": "results/channel_investments/thermal_inputs.csv"
+    },
+    "preparation.json": {
+      "sha256": "8f8e8893e161d755b0bc57c34ebe8762dacd94510254c8b2589ea7dab33047b3",
+      "transformation": "Source paths made relative",
+      "published_as": "provenance/channel_investments/preparation.json"
+    },
+    "plan.json": {
+      "sha256": "c72588721ba73503ac496cd85dff34328b1ea9fba5156cc6e23805f563761463",
+      "published_as": "provenance/channel_investments/design.json",
+      "transformation": "Completed experiment design extracted; execution plans and working instructions omitted"
+    },
+    "mapping_checks.json": {
+      "sha256": "e54d95cda25ea7b76b42a01ce00029cf79305647bc4b8bf061f7a626a9bb7eaf",
+      "published_as": "provenance/channel_investments/mapping_checks.json"
+    },
+    "scenario_inputs.csv": {
+      "sha256": "f1b7e6f756442e64f00ee7e68830a844283a18837cf8f2c467dd7791fbdcb366",
+      "published_as": "results/channel_investments/scenario_inputs.csv"
+    },
+    "reference_decision.json": {
+      "sha256": "a6e33b383530824a7e5c8d4a45e93bb18be8ba4f2485305e4a42c84ef9731004",
+      "transformation": "Source paths made relative",
+      "published_as": "provenance/channel_investments/reference_decision.json"
+    },
+    "post_audit.json": {
+      "sha256": "41d27bc9390c29b757d471acb9b7b25de9c9a02f257dd6563af802de15d5177e",
+      "published_as": "provenance/channel_investments/post_audit.json"
+    },
+    "final_integrity.json": {
+      "sha256": "3bbed586b250d9e1b07dc0af03de13c9b1b314895f6948b7c7cda5ae6a2d95e5",
+      "published_as": "provenance/channel_investments/final_integrity.json"
+    }
+  },
+  "scope": "Original archive identities; delivered file identities are in artifact_manifest.json"
+}

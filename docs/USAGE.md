@@ -4,7 +4,21 @@ Commands are run from the repository root after installation (see README).
 Run `python pipeline.py --help` for the complete interface. CLI files are written
 only below `exports/`; existing outputs and JSON sidecars are never overwritten.
 
-## Accepted experiment
+## Individual-channel experiment
+
+```bash
+python pipeline.py select-final --design channel --year 2030 --output exports/channel_cases_2030.npz
+python analysis/channel_results.py --output exports/channel_summary
+```
+
+The channel NPZ contains `average`, `solar_low`, `solar_high`, `wind_low`,
+`wind_high`, `temperature_cold`, `temperature_hot`. Each has shape `[8760,3]`.
+All seven cases are checked against archived profile hashes for the requested anchor.
+The analysis command reproduces summary CSVs and PNG/PDF figures from the
+delivered result tables. See [CHANNEL_RESULTS.md](CHANNEL_RESULTS.md) for units
+and experiment definitions.
+
+## Combined-resource and separate-application experiments
 
 ```bash
 python pipeline.py replay --output exports/accepted.npy
@@ -13,7 +27,7 @@ python pipeline.py select-final --design electricity --year 2030 --output export
 ```
 
 The accepted array is also included directly in `profiles/accepted.npy`; `replay`
-independently regenerates its solar channel. Each selected NPZ contains `low`,
+independently regenerates its solar channel. For these two designs, each selected NPZ contains `low`,
 `avg`, `high` arrays of shape `[8760,3]`. Multisector selection is checked against
 all three archived input hashes at the requested anchor (2020, 2025, ..., 2050).
 The electricity selector uses float64 and planning-year scaling before clustering;

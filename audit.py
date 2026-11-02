@@ -67,9 +67,12 @@ def main():
     metrics = pd.read_csv(ROOT/'results/profile_metrics.csv')
     require((metrics['mask'] == 'complete_reporting').all() and (metrics.n_hours == 43800).all()
             and not metrics.duplicated(['channel', 'method']).any(), 'Mixed reporting masks')
+    from analysis.channel_results import verify_results
+    channels = verify_results(ROOT)
     print(json.dumps({'status': 'passed', 'files_verified': len(manifest['files']),
         'native_models_verified': 10, 'ensemble_sha256': ENSEMBLE_SHA,
-        'planning_windows': len(plan), 'operational_cases': len(operations),
+        'previous_planning_windows': len(plan), 'previous_operational_cases': len(operations),
+        'single_channel_planning': channels,
         'scope': 'Artifact identities, solar runtime assets and archived solver evidence; optimizer not rerun.'}, indent=2))
 
 

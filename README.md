@@ -1,13 +1,17 @@
 # H2RES climate pipeline
 
-Prepare annual hourly solar capacity factors, wind capacity factors and ambient
-temperature for H2RES. This release contains the **accepted final ensemble used
-in the completed planning and operational experiments**, its native models,
-input adapters and numerical verification records.
+Generate hourly solar and wind capacity factors and ambient temperature, select
+annual sensitivity profiles and prepare climate inputs for H2RES.
 
-## Install and check
+Solar uses seven autoregressive XGBoost quantile models with frozen seasonal
+postprocessing. Temperature uses three autoregressive quantile models. Wind uses
+six-day seasonal historical blocks with four-hour blending. Channels are generated
+independently. Profiles use UTC, 8760 hours per year with February 29 removed,
+and channel order **solar CF, wind CF, temperature in degrees Celsius**.
 
-Use Python 3.11 in a separate virtual environment. Run from this checkout:
+## Installation
+
+Use Python 3.11 in a virtual environment. From this checkout:
 
 ```bash
 python -m pip install -r requirements.txt
@@ -17,61 +21,65 @@ python audit.py
 python examples/demo.py --output exports/demo_01
 ```
 
-The demo uses fabricated inputs and calls no solver or training routine.
-Use a new output name for each run. All CLI outputs stay under `exports/`.
+The demo uses illustrative weather and unit tables. It runs selection, spatial
+mapping, availability export and thermal coupling. Use a new output name on reruns.
 
-## Reproduce the accepted profiles
+## Profiles and H2RES inputs
 
 ```bash
 python pipeline.py replay --output exports/accepted.npy
-python pipeline.py select-final --design multisector --year 2030 --output exports/cases_2030.npz
+python pipeline.py select-final --design channel --year 2030 --output exports/channel_cases_2030.npz
 ```
 
-`replay` regenerates solar from seven native quantile models and checks exact
-array identity. Wind and temperature are retained from the included, hash-checked
-accepted ensemble; this command does **not** claim to regenerate those channels.
-It needs no external dataset or optimizer. Arrays have shape `[100, 8760, 3]`,
-channel order **solar CF, wind CF, temperature in degrees Celsius**, dtype float32.
-Leap days are removed; the hourly clock is UTC. Treat individual paths as
-alternative weather years, not forecasts of particular observed years.
+The included ensemble is `profiles/accepted.npy`, shape `[100,8760,3]`, float32.
+`replay` regenerates solar from its native models and retains the verified wind
+and temperature channels. Full generation additionally needs the original corpus,
+including the wind resampling pool; see [Usage](docs/USAGE.md).
 
-The ensemble SHA256 is
-`d86a855166c24d699d511010184db12d0baf1551f83254b41f661c602d7ae728`.
-This release supersedes the older fixed-drift bundle preserved at `v0.3.1`.
+The `channel` design exports Average, Solar Low/High, Wind Low/High and Cold/Hot.
+Each case changes one complete hourly channel from the same Average profile.
+The multisector heat/cooling/COP adapter then applies the temperature chronology.
+All seven paths start from common 2020 stock and carry their own subsequent
+investments and retirements through 2050.
 
-## Use with H2RES
+Map these profiles to your declared generation units with `export-units`, then use
+`h2res_interface.py` for availability dictionaries or CSVs. See the
+[data schemas](docs/DATA.md) and [integration examples](docs/INTEGRATION.md).
+The H2RES model, solver licence and full input database are supplied separately.
 
-Export selected cases to your explicitly named solver units, then use
-`h2res_interface.py` for validated availability dictionaries or CSVs.
-[Usage](docs/USAGE.md), [input schemas](docs/DATA.md) and
-[integration examples](docs/INTEGRATION.md) explain the required files.
-The H2RES optimizer, solver licence and solver database are separate.
+## Results
 
-The final multisector experiment holds Average temperature/heat/COP common
-within each planning anchor. Electricity and thermal experiments use their own
-executed selector and thermal adapter. These designs must not be interchanged.
-Low/Average/High are designed sensitivities, not calibrated event probabilities.
-
-## Scientific scope
-
-[Results](docs/RESEARCH_RESULTS.md) identify the final 63 planning windows and
-45 operational cases. [Verification](docs/VALIDATION.md) separates executable
-replay from archived optimizer evidence. Reporting years 2020-2024 had previously
-been inspected and are retrospective. There is no claim of an untouched test,
-universal model superiority or calibrated joint-weather distribution.
-
-The [autoencoder study](https://github.com/Roko55/H2RES-autoencoder/tree/ee89222)
-is a separate, historical comparison; its comparator is not this final solar
-release. Its variability results remain unchanged.
-
-| Directory | Contents |
+| Analysis | Scope |
 |---|---|
-| `models/default/` | Seven solar and three temperature native XGBoost models |
-| `profiles/accepted.npy` | Exact accepted 100-member final ensemble |
-| `scripts/` | Portable generation, selection, spatial and thermal methods |
-| `results/` | Final profile and energy-system result tables |
-| `provenance/` | Frozen protocols, identities and executed adapter sources |
-| `examples/`, `tests/` | Offline walkthrough and regression checks |
+| [Individual solar, wind and temperature](docs/CHANNEL_RESULTS.md) | Same full multisector model; 49 optimal windows, including 7 reused Average windows |
+| [Combined resource and separate applications](docs/RESEARCH_RESULTS.md) | Earlier 63 planning windows and 45 operational tests on their original electricity portfolios |
+| [Climate profile diagnostics](results/profile_metrics.csv) | Complete 43800 reporting hours, 2020-2024 |
 
-Raw weather and full solver inputs are not redistributed. No new licence is
-granted by this release; consult [RIGHTS.md](RIGHTS.md) before reuse.
+Single-channel objective and investment results can be summarized without a solver:
+
+```bash
+python analysis/channel_results.py --output exports/channel_summary
+```
+
+![Single-channel objective differences](results/channel_investments/figures/objective_changes.png)
+
+Each panel shows the native window objective relative to Average; vertical scales
+differ. Solar Low is higher throughout. Wind Low is higher through 2040 and lower
+in 2045/2050. Cold is lower in 2020/2025 and higher afterwards. These are responses
+to the selected profiles and evolving investment paths. Window objectives overlap
+and are reported separately.
+
+## Reproducibility
+
+[Verification](docs/VALIDATION.md) covers model and result identities, profile
+selection, objective reconciliation, stock, emissions and balance records.
+Training uses 1980-2015 and validation 2016-2019. Reporting years 2020-2024 had
+previously been inspected and are retrospective. Low/High and Cold/Hot identify
+designed sensitivities; cluster membership is not an event probability.
+
+The [autoencoder study](https://github.com/Roko55/H2RES-autoencoder/tree/1bab312128d882ecf292b9340ee47de8d355155c)
+retains its own model and historical comparison corpus.
+
+For a fixed reference, cite [version 0.5.0](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.5.0).
+Raw weather and full solver inputs are excluded. Reuse rights are described in
+[RIGHTS.md](RIGHTS.md).

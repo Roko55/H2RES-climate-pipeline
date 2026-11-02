@@ -28,17 +28,24 @@ The command-line workflow still runs from this repository checkout.
 
 ## Thermal coupling and experiment designs
 
+For the individual-channel multisector experiments, use
+`select-final --design channel --year 2030`. It exports all seven named cases
+with complete Cold/Hot temperature chronologies. Apply the existing multisector
+thermal adapter with `scale_annual_totals=False`. Each path inherits its own
+realized stock after the common 2020 start. See [CHANNEL_RESULTS.md](CHANNEL_RESULTS.md).
+
+
 `h2res_interface.couple_temperature` is the explicit-baseline multisector adapter.
 It returns new heat/cooling/COP dictionaries; callers supply temperature baselines,
 unit lists and complete annual dictionaries. See `examples/demo.py` for a complete
 call. It preserves annual thermal demand, changing hourly shape and COP.
 
-The final multisector study uses `select-final --design multisector` and holds
+The earlier combined-resource multisector study uses `select-final --design multisector` and holds
 Average temperature, heat/cooling and COP common across Low/Average/High at each
 planning anchor. All paths share the initial 2020 stock; subsequent investment
 histories belong to their respective paths. They are not matched-stock optimizations.
 
-The electricity/newshare selector differs from the multisector selector. The
+In the earlier separate applications, the electricity/newshare selector differs from the multisector selector. The
 thermal-isolation cases hold the same Average renewable inputs while changing
 temperature with training-derived annual-temperature P10/P50/P90 offsets.
 `provenance/executed_final/climate_runtime_inputs.py` and

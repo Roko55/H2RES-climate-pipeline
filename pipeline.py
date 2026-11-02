@@ -438,7 +438,11 @@ def select_release(args):
     output = new_output(args.output)
     if output.suffix != ".npz":
         raise ValueError("Choose a .npz output")
-    profiles = select_cases(ROOT, args.design, args.year)
+    if args.design == 'channel':
+        from scripts.channel_profiles import channel_cases
+        profiles = channel_cases(ROOT, args.year)
+    else:
+        profiles = select_cases(ROOT, args.design, args.year)
     with output.open("xb") as stream:
         np.savez_compressed(stream, **profiles)
     save_json(output.with_suffix(".json"), {"output_sha256": digest(output),
@@ -452,8 +456,8 @@ def main(argv=None):
     frozen = commands.add_parser("replay", help="Reproduce the accepted cohort: regenerate solar and retain frozen wind/temperature")
     frozen.add_argument("--output", required=True)
     frozen.set_defaults(function=replay_release)
-    final_cases = commands.add_parser("select-final", help="Select the exact final multisector or electricity sensitivity cases")
-    final_cases.add_argument("--design", required=True, choices=("multisector", "electricity"))
+    final_cases = commands.add_parser("select-final", help="Export the frozen channel, combined-resource or electricity sensitivity cases")
+    final_cases.add_argument("--design", required=True, choices=("multisector", "electricity", "channel"))
     final_cases.add_argument("--year", type=int, default=2020)
     final_cases.add_argument("--output", required=True)
     final_cases.set_defaults(function=select_release)

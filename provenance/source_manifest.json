@@ -7,6 +7,10 @@
     "sha256": "a8d4ffa1a30df14c9c12eef014e7e7c98dd4775692ab60c98820ce55f280ad1f",
     "source_role": "Delivered generation or integration implementation"
   },
+  "scripts/channel_profiles.py": {
+    "sha256": "e2b09160f3bf0a4ce45e726ebb5cbbb8f822389d6747caf998b2ce3ec3ed3416",
+    "source_role": "Delivered generation or integration implementation"
+  },
   "scripts/channel_runtime.py": {
     "sha256": "5cf7c8a17131c80c84af5e2222dcb0397910983d60196b50f69a0fe192512342",
     "source_role": "Delivered generation or integration implementation"

@@ -1,0 +1,33 @@
+{
+  "original_frozen_sources_unchanged": true,
+  "equations_or_inputs_changed": false,
+  "overlay_files": {
+    "session_policy.py": "68ebead6302c7ed9252fe901e016607520e3e277c3404443a691fe5a19ed9a84",
+    "session_controller.py": "46c3790047bb9a9e7a3c17951d2ce494725bef7fd46655fdea3bdd525ca0c654",
+    "session_guard.py": "f4b4f36a9ac3a0bc226c92d81c2b588e9d735b855320cde86fa40d5d5206fe0e",
+    "resume_sessions.py": "36733e76d05ae90b990117b0be9e0c67a7198819dabbcc77c4266e67d16d653e",
+    "update_dispatch.py": "fed7156d5fbddb50a4399c4c15a1da1271da185fea1c028ac5e1a2d75c5622de",
+    "activate_shared_cpu.py": "226fe3bb390906a0393c41f63610a6583ff8cd74696d17ec0a2039dcbe4505ed",
+    "continuation_checks.py": "8b418dbf30dd22f48b7317fb6fa3573f65b32989ba47734c3862033dc8909769",
+    "activate_continuation_checks.py": "baf187b54bed0c7c4bb6fd9edbc0e021ef7f5471072eb1e45d5ea68dccf4d266",
+    "promote_observer.py": "ce1ebe622dc3a4a34352ca78711e899b2c3f2e63e27195b376d48b87f283ff29"
+  },
+  "observer_compatibility": {
+    "utc": "2026-11-01T18:18:10.341169+00:00",
+    "native_model_sha256": "53babcaf17a4e2a3411b8f9f3d22a771dc3b3b901531f01ab2028397e8bd7456",
+    "original_observer_sha256": "7eba95a48d1e64aa03210fd5af13419489002248b89e32d1d5a791a98d124477",
+    "compatibility_module_sha256": "8b418dbf30dd22f48b7317fb6fa3573f65b32989ba47734c3862033dc8909769",
+    "derived_intermediate": "Fossil_hydro = disp_units + hydro_units",
+    "assignment_precedes_every_model_read": true,
+    "reference_checks_exclude_the_not_yet_defined_intermediate": true,
+    "continuation_checks_validate_the_intermediate_against_both_unchanged_input_lists": true,
+    "all_exogenous_input_hash_checks_preserved": true,
+    "fuel_name_is_exclusively_comprehension_local_in_native_model": true,
+    "original_fuel_reference_hash_reproduced_from_native_genco": true,
+    "output_loop_shadowing_is_not_a_solver_input_change": true,
+    "all_other_model_local_names_disjoint_from_reference_exogenous_inputs": true,
+    "scientific_inputs_or_equations_changed": false,
+    "optimization_started": false
+  },
+  "exogenous_input_checks_not_relaxed": true
+}
