@@ -36,16 +36,16 @@ Use explicit `macro` or `nuts3` resolution; `auto` additionally requires site
 metadata understood by the scenario manager (see the illustrative fixture).
 
 The balancing method maintains the target capacity-weighted national CF while
-respecting [0,1] bounds. Clipping an unbalanced allocation alone loses energy.
+respecting [0,1] bounds, including hours when initial regional allocations saturate.
 Mapping ratios use training-period observations only.
 
-## Wind conversion in the accepted study
+## Wind conversion in the released corpus
 
-ERA5 100 m speed is in m/s. The accepted resource proxy uses the Nordex
+ERA5 100 m speed is in m/s. The resource proxy uses the Nordex
 N131/3600 Mode 0 power curve at density 1.1 kg/m3. Multiply speed by
 1.3247997658871304 **before** evaluating the curve. This coefficient uses
-January-July 2015 Pometeno Brdo output and a 17.5 MW capacity assumption;
-it is not an annual national-output fit or a turbine-resolved fleet simulation.
+January-July 2015 Pometeno Brdo output and a 17.5 MW capacity assumption.
+The plant-calibrated conversion is applied as a national resource proxy.
 `scripts/wind_conversion.py` requires explicit curve units, rated power, source,
-and operating range. A generic national CF rescaling is not the same method.
+and operating range.
 Raw weather, the full bootstrap pool and third-party curve material are excluded.

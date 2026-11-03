@@ -15,8 +15,8 @@
       "sha256": "ae2022cc2d600a5baa824b72e53c5536d198937bfa90285b9a3bd5538176ad97"
     },
     "README.md": {
-      "bytes": 4166,
-      "sha256": "c33d3868346c831542784636ef4bcb9a86ff16f5a046710bd193831055cab996"
+      "bytes": 4723,
+      "sha256": "d4e1edd7ae308ac95ca33cc6ff3a2d011e10fb9c17df553d6a9354aec292b0e2"
     },
     "RIGHTS.md": {
       "bytes": 373,
@@ -31,24 +31,24 @@
       "sha256": "2aba3731dbc65cfa6802b3225a2c117ae62775b36f039310e93d89d67fd9603b"
     },
     "docs/CHANNEL_RESULTS.md": {
-      "bytes": 6849,
-      "sha256": "24460679c74f8fceeaf605c78b4e5073ace5cf9a68c2fe7bc5eaea3bedd06361"
+      "bytes": 6786,
+      "sha256": "79807512d3eb6ab751cc3b3d2076b07b7c7e3d277338a630faff7f91c0b29b4c"
     },
     "docs/DATA.md": {
-      "bytes": 2852,
-      "sha256": "e1da2a0decc17261873bf2786463d0368dbe1b804df2c18537c0b01701e2c531"
+      "bytes": 2787,
+      "sha256": "a6cb29c2a4e97f3cc8dd3b42150f595ad103ec3880b590cff41ab40717b86547"
     },
     "docs/INTEGRATION.md": {
-      "bytes": 3794,
-      "sha256": "079027002438dcaa3db2a04584c53b36303ab4c414278e088f19a14e626ef20f"
+      "bytes": 3655,
+      "sha256": "d35c34771cb948326672a9d2bfb714f28907c2e7255d6cc357d42222ec4429b6"
     },
     "docs/RESEARCH_RESULTS.md": {
-      "bytes": 3835,
-      "sha256": "df36fe7f7892593307c20f61522ed4831aea00fafc690a7e47265f0a4f6b504b"
+      "bytes": 3941,
+      "sha256": "0eb2ae5f3d2c80de347b3c1cffffacb8b0f0db808ff402d74e8701d159f64c64"
     },
     "docs/USAGE.md": {
-      "bytes": 3990,
-      "sha256": "5e25b99c0830ba1787ba8a1980a4b1c516ed38a014fe1b7fe56df75b3ca6cf9e"
+      "bytes": 4058,
+      "sha256": "40834dcf29a3b3bfae12e33037d8153424d97b11c94cc0fcb785484c02f60469"
     },
     "docs/VALIDATION.md": {
       "bytes": 3821,
@@ -284,7 +284,7 @@
     },
     "pyproject.toml": {
       "bytes": 511,
-      "sha256": "f7e2123a4e61625438e83509adc8dd8d4456570458f3d68420e1dfae3ef778eb"
+      "sha256": "baa1d1d8ee8b54a94905f32f6d14870147ed774d8d95507d10105f468cca0ef7"
     },
     "requirements.txt": {
       "bytes": 150,

@@ -27,7 +27,9 @@ thermal-index cluster representatives: standardized cooling degree hours above
 to each central cluster and is kept as the common reference. Selection uses the
 generated ensemble before the energy runs. Full Cold/Hot chronologies are retained.
 
-The existing trends apply linearly from 2020 to 2050: solar x1.03, wind x0.92,
+## Planning-year input trends
+
+The input trends apply linearly from 2020 to 2050: solar x1.03, wind x0.92,
 temperature +1.5 C, with CF clipped to [0,1]. All 49 resulting profile hashes are
 verified against `scenario_inputs.csv`. Spatial mapping checks cover both resource
 channels after mapping, including channels held fixed.
@@ -53,8 +55,8 @@ stock, inherited new stock, current additions and resulting installed stock.
 Retirements after the first anchor are derived from successive native stock records.
 
 MW measures equipment capacity. MWh measures stationary-battery and hydrogen-store
-energy capacity. The `capacity_addition` column is a **0/1 flag**, not a capacity:
-the capacity value is in `value`. `extra_cap_inv` is retained as a native objective
+energy capacity. The `capacity_addition` column is a **0/1 inclusion flag**;
+`value` holds the capacity. `extra_cap_inv` is retained as a native objective
 term but excluded from sums of physical additions. Native objective contributions
 use each row's saved coefficient and discounting. Per-window objectives retain
 their model monetary convention; summing overlapping windows would double-count.
@@ -79,7 +81,7 @@ All paths below are under [`results/channel_investments`](../results/channel_inv
 | `summary/capacity_changes.csv` | Sum of addition differences, with MW and MWh kept separate |
 
 Demand sums are MWh over the hourly year. COP mean/min/max are dimensionless;
-the raw sum of hourly COP values has no energy interpretation. `key_json`
+the COP `sum` column is an arithmetic sum of hourly ratios. `key_json`
 preserves the native asset/system/year indices. The stored `source` paths identify
 the original result locations, made relative for portability.
 
@@ -87,9 +89,8 @@ the original result locations, made relative for portability.
 
 Solar Low has a higher objective than Average at every anchor. Wind Low is higher
 through 2040, then lower in 2045/2050. Cold is lower in 2020/2025 and higher later.
-The differences include each path's subsequent stock history. The selected
-temperature, solar and wind ranges differ, so these responses do not establish a
-universal ranking of channel importance.
+The differences are conditional on the stated input ranges and each path's
+subsequent stock history. Input ranges are listed in `scenario_inputs.csv`.
 
 ![Objective changes](../results/channel_investments/figures/objective_changes.png)
 
@@ -98,9 +99,9 @@ Objective panels use separate vertical scales. Percentage is
 
 ![Capacity changes in MW](../results/channel_investments/figures/investment_changes_MW.png)
 
-The MW plot sums realized additions across the listed equipment families. It is
-an overview of addition changes, not installed power or a single technology total.
-Use the family/asset tables to interpret technology substitutions.
+The MW plot sums realized additions across the listed equipment families.
+Family-level additions are in `summary/investment_summary.csv`; resulting
+installed capacities are in `installed_stock.csv`.
 
 ![Storage energy changes in MWh](../results/channel_investments/figures/investment_changes_MWh.png)
 

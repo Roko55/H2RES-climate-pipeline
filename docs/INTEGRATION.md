@@ -1,9 +1,8 @@
 # H2RES integration
 
-The package prepares inputs. It does not install or execute H2RES or Gurobi.
+The package prepares inputs for a separately installed H2RES model and solver.
 Run the offline walkthrough first: `python examples/demo.py --output exports/demo_01`.
-The fixture shows complete mapping files with a fabricated country and unit names.
-It is not a scientific benchmark.
+The fixture contains illustrative weather, country and unit tables.
 
 ## Availability adapter
 
@@ -34,24 +33,23 @@ with complete Cold/Hot temperature chronologies. Apply the existing multisector
 thermal adapter with `scale_annual_totals=False`. Each path inherits its own
 realized stock after the common 2020 start. See [CHANNEL_RESULTS.md](CHANNEL_RESULTS.md).
 
-
 `h2res_interface.couple_temperature` is the explicit-baseline multisector adapter.
 It returns new heat/cooling/COP dictionaries; callers supply temperature baselines,
 unit lists and complete annual dictionaries. See `examples/demo.py` for a complete
 call. It preserves annual thermal demand, changing hourly shape and COP.
 
-The earlier combined-resource multisector study uses `select-final --design multisector` and holds
+The combined-resource multisector study uses `select-final --design multisector` and holds
 Average temperature, heat/cooling and COP common across Low/Average/High at each
 planning anchor. All paths share the initial 2020 stock; subsequent investment
-histories belong to their respective paths. They are not matched-stock optimizations.
+histories belong to their respective paths.
 
-In the earlier separate applications, the electricity/newshare selector differs from the multisector selector. The
-thermal-isolation cases hold the same Average renewable inputs while changing
+The separate electricity and thermal applications use the electricity/newshare
+selector. Thermal-isolation cases hold the same Average renewable inputs while changing
 temperature with training-derived annual-temperature P10/P50/P90 offsets.
 `provenance/executed_final/climate_runtime_inputs.py` and
 `climate_newshare_adapter.py` preserve those executed interfaces and key schemas.
 They depend on the original solver project and are provenance, not standalone entry
-points. Do not substitute the multisector thermal adapter in that experiment.
+points. The applications retain their respective thermal adapters and input schemas.
 
 For explicit-baseline access to its numerical methods, the installed
 `h2res_climate.prepared_thermal` module exposes
@@ -59,9 +57,9 @@ For explicit-baseline access to its numerical methods, the installed
 from that runtime. Demand uses 18/22 C drivers, bounded and smoothed multipliers,
 annual-total restoration and optional peak caps. COP scales the existing baseline
 by a Carnot-ratio response, restores its arithmetic mean **before** clipping to
-1.2..5.5; clipping can alter the final mean. These functions do not select units,
-load hidden baselines or invoke a solver.
+1.2..5.5; clipping can alter the final mean. The caller supplies unit groups,
+baseline demand and COP, and baseline/scenario temperatures.
 
-The complete solver database, stock-updating controller and licensed optimizer
-are not distributed. Reproducing archived energy outcomes requires those inputs;
-running the climate demo alone does not reproduce an investment experiment.
+Reproducing the archived energy optimizations requires the original solver
+database, stock-updating controller and licensed optimizer. The climate demo
+covers input preparation with illustrative data.
