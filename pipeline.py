@@ -445,9 +445,14 @@ def select_release(args):
         profiles = select_cases(ROOT, args.design, args.year)
     with output.open("xb") as stream:
         np.savez_compressed(stream, **profiles)
-    save_json(output.with_suffix(".json"), {"output_sha256": digest(output),
+    metadata = {"output_sha256": digest(output),
         "design": args.design, "year": args.year,
-        "interpretation": "Designed sensitivity cases, not calibrated weather-event probabilities"})
+        "interpretation": "Designed sensitivity cases, not calibrated weather-event probabilities"}
+    if args.design == 'channel':
+        metadata.update(experiment='channel_sensitivity_20261102', weather='stationary',
+            solar_factor_2050=1.0, wind_factor_2050=1.0, temperature_offset_2050_C=0.0,
+            channels=CHANNELS, units=['capacity factor', 'capacity factor', 'degrees C'])
+    save_json(output.with_suffix(".json"), metadata)
 
 
 def main(argv=None):

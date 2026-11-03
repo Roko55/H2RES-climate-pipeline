@@ -1,10 +1,10 @@
-# Individual solar, wind and temperature analyses
+# Stationary-weather solar, wind and temperature analyses
 
 The same full multisector H2RES model is evaluated with one climate channel
 changed at a time. Seven paths cover anchors 2020, 2025, ..., 2050. Each native
 window contains the current and next anchor, except the terminal 2050 window.
-The completed package has 42 new optimal windows and seven reused Average windows.
-Average reuse is supported by input, full-state and model reconstruction records.
+The completed V6 experiment has 49 newly solved optimal windows and no reused
+planning windows. Complete state handoffs are verified for each path.
 
 ## Profile selection
 
@@ -27,11 +27,12 @@ thermal-index cluster representatives: standardized cooling degree hours above
 to each central cluster and is kept as the common reference. Selection uses the
 generated ensemble before the energy runs. Full Cold/Hot chronologies are retained.
 
-## Planning-year input trends
+## Stationary weather inputs
 
-The input trends apply linearly from 2020 to 2050: solar x1.03, wind x0.92,
-temperature +1.5 C, with CF clipped to [0,1]. All 49 resulting profile hashes are
-verified against `scenario_inputs.csv`. Spatial mapping checks cover both resource
+Each case uses the same selected 8760-hour profile at all seven planning anchors.
+Solar and wind factors remain 1.0; the temperature offset remains 0.0 C. All 49
+input hashes are verified against `scenario_inputs.csv`, with one unique hash
+per case across the seven anchors. Spatial mapping checks cover both resource
 channels after mapping, including channels held fixed.
 
 At 2020, Solar Low/Average/High mean CF is 0.105242/0.110304/0.114586;
@@ -64,7 +65,7 @@ Imports are endogenous; input-side exports retain the model's accounting convent
 
 ## Tables
 
-All paths below are under [`results/channel_investments`](../results/channel_investments):
+All paths below are under [`results/channel_sensitivity`](../results/channel_sensitivity):
 
 | File | Contents |
 |---|---|
@@ -92,18 +93,18 @@ through 2040, then lower in 2045/2050. Cold is lower in 2020/2025 and higher lat
 The differences are conditional on the stated input ranges and each path's
 subsequent stock history. Input ranges are listed in `scenario_inputs.csv`.
 
-![Objective changes](../results/channel_investments/figures/objective_changes.png)
+![Objective changes](../results/channel_sensitivity/figures/objective_changes.png)
 
 Objective panels use separate vertical scales. Percentage is
 `100 * (case objective - Average objective) / abs(Average objective)`.
 
-![Capacity changes in MW](../results/channel_investments/figures/investment_changes_MW.png)
+![Capacity changes in MW](../results/channel_sensitivity/figures/investment_changes_MW.png)
 
 The MW plot sums realized additions across the listed equipment families.
 Family-level additions are in `summary/investment_summary.csv`; resulting
 installed capacities are in `installed_stock.csv`.
 
-![Storage energy changes in MWh](../results/channel_investments/figures/investment_changes_MWh.png)
+![Storage energy changes in MWh](../results/channel_sensitivity/figures/investment_changes_MWh.png)
 
 The MWh plot sums stationary-battery and hydrogen-store additions. PNG and vector
 PDF versions are provided. Storage-addition differences are zero in these runs.
@@ -113,8 +114,17 @@ Capacity panels also use independent vertical scales. Reproduce all summaries an
 python analysis/channel_results.py --output exports/channel_summary
 ```
 
-The command verifies all 49 profile hashes, donor selection, Average reuse, numerical
+The command verifies all 49 profile hashes, donor selection, stationary weather,
+49 fresh solution and complete-state handoff records, numerical
 tolerances, objective decomposition and realized investment differences. It also
 checks the archived 2009 stock, 273 emission and 49 balance verification records.
 No new historical operational tests were run for these seven paths. The earlier
 45 operational cases retain their original electricity portfolios and weather years.
+
+## Earlier experiment
+
+The previous trend-based experiment remains under `results/channel_investments/`
+and `provenance/channel_investments/`, with its own [protocol](TREND_EXPERIMENT.md).
+Its original reproducible release is v0.5.1. These results are separate from the
+stationary-weather V6 tables above. The earlier 63-window combined-resource and
+separate-application cohort also retains its original inputs and labels.

@@ -14,6 +14,9 @@ python analysis/channel_results.py --output exports/channel_summary
 The channel NPZ contains `average`, `solar_low`, `solar_high`, `wind_low`,
 `wind_high`, `temperature_cold`, `temperature_hot`. Each has shape `[8760,3]`.
 All seven cases are checked against archived profile hashes for the requested anchor.
+For this stationary-weather design, each case has identical hourly values at every
+anchor from 2020 through 2050 (solar/wind multipliers 1.0/1.0, temperature offset 0 C).
+The other two experiment designs below retain their original scaling conventions.
 The analysis command reproduces summary CSVs and PNG/PDF figures from the
 delivered result tables. See [CHANNEL_RESULTS.md](CHANNEL_RESULTS.md) for units
 and experiment definitions.

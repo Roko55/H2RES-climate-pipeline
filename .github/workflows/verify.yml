@@ -32,8 +32,10 @@ jobs:
         run: python pipeline.py --help
       - name: Offline end-to-end walkthrough
         run: python examples/demo.py --output exports/ci_walkthrough
-      - name: Reproduce single-channel summaries and figures
+      - name: Reproduce stationary-weather V6 summaries and figures
         run: python analysis/channel_results.py --output exports/ci_channel_results
+      - name: Verify the separate archived trend experiment
+        run: python analysis/archive_trend_results.py --output exports/ci_trend_results
       - name: Export the seven single-channel cases
         run: python pipeline.py select-final --design channel --year 2030 --output exports/channel_cases.npz
       - name: Exact accepted solar replay and cohort identity

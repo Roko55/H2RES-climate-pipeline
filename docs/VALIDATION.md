@@ -11,36 +11,45 @@ under saturation, availability keys and explicit thermal baselines. Solar replay
 regenerates the accepted channel exactly. Wind/temperature are retained from the
 verified ensemble; full generation needs the original hash-bound corpus.
 
-## Single-channel multisector analyses
+## Stationary-weather multisector analyses
 
-The source archive SHA256 is
-`34c87f8be8f8333f17e4331bb3cfe687e3c4b354246fec9aa7b9b227916c1d81`.
+The source experiment is `channel_sensitivity_20261102`. Its archive SHA256 is
+`3ba80608a1faf9ddeb2685498e06aa8f4f60d0ba343425b4cc716b3d08635b1d`.
 All 20 package-manifest member hashes and ZIP CRCs were verified before publication.
-`provenance/channel_investments/source_records.json` links original records to the
-delivered files. `original_package_manifest.json` identifies the original archive;
-the root `artifact_manifest.json` verifies the actual publication inventory.
+`provenance/channel_sensitivity/source_records.json` links original records to
+delivered files; `original_package_manifest.json` retains the archive inventory.
+The root `artifact_manifest.json` verifies the publication inventory.
 
-The completed records contain 49 optimal planning windows, 42 new and seven reused,
-with 2009 stock, 273 emission and 49 balance checks passed. The portable analysis
-reconciles objective components, realized investment differences and stock totals;
-recomputes the donor selection; and verifies all 49 input profile hashes and means.
-The reused Average objectives and source hashes also match the earlier completed
-multisector Average. Full input/state reuse audits are retained in reference_decision.
+The completed records contain 49 newly solved optimal planning windows and no
+reused windows. The portable analysis reconciles objective components, realized
+investment differences and stock totals; recomputes donor selection; verifies all
+49 profile hashes, means and degree hours; and rejects weather changes across
+planning anchors. It also checks the archived 2009 stock, 273 emission and 49
+balance records. `completion_audit.json` records independent server verification
+of the frozen sources, numerical acceptance and complete state handoffs for all
+49 windows. The audit did not start new optimizations.
 
-Published numeric result tables are unchanged. Only the `source` path in the
-objective table is made relative. Relative paths also replace machine paths in
-preparation/reference records. Design metadata extracts the completed scientific
-protocol from the original plan. Scientific execution notes preserve observer
-compatibility and unchanged input/equation checks. The five frozen selection,
-worker-building and collection sources are retained in `executed_source/`; their
-hashes match preparation. They depend on the original model environment and serve
-as execution provenance. The portable profile selector and summary command are
-the public entry points.
+Numeric source tables are unchanged. Only source paths in the objective table are
+made relative, preserving numeric tokens. Preparation paths are normalized for
+portability. Design metadata extracts the scientific protocol from the source
+plan. The original execution overlay and independent audit sources are retained
+under `executed_source/`; preparation records identify the frozen server sources.
+These sources document execution in the original environment. Public entry points
+are the portable profile selector and summary command.
 
-The seven new paths have no new historical operational tests. Those tests remain
-limited to the earlier electricity portfolios. No solver is invoked by these
-publication checks; reproducing the energy optimizations requires the original
-model, inputs and licensed solver.
+The selected case uses one unique hourly profile hash across 2020-2050: solar and
+wind factors 1.0, temperature offset 0.0 C. Prices, policies, asset aging and the
+path's own inherited stock can still change between planning anchors.
+
+The earlier trend experiment remains separately reproducible using
+`python analysis/archive_trend_results.py --output exports/trend_summary` and its
+[archived protocol](TREND_EXPERIMENT.md). Its original v0.5.1 tag is preserved.
+
+The seven stationary-weather paths have no new historical operational tests.
+The existing 45 tests retain their original electricity portfolios. Publication checks invoke no solver;
+reproducing energy optimizations requires the original H2RES model, inputs and
+licensed solver. Raw weather, asset databases and solver licence files remain
+excluded; [reuse rights](../RIGHTS.md) are unchanged.
 
 ## Earlier analyses and profile models
 

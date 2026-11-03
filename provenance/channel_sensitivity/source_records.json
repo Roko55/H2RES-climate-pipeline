@@ -1,0 +1,90 @@
+{
+  "experiment": "channel_sensitivity_20261102",
+  "weather": "stationary",
+  "archive_sha256": "3ba80608a1faf9ddeb2685498e06aa8f4f60d0ba343425b4cc716b3d08635b1d",
+  "archive_members_verified": 20,
+  "records": {
+    "delivery/channel_comparison.csv": {
+      "sha256": "b4d183ae63494a404830568a8d36b096ab64d7a3f4ca7cede606cba824acd49a",
+      "published_as": "results/channel_sensitivity/channel_comparison.csv"
+    },
+    "delivery/installed_stock.csv": {
+      "sha256": "d327639fdd2a4e1b9fd9e4b3c268f892511a560940898d08eeed231ca51ceddf",
+      "published_as": "results/channel_sensitivity/installed_stock.csv"
+    },
+    "delivery/interpretation.json": {
+      "sha256": "651aa13cef38c5842b6ed8e905e0a9c6de29e651926ec77ed2bf8e1ea5edf9fd"
+    },
+    "delivery/investments_by_technology.csv": {
+      "sha256": "10b5a4acd7bdcd085c11ee4112e1da7f37b148a456c4c7465bb25bf7747df302",
+      "published_as": "results/channel_sensitivity/investments_by_technology.csv"
+    },
+    "delivery/investment_changes_MW.pdf": {
+      "sha256": "cf6a0a7540aeb9b2dbd449673e7a2fa59b7707e972ae07e5c043f4261c5569ec"
+    },
+    "delivery/investment_changes_MW.png": {
+      "sha256": "81bd269da6aac6e5ab9cf47611404a8fcd9e9929cb057fca836674876f7cc2a6"
+    },
+    "delivery/investment_changes_MWh.pdf": {
+      "sha256": "7bfc73f27bf4b70b583407fef7fba4ac2813be75266d5961ed4b5c79faba6de9"
+    },
+    "delivery/investment_changes_MWh.png": {
+      "sha256": "705b7ea98b6717ee39e04258a3f3cceba1fae23b05a6083bfb4922ae4da485bf"
+    },
+    "delivery/objective_comparison.csv": {
+      "sha256": "2e727f9aabd8cfff27b0b132b3f84dff577c5b3002495e2798bee352b7e22980",
+      "transformation": "Source paths made relative; numerical tokens unchanged",
+      "published_as": "results/channel_sensitivity/objective_comparison.csv"
+    },
+    "delivery/objective_components.csv": {
+      "sha256": "debb22ee96bf9830889711b6d5df1ffb08b8563e3d53d50420c993b435c3e008",
+      "published_as": "results/channel_sensitivity/objective_components.csv"
+    },
+    "delivery/session_recovery_manifest.json": {
+      "sha256": "1ae4266f509992a4ea5f398055c1b2e7be5743659296a2739e07484e276a5f4a"
+    },
+    "delivery/system_outcomes.csv": {
+      "sha256": "359cad2327740ae5280650e59dbf5be51c86c9693027c6892b1cff2a6386397c",
+      "published_as": "results/channel_sensitivity/system_outcomes.csv"
+    },
+    "delivery/thermal_inputs.csv": {
+      "sha256": "66171c2029614ca08d228b90d97829fe8cc0e14bf7ba0d9f6a36e550ed01c245",
+      "published_as": "results/channel_sensitivity/thermal_inputs.csv"
+    },
+    "preparation.json": {
+      "sha256": "e416bf260789395e594df21cb829c82d1e6a5de00dcf2a901f1d32bedd4bfce5",
+      "published_as": "provenance/channel_sensitivity/preparation.json",
+      "transformation": "Source paths made relative"
+    },
+    "plan.json": {
+      "sha256": "1c544b78e7e5fa06712af23415284685816ef560c011434dc4e46eaf9453ea98",
+      "published_as": "provenance/channel_sensitivity/design.json",
+      "transformation": "Completed experiment design extracted; working instructions omitted; prior donor-selection evidence retained"
+    },
+    "mapping_checks.json": {
+      "sha256": "3405b2f67810a162059ff79f40faec216907e52fae2ac814dd6ea8d2440b30f4",
+      "published_as": "provenance/channel_sensitivity/mapping_checks.json"
+    },
+    "scenario_inputs.csv": {
+      "sha256": "d2c043a78ea9717f5305688888d914c8debdc5d37f2ddb02605767ee8b07b20a",
+      "published_as": "results/channel_sensitivity/scenario_inputs.csv"
+    },
+    "reference_decision.json": {
+      "sha256": "6f944aa4a7c8fb36138b51ef6be10ae5a041414ee630ccb1265d3c563c1dc2ba",
+      "published_as": "provenance/channel_sensitivity/reference_decision.json",
+      "transformation": "Source paths made relative"
+    },
+    "post_audit.json": {
+      "sha256": "a30e9fcf03040f970aa24ba54ee3268beb0b3f60eefba58e1143269be537f4e0",
+      "published_as": "provenance/channel_sensitivity/post_audit.json"
+    },
+    "final_integrity.json": {
+      "sha256": "fa573130e6f5e4ca49f39752f986ab06724717de8384afbbb7aa6f92e26cd65d",
+      "published_as": "provenance/channel_sensitivity/final_integrity.json"
+    }
+  },
+  "additional_records": {
+    "completion_audit.json": "de843a52e2520d90481907598c38779f8a42717f1038cec2b46adebdfd60b2ec"
+  },
+  "scope": "Original archive identities; delivered identities are in artifact_manifest.json"
+}

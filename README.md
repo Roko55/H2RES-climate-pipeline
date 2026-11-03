@@ -51,7 +51,7 @@ Each case changes one complete hourly channel from the same Average profile.
 The multisector heat/cooling/COP adapter then applies the temperature chronology.
 In the archived multisector runs, all seven paths start from common 2020 stock
 and carry their own subsequent investments and retirements through 2050. Their
-planning-year input trends are defined in [CHANNEL_RESULTS.md](docs/CHANNEL_RESULTS.md).
+stationary-weather inputs are defined in [CHANNEL_RESULTS.md](docs/CHANNEL_RESULTS.md).
 
 Map these profiles to your declared generation units with `export-units`, then use
 `h2res_interface.py` for availability dictionaries or CSVs. See the
@@ -62,7 +62,7 @@ The H2RES model, solver licence and full input database are supplied separately.
 
 | Analysis | Scope |
 |---|---|
-| [Individual solar, wind and temperature](docs/CHANNEL_RESULTS.md) | Trend-based multisector sensitivities; 49 optimal windows, including 7 reused Average windows |
+| [Individual solar, wind and temperature](docs/CHANNEL_RESULTS.md) | Stationary-weather V6 multisector sensitivities; 49 newly solved optimal windows |
 | [Combined resource and separate applications](docs/RESEARCH_RESULTS.md) | Earlier 63 planning windows and 45 operational tests on their original electricity portfolios |
 | [Climate profile diagnostics](results/profile_metrics.csv) | Complete 43800 reporting hours, 2020-2024 |
 
@@ -72,7 +72,7 @@ Single-channel objective and investment results can be summarized without a solv
 python analysis/channel_results.py --output exports/channel_summary
 ```
 
-![Single-channel objective differences](results/channel_investments/figures/objective_changes.png)
+![Single-channel objective differences](results/channel_sensitivity/figures/objective_changes.png)
 
 Each panel shows `100 * (case objective - Average objective) / abs(Average objective)`
 at each planning anchor. Vertical scales differ. Each objective covers its native
@@ -89,6 +89,8 @@ designed sensitivities. Cluster fractions describe membership in the generated e
 The [autoencoder study](https://github.com/Roko55/H2RES-autoencoder/tree/v0.1.0)
 retains its own model and historical comparison corpus.
 
-For a fixed reference, cite [version 0.5.1](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.5.1).
+For a fixed reference, cite [version 0.6.0](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.6.0).
+The earlier trend-based experiment remains separately documented in
+[the experiment archive](docs/TREND_EXPERIMENT.md).
 Raw weather and full solver inputs are excluded. Reuse rights are described in
 [RIGHTS.md](RIGHTS.md).

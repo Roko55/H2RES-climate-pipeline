@@ -5,11 +5,13 @@ The analyses use the released ensemble in `profiles/accepted.npy`, SHA256
 
 ## Individual channels
 
-The [trend-based single-channel multisector analyses](CHANNEL_RESULTS.md) contain 49 optimal
-planning windows: 42 new windows and seven reused Average windows. Complete solar,
+The [stationary-weather single-channel multisector analyses](CHANNEL_RESULTS.md) contain
+49 newly solved optimal planning windows, with no reused windows. Complete solar,
 wind or temperature chronologies change independently against common Average.
 All paths share initial 2020 stock and inherit their own later stock histories.
-Their tables and figures are in `results/channel_investments/`.
+Their tables and figures are in `results/channel_sensitivity/`. Each selected
+weather profile is identical at all planning anchors. The earlier
+[trend-based experiment](TREND_EXPERIMENT.md) is retained separately.
 
 ## Combined resource and separate applications
 

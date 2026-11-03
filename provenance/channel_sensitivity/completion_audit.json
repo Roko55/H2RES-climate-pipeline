@@ -1,0 +1,508 @@
+{
+  "utc": "2026-11-03T09:30:28.593324+00:00",
+  "passed": true,
+  "windows_checked": 49,
+  "frozen_source_files_verified": 461,
+  "overlay_files_verified": 8,
+  "checks": [
+    {
+      "case": "average",
+      "year": 2020,
+      "status": 2,
+      "constraint_violation": 1.2398970739013748e-11,
+      "bound_violation": 8.952838470577262e-13,
+      "ledger_gap": 0.0009198188781738281,
+      "component_gap": 0.0005621910095214844,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "average",
+      "year": 2025,
+      "status": 2,
+      "constraint_violation": 4.547473508864641e-13,
+      "bound_violation": 1.6910917111090384e-12,
+      "ledger_gap": 0.00022220611572265625,
+      "component_gap": -0.00027561187744140625,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "average",
+      "year": 2030,
+      "status": 2,
+      "constraint_violation": 2.5366375666635577e-12,
+      "bound_violation": 8.469669410260394e-12,
+      "ledger_gap": 0.0012278556823730469,
+      "component_gap": 0.0006504058837890625,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "average",
+      "year": 2035,
+      "status": 2,
+      "constraint_violation": 6.750155989720952e-13,
+      "bound_violation": 0.0,
+      "ledger_gap": 0.000978231430053711,
+      "component_gap": 0.0004069805145263672,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "average",
+      "year": 2040,
+      "status": 2,
+      "constraint_violation": 3.979039320256561e-13,
+      "bound_violation": 0.0,
+      "ledger_gap": -1.9073486328125e-06,
+      "component_gap": 0.0001125335693359375,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "average",
+      "year": 2045,
+      "status": 2,
+      "constraint_violation": 7.503331289626658e-10,
+      "bound_violation": 2.3931079340400174e-11,
+      "ledger_gap": 2.205371856689453e-05,
+      "component_gap": 0.0003497600555419922,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "average",
+      "year": 2050,
+      "status": 2,
+      "constraint_violation": 8.339995360984176e-13,
+      "bound_violation": 3.2222709338272033e-12,
+      "ledger_gap": 0.0,
+      "component_gap": 9.98377799987793e-05,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "solar_low",
+      "year": 2020,
+      "status": 2,
+      "constraint_violation": 1.3638867812915123e-11,
+      "bound_violation": 6.792788553866558e-12,
+      "ledger_gap": 0.0009245872497558594,
+      "component_gap": 0.0005664825439453125,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "solar_low",
+      "year": 2025,
+      "status": 2,
+      "constraint_violation": 3.410605131648481e-13,
+      "bound_violation": 2.0889956431346945e-12,
+      "ledger_gap": 0.00022268295288085938,
+      "component_gap": -0.0002779960632324219,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "solar_low",
+      "year": 2030,
+      "status": 2,
+      "constraint_violation": 8.199663170671556e-12,
+      "bound_violation": 4.760636329592671e-13,
+      "ledger_gap": 0.0012230873107910156,
+      "component_gap": 0.0006480216979980469,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "solar_low",
+      "year": 2035,
+      "status": 2,
+      "constraint_violation": 9.308109838457312e-13,
+      "bound_violation": 0.0,
+      "ledger_gap": 0.0009777545928955078,
+      "component_gap": 0.0004086494445800781,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "solar_low",
+      "year": 2040,
+      "status": 2,
+      "constraint_violation": 3.979039320256561e-13,
+      "bound_violation": 0.0,
+      "ledger_gap": -5.0067901611328125e-06,
+      "component_gap": 0.00010895729064941406,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "solar_low",
+      "year": 2045,
+      "status": 2,
+      "constraint_violation": 1.7760015680323704e-11,
+      "bound_violation": 6.861824237785809e-11,
+      "ledger_gap": 2.5272369384765625e-05,
+      "component_gap": 0.0003472566604614258,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "solar_low",
+      "year": 2050,
+      "status": 2,
+      "constraint_violation": 4.246381024586299e-12,
+      "bound_violation": 0.0,
+      "ledger_gap": 0.0,
+      "component_gap": 9.906291961669922e-05,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "solar_high",
+      "year": 2020,
+      "status": 2,
+      "constraint_violation": 3.765876499528531e-13,
+      "bound_violation": 3.409184046176961e-11,
+      "ledger_gap": 0.0009112358093261719,
+      "component_gap": 0.0005559921264648438,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "solar_high",
+      "year": 2025,
+      "status": 2,
+      "constraint_violation": 3.410605131648481e-13,
+      "bound_violation": 2.9700686354772188e-12,
+      "ledger_gap": 0.0002155303955078125,
+      "component_gap": -0.0002818107604980469,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "solar_high",
+      "year": 2030,
+      "status": 2,
+      "constraint_violation": 1.3926637620897964e-12,
+      "bound_violation": 3.879563337250147e-11,
+      "ledger_gap": 0.001224517822265625,
+      "component_gap": 0.0006451606750488281,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "solar_high",
+      "year": 2035,
+      "status": 2,
+      "constraint_violation": 6.536993168992922e-13,
+      "bound_violation": 0.0,
+      "ledger_gap": 0.0009748935699462891,
+      "component_gap": 0.0004057884216308594,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "solar_high",
+      "year": 2040,
+      "status": 2,
+      "constraint_violation": 3.979039320256561e-13,
+      "bound_violation": 0.0,
+      "ledger_gap": -8.821487426757812e-06,
+      "component_gap": 0.00011181831359863281,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "solar_high",
+      "year": 2045,
+      "status": 2,
+      "constraint_violation": 6.6437411128106305e-12,
+      "bound_violation": 2.896322700887647e-12,
+      "ledger_gap": 2.110004425048828e-05,
+      "component_gap": 0.0003478527069091797,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "solar_high",
+      "year": 2050,
+      "status": 2,
+      "constraint_violation": 1.2491119250057636e-12,
+      "bound_violation": 3.853256096721215e-12,
+      "ledger_gap": 0.0,
+      "component_gap": 0.00010073184967041016,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "wind_low",
+      "year": 2020,
+      "status": 2,
+      "constraint_violation": 3.410605131648481e-13,
+      "bound_violation": 8.974154752650065e-12,
+      "ledger_gap": 0.0009341239929199219,
+      "component_gap": 0.000568389892578125,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "wind_low",
+      "year": 2025,
+      "status": 2,
+      "constraint_violation": 2.7000623958883807e-12,
+      "bound_violation": 6.963318810448982e-13,
+      "ledger_gap": 0.0011730194091796875,
+      "component_gap": 0.0006723403930664062,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "wind_low",
+      "year": 2030,
+      "status": 2,
+      "constraint_violation": 7.275957614183426e-12,
+      "bound_violation": 6.849631972727366e-12,
+      "ledger_gap": 0.0012445449829101562,
+      "component_gap": 0.0006546974182128906,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "wind_low",
+      "year": 2035,
+      "status": 2,
+      "constraint_violation": 7.94031507211912e-13,
+      "bound_violation": 0.0,
+      "ledger_gap": 0.0009753704071044922,
+      "component_gap": 0.00040435791015625,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "wind_low",
+      "year": 2040,
+      "status": 2,
+      "constraint_violation": 3.979039320256561e-13,
+      "bound_violation": 0.0,
+      "ledger_gap": -1.6689300537109375e-06,
+      "component_gap": 0.00011324882507324219,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "wind_low",
+      "year": 2045,
+      "status": 2,
+      "constraint_violation": 1.2744294508593157e-10,
+      "bound_violation": 1.2744294508593157e-10,
+      "ledger_gap": 1.4901161193847656e-05,
+      "component_gap": 0.000335693359375,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "wind_low",
+      "year": 2050,
+      "status": 2,
+      "constraint_violation": 5.678657544194721e-11,
+      "bound_violation": 5.678657544194721e-11,
+      "ledger_gap": 0.0,
+      "component_gap": 9.620189666748047e-05,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "wind_high",
+      "year": 2020,
+      "status": 2,
+      "constraint_violation": 9.947598300641403e-13,
+      "bound_violation": 8.952838470577262e-12,
+      "ledger_gap": 0.000919342041015625,
+      "component_gap": 0.00055694580078125,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "wind_high",
+      "year": 2025,
+      "status": 2,
+      "constraint_violation": 7.180034344855812e-12,
+      "bound_violation": 1.6977352856883954e-10,
+      "ledger_gap": 0.00021600723266601562,
+      "component_gap": -0.0002751350402832031,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "wind_high",
+      "year": 2030,
+      "status": 2,
+      "constraint_violation": 5.826450433232822e-13,
+      "bound_violation": 8.171241461241152e-13,
+      "ledger_gap": 0.0012278556823730469,
+      "component_gap": 0.0006513595581054688,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "wind_high",
+      "year": 2035,
+      "status": 2,
+      "constraint_violation": 7.887024366937112e-13,
+      "bound_violation": 1.5631940186722204e-13,
+      "ledger_gap": 0.000978231430053711,
+      "component_gap": 0.00040912628173828125,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "wind_high",
+      "year": 2040,
+      "status": 2,
+      "constraint_violation": 3.979039320256561e-13,
+      "bound_violation": 0.0,
+      "ledger_gap": -7.867813110351562e-06,
+      "component_gap": 0.00011444091796875,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "wind_high",
+      "year": 2045,
+      "status": 2,
+      "constraint_violation": 3.470501663827008e-12,
+      "bound_violation": 3.470501663827008e-12,
+      "ledger_gap": 0.00042557716369628906,
+      "component_gap": 0.0005323886871337891,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "wind_high",
+      "year": 2050,
+      "status": 2,
+      "constraint_violation": 3.903322109977125e-12,
+      "bound_violation": 3.903322109977125e-12,
+      "ledger_gap": 0.0,
+      "component_gap": -0.00012350082397460938,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "temperature_cold",
+      "year": 2020,
+      "status": 2,
+      "constraint_violation": 4.192202140984591e-13,
+      "bound_violation": 1.5134560271690134e-12,
+      "ledger_gap": 0.0009732246398925781,
+      "component_gap": 0.0005931854248046875,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "temperature_cold",
+      "year": 2025,
+      "status": 2,
+      "constraint_violation": 8.384404281969182e-13,
+      "bound_violation": 3.7836400679225335e-13,
+      "ledger_gap": 0.0002079010009765625,
+      "component_gap": -0.0002942085266113281,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "temperature_cold",
+      "year": 2030,
+      "status": 2,
+      "constraint_violation": 3.979039320256561e-13,
+      "bound_violation": 1.0651035609043902e-11,
+      "ledger_gap": 0.000274658203125,
+      "component_gap": -0.0001277923583984375,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "temperature_cold",
+      "year": 2035,
+      "status": 2,
+      "constraint_violation": 1.4551915228366852e-11,
+      "bound_violation": 0.0,
+      "ledger_gap": 3.0994415283203125e-06,
+      "component_gap": -0.0004100799560546875,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "temperature_cold",
+      "year": 2040,
+      "status": 2,
+      "constraint_violation": 3.979039320256561e-13,
+      "bound_violation": 0.0,
+      "ledger_gap": -0.00037789344787597656,
+      "component_gap": -0.0004646778106689453,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "temperature_cold",
+      "year": 2045,
+      "status": 2,
+      "constraint_violation": 4.547473508864641e-13,
+      "bound_violation": 0.0,
+      "ledger_gap": -0.0007295608520507812,
+      "component_gap": -0.0006792545318603516,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "temperature_cold",
+      "year": 2050,
+      "status": 2,
+      "constraint_violation": 4.547473508864641e-13,
+      "bound_violation": 0.0,
+      "ledger_gap": 0.0,
+      "component_gap": 6.318092346191406e-06,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "temperature_hot",
+      "year": 2020,
+      "status": 2,
+      "constraint_violation": 3.979039320256561e-13,
+      "bound_violation": 7.815970093361102e-13,
+      "ledger_gap": 0.0008893013000488281,
+      "component_gap": 0.0005407333374023438,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "temperature_hot",
+      "year": 2025,
+      "status": 2,
+      "constraint_violation": 1.3812950783176348e-11,
+      "bound_violation": 6.554756737386924e-13,
+      "ledger_gap": 0.00021648406982421875,
+      "component_gap": -0.00027179718017578125,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "temperature_hot",
+      "year": 2030,
+      "status": 2,
+      "constraint_violation": 4.547473508864641e-13,
+      "bound_violation": 7.794653811288299e-12,
+      "ledger_gap": -0.0006108283996582031,
+      "component_gap": -0.0005774497985839844,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "temperature_hot",
+      "year": 2035,
+      "status": 2,
+      "constraint_violation": 4.973799150320701e-13,
+      "bound_violation": 5.329070518200751e-13,
+      "ledger_gap": -0.0014028549194335938,
+      "component_gap": -0.0012814998626708984,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "temperature_hot",
+      "year": 2040,
+      "status": 2,
+      "constraint_violation": 3.979039320256561e-13,
+      "bound_violation": 0.0,
+      "ledger_gap": -0.0005207061767578125,
+      "component_gap": -0.0002529621124267578,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "temperature_hot",
+      "year": 2045,
+      "status": 2,
+      "constraint_violation": 2.872813098520055e-12,
+      "bound_violation": 1.5869527913991988e-12,
+      "ledger_gap": 2.205371856689453e-05,
+      "component_gap": 0.00011146068572998047,
+      "state_handoff_verified": true
+    },
+    {
+      "case": "temperature_hot",
+      "year": 2050,
+      "status": 2,
+      "constraint_violation": 7.673861546209082e-13,
+      "bound_violation": 7.673861546209082e-13,
+      "ledger_gap": 0.0,
+      "component_gap": -0.00021374225616455078,
+      "state_handoff_verified": true
+    }
+  ],
+  "stationary_weather_hashes_verified": true,
+  "unchanged_channels_verified": true,
+  "native_equations_unchanged": true,
+  "own_complete_state_handoffs_verified": true,
+  "stock_checks": 2009,
+  "emission_checks": 273,
+  "balance_checks": 49,
+  "new_optimization_or_training": false,
+  "manuscript_updated": false
+}

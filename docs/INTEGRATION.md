@@ -29,7 +29,8 @@ The command-line workflow still runs from this repository checkout.
 
 For the individual-channel multisector experiments, use
 `select-final --design channel --year 2030`. It exports all seven named cases
-with complete Cold/Hot temperature chronologies. Apply the existing multisector
+with complete Cold/Hot temperature chronologies. Each case retains the same
+8760-hour weather profile at every planning anchor, without additional trends. Apply the existing multisector
 thermal adapter with `scale_annual_totals=False`. Each path inherits its own
 realized stock after the common 2020 start. See [CHANNEL_RESULTS.md](CHANNEL_RESULTS.md).
 

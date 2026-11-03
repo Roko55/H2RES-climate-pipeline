@@ -1,0 +1,2010 @@
+case,year,family,key,remaining_original,inherited_new,new_addition,installed_native_capacity,native_retirements_since_previous_anchor,unit
+average,2020,cap_inv,"['TEBiomassHR', 2020]",29.0,0.0,0.0,29.0,,MW
+average,2020,cap_inv,"['TEPlomin1', 2020]",110.0,0.0,0.0,110.0,,MW
+average,2020,cap_inv,"['TEPlomin2', 2020]",192.0,0.0,0.0,192.0,,MW
+average,2020,cap_inv,"['TE-TOZagreb', 2020]",440.0,0.0,0.0,440.0,,MW
+average,2020,cap_inv,"['HEZakucac', 2020]",150.0,0.0,0.0,150.0,,MW
+average,2020,cap_inv,"['HESenj', 2020]",60.0,0.0,0.0,60.0,,MW
+average,2020,cap_inv,"['HEDubrovnik_HR', 2020]",30.0,0.0,0.0,30.0,,MW
+average,2020,cap_inv,"['RHEVelebit', 2020]",80.0,0.0,0.0,80.0,,MW
+average,2020,cap_inv,"['RHEOrlovac', 2020]",80.0,0.0,0.0,80.0,,MW
+average,2020,cap_inv,"['RHEVinodol', 2020]",3.0,0.0,0.0,3.0,,MW
+average,2020,cap_inv,"['NEKrskoHR', 2020]",348.0,0.0,0.0,348.0,,MW
+average,2020,cap_inv,"['TERijeka', 2020]",700.0,0.0,0.0,700.0,,MW
+average,2020,cap_inv,"['HR_Wind_HR032', 2020]",156.0,0.0,0.0,156.0,,MW
+average,2020,cap_inv,"['HR_Wind_HR033', 2020]",283.65,0.0,0.0,283.65,,MW
+average,2020,cap_inv,"['HR_Wind_HR034', 2020]",295.1,0.0,0.0,295.1,,MW
+average,2020,cap_inv,"['HR_Wind_HR035', 2020]",299.6,0.0,0.0,299.6,,MW
+average,2020,cap_inv,"['HR_Wind_HR037', 2020]",20.7,0.0,0.0,20.7,,MW
+average,2020,cap_inv,"['hror', 2020]",150.0,0.0,0.0,150.0,,MW
+average,2020,cap_inv,"['HECombo', 2020]",60.0,0.0,0.0,60.0,,MW
+average,2020,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2020]",256.995537,0.0,0.0,256.995537,,MW
+average,2020,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2020]",45.963105,0.0,0.0,45.963105,,MW
+average,2020,cap_inv,"['HR_Solar_HR_EAST', 2020]",159.541358,0.0,0.0,159.541358,,MW
+average,2020,cap_inv_FC,"['PEMFC_CHP', 2020]",0.0,0.0,0.0,0.0,,MW
+average,2020,cap_inv_FC,"['SOFC_CHP', 2020]",0.0,0.0,0.0,0.0,,MW
+average,2020,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+average,2020,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+average,2020,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+average,2020,heat_pump_ind_cap,"['ATW_HP', 2020]",150.0,0.0,0.0,150.0,,MW
+average,2020,heat_pump_ind_cap,"['geothermal_HP', 2020]",5.0,0.0,0.0,5.0,,MW
+average,2020,heat_pump_ind_cap,"['electric_boiler', 2020]",500.0,0.0,0.0,500.0,,MW
+average,2020,trad_boiler_ind_cap_inv,"['gas_boilers', 2020]",6488.35,0.0,0.0,6488.35,,MW
+average,2020,trad_boiler_ind_cap_inv,"['bio_boilers', 2020]",4419.05,0.0,0.0,4419.05,,MW
+average,2020,trad_boiler_ind_cap_inv,"['oil_boilers', 2020]",2059.05,0.0,0.0,2059.05,,MW
+average,2020,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+average,2020,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+average,2020,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+average,2020,stat_sto_cap_inv,"['Liion_storage', 2020]",5.0,0.0,0.0,5.0,,MWh
+average,2020,h2_sto_max_cap,"['H2_storage_tank', 2020]",10.0,0.0,0.0,10.0,,MWh
+average,2020,h2_electrolysis_max_cap,"['PEM_elec', 2020]",0.0,0.0,0.0,0.0,,MW
+average,2020,h2_electrolysis_max_cap,"['SOEC_elec', 2020]",0.0,0.0,0.0,0.0,,MW
+average,2020,h2_electrolysis_max_cap,"['Alkaline_EC', 2020]",0.0,0.0,0.0,0.0,,MW
+average,2025,cap_inv,"['TEBiomassHR', 2025]",29.0,0.0,0.0,29.0,0.0,MW
+average,2025,cap_inv,"['TEPlomin1', 2025]",110.0,0.0,0.0,110.0,0.0,MW
+average,2025,cap_inv,"['TEPlomin2', 2025]",192.0,0.0,0.0,192.0,0.0,MW
+average,2025,cap_inv,"['TE-TOZagreb', 2025]",440.0,0.0,0.0,440.0,0.0,MW
+average,2025,cap_inv,"['HEZakucac', 2025]",150.0,0.0,0.0,150.0,0.0,MW
+average,2025,cap_inv,"['HESenj', 2025]",60.0,0.0,0.0,60.0,0.0,MW
+average,2025,cap_inv,"['HEDubrovnik_HR', 2025]",30.0,0.0,0.0,30.0,0.0,MW
+average,2025,cap_inv,"['RHEVelebit', 2025]",80.0,0.0,0.0,80.0,0.0,MW
+average,2025,cap_inv,"['RHEOrlovac', 2025]",80.0,0.0,0.0,80.0,0.0,MW
+average,2025,cap_inv,"['RHEVinodol', 2025]",3.0,0.0,0.0,3.0,0.0,MW
+average,2025,cap_inv,"['NEKrskoHR', 2025]",348.0,0.0,0.0,348.0,0.0,MW
+average,2025,cap_inv,"['TERijeka', 2025]",700.0,0.0,0.0,700.0,0.0,MW
+average,2025,cap_inv,"['HR_Wind_HR032', 2025]",156.0,0.0,0.0,156.0,0.0,MW
+average,2025,cap_inv,"['HR_Wind_HR033', 2025]",283.65,0.0,0.0,283.65,0.0,MW
+average,2025,cap_inv,"['HR_Wind_HR034', 2025]",295.1,0.0,0.0,295.1,0.0,MW
+average,2025,cap_inv,"['HR_Wind_HR035', 2025]",299.6,0.0,0.0,299.6,0.0,MW
+average,2025,cap_inv,"['HR_Wind_HR037', 2025]",20.7,0.0,0.0,20.7,0.0,MW
+average,2025,cap_inv,"['hror', 2025]",150.0,0.0,0.0,150.0,0.0,MW
+average,2025,cap_inv,"['HECombo', 2025]",60.0,0.0,0.0,60.0,0.0,MW
+average,2025,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2025]",256.995537,0.0,0.0,256.995537,0.0,MW
+average,2025,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2025]",45.963105,0.0,0.0,45.963105,0.0,MW
+average,2025,cap_inv,"['HR_Solar_HR_EAST', 2025]",159.541358,0.0,0.0,159.541358,0.0,MW
+average,2025,cap_inv_FC,"['PEMFC_CHP', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+average,2025,cap_inv_FC,"['SOFC_CHP', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+average,2025,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+average,2025,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+average,2025,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+average,2025,heat_pump_ind_cap,"['ATW_HP', 2025]",90.0,0.0,0.0,90.0,60.0,MW
+average,2025,heat_pump_ind_cap,"['geothermal_HP', 2025]",3.0,0.0,0.0,3.0,2.0,MW
+average,2025,heat_pump_ind_cap,"['electric_boiler', 2025]",300.0,0.0,0.0,300.0,200.0,MW
+average,2025,trad_boiler_ind_cap_inv,"['gas_boilers', 2025]",3893.01,0.0,3842.8627156637167,7735.872715663717,2595.340000000001,MW
+average,2025,trad_boiler_ind_cap_inv,"['bio_boilers', 2025]",2651.43,0.0,0.0,2651.43,1767.6200000000003,MW
+average,2025,trad_boiler_ind_cap_inv,"['oil_boilers', 2025]",1235.43,0.0,0.0,1235.43,823.6200000000001,MW
+average,2025,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+average,2025,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+average,2025,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+average,2025,stat_sto_cap_inv,"['Liion_storage', 2025]",3.0,0.0,0.0,3.0,2.0,MWh
+average,2025,h2_sto_max_cap,"['H2_storage_tank', 2025]",10.0,0.0,0.0,10.0,0.0,MWh
+average,2025,h2_electrolysis_max_cap,"['PEM_elec', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+average,2025,h2_electrolysis_max_cap,"['SOEC_elec', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+average,2025,h2_electrolysis_max_cap,"['Alkaline_EC', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+average,2030,cap_inv,"['TEBiomassHR', 2030]",29.0,0.0,0.0,29.0,0.0,MW
+average,2030,cap_inv,"['TEPlomin1', 2030]",110.0,0.0,0.0,110.0,0.0,MW
+average,2030,cap_inv,"['TEPlomin2', 2030]",192.0,0.0,0.0,192.0,0.0,MW
+average,2030,cap_inv,"['TE-TOZagreb', 2030]",440.0,0.0,0.0,440.0,0.0,MW
+average,2030,cap_inv,"['HEZakucac', 2030]",150.0,0.0,0.0,150.0,0.0,MW
+average,2030,cap_inv,"['HESenj', 2030]",60.0,0.0,0.0,60.0,0.0,MW
+average,2030,cap_inv,"['HEDubrovnik_HR', 2030]",30.0,0.0,0.0,30.0,0.0,MW
+average,2030,cap_inv,"['RHEVelebit', 2030]",80.0,0.0,0.0,80.0,0.0,MW
+average,2030,cap_inv,"['RHEOrlovac', 2030]",80.0,0.0,0.0,80.0,0.0,MW
+average,2030,cap_inv,"['RHEVinodol', 2030]",3.0,0.0,0.0,3.0,0.0,MW
+average,2030,cap_inv,"['NEKrskoHR', 2030]",348.0,0.0,0.0,348.0,0.0,MW
+average,2030,cap_inv,"['TERijeka', 2030]",700.0,0.0,0.0,700.0,0.0,MW
+average,2030,cap_inv,"['HR_Wind_HR032', 2030]",156.0,0.0,0.0,156.0,0.0,MW
+average,2030,cap_inv,"['HR_Wind_HR033', 2030]",283.65,0.0,0.0,283.65,0.0,MW
+average,2030,cap_inv,"['HR_Wind_HR034', 2030]",295.1,0.0,0.0,295.1,0.0,MW
+average,2030,cap_inv,"['HR_Wind_HR035', 2030]",299.6,0.0,0.0,299.6,0.0,MW
+average,2030,cap_inv,"['HR_Wind_HR037', 2030]",20.7,0.0,0.0,20.7,0.0,MW
+average,2030,cap_inv,"['hror', 2030]",150.0,0.0,0.0,150.0,0.0,MW
+average,2030,cap_inv,"['HECombo', 2030]",60.0,0.0,0.0,60.0,0.0,MW
+average,2030,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2030]",256.995537,0.0,0.0,256.995537,0.0,MW
+average,2030,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2030]",45.963105,0.0,0.0,45.963105,0.0,MW
+average,2030,cap_inv,"['HR_Solar_HR_EAST', 2030]",159.541358,0.0,0.0,159.541358,0.0,MW
+average,2030,cap_inv_FC,"['PEMFC_CHP', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+average,2030,cap_inv_FC,"['SOFC_CHP', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+average,2030,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+average,2030,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+average,2030,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+average,2030,heat_pump_ind_cap,"['ATW_HP', 2030]",45.0,0.0,0.0,45.0,45.0,MW
+average,2030,heat_pump_ind_cap,"['geothermal_HP', 2030]",1.5,0.0,0.0,1.5,1.5,MW
+average,2030,heat_pump_ind_cap,"['electric_boiler', 2030]",150.0,0.0,0.0,150.0,150.0,MW
+average,2030,trad_boiler_ind_cap_inv,"['gas_boilers', 2030]",1946.505,3842.8627156637167,3699.8128605772927,9489.18057624101,1946.5049999999992,MW
+average,2030,trad_boiler_ind_cap_inv,"['bio_boilers', 2030]",1325.715,0.0,0.0,1325.715,1325.715,MW
+average,2030,trad_boiler_ind_cap_inv,"['oil_boilers', 2030]",617.715,0.0,0.0,617.715,617.715,MW
+average,2030,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+average,2030,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+average,2030,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+average,2030,stat_sto_cap_inv,"['Liion_storage', 2030]",1.5,0.0,0.0,1.5,1.5,MWh
+average,2030,h2_sto_max_cap,"['H2_storage_tank', 2030]",10.0,0.0,0.0,10.0,0.0,MWh
+average,2030,h2_electrolysis_max_cap,"['PEM_elec', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+average,2030,h2_electrolysis_max_cap,"['SOEC_elec', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+average,2030,h2_electrolysis_max_cap,"['Alkaline_EC', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+average,2035,cap_inv,"['TEBiomassHR', 2035]",29.0,0.0,0.0,29.0,0.0,MW
+average,2035,cap_inv,"['TEPlomin1', 2035]",69.41,0.0,0.0,69.41,40.59,MW
+average,2035,cap_inv,"['TEPlomin2', 2035]",121.152,0.0,0.0,121.152,70.848,MW
+average,2035,cap_inv,"['TE-TOZagreb', 2035]",319.0,0.0,0.0,319.0,121.0,MW
+average,2035,cap_inv,"['HEZakucac', 2035]",150.0,0.0,0.0,150.0,0.0,MW
+average,2035,cap_inv,"['HESenj', 2035]",60.0,0.0,0.0,60.0,0.0,MW
+average,2035,cap_inv,"['HEDubrovnik_HR', 2035]",30.0,0.0,0.0,30.0,0.0,MW
+average,2035,cap_inv,"['RHEVelebit', 2035]",80.0,0.0,0.0,80.0,0.0,MW
+average,2035,cap_inv,"['RHEOrlovac', 2035]",80.0,0.0,0.0,80.0,0.0,MW
+average,2035,cap_inv,"['RHEVinodol', 2035]",3.0,0.0,0.0,3.0,0.0,MW
+average,2035,cap_inv,"['NEKrskoHR', 2035]",0.0,0.0,0.0,0.0,348.0,MW
+average,2035,cap_inv,"['TERijeka', 2035]",441.7,0.0,0.0,441.7,258.3,MW
+average,2035,cap_inv,"['HR_Wind_HR032', 2035]",156.0,0.0,0.0,156.0,0.0,MW
+average,2035,cap_inv,"['HR_Wind_HR033', 2035]",283.65,0.0,0.0,283.65,0.0,MW
+average,2035,cap_inv,"['HR_Wind_HR034', 2035]",295.1,0.0,0.0,295.1,0.0,MW
+average,2035,cap_inv,"['HR_Wind_HR035', 2035]",299.6,0.0,0.0,299.6,0.0,MW
+average,2035,cap_inv,"['HR_Wind_HR037', 2035]",20.7,0.0,0.0,20.7,0.0,MW
+average,2035,cap_inv,"['hror', 2035]",150.0,0.0,0.0,150.0,0.0,MW
+average,2035,cap_inv,"['HECombo', 2035]",60.0,0.0,0.0,60.0,0.0,MW
+average,2035,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2035]",256.995537,0.0,0.0,256.995537,0.0,MW
+average,2035,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2035]",45.963105,0.0,0.0,45.963105,0.0,MW
+average,2035,cap_inv,"['HR_Solar_HR_EAST', 2035]",159.541358,0.0,0.0,159.541358,0.0,MW
+average,2035,cap_inv_FC,"['PEMFC_CHP', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+average,2035,cap_inv_FC,"['SOFC_CHP', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+average,2035,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+average,2035,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+average,2035,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+average,2035,heat_pump_ind_cap,"['ATW_HP', 2035]",0.0,0.0,0.7415417032946735,0.7415417032946735,45.0,MW
+average,2035,heat_pump_ind_cap,"['geothermal_HP', 2035]",0.0,0.0,0.14184397163120568,0.14184397163120568,1.5,MW
+average,2035,heat_pump_ind_cap,"['electric_boiler', 2035]",0.0,0.0,0.14184397163120568,0.14184397163120568,150.0,MW
+average,2035,trad_boiler_ind_cap_inv,"['gas_boilers', 2035]",0.0,7542.675576241009,3360.569947330937,10903.245523571946,1946.505000000001,MW
+average,2035,trad_boiler_ind_cap_inv,"['bio_boilers', 2035]",0.0,0.0,0.0,0.0,1325.715,MW
+average,2035,trad_boiler_ind_cap_inv,"['oil_boilers', 2035]",0.0,0.0,0.0,0.0,617.715,MW
+average,2035,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+average,2035,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+average,2035,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+average,2035,stat_sto_cap_inv,"['Liion_storage', 2035]",0.0,0.0,0.0,0.0,1.5,MWh
+average,2035,h2_sto_max_cap,"['H2_storage_tank', 2035]",10.0,0.0,0.0,10.0,0.0,MWh
+average,2035,h2_electrolysis_max_cap,"['PEM_elec', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+average,2035,h2_electrolysis_max_cap,"['SOEC_elec', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+average,2035,h2_electrolysis_max_cap,"['Alkaline_EC', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+average,2040,cap_inv,"['TEBiomassHR', 2040]",29.0,0.0,0.0,29.0,0.0,MW
+average,2040,cap_inv,"['TEPlomin1', 2040]",6.93,0.0,0.0,6.93,62.48,MW
+average,2040,cap_inv,"['TEPlomin2', 2040]",12.096,0.0,0.0,12.096,109.056,MW
+average,2040,cap_inv,"['TE-TOZagreb', 2040]",63.8,0.0,0.0,63.8,255.2,MW
+average,2040,cap_inv,"['HEZakucac', 2040]",150.0,0.0,0.0,150.0,0.0,MW
+average,2040,cap_inv,"['HESenj', 2040]",60.0,0.0,0.0,60.0,0.0,MW
+average,2040,cap_inv,"['HEDubrovnik_HR', 2040]",30.0,0.0,0.0,30.0,0.0,MW
+average,2040,cap_inv,"['RHEVelebit', 2040]",80.0,0.0,0.0,80.0,0.0,MW
+average,2040,cap_inv,"['RHEOrlovac', 2040]",80.0,0.0,0.0,80.0,0.0,MW
+average,2040,cap_inv,"['RHEVinodol', 2040]",3.0,0.0,0.0,3.0,0.0,MW
+average,2040,cap_inv,"['NEKrskoHR', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+average,2040,cap_inv,"['TERijeka', 2040]",44.1,0.0,0.0,44.1,397.59999999999997,MW
+average,2040,cap_inv,"['HR_Wind_HR032', 2040]",156.0,0.0,0.0,156.0,0.0,MW
+average,2040,cap_inv,"['HR_Wind_HR033', 2040]",283.65,0.0,0.0,283.65,0.0,MW
+average,2040,cap_inv,"['HR_Wind_HR034', 2040]",295.1,0.0,0.0,295.1,0.0,MW
+average,2040,cap_inv,"['HR_Wind_HR035', 2040]",299.6,0.0,0.0,299.6,0.0,MW
+average,2040,cap_inv,"['HR_Wind_HR037', 2040]",20.7,0.0,0.0,20.7,0.0,MW
+average,2040,cap_inv,"['hror', 2040]",150.0,0.0,0.0,150.0,0.0,MW
+average,2040,cap_inv,"['HECombo', 2040]",60.0,0.0,0.0,60.0,0.0,MW
+average,2040,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2040]",256.995537,0.0,0.0,256.995537,0.0,MW
+average,2040,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2040]",45.963105,0.0,0.0,45.963105,0.0,MW
+average,2040,cap_inv,"['HR_Solar_HR_EAST', 2040]",159.541358,0.0,0.0,159.541358,0.0,MW
+average,2040,cap_inv_FC,"['PEMFC_CHP', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+average,2040,cap_inv_FC,"['SOFC_CHP', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+average,2040,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+average,2040,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+average,2040,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+average,2040,heat_pump_ind_cap,"['ATW_HP', 2040]",0.0,0.7415417032946735,0.06178615398314982,0.8033278572778233,0.0,MW
+average,2040,heat_pump_ind_cap,"['geothermal_HP', 2040]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+average,2040,heat_pump_ind_cap,"['electric_boiler', 2040]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+average,2040,trad_boiler_ind_cap_inv,"['gas_boilers', 2040]",0.0,10903.245523571946,0.0,10903.245523571946,0.0,MW
+average,2040,trad_boiler_ind_cap_inv,"['bio_boilers', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+average,2040,trad_boiler_ind_cap_inv,"['oil_boilers', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+average,2040,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2040]",0,0.0,202.12767612531064,202.12767612531064,0.0,MW
+average,2040,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+average,2040,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+average,2040,stat_sto_cap_inv,"['Liion_storage', 2040]",0.0,0.0,0.0,0.0,0.0,MWh
+average,2040,h2_sto_max_cap,"['H2_storage_tank', 2040]",10.0,0.0,0.0,10.0,0.0,MWh
+average,2040,h2_electrolysis_max_cap,"['PEM_elec', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+average,2040,h2_electrolysis_max_cap,"['SOEC_elec', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+average,2040,h2_electrolysis_max_cap,"['Alkaline_EC', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+average,2045,cap_inv,"['TEBiomassHR', 2045]",29.0,0.0,0.0,29.0,0.0,MW
+average,2045,cap_inv,"['TEPlomin1', 2045]",0.66,0.0,0.0,0.66,6.27,MW
+average,2045,cap_inv,"['TEPlomin2', 2045]",1.1520000000000001,0.0,0.0,1.1520000000000001,10.943999999999999,MW
+average,2045,cap_inv,"['TE-TOZagreb', 2045]",12.76,0.0,0.0,12.76,51.04,MW
+average,2045,cap_inv,"['HEZakucac', 2045]",150.0,0.0,0.0,150.0,0.0,MW
+average,2045,cap_inv,"['HESenj', 2045]",60.0,0.0,0.0,60.0,0.0,MW
+average,2045,cap_inv,"['HEDubrovnik_HR', 2045]",30.0,0.0,0.0,30.0,0.0,MW
+average,2045,cap_inv,"['RHEVelebit', 2045]",80.0,0.0,0.0,80.0,0.0,MW
+average,2045,cap_inv,"['RHEOrlovac', 2045]",80.0,0.0,0.0,80.0,0.0,MW
+average,2045,cap_inv,"['RHEVinodol', 2045]",3.0,0.0,0.0,3.0,0.0,MW
+average,2045,cap_inv,"['NEKrskoHR', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+average,2045,cap_inv,"['TERijeka', 2045]",4.2,0.0,0.0,4.2,39.9,MW
+average,2045,cap_inv,"['HR_Wind_HR032', 2045]",156.0,0.0,0.0,156.0,0.0,MW
+average,2045,cap_inv,"['HR_Wind_HR033', 2045]",283.65,0.0,0.0,283.65,0.0,MW
+average,2045,cap_inv,"['HR_Wind_HR034', 2045]",295.1,0.0,0.0,295.1,0.0,MW
+average,2045,cap_inv,"['HR_Wind_HR035', 2045]",299.6,0.0,0.0,299.6,0.0,MW
+average,2045,cap_inv,"['HR_Wind_HR037', 2045]",20.7,0.0,0.0,20.7,0.0,MW
+average,2045,cap_inv,"['hror', 2045]",150.0,0.0,0.0,150.0,0.0,MW
+average,2045,cap_inv,"['HECombo', 2045]",60.0,0.0,0.0,60.0,0.0,MW
+average,2045,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2045]",256.995537,0.0,0.0,256.995537,0.0,MW
+average,2045,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2045]",45.963105,0.0,0.0,45.963105,0.0,MW
+average,2045,cap_inv,"['HR_Solar_HR_EAST', 2045]",159.541358,0.0,0.0,159.541358,0.0,MW
+average,2045,cap_inv_FC,"['PEMFC_CHP', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+average,2045,cap_inv_FC,"['SOFC_CHP', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+average,2045,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+average,2045,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+average,2045,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+average,2045,heat_pump_ind_cap,"['ATW_HP', 2045]",0.0,0.8033278572778233,0.06493786893324231,0.8682657262110656,0.0,MW
+average,2045,heat_pump_ind_cap,"['geothermal_HP', 2045]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+average,2045,heat_pump_ind_cap,"['electric_boiler', 2045]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+average,2045,trad_boiler_ind_cap_inv,"['gas_boilers', 2045]",0.0,10903.245523571946,0.0,10903.245523571946,0.0,MW
+average,2045,trad_boiler_ind_cap_inv,"['bio_boilers', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+average,2045,trad_boiler_ind_cap_inv,"['oil_boilers', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+average,2045,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2045]",0,202.12767612531064,58.98698537290356,261.1146614982142,0.0,MW
+average,2045,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+average,2045,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+average,2045,stat_sto_cap_inv,"['Liion_storage', 2045]",0.0,0.0,0.0,0.0,0.0,MWh
+average,2045,h2_sto_max_cap,"['H2_storage_tank', 2045]",10.0,0.0,0.0,10.0,0.0,MWh
+average,2045,h2_electrolysis_max_cap,"['PEM_elec', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+average,2045,h2_electrolysis_max_cap,"['SOEC_elec', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+average,2045,h2_electrolysis_max_cap,"['Alkaline_EC', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+average,2050,cap_inv,"['TEBiomassHR', 2050]",29.0,0.0,0.0,29.0,0.0,MW
+average,2050,cap_inv,"['TEPlomin1', 2050]",0.11,0.0,0.0,0.11,0.55,MW
+average,2050,cap_inv,"['TEPlomin2', 2050]",0.192,0.0,0.0,0.192,0.9600000000000002,MW
+average,2050,cap_inv,"['TE-TOZagreb', 2050]",2.64,0.0,17.380717513189484,20.020717513189485,10.120000000000001,MW
+average,2050,cap_inv,"['HEZakucac', 2050]",150.0,0.0,0.0,150.0,0.0,MW
+average,2050,cap_inv,"['HESenj', 2050]",60.0,0.0,0.0,60.0,0.0,MW
+average,2050,cap_inv,"['HEDubrovnik_HR', 2050]",30.0,0.0,0.0,30.0,0.0,MW
+average,2050,cap_inv,"['RHEVelebit', 2050]",80.0,0.0,0.0,80.0,0.0,MW
+average,2050,cap_inv,"['RHEOrlovac', 2050]",80.0,0.0,0.0,80.0,0.0,MW
+average,2050,cap_inv,"['RHEVinodol', 2050]",3.0,0.0,0.0,3.0,0.0,MW
+average,2050,cap_inv,"['NEKrskoHR', 2050]",0.0,0.0,100.0,100.0,0.0,MW
+average,2050,cap_inv,"['TERijeka', 2050]",0.7000000000000001,0.0,0.0,0.7000000000000001,3.5,MW
+average,2050,cap_inv,"['HR_Wind_HR032', 2050]",156.0,0.0,0.0,156.0,0.0,MW
+average,2050,cap_inv,"['HR_Wind_HR033', 2050]",283.65,0.0,0.0,283.65,0.0,MW
+average,2050,cap_inv,"['HR_Wind_HR034', 2050]",295.1,0.0,0.0,295.1,0.0,MW
+average,2050,cap_inv,"['HR_Wind_HR035', 2050]",299.6,0.0,0.0,299.6,0.0,MW
+average,2050,cap_inv,"['HR_Wind_HR037', 2050]",20.7,0.0,0.0,20.7,0.0,MW
+average,2050,cap_inv,"['hror', 2050]",150.0,0.0,0.0,150.0,0.0,MW
+average,2050,cap_inv,"['HECombo', 2050]",60.0,0.0,0.0,60.0,0.0,MW
+average,2050,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2050]",256.995537,0.0,120.59257606961056,377.5881130696106,0.0,MW
+average,2050,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2050]",45.963105,0.0,0.0,45.963105,0.0,MW
+average,2050,cap_inv,"['HR_Solar_HR_EAST', 2050]",159.541358,0.0,0.0,159.541358,0.0,MW
+average,2050,cap_inv_FC,"['PEMFC_CHP', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+average,2050,cap_inv_FC,"['SOFC_CHP', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+average,2050,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+average,2050,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+average,2050,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+average,2050,heat_pump_ind_cap,"['ATW_HP', 2050]",0.0,0.8682657262110656,0.06825035326372525,0.9365160794747909,0.0,MW
+average,2050,heat_pump_ind_cap,"['geothermal_HP', 2050]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+average,2050,heat_pump_ind_cap,"['electric_boiler', 2050]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+average,2050,trad_boiler_ind_cap_inv,"['gas_boilers', 2050]",0.0,10903.245523571946,0.0,10903.245523571946,0.0,MW
+average,2050,trad_boiler_ind_cap_inv,"['bio_boilers', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+average,2050,trad_boiler_ind_cap_inv,"['oil_boilers', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+average,2050,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2050]",0,261.1146614982142,0.0,261.1146614982142,0.0,MW
+average,2050,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+average,2050,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+average,2050,stat_sto_cap_inv,"['Liion_storage', 2050]",0.0,0.0,0.0,0.0,0.0,MWh
+average,2050,h2_sto_max_cap,"['H2_storage_tank', 2050]",10.0,0.0,0.0,10.0,0.0,MWh
+average,2050,h2_electrolysis_max_cap,"['PEM_elec', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+average,2050,h2_electrolysis_max_cap,"['SOEC_elec', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+average,2050,h2_electrolysis_max_cap,"['Alkaline_EC', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2020,cap_inv,"['TEBiomassHR', 2020]",29.0,0.0,0.0,29.0,,MW
+solar_low,2020,cap_inv,"['TEPlomin1', 2020]",110.0,0.0,0.0,110.0,,MW
+solar_low,2020,cap_inv,"['TEPlomin2', 2020]",192.0,0.0,0.0,192.0,,MW
+solar_low,2020,cap_inv,"['TE-TOZagreb', 2020]",440.0,0.0,0.0,440.0,,MW
+solar_low,2020,cap_inv,"['HEZakucac', 2020]",150.0,0.0,0.0,150.0,,MW
+solar_low,2020,cap_inv,"['HESenj', 2020]",60.0,0.0,0.0,60.0,,MW
+solar_low,2020,cap_inv,"['HEDubrovnik_HR', 2020]",30.0,0.0,0.0,30.0,,MW
+solar_low,2020,cap_inv,"['RHEVelebit', 2020]",80.0,0.0,0.0,80.0,,MW
+solar_low,2020,cap_inv,"['RHEOrlovac', 2020]",80.0,0.0,0.0,80.0,,MW
+solar_low,2020,cap_inv,"['RHEVinodol', 2020]",3.0,0.0,0.0,3.0,,MW
+solar_low,2020,cap_inv,"['NEKrskoHR', 2020]",348.0,0.0,0.0,348.0,,MW
+solar_low,2020,cap_inv,"['TERijeka', 2020]",700.0,0.0,0.0,700.0,,MW
+solar_low,2020,cap_inv,"['HR_Wind_HR032', 2020]",156.0,0.0,0.0,156.0,,MW
+solar_low,2020,cap_inv,"['HR_Wind_HR033', 2020]",283.65,0.0,0.0,283.65,,MW
+solar_low,2020,cap_inv,"['HR_Wind_HR034', 2020]",295.1,0.0,0.0,295.1,,MW
+solar_low,2020,cap_inv,"['HR_Wind_HR035', 2020]",299.6,0.0,0.0,299.6,,MW
+solar_low,2020,cap_inv,"['HR_Wind_HR037', 2020]",20.7,0.0,0.0,20.7,,MW
+solar_low,2020,cap_inv,"['hror', 2020]",150.0,0.0,0.0,150.0,,MW
+solar_low,2020,cap_inv,"['HECombo', 2020]",60.0,0.0,0.0,60.0,,MW
+solar_low,2020,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2020]",256.995537,0.0,0.0,256.995537,,MW
+solar_low,2020,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2020]",45.963105,0.0,0.0,45.963105,,MW
+solar_low,2020,cap_inv,"['HR_Solar_HR_EAST', 2020]",159.541358,0.0,0.0,159.541358,,MW
+solar_low,2020,cap_inv_FC,"['PEMFC_CHP', 2020]",0.0,0.0,0.0,0.0,,MW
+solar_low,2020,cap_inv_FC,"['SOFC_CHP', 2020]",0.0,0.0,0.0,0.0,,MW
+solar_low,2020,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+solar_low,2020,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+solar_low,2020,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+solar_low,2020,heat_pump_ind_cap,"['ATW_HP', 2020]",150.0,0.0,0.0,150.0,,MW
+solar_low,2020,heat_pump_ind_cap,"['geothermal_HP', 2020]",5.0,0.0,0.0,5.0,,MW
+solar_low,2020,heat_pump_ind_cap,"['electric_boiler', 2020]",500.0,0.0,0.0,500.0,,MW
+solar_low,2020,trad_boiler_ind_cap_inv,"['gas_boilers', 2020]",6488.35,0.0,0.0,6488.35,,MW
+solar_low,2020,trad_boiler_ind_cap_inv,"['bio_boilers', 2020]",4419.05,0.0,0.0,4419.05,,MW
+solar_low,2020,trad_boiler_ind_cap_inv,"['oil_boilers', 2020]",2059.05,0.0,0.0,2059.05,,MW
+solar_low,2020,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+solar_low,2020,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+solar_low,2020,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+solar_low,2020,stat_sto_cap_inv,"['Liion_storage', 2020]",5.0,0.0,0.0,5.0,,MWh
+solar_low,2020,h2_sto_max_cap,"['H2_storage_tank', 2020]",10.0,0.0,0.0,10.0,,MWh
+solar_low,2020,h2_electrolysis_max_cap,"['PEM_elec', 2020]",0.0,0.0,0.0,0.0,,MW
+solar_low,2020,h2_electrolysis_max_cap,"['SOEC_elec', 2020]",0.0,0.0,0.0,0.0,,MW
+solar_low,2020,h2_electrolysis_max_cap,"['Alkaline_EC', 2020]",0.0,0.0,0.0,0.0,,MW
+solar_low,2025,cap_inv,"['TEBiomassHR', 2025]",29.0,0.0,0.0,29.0,0.0,MW
+solar_low,2025,cap_inv,"['TEPlomin1', 2025]",110.0,0.0,0.0,110.0,0.0,MW
+solar_low,2025,cap_inv,"['TEPlomin2', 2025]",192.0,0.0,0.0,192.0,0.0,MW
+solar_low,2025,cap_inv,"['TE-TOZagreb', 2025]",440.0,0.0,0.0,440.0,0.0,MW
+solar_low,2025,cap_inv,"['HEZakucac', 2025]",150.0,0.0,0.0,150.0,0.0,MW
+solar_low,2025,cap_inv,"['HESenj', 2025]",60.0,0.0,0.0,60.0,0.0,MW
+solar_low,2025,cap_inv,"['HEDubrovnik_HR', 2025]",30.0,0.0,0.0,30.0,0.0,MW
+solar_low,2025,cap_inv,"['RHEVelebit', 2025]",80.0,0.0,0.0,80.0,0.0,MW
+solar_low,2025,cap_inv,"['RHEOrlovac', 2025]",80.0,0.0,0.0,80.0,0.0,MW
+solar_low,2025,cap_inv,"['RHEVinodol', 2025]",3.0,0.0,0.0,3.0,0.0,MW
+solar_low,2025,cap_inv,"['NEKrskoHR', 2025]",348.0,0.0,0.0,348.0,0.0,MW
+solar_low,2025,cap_inv,"['TERijeka', 2025]",700.0,0.0,0.0,700.0,0.0,MW
+solar_low,2025,cap_inv,"['HR_Wind_HR032', 2025]",156.0,0.0,0.0,156.0,0.0,MW
+solar_low,2025,cap_inv,"['HR_Wind_HR033', 2025]",283.65,0.0,0.0,283.65,0.0,MW
+solar_low,2025,cap_inv,"['HR_Wind_HR034', 2025]",295.1,0.0,0.0,295.1,0.0,MW
+solar_low,2025,cap_inv,"['HR_Wind_HR035', 2025]",299.6,0.0,0.0,299.6,0.0,MW
+solar_low,2025,cap_inv,"['HR_Wind_HR037', 2025]",20.7,0.0,0.0,20.7,0.0,MW
+solar_low,2025,cap_inv,"['hror', 2025]",150.0,0.0,0.0,150.0,0.0,MW
+solar_low,2025,cap_inv,"['HECombo', 2025]",60.0,0.0,0.0,60.0,0.0,MW
+solar_low,2025,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2025]",256.995537,0.0,0.0,256.995537,0.0,MW
+solar_low,2025,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2025]",45.963105,0.0,0.0,45.963105,0.0,MW
+solar_low,2025,cap_inv,"['HR_Solar_HR_EAST', 2025]",159.541358,0.0,0.0,159.541358,0.0,MW
+solar_low,2025,cap_inv_FC,"['PEMFC_CHP', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2025,cap_inv_FC,"['SOFC_CHP', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2025,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2025,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2025,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2025,heat_pump_ind_cap,"['ATW_HP', 2025]",90.0,0.0,0.0,90.0,60.0,MW
+solar_low,2025,heat_pump_ind_cap,"['geothermal_HP', 2025]",3.0,0.0,0.0,3.0,2.0,MW
+solar_low,2025,heat_pump_ind_cap,"['electric_boiler', 2025]",300.0,0.0,0.0,300.0,200.0,MW
+solar_low,2025,trad_boiler_ind_cap_inv,"['gas_boilers', 2025]",3893.01,0.0,3842.8627156637167,7735.872715663717,2595.340000000001,MW
+solar_low,2025,trad_boiler_ind_cap_inv,"['bio_boilers', 2025]",2651.43,0.0,0.0,2651.43,1767.6200000000003,MW
+solar_low,2025,trad_boiler_ind_cap_inv,"['oil_boilers', 2025]",1235.43,0.0,0.0,1235.43,823.6200000000001,MW
+solar_low,2025,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2025,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2025,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2025,stat_sto_cap_inv,"['Liion_storage', 2025]",3.0,0.0,0.0,3.0,2.0,MWh
+solar_low,2025,h2_sto_max_cap,"['H2_storage_tank', 2025]",10.0,0.0,0.0,10.0,0.0,MWh
+solar_low,2025,h2_electrolysis_max_cap,"['PEM_elec', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2025,h2_electrolysis_max_cap,"['SOEC_elec', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2025,h2_electrolysis_max_cap,"['Alkaline_EC', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2030,cap_inv,"['TEBiomassHR', 2030]",29.0,0.0,0.0,29.0,0.0,MW
+solar_low,2030,cap_inv,"['TEPlomin1', 2030]",110.0,0.0,0.0,110.0,0.0,MW
+solar_low,2030,cap_inv,"['TEPlomin2', 2030]",192.0,0.0,0.0,192.0,0.0,MW
+solar_low,2030,cap_inv,"['TE-TOZagreb', 2030]",440.0,0.0,0.0,440.0,0.0,MW
+solar_low,2030,cap_inv,"['HEZakucac', 2030]",150.0,0.0,0.0,150.0,0.0,MW
+solar_low,2030,cap_inv,"['HESenj', 2030]",60.0,0.0,0.0,60.0,0.0,MW
+solar_low,2030,cap_inv,"['HEDubrovnik_HR', 2030]",30.0,0.0,0.0,30.0,0.0,MW
+solar_low,2030,cap_inv,"['RHEVelebit', 2030]",80.0,0.0,0.0,80.0,0.0,MW
+solar_low,2030,cap_inv,"['RHEOrlovac', 2030]",80.0,0.0,0.0,80.0,0.0,MW
+solar_low,2030,cap_inv,"['RHEVinodol', 2030]",3.0,0.0,0.0,3.0,0.0,MW
+solar_low,2030,cap_inv,"['NEKrskoHR', 2030]",348.0,0.0,0.0,348.0,0.0,MW
+solar_low,2030,cap_inv,"['TERijeka', 2030]",700.0,0.0,0.0,700.0,0.0,MW
+solar_low,2030,cap_inv,"['HR_Wind_HR032', 2030]",156.0,0.0,0.0,156.0,0.0,MW
+solar_low,2030,cap_inv,"['HR_Wind_HR033', 2030]",283.65,0.0,0.0,283.65,0.0,MW
+solar_low,2030,cap_inv,"['HR_Wind_HR034', 2030]",295.1,0.0,0.0,295.1,0.0,MW
+solar_low,2030,cap_inv,"['HR_Wind_HR035', 2030]",299.6,0.0,0.0,299.6,0.0,MW
+solar_low,2030,cap_inv,"['HR_Wind_HR037', 2030]",20.7,0.0,0.0,20.7,0.0,MW
+solar_low,2030,cap_inv,"['hror', 2030]",150.0,0.0,0.0,150.0,0.0,MW
+solar_low,2030,cap_inv,"['HECombo', 2030]",60.0,0.0,0.0,60.0,0.0,MW
+solar_low,2030,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2030]",256.995537,0.0,0.0,256.995537,0.0,MW
+solar_low,2030,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2030]",45.963105,0.0,0.0,45.963105,0.0,MW
+solar_low,2030,cap_inv,"['HR_Solar_HR_EAST', 2030]",159.541358,0.0,0.0,159.541358,0.0,MW
+solar_low,2030,cap_inv_FC,"['PEMFC_CHP', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2030,cap_inv_FC,"['SOFC_CHP', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2030,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2030,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2030,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2030,heat_pump_ind_cap,"['ATW_HP', 2030]",45.0,0.0,0.0,45.0,45.0,MW
+solar_low,2030,heat_pump_ind_cap,"['geothermal_HP', 2030]",1.5,0.0,0.0,1.5,1.5,MW
+solar_low,2030,heat_pump_ind_cap,"['electric_boiler', 2030]",150.0,0.0,0.0,150.0,150.0,MW
+solar_low,2030,trad_boiler_ind_cap_inv,"['gas_boilers', 2030]",1946.505,3842.8627156637167,3699.8128605772927,9489.18057624101,1946.5049999999992,MW
+solar_low,2030,trad_boiler_ind_cap_inv,"['bio_boilers', 2030]",1325.715,0.0,0.0,1325.715,1325.715,MW
+solar_low,2030,trad_boiler_ind_cap_inv,"['oil_boilers', 2030]",617.715,0.0,0.0,617.715,617.715,MW
+solar_low,2030,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2030,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2030,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2030,stat_sto_cap_inv,"['Liion_storage', 2030]",1.5,0.0,0.0,1.5,1.5,MWh
+solar_low,2030,h2_sto_max_cap,"['H2_storage_tank', 2030]",10.0,0.0,0.0,10.0,0.0,MWh
+solar_low,2030,h2_electrolysis_max_cap,"['PEM_elec', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2030,h2_electrolysis_max_cap,"['SOEC_elec', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2030,h2_electrolysis_max_cap,"['Alkaline_EC', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2035,cap_inv,"['TEBiomassHR', 2035]",29.0,0.0,0.0,29.0,0.0,MW
+solar_low,2035,cap_inv,"['TEPlomin1', 2035]",69.41,0.0,0.0,69.41,40.59,MW
+solar_low,2035,cap_inv,"['TEPlomin2', 2035]",121.152,0.0,0.0,121.152,70.848,MW
+solar_low,2035,cap_inv,"['TE-TOZagreb', 2035]",319.0,0.0,0.0,319.0,121.0,MW
+solar_low,2035,cap_inv,"['HEZakucac', 2035]",150.0,0.0,0.0,150.0,0.0,MW
+solar_low,2035,cap_inv,"['HESenj', 2035]",60.0,0.0,0.0,60.0,0.0,MW
+solar_low,2035,cap_inv,"['HEDubrovnik_HR', 2035]",30.0,0.0,0.0,30.0,0.0,MW
+solar_low,2035,cap_inv,"['RHEVelebit', 2035]",80.0,0.0,0.0,80.0,0.0,MW
+solar_low,2035,cap_inv,"['RHEOrlovac', 2035]",80.0,0.0,0.0,80.0,0.0,MW
+solar_low,2035,cap_inv,"['RHEVinodol', 2035]",3.0,0.0,0.0,3.0,0.0,MW
+solar_low,2035,cap_inv,"['NEKrskoHR', 2035]",0.0,0.0,0.0,0.0,348.0,MW
+solar_low,2035,cap_inv,"['TERijeka', 2035]",441.7,0.0,0.0,441.7,258.3,MW
+solar_low,2035,cap_inv,"['HR_Wind_HR032', 2035]",156.0,0.0,0.0,156.0,0.0,MW
+solar_low,2035,cap_inv,"['HR_Wind_HR033', 2035]",283.65,0.0,0.0,283.65,0.0,MW
+solar_low,2035,cap_inv,"['HR_Wind_HR034', 2035]",295.1,0.0,0.0,295.1,0.0,MW
+solar_low,2035,cap_inv,"['HR_Wind_HR035', 2035]",299.6,0.0,0.0,299.6,0.0,MW
+solar_low,2035,cap_inv,"['HR_Wind_HR037', 2035]",20.7,0.0,0.0,20.7,0.0,MW
+solar_low,2035,cap_inv,"['hror', 2035]",150.0,0.0,0.0,150.0,0.0,MW
+solar_low,2035,cap_inv,"['HECombo', 2035]",60.0,0.0,0.0,60.0,0.0,MW
+solar_low,2035,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2035]",256.995537,0.0,0.0,256.995537,0.0,MW
+solar_low,2035,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2035]",45.963105,0.0,0.0,45.963105,0.0,MW
+solar_low,2035,cap_inv,"['HR_Solar_HR_EAST', 2035]",159.541358,0.0,0.0,159.541358,0.0,MW
+solar_low,2035,cap_inv_FC,"['PEMFC_CHP', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2035,cap_inv_FC,"['SOFC_CHP', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2035,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2035,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2035,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2035,heat_pump_ind_cap,"['ATW_HP', 2035]",0.0,0.0,0.7415417032946737,0.7415417032946737,45.0,MW
+solar_low,2035,heat_pump_ind_cap,"['geothermal_HP', 2035]",0.0,0.0,0.14184397163120568,0.14184397163120568,1.5,MW
+solar_low,2035,heat_pump_ind_cap,"['electric_boiler', 2035]",0.0,0.0,0.14184397163120568,0.14184397163120568,150.0,MW
+solar_low,2035,trad_boiler_ind_cap_inv,"['gas_boilers', 2035]",0.0,7542.675576241009,3360.569947330937,10903.245523571946,1946.505000000001,MW
+solar_low,2035,trad_boiler_ind_cap_inv,"['bio_boilers', 2035]",0.0,0.0,0.0,0.0,1325.715,MW
+solar_low,2035,trad_boiler_ind_cap_inv,"['oil_boilers', 2035]",0.0,0.0,0.0,0.0,617.715,MW
+solar_low,2035,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2035,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2035,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2035,stat_sto_cap_inv,"['Liion_storage', 2035]",0.0,0.0,0.0,0.0,1.5,MWh
+solar_low,2035,h2_sto_max_cap,"['H2_storage_tank', 2035]",10.0,0.0,0.0,10.0,0.0,MWh
+solar_low,2035,h2_electrolysis_max_cap,"['PEM_elec', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2035,h2_electrolysis_max_cap,"['SOEC_elec', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2035,h2_electrolysis_max_cap,"['Alkaline_EC', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2040,cap_inv,"['TEBiomassHR', 2040]",29.0,0.0,0.0,29.0,0.0,MW
+solar_low,2040,cap_inv,"['TEPlomin1', 2040]",6.93,0.0,0.0,6.93,62.48,MW
+solar_low,2040,cap_inv,"['TEPlomin2', 2040]",12.096,0.0,0.0,12.096,109.056,MW
+solar_low,2040,cap_inv,"['TE-TOZagreb', 2040]",63.8,0.0,0.0,63.8,255.2,MW
+solar_low,2040,cap_inv,"['HEZakucac', 2040]",150.0,0.0,0.0,150.0,0.0,MW
+solar_low,2040,cap_inv,"['HESenj', 2040]",60.0,0.0,0.0,60.0,0.0,MW
+solar_low,2040,cap_inv,"['HEDubrovnik_HR', 2040]",30.0,0.0,0.0,30.0,0.0,MW
+solar_low,2040,cap_inv,"['RHEVelebit', 2040]",80.0,0.0,0.0,80.0,0.0,MW
+solar_low,2040,cap_inv,"['RHEOrlovac', 2040]",80.0,0.0,0.0,80.0,0.0,MW
+solar_low,2040,cap_inv,"['RHEVinodol', 2040]",3.0,0.0,0.0,3.0,0.0,MW
+solar_low,2040,cap_inv,"['NEKrskoHR', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2040,cap_inv,"['TERijeka', 2040]",44.1,0.0,0.0,44.1,397.59999999999997,MW
+solar_low,2040,cap_inv,"['HR_Wind_HR032', 2040]",156.0,0.0,0.0,156.0,0.0,MW
+solar_low,2040,cap_inv,"['HR_Wind_HR033', 2040]",283.65,0.0,0.0,283.65,0.0,MW
+solar_low,2040,cap_inv,"['HR_Wind_HR034', 2040]",295.1,0.0,0.0,295.1,0.0,MW
+solar_low,2040,cap_inv,"['HR_Wind_HR035', 2040]",299.6,0.0,0.0,299.6,0.0,MW
+solar_low,2040,cap_inv,"['HR_Wind_HR037', 2040]",20.7,0.0,0.0,20.7,0.0,MW
+solar_low,2040,cap_inv,"['hror', 2040]",150.0,0.0,0.0,150.0,0.0,MW
+solar_low,2040,cap_inv,"['HECombo', 2040]",60.0,0.0,0.0,60.0,0.0,MW
+solar_low,2040,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2040]",256.995537,0.0,0.0,256.995537,0.0,MW
+solar_low,2040,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2040]",45.963105,0.0,0.0,45.963105,0.0,MW
+solar_low,2040,cap_inv,"['HR_Solar_HR_EAST', 2040]",159.541358,0.0,0.0,159.541358,0.0,MW
+solar_low,2040,cap_inv_FC,"['PEMFC_CHP', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2040,cap_inv_FC,"['SOFC_CHP', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2040,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2040,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2040,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2040,heat_pump_ind_cap,"['ATW_HP', 2040]",0.0,0.7415417032946737,0.06178615398314972,0.8033278572778234,0.0,MW
+solar_low,2040,heat_pump_ind_cap,"['geothermal_HP', 2040]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+solar_low,2040,heat_pump_ind_cap,"['electric_boiler', 2040]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+solar_low,2040,trad_boiler_ind_cap_inv,"['gas_boilers', 2040]",0.0,10903.245523571946,0.0,10903.245523571946,0.0,MW
+solar_low,2040,trad_boiler_ind_cap_inv,"['bio_boilers', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2040,trad_boiler_ind_cap_inv,"['oil_boilers', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2040,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2040]",0,0.0,202.12767612531064,202.12767612531064,0.0,MW
+solar_low,2040,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2040,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2040,stat_sto_cap_inv,"['Liion_storage', 2040]",0.0,0.0,0.0,0.0,0.0,MWh
+solar_low,2040,h2_sto_max_cap,"['H2_storage_tank', 2040]",10.0,0.0,0.0,10.0,0.0,MWh
+solar_low,2040,h2_electrolysis_max_cap,"['PEM_elec', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2040,h2_electrolysis_max_cap,"['SOEC_elec', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2040,h2_electrolysis_max_cap,"['Alkaline_EC', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2045,cap_inv,"['TEBiomassHR', 2045]",29.0,0.0,0.0,29.0,0.0,MW
+solar_low,2045,cap_inv,"['TEPlomin1', 2045]",0.66,0.0,0.0,0.66,6.27,MW
+solar_low,2045,cap_inv,"['TEPlomin2', 2045]",1.1520000000000001,0.0,0.0,1.1520000000000001,10.943999999999999,MW
+solar_low,2045,cap_inv,"['TE-TOZagreb', 2045]",12.76,0.0,0.0,12.76,51.04,MW
+solar_low,2045,cap_inv,"['HEZakucac', 2045]",150.0,0.0,0.0,150.0,0.0,MW
+solar_low,2045,cap_inv,"['HESenj', 2045]",60.0,0.0,0.0,60.0,0.0,MW
+solar_low,2045,cap_inv,"['HEDubrovnik_HR', 2045]",30.0,0.0,0.0,30.0,0.0,MW
+solar_low,2045,cap_inv,"['RHEVelebit', 2045]",80.0,0.0,0.0,80.0,0.0,MW
+solar_low,2045,cap_inv,"['RHEOrlovac', 2045]",80.0,0.0,0.0,80.0,0.0,MW
+solar_low,2045,cap_inv,"['RHEVinodol', 2045]",3.0,0.0,0.0,3.0,0.0,MW
+solar_low,2045,cap_inv,"['NEKrskoHR', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2045,cap_inv,"['TERijeka', 2045]",4.2,0.0,0.0,4.2,39.9,MW
+solar_low,2045,cap_inv,"['HR_Wind_HR032', 2045]",156.0,0.0,0.0,156.0,0.0,MW
+solar_low,2045,cap_inv,"['HR_Wind_HR033', 2045]",283.65,0.0,0.0,283.65,0.0,MW
+solar_low,2045,cap_inv,"['HR_Wind_HR034', 2045]",295.1,0.0,0.0,295.1,0.0,MW
+solar_low,2045,cap_inv,"['HR_Wind_HR035', 2045]",299.6,0.0,0.0,299.6,0.0,MW
+solar_low,2045,cap_inv,"['HR_Wind_HR037', 2045]",20.7,0.0,0.0,20.7,0.0,MW
+solar_low,2045,cap_inv,"['hror', 2045]",150.0,0.0,0.0,150.0,0.0,MW
+solar_low,2045,cap_inv,"['HECombo', 2045]",60.0,0.0,0.0,60.0,0.0,MW
+solar_low,2045,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2045]",256.995537,0.0,0.0,256.995537,0.0,MW
+solar_low,2045,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2045]",45.963105,0.0,0.0,45.963105,0.0,MW
+solar_low,2045,cap_inv,"['HR_Solar_HR_EAST', 2045]",159.541358,0.0,0.0,159.541358,0.0,MW
+solar_low,2045,cap_inv_FC,"['PEMFC_CHP', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2045,cap_inv_FC,"['SOFC_CHP', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2045,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2045,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2045,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2045,heat_pump_ind_cap,"['ATW_HP', 2045]",0.0,0.8033278572778234,0.06493786893324206,0.8682657262110655,0.0,MW
+solar_low,2045,heat_pump_ind_cap,"['geothermal_HP', 2045]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+solar_low,2045,heat_pump_ind_cap,"['electric_boiler', 2045]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+solar_low,2045,trad_boiler_ind_cap_inv,"['gas_boilers', 2045]",0.0,10903.245523571946,0.0,10903.245523571946,0.0,MW
+solar_low,2045,trad_boiler_ind_cap_inv,"['bio_boilers', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2045,trad_boiler_ind_cap_inv,"['oil_boilers', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2045,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2045]",0,202.12767612531064,58.98698537290356,261.1146614982142,0.0,MW
+solar_low,2045,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2045,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2045,stat_sto_cap_inv,"['Liion_storage', 2045]",0.0,0.0,0.0,0.0,0.0,MWh
+solar_low,2045,h2_sto_max_cap,"['H2_storage_tank', 2045]",10.0,0.0,0.0,10.0,0.0,MWh
+solar_low,2045,h2_electrolysis_max_cap,"['PEM_elec', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2045,h2_electrolysis_max_cap,"['SOEC_elec', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2045,h2_electrolysis_max_cap,"['Alkaline_EC', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2050,cap_inv,"['TEBiomassHR', 2050]",29.0,0.0,0.0,29.0,0.0,MW
+solar_low,2050,cap_inv,"['TEPlomin1', 2050]",0.11,0.0,0.0,0.11,0.55,MW
+solar_low,2050,cap_inv,"['TEPlomin2', 2050]",0.192,0.0,0.0,0.192,0.9600000000000002,MW
+solar_low,2050,cap_inv,"['TE-TOZagreb', 2050]",2.64,0.0,42.44757382999315,45.087573829993154,10.119999999999997,MW
+solar_low,2050,cap_inv,"['HEZakucac', 2050]",150.0,0.0,0.0,150.0,0.0,MW
+solar_low,2050,cap_inv,"['HESenj', 2050]",60.0,0.0,0.0,60.0,0.0,MW
+solar_low,2050,cap_inv,"['HEDubrovnik_HR', 2050]",30.0,0.0,0.0,30.0,0.0,MW
+solar_low,2050,cap_inv,"['RHEVelebit', 2050]",80.0,0.0,0.0,80.0,0.0,MW
+solar_low,2050,cap_inv,"['RHEOrlovac', 2050]",80.0,0.0,0.0,80.0,0.0,MW
+solar_low,2050,cap_inv,"['RHEVinodol', 2050]",3.0,0.0,0.0,3.0,0.0,MW
+solar_low,2050,cap_inv,"['NEKrskoHR', 2050]",0.0,0.0,100.0,100.0,0.0,MW
+solar_low,2050,cap_inv,"['TERijeka', 2050]",0.7000000000000001,0.0,0.0,0.7000000000000001,3.5,MW
+solar_low,2050,cap_inv,"['HR_Wind_HR032', 2050]",156.0,0.0,0.0,156.0,0.0,MW
+solar_low,2050,cap_inv,"['HR_Wind_HR033', 2050]",283.65,0.0,0.0,283.65,0.0,MW
+solar_low,2050,cap_inv,"['HR_Wind_HR034', 2050]",295.1,0.0,0.0,295.1,0.0,MW
+solar_low,2050,cap_inv,"['HR_Wind_HR035', 2050]",299.6,0.0,0.0,299.6,0.0,MW
+solar_low,2050,cap_inv,"['HR_Wind_HR037', 2050]",20.7,0.0,0.0,20.7,0.0,MW
+solar_low,2050,cap_inv,"['hror', 2050]",150.0,0.0,0.0,150.0,0.0,MW
+solar_low,2050,cap_inv,"['HECombo', 2050]",60.0,0.0,0.0,60.0,0.0,MW
+solar_low,2050,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2050]",256.995537,0.0,0.0,256.995537,0.0,MW
+solar_low,2050,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2050]",45.963105,0.0,0.0,45.963105,0.0,MW
+solar_low,2050,cap_inv,"['HR_Solar_HR_EAST', 2050]",159.541358,0.0,0.0,159.541358,0.0,MW
+solar_low,2050,cap_inv_FC,"['PEMFC_CHP', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2050,cap_inv_FC,"['SOFC_CHP', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2050,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2050,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2050,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2050,heat_pump_ind_cap,"['ATW_HP', 2050]",0.0,0.8682657262110655,0.0682503532637255,0.936516079474791,0.0,MW
+solar_low,2050,heat_pump_ind_cap,"['geothermal_HP', 2050]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+solar_low,2050,heat_pump_ind_cap,"['electric_boiler', 2050]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+solar_low,2050,trad_boiler_ind_cap_inv,"['gas_boilers', 2050]",0.0,10903.245523571946,0.0,10903.245523571946,0.0,MW
+solar_low,2050,trad_boiler_ind_cap_inv,"['bio_boilers', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2050,trad_boiler_ind_cap_inv,"['oil_boilers', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2050,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2050]",0,261.1146614982142,0.0,261.1146614982142,0.0,MW
+solar_low,2050,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2050,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+solar_low,2050,stat_sto_cap_inv,"['Liion_storage', 2050]",0.0,0.0,0.0,0.0,0.0,MWh
+solar_low,2050,h2_sto_max_cap,"['H2_storage_tank', 2050]",10.0,0.0,0.0,10.0,0.0,MWh
+solar_low,2050,h2_electrolysis_max_cap,"['PEM_elec', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2050,h2_electrolysis_max_cap,"['SOEC_elec', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+solar_low,2050,h2_electrolysis_max_cap,"['Alkaline_EC', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2020,cap_inv,"['TEBiomassHR', 2020]",29.0,0.0,0.0,29.0,,MW
+solar_high,2020,cap_inv,"['TEPlomin1', 2020]",110.0,0.0,0.0,110.0,,MW
+solar_high,2020,cap_inv,"['TEPlomin2', 2020]",192.0,0.0,0.0,192.0,,MW
+solar_high,2020,cap_inv,"['TE-TOZagreb', 2020]",440.0,0.0,0.0,440.0,,MW
+solar_high,2020,cap_inv,"['HEZakucac', 2020]",150.0,0.0,0.0,150.0,,MW
+solar_high,2020,cap_inv,"['HESenj', 2020]",60.0,0.0,0.0,60.0,,MW
+solar_high,2020,cap_inv,"['HEDubrovnik_HR', 2020]",30.0,0.0,0.0,30.0,,MW
+solar_high,2020,cap_inv,"['RHEVelebit', 2020]",80.0,0.0,0.0,80.0,,MW
+solar_high,2020,cap_inv,"['RHEOrlovac', 2020]",80.0,0.0,0.0,80.0,,MW
+solar_high,2020,cap_inv,"['RHEVinodol', 2020]",3.0,0.0,0.0,3.0,,MW
+solar_high,2020,cap_inv,"['NEKrskoHR', 2020]",348.0,0.0,0.0,348.0,,MW
+solar_high,2020,cap_inv,"['TERijeka', 2020]",700.0,0.0,0.0,700.0,,MW
+solar_high,2020,cap_inv,"['HR_Wind_HR032', 2020]",156.0,0.0,0.0,156.0,,MW
+solar_high,2020,cap_inv,"['HR_Wind_HR033', 2020]",283.65,0.0,0.0,283.65,,MW
+solar_high,2020,cap_inv,"['HR_Wind_HR034', 2020]",295.1,0.0,0.0,295.1,,MW
+solar_high,2020,cap_inv,"['HR_Wind_HR035', 2020]",299.6,0.0,0.0,299.6,,MW
+solar_high,2020,cap_inv,"['HR_Wind_HR037', 2020]",20.7,0.0,0.0,20.7,,MW
+solar_high,2020,cap_inv,"['hror', 2020]",150.0,0.0,0.0,150.0,,MW
+solar_high,2020,cap_inv,"['HECombo', 2020]",60.0,0.0,0.0,60.0,,MW
+solar_high,2020,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2020]",256.995537,0.0,0.0,256.995537,,MW
+solar_high,2020,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2020]",45.963105,0.0,0.0,45.963105,,MW
+solar_high,2020,cap_inv,"['HR_Solar_HR_EAST', 2020]",159.541358,0.0,0.0,159.541358,,MW
+solar_high,2020,cap_inv_FC,"['PEMFC_CHP', 2020]",0.0,0.0,0.0,0.0,,MW
+solar_high,2020,cap_inv_FC,"['SOFC_CHP', 2020]",0.0,0.0,0.0,0.0,,MW
+solar_high,2020,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+solar_high,2020,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+solar_high,2020,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+solar_high,2020,heat_pump_ind_cap,"['ATW_HP', 2020]",150.0,0.0,0.0,150.0,,MW
+solar_high,2020,heat_pump_ind_cap,"['geothermal_HP', 2020]",5.0,0.0,0.0,5.0,,MW
+solar_high,2020,heat_pump_ind_cap,"['electric_boiler', 2020]",500.0,0.0,0.0,500.0,,MW
+solar_high,2020,trad_boiler_ind_cap_inv,"['gas_boilers', 2020]",6488.35,0.0,0.0,6488.35,,MW
+solar_high,2020,trad_boiler_ind_cap_inv,"['bio_boilers', 2020]",4419.05,0.0,0.0,4419.05,,MW
+solar_high,2020,trad_boiler_ind_cap_inv,"['oil_boilers', 2020]",2059.05,0.0,0.0,2059.05,,MW
+solar_high,2020,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+solar_high,2020,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+solar_high,2020,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+solar_high,2020,stat_sto_cap_inv,"['Liion_storage', 2020]",5.0,0.0,0.0,5.0,,MWh
+solar_high,2020,h2_sto_max_cap,"['H2_storage_tank', 2020]",10.0,0.0,0.0,10.0,,MWh
+solar_high,2020,h2_electrolysis_max_cap,"['PEM_elec', 2020]",0.0,0.0,0.0,0.0,,MW
+solar_high,2020,h2_electrolysis_max_cap,"['SOEC_elec', 2020]",0.0,0.0,0.0,0.0,,MW
+solar_high,2020,h2_electrolysis_max_cap,"['Alkaline_EC', 2020]",0.0,0.0,0.0,0.0,,MW
+solar_high,2025,cap_inv,"['TEBiomassHR', 2025]",29.0,0.0,0.0,29.0,0.0,MW
+solar_high,2025,cap_inv,"['TEPlomin1', 2025]",110.0,0.0,0.0,110.0,0.0,MW
+solar_high,2025,cap_inv,"['TEPlomin2', 2025]",192.0,0.0,0.0,192.0,0.0,MW
+solar_high,2025,cap_inv,"['TE-TOZagreb', 2025]",440.0,0.0,0.0,440.0,0.0,MW
+solar_high,2025,cap_inv,"['HEZakucac', 2025]",150.0,0.0,0.0,150.0,0.0,MW
+solar_high,2025,cap_inv,"['HESenj', 2025]",60.0,0.0,0.0,60.0,0.0,MW
+solar_high,2025,cap_inv,"['HEDubrovnik_HR', 2025]",30.0,0.0,0.0,30.0,0.0,MW
+solar_high,2025,cap_inv,"['RHEVelebit', 2025]",80.0,0.0,0.0,80.0,0.0,MW
+solar_high,2025,cap_inv,"['RHEOrlovac', 2025]",80.0,0.0,0.0,80.0,0.0,MW
+solar_high,2025,cap_inv,"['RHEVinodol', 2025]",3.0,0.0,0.0,3.0,0.0,MW
+solar_high,2025,cap_inv,"['NEKrskoHR', 2025]",348.0,0.0,0.0,348.0,0.0,MW
+solar_high,2025,cap_inv,"['TERijeka', 2025]",700.0,0.0,0.0,700.0,0.0,MW
+solar_high,2025,cap_inv,"['HR_Wind_HR032', 2025]",156.0,0.0,0.0,156.0,0.0,MW
+solar_high,2025,cap_inv,"['HR_Wind_HR033', 2025]",283.65,0.0,0.0,283.65,0.0,MW
+solar_high,2025,cap_inv,"['HR_Wind_HR034', 2025]",295.1,0.0,0.0,295.1,0.0,MW
+solar_high,2025,cap_inv,"['HR_Wind_HR035', 2025]",299.6,0.0,0.0,299.6,0.0,MW
+solar_high,2025,cap_inv,"['HR_Wind_HR037', 2025]",20.7,0.0,0.0,20.7,0.0,MW
+solar_high,2025,cap_inv,"['hror', 2025]",150.0,0.0,0.0,150.0,0.0,MW
+solar_high,2025,cap_inv,"['HECombo', 2025]",60.0,0.0,0.0,60.0,0.0,MW
+solar_high,2025,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2025]",256.995537,0.0,0.0,256.995537,0.0,MW
+solar_high,2025,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2025]",45.963105,0.0,0.0,45.963105,0.0,MW
+solar_high,2025,cap_inv,"['HR_Solar_HR_EAST', 2025]",159.541358,0.0,0.0,159.541358,0.0,MW
+solar_high,2025,cap_inv_FC,"['PEMFC_CHP', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2025,cap_inv_FC,"['SOFC_CHP', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2025,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2025,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2025,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2025,heat_pump_ind_cap,"['ATW_HP', 2025]",90.0,0.0,0.0,90.0,60.0,MW
+solar_high,2025,heat_pump_ind_cap,"['geothermal_HP', 2025]",3.0,0.0,0.0,3.0,2.0,MW
+solar_high,2025,heat_pump_ind_cap,"['electric_boiler', 2025]",300.0,0.0,0.0,300.0,200.0,MW
+solar_high,2025,trad_boiler_ind_cap_inv,"['gas_boilers', 2025]",3893.01,0.0,3842.8627156637167,7735.872715663717,2595.340000000001,MW
+solar_high,2025,trad_boiler_ind_cap_inv,"['bio_boilers', 2025]",2651.43,0.0,0.0,2651.43,1767.6200000000003,MW
+solar_high,2025,trad_boiler_ind_cap_inv,"['oil_boilers', 2025]",1235.43,0.0,0.0,1235.43,823.6200000000001,MW
+solar_high,2025,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2025,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2025,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2025,stat_sto_cap_inv,"['Liion_storage', 2025]",3.0,0.0,0.0,3.0,2.0,MWh
+solar_high,2025,h2_sto_max_cap,"['H2_storage_tank', 2025]",10.0,0.0,0.0,10.0,0.0,MWh
+solar_high,2025,h2_electrolysis_max_cap,"['PEM_elec', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2025,h2_electrolysis_max_cap,"['SOEC_elec', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2025,h2_electrolysis_max_cap,"['Alkaline_EC', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2030,cap_inv,"['TEBiomassHR', 2030]",29.0,0.0,0.0,29.0,0.0,MW
+solar_high,2030,cap_inv,"['TEPlomin1', 2030]",110.0,0.0,0.0,110.0,0.0,MW
+solar_high,2030,cap_inv,"['TEPlomin2', 2030]",192.0,0.0,0.0,192.0,0.0,MW
+solar_high,2030,cap_inv,"['TE-TOZagreb', 2030]",440.0,0.0,0.0,440.0,0.0,MW
+solar_high,2030,cap_inv,"['HEZakucac', 2030]",150.0,0.0,0.0,150.0,0.0,MW
+solar_high,2030,cap_inv,"['HESenj', 2030]",60.0,0.0,0.0,60.0,0.0,MW
+solar_high,2030,cap_inv,"['HEDubrovnik_HR', 2030]",30.0,0.0,0.0,30.0,0.0,MW
+solar_high,2030,cap_inv,"['RHEVelebit', 2030]",80.0,0.0,0.0,80.0,0.0,MW
+solar_high,2030,cap_inv,"['RHEOrlovac', 2030]",80.0,0.0,0.0,80.0,0.0,MW
+solar_high,2030,cap_inv,"['RHEVinodol', 2030]",3.0,0.0,0.0,3.0,0.0,MW
+solar_high,2030,cap_inv,"['NEKrskoHR', 2030]",348.0,0.0,0.0,348.0,0.0,MW
+solar_high,2030,cap_inv,"['TERijeka', 2030]",700.0,0.0,0.0,700.0,0.0,MW
+solar_high,2030,cap_inv,"['HR_Wind_HR032', 2030]",156.0,0.0,0.0,156.0,0.0,MW
+solar_high,2030,cap_inv,"['HR_Wind_HR033', 2030]",283.65,0.0,0.0,283.65,0.0,MW
+solar_high,2030,cap_inv,"['HR_Wind_HR034', 2030]",295.1,0.0,0.0,295.1,0.0,MW
+solar_high,2030,cap_inv,"['HR_Wind_HR035', 2030]",299.6,0.0,0.0,299.6,0.0,MW
+solar_high,2030,cap_inv,"['HR_Wind_HR037', 2030]",20.7,0.0,0.0,20.7,0.0,MW
+solar_high,2030,cap_inv,"['hror', 2030]",150.0,0.0,0.0,150.0,0.0,MW
+solar_high,2030,cap_inv,"['HECombo', 2030]",60.0,0.0,0.0,60.0,0.0,MW
+solar_high,2030,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2030]",256.995537,0.0,0.0,256.995537,0.0,MW
+solar_high,2030,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2030]",45.963105,0.0,0.0,45.963105,0.0,MW
+solar_high,2030,cap_inv,"['HR_Solar_HR_EAST', 2030]",159.541358,0.0,0.0,159.541358,0.0,MW
+solar_high,2030,cap_inv_FC,"['PEMFC_CHP', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2030,cap_inv_FC,"['SOFC_CHP', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2030,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2030,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2030,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2030,heat_pump_ind_cap,"['ATW_HP', 2030]",45.0,0.0,0.0,45.0,45.0,MW
+solar_high,2030,heat_pump_ind_cap,"['geothermal_HP', 2030]",1.5,0.0,0.0,1.5,1.5,MW
+solar_high,2030,heat_pump_ind_cap,"['electric_boiler', 2030]",150.0,0.0,0.0,150.0,150.0,MW
+solar_high,2030,trad_boiler_ind_cap_inv,"['gas_boilers', 2030]",1946.505,3842.8627156637167,3699.8128605772927,9489.18057624101,1946.5049999999992,MW
+solar_high,2030,trad_boiler_ind_cap_inv,"['bio_boilers', 2030]",1325.715,0.0,0.0,1325.715,1325.715,MW
+solar_high,2030,trad_boiler_ind_cap_inv,"['oil_boilers', 2030]",617.715,0.0,0.0,617.715,617.715,MW
+solar_high,2030,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2030,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2030,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2030,stat_sto_cap_inv,"['Liion_storage', 2030]",1.5,0.0,0.0,1.5,1.5,MWh
+solar_high,2030,h2_sto_max_cap,"['H2_storage_tank', 2030]",10.0,0.0,0.0,10.0,0.0,MWh
+solar_high,2030,h2_electrolysis_max_cap,"['PEM_elec', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2030,h2_electrolysis_max_cap,"['SOEC_elec', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2030,h2_electrolysis_max_cap,"['Alkaline_EC', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2035,cap_inv,"['TEBiomassHR', 2035]",29.0,0.0,0.0,29.0,0.0,MW
+solar_high,2035,cap_inv,"['TEPlomin1', 2035]",69.41,0.0,0.0,69.41,40.59,MW
+solar_high,2035,cap_inv,"['TEPlomin2', 2035]",121.152,0.0,0.0,121.152,70.848,MW
+solar_high,2035,cap_inv,"['TE-TOZagreb', 2035]",319.0,0.0,0.0,319.0,121.0,MW
+solar_high,2035,cap_inv,"['HEZakucac', 2035]",150.0,0.0,0.0,150.0,0.0,MW
+solar_high,2035,cap_inv,"['HESenj', 2035]",60.0,0.0,0.0,60.0,0.0,MW
+solar_high,2035,cap_inv,"['HEDubrovnik_HR', 2035]",30.0,0.0,0.0,30.0,0.0,MW
+solar_high,2035,cap_inv,"['RHEVelebit', 2035]",80.0,0.0,0.0,80.0,0.0,MW
+solar_high,2035,cap_inv,"['RHEOrlovac', 2035]",80.0,0.0,0.0,80.0,0.0,MW
+solar_high,2035,cap_inv,"['RHEVinodol', 2035]",3.0,0.0,0.0,3.0,0.0,MW
+solar_high,2035,cap_inv,"['NEKrskoHR', 2035]",0.0,0.0,0.0,0.0,348.0,MW
+solar_high,2035,cap_inv,"['TERijeka', 2035]",441.7,0.0,0.0,441.7,258.3,MW
+solar_high,2035,cap_inv,"['HR_Wind_HR032', 2035]",156.0,0.0,0.0,156.0,0.0,MW
+solar_high,2035,cap_inv,"['HR_Wind_HR033', 2035]",283.65,0.0,0.0,283.65,0.0,MW
+solar_high,2035,cap_inv,"['HR_Wind_HR034', 2035]",295.1,0.0,0.0,295.1,0.0,MW
+solar_high,2035,cap_inv,"['HR_Wind_HR035', 2035]",299.6,0.0,0.0,299.6,0.0,MW
+solar_high,2035,cap_inv,"['HR_Wind_HR037', 2035]",20.7,0.0,0.0,20.7,0.0,MW
+solar_high,2035,cap_inv,"['hror', 2035]",150.0,0.0,0.0,150.0,0.0,MW
+solar_high,2035,cap_inv,"['HECombo', 2035]",60.0,0.0,0.0,60.0,0.0,MW
+solar_high,2035,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2035]",256.995537,0.0,0.0,256.995537,0.0,MW
+solar_high,2035,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2035]",45.963105,0.0,0.0,45.963105,0.0,MW
+solar_high,2035,cap_inv,"['HR_Solar_HR_EAST', 2035]",159.541358,0.0,0.0,159.541358,0.0,MW
+solar_high,2035,cap_inv_FC,"['PEMFC_CHP', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2035,cap_inv_FC,"['SOFC_CHP', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2035,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2035,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2035,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2035,heat_pump_ind_cap,"['ATW_HP', 2035]",0.0,0.0,0.7415417032946735,0.7415417032946735,45.0,MW
+solar_high,2035,heat_pump_ind_cap,"['geothermal_HP', 2035]",0.0,0.0,0.14184397163120568,0.14184397163120568,1.5,MW
+solar_high,2035,heat_pump_ind_cap,"['electric_boiler', 2035]",0.0,0.0,0.14184397163120568,0.14184397163120568,150.0,MW
+solar_high,2035,trad_boiler_ind_cap_inv,"['gas_boilers', 2035]",0.0,7542.675576241009,3360.569947330937,10903.245523571946,1946.505000000001,MW
+solar_high,2035,trad_boiler_ind_cap_inv,"['bio_boilers', 2035]",0.0,0.0,0.0,0.0,1325.715,MW
+solar_high,2035,trad_boiler_ind_cap_inv,"['oil_boilers', 2035]",0.0,0.0,0.0,0.0,617.715,MW
+solar_high,2035,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2035,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2035,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2035,stat_sto_cap_inv,"['Liion_storage', 2035]",0.0,0.0,0.0,0.0,1.5,MWh
+solar_high,2035,h2_sto_max_cap,"['H2_storage_tank', 2035]",10.0,0.0,0.0,10.0,0.0,MWh
+solar_high,2035,h2_electrolysis_max_cap,"['PEM_elec', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2035,h2_electrolysis_max_cap,"['SOEC_elec', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2035,h2_electrolysis_max_cap,"['Alkaline_EC', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2040,cap_inv,"['TEBiomassHR', 2040]",29.0,0.0,0.0,29.0,0.0,MW
+solar_high,2040,cap_inv,"['TEPlomin1', 2040]",6.93,0.0,0.0,6.93,62.48,MW
+solar_high,2040,cap_inv,"['TEPlomin2', 2040]",12.096,0.0,0.0,12.096,109.056,MW
+solar_high,2040,cap_inv,"['TE-TOZagreb', 2040]",63.8,0.0,0.0,63.8,255.2,MW
+solar_high,2040,cap_inv,"['HEZakucac', 2040]",150.0,0.0,0.0,150.0,0.0,MW
+solar_high,2040,cap_inv,"['HESenj', 2040]",60.0,0.0,0.0,60.0,0.0,MW
+solar_high,2040,cap_inv,"['HEDubrovnik_HR', 2040]",30.0,0.0,0.0,30.0,0.0,MW
+solar_high,2040,cap_inv,"['RHEVelebit', 2040]",80.0,0.0,0.0,80.0,0.0,MW
+solar_high,2040,cap_inv,"['RHEOrlovac', 2040]",80.0,0.0,0.0,80.0,0.0,MW
+solar_high,2040,cap_inv,"['RHEVinodol', 2040]",3.0,0.0,0.0,3.0,0.0,MW
+solar_high,2040,cap_inv,"['NEKrskoHR', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2040,cap_inv,"['TERijeka', 2040]",44.1,0.0,0.0,44.1,397.59999999999997,MW
+solar_high,2040,cap_inv,"['HR_Wind_HR032', 2040]",156.0,0.0,0.0,156.0,0.0,MW
+solar_high,2040,cap_inv,"['HR_Wind_HR033', 2040]",283.65,0.0,0.0,283.65,0.0,MW
+solar_high,2040,cap_inv,"['HR_Wind_HR034', 2040]",295.1,0.0,0.0,295.1,0.0,MW
+solar_high,2040,cap_inv,"['HR_Wind_HR035', 2040]",299.6,0.0,0.0,299.6,0.0,MW
+solar_high,2040,cap_inv,"['HR_Wind_HR037', 2040]",20.7,0.0,0.0,20.7,0.0,MW
+solar_high,2040,cap_inv,"['hror', 2040]",150.0,0.0,0.0,150.0,0.0,MW
+solar_high,2040,cap_inv,"['HECombo', 2040]",60.0,0.0,0.0,60.0,0.0,MW
+solar_high,2040,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2040]",256.995537,0.0,0.0,256.995537,0.0,MW
+solar_high,2040,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2040]",45.963105,0.0,0.0,45.963105,0.0,MW
+solar_high,2040,cap_inv,"['HR_Solar_HR_EAST', 2040]",159.541358,0.0,0.0,159.541358,0.0,MW
+solar_high,2040,cap_inv_FC,"['PEMFC_CHP', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2040,cap_inv_FC,"['SOFC_CHP', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2040,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2040,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2040,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2040,heat_pump_ind_cap,"['ATW_HP', 2040]",0.0,0.7415417032946735,0.06178615398314937,0.8033278572778229,0.0,MW
+solar_high,2040,heat_pump_ind_cap,"['geothermal_HP', 2040]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+solar_high,2040,heat_pump_ind_cap,"['electric_boiler', 2040]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+solar_high,2040,trad_boiler_ind_cap_inv,"['gas_boilers', 2040]",0.0,10903.245523571946,0.0,10903.245523571946,0.0,MW
+solar_high,2040,trad_boiler_ind_cap_inv,"['bio_boilers', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2040,trad_boiler_ind_cap_inv,"['oil_boilers', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2040,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2040]",0,0.0,202.12767612531064,202.12767612531064,0.0,MW
+solar_high,2040,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2040,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2040,stat_sto_cap_inv,"['Liion_storage', 2040]",0.0,0.0,0.0,0.0,0.0,MWh
+solar_high,2040,h2_sto_max_cap,"['H2_storage_tank', 2040]",10.0,0.0,0.0,10.0,0.0,MWh
+solar_high,2040,h2_electrolysis_max_cap,"['PEM_elec', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2040,h2_electrolysis_max_cap,"['SOEC_elec', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2040,h2_electrolysis_max_cap,"['Alkaline_EC', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2045,cap_inv,"['TEBiomassHR', 2045]",29.0,0.0,0.0,29.0,0.0,MW
+solar_high,2045,cap_inv,"['TEPlomin1', 2045]",0.66,0.0,0.0,0.66,6.27,MW
+solar_high,2045,cap_inv,"['TEPlomin2', 2045]",1.1520000000000001,0.0,0.0,1.1520000000000001,10.943999999999999,MW
+solar_high,2045,cap_inv,"['TE-TOZagreb', 2045]",12.76,0.0,0.0,12.76,51.04,MW
+solar_high,2045,cap_inv,"['HEZakucac', 2045]",150.0,0.0,0.0,150.0,0.0,MW
+solar_high,2045,cap_inv,"['HESenj', 2045]",60.0,0.0,0.0,60.0,0.0,MW
+solar_high,2045,cap_inv,"['HEDubrovnik_HR', 2045]",30.0,0.0,0.0,30.0,0.0,MW
+solar_high,2045,cap_inv,"['RHEVelebit', 2045]",80.0,0.0,0.0,80.0,0.0,MW
+solar_high,2045,cap_inv,"['RHEOrlovac', 2045]",80.0,0.0,0.0,80.0,0.0,MW
+solar_high,2045,cap_inv,"['RHEVinodol', 2045]",3.0,0.0,0.0,3.0,0.0,MW
+solar_high,2045,cap_inv,"['NEKrskoHR', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2045,cap_inv,"['TERijeka', 2045]",4.2,0.0,0.0,4.2,39.9,MW
+solar_high,2045,cap_inv,"['HR_Wind_HR032', 2045]",156.0,0.0,0.0,156.0,0.0,MW
+solar_high,2045,cap_inv,"['HR_Wind_HR033', 2045]",283.65,0.0,0.0,283.65,0.0,MW
+solar_high,2045,cap_inv,"['HR_Wind_HR034', 2045]",295.1,0.0,0.0,295.1,0.0,MW
+solar_high,2045,cap_inv,"['HR_Wind_HR035', 2045]",299.6,0.0,0.0,299.6,0.0,MW
+solar_high,2045,cap_inv,"['HR_Wind_HR037', 2045]",20.7,0.0,0.0,20.7,0.0,MW
+solar_high,2045,cap_inv,"['hror', 2045]",150.0,0.0,0.0,150.0,0.0,MW
+solar_high,2045,cap_inv,"['HECombo', 2045]",60.0,0.0,0.0,60.0,0.0,MW
+solar_high,2045,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2045]",256.995537,0.0,0.0,256.995537,0.0,MW
+solar_high,2045,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2045]",45.963105,0.0,0.0,45.963105,0.0,MW
+solar_high,2045,cap_inv,"['HR_Solar_HR_EAST', 2045]",159.541358,0.0,0.0,159.541358,0.0,MW
+solar_high,2045,cap_inv_FC,"['PEMFC_CHP', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2045,cap_inv_FC,"['SOFC_CHP', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2045,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2045,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2045,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2045,heat_pump_ind_cap,"['ATW_HP', 2045]",0.0,0.8033278572778229,0.06493786893324187,0.8682657262110647,0.0,MW
+solar_high,2045,heat_pump_ind_cap,"['geothermal_HP', 2045]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+solar_high,2045,heat_pump_ind_cap,"['electric_boiler', 2045]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+solar_high,2045,trad_boiler_ind_cap_inv,"['gas_boilers', 2045]",0.0,10903.245523571946,0.0,10903.245523571946,0.0,MW
+solar_high,2045,trad_boiler_ind_cap_inv,"['bio_boilers', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2045,trad_boiler_ind_cap_inv,"['oil_boilers', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2045,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2045]",0,202.12767612531064,58.98698537290356,261.1146614982142,0.0,MW
+solar_high,2045,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2045,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2045,stat_sto_cap_inv,"['Liion_storage', 2045]",0.0,0.0,0.0,0.0,0.0,MWh
+solar_high,2045,h2_sto_max_cap,"['H2_storage_tank', 2045]",10.0,0.0,0.0,10.0,0.0,MWh
+solar_high,2045,h2_electrolysis_max_cap,"['PEM_elec', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2045,h2_electrolysis_max_cap,"['SOEC_elec', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2045,h2_electrolysis_max_cap,"['Alkaline_EC', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2050,cap_inv,"['TEBiomassHR', 2050]",29.0,0.0,0.0,29.0,0.0,MW
+solar_high,2050,cap_inv,"['TEPlomin1', 2050]",0.11,0.0,0.0,0.11,0.55,MW
+solar_high,2050,cap_inv,"['TEPlomin2', 2050]",0.192,0.0,0.0,0.192,0.9600000000000002,MW
+solar_high,2050,cap_inv,"['TE-TOZagreb', 2050]",2.64,0.0,0.23209686475297267,2.8720968647529728,10.120000000000001,MW
+solar_high,2050,cap_inv,"['HEZakucac', 2050]",150.0,0.0,0.0,150.0,0.0,MW
+solar_high,2050,cap_inv,"['HESenj', 2050]",60.0,0.0,0.0,60.0,0.0,MW
+solar_high,2050,cap_inv,"['HEDubrovnik_HR', 2050]",30.0,0.0,0.0,30.0,0.0,MW
+solar_high,2050,cap_inv,"['RHEVelebit', 2050]",80.0,0.0,0.0,80.0,0.0,MW
+solar_high,2050,cap_inv,"['RHEOrlovac', 2050]",80.0,0.0,0.0,80.0,0.0,MW
+solar_high,2050,cap_inv,"['RHEVinodol', 2050]",3.0,0.0,0.0,3.0,0.0,MW
+solar_high,2050,cap_inv,"['NEKrskoHR', 2050]",0.0,0.0,100.0,100.0,0.0,MW
+solar_high,2050,cap_inv,"['TERijeka', 2050]",0.7000000000000001,0.0,0.0,0.7000000000000001,3.5,MW
+solar_high,2050,cap_inv,"['HR_Wind_HR032', 2050]",156.0,0.0,0.0,156.0,0.0,MW
+solar_high,2050,cap_inv,"['HR_Wind_HR033', 2050]",283.65,0.0,0.0,283.65,0.0,MW
+solar_high,2050,cap_inv,"['HR_Wind_HR034', 2050]",295.1,0.0,0.0,295.1,0.0,MW
+solar_high,2050,cap_inv,"['HR_Wind_HR035', 2050]",299.6,0.0,0.0,299.6,0.0,MW
+solar_high,2050,cap_inv,"['HR_Wind_HR037', 2050]",20.7,0.0,0.0,20.7,0.0,MW
+solar_high,2050,cap_inv,"['hror', 2050]",150.0,0.0,0.0,150.0,0.0,MW
+solar_high,2050,cap_inv,"['HECombo', 2050]",60.0,0.0,0.0,60.0,0.0,MW
+solar_high,2050,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2050]",256.995537,0.0,186.0580027533231,443.0535397533231,0.0,MW
+solar_high,2050,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2050]",45.963105,0.0,0.0,45.963105,0.0,MW
+solar_high,2050,cap_inv,"['HR_Solar_HR_EAST', 2050]",159.541358,0.0,0.0,159.541358,0.0,MW
+solar_high,2050,cap_inv_FC,"['PEMFC_CHP', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2050,cap_inv_FC,"['SOFC_CHP', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2050,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2050,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2050,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2050,heat_pump_ind_cap,"['ATW_HP', 2050]",0.0,0.8682657262110647,0.06825035326372571,0.9365160794747904,0.0,MW
+solar_high,2050,heat_pump_ind_cap,"['geothermal_HP', 2050]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+solar_high,2050,heat_pump_ind_cap,"['electric_boiler', 2050]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+solar_high,2050,trad_boiler_ind_cap_inv,"['gas_boilers', 2050]",0.0,10903.245523571946,0.0,10903.245523571946,0.0,MW
+solar_high,2050,trad_boiler_ind_cap_inv,"['bio_boilers', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2050,trad_boiler_ind_cap_inv,"['oil_boilers', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2050,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2050]",0,261.1146614982142,0.0,261.1146614982142,0.0,MW
+solar_high,2050,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2050,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+solar_high,2050,stat_sto_cap_inv,"['Liion_storage', 2050]",0.0,0.0,0.0,0.0,0.0,MWh
+solar_high,2050,h2_sto_max_cap,"['H2_storage_tank', 2050]",10.0,0.0,0.0,10.0,0.0,MWh
+solar_high,2050,h2_electrolysis_max_cap,"['PEM_elec', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2050,h2_electrolysis_max_cap,"['SOEC_elec', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+solar_high,2050,h2_electrolysis_max_cap,"['Alkaline_EC', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2020,cap_inv,"['TEBiomassHR', 2020]",29.0,0.0,0.0,29.0,,MW
+wind_low,2020,cap_inv,"['TEPlomin1', 2020]",110.0,0.0,0.0,110.0,,MW
+wind_low,2020,cap_inv,"['TEPlomin2', 2020]",192.0,0.0,0.0,192.0,,MW
+wind_low,2020,cap_inv,"['TE-TOZagreb', 2020]",440.0,0.0,0.0,440.0,,MW
+wind_low,2020,cap_inv,"['HEZakucac', 2020]",150.0,0.0,0.0,150.0,,MW
+wind_low,2020,cap_inv,"['HESenj', 2020]",60.0,0.0,0.0,60.0,,MW
+wind_low,2020,cap_inv,"['HEDubrovnik_HR', 2020]",30.0,0.0,0.0,30.0,,MW
+wind_low,2020,cap_inv,"['RHEVelebit', 2020]",80.0,0.0,0.0,80.0,,MW
+wind_low,2020,cap_inv,"['RHEOrlovac', 2020]",80.0,0.0,0.0,80.0,,MW
+wind_low,2020,cap_inv,"['RHEVinodol', 2020]",3.0,0.0,0.0,3.0,,MW
+wind_low,2020,cap_inv,"['NEKrskoHR', 2020]",348.0,0.0,0.0,348.0,,MW
+wind_low,2020,cap_inv,"['TERijeka', 2020]",700.0,0.0,0.0,700.0,,MW
+wind_low,2020,cap_inv,"['HR_Wind_HR032', 2020]",156.0,0.0,0.0,156.0,,MW
+wind_low,2020,cap_inv,"['HR_Wind_HR033', 2020]",283.65,0.0,0.0,283.65,,MW
+wind_low,2020,cap_inv,"['HR_Wind_HR034', 2020]",295.1,0.0,0.0,295.1,,MW
+wind_low,2020,cap_inv,"['HR_Wind_HR035', 2020]",299.6,0.0,0.0,299.6,,MW
+wind_low,2020,cap_inv,"['HR_Wind_HR037', 2020]",20.7,0.0,0.0,20.7,,MW
+wind_low,2020,cap_inv,"['hror', 2020]",150.0,0.0,0.0,150.0,,MW
+wind_low,2020,cap_inv,"['HECombo', 2020]",60.0,0.0,0.0,60.0,,MW
+wind_low,2020,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2020]",256.995537,0.0,0.0,256.995537,,MW
+wind_low,2020,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2020]",45.963105,0.0,0.0,45.963105,,MW
+wind_low,2020,cap_inv,"['HR_Solar_HR_EAST', 2020]",159.541358,0.0,0.0,159.541358,,MW
+wind_low,2020,cap_inv_FC,"['PEMFC_CHP', 2020]",0.0,0.0,0.0,0.0,,MW
+wind_low,2020,cap_inv_FC,"['SOFC_CHP', 2020]",0.0,0.0,0.0,0.0,,MW
+wind_low,2020,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+wind_low,2020,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+wind_low,2020,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+wind_low,2020,heat_pump_ind_cap,"['ATW_HP', 2020]",150.0,0.0,0.0,150.0,,MW
+wind_low,2020,heat_pump_ind_cap,"['geothermal_HP', 2020]",5.0,0.0,0.0,5.0,,MW
+wind_low,2020,heat_pump_ind_cap,"['electric_boiler', 2020]",500.0,0.0,0.0,500.0,,MW
+wind_low,2020,trad_boiler_ind_cap_inv,"['gas_boilers', 2020]",6488.35,0.0,0.0,6488.35,,MW
+wind_low,2020,trad_boiler_ind_cap_inv,"['bio_boilers', 2020]",4419.05,0.0,0.0,4419.05,,MW
+wind_low,2020,trad_boiler_ind_cap_inv,"['oil_boilers', 2020]",2059.05,0.0,0.0,2059.05,,MW
+wind_low,2020,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+wind_low,2020,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+wind_low,2020,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+wind_low,2020,stat_sto_cap_inv,"['Liion_storage', 2020]",5.0,0.0,0.0,5.0,,MWh
+wind_low,2020,h2_sto_max_cap,"['H2_storage_tank', 2020]",10.0,0.0,0.0,10.0,,MWh
+wind_low,2020,h2_electrolysis_max_cap,"['PEM_elec', 2020]",0.0,0.0,0.0,0.0,,MW
+wind_low,2020,h2_electrolysis_max_cap,"['SOEC_elec', 2020]",0.0,0.0,0.0,0.0,,MW
+wind_low,2020,h2_electrolysis_max_cap,"['Alkaline_EC', 2020]",0.0,0.0,0.0,0.0,,MW
+wind_low,2025,cap_inv,"['TEBiomassHR', 2025]",29.0,0.0,0.0,29.0,0.0,MW
+wind_low,2025,cap_inv,"['TEPlomin1', 2025]",110.0,0.0,0.0,110.0,0.0,MW
+wind_low,2025,cap_inv,"['TEPlomin2', 2025]",192.0,0.0,0.0,192.0,0.0,MW
+wind_low,2025,cap_inv,"['TE-TOZagreb', 2025]",440.0,0.0,0.0,440.0,0.0,MW
+wind_low,2025,cap_inv,"['HEZakucac', 2025]",150.0,0.0,0.0,150.0,0.0,MW
+wind_low,2025,cap_inv,"['HESenj', 2025]",60.0,0.0,0.0,60.0,0.0,MW
+wind_low,2025,cap_inv,"['HEDubrovnik_HR', 2025]",30.0,0.0,0.0,30.0,0.0,MW
+wind_low,2025,cap_inv,"['RHEVelebit', 2025]",80.0,0.0,0.0,80.0,0.0,MW
+wind_low,2025,cap_inv,"['RHEOrlovac', 2025]",80.0,0.0,0.0,80.0,0.0,MW
+wind_low,2025,cap_inv,"['RHEVinodol', 2025]",3.0,0.0,0.0,3.0,0.0,MW
+wind_low,2025,cap_inv,"['NEKrskoHR', 2025]",348.0,0.0,0.0,348.0,0.0,MW
+wind_low,2025,cap_inv,"['TERijeka', 2025]",700.0,0.0,0.0,700.0,0.0,MW
+wind_low,2025,cap_inv,"['HR_Wind_HR032', 2025]",156.0,0.0,0.0,156.0,0.0,MW
+wind_low,2025,cap_inv,"['HR_Wind_HR033', 2025]",283.65,0.0,0.0,283.65,0.0,MW
+wind_low,2025,cap_inv,"['HR_Wind_HR034', 2025]",295.1,0.0,0.0,295.1,0.0,MW
+wind_low,2025,cap_inv,"['HR_Wind_HR035', 2025]",299.6,0.0,0.0,299.6,0.0,MW
+wind_low,2025,cap_inv,"['HR_Wind_HR037', 2025]",20.7,0.0,0.0,20.7,0.0,MW
+wind_low,2025,cap_inv,"['hror', 2025]",150.0,0.0,0.0,150.0,0.0,MW
+wind_low,2025,cap_inv,"['HECombo', 2025]",60.0,0.0,0.0,60.0,0.0,MW
+wind_low,2025,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2025]",256.995537,0.0,0.0,256.995537,0.0,MW
+wind_low,2025,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2025]",45.963105,0.0,0.0,45.963105,0.0,MW
+wind_low,2025,cap_inv,"['HR_Solar_HR_EAST', 2025]",159.541358,0.0,0.0,159.541358,0.0,MW
+wind_low,2025,cap_inv_FC,"['PEMFC_CHP', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2025,cap_inv_FC,"['SOFC_CHP', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2025,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2025,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2025,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2025,heat_pump_ind_cap,"['ATW_HP', 2025]",90.0,0.0,0.0,90.0,60.0,MW
+wind_low,2025,heat_pump_ind_cap,"['geothermal_HP', 2025]",3.0,0.0,0.0,3.0,2.0,MW
+wind_low,2025,heat_pump_ind_cap,"['electric_boiler', 2025]",300.0,0.0,0.0,300.0,200.0,MW
+wind_low,2025,trad_boiler_ind_cap_inv,"['gas_boilers', 2025]",3893.01,0.0,3842.8627156637167,7735.872715663717,2595.340000000001,MW
+wind_low,2025,trad_boiler_ind_cap_inv,"['bio_boilers', 2025]",2651.43,0.0,0.0,2651.43,1767.6200000000003,MW
+wind_low,2025,trad_boiler_ind_cap_inv,"['oil_boilers', 2025]",1235.43,0.0,0.0,1235.43,823.6200000000001,MW
+wind_low,2025,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2025,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2025,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2025,stat_sto_cap_inv,"['Liion_storage', 2025]",3.0,0.0,0.0,3.0,2.0,MWh
+wind_low,2025,h2_sto_max_cap,"['H2_storage_tank', 2025]",10.0,0.0,0.0,10.0,0.0,MWh
+wind_low,2025,h2_electrolysis_max_cap,"['PEM_elec', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2025,h2_electrolysis_max_cap,"['SOEC_elec', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2025,h2_electrolysis_max_cap,"['Alkaline_EC', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2030,cap_inv,"['TEBiomassHR', 2030]",29.0,0.0,0.0,29.0,0.0,MW
+wind_low,2030,cap_inv,"['TEPlomin1', 2030]",110.0,0.0,0.0,110.0,0.0,MW
+wind_low,2030,cap_inv,"['TEPlomin2', 2030]",192.0,0.0,0.0,192.0,0.0,MW
+wind_low,2030,cap_inv,"['TE-TOZagreb', 2030]",440.0,0.0,0.0,440.0,0.0,MW
+wind_low,2030,cap_inv,"['HEZakucac', 2030]",150.0,0.0,0.0,150.0,0.0,MW
+wind_low,2030,cap_inv,"['HESenj', 2030]",60.0,0.0,0.0,60.0,0.0,MW
+wind_low,2030,cap_inv,"['HEDubrovnik_HR', 2030]",30.0,0.0,0.0,30.0,0.0,MW
+wind_low,2030,cap_inv,"['RHEVelebit', 2030]",80.0,0.0,0.0,80.0,0.0,MW
+wind_low,2030,cap_inv,"['RHEOrlovac', 2030]",80.0,0.0,0.0,80.0,0.0,MW
+wind_low,2030,cap_inv,"['RHEVinodol', 2030]",3.0,0.0,0.0,3.0,0.0,MW
+wind_low,2030,cap_inv,"['NEKrskoHR', 2030]",348.0,0.0,0.0,348.0,0.0,MW
+wind_low,2030,cap_inv,"['TERijeka', 2030]",700.0,0.0,0.0,700.0,0.0,MW
+wind_low,2030,cap_inv,"['HR_Wind_HR032', 2030]",156.0,0.0,0.0,156.0,0.0,MW
+wind_low,2030,cap_inv,"['HR_Wind_HR033', 2030]",283.65,0.0,0.0,283.65,0.0,MW
+wind_low,2030,cap_inv,"['HR_Wind_HR034', 2030]",295.1,0.0,0.0,295.1,0.0,MW
+wind_low,2030,cap_inv,"['HR_Wind_HR035', 2030]",299.6,0.0,0.0,299.6,0.0,MW
+wind_low,2030,cap_inv,"['HR_Wind_HR037', 2030]",20.7,0.0,0.0,20.7,0.0,MW
+wind_low,2030,cap_inv,"['hror', 2030]",150.0,0.0,0.0,150.0,0.0,MW
+wind_low,2030,cap_inv,"['HECombo', 2030]",60.0,0.0,0.0,60.0,0.0,MW
+wind_low,2030,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2030]",256.995537,0.0,0.0,256.995537,0.0,MW
+wind_low,2030,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2030]",45.963105,0.0,0.0,45.963105,0.0,MW
+wind_low,2030,cap_inv,"['HR_Solar_HR_EAST', 2030]",159.541358,0.0,0.0,159.541358,0.0,MW
+wind_low,2030,cap_inv_FC,"['PEMFC_CHP', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2030,cap_inv_FC,"['SOFC_CHP', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2030,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2030,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2030,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2030,heat_pump_ind_cap,"['ATW_HP', 2030]",45.0,0.0,0.0,45.0,45.0,MW
+wind_low,2030,heat_pump_ind_cap,"['geothermal_HP', 2030]",1.5,0.0,0.0,1.5,1.5,MW
+wind_low,2030,heat_pump_ind_cap,"['electric_boiler', 2030]",150.0,0.0,0.0,150.0,150.0,MW
+wind_low,2030,trad_boiler_ind_cap_inv,"['gas_boilers', 2030]",1946.505,3842.8627156637167,3699.8128605772927,9489.18057624101,1946.5049999999992,MW
+wind_low,2030,trad_boiler_ind_cap_inv,"['bio_boilers', 2030]",1325.715,0.0,0.0,1325.715,1325.715,MW
+wind_low,2030,trad_boiler_ind_cap_inv,"['oil_boilers', 2030]",617.715,0.0,0.0,617.715,617.715,MW
+wind_low,2030,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2030,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2030,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2030,stat_sto_cap_inv,"['Liion_storage', 2030]",1.5,0.0,0.0,1.5,1.5,MWh
+wind_low,2030,h2_sto_max_cap,"['H2_storage_tank', 2030]",10.0,0.0,0.0,10.0,0.0,MWh
+wind_low,2030,h2_electrolysis_max_cap,"['PEM_elec', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2030,h2_electrolysis_max_cap,"['SOEC_elec', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2030,h2_electrolysis_max_cap,"['Alkaline_EC', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2035,cap_inv,"['TEBiomassHR', 2035]",29.0,0.0,0.0,29.0,0.0,MW
+wind_low,2035,cap_inv,"['TEPlomin1', 2035]",69.41,0.0,0.0,69.41,40.59,MW
+wind_low,2035,cap_inv,"['TEPlomin2', 2035]",121.152,0.0,0.0,121.152,70.848,MW
+wind_low,2035,cap_inv,"['TE-TOZagreb', 2035]",319.0,0.0,0.0,319.0,121.0,MW
+wind_low,2035,cap_inv,"['HEZakucac', 2035]",150.0,0.0,0.0,150.0,0.0,MW
+wind_low,2035,cap_inv,"['HESenj', 2035]",60.0,0.0,0.0,60.0,0.0,MW
+wind_low,2035,cap_inv,"['HEDubrovnik_HR', 2035]",30.0,0.0,0.0,30.0,0.0,MW
+wind_low,2035,cap_inv,"['RHEVelebit', 2035]",80.0,0.0,0.0,80.0,0.0,MW
+wind_low,2035,cap_inv,"['RHEOrlovac', 2035]",80.0,0.0,0.0,80.0,0.0,MW
+wind_low,2035,cap_inv,"['RHEVinodol', 2035]",3.0,0.0,0.0,3.0,0.0,MW
+wind_low,2035,cap_inv,"['NEKrskoHR', 2035]",0.0,0.0,0.0,0.0,348.0,MW
+wind_low,2035,cap_inv,"['TERijeka', 2035]",441.7,0.0,0.0,441.7,258.3,MW
+wind_low,2035,cap_inv,"['HR_Wind_HR032', 2035]",156.0,0.0,0.0,156.0,0.0,MW
+wind_low,2035,cap_inv,"['HR_Wind_HR033', 2035]",283.65,0.0,0.0,283.65,0.0,MW
+wind_low,2035,cap_inv,"['HR_Wind_HR034', 2035]",295.1,0.0,0.0,295.1,0.0,MW
+wind_low,2035,cap_inv,"['HR_Wind_HR035', 2035]",299.6,0.0,0.0,299.6,0.0,MW
+wind_low,2035,cap_inv,"['HR_Wind_HR037', 2035]",20.7,0.0,0.0,20.7,0.0,MW
+wind_low,2035,cap_inv,"['hror', 2035]",150.0,0.0,0.0,150.0,0.0,MW
+wind_low,2035,cap_inv,"['HECombo', 2035]",60.0,0.0,0.0,60.0,0.0,MW
+wind_low,2035,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2035]",256.995537,0.0,0.0,256.995537,0.0,MW
+wind_low,2035,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2035]",45.963105,0.0,0.0,45.963105,0.0,MW
+wind_low,2035,cap_inv,"['HR_Solar_HR_EAST', 2035]",159.541358,0.0,0.0,159.541358,0.0,MW
+wind_low,2035,cap_inv_FC,"['PEMFC_CHP', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2035,cap_inv_FC,"['SOFC_CHP', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2035,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2035,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2035,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2035,heat_pump_ind_cap,"['ATW_HP', 2035]",0.0,0.0,0.7415417032946728,0.7415417032946728,45.0,MW
+wind_low,2035,heat_pump_ind_cap,"['geothermal_HP', 2035]",0.0,0.0,0.14184397163120568,0.14184397163120568,1.5,MW
+wind_low,2035,heat_pump_ind_cap,"['electric_boiler', 2035]",0.0,0.0,0.14184397163120568,0.14184397163120568,150.0,MW
+wind_low,2035,trad_boiler_ind_cap_inv,"['gas_boilers', 2035]",0.0,7542.675576241009,3360.569947330937,10903.245523571946,1946.505000000001,MW
+wind_low,2035,trad_boiler_ind_cap_inv,"['bio_boilers', 2035]",0.0,0.0,0.0,0.0,1325.715,MW
+wind_low,2035,trad_boiler_ind_cap_inv,"['oil_boilers', 2035]",0.0,0.0,0.0,0.0,617.715,MW
+wind_low,2035,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2035,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2035,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2035,stat_sto_cap_inv,"['Liion_storage', 2035]",0.0,0.0,0.0,0.0,1.5,MWh
+wind_low,2035,h2_sto_max_cap,"['H2_storage_tank', 2035]",10.0,0.0,0.0,10.0,0.0,MWh
+wind_low,2035,h2_electrolysis_max_cap,"['PEM_elec', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2035,h2_electrolysis_max_cap,"['SOEC_elec', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2035,h2_electrolysis_max_cap,"['Alkaline_EC', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2040,cap_inv,"['TEBiomassHR', 2040]",29.0,0.0,0.0,29.0,0.0,MW
+wind_low,2040,cap_inv,"['TEPlomin1', 2040]",6.93,0.0,0.0,6.93,62.48,MW
+wind_low,2040,cap_inv,"['TEPlomin2', 2040]",12.096,0.0,0.0,12.096,109.056,MW
+wind_low,2040,cap_inv,"['TE-TOZagreb', 2040]",63.8,0.0,0.0,63.8,255.2,MW
+wind_low,2040,cap_inv,"['HEZakucac', 2040]",150.0,0.0,0.0,150.0,0.0,MW
+wind_low,2040,cap_inv,"['HESenj', 2040]",60.0,0.0,0.0,60.0,0.0,MW
+wind_low,2040,cap_inv,"['HEDubrovnik_HR', 2040]",30.0,0.0,0.0,30.0,0.0,MW
+wind_low,2040,cap_inv,"['RHEVelebit', 2040]",80.0,0.0,0.0,80.0,0.0,MW
+wind_low,2040,cap_inv,"['RHEOrlovac', 2040]",80.0,0.0,0.0,80.0,0.0,MW
+wind_low,2040,cap_inv,"['RHEVinodol', 2040]",3.0,0.0,0.0,3.0,0.0,MW
+wind_low,2040,cap_inv,"['NEKrskoHR', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2040,cap_inv,"['TERijeka', 2040]",44.1,0.0,0.0,44.1,397.59999999999997,MW
+wind_low,2040,cap_inv,"['HR_Wind_HR032', 2040]",156.0,0.0,0.0,156.0,0.0,MW
+wind_low,2040,cap_inv,"['HR_Wind_HR033', 2040]",283.65,0.0,0.0,283.65,0.0,MW
+wind_low,2040,cap_inv,"['HR_Wind_HR034', 2040]",295.1,0.0,0.0,295.1,0.0,MW
+wind_low,2040,cap_inv,"['HR_Wind_HR035', 2040]",299.6,0.0,0.0,299.6,0.0,MW
+wind_low,2040,cap_inv,"['HR_Wind_HR037', 2040]",20.7,0.0,0.0,20.7,0.0,MW
+wind_low,2040,cap_inv,"['hror', 2040]",150.0,0.0,0.0,150.0,0.0,MW
+wind_low,2040,cap_inv,"['HECombo', 2040]",60.0,0.0,0.0,60.0,0.0,MW
+wind_low,2040,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2040]",256.995537,0.0,0.0,256.995537,0.0,MW
+wind_low,2040,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2040]",45.963105,0.0,0.0,45.963105,0.0,MW
+wind_low,2040,cap_inv,"['HR_Solar_HR_EAST', 2040]",159.541358,0.0,0.0,159.541358,0.0,MW
+wind_low,2040,cap_inv_FC,"['PEMFC_CHP', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2040,cap_inv_FC,"['SOFC_CHP', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2040,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2040,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2040,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2040,heat_pump_ind_cap,"['ATW_HP', 2040]",0.0,0.7415417032946728,0.06178615398315023,0.8033278572778231,0.0,MW
+wind_low,2040,heat_pump_ind_cap,"['geothermal_HP', 2040]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+wind_low,2040,heat_pump_ind_cap,"['electric_boiler', 2040]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+wind_low,2040,trad_boiler_ind_cap_inv,"['gas_boilers', 2040]",0.0,10903.245523571946,0.0,10903.245523571946,0.0,MW
+wind_low,2040,trad_boiler_ind_cap_inv,"['bio_boilers', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2040,trad_boiler_ind_cap_inv,"['oil_boilers', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2040,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2040]",0,0.0,202.12767612531064,202.12767612531064,0.0,MW
+wind_low,2040,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2040,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2040,stat_sto_cap_inv,"['Liion_storage', 2040]",0.0,0.0,0.0,0.0,0.0,MWh
+wind_low,2040,h2_sto_max_cap,"['H2_storage_tank', 2040]",10.0,0.0,0.0,10.0,0.0,MWh
+wind_low,2040,h2_electrolysis_max_cap,"['PEM_elec', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2040,h2_electrolysis_max_cap,"['SOEC_elec', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2040,h2_electrolysis_max_cap,"['Alkaline_EC', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2045,cap_inv,"['TEBiomassHR', 2045]",29.0,0.0,0.0,29.0,0.0,MW
+wind_low,2045,cap_inv,"['TEPlomin1', 2045]",0.66,0.0,0.0,0.66,6.27,MW
+wind_low,2045,cap_inv,"['TEPlomin2', 2045]",1.1520000000000001,0.0,0.0,1.1520000000000001,10.943999999999999,MW
+wind_low,2045,cap_inv,"['TE-TOZagreb', 2045]",12.76,0.0,0.0,12.76,51.04,MW
+wind_low,2045,cap_inv,"['HEZakucac', 2045]",150.0,0.0,0.0,150.0,0.0,MW
+wind_low,2045,cap_inv,"['HESenj', 2045]",60.0,0.0,0.0,60.0,0.0,MW
+wind_low,2045,cap_inv,"['HEDubrovnik_HR', 2045]",30.0,0.0,0.0,30.0,0.0,MW
+wind_low,2045,cap_inv,"['RHEVelebit', 2045]",80.0,0.0,0.0,80.0,0.0,MW
+wind_low,2045,cap_inv,"['RHEOrlovac', 2045]",80.0,0.0,0.0,80.0,0.0,MW
+wind_low,2045,cap_inv,"['RHEVinodol', 2045]",3.0,0.0,0.0,3.0,0.0,MW
+wind_low,2045,cap_inv,"['NEKrskoHR', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2045,cap_inv,"['TERijeka', 2045]",4.2,0.0,0.0,4.2,39.9,MW
+wind_low,2045,cap_inv,"['HR_Wind_HR032', 2045]",156.0,0.0,0.0,156.0,0.0,MW
+wind_low,2045,cap_inv,"['HR_Wind_HR033', 2045]",283.65,0.0,0.0,283.65,0.0,MW
+wind_low,2045,cap_inv,"['HR_Wind_HR034', 2045]",295.1,0.0,0.0,295.1,0.0,MW
+wind_low,2045,cap_inv,"['HR_Wind_HR035', 2045]",299.6,0.0,0.0,299.6,0.0,MW
+wind_low,2045,cap_inv,"['HR_Wind_HR037', 2045]",20.7,0.0,0.0,20.7,0.0,MW
+wind_low,2045,cap_inv,"['hror', 2045]",150.0,0.0,0.0,150.0,0.0,MW
+wind_low,2045,cap_inv,"['HECombo', 2045]",60.0,0.0,0.0,60.0,0.0,MW
+wind_low,2045,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2045]",256.995537,0.0,0.0,256.995537,0.0,MW
+wind_low,2045,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2045]",45.963105,0.0,0.0,45.963105,0.0,MW
+wind_low,2045,cap_inv,"['HR_Solar_HR_EAST', 2045]",159.541358,0.0,0.0,159.541358,0.0,MW
+wind_low,2045,cap_inv_FC,"['PEMFC_CHP', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2045,cap_inv_FC,"['SOFC_CHP', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2045,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2045,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2045,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2045,heat_pump_ind_cap,"['ATW_HP', 2045]",0.0,0.8033278572778231,0.06493786893324277,0.8682657262110658,0.0,MW
+wind_low,2045,heat_pump_ind_cap,"['geothermal_HP', 2045]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+wind_low,2045,heat_pump_ind_cap,"['electric_boiler', 2045]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+wind_low,2045,trad_boiler_ind_cap_inv,"['gas_boilers', 2045]",0.0,10903.245523571946,0.0,10903.245523571946,0.0,MW
+wind_low,2045,trad_boiler_ind_cap_inv,"['bio_boilers', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2045,trad_boiler_ind_cap_inv,"['oil_boilers', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2045,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2045]",0,202.12767612531064,58.98698537290356,261.1146614982142,0.0,MW
+wind_low,2045,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2045,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2045,stat_sto_cap_inv,"['Liion_storage', 2045]",0.0,0.0,0.0,0.0,0.0,MWh
+wind_low,2045,h2_sto_max_cap,"['H2_storage_tank', 2045]",10.0,0.0,0.0,10.0,0.0,MWh
+wind_low,2045,h2_electrolysis_max_cap,"['PEM_elec', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2045,h2_electrolysis_max_cap,"['SOEC_elec', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2045,h2_electrolysis_max_cap,"['Alkaline_EC', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2050,cap_inv,"['TEBiomassHR', 2050]",29.0,0.0,0.0,29.0,0.0,MW
+wind_low,2050,cap_inv,"['TEPlomin1', 2050]",0.11,0.0,0.0,0.11,0.55,MW
+wind_low,2050,cap_inv,"['TEPlomin2', 2050]",0.192,0.0,0.0,0.192,0.9600000000000002,MW
+wind_low,2050,cap_inv,"['TE-TOZagreb', 2050]",2.64,0.0,0.0,2.64,10.12,MW
+wind_low,2050,cap_inv,"['HEZakucac', 2050]",150.0,0.0,0.0,150.0,0.0,MW
+wind_low,2050,cap_inv,"['HESenj', 2050]",60.0,0.0,0.0,60.0,0.0,MW
+wind_low,2050,cap_inv,"['HEDubrovnik_HR', 2050]",30.0,0.0,0.0,30.0,0.0,MW
+wind_low,2050,cap_inv,"['RHEVelebit', 2050]",80.0,0.0,0.0,80.0,0.0,MW
+wind_low,2050,cap_inv,"['RHEOrlovac', 2050]",80.0,0.0,0.0,80.0,0.0,MW
+wind_low,2050,cap_inv,"['RHEVinodol', 2050]",3.0,0.0,0.0,3.0,0.0,MW
+wind_low,2050,cap_inv,"['NEKrskoHR', 2050]",0.0,0.0,96.84213169578194,96.84213169578194,0.0,MW
+wind_low,2050,cap_inv,"['TERijeka', 2050]",0.7000000000000001,0.0,0.0,0.7000000000000001,3.5,MW
+wind_low,2050,cap_inv,"['HR_Wind_HR032', 2050]",156.0,0.0,0.0,156.0,0.0,MW
+wind_low,2050,cap_inv,"['HR_Wind_HR033', 2050]",283.65,0.0,0.0,283.65,0.0,MW
+wind_low,2050,cap_inv,"['HR_Wind_HR034', 2050]",295.1,0.0,0.0,295.1,0.0,MW
+wind_low,2050,cap_inv,"['HR_Wind_HR035', 2050]",299.6,0.0,0.0,299.6,0.0,MW
+wind_low,2050,cap_inv,"['HR_Wind_HR037', 2050]",20.7,0.0,0.0,20.7,0.0,MW
+wind_low,2050,cap_inv,"['hror', 2050]",150.0,0.0,0.0,150.0,0.0,MW
+wind_low,2050,cap_inv,"['HECombo', 2050]",60.0,0.0,0.0,60.0,0.0,MW
+wind_low,2050,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2050]",256.995537,0.0,0.0,256.995537,0.0,MW
+wind_low,2050,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2050]",45.963105,0.0,0.0,45.963105,0.0,MW
+wind_low,2050,cap_inv,"['HR_Solar_HR_EAST', 2050]",159.541358,0.0,0.0,159.541358,0.0,MW
+wind_low,2050,cap_inv_FC,"['PEMFC_CHP', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2050,cap_inv_FC,"['SOFC_CHP', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2050,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2050,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2050,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2050,heat_pump_ind_cap,"['ATW_HP', 2050]",0.0,0.8682657262110658,0.06825035326372501,0.9365160794747908,0.0,MW
+wind_low,2050,heat_pump_ind_cap,"['geothermal_HP', 2050]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+wind_low,2050,heat_pump_ind_cap,"['electric_boiler', 2050]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+wind_low,2050,trad_boiler_ind_cap_inv,"['gas_boilers', 2050]",0.0,10903.245523571946,0.0,10903.245523571946,0.0,MW
+wind_low,2050,trad_boiler_ind_cap_inv,"['bio_boilers', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2050,trad_boiler_ind_cap_inv,"['oil_boilers', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2050,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2050]",0,261.1146614982142,0.3326852192076246,261.44734671742185,0.0,MW
+wind_low,2050,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2050,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+wind_low,2050,stat_sto_cap_inv,"['Liion_storage', 2050]",0.0,0.0,0.0,0.0,0.0,MWh
+wind_low,2050,h2_sto_max_cap,"['H2_storage_tank', 2050]",10.0,0.0,0.0,10.0,0.0,MWh
+wind_low,2050,h2_electrolysis_max_cap,"['PEM_elec', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2050,h2_electrolysis_max_cap,"['SOEC_elec', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+wind_low,2050,h2_electrolysis_max_cap,"['Alkaline_EC', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2020,cap_inv,"['TEBiomassHR', 2020]",29.0,0.0,0.0,29.0,,MW
+wind_high,2020,cap_inv,"['TEPlomin1', 2020]",110.0,0.0,0.0,110.0,,MW
+wind_high,2020,cap_inv,"['TEPlomin2', 2020]",192.0,0.0,0.0,192.0,,MW
+wind_high,2020,cap_inv,"['TE-TOZagreb', 2020]",440.0,0.0,0.0,440.0,,MW
+wind_high,2020,cap_inv,"['HEZakucac', 2020]",150.0,0.0,0.0,150.0,,MW
+wind_high,2020,cap_inv,"['HESenj', 2020]",60.0,0.0,0.0,60.0,,MW
+wind_high,2020,cap_inv,"['HEDubrovnik_HR', 2020]",30.0,0.0,0.0,30.0,,MW
+wind_high,2020,cap_inv,"['RHEVelebit', 2020]",80.0,0.0,0.0,80.0,,MW
+wind_high,2020,cap_inv,"['RHEOrlovac', 2020]",80.0,0.0,0.0,80.0,,MW
+wind_high,2020,cap_inv,"['RHEVinodol', 2020]",3.0,0.0,0.0,3.0,,MW
+wind_high,2020,cap_inv,"['NEKrskoHR', 2020]",348.0,0.0,0.0,348.0,,MW
+wind_high,2020,cap_inv,"['TERijeka', 2020]",700.0,0.0,0.0,700.0,,MW
+wind_high,2020,cap_inv,"['HR_Wind_HR032', 2020]",156.0,0.0,0.0,156.0,,MW
+wind_high,2020,cap_inv,"['HR_Wind_HR033', 2020]",283.65,0.0,0.0,283.65,,MW
+wind_high,2020,cap_inv,"['HR_Wind_HR034', 2020]",295.1,0.0,0.0,295.1,,MW
+wind_high,2020,cap_inv,"['HR_Wind_HR035', 2020]",299.6,0.0,0.0,299.6,,MW
+wind_high,2020,cap_inv,"['HR_Wind_HR037', 2020]",20.7,0.0,0.0,20.7,,MW
+wind_high,2020,cap_inv,"['hror', 2020]",150.0,0.0,0.0,150.0,,MW
+wind_high,2020,cap_inv,"['HECombo', 2020]",60.0,0.0,0.0,60.0,,MW
+wind_high,2020,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2020]",256.995537,0.0,0.0,256.995537,,MW
+wind_high,2020,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2020]",45.963105,0.0,0.0,45.963105,,MW
+wind_high,2020,cap_inv,"['HR_Solar_HR_EAST', 2020]",159.541358,0.0,0.0,159.541358,,MW
+wind_high,2020,cap_inv_FC,"['PEMFC_CHP', 2020]",0.0,0.0,0.0,0.0,,MW
+wind_high,2020,cap_inv_FC,"['SOFC_CHP', 2020]",0.0,0.0,0.0,0.0,,MW
+wind_high,2020,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+wind_high,2020,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+wind_high,2020,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+wind_high,2020,heat_pump_ind_cap,"['ATW_HP', 2020]",150.0,0.0,0.0,150.0,,MW
+wind_high,2020,heat_pump_ind_cap,"['geothermal_HP', 2020]",5.0,0.0,0.0,5.0,,MW
+wind_high,2020,heat_pump_ind_cap,"['electric_boiler', 2020]",500.0,0.0,0.0,500.0,,MW
+wind_high,2020,trad_boiler_ind_cap_inv,"['gas_boilers', 2020]",6488.35,0.0,0.0,6488.35,,MW
+wind_high,2020,trad_boiler_ind_cap_inv,"['bio_boilers', 2020]",4419.05,0.0,0.0,4419.05,,MW
+wind_high,2020,trad_boiler_ind_cap_inv,"['oil_boilers', 2020]",2059.05,0.0,0.0,2059.05,,MW
+wind_high,2020,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+wind_high,2020,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+wind_high,2020,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+wind_high,2020,stat_sto_cap_inv,"['Liion_storage', 2020]",5.0,0.0,0.0,5.0,,MWh
+wind_high,2020,h2_sto_max_cap,"['H2_storage_tank', 2020]",10.0,0.0,0.0,10.0,,MWh
+wind_high,2020,h2_electrolysis_max_cap,"['PEM_elec', 2020]",0.0,0.0,0.0,0.0,,MW
+wind_high,2020,h2_electrolysis_max_cap,"['SOEC_elec', 2020]",0.0,0.0,0.0,0.0,,MW
+wind_high,2020,h2_electrolysis_max_cap,"['Alkaline_EC', 2020]",0.0,0.0,0.0,0.0,,MW
+wind_high,2025,cap_inv,"['TEBiomassHR', 2025]",29.0,0.0,0.0,29.0,0.0,MW
+wind_high,2025,cap_inv,"['TEPlomin1', 2025]",110.0,0.0,0.0,110.0,0.0,MW
+wind_high,2025,cap_inv,"['TEPlomin2', 2025]",192.0,0.0,0.0,192.0,0.0,MW
+wind_high,2025,cap_inv,"['TE-TOZagreb', 2025]",440.0,0.0,0.0,440.0,0.0,MW
+wind_high,2025,cap_inv,"['HEZakucac', 2025]",150.0,0.0,0.0,150.0,0.0,MW
+wind_high,2025,cap_inv,"['HESenj', 2025]",60.0,0.0,0.0,60.0,0.0,MW
+wind_high,2025,cap_inv,"['HEDubrovnik_HR', 2025]",30.0,0.0,0.0,30.0,0.0,MW
+wind_high,2025,cap_inv,"['RHEVelebit', 2025]",80.0,0.0,0.0,80.0,0.0,MW
+wind_high,2025,cap_inv,"['RHEOrlovac', 2025]",80.0,0.0,0.0,80.0,0.0,MW
+wind_high,2025,cap_inv,"['RHEVinodol', 2025]",3.0,0.0,0.0,3.0,0.0,MW
+wind_high,2025,cap_inv,"['NEKrskoHR', 2025]",348.0,0.0,0.0,348.0,0.0,MW
+wind_high,2025,cap_inv,"['TERijeka', 2025]",700.0,0.0,0.0,700.0,0.0,MW
+wind_high,2025,cap_inv,"['HR_Wind_HR032', 2025]",156.0,0.0,0.0,156.0,0.0,MW
+wind_high,2025,cap_inv,"['HR_Wind_HR033', 2025]",283.65,0.0,0.0,283.65,0.0,MW
+wind_high,2025,cap_inv,"['HR_Wind_HR034', 2025]",295.1,0.0,0.0,295.1,0.0,MW
+wind_high,2025,cap_inv,"['HR_Wind_HR035', 2025]",299.6,0.0,0.0,299.6,0.0,MW
+wind_high,2025,cap_inv,"['HR_Wind_HR037', 2025]",20.7,0.0,0.0,20.7,0.0,MW
+wind_high,2025,cap_inv,"['hror', 2025]",150.0,0.0,0.0,150.0,0.0,MW
+wind_high,2025,cap_inv,"['HECombo', 2025]",60.0,0.0,0.0,60.0,0.0,MW
+wind_high,2025,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2025]",256.995537,0.0,0.0,256.995537,0.0,MW
+wind_high,2025,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2025]",45.963105,0.0,0.0,45.963105,0.0,MW
+wind_high,2025,cap_inv,"['HR_Solar_HR_EAST', 2025]",159.541358,0.0,0.0,159.541358,0.0,MW
+wind_high,2025,cap_inv_FC,"['PEMFC_CHP', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2025,cap_inv_FC,"['SOFC_CHP', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2025,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2025,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2025,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2025,heat_pump_ind_cap,"['ATW_HP', 2025]",90.0,0.0,0.0,90.0,60.0,MW
+wind_high,2025,heat_pump_ind_cap,"['geothermal_HP', 2025]",3.0,0.0,0.0,3.0,2.0,MW
+wind_high,2025,heat_pump_ind_cap,"['electric_boiler', 2025]",300.0,0.0,0.0,300.0,200.0,MW
+wind_high,2025,trad_boiler_ind_cap_inv,"['gas_boilers', 2025]",3893.01,0.0,3842.8627156637167,7735.872715663717,2595.340000000001,MW
+wind_high,2025,trad_boiler_ind_cap_inv,"['bio_boilers', 2025]",2651.43,0.0,0.0,2651.43,1767.6200000000003,MW
+wind_high,2025,trad_boiler_ind_cap_inv,"['oil_boilers', 2025]",1235.43,0.0,0.0,1235.43,823.6200000000001,MW
+wind_high,2025,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2025,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2025,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2025,stat_sto_cap_inv,"['Liion_storage', 2025]",3.0,0.0,0.0,3.0,2.0,MWh
+wind_high,2025,h2_sto_max_cap,"['H2_storage_tank', 2025]",10.0,0.0,0.0,10.0,0.0,MWh
+wind_high,2025,h2_electrolysis_max_cap,"['PEM_elec', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2025,h2_electrolysis_max_cap,"['SOEC_elec', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2025,h2_electrolysis_max_cap,"['Alkaline_EC', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2030,cap_inv,"['TEBiomassHR', 2030]",29.0,0.0,0.0,29.0,0.0,MW
+wind_high,2030,cap_inv,"['TEPlomin1', 2030]",110.0,0.0,0.0,110.0,0.0,MW
+wind_high,2030,cap_inv,"['TEPlomin2', 2030]",192.0,0.0,0.0,192.0,0.0,MW
+wind_high,2030,cap_inv,"['TE-TOZagreb', 2030]",440.0,0.0,0.0,440.0,0.0,MW
+wind_high,2030,cap_inv,"['HEZakucac', 2030]",150.0,0.0,0.0,150.0,0.0,MW
+wind_high,2030,cap_inv,"['HESenj', 2030]",60.0,0.0,0.0,60.0,0.0,MW
+wind_high,2030,cap_inv,"['HEDubrovnik_HR', 2030]",30.0,0.0,0.0,30.0,0.0,MW
+wind_high,2030,cap_inv,"['RHEVelebit', 2030]",80.0,0.0,0.0,80.0,0.0,MW
+wind_high,2030,cap_inv,"['RHEOrlovac', 2030]",80.0,0.0,0.0,80.0,0.0,MW
+wind_high,2030,cap_inv,"['RHEVinodol', 2030]",3.0,0.0,0.0,3.0,0.0,MW
+wind_high,2030,cap_inv,"['NEKrskoHR', 2030]",348.0,0.0,0.0,348.0,0.0,MW
+wind_high,2030,cap_inv,"['TERijeka', 2030]",700.0,0.0,0.0,700.0,0.0,MW
+wind_high,2030,cap_inv,"['HR_Wind_HR032', 2030]",156.0,0.0,0.0,156.0,0.0,MW
+wind_high,2030,cap_inv,"['HR_Wind_HR033', 2030]",283.65,0.0,0.0,283.65,0.0,MW
+wind_high,2030,cap_inv,"['HR_Wind_HR034', 2030]",295.1,0.0,0.0,295.1,0.0,MW
+wind_high,2030,cap_inv,"['HR_Wind_HR035', 2030]",299.6,0.0,0.0,299.6,0.0,MW
+wind_high,2030,cap_inv,"['HR_Wind_HR037', 2030]",20.7,0.0,0.0,20.7,0.0,MW
+wind_high,2030,cap_inv,"['hror', 2030]",150.0,0.0,0.0,150.0,0.0,MW
+wind_high,2030,cap_inv,"['HECombo', 2030]",60.0,0.0,0.0,60.0,0.0,MW
+wind_high,2030,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2030]",256.995537,0.0,0.0,256.995537,0.0,MW
+wind_high,2030,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2030]",45.963105,0.0,0.0,45.963105,0.0,MW
+wind_high,2030,cap_inv,"['HR_Solar_HR_EAST', 2030]",159.541358,0.0,0.0,159.541358,0.0,MW
+wind_high,2030,cap_inv_FC,"['PEMFC_CHP', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2030,cap_inv_FC,"['SOFC_CHP', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2030,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2030,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2030,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2030,heat_pump_ind_cap,"['ATW_HP', 2030]",45.0,0.0,0.0,45.0,45.0,MW
+wind_high,2030,heat_pump_ind_cap,"['geothermal_HP', 2030]",1.5,0.0,0.0,1.5,1.5,MW
+wind_high,2030,heat_pump_ind_cap,"['electric_boiler', 2030]",150.0,0.0,0.0,150.0,150.0,MW
+wind_high,2030,trad_boiler_ind_cap_inv,"['gas_boilers', 2030]",1946.505,3842.8627156637167,3699.8128605772927,9489.18057624101,1946.5049999999992,MW
+wind_high,2030,trad_boiler_ind_cap_inv,"['bio_boilers', 2030]",1325.715,0.0,0.0,1325.715,1325.715,MW
+wind_high,2030,trad_boiler_ind_cap_inv,"['oil_boilers', 2030]",617.715,0.0,0.0,617.715,617.715,MW
+wind_high,2030,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2030,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2030,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2030,stat_sto_cap_inv,"['Liion_storage', 2030]",1.5,0.0,0.0,1.5,1.5,MWh
+wind_high,2030,h2_sto_max_cap,"['H2_storage_tank', 2030]",10.0,0.0,0.0,10.0,0.0,MWh
+wind_high,2030,h2_electrolysis_max_cap,"['PEM_elec', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2030,h2_electrolysis_max_cap,"['SOEC_elec', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2030,h2_electrolysis_max_cap,"['Alkaline_EC', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2035,cap_inv,"['TEBiomassHR', 2035]",29.0,0.0,0.0,29.0,0.0,MW
+wind_high,2035,cap_inv,"['TEPlomin1', 2035]",69.41,0.0,0.0,69.41,40.59,MW
+wind_high,2035,cap_inv,"['TEPlomin2', 2035]",121.152,0.0,0.0,121.152,70.848,MW
+wind_high,2035,cap_inv,"['TE-TOZagreb', 2035]",319.0,0.0,0.0,319.0,121.0,MW
+wind_high,2035,cap_inv,"['HEZakucac', 2035]",150.0,0.0,0.0,150.0,0.0,MW
+wind_high,2035,cap_inv,"['HESenj', 2035]",60.0,0.0,0.0,60.0,0.0,MW
+wind_high,2035,cap_inv,"['HEDubrovnik_HR', 2035]",30.0,0.0,0.0,30.0,0.0,MW
+wind_high,2035,cap_inv,"['RHEVelebit', 2035]",80.0,0.0,0.0,80.0,0.0,MW
+wind_high,2035,cap_inv,"['RHEOrlovac', 2035]",80.0,0.0,0.0,80.0,0.0,MW
+wind_high,2035,cap_inv,"['RHEVinodol', 2035]",3.0,0.0,0.0,3.0,0.0,MW
+wind_high,2035,cap_inv,"['NEKrskoHR', 2035]",0.0,0.0,0.0,0.0,348.0,MW
+wind_high,2035,cap_inv,"['TERijeka', 2035]",441.7,0.0,0.0,441.7,258.3,MW
+wind_high,2035,cap_inv,"['HR_Wind_HR032', 2035]",156.0,0.0,0.0,156.0,0.0,MW
+wind_high,2035,cap_inv,"['HR_Wind_HR033', 2035]",283.65,0.0,0.0,283.65,0.0,MW
+wind_high,2035,cap_inv,"['HR_Wind_HR034', 2035]",295.1,0.0,0.0,295.1,0.0,MW
+wind_high,2035,cap_inv,"['HR_Wind_HR035', 2035]",299.6,0.0,0.0,299.6,0.0,MW
+wind_high,2035,cap_inv,"['HR_Wind_HR037', 2035]",20.7,0.0,0.0,20.7,0.0,MW
+wind_high,2035,cap_inv,"['hror', 2035]",150.0,0.0,0.0,150.0,0.0,MW
+wind_high,2035,cap_inv,"['HECombo', 2035]",60.0,0.0,0.0,60.0,0.0,MW
+wind_high,2035,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2035]",256.995537,0.0,0.0,256.995537,0.0,MW
+wind_high,2035,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2035]",45.963105,0.0,0.0,45.963105,0.0,MW
+wind_high,2035,cap_inv,"['HR_Solar_HR_EAST', 2035]",159.541358,0.0,0.0,159.541358,0.0,MW
+wind_high,2035,cap_inv_FC,"['PEMFC_CHP', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2035,cap_inv_FC,"['SOFC_CHP', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2035,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2035,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2035,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2035,heat_pump_ind_cap,"['ATW_HP', 2035]",0.0,0.0,0.7415417032946741,0.7415417032946741,45.0,MW
+wind_high,2035,heat_pump_ind_cap,"['geothermal_HP', 2035]",0.0,0.0,0.14184397163120568,0.14184397163120568,1.5,MW
+wind_high,2035,heat_pump_ind_cap,"['electric_boiler', 2035]",0.0,0.0,0.14184397163120568,0.14184397163120568,150.0,MW
+wind_high,2035,trad_boiler_ind_cap_inv,"['gas_boilers', 2035]",0.0,7542.675576241009,3360.569947330937,10903.245523571946,1946.505000000001,MW
+wind_high,2035,trad_boiler_ind_cap_inv,"['bio_boilers', 2035]",0.0,0.0,0.0,0.0,1325.715,MW
+wind_high,2035,trad_boiler_ind_cap_inv,"['oil_boilers', 2035]",0.0,0.0,0.0,0.0,617.715,MW
+wind_high,2035,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2035,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2035,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2035,stat_sto_cap_inv,"['Liion_storage', 2035]",0.0,0.0,0.0,0.0,1.5,MWh
+wind_high,2035,h2_sto_max_cap,"['H2_storage_tank', 2035]",10.0,0.0,0.0,10.0,0.0,MWh
+wind_high,2035,h2_electrolysis_max_cap,"['PEM_elec', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2035,h2_electrolysis_max_cap,"['SOEC_elec', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2035,h2_electrolysis_max_cap,"['Alkaline_EC', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2040,cap_inv,"['TEBiomassHR', 2040]",29.0,0.0,0.0,29.0,0.0,MW
+wind_high,2040,cap_inv,"['TEPlomin1', 2040]",6.93,0.0,0.0,6.93,62.48,MW
+wind_high,2040,cap_inv,"['TEPlomin2', 2040]",12.096,0.0,0.0,12.096,109.056,MW
+wind_high,2040,cap_inv,"['TE-TOZagreb', 2040]",63.8,0.0,0.0,63.8,255.2,MW
+wind_high,2040,cap_inv,"['HEZakucac', 2040]",150.0,0.0,0.0,150.0,0.0,MW
+wind_high,2040,cap_inv,"['HESenj', 2040]",60.0,0.0,0.0,60.0,0.0,MW
+wind_high,2040,cap_inv,"['HEDubrovnik_HR', 2040]",30.0,0.0,0.0,30.0,0.0,MW
+wind_high,2040,cap_inv,"['RHEVelebit', 2040]",80.0,0.0,0.0,80.0,0.0,MW
+wind_high,2040,cap_inv,"['RHEOrlovac', 2040]",80.0,0.0,0.0,80.0,0.0,MW
+wind_high,2040,cap_inv,"['RHEVinodol', 2040]",3.0,0.0,0.0,3.0,0.0,MW
+wind_high,2040,cap_inv,"['NEKrskoHR', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2040,cap_inv,"['TERijeka', 2040]",44.1,0.0,0.0,44.1,397.59999999999997,MW
+wind_high,2040,cap_inv,"['HR_Wind_HR032', 2040]",156.0,0.0,0.0,156.0,0.0,MW
+wind_high,2040,cap_inv,"['HR_Wind_HR033', 2040]",283.65,0.0,0.0,283.65,0.0,MW
+wind_high,2040,cap_inv,"['HR_Wind_HR034', 2040]",295.1,0.0,0.0,295.1,0.0,MW
+wind_high,2040,cap_inv,"['HR_Wind_HR035', 2040]",299.6,0.0,0.0,299.6,0.0,MW
+wind_high,2040,cap_inv,"['HR_Wind_HR037', 2040]",20.7,0.0,0.0,20.7,0.0,MW
+wind_high,2040,cap_inv,"['hror', 2040]",150.0,0.0,0.0,150.0,0.0,MW
+wind_high,2040,cap_inv,"['HECombo', 2040]",60.0,0.0,0.0,60.0,0.0,MW
+wind_high,2040,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2040]",256.995537,0.0,0.0,256.995537,0.0,MW
+wind_high,2040,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2040]",45.963105,0.0,0.0,45.963105,0.0,MW
+wind_high,2040,cap_inv,"['HR_Solar_HR_EAST', 2040]",159.541358,0.0,0.0,159.541358,0.0,MW
+wind_high,2040,cap_inv_FC,"['PEMFC_CHP', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2040,cap_inv_FC,"['SOFC_CHP', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2040,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2040,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2040,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2040,heat_pump_ind_cap,"['ATW_HP', 2040]",0.0,0.7415417032946741,0.06178615398314881,0.8033278572778229,0.0,MW
+wind_high,2040,heat_pump_ind_cap,"['geothermal_HP', 2040]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+wind_high,2040,heat_pump_ind_cap,"['electric_boiler', 2040]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+wind_high,2040,trad_boiler_ind_cap_inv,"['gas_boilers', 2040]",0.0,10903.245523571946,0.0,10903.245523571946,0.0,MW
+wind_high,2040,trad_boiler_ind_cap_inv,"['bio_boilers', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2040,trad_boiler_ind_cap_inv,"['oil_boilers', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2040,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2040]",0,0.0,202.12767612531064,202.12767612531064,0.0,MW
+wind_high,2040,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2040,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2040,stat_sto_cap_inv,"['Liion_storage', 2040]",0.0,0.0,0.0,0.0,0.0,MWh
+wind_high,2040,h2_sto_max_cap,"['H2_storage_tank', 2040]",10.0,0.0,0.0,10.0,0.0,MWh
+wind_high,2040,h2_electrolysis_max_cap,"['PEM_elec', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2040,h2_electrolysis_max_cap,"['SOEC_elec', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2040,h2_electrolysis_max_cap,"['Alkaline_EC', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2045,cap_inv,"['TEBiomassHR', 2045]",29.0,0.0,0.0,29.0,0.0,MW
+wind_high,2045,cap_inv,"['TEPlomin1', 2045]",0.66,0.0,0.0,0.66,6.27,MW
+wind_high,2045,cap_inv,"['TEPlomin2', 2045]",1.1520000000000001,0.0,0.0,1.1520000000000001,10.943999999999999,MW
+wind_high,2045,cap_inv,"['TE-TOZagreb', 2045]",12.76,0.0,0.0,12.76,51.04,MW
+wind_high,2045,cap_inv,"['HEZakucac', 2045]",150.0,0.0,0.0,150.0,0.0,MW
+wind_high,2045,cap_inv,"['HESenj', 2045]",60.0,0.0,0.0,60.0,0.0,MW
+wind_high,2045,cap_inv,"['HEDubrovnik_HR', 2045]",30.0,0.0,0.0,30.0,0.0,MW
+wind_high,2045,cap_inv,"['RHEVelebit', 2045]",80.0,0.0,0.0,80.0,0.0,MW
+wind_high,2045,cap_inv,"['RHEOrlovac', 2045]",80.0,0.0,0.0,80.0,0.0,MW
+wind_high,2045,cap_inv,"['RHEVinodol', 2045]",3.0,0.0,0.0,3.0,0.0,MW
+wind_high,2045,cap_inv,"['NEKrskoHR', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2045,cap_inv,"['TERijeka', 2045]",4.2,0.0,0.0,4.2,39.9,MW
+wind_high,2045,cap_inv,"['HR_Wind_HR032', 2045]",156.0,0.0,0.0,156.0,0.0,MW
+wind_high,2045,cap_inv,"['HR_Wind_HR033', 2045]",283.65,0.0,0.0,283.65,0.0,MW
+wind_high,2045,cap_inv,"['HR_Wind_HR034', 2045]",295.1,0.0,0.0,295.1,0.0,MW
+wind_high,2045,cap_inv,"['HR_Wind_HR035', 2045]",299.6,0.0,0.0,299.6,0.0,MW
+wind_high,2045,cap_inv,"['HR_Wind_HR037', 2045]",20.7,0.0,0.0,20.7,0.0,MW
+wind_high,2045,cap_inv,"['hror', 2045]",150.0,0.0,0.0,150.0,0.0,MW
+wind_high,2045,cap_inv,"['HECombo', 2045]",60.0,0.0,0.0,60.0,0.0,MW
+wind_high,2045,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2045]",256.995537,0.0,0.0,256.995537,0.0,MW
+wind_high,2045,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2045]",45.963105,0.0,0.0,45.963105,0.0,MW
+wind_high,2045,cap_inv,"['HR_Solar_HR_EAST', 2045]",159.541358,0.0,0.0,159.541358,0.0,MW
+wind_high,2045,cap_inv_FC,"['PEMFC_CHP', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2045,cap_inv_FC,"['SOFC_CHP', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2045,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2045,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2045,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2045,heat_pump_ind_cap,"['ATW_HP', 2045]",0.0,0.8033278572778229,0.06493786893324244,0.8682657262110653,0.0,MW
+wind_high,2045,heat_pump_ind_cap,"['geothermal_HP', 2045]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+wind_high,2045,heat_pump_ind_cap,"['electric_boiler', 2045]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+wind_high,2045,trad_boiler_ind_cap_inv,"['gas_boilers', 2045]",0.0,10903.245523571946,0.0,10903.245523571946,0.0,MW
+wind_high,2045,trad_boiler_ind_cap_inv,"['bio_boilers', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2045,trad_boiler_ind_cap_inv,"['oil_boilers', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2045,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2045]",0,202.12767612531064,58.98698537290356,261.1146614982142,0.0,MW
+wind_high,2045,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2045,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2045,stat_sto_cap_inv,"['Liion_storage', 2045]",0.0,0.0,0.0,0.0,0.0,MWh
+wind_high,2045,h2_sto_max_cap,"['H2_storage_tank', 2045]",10.0,0.0,0.0,10.0,0.0,MWh
+wind_high,2045,h2_electrolysis_max_cap,"['PEM_elec', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2045,h2_electrolysis_max_cap,"['SOEC_elec', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2045,h2_electrolysis_max_cap,"['Alkaline_EC', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2050,cap_inv,"['TEBiomassHR', 2050]",29.0,0.0,0.0,29.0,0.0,MW
+wind_high,2050,cap_inv,"['TEPlomin1', 2050]",0.11,0.0,0.0,0.11,0.55,MW
+wind_high,2050,cap_inv,"['TEPlomin2', 2050]",0.192,0.0,0.0,0.192,0.9600000000000002,MW
+wind_high,2050,cap_inv,"['TE-TOZagreb', 2050]",2.64,0.0,0.23209686475297003,2.87209686475297,10.12,MW
+wind_high,2050,cap_inv,"['HEZakucac', 2050]",150.0,0.0,0.0,150.0,0.0,MW
+wind_high,2050,cap_inv,"['HESenj', 2050]",60.0,0.0,0.0,60.0,0.0,MW
+wind_high,2050,cap_inv,"['HEDubrovnik_HR', 2050]",30.0,0.0,0.0,30.0,0.0,MW
+wind_high,2050,cap_inv,"['RHEVelebit', 2050]",80.0,0.0,0.0,80.0,0.0,MW
+wind_high,2050,cap_inv,"['RHEOrlovac', 2050]",80.0,0.0,0.0,80.0,0.0,MW
+wind_high,2050,cap_inv,"['RHEVinodol', 2050]",3.0,0.0,0.0,3.0,0.0,MW
+wind_high,2050,cap_inv,"['NEKrskoHR', 2050]",0.0,0.0,100.0,100.0,0.0,MW
+wind_high,2050,cap_inv,"['TERijeka', 2050]",0.7000000000000001,0.0,0.0,0.7000000000000001,3.5,MW
+wind_high,2050,cap_inv,"['HR_Wind_HR032', 2050]",156.0,0.0,0.0,156.0,0.0,MW
+wind_high,2050,cap_inv,"['HR_Wind_HR033', 2050]",283.65,0.0,0.0,283.65,0.0,MW
+wind_high,2050,cap_inv,"['HR_Wind_HR034', 2050]",295.1,0.0,0.0,295.1,0.0,MW
+wind_high,2050,cap_inv,"['HR_Wind_HR035', 2050]",299.6,0.0,0.0,299.6,0.0,MW
+wind_high,2050,cap_inv,"['HR_Wind_HR037', 2050]",20.7,0.0,0.0,20.7,0.0,MW
+wind_high,2050,cap_inv,"['hror', 2050]",150.0,0.0,0.0,150.0,0.0,MW
+wind_high,2050,cap_inv,"['HECombo', 2050]",60.0,0.0,0.0,60.0,0.0,MW
+wind_high,2050,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2050]",256.995537,0.0,235.94210527075182,492.93764227075184,0.0,MW
+wind_high,2050,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2050]",45.963105,0.0,0.0,45.963105,0.0,MW
+wind_high,2050,cap_inv,"['HR_Solar_HR_EAST', 2050]",159.541358,0.0,0.0,159.541358,0.0,MW
+wind_high,2050,cap_inv_FC,"['PEMFC_CHP', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2050,cap_inv_FC,"['SOFC_CHP', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2050,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2050,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2050,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2050,heat_pump_ind_cap,"['ATW_HP', 2050]",0.0,0.8682657262110653,0.15035249991832567,1.018618226129391,0.0,MW
+wind_high,2050,heat_pump_ind_cap,"['geothermal_HP', 2050]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+wind_high,2050,heat_pump_ind_cap,"['electric_boiler', 2050]",0.0,0.14184397163120568,0.0,0.14184397163120568,0.0,MW
+wind_high,2050,trad_boiler_ind_cap_inv,"['gas_boilers', 2050]",0.0,10903.245523571946,0.0,10903.245523571946,0.0,MW
+wind_high,2050,trad_boiler_ind_cap_inv,"['bio_boilers', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2050,trad_boiler_ind_cap_inv,"['oil_boilers', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2050,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2050]",0,261.1146614982142,0.0,261.1146614982142,0.0,MW
+wind_high,2050,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2050,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+wind_high,2050,stat_sto_cap_inv,"['Liion_storage', 2050]",0.0,0.0,0.0,0.0,0.0,MWh
+wind_high,2050,h2_sto_max_cap,"['H2_storage_tank', 2050]",10.0,0.0,0.0,10.0,0.0,MWh
+wind_high,2050,h2_electrolysis_max_cap,"['PEM_elec', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2050,h2_electrolysis_max_cap,"['SOEC_elec', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+wind_high,2050,h2_electrolysis_max_cap,"['Alkaline_EC', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2020,cap_inv,"['TEBiomassHR', 2020]",29.0,0.0,0.0,29.0,,MW
+temperature_cold,2020,cap_inv,"['TEPlomin1', 2020]",110.0,0.0,0.0,110.0,,MW
+temperature_cold,2020,cap_inv,"['TEPlomin2', 2020]",192.0,0.0,0.0,192.0,,MW
+temperature_cold,2020,cap_inv,"['TE-TOZagreb', 2020]",440.0,0.0,0.0,440.0,,MW
+temperature_cold,2020,cap_inv,"['HEZakucac', 2020]",150.0,0.0,0.0,150.0,,MW
+temperature_cold,2020,cap_inv,"['HESenj', 2020]",60.0,0.0,0.0,60.0,,MW
+temperature_cold,2020,cap_inv,"['HEDubrovnik_HR', 2020]",30.0,0.0,0.0,30.0,,MW
+temperature_cold,2020,cap_inv,"['RHEVelebit', 2020]",80.0,0.0,0.0,80.0,,MW
+temperature_cold,2020,cap_inv,"['RHEOrlovac', 2020]",80.0,0.0,0.0,80.0,,MW
+temperature_cold,2020,cap_inv,"['RHEVinodol', 2020]",3.0,0.0,0.0,3.0,,MW
+temperature_cold,2020,cap_inv,"['NEKrskoHR', 2020]",348.0,0.0,0.0,348.0,,MW
+temperature_cold,2020,cap_inv,"['TERijeka', 2020]",700.0,0.0,0.0,700.0,,MW
+temperature_cold,2020,cap_inv,"['HR_Wind_HR032', 2020]",156.0,0.0,0.0,156.0,,MW
+temperature_cold,2020,cap_inv,"['HR_Wind_HR033', 2020]",283.65,0.0,0.0,283.65,,MW
+temperature_cold,2020,cap_inv,"['HR_Wind_HR034', 2020]",295.1,0.0,0.0,295.1,,MW
+temperature_cold,2020,cap_inv,"['HR_Wind_HR035', 2020]",299.6,0.0,0.0,299.6,,MW
+temperature_cold,2020,cap_inv,"['HR_Wind_HR037', 2020]",20.7,0.0,0.0,20.7,,MW
+temperature_cold,2020,cap_inv,"['hror', 2020]",150.0,0.0,0.0,150.0,,MW
+temperature_cold,2020,cap_inv,"['HECombo', 2020]",60.0,0.0,0.0,60.0,,MW
+temperature_cold,2020,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2020]",256.995537,0.0,0.0,256.995537,,MW
+temperature_cold,2020,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2020]",45.963105,0.0,0.0,45.963105,,MW
+temperature_cold,2020,cap_inv,"['HR_Solar_HR_EAST', 2020]",159.541358,0.0,0.0,159.541358,,MW
+temperature_cold,2020,cap_inv_FC,"['PEMFC_CHP', 2020]",0.0,0.0,0.0,0.0,,MW
+temperature_cold,2020,cap_inv_FC,"['SOFC_CHP', 2020]",0.0,0.0,0.0,0.0,,MW
+temperature_cold,2020,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+temperature_cold,2020,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+temperature_cold,2020,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+temperature_cold,2020,heat_pump_ind_cap,"['ATW_HP', 2020]",150.0,0.0,0.0,150.0,,MW
+temperature_cold,2020,heat_pump_ind_cap,"['geothermal_HP', 2020]",5.0,0.0,0.0,5.0,,MW
+temperature_cold,2020,heat_pump_ind_cap,"['electric_boiler', 2020]",500.0,0.0,0.0,500.0,,MW
+temperature_cold,2020,trad_boiler_ind_cap_inv,"['gas_boilers', 2020]",6488.35,0.0,0.0,6488.35,,MW
+temperature_cold,2020,trad_boiler_ind_cap_inv,"['bio_boilers', 2020]",4419.05,0.0,0.0,4419.05,,MW
+temperature_cold,2020,trad_boiler_ind_cap_inv,"['oil_boilers', 2020]",2059.05,0.0,0.0,2059.05,,MW
+temperature_cold,2020,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+temperature_cold,2020,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+temperature_cold,2020,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+temperature_cold,2020,stat_sto_cap_inv,"['Liion_storage', 2020]",5.0,0.0,0.0,5.0,,MWh
+temperature_cold,2020,h2_sto_max_cap,"['H2_storage_tank', 2020]",10.0,0.0,0.0,10.0,,MWh
+temperature_cold,2020,h2_electrolysis_max_cap,"['PEM_elec', 2020]",0.0,0.0,0.0,0.0,,MW
+temperature_cold,2020,h2_electrolysis_max_cap,"['SOEC_elec', 2020]",0.0,0.0,0.0,0.0,,MW
+temperature_cold,2020,h2_electrolysis_max_cap,"['Alkaline_EC', 2020]",0.0,0.0,0.0,0.0,,MW
+temperature_cold,2025,cap_inv,"['TEBiomassHR', 2025]",29.0,0.0,0.0,29.0,0.0,MW
+temperature_cold,2025,cap_inv,"['TEPlomin1', 2025]",110.0,0.0,0.0,110.0,0.0,MW
+temperature_cold,2025,cap_inv,"['TEPlomin2', 2025]",192.0,0.0,0.0,192.0,0.0,MW
+temperature_cold,2025,cap_inv,"['TE-TOZagreb', 2025]",440.0,0.0,0.0,440.0,0.0,MW
+temperature_cold,2025,cap_inv,"['HEZakucac', 2025]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_cold,2025,cap_inv,"['HESenj', 2025]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_cold,2025,cap_inv,"['HEDubrovnik_HR', 2025]",30.0,0.0,0.0,30.0,0.0,MW
+temperature_cold,2025,cap_inv,"['RHEVelebit', 2025]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_cold,2025,cap_inv,"['RHEOrlovac', 2025]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_cold,2025,cap_inv,"['RHEVinodol', 2025]",3.0,0.0,0.0,3.0,0.0,MW
+temperature_cold,2025,cap_inv,"['NEKrskoHR', 2025]",348.0,0.0,0.0,348.0,0.0,MW
+temperature_cold,2025,cap_inv,"['TERijeka', 2025]",700.0,0.0,0.0,700.0,0.0,MW
+temperature_cold,2025,cap_inv,"['HR_Wind_HR032', 2025]",156.0,0.0,0.0,156.0,0.0,MW
+temperature_cold,2025,cap_inv,"['HR_Wind_HR033', 2025]",283.65,0.0,0.0,283.65,0.0,MW
+temperature_cold,2025,cap_inv,"['HR_Wind_HR034', 2025]",295.1,0.0,0.0,295.1,0.0,MW
+temperature_cold,2025,cap_inv,"['HR_Wind_HR035', 2025]",299.6,0.0,0.0,299.6,0.0,MW
+temperature_cold,2025,cap_inv,"['HR_Wind_HR037', 2025]",20.7,0.0,0.0,20.7,0.0,MW
+temperature_cold,2025,cap_inv,"['hror', 2025]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_cold,2025,cap_inv,"['HECombo', 2025]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_cold,2025,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2025]",256.995537,0.0,0.0,256.995537,0.0,MW
+temperature_cold,2025,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2025]",45.963105,0.0,0.0,45.963105,0.0,MW
+temperature_cold,2025,cap_inv,"['HR_Solar_HR_EAST', 2025]",159.541358,0.0,0.0,159.541358,0.0,MW
+temperature_cold,2025,cap_inv_FC,"['PEMFC_CHP', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2025,cap_inv_FC,"['SOFC_CHP', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2025,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2025,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2025,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2025,heat_pump_ind_cap,"['ATW_HP', 2025]",90.0,0.0,0.0,90.0,60.0,MW
+temperature_cold,2025,heat_pump_ind_cap,"['geothermal_HP', 2025]",3.0,0.0,0.0,3.0,2.0,MW
+temperature_cold,2025,heat_pump_ind_cap,"['electric_boiler', 2025]",300.0,0.0,0.0,300.0,200.0,MW
+temperature_cold,2025,trad_boiler_ind_cap_inv,"['gas_boilers', 2025]",3893.01,0.0,3023.097193018167,6916.107193018168,2595.34,MW
+temperature_cold,2025,trad_boiler_ind_cap_inv,"['bio_boilers', 2025]",2651.43,0.0,0.0,2651.43,1767.6200000000003,MW
+temperature_cold,2025,trad_boiler_ind_cap_inv,"['oil_boilers', 2025]",1235.43,0.0,0.0,1235.43,823.6200000000001,MW
+temperature_cold,2025,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2025,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2025,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2025,stat_sto_cap_inv,"['Liion_storage', 2025]",3.0,0.0,0.0,3.0,2.0,MWh
+temperature_cold,2025,h2_sto_max_cap,"['H2_storage_tank', 2025]",10.0,0.0,0.0,10.0,0.0,MWh
+temperature_cold,2025,h2_electrolysis_max_cap,"['PEM_elec', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2025,h2_electrolysis_max_cap,"['SOEC_elec', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2025,h2_electrolysis_max_cap,"['Alkaline_EC', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2030,cap_inv,"['TEBiomassHR', 2030]",29.0,0.0,0.0,29.0,0.0,MW
+temperature_cold,2030,cap_inv,"['TEPlomin1', 2030]",110.0,0.0,0.0,110.0,0.0,MW
+temperature_cold,2030,cap_inv,"['TEPlomin2', 2030]",192.0,0.0,0.0,192.0,0.0,MW
+temperature_cold,2030,cap_inv,"['TE-TOZagreb', 2030]",440.0,0.0,0.0,440.0,0.0,MW
+temperature_cold,2030,cap_inv,"['HEZakucac', 2030]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_cold,2030,cap_inv,"['HESenj', 2030]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_cold,2030,cap_inv,"['HEDubrovnik_HR', 2030]",30.0,0.0,0.0,30.0,0.0,MW
+temperature_cold,2030,cap_inv,"['RHEVelebit', 2030]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_cold,2030,cap_inv,"['RHEOrlovac', 2030]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_cold,2030,cap_inv,"['RHEVinodol', 2030]",3.0,0.0,0.0,3.0,0.0,MW
+temperature_cold,2030,cap_inv,"['NEKrskoHR', 2030]",348.0,0.0,0.0,348.0,0.0,MW
+temperature_cold,2030,cap_inv,"['TERijeka', 2030]",700.0,0.0,0.0,700.0,0.0,MW
+temperature_cold,2030,cap_inv,"['HR_Wind_HR032', 2030]",156.0,0.0,0.0,156.0,0.0,MW
+temperature_cold,2030,cap_inv,"['HR_Wind_HR033', 2030]",283.65,0.0,0.0,283.65,0.0,MW
+temperature_cold,2030,cap_inv,"['HR_Wind_HR034', 2030]",295.1,0.0,0.0,295.1,0.0,MW
+temperature_cold,2030,cap_inv,"['HR_Wind_HR035', 2030]",299.6,0.0,0.0,299.6,0.0,MW
+temperature_cold,2030,cap_inv,"['HR_Wind_HR037', 2030]",20.7,0.0,0.0,20.7,0.0,MW
+temperature_cold,2030,cap_inv,"['hror', 2030]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_cold,2030,cap_inv,"['HECombo', 2030]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_cold,2030,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2030]",256.995537,0.0,0.0,256.995537,0.0,MW
+temperature_cold,2030,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2030]",45.963105,0.0,0.0,45.963105,0.0,MW
+temperature_cold,2030,cap_inv,"['HR_Solar_HR_EAST', 2030]",159.541358,0.0,0.0,159.541358,0.0,MW
+temperature_cold,2030,cap_inv_FC,"['PEMFC_CHP', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2030,cap_inv_FC,"['SOFC_CHP', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2030,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2030,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2030,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2030,heat_pump_ind_cap,"['ATW_HP', 2030]",45.0,0.0,0.0,45.0,45.0,MW
+temperature_cold,2030,heat_pump_ind_cap,"['geothermal_HP', 2030]",1.5,0.0,0.0,1.5,1.5,MW
+temperature_cold,2030,heat_pump_ind_cap,"['electric_boiler', 2030]",150.0,0.0,0.0,150.0,150.0,MW
+temperature_cold,2030,trad_boiler_ind_cap_inv,"['gas_boilers', 2030]",1946.505,3023.097193018167,3727.4536624114794,8697.055855429646,1946.505000000001,MW
+temperature_cold,2030,trad_boiler_ind_cap_inv,"['bio_boilers', 2030]",1325.715,0.0,0.0,1325.715,1325.715,MW
+temperature_cold,2030,trad_boiler_ind_cap_inv,"['oil_boilers', 2030]",617.715,0.0,0.0,617.715,617.715,MW
+temperature_cold,2030,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2030,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2030,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2030,stat_sto_cap_inv,"['Liion_storage', 2030]",1.5,0.0,0.0,1.5,1.5,MWh
+temperature_cold,2030,h2_sto_max_cap,"['H2_storage_tank', 2030]",10.0,0.0,0.0,10.0,0.0,MWh
+temperature_cold,2030,h2_electrolysis_max_cap,"['PEM_elec', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2030,h2_electrolysis_max_cap,"['SOEC_elec', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2030,h2_electrolysis_max_cap,"['Alkaline_EC', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2035,cap_inv,"['TEBiomassHR', 2035]",29.0,0.0,0.0,29.0,0.0,MW
+temperature_cold,2035,cap_inv,"['TEPlomin1', 2035]",69.41,0.0,0.0,69.41,40.59,MW
+temperature_cold,2035,cap_inv,"['TEPlomin2', 2035]",121.152,0.0,0.0,121.152,70.848,MW
+temperature_cold,2035,cap_inv,"['TE-TOZagreb', 2035]",319.0,0.0,0.0,319.0,121.0,MW
+temperature_cold,2035,cap_inv,"['HEZakucac', 2035]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_cold,2035,cap_inv,"['HESenj', 2035]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_cold,2035,cap_inv,"['HEDubrovnik_HR', 2035]",30.0,0.0,0.0,30.0,0.0,MW
+temperature_cold,2035,cap_inv,"['RHEVelebit', 2035]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_cold,2035,cap_inv,"['RHEOrlovac', 2035]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_cold,2035,cap_inv,"['RHEVinodol', 2035]",3.0,0.0,0.0,3.0,0.0,MW
+temperature_cold,2035,cap_inv,"['NEKrskoHR', 2035]",0.0,0.0,0.0,0.0,348.0,MW
+temperature_cold,2035,cap_inv,"['TERijeka', 2035]",441.7,0.0,0.0,441.7,258.3,MW
+temperature_cold,2035,cap_inv,"['HR_Wind_HR032', 2035]",156.0,0.0,0.0,156.0,0.0,MW
+temperature_cold,2035,cap_inv,"['HR_Wind_HR033', 2035]",283.65,0.0,0.0,283.65,0.0,MW
+temperature_cold,2035,cap_inv,"['HR_Wind_HR034', 2035]",295.1,0.0,0.0,295.1,0.0,MW
+temperature_cold,2035,cap_inv,"['HR_Wind_HR035', 2035]",299.6,0.0,0.0,299.6,0.0,MW
+temperature_cold,2035,cap_inv,"['HR_Wind_HR037', 2035]",20.7,0.0,0.0,20.7,0.0,MW
+temperature_cold,2035,cap_inv,"['hror', 2035]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_cold,2035,cap_inv,"['HECombo', 2035]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_cold,2035,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2035]",256.995537,0.0,0.0,256.995537,0.0,MW
+temperature_cold,2035,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2035]",45.963105,0.0,0.0,45.963105,0.0,MW
+temperature_cold,2035,cap_inv,"['HR_Solar_HR_EAST', 2035]",159.541358,0.0,0.0,159.541358,0.0,MW
+temperature_cold,2035,cap_inv_FC,"['PEMFC_CHP', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2035,cap_inv_FC,"['SOFC_CHP', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2035,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2035,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2035,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2035,heat_pump_ind_cap,"['ATW_HP', 2035]",0.0,0.0,5.2631578947368425,5.2631578947368425,45.0,MW
+temperature_cold,2035,heat_pump_ind_cap,"['geothermal_HP', 2035]",0.0,0.0,0.13668061995016634,0.13668061995016634,1.5,MW
+temperature_cold,2035,heat_pump_ind_cap,"['electric_boiler', 2035]",0.0,0.0,5.2631578947368425,5.2631578947368425,150.0,MW
+temperature_cold,2035,trad_boiler_ind_cap_inv,"['gas_boilers', 2035]",0.0,6750.550855429647,3402.899859024937,10153.450714454584,1946.5049999999992,MW
+temperature_cold,2035,trad_boiler_ind_cap_inv,"['bio_boilers', 2035]",0.0,0.0,0.0,0.0,1325.715,MW
+temperature_cold,2035,trad_boiler_ind_cap_inv,"['oil_boilers', 2035]",0.0,0.0,0.0,0.0,617.715,MW
+temperature_cold,2035,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2035,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2035,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2035,stat_sto_cap_inv,"['Liion_storage', 2035]",0.0,0.0,0.0,0.0,1.5,MWh
+temperature_cold,2035,h2_sto_max_cap,"['H2_storage_tank', 2035]",10.0,0.0,0.0,10.0,0.0,MWh
+temperature_cold,2035,h2_electrolysis_max_cap,"['PEM_elec', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2035,h2_electrolysis_max_cap,"['SOEC_elec', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2035,h2_electrolysis_max_cap,"['Alkaline_EC', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2040,cap_inv,"['TEBiomassHR', 2040]",29.0,0.0,0.0,29.0,0.0,MW
+temperature_cold,2040,cap_inv,"['TEPlomin1', 2040]",6.93,0.0,0.0,6.93,62.48,MW
+temperature_cold,2040,cap_inv,"['TEPlomin2', 2040]",12.096,0.0,0.0,12.096,109.056,MW
+temperature_cold,2040,cap_inv,"['TE-TOZagreb', 2040]",63.8,0.0,0.0,63.8,255.2,MW
+temperature_cold,2040,cap_inv,"['HEZakucac', 2040]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_cold,2040,cap_inv,"['HESenj', 2040]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_cold,2040,cap_inv,"['HEDubrovnik_HR', 2040]",30.0,0.0,0.0,30.0,0.0,MW
+temperature_cold,2040,cap_inv,"['RHEVelebit', 2040]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_cold,2040,cap_inv,"['RHEOrlovac', 2040]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_cold,2040,cap_inv,"['RHEVinodol', 2040]",3.0,0.0,0.0,3.0,0.0,MW
+temperature_cold,2040,cap_inv,"['NEKrskoHR', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2040,cap_inv,"['TERijeka', 2040]",44.1,0.0,0.0,44.1,397.59999999999997,MW
+temperature_cold,2040,cap_inv,"['HR_Wind_HR032', 2040]",156.0,0.0,0.0,156.0,0.0,MW
+temperature_cold,2040,cap_inv,"['HR_Wind_HR033', 2040]",283.65,0.0,0.0,283.65,0.0,MW
+temperature_cold,2040,cap_inv,"['HR_Wind_HR034', 2040]",295.1,0.0,0.0,295.1,0.0,MW
+temperature_cold,2040,cap_inv,"['HR_Wind_HR035', 2040]",299.6,0.0,0.0,299.6,0.0,MW
+temperature_cold,2040,cap_inv,"['HR_Wind_HR037', 2040]",20.7,0.0,0.0,20.7,0.0,MW
+temperature_cold,2040,cap_inv,"['hror', 2040]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_cold,2040,cap_inv,"['HECombo', 2040]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_cold,2040,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2040]",256.995537,0.0,0.0,256.995537,0.0,MW
+temperature_cold,2040,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2040]",45.963105,0.0,0.0,45.963105,0.0,MW
+temperature_cold,2040,cap_inv,"['HR_Solar_HR_EAST', 2040]",159.541358,0.0,0.0,159.541358,0.0,MW
+temperature_cold,2040,cap_inv_FC,"['PEMFC_CHP', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2040,cap_inv_FC,"['SOFC_CHP', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2040,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2040,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2040,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2040,heat_pump_ind_cap,"['ATW_HP', 2040]",0.0,5.2631578947368425,0.0,5.2631578947368425,0.0,MW
+temperature_cold,2040,heat_pump_ind_cap,"['geothermal_HP', 2040]",0.0,0.13668061995016634,0.0,0.13668061995016634,0.0,MW
+temperature_cold,2040,heat_pump_ind_cap,"['electric_boiler', 2040]",0.0,5.2631578947368425,0.0,5.2631578947368425,0.0,MW
+temperature_cold,2040,trad_boiler_ind_cap_inv,"['gas_boilers', 2040]",0.0,10153.450714454584,0.0,10153.450714454584,0.0,MW
+temperature_cold,2040,trad_boiler_ind_cap_inv,"['bio_boilers', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2040,trad_boiler_ind_cap_inv,"['oil_boilers', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2040,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2040]",0,0.0,232.03569512663617,232.03569512663617,0.0,MW
+temperature_cold,2040,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2040,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2040,stat_sto_cap_inv,"['Liion_storage', 2040]",0.0,0.0,0.0,0.0,0.0,MWh
+temperature_cold,2040,h2_sto_max_cap,"['H2_storage_tank', 2040]",10.0,0.0,0.0,10.0,0.0,MWh
+temperature_cold,2040,h2_electrolysis_max_cap,"['PEM_elec', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2040,h2_electrolysis_max_cap,"['SOEC_elec', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2040,h2_electrolysis_max_cap,"['Alkaline_EC', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2045,cap_inv,"['TEBiomassHR', 2045]",29.0,0.0,0.0,29.0,0.0,MW
+temperature_cold,2045,cap_inv,"['TEPlomin1', 2045]",0.66,0.0,0.0,0.66,6.27,MW
+temperature_cold,2045,cap_inv,"['TEPlomin2', 2045]",1.1520000000000001,0.0,0.0,1.1520000000000001,10.943999999999999,MW
+temperature_cold,2045,cap_inv,"['TE-TOZagreb', 2045]",12.76,0.0,0.0,12.76,51.04,MW
+temperature_cold,2045,cap_inv,"['HEZakucac', 2045]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_cold,2045,cap_inv,"['HESenj', 2045]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_cold,2045,cap_inv,"['HEDubrovnik_HR', 2045]",30.0,0.0,0.0,30.0,0.0,MW
+temperature_cold,2045,cap_inv,"['RHEVelebit', 2045]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_cold,2045,cap_inv,"['RHEOrlovac', 2045]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_cold,2045,cap_inv,"['RHEVinodol', 2045]",3.0,0.0,0.0,3.0,0.0,MW
+temperature_cold,2045,cap_inv,"['NEKrskoHR', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2045,cap_inv,"['TERijeka', 2045]",4.2,0.0,0.0,4.2,39.9,MW
+temperature_cold,2045,cap_inv,"['HR_Wind_HR032', 2045]",156.0,0.0,0.0,156.0,0.0,MW
+temperature_cold,2045,cap_inv,"['HR_Wind_HR033', 2045]",283.65,0.0,0.0,283.65,0.0,MW
+temperature_cold,2045,cap_inv,"['HR_Wind_HR034', 2045]",295.1,0.0,0.0,295.1,0.0,MW
+temperature_cold,2045,cap_inv,"['HR_Wind_HR035', 2045]",299.6,0.0,0.0,299.6,0.0,MW
+temperature_cold,2045,cap_inv,"['HR_Wind_HR037', 2045]",20.7,0.0,0.0,20.7,0.0,MW
+temperature_cold,2045,cap_inv,"['hror', 2045]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_cold,2045,cap_inv,"['HECombo', 2045]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_cold,2045,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2045]",256.995537,0.0,0.0,256.995537,0.0,MW
+temperature_cold,2045,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2045]",45.963105,0.0,0.0,45.963105,0.0,MW
+temperature_cold,2045,cap_inv,"['HR_Solar_HR_EAST', 2045]",159.541358,0.0,0.0,159.541358,0.0,MW
+temperature_cold,2045,cap_inv_FC,"['PEMFC_CHP', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2045,cap_inv_FC,"['SOFC_CHP', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2045,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2045,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2045,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2045,heat_pump_ind_cap,"['ATW_HP', 2045]",0.0,5.2631578947368425,0.0,5.2631578947368425,0.0,MW
+temperature_cold,2045,heat_pump_ind_cap,"['geothermal_HP', 2045]",0.0,0.13668061995016634,0.0,0.13668061995016634,0.0,MW
+temperature_cold,2045,heat_pump_ind_cap,"['electric_boiler', 2045]",0.0,5.2631578947368425,0.0,5.2631578947368425,0.0,MW
+temperature_cold,2045,trad_boiler_ind_cap_inv,"['gas_boilers', 2045]",0.0,10153.450714454584,0.0,10153.450714454584,0.0,MW
+temperature_cold,2045,trad_boiler_ind_cap_inv,"['bio_boilers', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2045,trad_boiler_ind_cap_inv,"['oil_boilers', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2045,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2045]",0,232.03569512663617,57.728973047647216,289.7646681742834,0.0,MW
+temperature_cold,2045,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2045,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2045,stat_sto_cap_inv,"['Liion_storage', 2045]",0.0,0.0,0.0,0.0,0.0,MWh
+temperature_cold,2045,h2_sto_max_cap,"['H2_storage_tank', 2045]",10.0,0.0,0.0,10.0,0.0,MWh
+temperature_cold,2045,h2_electrolysis_max_cap,"['PEM_elec', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2045,h2_electrolysis_max_cap,"['SOEC_elec', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2045,h2_electrolysis_max_cap,"['Alkaline_EC', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2050,cap_inv,"['TEBiomassHR', 2050]",29.0,0.0,0.0,29.0,0.0,MW
+temperature_cold,2050,cap_inv,"['TEPlomin1', 2050]",0.11,0.0,0.0,0.11,0.55,MW
+temperature_cold,2050,cap_inv,"['TEPlomin2', 2050]",0.192,0.0,0.0,0.192,0.9600000000000002,MW
+temperature_cold,2050,cap_inv,"['TE-TOZagreb', 2050]",2.64,0.0,17.105813537098392,19.745813537098392,10.119999999999997,MW
+temperature_cold,2050,cap_inv,"['HEZakucac', 2050]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_cold,2050,cap_inv,"['HESenj', 2050]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_cold,2050,cap_inv,"['HEDubrovnik_HR', 2050]",30.0,0.0,0.0,30.0,0.0,MW
+temperature_cold,2050,cap_inv,"['RHEVelebit', 2050]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_cold,2050,cap_inv,"['RHEOrlovac', 2050]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_cold,2050,cap_inv,"['RHEVinodol', 2050]",3.0,0.0,0.0,3.0,0.0,MW
+temperature_cold,2050,cap_inv,"['NEKrskoHR', 2050]",0.0,0.0,100.0,100.0,0.0,MW
+temperature_cold,2050,cap_inv,"['TERijeka', 2050]",0.7000000000000001,0.0,0.0,0.7000000000000001,3.5,MW
+temperature_cold,2050,cap_inv,"['HR_Wind_HR032', 2050]",156.0,0.0,0.0,156.0,0.0,MW
+temperature_cold,2050,cap_inv,"['HR_Wind_HR033', 2050]",283.65,0.0,0.0,283.65,0.0,MW
+temperature_cold,2050,cap_inv,"['HR_Wind_HR034', 2050]",295.1,0.0,0.0,295.1,0.0,MW
+temperature_cold,2050,cap_inv,"['HR_Wind_HR035', 2050]",299.6,0.0,0.0,299.6,0.0,MW
+temperature_cold,2050,cap_inv,"['HR_Wind_HR037', 2050]",20.7,0.0,0.0,20.7,0.0,MW
+temperature_cold,2050,cap_inv,"['hror', 2050]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_cold,2050,cap_inv,"['HECombo', 2050]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_cold,2050,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2050]",256.995537,0.0,120.7513565738452,377.7468935738452,0.0,MW
+temperature_cold,2050,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2050]",45.963105,0.0,0.0,45.963105,0.0,MW
+temperature_cold,2050,cap_inv,"['HR_Solar_HR_EAST', 2050]",159.541358,0.0,0.0,159.541358,0.0,MW
+temperature_cold,2050,cap_inv_FC,"['PEMFC_CHP', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2050,cap_inv_FC,"['SOFC_CHP', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2050,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2050,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2050,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2050,heat_pump_ind_cap,"['ATW_HP', 2050]",0.0,5.2631578947368425,0.0,5.2631578947368425,0.0,MW
+temperature_cold,2050,heat_pump_ind_cap,"['geothermal_HP', 2050]",0.0,0.13668061995016634,0.0,0.13668061995016634,0.0,MW
+temperature_cold,2050,heat_pump_ind_cap,"['electric_boiler', 2050]",0.0,5.2631578947368425,0.0,5.2631578947368425,0.0,MW
+temperature_cold,2050,trad_boiler_ind_cap_inv,"['gas_boilers', 2050]",0.0,10153.450714454584,0.0,10153.450714454584,0.0,MW
+temperature_cold,2050,trad_boiler_ind_cap_inv,"['bio_boilers', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2050,trad_boiler_ind_cap_inv,"['oil_boilers', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2050,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2050]",0,289.7646681742834,0.0,289.7646681742834,0.0,MW
+temperature_cold,2050,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2050,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2050,stat_sto_cap_inv,"['Liion_storage', 2050]",0.0,0.0,0.0,0.0,0.0,MWh
+temperature_cold,2050,h2_sto_max_cap,"['H2_storage_tank', 2050]",10.0,0.0,0.0,10.0,0.0,MWh
+temperature_cold,2050,h2_electrolysis_max_cap,"['PEM_elec', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2050,h2_electrolysis_max_cap,"['SOEC_elec', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_cold,2050,h2_electrolysis_max_cap,"['Alkaline_EC', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2020,cap_inv,"['TEBiomassHR', 2020]",29.0,0.0,0.0,29.0,,MW
+temperature_hot,2020,cap_inv,"['TEPlomin1', 2020]",110.0,0.0,0.0,110.0,,MW
+temperature_hot,2020,cap_inv,"['TEPlomin2', 2020]",192.0,0.0,0.0,192.0,,MW
+temperature_hot,2020,cap_inv,"['TE-TOZagreb', 2020]",440.0,0.0,0.0,440.0,,MW
+temperature_hot,2020,cap_inv,"['HEZakucac', 2020]",150.0,0.0,0.0,150.0,,MW
+temperature_hot,2020,cap_inv,"['HESenj', 2020]",60.0,0.0,0.0,60.0,,MW
+temperature_hot,2020,cap_inv,"['HEDubrovnik_HR', 2020]",30.0,0.0,0.0,30.0,,MW
+temperature_hot,2020,cap_inv,"['RHEVelebit', 2020]",80.0,0.0,0.0,80.0,,MW
+temperature_hot,2020,cap_inv,"['RHEOrlovac', 2020]",80.0,0.0,0.0,80.0,,MW
+temperature_hot,2020,cap_inv,"['RHEVinodol', 2020]",3.0,0.0,0.0,3.0,,MW
+temperature_hot,2020,cap_inv,"['NEKrskoHR', 2020]",348.0,0.0,0.0,348.0,,MW
+temperature_hot,2020,cap_inv,"['TERijeka', 2020]",700.0,0.0,0.0,700.0,,MW
+temperature_hot,2020,cap_inv,"['HR_Wind_HR032', 2020]",156.0,0.0,0.0,156.0,,MW
+temperature_hot,2020,cap_inv,"['HR_Wind_HR033', 2020]",283.65,0.0,0.0,283.65,,MW
+temperature_hot,2020,cap_inv,"['HR_Wind_HR034', 2020]",295.1,0.0,0.0,295.1,,MW
+temperature_hot,2020,cap_inv,"['HR_Wind_HR035', 2020]",299.6,0.0,0.0,299.6,,MW
+temperature_hot,2020,cap_inv,"['HR_Wind_HR037', 2020]",20.7,0.0,0.0,20.7,,MW
+temperature_hot,2020,cap_inv,"['hror', 2020]",150.0,0.0,0.0,150.0,,MW
+temperature_hot,2020,cap_inv,"['HECombo', 2020]",60.0,0.0,0.0,60.0,,MW
+temperature_hot,2020,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2020]",256.995537,0.0,0.0,256.995537,,MW
+temperature_hot,2020,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2020]",45.963105,0.0,0.0,45.963105,,MW
+temperature_hot,2020,cap_inv,"['HR_Solar_HR_EAST', 2020]",159.541358,0.0,0.0,159.541358,,MW
+temperature_hot,2020,cap_inv_FC,"['PEMFC_CHP', 2020]",0.0,0.0,0.0,0.0,,MW
+temperature_hot,2020,cap_inv_FC,"['SOFC_CHP', 2020]",0.0,0.0,0.0,0.0,,MW
+temperature_hot,2020,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+temperature_hot,2020,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+temperature_hot,2020,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+temperature_hot,2020,heat_pump_ind_cap,"['ATW_HP', 2020]",150.0,0.0,0.0,150.0,,MW
+temperature_hot,2020,heat_pump_ind_cap,"['geothermal_HP', 2020]",5.0,0.0,0.0,5.0,,MW
+temperature_hot,2020,heat_pump_ind_cap,"['electric_boiler', 2020]",500.0,0.0,0.0,500.0,,MW
+temperature_hot,2020,trad_boiler_ind_cap_inv,"['gas_boilers', 2020]",6488.35,0.0,0.0,6488.35,,MW
+temperature_hot,2020,trad_boiler_ind_cap_inv,"['bio_boilers', 2020]",4419.05,0.0,0.0,4419.05,,MW
+temperature_hot,2020,trad_boiler_ind_cap_inv,"['oil_boilers', 2020]",2059.05,0.0,0.0,2059.05,,MW
+temperature_hot,2020,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+temperature_hot,2020,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+temperature_hot,2020,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2020]",0,0.0,0.0,0.0,,MW
+temperature_hot,2020,stat_sto_cap_inv,"['Liion_storage', 2020]",5.0,0.0,0.0,5.0,,MWh
+temperature_hot,2020,h2_sto_max_cap,"['H2_storage_tank', 2020]",10.0,0.0,0.0,10.0,,MWh
+temperature_hot,2020,h2_electrolysis_max_cap,"['PEM_elec', 2020]",0.0,0.0,0.0,0.0,,MW
+temperature_hot,2020,h2_electrolysis_max_cap,"['SOEC_elec', 2020]",0.0,0.0,0.0,0.0,,MW
+temperature_hot,2020,h2_electrolysis_max_cap,"['Alkaline_EC', 2020]",0.0,0.0,0.0,0.0,,MW
+temperature_hot,2025,cap_inv,"['TEBiomassHR', 2025]",29.0,0.0,0.0,29.0,0.0,MW
+temperature_hot,2025,cap_inv,"['TEPlomin1', 2025]",110.0,0.0,0.0,110.0,0.0,MW
+temperature_hot,2025,cap_inv,"['TEPlomin2', 2025]",192.0,0.0,0.0,192.0,0.0,MW
+temperature_hot,2025,cap_inv,"['TE-TOZagreb', 2025]",440.0,0.0,0.0,440.0,0.0,MW
+temperature_hot,2025,cap_inv,"['HEZakucac', 2025]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_hot,2025,cap_inv,"['HESenj', 2025]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_hot,2025,cap_inv,"['HEDubrovnik_HR', 2025]",30.0,0.0,0.0,30.0,0.0,MW
+temperature_hot,2025,cap_inv,"['RHEVelebit', 2025]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_hot,2025,cap_inv,"['RHEOrlovac', 2025]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_hot,2025,cap_inv,"['RHEVinodol', 2025]",3.0,0.0,0.0,3.0,0.0,MW
+temperature_hot,2025,cap_inv,"['NEKrskoHR', 2025]",348.0,0.0,0.0,348.0,0.0,MW
+temperature_hot,2025,cap_inv,"['TERijeka', 2025]",700.0,0.0,0.0,700.0,0.0,MW
+temperature_hot,2025,cap_inv,"['HR_Wind_HR032', 2025]",156.0,0.0,0.0,156.0,0.0,MW
+temperature_hot,2025,cap_inv,"['HR_Wind_HR033', 2025]",283.65,0.0,0.0,283.65,0.0,MW
+temperature_hot,2025,cap_inv,"['HR_Wind_HR034', 2025]",295.1,0.0,0.0,295.1,0.0,MW
+temperature_hot,2025,cap_inv,"['HR_Wind_HR035', 2025]",299.6,0.0,0.0,299.6,0.0,MW
+temperature_hot,2025,cap_inv,"['HR_Wind_HR037', 2025]",20.7,0.0,0.0,20.7,0.0,MW
+temperature_hot,2025,cap_inv,"['hror', 2025]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_hot,2025,cap_inv,"['HECombo', 2025]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_hot,2025,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2025]",256.995537,0.0,0.0,256.995537,0.0,MW
+temperature_hot,2025,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2025]",45.963105,0.0,0.0,45.963105,0.0,MW
+temperature_hot,2025,cap_inv,"['HR_Solar_HR_EAST', 2025]",159.541358,0.0,0.0,159.541358,0.0,MW
+temperature_hot,2025,cap_inv_FC,"['PEMFC_CHP', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2025,cap_inv_FC,"['SOFC_CHP', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2025,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2025,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2025,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2025,heat_pump_ind_cap,"['ATW_HP', 2025]",90.0,0.0,0.0,90.0,60.0,MW
+temperature_hot,2025,heat_pump_ind_cap,"['geothermal_HP', 2025]",3.0,0.0,0.0,3.0,2.0,MW
+temperature_hot,2025,heat_pump_ind_cap,"['electric_boiler', 2025]",300.0,0.0,0.0,300.0,200.0,MW
+temperature_hot,2025,trad_boiler_ind_cap_inv,"['gas_boilers', 2025]",3893.01,0.0,3788.137994805842,7681.147994805842,2595.34,MW
+temperature_hot,2025,trad_boiler_ind_cap_inv,"['bio_boilers', 2025]",2651.43,0.0,0.0,2651.43,1767.6200000000003,MW
+temperature_hot,2025,trad_boiler_ind_cap_inv,"['oil_boilers', 2025]",1235.43,0.0,0.0,1235.43,823.6200000000001,MW
+temperature_hot,2025,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2025,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2025,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2025,stat_sto_cap_inv,"['Liion_storage', 2025]",3.0,0.0,0.0,3.0,2.0,MWh
+temperature_hot,2025,h2_sto_max_cap,"['H2_storage_tank', 2025]",10.0,0.0,0.0,10.0,0.0,MWh
+temperature_hot,2025,h2_electrolysis_max_cap,"['PEM_elec', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2025,h2_electrolysis_max_cap,"['SOEC_elec', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2025,h2_electrolysis_max_cap,"['Alkaline_EC', 2025]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2030,cap_inv,"['TEBiomassHR', 2030]",29.0,0.0,0.0,29.0,0.0,MW
+temperature_hot,2030,cap_inv,"['TEPlomin1', 2030]",110.0,0.0,0.0,110.0,0.0,MW
+temperature_hot,2030,cap_inv,"['TEPlomin2', 2030]",192.0,0.0,0.0,192.0,0.0,MW
+temperature_hot,2030,cap_inv,"['TE-TOZagreb', 2030]",440.0,0.0,0.0,440.0,0.0,MW
+temperature_hot,2030,cap_inv,"['HEZakucac', 2030]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_hot,2030,cap_inv,"['HESenj', 2030]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_hot,2030,cap_inv,"['HEDubrovnik_HR', 2030]",30.0,0.0,0.0,30.0,0.0,MW
+temperature_hot,2030,cap_inv,"['RHEVelebit', 2030]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_hot,2030,cap_inv,"['RHEOrlovac', 2030]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_hot,2030,cap_inv,"['RHEVinodol', 2030]",3.0,0.0,0.0,3.0,0.0,MW
+temperature_hot,2030,cap_inv,"['NEKrskoHR', 2030]",348.0,0.0,0.0,348.0,0.0,MW
+temperature_hot,2030,cap_inv,"['TERijeka', 2030]",700.0,0.0,0.0,700.0,0.0,MW
+temperature_hot,2030,cap_inv,"['HR_Wind_HR032', 2030]",156.0,0.0,0.0,156.0,0.0,MW
+temperature_hot,2030,cap_inv,"['HR_Wind_HR033', 2030]",283.65,0.0,0.0,283.65,0.0,MW
+temperature_hot,2030,cap_inv,"['HR_Wind_HR034', 2030]",295.1,0.0,0.0,295.1,0.0,MW
+temperature_hot,2030,cap_inv,"['HR_Wind_HR035', 2030]",299.6,0.0,0.0,299.6,0.0,MW
+temperature_hot,2030,cap_inv,"['HR_Wind_HR037', 2030]",20.7,0.0,0.0,20.7,0.0,MW
+temperature_hot,2030,cap_inv,"['hror', 2030]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_hot,2030,cap_inv,"['HECombo', 2030]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_hot,2030,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2030]",256.995537,0.0,0.0,256.995537,0.0,MW
+temperature_hot,2030,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2030]",45.963105,0.0,0.0,45.963105,0.0,MW
+temperature_hot,2030,cap_inv,"['HR_Solar_HR_EAST', 2030]",159.541358,0.0,0.0,159.541358,0.0,MW
+temperature_hot,2030,cap_inv_FC,"['PEMFC_CHP', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2030,cap_inv_FC,"['SOFC_CHP', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2030,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2030,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2030,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2030,heat_pump_ind_cap,"['ATW_HP', 2030]",45.0,0.0,0.0,45.0,45.0,MW
+temperature_hot,2030,heat_pump_ind_cap,"['geothermal_HP', 2030]",1.5,0.0,0.0,1.5,1.5,MW
+temperature_hot,2030,heat_pump_ind_cap,"['electric_boiler', 2030]",150.0,0.0,0.0,150.0,150.0,MW
+temperature_hot,2030,trad_boiler_ind_cap_inv,"['gas_boilers', 2030]",1946.505,3788.137994805842,3696.785050159545,9431.428044965387,1946.5049999999992,MW
+temperature_hot,2030,trad_boiler_ind_cap_inv,"['bio_boilers', 2030]",1325.715,0.0,0.0,1325.715,1325.715,MW
+temperature_hot,2030,trad_boiler_ind_cap_inv,"['oil_boilers', 2030]",617.715,0.0,0.0,617.715,617.715,MW
+temperature_hot,2030,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2030,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2030,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2030,stat_sto_cap_inv,"['Liion_storage', 2030]",1.5,0.0,0.0,1.5,1.5,MWh
+temperature_hot,2030,h2_sto_max_cap,"['H2_storage_tank', 2030]",10.0,0.0,0.0,10.0,0.0,MWh
+temperature_hot,2030,h2_electrolysis_max_cap,"['PEM_elec', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2030,h2_electrolysis_max_cap,"['SOEC_elec', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2030,h2_electrolysis_max_cap,"['Alkaline_EC', 2030]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2035,cap_inv,"['TEBiomassHR', 2035]",29.0,0.0,0.0,29.0,0.0,MW
+temperature_hot,2035,cap_inv,"['TEPlomin1', 2035]",69.41,0.0,0.0,69.41,40.59,MW
+temperature_hot,2035,cap_inv,"['TEPlomin2', 2035]",121.152,0.0,0.0,121.152,70.848,MW
+temperature_hot,2035,cap_inv,"['TE-TOZagreb', 2035]",319.0,0.0,0.0,319.0,121.0,MW
+temperature_hot,2035,cap_inv,"['HEZakucac', 2035]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_hot,2035,cap_inv,"['HESenj', 2035]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_hot,2035,cap_inv,"['HEDubrovnik_HR', 2035]",30.0,0.0,0.0,30.0,0.0,MW
+temperature_hot,2035,cap_inv,"['RHEVelebit', 2035]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_hot,2035,cap_inv,"['RHEOrlovac', 2035]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_hot,2035,cap_inv,"['RHEVinodol', 2035]",3.0,0.0,0.0,3.0,0.0,MW
+temperature_hot,2035,cap_inv,"['NEKrskoHR', 2035]",0.0,0.0,0.0,0.0,348.0,MW
+temperature_hot,2035,cap_inv,"['TERijeka', 2035]",441.7,0.0,0.0,441.7,258.3,MW
+temperature_hot,2035,cap_inv,"['HR_Wind_HR032', 2035]",156.0,0.0,0.0,156.0,0.0,MW
+temperature_hot,2035,cap_inv,"['HR_Wind_HR033', 2035]",283.65,0.0,0.0,283.65,0.0,MW
+temperature_hot,2035,cap_inv,"['HR_Wind_HR034', 2035]",295.1,0.0,0.0,295.1,0.0,MW
+temperature_hot,2035,cap_inv,"['HR_Wind_HR035', 2035]",299.6,0.0,0.0,299.6,0.0,MW
+temperature_hot,2035,cap_inv,"['HR_Wind_HR037', 2035]",20.7,0.0,0.0,20.7,0.0,MW
+temperature_hot,2035,cap_inv,"['hror', 2035]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_hot,2035,cap_inv,"['HECombo', 2035]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_hot,2035,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2035]",256.995537,0.0,0.0,256.995537,0.0,MW
+temperature_hot,2035,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2035]",45.963105,0.0,0.0,45.963105,0.0,MW
+temperature_hot,2035,cap_inv,"['HR_Solar_HR_EAST', 2035]",159.541358,0.0,0.0,159.541358,0.0,MW
+temperature_hot,2035,cap_inv_FC,"['PEMFC_CHP', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2035,cap_inv_FC,"['SOFC_CHP', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2035,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2035,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2035,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2035,heat_pump_ind_cap,"['ATW_HP', 2035]",0.0,0.0,0.7694861915033256,0.7694861915033256,45.0,MW
+temperature_hot,2035,heat_pump_ind_cap,"['geothermal_HP', 2035]",0.0,0.0,0.047589330852413264,0.047589330852413264,1.5,MW
+temperature_hot,2035,heat_pump_ind_cap,"['electric_boiler', 2035]",0.0,0.0,0.012850167052171678,0.012850167052171678,150.0,MW
+temperature_hot,2035,trad_boiler_ind_cap_inv,"['gas_boilers', 2035]",0.0,7484.923044965387,3355.0887073358344,10840.011752301221,1946.5049999999992,MW
+temperature_hot,2035,trad_boiler_ind_cap_inv,"['bio_boilers', 2035]",0.0,0.0,0.0,0.0,1325.715,MW
+temperature_hot,2035,trad_boiler_ind_cap_inv,"['oil_boilers', 2035]",0.0,0.0,0.0,0.0,617.715,MW
+temperature_hot,2035,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2035,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2035,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2035]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2035,stat_sto_cap_inv,"['Liion_storage', 2035]",0.0,0.0,0.0,0.0,1.5,MWh
+temperature_hot,2035,h2_sto_max_cap,"['H2_storage_tank', 2035]",10.0,0.0,0.0,10.0,0.0,MWh
+temperature_hot,2035,h2_electrolysis_max_cap,"['PEM_elec', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2035,h2_electrolysis_max_cap,"['SOEC_elec', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2035,h2_electrolysis_max_cap,"['Alkaline_EC', 2035]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2040,cap_inv,"['TEBiomassHR', 2040]",29.0,0.0,0.0,29.0,0.0,MW
+temperature_hot,2040,cap_inv,"['TEPlomin1', 2040]",6.93,0.0,0.0,6.93,62.48,MW
+temperature_hot,2040,cap_inv,"['TEPlomin2', 2040]",12.096,0.0,0.0,12.096,109.056,MW
+temperature_hot,2040,cap_inv,"['TE-TOZagreb', 2040]",63.8,0.0,0.0,63.8,255.2,MW
+temperature_hot,2040,cap_inv,"['HEZakucac', 2040]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_hot,2040,cap_inv,"['HESenj', 2040]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_hot,2040,cap_inv,"['HEDubrovnik_HR', 2040]",30.0,0.0,0.0,30.0,0.0,MW
+temperature_hot,2040,cap_inv,"['RHEVelebit', 2040]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_hot,2040,cap_inv,"['RHEOrlovac', 2040]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_hot,2040,cap_inv,"['RHEVinodol', 2040]",3.0,0.0,0.0,3.0,0.0,MW
+temperature_hot,2040,cap_inv,"['NEKrskoHR', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2040,cap_inv,"['TERijeka', 2040]",44.1,0.0,0.0,44.1,397.59999999999997,MW
+temperature_hot,2040,cap_inv,"['HR_Wind_HR032', 2040]",156.0,0.0,0.0,156.0,0.0,MW
+temperature_hot,2040,cap_inv,"['HR_Wind_HR033', 2040]",283.65,0.0,0.0,283.65,0.0,MW
+temperature_hot,2040,cap_inv,"['HR_Wind_HR034', 2040]",295.1,0.0,0.0,295.1,0.0,MW
+temperature_hot,2040,cap_inv,"['HR_Wind_HR035', 2040]",299.6,0.0,0.0,299.6,0.0,MW
+temperature_hot,2040,cap_inv,"['HR_Wind_HR037', 2040]",20.7,0.0,0.0,20.7,0.0,MW
+temperature_hot,2040,cap_inv,"['hror', 2040]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_hot,2040,cap_inv,"['HECombo', 2040]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_hot,2040,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2040]",256.995537,0.0,0.0,256.995537,0.0,MW
+temperature_hot,2040,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2040]",45.963105,0.0,0.0,45.963105,0.0,MW
+temperature_hot,2040,cap_inv,"['HR_Solar_HR_EAST', 2040]",159.541358,0.0,0.0,159.541358,0.0,MW
+temperature_hot,2040,cap_inv_FC,"['PEMFC_CHP', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2040,cap_inv_FC,"['SOFC_CHP', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2040,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2040,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2040,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2040,heat_pump_ind_cap,"['ATW_HP', 2040]",0.0,0.7694861915033256,0.03925152908924782,0.8087377205925734,0.0,MW
+temperature_hot,2040,heat_pump_ind_cap,"['geothermal_HP', 2040]",0.0,0.047589330852413264,0.013151440939152827,0.06074077179156609,0.0,MW
+temperature_hot,2040,heat_pump_ind_cap,"['electric_boiler', 2040]",0.0,0.012850167052171678,0.0,0.012850167052171678,0.0,MW
+temperature_hot,2040,trad_boiler_ind_cap_inv,"['gas_boilers', 2040]",0.0,10840.011752301221,0.0,10840.011752301221,0.0,MW
+temperature_hot,2040,trad_boiler_ind_cap_inv,"['bio_boilers', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2040,trad_boiler_ind_cap_inv,"['oil_boilers', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2040,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2040]",0,0.0,201.81753695392302,201.81753695392302,0.0,MW
+temperature_hot,2040,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2040,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2040]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2040,stat_sto_cap_inv,"['Liion_storage', 2040]",0.0,0.0,0.0,0.0,0.0,MWh
+temperature_hot,2040,h2_sto_max_cap,"['H2_storage_tank', 2040]",10.0,0.0,0.0,10.0,0.0,MWh
+temperature_hot,2040,h2_electrolysis_max_cap,"['PEM_elec', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2040,h2_electrolysis_max_cap,"['SOEC_elec', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2040,h2_electrolysis_max_cap,"['Alkaline_EC', 2040]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2045,cap_inv,"['TEBiomassHR', 2045]",29.0,0.0,0.0,29.0,0.0,MW
+temperature_hot,2045,cap_inv,"['TEPlomin1', 2045]",0.66,0.0,0.0,0.66,6.27,MW
+temperature_hot,2045,cap_inv,"['TEPlomin2', 2045]",1.1520000000000001,0.0,0.0,1.1520000000000001,10.943999999999999,MW
+temperature_hot,2045,cap_inv,"['TE-TOZagreb', 2045]",12.76,0.0,0.0,12.76,51.04,MW
+temperature_hot,2045,cap_inv,"['HEZakucac', 2045]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_hot,2045,cap_inv,"['HESenj', 2045]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_hot,2045,cap_inv,"['HEDubrovnik_HR', 2045]",30.0,0.0,0.0,30.0,0.0,MW
+temperature_hot,2045,cap_inv,"['RHEVelebit', 2045]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_hot,2045,cap_inv,"['RHEOrlovac', 2045]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_hot,2045,cap_inv,"['RHEVinodol', 2045]",3.0,0.0,0.0,3.0,0.0,MW
+temperature_hot,2045,cap_inv,"['NEKrskoHR', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2045,cap_inv,"['TERijeka', 2045]",4.2,0.0,0.0,4.2,39.9,MW
+temperature_hot,2045,cap_inv,"['HR_Wind_HR032', 2045]",156.0,0.0,0.0,156.0,0.0,MW
+temperature_hot,2045,cap_inv,"['HR_Wind_HR033', 2045]",283.65,0.0,0.0,283.65,0.0,MW
+temperature_hot,2045,cap_inv,"['HR_Wind_HR034', 2045]",295.1,0.0,0.0,295.1,0.0,MW
+temperature_hot,2045,cap_inv,"['HR_Wind_HR035', 2045]",299.6,0.0,0.0,299.6,0.0,MW
+temperature_hot,2045,cap_inv,"['HR_Wind_HR037', 2045]",20.7,0.0,0.0,20.7,0.0,MW
+temperature_hot,2045,cap_inv,"['hror', 2045]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_hot,2045,cap_inv,"['HECombo', 2045]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_hot,2045,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2045]",256.995537,0.0,0.0,256.995537,0.0,MW
+temperature_hot,2045,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2045]",45.963105,0.0,0.0,45.963105,0.0,MW
+temperature_hot,2045,cap_inv,"['HR_Solar_HR_EAST', 2045]",159.541358,0.0,0.0,159.541358,0.0,MW
+temperature_hot,2045,cap_inv_FC,"['PEMFC_CHP', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2045,cap_inv_FC,"['SOFC_CHP', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2045,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2045,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2045,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2045,heat_pump_ind_cap,"['ATW_HP', 2045]",0.0,0.8087377205925734,0.0516244215129745,0.860362142105548,0.0,MW
+temperature_hot,2045,heat_pump_ind_cap,"['geothermal_HP', 2045]",0.0,0.06074077179156609,0.008771409763069157,0.06951218155463525,0.0,MW
+temperature_hot,2045,heat_pump_ind_cap,"['electric_boiler', 2045]",0.0,0.012850167052171678,0.0,0.012850167052171678,0.0,MW
+temperature_hot,2045,trad_boiler_ind_cap_inv,"['gas_boilers', 2045]",0.0,10840.011752301221,0.0,10840.011752301221,0.0,MW
+temperature_hot,2045,trad_boiler_ind_cap_inv,"['bio_boilers', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2045,trad_boiler_ind_cap_inv,"['oil_boilers', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2045,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2045]",0,201.81753695392302,58.329701124296385,260.1472380782194,0.0,MW
+temperature_hot,2045,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2045,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2045]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2045,stat_sto_cap_inv,"['Liion_storage', 2045]",0.0,0.0,0.0,0.0,0.0,MWh
+temperature_hot,2045,h2_sto_max_cap,"['H2_storage_tank', 2045]",10.0,0.0,0.0,10.0,0.0,MWh
+temperature_hot,2045,h2_electrolysis_max_cap,"['PEM_elec', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2045,h2_electrolysis_max_cap,"['SOEC_elec', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2045,h2_electrolysis_max_cap,"['Alkaline_EC', 2045]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2050,cap_inv,"['TEBiomassHR', 2050]",29.0,0.0,0.0,29.0,0.0,MW
+temperature_hot,2050,cap_inv,"['TEPlomin1', 2050]",0.11,0.0,0.0,0.11,0.55,MW
+temperature_hot,2050,cap_inv,"['TEPlomin2', 2050]",0.192,0.0,0.0,0.192,0.9600000000000002,MW
+temperature_hot,2050,cap_inv,"['TE-TOZagreb', 2050]",2.64,0.0,17.336321954562163,19.976321954562163,10.120000000000001,MW
+temperature_hot,2050,cap_inv,"['HEZakucac', 2050]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_hot,2050,cap_inv,"['HESenj', 2050]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_hot,2050,cap_inv,"['HEDubrovnik_HR', 2050]",30.0,0.0,0.0,30.0,0.0,MW
+temperature_hot,2050,cap_inv,"['RHEVelebit', 2050]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_hot,2050,cap_inv,"['RHEOrlovac', 2050]",80.0,0.0,0.0,80.0,0.0,MW
+temperature_hot,2050,cap_inv,"['RHEVinodol', 2050]",3.0,0.0,0.0,3.0,0.0,MW
+temperature_hot,2050,cap_inv,"['NEKrskoHR', 2050]",0.0,0.0,100.0,100.0,0.0,MW
+temperature_hot,2050,cap_inv,"['TERijeka', 2050]",0.7000000000000001,0.0,0.0,0.7000000000000001,3.5,MW
+temperature_hot,2050,cap_inv,"['HR_Wind_HR032', 2050]",156.0,0.0,0.0,156.0,0.0,MW
+temperature_hot,2050,cap_inv,"['HR_Wind_HR033', 2050]",283.65,0.0,0.0,283.65,0.0,MW
+temperature_hot,2050,cap_inv,"['HR_Wind_HR034', 2050]",295.1,0.0,0.0,295.1,0.0,MW
+temperature_hot,2050,cap_inv,"['HR_Wind_HR035', 2050]",299.6,0.0,0.0,299.6,0.0,MW
+temperature_hot,2050,cap_inv,"['HR_Wind_HR037', 2050]",20.7,0.0,0.0,20.7,0.0,MW
+temperature_hot,2050,cap_inv,"['hror', 2050]",150.0,0.0,0.0,150.0,0.0,MW
+temperature_hot,2050,cap_inv,"['HECombo', 2050]",60.0,0.0,0.0,60.0,0.0,MW
+temperature_hot,2050,cap_inv,"['HR_Solar_HR_COAST_SOUTH', 2050]",256.995537,0.0,120.62863076682143,377.6241677668214,0.0,MW
+temperature_hot,2050,cap_inv,"['HR_Solar_HR_NORTH_CENTRAL', 2050]",45.963105,0.0,0.0,45.963105,0.0,MW
+temperature_hot,2050,cap_inv,"['HR_Solar_HR_EAST', 2050]",159.541358,0.0,0.0,159.541358,0.0,MW
+temperature_hot,2050,cap_inv_FC,"['PEMFC_CHP', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2050,cap_inv_FC,"['SOFC_CHP', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2050,heat_pump_dh_cap,"['ATW_HP', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2050,heat_pump_dh_cap,"['geothermal_HP', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2050,heat_pump_dh_cap,"['electric_boiler', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2050,heat_pump_ind_cap,"['ATW_HP', 2050]",0.0,0.860362142105548,0.03942752296686558,0.8997896650724135,0.0,MW
+temperature_hot,2050,heat_pump_ind_cap,"['geothermal_HP', 2050]",0.0,0.06951218155463525,0.029804579964745302,0.09931676151938054,0.0,MW
+temperature_hot,2050,heat_pump_ind_cap,"['electric_boiler', 2050]",0.0,0.012850167052171678,0.0,0.012850167052171678,0.0,MW
+temperature_hot,2050,trad_boiler_ind_cap_inv,"['gas_boilers', 2050]",0.0,10840.011752301221,0.0,10840.011752301221,0.0,MW
+temperature_hot,2050,trad_boiler_ind_cap_inv,"['bio_boilers', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2050,trad_boiler_ind_cap_inv,"['oil_boilers', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2050,trad_boiler_dh_cap_inv,"['gas_boilers', 'TE-TOZagreb', 2050]",0,260.1472380782194,0.0,260.1472380782194,0.0,MW
+temperature_hot,2050,trad_boiler_dh_cap_inv,"['bio_boilers', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2050,trad_boiler_dh_cap_inv,"['oil_boilers', 'TE-TOZagreb', 2050]",0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2050,stat_sto_cap_inv,"['Liion_storage', 2050]",0.0,0.0,0.0,0.0,0.0,MWh
+temperature_hot,2050,h2_sto_max_cap,"['H2_storage_tank', 2050]",10.0,0.0,0.0,10.0,0.0,MWh
+temperature_hot,2050,h2_electrolysis_max_cap,"['PEM_elec', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2050,h2_electrolysis_max_cap,"['SOEC_elec', 2050]",0.0,0.0,0.0,0.0,0.0,MW
+temperature_hot,2050,h2_electrolysis_max_cap,"['Alkaline_EC', 2050]",0.0,0.0,0.0,0.0,0.0,MW

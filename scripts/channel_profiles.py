@@ -1,4 +1,4 @@
-"""Frozen single-channel sensitivity profiles for the full multisector model."""
+"""Stationary single-channel profiles for the V6 multisector experiment."""
 import hashlib
 import json
 import numpy as np
@@ -17,17 +17,10 @@ def channel_cases(root, year):
     if year not in YEARS:
         raise ValueError('Choose a five-year anchor from 2020 through 2050')
     ensemble = accepted_array(root)
-    records = pd.read_csv(root/'results/channel_investments/scenario_inputs.csv')
+    records = pd.read_csv(root/'results/channel_sensitivity/scenario_inputs.csv')
     cases = {}
     for case, members in DONORS.items():
         profile = np.column_stack([ensemble[m, :, c] for c, m in enumerate(members)])
-        if year > 2020:
-            fraction = min((year - 2020) / (2050 - 2020), 1.)
-            original = profile
-            profile = original.copy()
-            profile[:, 0] = np.clip(original[:, 0]*(1.+fraction*(1.03-1.)), 0, 1)
-            profile[:, 1] = np.clip(original[:, 1]*(1.+fraction*(.92-1.)), 0, 1)
-            profile[:, 2] = original[:, 2]+fraction*1.5
         expected = records[(records['case'] == case) & (records.year == year)]
         if len(expected) != 1 or hashlib.sha256(profile.tobytes()).hexdigest() != expected.iloc[0].profile_sha256:
             raise ValueError(f'Channel input identity differs: {case}, {year}')
@@ -57,7 +50,10 @@ def verify_selection(root):
     selected = (*outer_members(means[:, 0]), *outer_members(means[:, 1]), *outer_members(thermal))
     if selected != (2, 28, 20, 72, 41, 48):
         raise ValueError('Frozen channel donors differ from the recorded selection')
-    design = json.loads((root/'provenance/channel_investments/design.json').read_text())
+    design = json.loads((root/'provenance/channel_sensitivity/design.json').read_text())
+    if (design['solar_factor_2050'], design['wind_factor_2050'],
+            design['temperature_offset_2050_C']) != (1., 1., 0.):
+        raise ValueError('Stationary-weather design contains a climate trend')
     recorded = {r['id']: (r['solar_member'], r['wind_member'], r['temperature_member']) for r in design['cases']}
     if recorded != DONORS:
         raise ValueError('Channel design metadata differs')

@@ -1,4 +1,4 @@
-"""Verify and summarize the archived single-channel multisector results."""
+"""Verify and summarize the stationary-weather V6 multisector results."""
 from pathlib import Path
 import argparse
 import json
@@ -22,7 +22,7 @@ def require(condition, message):
 
 
 def tables(root):
-    folder = root/'results/channel_investments'
+    folder = root/'results/channel_sensitivity'
     return {name: pd.read_csv(folder/(name+'.csv')) for name in (
         'scenario_inputs', 'objective_comparison', 'objective_components',
         'investments_by_technology', 'installed_stock', 'channel_comparison',
@@ -46,11 +46,6 @@ def verify_results(root=ROOT):
     for row in objective.itertuples():
         require(json.loads(row.window_years) == ([row.year, row.year+5] if row.year < 2050 else [2050]),
                 'Native window definition differs')
-    previous = pd.read_csv(root/'results/planning_objectives.csv')
-    previous = previous[(previous.configuration == 'multisector') & (previous['case'] == 'avg')].set_index('year')
-    np.testing.assert_array_equal(reference.objective, previous.loc[reference.index, 'objective'])
-    require((reference.source_sha256 == previous.loc[reference.index, 'source_sha256']).all(),
-            'Reused Average source identities differ')
     components = data['objective_components']
     totals = components[components.active_in_objective == 1].groupby(['case', 'window_start']).value.sum()
     expected = objective.set_index(['case', 'year']).objective.reindex(totals.index)
@@ -84,18 +79,27 @@ def verify_results(root=ROOT):
     require(len(stock) == 2009, 'Stock record dimensions differ')
     np.testing.assert_allclose(stock.installed_native_capacity,
         stock.remaining_original+stock.inherited_new+stock.new_addition, rtol=0, atol=1e-6)
-    evidence = root/'provenance/channel_investments'
+    evidence = root/'provenance/channel_sensitivity'
     integrity = json.loads((evidence/'final_integrity.json').read_text())
     require(integrity['all_passed'] and integrity['planning_windows'] == 49 and
-        integrity['new_planning_windows'] == 42 and integrity['reused_windows'] == 7 and
+        integrity['new_planning_windows'] == 49 and integrity['reused_windows'] == 0 and
         integrity['optimal'] == 49 and integrity['new_historical_stress_tests'] == 0,
         'Completed channel integrity differs')
-    require(len(integrity['proofs']) == 49 and sum(r['reused'] for r in integrity['proofs']) == 7,
-            'Average reuse proof count differs')
-    reuse = json.loads((evidence/'reference_decision.json').read_text())
-    require(reuse['reuse'] and len(reuse['audits']) == 7 and all(
-        r['reuse_proved'] and r['input_and_state_equal'] and not r['new_solve_started']
-        for r in reuse['audits']), 'Average reuse input/state proof failed')
+    require(len(integrity['proofs']) == 49 and not any(r['reused'] for r in integrity['proofs'])
+            and {(r['case'], r['year']) for r in integrity['proofs']} == keys,
+            'Fresh-window proof identities differ')
+    completion = json.loads((evidence/'completion_audit.json').read_text())
+    require(completion['passed'] and completion['windows_checked'] == 49 and
+            completion['stationary_weather_hashes_verified'] and
+            completion['unchanged_channels_verified'] and
+            completion['native_equations_unchanged'] and
+            completion['own_complete_state_handoffs_verified'], 'Completion audit failed')
+    checks = completion['checks']
+    require(len(checks) == 49 and {(r['case'], r['year']) for r in checks} == keys and
+            all(r['status'] == 2 and r['state_handoff_verified'] and
+                r['constraint_violation'] <= 1e-7 and r['bound_violation'] <= 1e-7 and
+                abs(r['ledger_gap']) < .01 and abs(r['component_gap']) < .01 for r in checks),
+            'Fresh solution or complete-state handoff failed')
     audit = json.loads((evidence/'post_audit.json').read_text())
     for name, size in [('stock_checks', 2009), ('emission_checks', 273), ('balance_checks', 49)]:
         require(len(audit[name]) == size and all(r['passed'] for r in audit[name]), name+' failed')
@@ -106,6 +110,8 @@ def verify_results(root=ROOT):
     inputs = data['scenario_inputs']
     require(len(inputs) == 49 and set(zip(inputs['case'], inputs.year)) == keys,
             'Channel input table dimensions differ')
+    require((inputs.groupby('case').profile_sha256.nunique() == 1).all(),
+            'Weather profile changes across planning anchors')
     for year in YEARS:
         profiles = channel_cases(root, year)
         for case, profile in profiles.items():
@@ -119,7 +125,8 @@ def verify_results(root=ROOT):
             changed = [c for c in range(3) if not np.array_equal(profile[:, c], profiles['average'][:, c])]
             expected_changed = [] if case == 'average' else [0 if case.startswith('solar') else 1 if case.startswith('wind') else 2]
             require(changed == expected_changed, 'An unchanged channel differs')
-    return {'planning_windows': 49, 'new_windows': 42, 'reused_windows': 7,
+    return {'planning_windows': 49, 'new_windows': 49, 'reused_windows': 0,
+            'weather': 'stationary', 'complete_state_handoffs': 49,
             'stock_checks': 2009, 'emission_checks': 273, 'balance_checks': 49,
             'input_profile_hashes': 49, 'new_operational_tests': 0}
 
