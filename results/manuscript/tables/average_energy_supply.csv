@@ -1,0 +1,64 @@
+year,scope,technology,TWh
+2020,Electricity,Hydro,2.1756281274346647
+2020,Electricity,Imports,8.969370035306717
+2020,Electricity,Other domestic generation,4.5566906387192425
+2020,Electricity,Solar PV,0.44689799691834287
+2020,Electricity,Wind,2.2627389656648433
+2020,Heat,District heat and heat pumps,1.285399434672698
+2020,Heat,Individual biomass boiler,19.752873626540968
+2020,Heat,Individual gas boiler,4.89664586764961
+2020,Heat,Individual oil boiler,0.008719647062520625
+2025,Electricity,Hydro,2.1756281274346674
+2025,Electricity,Imports,10.65093116185123
+2025,Electricity,Other domestic generation,3.804778843098961
+2025,Electricity,Solar PV,0.44689799691834287
+2025,Electricity,Wind,2.2627389656648433
+2025,Heat,District heat and heat pumps,1.242384385966235
+2025,Heat,Individual biomass boiler,13.705184867784606
+2025,Heat,Individual gas boiler,10.185046013878269
+2025,Heat,Individual oil boiler,0.011939378225371357
+2030,Electricity,Hydro,2.175628127434667
+2030,Electricity,Imports,11.616644856687167
+2030,Electricity,Other domestic generation,3.788803593778321
+2030,Electricity,Solar PV,0.44689799691834287
+2030,Electricity,Wind,2.2627389656648433
+2030,Heat,District heat and heat pumps,1.1056303138609385
+2030,Heat,Individual biomass boiler,7.622447292834216
+2030,Heat,Individual gas boiler,15.614854940066419
+2030,Heat,Individual oil boiler,0.0025381689137024283
+2035,Electricity,Hydro,2.17562812743466
+2035,Electricity,Imports,17.917483813327497
+2035,Electricity,Other domestic generation,0.7103931248158617
+2035,Electricity,Solar PV,0.44689799691834287
+2035,Electricity,Wind,2.2627389656648433
+2035,Heat,District heat and heat pumps,0.8865113258554143
+2035,Heat,Individual biomass boiler,0.0
+2035,Heat,Individual gas boiler,21.96083552293095
+2035,Heat,Individual oil boiler,0.0
+2040,Electricity,Hydro,2.175628127434663
+2040,Electricity,Imports,21.620717997091113
+2040,Electricity,Other domestic generation,0.2767166819064924
+2040,Electricity,Solar PV,0.44689799691834287
+2040,Electricity,Wind,2.2627389656648433
+2040,Heat,District heat and heat pumps,0.8290126902684041
+2040,Heat,Individual biomass boiler,0.0
+2040,Heat,Individual gas boiler,20.520210291770542
+2040,Heat,Individual oil boiler,0.0
+2045,Electricity,Hydro,2.175628127434665
+2045,Electricity,Imports,24.9213841458006
+2045,Electricity,Other domestic generation,0.2568986985563705
+2045,Electricity,Solar PV,0.44689799691834287
+2045,Electricity,Wind,2.2627389656648433
+2045,Heat,District heat and heat pumps,0.7929594586662496
+2045,Heat,Individual biomass boiler,0.0
+2045,Heat,Individual gas boiler,19.614667768154504
+2045,Heat,Individual oil boiler,0.0
+2050,Electricity,Hydro,2.1756281274346603
+2050,Electricity,Imports,27.23171985452174
+2050,Electricity,Other domestic generation,1.1451880931979534
+2050,Electricity,Solar PV,0.5678385815972296
+2050,Electricity,Wind,2.2627389656648433
+2050,Heat,District heat and heat pumps,0.7569428626302277
+2050,Heat,Individual biomass boiler,0.0
+2050,Heat,Individual gas boiler,18.709088609030292
+2050,Heat,Individual oil boiler,0.0

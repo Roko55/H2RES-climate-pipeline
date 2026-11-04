@@ -41,28 +41,35 @@ The selected case uses one unique hourly profile hash across 2020-2050: solar an
 wind factors 1.0, temperature offset 0.0 C. Prices, policies, asset aging and the
 path's own inherited stock can still change between planning anchors.
 
-The earlier trend experiment remains separately reproducible using
-`python analysis/archive_trend_results.py --output exports/trend_summary` and its
-[archived protocol](TREND_EXPERIMENT.md). Its original v0.5.1 tag is preserved.
+## Manuscript correspondence
 
-The seven stationary-weather paths have no new historical operational tests.
-The existing 45 tests retain their original electricity portfolios. Publication checks invoke no solver;
-reproducing energy optimizations requires the original H2RES model, inputs and
-licensed solver. Raw weather, asset databases and solver licence files remain
+`provenance/manuscript/scope.json` identifies the exact V6 manuscript, all 15
+embedded result images and the result cohorts: 49 new planning windows and 45
+separate operating cases. Each included result image is byte-identical to its
+V6 counterpart. The three reference labels in `profile_metrics.csv` form six
+mean-profile comparisons; both temperature references are the same hourly mean.
+The fair-CRPS table uses the same complete reporting calendar and 36 historical
+versus 100 generated members. Its percentage changes are recalculated by the
+portable verifier.
+
+The current publication presents the V6 result cohorts. Earlier publication
+snapshots remain available under their original tags, including v0.5.1 and v0.6.0.
+Original scientific arrays, fitted models, the 49 planning source tables and the
+45 operational records retain their identities. Current summaries are regenerated
+from those records. Raw weather, asset databases and solver licence files remain
 excluded; [reuse rights](../RIGHTS.md) are unchanged.
 
-## Earlier analyses and profile models
+The operating checks validate their three fixed electricity portfolios. They do
+not validate all seven multisector investment paths. The publication audit checks
+archived records without invoking a solver. Full optimization reproduction requires
+the H2RES model, original inputs and licensed optimizer.
 
-`provenance/final/final_integrity.json` covers the earlier 63 planning and 45
-operational cases. Its `publication_ready:false` field records manuscript and
-price-year interpretation conditions. The original preparation status fields
-precede execution; completed integrity records establish run completion.
-Source path normalization is recorded in `provenance/final/source_records.json`.
+## Profile model provenance
 
 Training/normalization uses 1980-2015; validation is 2016-2019. Accepted solar uses
 inner 1980-2011 fitting and 2012-2015 tree-count tuning, followed by refitting on
 the full training period. Its seven quantiles and postprocessing are frozen in
-`models/default/solar/runtime_recipe.json`. The Temperature entry in the earlier
+`models/default/solar/runtime_recipe.json`. The Temperature entry in the source
 calibration record supplies the accepted temperature settings; solar uses its own
 later recipe. Reporting 2020-2024 had previously been inspected and is retrospective.
 Independent-channel generation and designed sensitivity selection determine the

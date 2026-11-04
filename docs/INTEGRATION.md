@@ -29,7 +29,7 @@ The command-line workflow still runs from this repository checkout.
 
 For the individual-channel multisector experiments, use
 `select-final --design channel --year 2030`. It exports all seven named cases
-with complete Cold/Hot temperature chronologies. Each case retains the same
+with complete Cold/Warm temperature chronologies. Each case retains the same
 8760-hour weather profile at every planning anchor, without additional trends. Apply the existing multisector
 thermal adapter with `scale_annual_totals=False`. Each path inherits its own
 realized stock after the common 2020 start. See [CHANNEL_RESULTS.md](CHANNEL_RESULTS.md).
@@ -39,23 +39,14 @@ It returns new heat/cooling/COP dictionaries; callers supply temperature baselin
 unit lists and complete annual dictionaries. See `examples/demo.py` for a complete
 call. It preserves annual thermal demand, changing hourly shape and COP.
 
-The combined-resource multisector study uses `select-final --design multisector` and holds
-Average temperature, heat/cooling and COP common across Low/Average/High at each
-planning anchor. All paths share the initial 2020 stock; subsequent investment
-histories belong to their respective paths.
+The separate 2030 electricity portfolios use `select-final --design electricity`.
+Their 45 operating checks retain the fixed capacities and the historical weather
+years. They are separate from the seven multisector planning paths.
 
-The separate electricity and thermal applications use the electricity/newshare
-selector. Thermal-isolation cases hold the same Average renewable inputs while changing
-temperature with training-derived annual-temperature P10/P50/P90 offsets.
-`provenance/executed_final/climate_runtime_inputs.py` and
-`climate_newshare_adapter.py` preserve those executed interfaces and key schemas.
-They depend on the original solver project and are provenance, not standalone entry
-points. The applications retain their respective thermal adapters and input schemas.
-
-For explicit-baseline access to its numerical methods, the installed
+For explicit-baseline access to the prepared-demand utilities, the installed
 `h2res_climate.prepared_thermal` module exposes
-`_reshape_prepared_temperature_demand` and `_temperature_sensitive_cop` unchanged
-from that runtime. Demand uses 18/22 C drivers, bounded and smoothed multipliers,
+`_reshape_prepared_temperature_demand` and `_temperature_sensitive_cop`.
+Demand uses 18/22 C drivers, bounded and smoothed multipliers,
 annual-total restoration and optional peak caps. COP scales the existing baseline
 by a Carnot-ratio response, restores its arithmetic mean **before** clipping to
 1.2..5.5; clipping can alter the final mean. The caller supplies unit groups,

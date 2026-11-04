@@ -16,30 +16,27 @@ The channel NPZ contains `average`, `solar_low`, `solar_high`, `wind_low`,
 All seven cases are checked against archived profile hashes for the requested anchor.
 For this stationary-weather design, each case has identical hourly values at every
 anchor from 2020 through 2050 (solar/wind multipliers 1.0/1.0, temperature offset 0 C).
-The other two experiment designs below retain their original scaling conventions.
-The analysis command reproduces summary CSVs and PNG/PDF figures from the
-delivered result tables. See [CHANNEL_RESULTS.md](CHANNEL_RESULTS.md) for units
+The analysis command reproduces the manuscript summary CSVs, verifies the
+original figure identities and draws the six mean-profile MAE comparisons. See [CHANNEL_RESULTS.md](CHANNEL_RESULTS.md) for units
 and experiment definitions.
 
-## Combined-resource and separate-application experiments
+## Accepted ensemble and operating-portfolio inputs
 
 ```bash
 python pipeline.py replay --output exports/accepted.npy
-python pipeline.py select-final --design multisector --year 2030 --output exports/multisector_2030.npz
 python pipeline.py select-final --design electricity --year 2030 --output exports/electricity_2030.npz
 ```
 
-The array is included directly in `profiles/accepted.npy`; `replay`
-regenerates its solar channel. For these two designs, each selected NPZ contains `low`,
-`avg`, `high` arrays of shape `[8760,3]`. Multisector selection is checked against
-all three archived input hashes at the requested anchor (2020, 2025, ..., 2050).
-The electricity selector uses float64 and planning-year scaling before clustering;
-the multisector selector retains the executed float32 path and scaling order.
+`replay` regenerates the accepted solar channel and retains stored wind/temperature.
+The `electricity` design exports `low`, `avg`, `high` profiles underlying the
+separate fixed 2030 operating portfolios. It retains their original combined-yield
+selector and scaling arithmetic. This design accepts only 2030. It is distinct
+from the seven stationary-weather `channel` cases.
 
 ## Your own H2RES mapping
 
 ```bash
-python pipeline.py export-units --scenarios exports/multisector_2030.npz --scenario avg --mapping-dir data/SC --country HR --wind-resolution nuts3 --exclude-hror --output exports/units_2030.npz
+python pipeline.py export-units --scenarios exports/channel_cases_2030.npz --scenario average --mapping-dir data/SC --country HR --wind-resolution nuts3 --exclude-hror --output exports/units_2030.npz
 ```
 
 Replace the mapping folder and country with your own declared inputs. Supply the

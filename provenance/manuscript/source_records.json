@@ -1,0 +1,37 @@
+{
+  "profile_mean_MAE": {
+    "source": "v0.6.0:results/profile_metrics.csv",
+    "source_sha256": "21d873177fb1906843aba1ea04d00f1460a5edbc99913b14ace4c8d4f6d09954",
+    "published_as": "results/profile_metrics.csv",
+    "transformation": "Keep fixed_H2RES_profile, ensemble_mean and training_calendar_mean; retain channel, method, mask, n_hours and original MAE values"
+  },
+  "fair_CRPS": {
+    "source": "V6 verified profile_checks.csv",
+    "source_sha256": "5d3ffd53f615677af9a52c8081458642a59f4272d2fc08639476450c84574ed0",
+    "published_as": "results/manuscript/fair_crps.csv",
+    "transformation": "Keep channel, reporting hours, ensemble sizes and the original historical/generated fair-CRPS scores and percentage change"
+  },
+  "operational_checks": {
+    "source": "v0.6.0:results/operational_checks.csv",
+    "source_sha256": "482255b9215b377702f93d34899cacab8d7657c179dc07b2a1d87d48b665ef0e",
+    "published_as": "results/operational_checks.csv",
+    "transformation": "None"
+  },
+  "planning": {
+    "source": "channel_sensitivity_20261102",
+    "source_records": "provenance/channel_sensitivity/source_records.json",
+    "transformation": "Original numerical tables retained"
+  },
+  "figures": {
+    "source": "V6 embedded result images",
+    "source_records": "provenance/manuscript/scope.json",
+    "transformation": "Exact image bytes retained"
+  },
+  "summaries": {
+    "source": "Published planning, operating and profile-score tables",
+    "implementation": "analysis/manuscript_results.py",
+    "transformation": "Unit conversion, grouping and accounting as specified in V6; no new experiments"
+  },
+  "weather_corpus_sha256": "b700263a2868b20cc8f7fe95e0a7d22c48ea31c89cedbc0889a55ca870972d8a",
+  "ensemble_sha256": "d86a855166c24d699d511010184db12d0baf1551f83254b41f661c602d7ae728"
+}

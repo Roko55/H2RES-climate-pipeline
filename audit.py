@@ -42,19 +42,6 @@ def main():
     solar_context(ROOT/'models/default/solar')
     require(metadata['ensemble_sha256'] == ENSEMBLE_SHA and
             not metadata['reporting_used_for_selection'], 'Invalid final cohort identity or selection boundary')
-    final = json.loads((ROOT/'provenance/final/final_integrity.json').read_text())
-    require(final['all_required_checks_passed'] and final['planning_windows'] == 63
-            and final['operational_cases'] == 45 and final['verified_infeasible'] == 0
-            and final['input_ensemble_sha256'] == ENSEMBLE_SHA, 'Final cohort integrity failed')
-    mapping = json.loads((ROOT/'provenance/final/mapping_max_error_audit.json').read_text())
-    require(mapping['passed'] and len(mapping['checks']) == 126 and
-            all(row['passed'] and row['max_abs_error'] <= 1e-12 for row in mapping['checks']),
-            'Archived spatial aggregate conservation failed')
-    plan = pd.read_csv(ROOT/'results/planning_objectives.csv')
-    require(len(plan) == 63 and not plan.duplicated(['configuration', 'case', 'year']).any(),
-            'Planning table dimensions differ')
-    require(np.isfinite(plan.objective).all() and (plan.constraint_violation <= 1e-7).all()
-            and (plan.bound_violation <= 1e-7).all(), 'Planning solution quality failed')
     operations = pd.read_csv(ROOT/'results/operational_checks.csv')
     require(len(operations) == 45 and (operations.solver_status == 2).all()
             and (operations.status == 'verified_optimal').all()
@@ -64,15 +51,25 @@ def main():
     require(counts == {0.: 15, .5: 15, 1.: 15}, 'Grid stress dimensions differ')
     require((operations.constraint_violation <= 1e-7).all()
             and (operations.bound_violation <= 1e-7).all(), 'Operational solution quality failed')
+    require(operations.hours.eq(8760).all() and operations.new_investment_max_abs.eq(0).all()
+            and operations.storage_terminal_cycle_active.all()
+            and set(operations.portfolio) == {'low', 'avg', 'high'}
+            and operations.groupby('portfolio').portfolio_sha256.nunique().eq(1).all(),
+            'Fixed full-year portfolio scope differs')
+    zero_exchange = operations[operations.availability_fraction == 0]
+    require((zero_exchange.HR_import_MWh.abs() <= 1e-6).all()
+            and (zero_exchange.HR_export_MWh.abs() <= 1e-6).all(), 'Zero-exchange case contains trade')
     metrics = pd.read_csv(ROOT/'results/profile_metrics.csv')
     require((metrics['mask'] == 'complete_reporting').all() and (metrics.n_hours == 43800).all()
             and not metrics.duplicated(['channel', 'method']).any(), 'Mixed reporting masks')
     from analysis.channel_results import verify_results
+    from analysis.manuscript_results import verify_manuscript
     channels = verify_results(ROOT)
     print(json.dumps({'status': 'passed', 'files_verified': len(manifest['files']),
         'native_models_verified': 10, 'ensemble_sha256': ENSEMBLE_SHA,
-        'previous_planning_windows': len(plan), 'previous_operational_cases': len(operations),
+        'fixed_portfolio_operational_cases': len(operations),
         'single_channel_planning': channels,
+        'manuscript': verify_manuscript(ROOT),
         'scope': 'Artifact identities, solar runtime assets and archived solver evidence; optimizer not rerun.'}, indent=2))
 
 

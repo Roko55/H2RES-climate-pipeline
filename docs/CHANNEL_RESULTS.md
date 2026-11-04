@@ -18,14 +18,14 @@ Donors are zero-based member indices in the included 100-member ensemble:
 | Wind Low | 65 | 20 | 65 |
 | Wind High | 65 | 72 | 65 |
 | Cold | 65 | 65 | 41 |
-| Hot | 65 | 65 | 48 |
+| Warm | 65 | 65 | 48 |
 
 Solar and wind donors are the members nearest the outer-cluster means of separate
-three-cluster K-means fits to annual CF (seed 42, n_init 10). Cold/Hot use the outer
+three-cluster K-means fits to annual CF (seed 42, n_init 10). Cold/Warm use the outer
 thermal-index cluster representatives: standardized cooling degree hours above
 22 C minus standardized heating degree hours below 18 C. Average member 65 belongs
 to each central cluster and is kept as the common reference. Selection uses the
-generated ensemble before the energy runs. Full Cold/Hot chronologies are retained.
+generated ensemble before the energy runs. Full Cold/Warm chronologies are retained.
 
 ## Stationary weather inputs
 
@@ -36,7 +36,7 @@ per case across the seven anchors. Spatial mapping checks cover both resource
 channels after mapping, including channels held fixed.
 
 At 2020, Solar Low/Average/High mean CF is 0.105242/0.110304/0.114586;
-Wind Low/Average/High is 0.226350/0.244826/0.261186. Cold/Average/Hot mean temperature
+Wind Low/Average/High is 0.226350/0.244826/0.261186. Cold/Average/Warm mean temperature
 is 11.3931/12.3375/12.8434 C. The complete input ranges and degree hours are retained
 in the tables. Effects across channels depend on these different selected ranges.
 
@@ -77,54 +77,32 @@ All paths below are under [`results/channel_sensitivity`](../results/channel_sen
 | `channel_comparison.csv` | Asset-level capacity and investment-contribution differences from Average |
 | `system_outcomes.csv` | Native annual generation, heat, imports, CEEP and emissions by saved family/key |
 | `thermal_inputs.csv` | Annual demand sums and hourly mean/min/max, or dimensionless COP statistics |
-| `summary/objective_summary.csv` | Window comparison joined to the actual channel input ranges |
-| `summary/investment_summary.csv` | Realized additions by family, anchor and physical unit |
-| `summary/capacity_changes.csv` | Sum of addition differences, with MW and MWh kept separate |
 
 Demand sums are MWh over the hourly year. COP mean/min/max are dimensionless;
 the COP `sum` column is an arithmetic sum of hourly ratios. `key_json`
 preserves the native asset/system/year indices. The stored `source` paths identify
 the original result locations, made relative for portability.
 
-## Results and figures
+## Reported results
+
+V6 Figures 7-12 report window cost differences and their active components.
+Figures 13-15 report realized annual costs, new capacity, supply and direct
+emissions for Average. The exact images and section mapping are in the
+[V6 results index](RESEARCH_RESULTS.md).
 
 Solar Low has a higher objective than Average at every anchor. Wind Low is higher
-through 2040, then lower in 2045/2050. Cold is lower in 2020/2025 and higher later.
-The differences are conditional on the stated input ranges and each path's
-subsequent stock history. Input ranges are listed in `scenario_inputs.csv`.
-
-![Objective changes](../results/channel_sensitivity/figures/objective_changes.png)
-
-Objective panels use separate vertical scales. Percentage is
-`100 * (case objective - Average objective) / abs(Average objective)`.
-
-![Capacity changes in MW](../results/channel_sensitivity/figures/investment_changes_MW.png)
-
-The MW plot sums realized additions across the listed equipment families.
-Family-level additions are in `summary/investment_summary.csv`; resulting
-installed capacities are in `installed_stock.csv`.
-
-![Storage energy changes in MWh](../results/channel_sensitivity/figures/investment_changes_MWh.png)
-
-The MWh plot sums stationary-battery and hydrogen-store additions. PNG and vector
-PDF versions are provided. Storage-addition differences are zero in these runs.
-Capacity panels also use independent vertical scales. Reproduce all summaries and plots with:
+through 2040, then lower in the windows starting in 2045 and 2050. Cold is lower
+in 2020/2025 and higher later. Each result includes that path's inherited stock.
+Window objectives overlap and are not added as a transition-cost total.
 
 ```bash
-python analysis/channel_results.py --output exports/channel_summary
+python analysis/channel_results.py --output exports/v6_tables
 ```
 
-The command verifies all 49 profile hashes, donor selection, stationary weather,
-49 fresh solution and complete-state handoff records, numerical
-tolerances, objective decomposition and realized investment differences. It also
-checks the archived 2009 stock, 273 emission and 49 balance verification records.
-No new historical operational tests were run for these seven paths. The earlier
-45 operational cases retain their original electricity portfolios and weather years.
+This entry point runs the manuscript table reproduction. It verifies 49 profile
+hashes, donor selection, stationary weather, fresh solution records, complete
+state handoffs, numerical tolerances and objective/investment reconciliation,
+plus the archived 2009 stock, 273 emission and 49 balance checks.
+The 45 operating tests retain their separate fixed electricity portfolios.
 
-## Earlier experiment
-
-The previous trend-based experiment remains under `results/channel_investments/`
-and `provenance/channel_investments/`, with its own [protocol](TREND_EXPERIMENT.md).
-Its original reproducible release is v0.5.1. These results are separate from the
-stationary-weather V6 tables above. The earlier 63-window combined-resource and
-separate-application cohort also retains its original inputs and labels.
+The executable case ID `temperature_hot` denotes the manuscript's Warm case.

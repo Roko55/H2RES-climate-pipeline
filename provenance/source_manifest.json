@@ -16,7 +16,7 @@
     "source_role": "Delivered generation or integration implementation"
   },
   "scripts/final_selection.py": {
-    "sha256": "23cb770e1023c42265c5536212e9ac3d9e5df26d36203238dcd8c3640540b61d",
+    "sha256": "ac26926b2c075d77dc6c6b09f34864e4d05dae65057347fdb6f662c27de103b1",
     "source_role": "Delivered generation or integration implementation"
   },
   "scripts/prepared_thermal.py": {
@@ -54,9 +54,5 @@
   "scripts/xgboost_climate_model.py": {
     "sha256": "a0e5c054f18afe1f8eaca36c11e37ef93d4b8d83d715269ca4779795dd44dc99",
     "source_role": "Delivered generation or integration implementation"
-  },
-  "scripts/trend_channel_profiles.py": {
-    "sha256": "e2b09160f3bf0a4ce45e726ebb5cbbb8f822389d6747caf998b2ce3ec3ed3416",
-    "source_role": "Archived v0.5.1 trend-based profile selector"
   }
 }

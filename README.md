@@ -46,7 +46,7 @@ The included ensemble is `profiles/accepted.npy`, shape `[100,8760,3]`, float32.
 and temperature channels. Full generation additionally needs the original corpus,
 including the wind resampling pool; see [Usage](docs/USAGE.md).
 
-The `channel` design exports Average, Solar Low/High, Wind Low/High and Cold/Hot.
+The `channel` design exports Average, Solar Low/High, Wind Low/High and Cold/Warm.
 Each case changes one complete hourly channel from the same Average profile.
 The multisector heat/cooling/COP adapter then applies the temperature chronology.
 In the archived multisector runs, all seven paths start from common 2020 stock
@@ -60,37 +60,45 @@ The H2RES model, solver licence and full input database are supplied separately.
 
 ## Results
 
-| Analysis | Scope |
-|---|---|
-| [Individual solar, wind and temperature](docs/CHANNEL_RESULTS.md) | Stationary-weather V6 multisector sensitivities; 49 newly solved optimal windows |
-| [Combined resource and separate applications](docs/RESEARCH_RESULTS.md) | Earlier 63 planning windows and 45 operational tests on their original electricity portfolios |
-| [Climate profile diagnostics](results/profile_metrics.csv) | Complete 43800 reporting hours, 2020-2024 |
+The current result package corresponds to V6 sections 4.1-4.6:
 
-Single-channel objective and investment results can be summarized without a solver:
+| V6 section | Contents |
+|---|---|
+| 4.1 | Mean-profile MAE against both fixed and historical references; fair CRPS against the historical ensemble |
+| 4.2-4.4 | Solar, wind and temperature in seven stationary-weather multisector paths; 49 newly solved planning windows |
+| 4.5 | Average-path costs, new capacity, energy supply and direct domestic emissions |
+| 4.6 | 45 full-year operating checks of three separate fixed 2030 electricity portfolios |
+
+[Results and figure index](docs/RESEARCH_RESULTS.md) maps every reported result to
+the manuscript. Included result figures are byte-identical to those in the V6
+manuscript identified in `provenance/manuscript/scope.json`.
 
 ```bash
-python analysis/channel_results.py --output exports/channel_summary
+python analysis/manuscript_results.py --output exports/v6_tables
 ```
 
-![Single-channel objective differences](results/channel_sensitivity/figures/objective_changes.png)
+The command verifies experiment and figure identities, regenerates the supporting
+tables and plots the six mean-profile MAE comparisons. Raw weather is needed to
+recompute weather scores or redraw the historical distribution and week plots.
 
-Each panel shows `100 * (case objective - Average objective) / abs(Average objective)`
-at each planning anchor. Vertical scales differ. Each objective covers its native
-planning window; the summary reports windows separately.
+![Mean-profile MAE comparisons](results/manuscript/figures/figure_05.png)
+
+Both temperature markers show the same comparison: the fixed temperature
+reference is the training-period hourly mean. These are two reference labels
+for the same score.
 
 ## Reproducibility
 
 [Verification](docs/VALIDATION.md) covers model and result identities, profile
 selection, objective reconciliation, stock, emissions and balance records.
 Training uses 1980-2015 and validation 2016-2019. Reporting years 2020-2024 had
-previously been inspected and are retrospective. Low/High and Cold/Hot identify
+previously been inspected and are retrospective. Low/High and Cold/Warm identify
 designed sensitivities. Cluster fractions describe membership in the generated ensemble.
 
 The [autoencoder study](https://github.com/Roko55/H2RES-autoencoder/tree/v0.1.0)
 retains its own model and historical comparison corpus.
 
-For a fixed reference, cite [version 0.6.0](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.6.0).
-The earlier trend-based experiment remains separately documented in
-[the experiment archive](docs/TREND_EXPERIMENT.md).
+For a fixed reference, cite [version 0.7.0](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.7.0).
+Earlier publication snapshots remain available through their original version tags.
 Raw weather and full solver inputs are excluded. Reuse rights are described in
 [RIGHTS.md](RIGHTS.md).

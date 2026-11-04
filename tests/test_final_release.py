@@ -1,6 +1,5 @@
 """Checks tied to the actual final inputs, rather than illustrative weather."""
 import contextlib
-import hashlib
 import io
 import unittest
 import numpy as np
@@ -13,12 +12,16 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class FinalReleaseTests(unittest.TestCase):
-    def test_all_final_multisector_input_hashes_and_common_temperature(self):
-        for year in range(2020, 2051, 5):
-            with contextlib.redirect_stdout(io.StringIO()):
-                cases = select_cases(ROOT, 'multisector', year)
-            for case in ('low', 'high'):
-                np.testing.assert_array_equal(cases[case][:, 2], cases['avg'][:, 2])
+    def test_v6_electricity_portfolio_input_scope(self):
+        with contextlib.redirect_stdout(io.StringIO()):
+            cases = select_cases(ROOT, 'electricity', 2030)
+        self.assertEqual(set(cases), {'low', 'avg', 'high'})
+        for case in cases.values():
+            self.assertEqual(case.shape, (8760, 3))
+        with self.assertRaises(ValueError):
+            select_cases(ROOT, 'multisector', 2030)
+        with self.assertRaises(ValueError):
+            select_cases(ROOT, 'electricity', 2050)
 
     def test_saturated_spatial_mapping_preserves_aggregate(self):
         weights = np.array([.05, .25, .7])

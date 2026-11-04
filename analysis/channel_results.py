@@ -131,72 +131,10 @@ def verify_results(root=ROOT):
             'input_profile_hashes': 49, 'new_operational_tests': 0}
 
 
-def summaries(root=ROOT):
-    data = tables(root)
-    objective = data['objective_comparison'].drop(columns=['source', 'source_sha256'])
-    inputs = data['scenario_inputs'].drop(columns=['profile_sha256'])
-    outcomes = objective.merge(inputs, on=['case', 'year'], validate='one_to_one').sort_values(['case', 'year'])
-    inv = data['investments_by_technology']
-    inv = inv[inv.capacity_addition == 1]
-    capacity = inv.groupby(['case', 'decision_year', 'family', 'unit'], as_index=False).agg(
-        new_capacity=('value', 'sum'), native_objective_contribution=('objective_contribution', 'sum'))
-    capacity = capacity.rename(columns={'decision_year': 'year'})
-    average = capacity[capacity['case'] == 'average'].drop(columns='case')
-    capacity = capacity.merge(average, on=['year', 'family', 'unit'], suffixes=('', '_average'), validate='many_to_one')
-    capacity['new_capacity_delta_vs_average'] = capacity.new_capacity-capacity.new_capacity_average
-    totals = capacity.groupby(['case', 'year', 'unit'], as_index=False).new_capacity_delta_vs_average.sum()
-    return {'objective_summary.csv': outcomes, 'investment_summary.csv': capacity,
-            'capacity_changes.csv': totals}
-
-
-def plot(summaries, output):
-    import matplotlib
-    matplotlib.use('Agg')
-    import matplotlib.pyplot as plt
-    groups = [('Solar', 'solar_low', 'solar_high'), ('Wind', 'wind_low', 'wind_high'),
-              ('Temperature', 'temperature_cold', 'temperature_hot')]
-    for unit in ('MW', 'MWh', 'objective'):
-        fig, axes = plt.subplots(1, 3, figsize=(13.5, 4.4), constrained_layout=True)
-        for ax, (title, low, high) in zip(axes, groups):
-            for case, color, label in zip((low, high), ('#167D9A', '#D47A39'),
-                    ('Cold', 'Hot') if title == 'Temperature' else ('Low', 'High')):
-                if unit == 'objective':
-                    frame = summaries['objective_summary.csv'].query('case == @case').sort_values('year')
-                    y = frame.percent_vs_absolute_average
-                else:
-                    frame = summaries['capacity_changes.csv'].query('case == @case and unit == @unit').sort_values('year')
-                    y = frame.new_capacity_delta_vs_average
-                ax.plot(frame.year, y, marker='o', ms=4, lw=1.8, color=color, label=label)
-            ax.axhline(0, color='#555555', lw=.8)
-            ax.set(title=title, xlabel='Planning anchor', xticks=YEARS[::2])
-            ax.spines[['top', 'right']].set_visible(False)
-            ax.grid(axis='y', alpha=.18)
-            ax.legend(frameon=False)
-        ylabel = 'Window objective difference / |Average| (%)' if unit == 'objective' else (
-            'Realized storage additions minus Average (MWh)' if unit == 'MWh' else
-            'Sum of realized capacity additions minus Average (MW)')
-        axes[0].set_ylabel(ylabel)
-        name = 'objective_changes' if unit == 'objective' else 'investment_changes_'+unit
-        fig.savefig(output/(name+'.png'), dpi=180)
-        fig.savefig(output/(name+'.pdf'), metadata={'CreationDate': None, 'ModDate': None})
-        plt.close(fig)
-
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output', required=True, help='New directory under exports/')
-    args = parser.parse_args()
-    output = Path(args.output).resolve()
-    output.relative_to((ROOT/'exports').resolve())
-    require(not output.exists(), 'Choose a new output directory')
-    result = verify_results()
-    frames = summaries()
-    output.mkdir(parents=True)
-    for name, frame in frames.items():
-        frame.to_csv(output/name, index=False)
-    plot(frames, output)
-    (output/'verification.json').write_text(json.dumps(result, indent=2)+'\n')
-    print(json.dumps(result, indent=2))
+    from analysis.manuscript_results import main as reproduce
+    reproduce()
 
 
 if __name__ == '__main__':

@@ -230,7 +230,7 @@ def generate(args):
         "model_metadata_sha256": digest(Path(args.model_dir) / "metadata.json"),
         "output_sha256": digest(output), "data_years": years,
         "prediction_device": "cpu", "CPU_threads": 2,
-        "evaluation_scope": ("Retrospective fixed-period comparison; see provenance/model/preprocessing_audit.json"
+        "evaluation_scope": ("Retrospective fixed-period comparison; see provenance/manuscript/scope.json"
             if digest(args.data) == "9a21558378d6359f308e3b7b7a3068d053195fa9123792c1d8aa9ac177101022"
             else "User-supplied corpus; upstream calibration and external validation not audited")})
     print(f"Generated {len(values)} annual profiles: {output}")
@@ -461,8 +461,8 @@ def main(argv=None):
     frozen = commands.add_parser("replay", help="Reproduce the accepted cohort: regenerate solar and retain frozen wind/temperature")
     frozen.add_argument("--output", required=True)
     frozen.set_defaults(function=replay_release)
-    final_cases = commands.add_parser("select-final", help="Export the frozen channel, combined-resource or electricity sensitivity cases")
-    final_cases.add_argument("--design", required=True, choices=("multisector", "electricity", "channel"))
+    final_cases = commands.add_parser("select-final", help="Export the V6 single-channel profiles or fixed-portfolio electricity inputs")
+    final_cases.add_argument("--design", required=True, choices=("electricity", "channel"))
     final_cases.add_argument("--year", type=int, default=2020)
     final_cases.add_argument("--output", required=True)
     final_cases.set_defaults(function=select_release)

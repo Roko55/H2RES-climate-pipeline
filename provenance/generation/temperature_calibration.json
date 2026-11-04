@@ -1,0 +1,37 @@
+{
+  "source_sha256": "e8d2c76cd667d0a6a63bd89b8d71291287373106ae01a851d8a367dbc2a00a27",
+  "scope": "Temperature entry of the original validation calibration; solar uses its own frozen runtime recipe",
+  "selected_temperature": {
+    "channel": "Temperature",
+    "drift_alpha": 0.0,
+    "noise_multiplier": 1.0,
+    "bias": {
+      "kind": "offset",
+      "value": 1.3883848786353958,
+      "bounds": [
+        -29.372774378585085,
+        49.13479732313575
+      ]
+    },
+    "calendar_sd_ratio": 1.034921118450079,
+    "ramp95_ratio": 0.9562056172888017,
+    "annual_sd_ratio": 0.7266697961036968,
+    "mean_bias": -0.03547248927005775,
+    "coverage80": 0.7628424657534246,
+    "width80": 9.129196211094861,
+    "coverage95": 0.925,
+    "width95": 13.68690245183448,
+    "acf24": 0.9436094228850875,
+    "acf24_abs_error": 0.019063361786706645,
+    "score": 0.4106253701332908,
+    "accepted": true,
+    "acceptance_checks": {
+      "coverage95": true,
+      "coverage80": true,
+      "ramp95_ratio": true,
+      "calendar_sd_ratio": true,
+      "annual_sd_ratio": true,
+      "mean_bias": true
+    }
+  }
+}

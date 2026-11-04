@@ -8,6 +8,7 @@ from unittest.mock import patch
 import pandas as pd
 import numpy as np
 from analysis import channel_results as results
+from analysis.manuscript_results import summaries
 from scripts.channel_profiles import channel_cases
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -49,10 +50,11 @@ class ChannelResultTests(unittest.TestCase):
                 self.assertEqual(metadata['wind_factor_2050'], 1.)
                 self.assertEqual(metadata['temperature_offset_2050_C'], 0.)
 
-    def test_stationary_verifier_rejects_trend_experiment(self):
-        with patch.object(results, 'tables', return_value={name: pd.read_csv(
-                ROOT/'results/channel_investments'/(name+'.csv')) for name in results.tables(ROOT)}):
-            with self.assertRaises(ValueError):
+    def test_stationary_verifier_rejects_changing_yearly_hashes(self):
+        data = results.tables(ROOT)
+        data['scenario_inputs'].loc[1, 'profile_sha256'] = '0'*64
+        with patch.object(results, 'tables', return_value=data):
+            with self.assertRaisesRegex(ValueError, 'Weather profile changes'):
                 results.verify_results(ROOT)
 
     def test_provisional_investments_are_rejected(self):
@@ -63,8 +65,8 @@ class ChannelResultTests(unittest.TestCase):
                 results.verify_results(ROOT)
 
     def test_published_summaries_reproduce_from_delivered_tables(self):
-        for name, actual in results.summaries(ROOT).items():
-            published = pd.read_csv(ROOT/'results/channel_sensitivity/summary'/name)
+        for name, actual in summaries(ROOT).items():
+            published = pd.read_csv(ROOT/'results/manuscript/tables'/name)
             pd.testing.assert_frame_equal(actual.reset_index(drop=True), published,
                                           check_dtype=False, rtol=1e-12, atol=1e-8)
 

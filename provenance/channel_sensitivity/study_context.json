@@ -1,6 +1,6 @@
 {
-  "manuscript_version": "V6 2026-11-03",
-  "manuscript_sha256": "ce57617a4bcce22e4a86fe9b324eda105e0c285f95ce21878d8dd53d1de93060",
+  "manuscript_version": "V6 with both temperature references in Figure 5",
+  "manuscript_sha256": "54313b834d431079adb30b61e9d4ff5c608a472f66df5651dac70fae208123dd",
   "experiment": "channel_sensitivity_20261102",
   "weather": "stationary within each case across planning anchors",
   "solar_factor_2050": 1.0,
