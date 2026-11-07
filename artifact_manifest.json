@@ -15,8 +15,8 @@
       "sha256": "ae2022cc2d600a5baa824b72e53c5536d198937bfa90285b9a3bd5538176ad97"
     },
     "README.md": {
-      "bytes": 5781,
-      "sha256": "cf52988a8261e2ca46271be8c7c755464275291affb1aee4eb83544b4964b887"
+      "bytes": 6348,
+      "sha256": "683b34b7ca014611c77bf65afdba67285f2ad82f94fd9ce499479b198c0ced8f"
     },
     "RIGHTS.md": {
       "bytes": 373,
@@ -43,24 +43,32 @@
       "sha256": "eadcf5e965b1ea9246ee2479f28d07d44adc19986d7dd63f2f00ad8f57352c4f"
     },
     "docs/CHANNEL_RESULTS.md": {
-      "bytes": 5738,
-      "sha256": "9aa3a1360af9a2353842b2e3d6917f89228a11793b9ff6b1f139076487a8f4a3"
+      "bytes": 5895,
+      "sha256": "02b3650dbc8b4fa8be3eae26a411e8550a94ed331401665ff11b5e93141e8aa2"
     },
     "docs/DATA.md": {
-      "bytes": 2787,
-      "sha256": "a6cb29c2a4e97f3cc8dd3b42150f595ad103ec3880b590cff41ab40717b86547"
+      "bytes": 3100,
+      "sha256": "36e20102b06f79572be099cbddedf02964bbdde564e7d3d126faf8737739617d"
+    },
+    "docs/GETTING_STARTED.md": {
+      "bytes": 5038,
+      "sha256": "79372ad23c381b686d1c32a6b8fe42b3d85e3770d4f65ff81484abaf436bab76"
     },
     "docs/INTEGRATION.md": {
-      "bytes": 3140,
-      "sha256": "2588e0ce89dbfa3e7ded9635421657a50d928d2d5f716848dc702e087b7099e8"
+      "bytes": 4573,
+      "sha256": "8a684652ce94cd52bbc25a8906afa131bc5f4f4f0edc42305e35980f6e8e7949"
     },
     "docs/RESEARCH_RESULTS.md": {
-      "bytes": 6074,
-      "sha256": "8655628d4f4b4a7712cfaf5162782ecca1489a2ca1c46dfc872d2d9392565323"
+      "bytes": 6217,
+      "sha256": "69edcbfb236367bd50d3099df081eec42b4f18da5f23040fcd2903cff1cd4f24"
+    },
+    "docs/RESULT_COLUMNS.md": {
+      "bytes": 13824,
+      "sha256": "6b97d929c4cfb185a48e8e91881729fde354ed0a39e397b6e3800d87758e05c6"
     },
     "docs/USAGE.md": {
-      "bytes": 4156,
-      "sha256": "03b17dddd1ddb443269d107e1d7f27f87359f244a172a703fe8763f980928e16"
+      "bytes": 4228,
+      "sha256": "33ad0b21597fbb2176da486fa38acd9bb2767fe44dc8d560e0d167be1286b6c9"
     },
     "docs/VALIDATION.md": {
       "bytes": 3790,
@@ -6652,7 +6660,7 @@
     },
     "pyproject.toml": {
       "bytes": 531,
-      "sha256": "0719707ae0aecb477cc68ce0d06ec509b68d22092bc188e77a00cd9fa085d451"
+      "sha256": "3cf9df084cb4e87a4fbf6b2535ce2b126860d5b2a6053b5ba74fe9a521507274"
     },
     "requirements.txt": {
       "bytes": 150,

@@ -3,6 +3,8 @@
 Manuscript SHA256:
 `2a0bada6c1d530fd762598497608df78473a0cbf4ebedc0c964a7b24e44aebaf`.
 This identifies a fixed checked snapshot, not later manuscript revisions.
+See [Result columns and units](RESULT_COLUMNS.md) to interpret the CSV fields
+and [Getting started](GETTING_STARTED.md) to use the pipeline.
 The accepted climate ensemble is unchanged, SHA256
 `d86a855166c24d699d511010184db12d0baf1551f83254b41f661c602d7ae728`.
 

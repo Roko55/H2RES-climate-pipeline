@@ -66,6 +66,8 @@ under arbitrary colder weather. Native input sums and extrema are included.
 ## Tables
 
 Files are under [`results/channel_sensitivity`](../results/channel_sensitivity).
+The [column dictionary](RESULT_COLUMNS.md) defines each field and its unit,
+including the different meanings of `year`, `unit` and `value` between tables.
 
 | File | Definition |
 |---|---|

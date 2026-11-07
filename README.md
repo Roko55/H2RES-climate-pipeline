@@ -8,10 +8,13 @@ postprocessing. Temperature uses three autoregressive quantile models. Wind uses
 six-day seasonal historical blocks with four-hour blending. Channels are generated
 independently. Profiles use UTC, 8760 hours per year with February 29 removed,
 and channel order **solar CF, wind CF, temperature in degrees Celsius**.
+The included models and profiles represent the Croatian case study. Adapting
+the software to another country requires suitable local climate and mapping data.
 
 ## Installation
 
-Use Python 3.11 in a virtual environment. From this checkout:
+Follow [Getting started](docs/GETTING_STARTED.md) for cloning, virtual-environment
+setup and choosing a workflow. Use Python 3.11. From this checkout:
 
 ```bash
 python -m pip install -r requirements.txt
@@ -37,7 +40,6 @@ The workflow has four steps:
    then export the availability and thermal parameter dictionaries for H2RES.
 
 ```bash
-python pipeline.py replay --output exports/accepted.npy
 python pipeline.py select-final --design channel --year 2030 --output exports/channel_cases_2030.npz
 ```
 
@@ -45,6 +47,8 @@ The included ensemble is `profiles/accepted.npy`, shape `[100,8760,3]`, float32.
 `replay` regenerates solar from its native models and retains the stored wind
 and temperature channels. Full generation additionally needs the original corpus,
 including the wind resampling pool; see [Usage](docs/USAGE.md).
+Selecting or loading the included profiles needs no regeneration, retraining,
+raw weather or optimizer.
 
 The `channel` design exports Average, Solar Low/High, Wind Low/High and Cold/Warm.
 Each case changes one complete hourly channel from the same Average profile.
@@ -74,6 +78,8 @@ The current result package corresponds to the checked V6.1 manuscript, sections 
 [Results and figure index](docs/RESEARCH_RESULTS.md) maps every reported result to
 the manuscript. Included result figures are byte-identical to those in the V6.1
 manuscript identified in `provenance/manuscript/scope.json`.
+[Result columns and units](docs/RESULT_COLUMNS.md) defines the identifiers,
+reference comparisons, time labels and accounting fields in every public result CSV.
 
 ```bash
 python analysis/manuscript_results.py --output exports/v61_tables
@@ -106,7 +112,9 @@ designed sensitivities. Cluster fractions describe membership in the generated e
 The [autoencoder study](https://github.com/Roko55/H2RES-autoencoder/tree/v0.1.0)
 retains its own model and historical comparison corpus.
 
-For a fixed reference, cite [version 0.8.0](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.8.0).
+For a fixed reference, cite [version 0.8.1](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.8.1).
+Version 0.8.1 clarifies usage and result columns; its scientific artifacts are
+unchanged from v0.8.0.
 Earlier publication snapshots remain available through their original version tags.
 Raw weather and full solver inputs are excluded. Reuse rights are described in
 [RIGHTS.md](RIGHTS.md).

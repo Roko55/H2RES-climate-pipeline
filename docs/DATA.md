@@ -9,9 +9,13 @@ February 29 removed. Scenario NPZ values have shape `[8760,3]`.
 The final raw parquet corpus has columns `time,solar,wind,temperature`, complete
 ordered consecutive hourly timestamps including leap days, years 1980-2024.
 Solar and wind are already electrical capacity factors, not irradiance or m/s.
-The generator removes leap days after validating the calendar. Fitting uses
-1980-2015, selection/calibration 2016-2019, reporting 2020-2024.
+The generator removes leap days after validating the calendar. The accepted
+models use 1980-2015 for training/normalization and 2016-2019 for validation.
+Solar additionally uses inner 1980-2011 fitting and 2012-2015 tree-count tuning,
+then refits on the training period. Reporting covers 2020-2024.
 Reporting had been inspected before this release and is retrospective.
+These dates describe the frozen release, not an implicit split for arbitrary
+custom datasets. See [Verification](VALIDATION.md) and [Usage](USAGE.md).
 
 ## Spatial mapping directory
 

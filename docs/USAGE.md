@@ -1,6 +1,7 @@
 # Usage
 
 Commands are run from the repository root after installation (see README).
+For a first checkout, follow [Getting started](GETTING_STARTED.md).
 Run `python pipeline.py --help` for the complete interface. CLI files are written
 only below `exports/`; existing outputs and JSON sidecars are never overwritten.
 
@@ -15,7 +16,8 @@ The channel NPZ contains `average`, `solar_low`, `solar_high`, `wind_low`,
 `wind_high`, `temperature_cold`, `temperature_hot`. Each has shape `[8760,3]`.
 All seven cases are checked against archived profile hashes for the requested anchor.
 For this stationary-weather design, each case has identical hourly values at every
-future anchor from 2025 through 2050; the 2020 base is calibrated separately (solar/wind multipliers 1.0/1.0, temperature offset 0 C).
+future anchor from 2025 through 2050 (solar/wind multipliers 1.0/1.0, temperature
+offset 0 C). The 2020 base is calibrated separately.
 The analysis command reproduces the manuscript summary CSVs, verifies the
 original figure identities and draws the six mean-profile MAE comparisons. See [CHANNEL_RESULTS.md](CHANNEL_RESULTS.md) for units
 and experiment definitions.
@@ -29,7 +31,9 @@ python pipeline.py select-final --design electricity --year 2030 --output export
 
 `replay` regenerates the accepted solar channel and retains stored wind/temperature.
 The `electricity` design exports `low`, `avg`, `high` profiles underlying the
-separate fixed 2030 operating portfolios. It exports hash-verified frozen source profiles, preserving their original combined-yield selection and scaling. This design accepts only 2030. It is distinct
+separate fixed 2030 operating portfolios. It exports hash-verified frozen source
+profiles, preserving their original combined-yield selection and scaling.
+This design accepts only 2030. It is distinct
 from the seven stationary-weather `channel` cases.
 
 ## Your own H2RES mapping
