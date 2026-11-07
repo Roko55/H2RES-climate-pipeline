@@ -1,0 +1,238 @@
+{
+  "status": "input_preflight_only",
+  "no_optimization": true,
+  "source_spatial": {
+    "solar": {
+      "training_sha256": "049bce35943ebad8d16b594d3ffc2da471f961dfe9df41bf020383b6705218e6",
+      "transfer_sha256": "e41c3a2c63321e29a9e7c62a4ef9ac2598cab4a782f6c6e53910287069f9930c",
+      "lineage_sha256": "3fc3f181e3b49efdcde5258471804c8e87fbd2bad6a91da3b2a4d394f3bdb1c3"
+    },
+    "wind": {
+      "training_sha256": "1e0e28f40209bba075fdd501594f169db9e84a30936d19a2773f33ab0ec16ddf",
+      "transfer_sha256": "3a471d8f839fc9da94f0eb3d6b2b24941642791d85efafc5400221fe3b86cd57",
+      "lineage_sha256": "77400501a97a9f4b02024dd2d8a8d8aab987473d9c4af45c70dcb100ff2d02e2"
+    }
+  },
+  "synthetic_ensemble_sha256": "d86a855166c24d699d511010184db12d0baf1551f83254b41f661c602d7ae728",
+  "historical_source_sha256": "b700263a2868b20cc8f7fe95e0a7d22c48ea31c89cedbc0889a55ca870972d8a",
+  "adapter_sha256": "e457b2702768c3e0684da3ddc86c21b0f707496c702239723bd863c5cc4dcbde",
+  "output_scope": "2030 Croatian spatial columns only; overlay by (year, period)",
+  "cases": {
+    "avg": {
+      "profile_sha256": "21aa0cfccf0cbc21f9bb2ddf23125ec4c91ceabb13772de98e2defd8b1591c88",
+      "source_ncre_sha256": "9fe461315935d654578c599bea851421953793b540be5c32b23d47546b9e5c77",
+      "mapped_ncre_sha256": "e6fc0e9b9f580abfe91dceebb625bef4d78dafd5d8f7085c67c75cb4ff7613ac",
+      "spatial": {
+        "solar": {
+          "max_hourly_cf_error": 1.6653345369377348e-16,
+          "unit_mw": {
+            "HR_Solar_HR_COAST_SOUTH": 477.27743313935696,
+            "HR_Solar_HR_EAST": 294.6661013744319,
+            "HR_Solar_HR_NORTH_CENTRAL": 506.79846548621117
+          },
+          "training_rows": 315576
+        },
+        "wind": {
+          "max_hourly_cf_error": 2.220446049250313e-16,
+          "unit_mw": {
+            "HR_Wind_HR032": 198.0,
+            "HR_Wind_HR033": 412.85,
+            "HR_Wind_HR034": 272.1,
+            "HR_Wind_HR035": 227.2,
+            "HR_Wind_HR037": 71.0
+          },
+          "training_rows": 315576
+        }
+      }
+    },
+    "low": {
+      "profile_sha256": "18e30838b5a4e27a09db113ce22da234fa3ffcae892aa7870faccf4f66e6b348",
+      "source_ncre_sha256": "e7d32367a2074736392f4337d8975826b738c9d866e0653ab5ac52ebcc03f1e3",
+      "mapped_ncre_sha256": "8792fb36dc9feff388c1949e8a2b2e83bb14b722464853b308b9d11a8cda4bba",
+      "spatial": {
+        "solar": {
+          "max_hourly_cf_error": 2.220446049250313e-16,
+          "unit_mw": {
+            "HR_Solar_HR_COAST_SOUTH": 477.27743313935696,
+            "HR_Solar_HR_EAST": 294.6661013744319,
+            "HR_Solar_HR_NORTH_CENTRAL": 506.79846548621117
+          },
+          "training_rows": 315576
+        },
+        "wind": {
+          "max_hourly_cf_error": 3.3306690738754696e-16,
+          "unit_mw": {
+            "HR_Wind_HR032": 198.0,
+            "HR_Wind_HR033": 412.85,
+            "HR_Wind_HR034": 272.1,
+            "HR_Wind_HR035": 227.2,
+            "HR_Wind_HR037": 71.0
+          },
+          "training_rows": 315576
+        }
+      }
+    },
+    "high": {
+      "profile_sha256": "313fc48f1296923d88f92546ca1e3691a9492723ecda294fb3c789402fdf1ca6",
+      "source_ncre_sha256": "33482bab420f01db46aad219f2d74e2e4d20a8541695850a0cc6d927a43ae189",
+      "mapped_ncre_sha256": "96645f887c9dde1ca77dfa0ccbe981fdf98f64e037b74c79096ccf2807e47d9f",
+      "spatial": {
+        "solar": {
+          "max_hourly_cf_error": 2.220446049250313e-16,
+          "unit_mw": {
+            "HR_Solar_HR_COAST_SOUTH": 477.27743313935696,
+            "HR_Solar_HR_EAST": 294.6661013744319,
+            "HR_Solar_HR_NORTH_CENTRAL": 506.79846548621117
+          },
+          "training_rows": 315576
+        },
+        "wind": {
+          "max_hourly_cf_error": 3.3306690738754696e-16,
+          "unit_mw": {
+            "HR_Wind_HR032": 198.0,
+            "HR_Wind_HR033": 412.85,
+            "HR_Wind_HR034": 272.1,
+            "HR_Wind_HR035": 227.2,
+            "HR_Wind_HR037": 71.0
+          },
+          "training_rows": 315576
+        }
+      }
+    },
+    "historical_2020": {
+      "profile_sha256": "c31f3ca2764007137c49bd625c04e8c8af2f3d78fee71562e1a011e2eb5ae111",
+      "source_ncre_sha256": "9fe461315935d654578c599bea851421953793b540be5c32b23d47546b9e5c77",
+      "mapped_ncre_sha256": "8ea303ea640989c6056c200e3927515e8144eea310cf0836a3e1572e4c1951e6",
+      "spatial": {
+        "solar": {
+          "max_hourly_cf_error": 1.6653345369377348e-16,
+          "unit_mw": {
+            "HR_Solar_HR_COAST_SOUTH": 477.27743313935696,
+            "HR_Solar_HR_EAST": 294.6661013744319,
+            "HR_Solar_HR_NORTH_CENTRAL": 506.79846548621117
+          },
+          "training_rows": 315576
+        },
+        "wind": {
+          "max_hourly_cf_error": 3.3306690738754696e-16,
+          "unit_mw": {
+            "HR_Wind_HR032": 198.0,
+            "HR_Wind_HR033": 412.85,
+            "HR_Wind_HR034": 272.1,
+            "HR_Wind_HR035": 227.2,
+            "HR_Wind_HR037": 71.0
+          },
+          "training_rows": 315576
+        }
+      }
+    },
+    "historical_2021": {
+      "profile_sha256": "2a4bfbca3a3cc364ebb7a28aae733669bc983f612b1da6d1ce27dc5cfbf7eb0b",
+      "source_ncre_sha256": "9fe461315935d654578c599bea851421953793b540be5c32b23d47546b9e5c77",
+      "mapped_ncre_sha256": "3403bb28b1ede70eb6f7d418a0e74081e119c59376c49d87ef5560e3dda76e7f",
+      "spatial": {
+        "solar": {
+          "max_hourly_cf_error": 1.6653345369377348e-16,
+          "unit_mw": {
+            "HR_Solar_HR_COAST_SOUTH": 477.27743313935696,
+            "HR_Solar_HR_EAST": 294.6661013744319,
+            "HR_Solar_HR_NORTH_CENTRAL": 506.79846548621117
+          },
+          "training_rows": 315576
+        },
+        "wind": {
+          "max_hourly_cf_error": 3.3306690738754696e-16,
+          "unit_mw": {
+            "HR_Wind_HR032": 198.0,
+            "HR_Wind_HR033": 412.85,
+            "HR_Wind_HR034": 272.1,
+            "HR_Wind_HR035": 227.2,
+            "HR_Wind_HR037": 71.0
+          },
+          "training_rows": 315576
+        }
+      }
+    },
+    "historical_2022": {
+      "profile_sha256": "7664f82c17cdc22c9881bb5e50547d36c9b587e0345bf1fdb0160f5b3968a1a0",
+      "source_ncre_sha256": "9fe461315935d654578c599bea851421953793b540be5c32b23d47546b9e5c77",
+      "mapped_ncre_sha256": "b6111fd13100ba35151d7d1347fefe2858852114c58d67cf422686bf8eac2700",
+      "spatial": {
+        "solar": {
+          "max_hourly_cf_error": 1.6653345369377348e-16,
+          "unit_mw": {
+            "HR_Solar_HR_COAST_SOUTH": 477.27743313935696,
+            "HR_Solar_HR_EAST": 294.6661013744319,
+            "HR_Solar_HR_NORTH_CENTRAL": 506.79846548621117
+          },
+          "training_rows": 315576
+        },
+        "wind": {
+          "max_hourly_cf_error": 3.3306690738754696e-16,
+          "unit_mw": {
+            "HR_Wind_HR032": 198.0,
+            "HR_Wind_HR033": 412.85,
+            "HR_Wind_HR034": 272.1,
+            "HR_Wind_HR035": 227.2,
+            "HR_Wind_HR037": 71.0
+          },
+          "training_rows": 315576
+        }
+      }
+    },
+    "historical_2023": {
+      "profile_sha256": "9a5807968309c4ea9b368ecc4f78365e431856066c590c389b2b1c8d7db5daac",
+      "source_ncre_sha256": "9fe461315935d654578c599bea851421953793b540be5c32b23d47546b9e5c77",
+      "mapped_ncre_sha256": "e68d46662a634796dd841356e55a21ca38ec3eee01ed0af41bbdc4cbec7aec6c",
+      "spatial": {
+        "solar": {
+          "max_hourly_cf_error": 1.6653345369377348e-16,
+          "unit_mw": {
+            "HR_Solar_HR_COAST_SOUTH": 477.27743313935696,
+            "HR_Solar_HR_EAST": 294.6661013744319,
+            "HR_Solar_HR_NORTH_CENTRAL": 506.79846548621117
+          },
+          "training_rows": 315576
+        },
+        "wind": {
+          "max_hourly_cf_error": 3.3306690738754696e-16,
+          "unit_mw": {
+            "HR_Wind_HR032": 198.0,
+            "HR_Wind_HR033": 412.85,
+            "HR_Wind_HR034": 272.1,
+            "HR_Wind_HR035": 227.2,
+            "HR_Wind_HR037": 71.0
+          },
+          "training_rows": 315576
+        }
+      }
+    },
+    "historical_2024": {
+      "profile_sha256": "4f820fed0602148d38f3a0025e0b2c50c6726bc94d1db91c024ef31907dcd88e",
+      "source_ncre_sha256": "9fe461315935d654578c599bea851421953793b540be5c32b23d47546b9e5c77",
+      "mapped_ncre_sha256": "bc31e8427b57c857daace892238c8521f0fc650df66f1cf9f02e074c7b77553f",
+      "spatial": {
+        "solar": {
+          "max_hourly_cf_error": 1.6653345369377348e-16,
+          "unit_mw": {
+            "HR_Solar_HR_COAST_SOUTH": 477.27743313935696,
+            "HR_Solar_HR_EAST": 294.6661013744319,
+            "HR_Solar_HR_NORTH_CENTRAL": 506.79846548621117
+          },
+          "training_rows": 315576
+        },
+        "wind": {
+          "max_hourly_cf_error": 3.3306690738754696e-16,
+          "unit_mw": {
+            "HR_Wind_HR032": 198.0,
+            "HR_Wind_HR033": 412.85,
+            "HR_Wind_HR034": 272.1,
+            "HR_Wind_HR035": 227.2,
+            "HR_Wind_HR037": 71.0
+          },
+          "training_rows": 315576
+        }
+      }
+    }
+  }
+}

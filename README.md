@@ -56,25 +56,27 @@ stationary-weather inputs are defined in [CHANNEL_RESULTS.md](docs/CHANNEL_RESUL
 Map these profiles to your declared generation units with `export-units`, then use
 `h2res_interface.py` for availability dictionaries or CSVs. See the
 [data schemas](docs/DATA.md) and [integration examples](docs/INTEGRATION.md).
-The H2RES model, solver licence and full input database are supplied separately.
+Frozen executed model sources and audited outputs are included under
+[`evidence/calibrated`](evidence/calibrated/README.md). Re-solving the energy
+experiments additionally requires the original input database and licensed optimizer.
 
 ## Results
 
-The current result package corresponds to V6 sections 4.1-4.6:
+The current result package corresponds to the checked V6.1 manuscript, sections 4.1-4.6:
 
-| V6 section | Contents |
+| V6.1 section | Contents |
 |---|---|
 | 4.1 | Mean-profile MAE against both fixed and historical references; fair CRPS against the historical ensemble |
-| 4.2-4.4 | Solar, wind and temperature in seven stationary-weather multisector paths; 49 newly solved planning windows |
+| 4.2-4.4 | Solar, wind and temperature in seven stationary-weather multisector paths; 42 new planning windows (2025–2050), after one common calibrated 2020 base |
 | 4.5 | Average-path costs, new capacity, energy supply and direct domestic emissions |
 | 4.6 | 45 full-year operating checks of three separate fixed 2030 electricity portfolios |
 
 [Results and figure index](docs/RESEARCH_RESULTS.md) maps every reported result to
-the manuscript. Included result figures are byte-identical to those in the V6
+the manuscript. Included result figures are byte-identical to those in the V6.1
 manuscript identified in `provenance/manuscript/scope.json`.
 
 ```bash
-python analysis/manuscript_results.py --output exports/v6_tables
+python analysis/manuscript_results.py --output exports/v61_tables
 ```
 
 The command verifies experiment and figure identities, regenerates the supporting
@@ -87,6 +89,12 @@ Both temperature markers show the same comparison: the fixed temperature
 reference is the training-period hourly mean. These are two reference labels
 for the same score.
 
+The revised energy cohort has no new national electricity-generation additions.
+Solar and wind cost rankings are Low > Average > High at every future window.
+All 30 full/half-exchange operating checks serve HR demand; three 2021
+zero-exchange cases have small HR shortfalls. All 45 checks are retained.
+See [the results index](docs/RESEARCH_RESULTS.md) for accounting boundaries and units.
+
 ## Reproducibility
 
 [Verification](docs/VALIDATION.md) covers model and result identities, profile
@@ -98,7 +106,7 @@ designed sensitivities. Cluster fractions describe membership in the generated e
 The [autoencoder study](https://github.com/Roko55/H2RES-autoencoder/tree/v0.1.0)
 retains its own model and historical comparison corpus.
 
-For a fixed reference, cite [version 0.7.0](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.7.0).
+For a fixed reference, cite [version 0.8.0](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.8.0).
 Earlier publication snapshots remain available through their original version tags.
 Raw weather and full solver inputs are excluded. Reuse rights are described in
 [RIGHTS.md](RIGHTS.md).

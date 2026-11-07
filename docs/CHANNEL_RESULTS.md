@@ -1,16 +1,16 @@
-# Stationary-weather solar, wind and temperature analyses
+# Calibrated stationary-weather multisector paths
 
-The same full multisector H2RES model is evaluated with one climate channel
-changed at a time. Seven paths cover anchors 2020, 2025, ..., 2050. Each native
-window contains the current and next anchor, except the terminal 2050 window.
-The completed V6 experiment has 49 newly solved optimal windows and no reused
-planning windows. Complete state handoffs are verified for each path.
+The V6.1 national experiment is `national_production_03`: seven paths share one
+calibrated historical 2020 base and then solve six future windows starting in
+2025, 2030, 2035, 2040, 2045 and 2050 (42 windows). A window contains its current
+and next anchor, except 2050. Each path inherits its own realized capital and
+retirements. The common 2020 calibration is not seven new synthetic cases.
 
 ## Profile selection
 
-Donors are zero-based member indices in the included 100-member ensemble:
+Indices below are zero-based members of the frozen 100-member ensemble.
 
-| Case | Solar donor | Wind donor | Temperature donor |
+| Case | Solar | Wind | Temperature |
 |---|---:|---:|---:|
 | Average | 65 | 65 | 65 |
 | Solar Low | 2 | 65 | 65 |
@@ -18,91 +18,83 @@ Donors are zero-based member indices in the included 100-member ensemble:
 | Wind Low | 65 | 20 | 65 |
 | Wind High | 65 | 72 | 65 |
 | Cold | 65 | 65 | 41 |
-| Warm | 65 | 65 | 48 |
+| Warm (`temperature_hot`) | 65 | 65 | 48 |
 
-Solar and wind donors are the members nearest the outer-cluster means of separate
-three-cluster K-means fits to annual CF (seed 42, n_init 10). Cold/Warm use the outer
-thermal-index cluster representatives: standardized cooling degree hours above
-22 C minus standardized heating degree hours below 18 C. Average member 65 belongs
-to each central cluster and is kept as the common reference. Selection uses the
-generated ensemble before the energy runs. Full Cold/Warm chronologies are retained.
+Solar/wind donors are members nearest the outer-cluster means of independent
+three-cluster K-means fits to annual CF (seed 42, n_init 10). Temperature uses
+standardized cooling degree hours above 22 C minus standardized heating degree
+hours below 18 C. Average member 65 belongs to each central cluster. Selection
+uses the generated ensemble before the energy runs. Each case changes one
+complete channel and retains its hourly profile at all six future anchors:
+solar/wind multipliers 1.0, temperature offset 0 C. No trend is applied.
 
-## Stationary weather inputs
+## Accounting and interpretation
 
-Each case uses the same selected 8760-hour profile at all seven planning anchors.
-Solar and wind factors remain 1.0; the temperature offset remains 0.0 C. All 49
-input hashes are verified against `scenario_inputs.csv`, with one unique hash
-per case across the seven anchors. Spatial mapping checks cover both resource
-channels after mapping, including channels held fixed.
+The accepted national model signature is
+`4fc9605a52f29f956a5c5c28512436e365637ac7b2e6a6be256a89a7ebb9c9ee`.
+Frozen scripts and per-window build/solution audits document stock, hydro,
+exchange, heating, EV charging and household cooling. The executed configuration
+retains the inherited financial formulas and two-anchor discount convention.
+Local RPS and aggregate CO2 target constraints were already disabled before the
+calibration; this is a model-boundary limitation. A common real price year for
+all monetary inputs has not been established.
 
-At 2020, Solar Low/Average/High mean CF is 0.105242/0.110304/0.114586;
-Wind Low/Average/High is 0.226350/0.244826/0.261186. Cold/Average/Warm mean temperature
-is 11.3931/12.3375/12.8434 C. The complete input ranges and degree hours are retained
-in the tables. Effects across channels depend on these different selected ranges.
+Window objectives use native EUR coefficients and include both anchors. Do not
+sum overlapping windows. Realized-year costs use only the first anchor ledger
+contribution divided by its saved NPV weight. One-off capacity terms are retained;
+these costs are not a five-year integral or an annualized levelized cost.
 
-## Model and accounting
+`EUR_per_demand_MWh` divides that cost by the same year's native electricity,
+space/district heat, cooling, high-temperature industrial heat, hydrogen and EV
+transport-service demand. `Industry_HT` is excluded from `heat_demand` before its
+separate industrial family is counted. This denominator mixes service demands;
+it is not an electricity price. EV transport service differs from grid charging
+because of conversion efficiency. The fixed-demand audits identify the added EV
+and household-cooling electricity terms and excluded reference components.
 
-Each path starts from the same complete 2020 stock. Later anchors inherit that
-path's own realized investments and retirements. Prices, policies, technology
-assumptions, hydro, exchange capacities, equations and solver tolerances retain
-the accepted multisector configuration. Temperature uses the existing hourly
-heat/cooling/COP adapter, with `scale_annual_totals=False`. Inspect `thermal_inputs.csv`
-for the executed annual demand totals and COP statistics.
+National net imports include signed optimized exchange plus the existing HR
+Krško entitlement exactly once. That entitlement is excluded from domestic
+generation. It is not new nuclear investment. In the separate zonal model,
+Krško remains physically in Slovenia.
 
-`investments_by_technology.csv` contains only decisions realized at the current
-anchor (`realized=1`, `decision_year=window_start`). Decisions for the next anchor
-are provisional and excluded. `installed_stock.csv` separates remaining original
-stock, inherited new stock, current additions and resulting installed stock.
-Retirements after the first anchor are derived from successive native stock records.
-
-MW measures equipment capacity. MWh measures stationary-battery and hydrogen-store
-energy capacity. The `capacity_addition` column is a **0/1 inclusion flag**;
-`value` holds the capacity. `extra_cap_inv` is retained as a native objective
-term but excluded from sums of physical additions. Native objective contributions
-use each row's saved coefficient and discounting. Per-window objectives retain
-their model monetary convention; summing overlapping windows would double-count.
-Imports are endogenous; input-side exports retain the model's accounting convention.
+Annual heat totals are preserved while temperature changes their hourly shape
+and heat-pump COP. Cold has more heating degree hours; normalization over that
+larger total can produce a lower heat peak and less installed heating capacity.
+This conditional response must not be interpreted as lower physical heat demand
+under arbitrary colder weather. Native input sums and extrema are included.
 
 ## Tables
 
-All paths below are under [`results/channel_sensitivity`](../results/channel_sensitivity):
+Files are under [`results/channel_sensitivity`](../results/channel_sensitivity).
 
-| File | Contents |
+| File | Definition |
 |---|---|
-| `scenario_inputs.csv` | Donor indices, calendar means, degree hours and profile hashes |
-| `objective_comparison.csv` | Window objective, numerical violations, difference and percent relative to Average |
-| `objective_components.csv` | Native components; use `active_in_objective=1` to reconcile each window |
-| `investments_by_technology.csv` | Realized native decision values, units, coefficients and contributions |
-| `installed_stock.csv` | Inherited and resulting stock plus derived retirements |
-| `channel_comparison.csv` | Asset-level capacity and investment-contribution differences from Average |
-| `system_outcomes.csv` | Native annual generation, heat, imports, CEEP and emissions by saved family/key |
-| `thermal_inputs.csv` | Annual demand sums and hourly mean/min/max, or dimensionless COP statistics |
+| `scenario_inputs.csv` | 42 case/anchor records; donor indices, CF/temperature means, degree hours, profile hash |
+| `objective_comparison.csv` | Full-window EUR objective, solver violations, runtime, difference/percentage from same-window Average |
+| `objective_components.csv` | Native components; sum rows with `active_in_objective=1` per case/window |
+| `investments_by_technology.csv` | Realized first-anchor decisions only; value, unit, coefficient and contribution |
+| `system_outcomes.csv` | Native annual output families at the realized anchor, keyed by saved asset/system indices |
+| `thermal_inputs.csv` | Native parameter count, sum, minimum and maximum by case/window/anchor/family/unit |
+| `realized_annual_costs.csv` | First-anchor ledger/NPV, capacity terms, other active terms, same-year demand and ratio |
 
-Demand sums are MWh over the hourly year. COP mean/min/max are dimensionless;
-the COP `sum` column is an arithmetic sum of hourly ratios. `key_json`
-preserves the native asset/system/year indices. The stored `source` paths identify
-the original result locations, made relative for portability.
+MW is equipment capacity; MWh is storage energy or annual energy as identified
+by the family. `capacity_addition` is a 0/1 inclusion flag; `value` is capacity.
+`extra_cap_inv` remains an objective term but is not a physical addition.
+Future-anchor provisional investment decisions remain in the native evidence
+and are excluded from realized summaries. A sum of stored hourly state values
+(`*_soc`, `storage_level`) is not annual energy production.
+For COP, sums/extrema are dimensionless; `sum/count` is the arithmetic mean.
 
-## Reported results
-
-V6 Figures 7-12 report window cost differences and their active components.
-Figures 13-15 report realized annual costs, new capacity, supply and direct
-emissions for Average. The exact images and section mapping are in the
-[V6 results index](RESEARCH_RESULTS.md).
-
-Solar Low has a higher objective than Average at every anchor. Wind Low is higher
-through 2040, then lower in the windows starting in 2045 and 2050. Cold is lower
-in 2020/2025 and higher later. Each result includes that path's inherited stock.
-Window objectives overlap and are not added as a transition-cost total.
+Solar and wind costs follow Low > Average > High in every future window.
+All national new electricity-generation decisions are zero in this snapshot.
+Cumulative new heating capacity is 8932.341 MW for Average, 8374.981 MW for Cold
+and 8849.129 MW for Warm. These outcomes depend on the executed model boundary,
+profiles, costs and inherited capital; they are not universal climate rankings.
 
 ```bash
-python analysis/channel_results.py --output exports/v6_tables
+python analysis/channel_results.py --output exports/v61_tables
 ```
 
-This entry point runs the manuscript table reproduction. It verifies 49 profile
-hashes, donor selection, stationary weather, fresh solution records, complete
-state handoffs, numerical tolerances and objective/investment reconciliation,
-plus the archived 2009 stock, 273 emission and 49 balance checks.
-The 45 operating tests retain their separate fixed electricity portfolios.
-
-The executable case ID `temperature_hot` denotes the manuscript's Warm case.
+This verifies the delivered native records and regenerates manuscript summaries.
+[Verification](VALIDATION.md) distinguishes local checks from full-store audits.
+The 45 operating tests concern three separate electricity portfolios.

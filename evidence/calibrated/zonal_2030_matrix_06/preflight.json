@@ -1,0 +1,65 @@
+{
+  "status": "published_scenario_envelope_candidate",
+  "planning_approved": false,
+  "source": "https://www.entsoe.eu/eraa/2025/modelling-data/",
+  "archive_sha256": "86bb28b6e92588e1308a99a0ccc43e75290885573e05ac293964561f9916acac",
+  "member": "NTCs/NTCs Consolidated TY2030.xlsx",
+  "member_sha256": "9aa24219732fef8670c6003bb2259b7e2545cf18534130d94721267c63ebbd5e",
+  "candidate_sha256": "4d046bffabdc1c2f318acc87bf902da28b32a021cc00f6f49507749d131803e7",
+  "hours": 8760,
+  "summary_mw": {
+    "slovenia_in_mw": {
+      "min_mw": 1500.0,
+      "median_mw": 1500.0,
+      "max_mw": 1500.0
+    },
+    "slovenia_out_mw": {
+      "min_mw": 1500.0,
+      "median_mw": 1500.0,
+      "max_mw": 1500.0
+    },
+    "bosnia_in_mw": {
+      "min_mw": 800.0,
+      "median_mw": 800.0,
+      "max_mw": 800.0
+    },
+    "bosnia_out_mw": {
+      "min_mw": 800.0,
+      "median_mw": 800.0,
+      "max_mw": 800.0
+    },
+    "outside_hungary_serbia_in_mw": {
+      "min_mw": 1150.0,
+      "median_mw": 1300.0,
+      "max_mw": 1300.0
+    },
+    "outside_hungary_serbia_out_mw": {
+      "min_mw": 950.0,
+      "median_mw": 1100.0,
+      "max_mw": 1100.0
+    },
+    "croatia_gross_in_mw": {
+      "min_mw": 4000.0,
+      "median_mw": 4000.0,
+      "max_mw": 4000.0
+    },
+    "croatia_gross_out_mw": {
+      "min_mw": 4000.0,
+      "median_mw": 4000.0,
+      "max_mw": 4000.0
+    },
+    "croatia_net_in_mw": {
+      "min_mw": 3700.0,
+      "median_mw": 3700.0,
+      "max_mw": 3700.0
+    },
+    "croatia_net_out_mw": {
+      "min_mw": 3700.0,
+      "median_mw": 3700.0,
+      "max_mw": 3700.0
+    }
+  },
+  "mapping": "Keep Slovenia and Bosnia as internal modeled links, Hungary and Serbia on the external cut. The summed outside allowance assumes both connections can use their published directional envelopes, subject to the separate Croatia gross and net limits.",
+  "scope": "Published deterministic NTC envelope used as a simplified H2RES scenario candidate. The ERAA Core model also uses multi-zone flow-based domains. A common national net limit is not a replacement for its PTDF/RAM network constraints.",
+  "stress": "Scale each HR-crossing directional limit and the Croatia gross and net bounds by the same 100%, 50% or 0% exactly once. Keep SI-BA and other non-HR links unchanged. Krsko is physically in SI; its Croatian share is inside the Slovenia cut."
+}

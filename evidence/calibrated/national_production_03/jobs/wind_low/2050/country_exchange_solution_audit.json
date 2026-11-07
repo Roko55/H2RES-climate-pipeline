@@ -1,0 +1,6 @@
+{
+  "hours": 8760,
+  "max_excess_mw": 0.0,
+  "peak_physical_net_export_mw": 663.1650951113525,
+  "peak_physical_net_import_mw": 3600.0
+}

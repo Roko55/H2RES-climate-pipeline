@@ -44,14 +44,13 @@ def main():
             not metadata['reporting_used_for_selection'], 'Invalid final cohort identity or selection boundary')
     operations = pd.read_csv(ROOT/'results/operational_checks.csv')
     require(len(operations) == 45 and (operations.solver_status == 2).all()
-            and (operations.status == 'verified_optimal').all()
-            and (operations.HR_unserved_MWh.abs() <= 1e-6).all()
+            and (operations.status == 'optimal_operation').all()
             and operations.verified_fixed_stock.all(), 'Operational evidence failed')
     counts = operations.groupby('availability_fraction').size().to_dict()
     require(counts == {0.: 15, .5: 15, 1.: 15}, 'Grid stress dimensions differ')
     require((operations.constraint_violation <= 1e-7).all()
             and (operations.bound_violation <= 1e-7).all(), 'Operational solution quality failed')
-    require(operations.hours.eq(8760).all() and operations.new_investment_max_abs.eq(0).all()
+    require(operations.hours.eq(8760).all() and operations.max_storage_cycle_error.le(1e-7).all()
             and operations.storage_terminal_cycle_active.all()
             and set(operations.portfolio) == {'low', 'avg', 'high'}
             and operations.groupby('portfolio').portfolio_sha256.nunique().eq(1).all(),
@@ -64,10 +63,15 @@ def main():
             and not metrics.duplicated(['channel', 'method']).any(), 'Mixed reporting masks')
     from analysis.channel_results import verify_results
     from analysis.manuscript_results import verify_manuscript
+    from analysis.native_results import operational_table, evidence
+    from analysis.zonal_results import audit as audit_zonal
+    pd.testing.assert_frame_equal(operations, operational_table(ROOT), check_dtype=False, rtol=1e-12, atol=1e-8)
+    zonal = audit_zonal(evidence(ROOT)/'zonal_2030_production_05')
     channels = verify_results(ROOT)
     print(json.dumps({'status': 'passed', 'files_verified': len(manifest['files']),
         'native_models_verified': 10, 'ensemble_sha256': ENSEMBLE_SHA,
         'fixed_portfolio_operational_cases': len(operations),
+        'full_hourly_zonal_verification': {k:v for k,v in zonal.items() if k != 'evidence'},
         'single_channel_planning': channels,
         'manuscript': verify_manuscript(ROOT),
         'scope': 'Artifact identities, solar runtime assets and archived solver evidence; optimizer not rerun.'}, indent=2))

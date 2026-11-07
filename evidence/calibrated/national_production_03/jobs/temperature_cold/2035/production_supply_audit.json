@@ -1,0 +1,23 @@
+{
+  "hours": 8760,
+  "initial_capacity_by_group_mw": {
+    "biogas": 60.0,
+    "biomass": 101.483,
+    "coal": 215.0,
+    "gas": 1037.1,
+    "geothermal": 10.0,
+    "nuclear": 348.0,
+    "oil": 343.5,
+    "pumped_hydro": 275.40000000000003,
+    "reservoir_hydro": 1485.7,
+    "run_of_river": 438.3,
+    "solar": 1278.742,
+    "wind": 1181.15
+  },
+  "status": "built_supply_membership_passed",
+  "units": 29,
+  "years": [
+    2035,
+    2040
+  ]
+}

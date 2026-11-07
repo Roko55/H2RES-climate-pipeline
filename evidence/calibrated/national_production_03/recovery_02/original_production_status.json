@@ -1,0 +1,111 @@
+{
+  "utc": "2026-11-06T07:53:34.926115+00:00",
+  "status": "incomplete",
+  "pid": 13768,
+  "execution_fence": "ade12a1aa972d93a2fd58e95415ef54420104d29519fc614ba843013296e74d8",
+  "completed": {
+    "average": [
+      2025
+    ],
+    "solar_low": [
+      2025
+    ],
+    "solar_high": [
+      2025
+    ],
+    "wind_low": [
+      2025
+    ],
+    "wind_high": [
+      2025
+    ],
+    "temperature_cold": [
+      2025
+    ],
+    "temperature_hot": [
+      2025
+    ]
+  },
+  "failed": {
+    "average": {
+      "accepted_years": [
+        2025
+      ],
+      "worker": {
+        "pid": 23280,
+        "created": 1793946894.9452112,
+        "script": "E:\\Roko\\remote_access\\national_production_03\\full_worker.py"
+      }
+    },
+    "solar_low": {
+      "accepted_years": [
+        2025
+      ],
+      "worker": {
+        "pid": 8944,
+        "created": 1793947586.5851316,
+        "script": "E:\\Roko\\remote_access\\national_production_03\\full_worker.py"
+      }
+    },
+    "solar_high": {
+      "accepted_years": [
+        2025
+      ],
+      "worker": {
+        "pid": 11908,
+        "created": 1793948248.2075324,
+        "script": "E:\\Roko\\remote_access\\national_production_03\\full_worker.py"
+      }
+    },
+    "wind_low": {
+      "accepted_years": [
+        2025
+      ],
+      "worker": {
+        "pid": 14328,
+        "created": 1793948909.765247,
+        "script": "E:\\Roko\\remote_access\\national_production_03\\full_worker.py"
+      }
+    },
+    "wind_high": {
+      "accepted_years": [
+        2025
+      ],
+      "worker": {
+        "pid": 3988,
+        "created": 1793949601.369018,
+        "script": "E:\\Roko\\remote_access\\national_production_03\\full_worker.py"
+      }
+    },
+    "temperature_cold": {
+      "accepted_years": [
+        2025
+      ],
+      "worker": {
+        "pid": 22476,
+        "created": 1793950292.9248354,
+        "script": "E:\\Roko\\remote_access\\national_production_03\\full_worker.py"
+      }
+    },
+    "temperature_hot": {
+      "accepted_years": [
+        2025
+      ],
+      "worker": {
+        "pid": 13868,
+        "created": 1793950954.475983,
+        "script": "E:\\Roko\\remote_access\\national_production_03\\full_worker.py"
+      }
+    }
+  },
+  "current_case": null,
+  "resources": {
+    "available_ram_gib": 725.48,
+    "available_disk_gib": 769.05,
+    "other_gurobi_process_count": 0,
+    "inaccessible_python_count": 0,
+    "ready": true
+  },
+  "worker": null,
+  "last_worker_progress": null
+}

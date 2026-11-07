@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "hourly_count": 8760,
+  "scope": "national_multisector_historical_only",
+  "planning_approved": false,
+  "stock_reconciliation_pending": true,
+  "fingerprint": 811716712,
+  "max_residual": {
+    "power_balance": 3.5670950637722854e-09,
+    "heat_balance": 1.494329694629544e-12,
+    "storage_balance": 8.924018857214833e-09,
+    "exchange": 0.0,
+    "power_co2": 4.7238409208599106e-09,
+    "heat_co2": 1.0830630263405418e-09
+  },
+  "storage_evidence": "Independent district storage ledger and native hydro solve residual; hydro terminal stocks checked from the executed solve.",
+  "archive_audit_sha256": "d237b5c7839af69930e42bc2fbb0d18ebc0eedb8c9859375611d3ab21346b9c7",
+  "archive_file_sha256": {
+    "queue_01/status.json": "290d277c977f924f8f0b23fe46dc1b9bc3815714b17d11c5aae0ad2610355a28",
+    "queue_01/source_hashes.json": "997dba99a5f48b2eb4ba9a3050eec94f79116137d617d0f24c719c62bdad8b4d",
+    "input_preflight.json": "9c593f3eabd90f3d3cfc5bf3a4bc4e32066764ba1db53bc3c11f027fa29677f8",
+    "run_01/status.json": "392211ae86a827b2743731f0c178cef2903a7ecce3d163b2c79713dafd4071b2",
+    "run_01/native_preflight.json": "7e97b7bbe78a09f5a429934f8cd5c76841885bc2a6031a8f26aa3ffa8f017191",
+    "run_01/combined_heat_audit.json": "d9b597fc0381a2517c4b32c6b6a03c4f3f516215392659ae77c4c473e1ae8f1e",
+    "run_01/signed_exchange_audit.json": "5c319cbd9aa4fbbf823f879ec3e4980e22391f52c5a505b05374b1267550ddbb",
+    "run_01/power_co2_subtotal_audit.json": "e628c1a9be388a03f6cb5a5c3e6012082c7aaa9757d4abda71353d82e8688e9c",
+    "run_01/heat_co2_subtotal_audit.json": "fbc175786d946c45e9465ed60f2ef2e65e3318bc7d62fbe9b198fff647b6d86f",
+    "run_01/stdout.log": "c8de91b149c4c39d3e54e9edc38f12a26224d094e35ec78f404142a44e63f743",
+    "run_01/exchange_hourly.csv": "ab0f80ebdc0f84e6090b87f07e4a74404b174d1a0e7dd3afea2b86a196fc9b5f"
+  }
+}

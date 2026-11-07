@@ -1,0 +1,14 @@
+{
+  "generation_mwh": {
+    "2035": {
+      "HRBiogas2020": 333100.0,
+      "HRGeothermal2020": 0.0,
+      "TEBiomassHR": 618958.6209999686
+    },
+    "2040": {
+      "HRBiogas2020": 333100.0,
+      "HRGeothermal2020": 0.0,
+      "TEBiomassHR": 618958.6209999686
+    }
+  }
+}

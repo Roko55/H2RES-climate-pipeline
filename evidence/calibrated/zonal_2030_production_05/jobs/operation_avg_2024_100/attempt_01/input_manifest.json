@@ -1,0 +1,564 @@
+{
+  "main_unmodified.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\main_unmodified.py",
+    "sha256": "1cbfa18561d3b73f11b757b7d9c488a39db59a201901fe7bb9014c851544cd5f"
+  },
+  "config/h2res_climate_workflow_config.json": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\config\\h2res_climate_workflow_config.json",
+    "sha256": "8b70899f62116ed790bedc08075cc50180c12595a214a4679672f549aabe953b"
+  },
+  "data/.~lock.flex_tech_efuel_industries10.xlsx#": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\.~lock.flex_tech_efuel_industries10.xlsx#",
+    "sha256": "e980c100f07a49805758b2d1d4994d25a3fcf07481cce6b897ad55e401c18ad2"
+  },
+  "data/.~lock.flex_tech_HR_efuel_7.5.2026.xlsx#": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\.~lock.flex_tech_HR_efuel_7.5.2026.xlsx#",
+    "sha256": "4d35312f66674b87505b9749e36e6910215627f8bc26630cdcdde2eb687eda33"
+  },
+  "data/cool_demand_HR_2020_2050_sdewes_DH2.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\cool_demand_HR_2020_2050_sdewes_DH2.csv",
+    "sha256": "2cd4d42eaa92c5bfc3d72cdf0ad7c5988a4db3aaddcf43ffc95e11ec7ff9054a"
+  },
+  "data/cool_demand_HR_2020_2050_sdewes_indv2.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\cool_demand_HR_2020_2050_sdewes_indv2.csv",
+    "sha256": "2cd4d42eaa92c5bfc3d72cdf0ad7c5988a4db3aaddcf43ffc95e11ec7ff9054a"
+  },
+  "data/demand_2020_2050_sdewes8.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\demand_2020_2050_sdewes8.csv",
+    "sha256": "7affe1981ba02262f5776554dc09fe3b4c509ea4240aa39ddc6a5b07aac3fb10"
+  },
+  "data/demand_2020_2050_sdewes9.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\demand_2020_2050_sdewes9.csv",
+    "sha256": "970006d9d634acef550cc47ae5c7aa3f5a6006042653f513f31e4973cab6f289"
+  },
+  "data/demand_co2.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\demand_co2.csv",
+    "sha256": "6db16cf25a9fe3653e6224598543f180f26b2f7347d3c082c6b767a9d5bc152f"
+  },
+  "data/demand_heating_el1.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\demand_heating_el1.csv",
+    "sha256": "af0f386ff9f25177a51e13000bf5724927a5a572d208588feb184d5a135b5d0d"
+  },
+  "data/demand_heating_elx.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\demand_heating_elx.csv",
+    "sha256": "6d98652d5bf634aad8595bcb6c4d597793b4a8c6a89d69d0b8d2309c9530c298"
+  },
+  "data/demand_industry_el1.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\demand_industry_el1.csv",
+    "sha256": "af0f386ff9f25177a51e13000bf5724927a5a572d208588feb184d5a135b5d0d"
+  },
+  "data/demand_industry_elx.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\demand_industry_elx.csv",
+    "sha256": "6d98652d5bf634aad8595bcb6c4d597793b4a8c6a89d69d0b8d2309c9530c298"
+  },
+  "data/ev_transp_loadxxx2.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\ev_transp_loadxxx2.csv",
+    "sha256": "3d8e3f160c7d8aa376f92f1626083b29b043d92ac25d760e1929a38ddc121454"
+  },
+  "data/ev_transp_loadxxx3.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\ev_transp_loadxxx3.csv",
+    "sha256": "2c64ec098906a59b5ca7f30dec904a3315912a59c671ee03919ea2cede98f4ab"
+  },
+  "data/ev_transp_loadxxx4.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\ev_transp_loadxxx4.csv",
+    "sha256": "9da45a99a8df17b676a838f128987a6f9b0b3340c8dfbbf98f823176b7b9142b"
+  },
+  "data/exogeneous_NH3_demand_distr.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\exogeneous_NH3_demand_distr.csv",
+    "sha256": "6984cb3671109e25f5b9b1aec990aeae0c2066e00ef43e161c9ddf911e243ce4"
+  },
+  "data/flex_tech_efuel_industries10.xlsx": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\flex_tech_efuel_industries10.xlsx",
+    "sha256": "912288589cadd1e45948619925178ad487300d88920ad4683962c4376970d7d0"
+  },
+  "data/flex_tech_HR_2020_2050_sdewes_regular5.xlsx": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\flex_tech_HR_2020_2050_sdewes_regular5.xlsx",
+    "sha256": "7228d467dabf320b3eedb4a7e55dd1155106d1212efc17edca8cfc0323b54515"
+  },
+  "data/flex_tech_HR_2020_2050_sdewes_regular6.xlsx": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\flex_tech_HR_2020_2050_sdewes_regular6.xlsx",
+    "sha256": "3e67efef89f0120e1b828e8724a726d0c0c63714077ddd9029a8ffa7ce80dc42"
+  },
+  "data/flex_tech_HR_efuelxxx3.xlsx": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\flex_tech_HR_efuelxxx3.xlsx",
+    "sha256": "b1f3107d29ea5bda54db901c105f4a8b11b1c325af4d98f78e3aee525a0f72b9"
+  },
+  "data/flex_tech_HR_efuel_4.5.2026.xlsx": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\flex_tech_HR_efuel_4.5.2026.xlsx",
+    "sha256": "3c5079beff2843066fb5f963d5aff9294de251b014681991475078f001ca8255"
+  },
+  "data/flex_tech_HR_efuel_7.5.2026.xlsx": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\flex_tech_HR_efuel_7.5.2026.xlsx",
+    "sha256": "d36db810d6a66fac69fe05e0f17f5f059404e72a5af260ffc52425d3f2fcd461"
+  },
+  "data/flex_tech_no_efuel_yes_categories.xlsx": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\flex_tech_no_efuel_yes_categories.xlsx",
+    "sha256": "c83024dd6fc740cfcd0e23314b88019f5724a32662316d3c7a807771fb0b24ca"
+  },
+  "data/fuel_cost_2020_2050_sdewes_3.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\fuel_cost_2020_2050_sdewes_3.csv",
+    "sha256": "6492c95922843762951c2d34f4ecfaed27df1853fe1037ec5eb6b769a4ede872"
+  },
+  "data/fuel_cost_2020_2050_sdewes_4.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\fuel_cost_2020_2050_sdewes_4.csv",
+    "sha256": "3909309ee78a47983ab001d1ee94b1faabf60837dc014147a155afcce2c55a54"
+  },
+  "data/genco_data_HR_sdewes18.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\genco_data_HR_sdewes18.csv",
+    "sha256": "5b220bd9709ea3847dc4b66447e869d9d8d7b6b7c950a7b9eb862f56f3dd5339"
+  },
+  "data/genco_data_HR_sdewes19.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\genco_data_HR_sdewes19.csv",
+    "sha256": "e1ed4f85eabd73a28c386b8ffaf3b082f7572ab178939ee6c33bf5a426be8d85"
+  },
+  "data/heat_demand_HR_2020_2050_sdewes_DH2.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\heat_demand_HR_2020_2050_sdewes_DH2.csv",
+    "sha256": "437650f9fb49cdb41cf2a16062b90801c0cf020528afd35c2614580cac826d45"
+  },
+  "data/heat_demand_HR_2020_2050_sdewes_indv4.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\heat_demand_HR_2020_2050_sdewes_indv4.csv",
+    "sha256": "278783871d3bbc70667eaedb84f56e8ddaf036f8477401b08fdf9482f97a518e"
+  },
+  "data/heat_demand_industry5.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\heat_demand_industry5.csv",
+    "sha256": "a0b5a792e25d1f7adc1caed224c83221e3b7c3a0ff9f0609c5e818faa9cabf9f"
+  },
+  "data/heat_demand_industry6empty.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\heat_demand_industry6empty.csv",
+    "sha256": "81e7219b61fcfb1d15a5ac24d8da965adeb64c631e3b61ad9b9a05de6c8d348e"
+  },
+  "data/impcosthour.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\impcosthour.csv",
+    "sha256": "929bbd0527cd4606282ef728977c1ac86755eacef43b7ceb6301781e53da2159"
+  },
+  "data/import_export_HR_2020_2050_sdewes1.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\import_export_HR_2020_2050_sdewes1.csv",
+    "sha256": "595c7cf0f804aebdce41112cae5476c643272a774424855c2de9ce7fa46151d3"
+  },
+  "data/industry_hourly_distributions_by_category_ALL_NON_ENERGY.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\industry_hourly_distributions_by_category_ALL_NON_ENERGY.csv",
+    "sha256": "c17146316144680b3796750ba29aeb8c28750c6c95962bf4dac2f1fde1798ad9"
+  },
+  "data/industry_hourly_distributions_by_category_ALL_NON_ENERGY_new.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\industry_hourly_distributions_by_category_ALL_NON_ENERGY_new.csv",
+    "sha256": "a8de07952434d34484fc3fd0c944df057bd9e87e4be82d00aefaf038b1d3ad2c"
+  },
+  "data/industry_hourly_distributions_by_category_ALL_NON_ENERGY_new1.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\industry_hourly_distributions_by_category_ALL_NON_ENERGY_new1.csv",
+    "sha256": "c0612eec9cd91c8085533aac3bcf5e98d1f304f186016fbb055c5eca9eef4084"
+  },
+  "data/logo.jpeg": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\logo.jpeg",
+    "sha256": "248aad4da7990a07e582f2b224790d54bf9aad81549463c8a6fac45d064bd4e7"
+  },
+  "data/ncre_aval_factor_HR_2020_2050_sdewes7.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\ncre_aval_factor_HR_2020_2050_sdewes7.csv",
+    "sha256": "78715dda2826d906190fb630ec63642821f3970570cb1a7baf90c8788f2fafc2"
+  },
+  "data/policy13.xlsx": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\policy13.xlsx",
+    "sha256": "7519b2d00ac2daf7f372d3769a33d0daea109c4987e5ef8011b0f31c48ba048b"
+  },
+  "data/policy14.xlsx": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\policy14.xlsx",
+    "sha256": "b6f910d7cbf4019958ea72aa7532633cb994ea6d2c8af981436341462e3ef10e"
+  },
+  "data/policy_fuels.xlsx": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\policy_fuels.xlsx",
+    "sha256": "8dc16c7ea18eb79a34e6c7c513b4dd13993d59804db2a294313744902e82b8a8"
+  },
+  "data/prices_hourly.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\prices_hourly.csv",
+    "sha256": "5eca61df34572c2ece49876b2c64f5ca8a455ffed55446ddcaddc55e7e46859a"
+  },
+  "data/scaled_inflows_HR_2020_2050_sdewes4.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\scaled_inflows_HR_2020_2050_sdewes4.csv",
+    "sha256": "b57a80b3973a4d69f68ff3a6dd4b4f824adba04ad9b714e8337e577ecd396921"
+  },
+  "data/scaled_inflows_HR_2020_2050_sdewes4_x.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\scaled_inflows_HR_2020_2050_sdewes4_x.csv",
+    "sha256": "8ba646906e02c1f5a91ac824c53ab4885b72021330e866f946c1957539eb2f01"
+  },
+  "data/solar_thermal_aval.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\solar_thermal_aval.csv",
+    "sha256": "5958cb5ad1573cd998b666b7ecad33b1771cd3058be7f46c6b06fd4c362bb94e"
+  },
+  "data/transp_dem.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\transp_dem.csv",
+    "sha256": "6f0e11ad1e2bf91df3c3ac0737be8eb9189c5c2d1c9a1f60c1697b34abf6a7e9"
+  },
+  "data/transp_dem1.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\transp_dem1.csv",
+    "sha256": "d1c168e00b3e5cd08ac8128194efdf4108d9776d9ba052f0831904f3b91882d9"
+  },
+  "data/NH3_case/.~lock.flex_tech_HR_NH3_case.xlsx#": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\.~lock.flex_tech_HR_NH3_case.xlsx#",
+    "sha256": "981d6522099bb1c70d71c986b6d7ba3dd43c8785f35c1b385204b0afca5fb106"
+  },
+  "data/NH3_case/.~lock.genco_macroregions.csv#": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\.~lock.genco_macroregions.csv#",
+    "sha256": "1d89af1798f91038d94ad265f320d8a4d8c714352129beee6dd29588342a5245"
+  },
+  "data/NH3_case/agregate.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\agregate.py",
+    "sha256": "0078b7b3c4c38fc0a0b861607ee77deaebf5bc5c065d908c0184deca6dcb3b4a"
+  },
+  "data/NH3_case/country_edges_per_line_all_europe_with_power.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\country_edges_per_line_all_europe_with_power.csv",
+    "sha256": "92f8e324acbb06e2e35af51777c0b7dfde474e986191862cf0d7be0b9decba3b"
+  },
+  "data/NH3_case/entsoe_demand_2020_macroregions_hourly.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\entsoe_demand_2020_macroregions_hourly.csv",
+    "sha256": "807c19b88d99e32f969d47dd9849b56199f9b422f541f6cf800b9ead04029ecd"
+  },
+  "data/NH3_case/exogeneous_NH3_demand_distr.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\exogeneous_NH3_demand_distr.csv",
+    "sha256": "d36f02b898dd213746322fbb8c2fd85c2ee5cf15916f68b935f5b47b897778f1"
+  },
+  "data/NH3_case/flex_tech_HR_NH3_case.xlsx": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\flex_tech_HR_NH3_case.xlsx",
+    "sha256": "ac173159acb765cda131cbca47f93fa7c8238ffc8ce60bfb379808cc88861912"
+  },
+  "data/NH3_case/fuel_cost_2020_2050_NH3_case.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\fuel_cost_2020_2050_NH3_case.csv",
+    "sha256": "8333be3f9e7240519ca7ec9df67c8a87ad5a326b92a0c8def2cb4be871212531"
+  },
+  "data/NH3_case/genco_macroregions.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\genco_macroregions.csv",
+    "sha256": "ec65b59612703aec579dd2d08e8fbe86f4462fe20f55c92d9658f75de093df54"
+  },
+  "data/NH3_case/genco_macroregions1.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\genco_macroregions1.csv",
+    "sha256": "9e32d06e31bedfcfcde23277fca48287b223edc65a242b284b93f2e87ef01c9c"
+  },
+  "data/NH3_case/genco_macroregions2.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\genco_macroregions2.csv",
+    "sha256": "4ea889ca532ae5225d736451622265b378409d6e002150cd4e51e4c396046631"
+  },
+  "data/NH3_case/genco_macroregions_mix.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\genco_macroregions_mix.csv",
+    "sha256": "a4ba8a72f0def6ff59fb08bff5cf420eee185dc5547153bfe118a20b03a2c5c9"
+  },
+  "data/NH3_case/genco_macroregions_mix_thermal_by_fuel.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\genco_macroregions_mix_thermal_by_fuel.csv",
+    "sha256": "81424477c682d315197c54cf18090b9a765ca318e7ad9fe7d38a0851cfdcc2ea"
+  },
+  "data/NH3_case/HDAM_europe.xlsx": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\HDAM_europe.xlsx",
+    "sha256": "dd36c1afd888e6f06f10ad2016a3a6ff5fd63292b88828f23b6c4ddac2080012"
+  },
+  "data/NH3_case/heat_demand_industry6empty.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\heat_demand_industry6empty.csv",
+    "sha256": "81e7219b61fcfb1d15a5ac24d8da965adeb64c631e3b61ad9b9a05de6c8d348e"
+  },
+  "data/NH3_case/heat_dem_empty_industry.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\heat_dem_empty_industry.csv",
+    "sha256": "632b0e4026398eeeba321c0c47d74bda7e8d22f1bb2286b4e2ff658481c96a4b"
+  },
+  "data/NH3_case/IRENA_Statistics_Extract_2025H2.xlsx": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\IRENA_Statistics_Extract_2025H2.xlsx",
+    "sha256": "176e3083f9e03bdcfd6a177a4b302b1af5a00060117cf654ab3aba548dea8794"
+  },
+  "data/NH3_case/macroregions_capacities.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\macroregions_capacities.csv",
+    "sha256": "989aa67938a05201d0eb74723a613b6bf602ec02242f4dc8a1b1b8f0359b8a93"
+  },
+  "data/NH3_case/macroregions_hourly_profile.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\macroregions_hourly_profile.csv",
+    "sha256": "d54750221ec7913cbebea26ecf8d1aaefd9446cd43c0d032b102aa7de21cb2c2"
+  },
+  "data/NH3_case/macroregion_zone_map.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\macroregion_zone_map.csv",
+    "sha256": "cd2d5f1e7d7b3c13c57a671a0957985366fa0fa790052e1aae7a0b5bbb3ac22c"
+  },
+  "data/NH3_case/macroregion_zone_map_baltics.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\macroregion_zone_map_baltics.csv",
+    "sha256": "867be567307667325b48bb2406f8729c542ea8beaa2052df5355662d3980662e"
+  },
+  "data/NH3_case/policy_NH3_case.xlsx": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\policy_NH3_case.xlsx",
+    "sha256": "a0079843daa54e5ccacd00979d177de7740e00266f611128f517de8fbe9011b8"
+  },
+  "data/NH3_case/scaled_inflows.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\scaled_inflows.csv",
+    "sha256": "6e833457d1f3c8f7b80c971b07e0e3acebb4d9d468d92e09a9ac98a0b4ff4012"
+  },
+  "data/NH3_case/vre_distributions_macroregions.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\vre_distributions_macroregions.csv",
+    "sha256": "5cdea573f800f37a3cf7db8919ea9df82358aeb3e53c847e77eb5bf49e9a4afd"
+  },
+  "data/NH3_case/vre_distribution_curves_2020.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\vre_distribution_curves_2020.csv",
+    "sha256": "66715b7272bfba6f85b15764644c6b7697e25a6f26620d6fa05619e00d2603a0"
+  },
+  "data/NH3_case/vre_distribution_curves_2020_api_calibrated.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\vre_distribution_curves_2020_api_calibrated.csv",
+    "sha256": "8e2e77311544fc2166d3096969d7ed860ef4f754cf1eb18ca48c7e846c734484"
+  },
+  "data/NH3_case/vre_distribution_curves_2020_api_calibrated_long.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\vre_distribution_curves_2020_api_calibrated_long.csv",
+    "sha256": "36a79135f219560c283080d823d608ff5452d5125f9c29a13d832a5ae84f3c99"
+  },
+  "data/NH3_case/vre_distribution_curves_2020_api_calibrated_metadata.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\vre_distribution_curves_2020_api_calibrated_metadata.csv",
+    "sha256": "0409f1e6fd565f3e5dd9c2b8af12d9a85285705bb4b6b3c7512b216385d13f72"
+  },
+  "data/NH3_case/vre_distribution_curves_2020_api_calibrated_v4.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\vre_distribution_curves_2020_api_calibrated_v4.csv",
+    "sha256": "941128e8df6b781c0eda2ff1cc3a2048545c213bdb5d347774ecf8bac7118a61"
+  },
+  "data/NH3_case/vre_distribution_curves_2020_api_calibrated_v4_long.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\vre_distribution_curves_2020_api_calibrated_v4_long.csv",
+    "sha256": "016fdf3deaa4121d6bd0cd6b727938b4c73284338bde281ceb56f05959f3012e"
+  },
+  "data/NH3_case/vre_distribution_curves_2020_api_calibrated_v4_metadata.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\vre_distribution_curves_2020_api_calibrated_v4_metadata.csv",
+    "sha256": "11aef7cce95b271d719014a7013e84faf42689f1481ceefdab0bc3d13c4ef322"
+  },
+  "data/NH3_case/vre_distribution_curves_2020_long.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\vre_distribution_curves_2020_long.csv",
+    "sha256": "9ce8eef3670e7d61965b62a2c18bcbe3b44b41dfeb118b10da3e8474a84cd069"
+  },
+  "data/NH3_case/vre_distribution_curves_2020_metadata.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\vre_distribution_curves_2020_metadata.csv",
+    "sha256": "dc0c696efdb3ac0a8bd6cab92c5b3bb96b036a73f3f8abacc4cca983a91e7724"
+  },
+  "data/NH3_case/vre_macroregion_target_cfs_2020_api_calibrated.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\vre_macroregion_target_cfs_2020_api_calibrated.csv",
+    "sha256": "cef5c1a6c678c5f9e895e1455a64542825c14de27aa6b8f29121af072e92bcb2"
+  },
+  "data/NH3_case/vre_macroregion_target_cfs_2020_api_calibrated_v4.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\NH3_case\\vre_macroregion_target_cfs_2020_api_calibrated_v4.csv",
+    "sha256": "64f1aded5a411e888e621fdaf629434629dbbb9f923ea3f653fb1b859dec85c6"
+  },
+  "data/SC/custom_zones.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\custom_zones.csv",
+    "sha256": "0365f72b2bf71479df68989671b2147f98860e30fdb265fa3c6ad07368a04668"
+  },
+  "data/SC/genco_data_HR_sdewes.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\genco_data_HR_sdewes.csv",
+    "sha256": "7c7e52eca5888c666bddc9fb19f8f232cb33c61aaf8f297d1190991544c3d34d"
+  },
+  "data/SC/HR_asset_layer_metadata.json": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_asset_layer_metadata.json",
+    "sha256": "2794dc0670a4adadaacf835cb806ff905091ae253204b3e18df6e0d187fe13ad"
+  },
+  "data/SC/HR_calibration_metadata.json": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_calibration_metadata.json",
+    "sha256": "03187c0566a65bbcc46022bdc388f87ec4ea9f0dff5e388d74a1a5d104593dd5"
+  },
+  "data/SC/HR_climate_zone_profiles.parquet": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_climate_zone_profiles.parquet",
+    "sha256": "1283321b8a95d7df4fe9794d1523be7f564c5c1c9c39c78e380a2b595e33468b"
+  },
+  "data/SC/HR_data.parquet": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_data.parquet",
+    "sha256": "6dfcba9f0d57f87cfaf44340d77a318b93bc32dbf5f903ede4b587b81a797a63"
+  },
+  "data/SC/HR_macro_climate_metadata.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_macro_climate_metadata.csv",
+    "sha256": "c708b73964da4a85d1ddeb8d4a802136b41ea0a057642636167d32d1cb31a9c6"
+  },
+  "data/SC/HR_macro_climate_profiles.parquet": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_macro_climate_profiles.parquet",
+    "sha256": "98623f16024199ca3898d572a88d4819ff9ffb9c637ef1ff05bb101bdaa15657"
+  },
+  "data/SC/HR_solar_calibration_metadata.json": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_solar_calibration_metadata.json",
+    "sha256": "5c921d8e3f10c1e270916cb1c17506963c7caef32ad90d12638e9fc645237c85"
+  },
+  "data/SC/HR_solar_macro_metadata.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_solar_macro_metadata.csv",
+    "sha256": "2d31e0840b1fa3339acc572769c7c06c585fdae2449dd09031c58a4b3db4f04c"
+  },
+  "data/SC/HR_solar_macro_profiles.parquet": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_solar_macro_profiles.parquet",
+    "sha256": "b3a3e19beee86c720e9e581c228641236c19e6304bd9f69383cab8df8d734d44"
+  },
+  "data/SC/HR_solar_transfer_macro_to_units.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_solar_transfer_macro_to_units.csv",
+    "sha256": "26eed9b7ad2900e735bc17b2c1ace469f2bd63e28919b86c076fb1132b5ae995"
+  },
+  "data/SC/HR_solar_unit_metadata.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_solar_unit_metadata.csv",
+    "sha256": "90ce3d8926062b106792f9c533903eb1e6e46863d7e6df93c2943f6e44eb87b6"
+  },
+  "data/SC/HR_wind_macro_metadata.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_wind_macro_metadata.csv",
+    "sha256": "0a4fbc231d97dd275228f5840565d8c68867b23a26101a5fefcb25acaed8d7a4"
+  },
+  "data/SC/HR_wind_macro_profiles.parquet": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_wind_macro_profiles.parquet",
+    "sha256": "5b63055bd1e5d79af9d3bf2cbb1f1be4641d310603809058e0e343d4ddc39fb4"
+  },
+  "data/SC/HR_wind_nuts_metadata.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_wind_nuts_metadata.csv",
+    "sha256": "bb9d030b3ca1ead20c9a53d7ae496b822cc87b0fc28b33d9aec515d3f6716fe6"
+  },
+  "data/SC/HR_wind_nuts_profiles.parquet": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_wind_nuts_profiles.parquet",
+    "sha256": "1e0e28f40209bba075fdd501594f169db9e84a30936d19a2773f33ab0ec16ddf"
+  },
+  "data/SC/HR_wind_nuts_profiles_compat.parquet": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_wind_nuts_profiles_compat.parquet",
+    "sha256": "dfd42d2c117ac7cb68c41a3b9c5a1eedbaed7d3a06e6b6888807bdcfebb26aec"
+  },
+  "data/SC/HR_wind_sites.parquet": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_wind_sites.parquet",
+    "sha256": "186611cd283434475bdadc5072ce42084d8f7279557b61db038e7aa3fb64b36d"
+  },
+  "data/SC/HR_wind_sites_meta.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_wind_sites_meta.csv",
+    "sha256": "a6d89a25da65c7cbf802c7f8a28fe609b892c0bcdcaa8602e9b6af5eb41d5631"
+  },
+  "data/SC/HR_wind_transfer_macro_to_units.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_wind_transfer_macro_to_units.csv",
+    "sha256": "63e02bf21d0a1e83a51ec93407f6a19bb5558b14bde386ae62c896d2d0782086"
+  },
+  "data/SC/HR_wind_transfer_nuts_to_units.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_wind_transfer_nuts_to_units.csv",
+    "sha256": "d78bb4da371a6a446c2dceca89a1f7ca15ec858104a1d2e43cdd45757a0ff345"
+  },
+  "data/SC/HR_wind_unit_metadata.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_wind_unit_metadata.csv",
+    "sha256": "7d5b31421f9f7cdc86c3dfd484c0788e0ef8066cc4666189086d0061f6810755"
+  },
+  "data/SC/HR_wind_unit_profiles.parquet": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\HR_wind_unit_profiles.parquet",
+    "sha256": "50716ed8507c11be4600f7c6e64be0f5b55189da8fd5f47279c544f74b5895ad"
+  },
+  "data/SC/IRENA_Statistics_Extract_2025H2.xlsx": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\IRENA_Statistics_Extract_2025H2.xlsx",
+    "sha256": "176e3083f9e03bdcfd6a177a4b302b1af5a00060117cf654ab3aba548dea8794"
+  },
+  "data/SC/ncre_aval_factor_HR_2020_2050_sdewes.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\ncre_aval_factor_HR_2020_2050_sdewes.csv",
+    "sha256": "c5dbed7dceebf12641216ef025e75fa9e367d1f824ff9069056618aaf26e70f0"
+  },
+  "data/SC/wind_schema_HR.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\wind_schema_HR.csv",
+    "sha256": "0fde8c6a38fe266b290527309b224f6862f4430aebdef3344fcd7b6a11d20292"
+  },
+  "data/SC/wind_schema_HR_auto.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\wind_schema_HR_auto.csv",
+    "sha256": "e47661887c68fce48bfc323f50a9a175a79829a8372c4477ec2bb25195827664"
+  },
+  "data/SC/xgb_synthetic_scenarios.npy": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\xgb_synthetic_scenarios.npy",
+    "sha256": "d86a855166c24d699d511010184db12d0baf1551f83254b41f661c602d7ae728"
+  },
+  "data/SC/data_per_country/croatia.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\data\\SC\\data_per_country\\croatia.csv",
+    "sha256": "e54ac8317722277f7f341b52c1c8cf76587cd085d85787b9388340a490d23eba"
+  },
+  "scripts/build_historical_climate_data.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\build_historical_climate_data.py",
+    "sha256": "7a276c739d10783375331748066d7aa357aff637ce82c9d6602b4cc35b0d0db7"
+  },
+  "scripts/Build_model_dual_industry_categories_named_debug.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\Build_model_dual_industry_categories_named_debug.py",
+    "sha256": "fe9a416abba01f2ab98e41e270d9471b5e7233d0a404057f2cb02ba13e816b88"
+  },
+  "scripts/CAPEX_OPEX_Gurobi_settings_dual_industry_categories1.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\CAPEX_OPEX_Gurobi_settings_dual_industry_categories1.py",
+    "sha256": "70255c070aee671db22e8a94ddfb3ece030e0a433a27535c473351b07a82e2cb"
+  },
+  "scripts/climate_newshare_adapter.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\climate_newshare_adapter.py",
+    "sha256": "e457b2702768c3e0684da3ddc86c21b0f707496c702239723bd863c5cc4dcbde"
+  },
+  "scripts/climate_runtime_inputs.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\climate_runtime_inputs.py",
+    "sha256": "1549eaaf53e2f4f3aad14682e283baf29b893528f4faf1918e98177df2733840"
+  },
+  "scripts/combine_plot.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\combine_plot.py",
+    "sha256": "05233f9b2f00b92e32a75afdf20ab468d9169021df57ec32bf8fc640bcd64733"
+  },
+  "scripts/export_plot.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\export_plot.py",
+    "sha256": "45fc7f53b7b290adc58fa797184623820b971fc7d4a004d8e2343e3a965b0298"
+  },
+  "scripts/export_plot_myopic_step_shadowprice_fixed.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\export_plot_myopic_step_shadowprice_fixed.py",
+    "sha256": "658ff78c19ac4f216842bf905fda4fb9a7568228cfb30b23e45dd3278ebc60ec"
+  },
+  "scripts/export_plot_perfect_foresight_new.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\export_plot_perfect_foresight_new.py",
+    "sha256": "6b1d7dea13c4cf7764bbcb796cd9973938fb9b89949b2bc424a62781c5e3e4d6"
+  },
+  "scripts/export_plot_PF_new.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\export_plot_PF_new.py",
+    "sha256": "b4d2ac917278453dd9253b3229ca0ff400a5a5d42d80ea7c03e5480922d94503"
+  },
+  "scripts/export_plot_rolling_stitched.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\export_plot_rolling_stitched.py",
+    "sha256": "1cabb4d05681c1fb96c244d730a62b8d75d6554ab4ac99f7de78719850bd17bb"
+  },
+  "scripts/export_stage2_dispatch_bundle.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\export_stage2_dispatch_bundle.py",
+    "sha256": "0bd98896dbcfcad98a67070eaa8e7e2a7125b90823c833fc265654427fcc0e32"
+  },
+  "scripts/reading_prev_and_vars_def.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\reading_prev_and_vars_def.py",
+    "sha256": "f35b3aaa2e1f26e2437e48d9aa211843367cbfe164afd391d3b7f2b34c8a6f00"
+  },
+  "scripts/reading_prev_and_vars_def_dual_industry_categories1.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\reading_prev_and_vars_def_dual_industry_categories1.py",
+    "sha256": "1ea1cb703d0db1f9dab134bb876d70449549973f771b68ef99dd7d2efd2c97b4"
+  },
+  "scripts/read_process_data.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\read_process_data.py",
+    "sha256": "9981c91fa48020416a4bb2dc0d89bbc4cdf737c6079b3a17422aaf20b5426894"
+  },
+  "scripts/run_h2res_climate_workflow.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\run_h2res_climate_workflow.py",
+    "sha256": "94a5ec607907600cfa43f3a30a1876546549581d87ebe7870b4ac9d403748704"
+  },
+  "scripts/run_stage2_rolling_dispatch.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\run_stage2_rolling_dispatch.py",
+    "sha256": "7be9d547eeb1892c814151888ca6bb4ca91d2a340e5f74ffc99ba1b9ab006978"
+  },
+  "scripts/summarize_newshare_climate_runs.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\summarize_newshare_climate_runs.py",
+    "sha256": "a200ac7336f12ba64967776c2d07d58a88233b127c7c6a0de4711d340917f356"
+  },
+  "scripts/temperature_scope.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\temperature_scope.py",
+    "sha256": "e83b96e6940d4ec346664734c89b4a7f6df01baf1631bb5607f8c53d8d8b38ec"
+  },
+  "scripts/train_generate_climate_scenarios.py": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\projects\\electricity_avg\\scripts\\train_generate_climate_scenarios.py",
+    "sha256": "56097bd621db8ebf9349d3b663d42bfcce8554d4b16518f12e8a30368bfbcad8"
+  },
+  "diagnostic_inputs/ncre_aval_factor_avg_yield__normal.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\packages\\electricity_avg\\avg_yield__normal\\data\\ncre_aval_factor_avg_yield__normal.csv",
+    "sha256": "9fe461315935d654578c599bea851421953793b540be5c32b23d47546b9e5c77",
+    "staged_sha256": "ad52d74c8e9e23a052fee2aa069585b49a800263a4e098fd2e927614cc2c71d0"
+  },
+  "diagnostic_inputs/genco_data_avg_yield__normal.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\packages\\electricity_avg\\avg_yield__normal\\data\\genco_data_avg_yield__normal.csv",
+    "sha256": "97e9f6c5eb3a549ea72a2433d61097c95bb4174d80c12b158df823f818d1a229",
+    "staged_sha256": "78e7871767dd3d1cdc2234a9556da0085a856915a9aa84ab42d7f25903b4f300"
+  },
+  "diagnostic_inputs/scaled_inflows_avg_yield__normal.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\packages\\electricity_avg\\avg_yield__normal\\data\\scaled_inflows_avg_yield__normal.csv",
+    "sha256": "4d8d553cdb10cb4f3eb6d97330ce02fbb0ba91eb1832508aa6928fb6f4442dfc",
+    "staged_sha256": "4d8d553cdb10cb4f3eb6d97330ce02fbb0ba91eb1832508aa6928fb6f4442dfc"
+  },
+  "diagnostic_inputs/policy14_avg_yield__normal_myopic5.xlsx": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\packages\\electricity_avg\\avg_yield__normal\\data\\policy14_avg_yield__normal_myopic5.xlsx",
+    "sha256": "513849d0d35df5011a3da3c5d9a42c06d1247fdc02a241679090756dad0821c5",
+    "staged_sha256": "3cd5650a340acef5c0f9b16a992654dda16efb89d50102bc9afd0a07c4b115ac"
+  },
+  "diagnostic_inputs/scenario_summary_avg_yield__normal.json": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\packages\\electricity_avg\\avg_yield__normal\\data\\scenario_summary_avg_yield__normal.json",
+    "sha256": "3b0a96dfb57841a79aa70370d414331cfd34967df96ef37fb03dc4f2405592a4",
+    "staged_sha256": "47ba37d318119eb0ec824d8c3400cccdaf9af8b56d3401b3f11eab90dbb7e4a4"
+  },
+  "diagnostic_inputs/climate_profile_avg_yield__normal.csv": {
+    "source": "E:\\Roko\\remote_access\\final_frozen_profiles_20261031\\packages\\electricity_avg\\avg_yield__normal\\data\\climate_profile_avg_yield__normal.csv",
+    "sha256": "21aa0cfccf0cbc21f9bb2ddf23125ec4c91ceabb13772de98e2defd8b1591c88",
+    "staged_sha256": "21aa0cfccf0cbc21f9bb2ddf23125ec4c91ceabb13772de98e2defd8b1591c88"
+  }
+}

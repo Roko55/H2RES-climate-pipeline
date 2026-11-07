@@ -1,0 +1,140 @@
+{
+  "cases": [
+    {
+      "id": "average",
+      "solar_member": 65,
+      "temperature_member": 65,
+      "wind_member": 65
+    },
+    {
+      "id": "solar_low",
+      "solar_member": 2,
+      "temperature_member": 65,
+      "wind_member": 65
+    },
+    {
+      "id": "solar_high",
+      "solar_member": 28,
+      "temperature_member": 65,
+      "wind_member": 65
+    },
+    {
+      "id": "wind_low",
+      "solar_member": 65,
+      "temperature_member": 65,
+      "wind_member": 20
+    },
+    {
+      "id": "wind_high",
+      "solar_member": 65,
+      "temperature_member": 65,
+      "wind_member": 72
+    },
+    {
+      "id": "temperature_cold",
+      "solar_member": 65,
+      "temperature_member": 41,
+      "wind_member": 65
+    },
+    {
+      "id": "temperature_hot",
+      "solar_member": 65,
+      "temperature_member": 48,
+      "wind_member": 65
+    }
+  ],
+  "climate_adjustments": {
+    "solar_factor_2050": 1.0,
+    "temp_offset_2050": 0.0,
+    "wind_factor_2050": 1.0
+  },
+  "completion": "42 new native planning windows from a common physical 2020 seed.",
+  "created": "2026-11-02T20:09:58.722871+00:00",
+  "design": {
+    "hours": "Native full-year multisector calendar and original overlapping planning windows.",
+    "initial_state": "Identical complete2020 state including generation, heat, storage, transport, transfer, asset ages and all inherited state files.",
+    "later_state": "Each case passes its own realized native investments, retirements and other state to the next planning step.",
+    "model": "Exact accepted full multisector configuration, not the separate electricity or thermal applications.",
+    "reference_occurrences": "SolarAverage, WindAverage and TemperatureNormal all point to the same Average case; do not solve three duplicate references.",
+    "spatial_mapping": "Use the accepted spatial inputs and transfer matrices; verify the unchanged channels after mapping, not only before mapping.",
+    "temperature_application": "Change only the selected complete temperature chronology; retain the existing heat/cooling/COP adapter and normalization conventions. Export annual demand totals, degree hours and COP so the response is interpreted under the executed conventions.",
+    "unmodified_inputs": "All prices, policies, technology assumptions, other weather/hydro inputs, exchange capacities and solver settings remain those of the accepted multisector model.",
+    "weather": "Same selected 8760-hour synthetic profile at every planning year, without additional climate trends.",
+    "years": [
+      2020,
+      2025,
+      2030,
+      2035,
+      2040,
+      2045,
+      2050
+    ]
+  },
+  "interpretation": "Compare the total investment-path response under the chosen low/high or cold/hot profiles. Report input ranges alongside effects; judge interesting results by magnitude, technology shifts and consistency, including small or asymmetric responses. Decide the manuscript emphasis after the full comparison is available.",
+  "objective": "Compare investment and system responses to low/average/high solar, low/average/high wind, and cold/normal/hot temperature in the same full multisector H2RES model.",
+  "outputs": [
+    "scenario_inputs.csv: selected profiles, actual annual/monthly means, yield ranges, heating/cooling degree hours and channel hashes.",
+    "investments_by_technology.csv: realized new capacities and retirements per planning year and scenario, in correct physical units.",
+    "installed_stock.csv: inherited and resulting stock, distinct from newly built capacity.",
+    "investment_costs.csv: source-model investment components and properly reconstructed totals; count each realized investment once and retain model-native monetary conventions.",
+    "system_outcomes.csv: electricity and heat mix, imports,exports,CEEP,direct emissions and thermal operating indicators.",
+    "objective_comparison.csv: native per-window objective and differences from the shared Average; do not sum overlapping windows as a transition cost.",
+    "channel_comparison.csv: low-minus-average,high-minus-average and high-minus-low response with the actual input range for each channel.",
+    "Three matched panels for solar,wind,temperature: investment changes by technology against the same Average, plus one concise cross-channel comparison.",
+    "Verified manifests, numerical reports, stock-handoff audit and a short factual interpretation of each channel's investment response."
+  ],
+  "parallel_execution": {
+    "estimate": "Estimate remaining time from measured wall-clock path progress and export duration after first accepted windows; do not infer current server load from old snapshots.",
+    "initial": "Two licensed paths, four solver threads each; sequential native years within each path.",
+    "overlap": "Export and summarize accepted windows while other paths solve; use a bounded collector and per-worker temporary/cache directories.",
+    "resource_policy": "Retain at least128GiB available RAM after predicted worker growth; use measured peaks with safety margin and conservative48GiB per accepted multisector worker,100GiB before measurements; retain100GiB free disk and existing CPU admission policy.",
+    "server": "Use the existing computation server and its licensed environment; inspect current CPU,RAM,disk and other work immediately before launch.",
+    "stress": "No additional historical stress batch in this first investment comparison. Existing45stress tests retain their own portfolios and scope; optional testing of new portfolios is a separate follow-on decision.",
+    "target": "At most two owned active/reserved sessions; shared provider session decisions are honored.",
+    "within_path": "Sequential2020->2025->2030->2035->2040->2045->2050; native state handoff must be complete and verified before the next solve."
+  },
+  "physical_seed_year": 2020,
+  "preflight": [
+    "Verify frozen ensemble and source manifests; reproduce selection without reading2020-2024 outcomes.",
+    "Freeze channel hashes, source-member IDs, groups, annual means, monthly means, annual yields, degree hours and existing trends.",
+    "Build isolated model/input/output directories once, with a separate scenario name and full execution manifest for each case.",
+    "Compare native numeric inputs for every anchor: solar cases retain identical wind and all thermal inputs; wind cases retain identical solar and all thermal inputs; temperature cases retain identical solar and wind inputs.",
+    "Verify hourly calendar, finite values, CF bounds, night zeros, weighted spatial conservation and complete transfer matrices.",
+    "Verify exact full2020 initial state and that only the intended climate inputs and their documented downstream thermal transforms vary.",
+    "Verify resume/export collector behaviour, unique process identity, atomic checkpoints, objective closure and numerical acceptance before admitting the batch."
+  ],
+  "production_anchors": [
+    2025,
+    2030,
+    2035,
+    2040,
+    2045,
+    2050
+  ],
+  "recovery": [
+    "Separate batch root; never modify previous completed results or the GitHub release source tree.",
+    "Single controller lease, worker identity uses PID+creation time+script and native child-process checks.",
+    "Accepted window marker is written atomically only after solve, numerical checks, objective reconciliation, full state export and hashes.",
+    "Resume from the last fully accepted native state; never repeat an accepted window or launch a duplicate orphan solver.",
+    "Use bounded retries for transient failures; retain logs and stop a path on a deterministic input or quality failure.",
+    "Run a final independent collection even after supervisor interruption, using the accepted original records."
+  ],
+  "required_new_planning_windows": 42,
+  "reuse": {
+    "enabled": false,
+    "reason": "Weather changes in future slices of the first rolling window too."
+  },
+  "source": {
+    "accepted_results": "final_frozen_profiles_20261031/completed_20261101",
+    "ensemble": "Solar_najnoviji_20261031/synthetic_scenarios.npy",
+    "ensemble_sha256": "d86a855166c24d699d511010184db12d0baf1551f83254b41f661c602d7ae728",
+    "member_numbering": "zero_based",
+    "no_new_generator_training": true,
+    "no_reporting_weather_used_for_selection": true,
+    "selection_evidence": "final_frozen_profiles_20261031/completed_20261101/multisector_mapping_checks.json",
+    "selection_rule": "Retain the previously accepted channel donor IDs; no reselection or retraining.",
+    "temperature_index": "z(cooling degree hours above22C) minus z(heating degree hours below18C), using the frozen ensemble and existing implementation."
+  },
+  "source_plan_sha256": "1c544b78e7e5fa06712af23415284685816ef560c011434dc4e46eaf9453ea98",
+  "status": "isolated_preflight"
+}

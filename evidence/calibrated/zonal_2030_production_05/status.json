@@ -1,0 +1,254 @@
+{
+  "pid": 14984,
+  "completed": [
+    {
+      "job": "planning_avg",
+      "status": "optimal_planning",
+      "marker_sha256": "cca4c6b1bcbb14c024065961c03bd2c03f9252d676b752cf79ca81859e187586"
+    },
+    {
+      "job": "planning_low",
+      "status": "optimal_planning",
+      "marker_sha256": "9cc4742e794cc99a6442618be9ffb9efc65d0458843ea077d3c9289df1665899"
+    },
+    {
+      "job": "planning_high",
+      "status": "optimal_planning",
+      "marker_sha256": "6dd870af567eafc01d8845b49a2508bebff65fa0f15cb986ad94712e4f19777e"
+    },
+    {
+      "job": "operation_avg_2020_100",
+      "status": "optimal_operation",
+      "marker_sha256": "57d2c38aa28c82dc57cd90a2ad2b0f491134f9c4a330fbd54fac79e3779ffb0e"
+    },
+    {
+      "job": "operation_low_2020_100",
+      "status": "optimal_operation",
+      "marker_sha256": "de26775632e0a1ee22d35c82b7496456bbb945c00f9046b1c45e1efc0e9827bd"
+    },
+    {
+      "job": "operation_high_2020_100",
+      "status": "optimal_operation",
+      "marker_sha256": "555df609f7319c296a9321952a5d0140688b1bfefc8a86b01887138e41a9dc7d"
+    },
+    {
+      "job": "operation_avg_2020_50",
+      "status": "optimal_operation",
+      "marker_sha256": "c1828e913167da905f17caadff76e49bbea53e872251c5be66635587bb6c0a30"
+    },
+    {
+      "job": "operation_low_2020_50",
+      "status": "optimal_operation",
+      "marker_sha256": "2494bc78f5d458f6a917573a1612e9bee36c48400171aaaab17e47831bd9d808"
+    },
+    {
+      "job": "operation_high_2020_50",
+      "status": "optimal_operation",
+      "marker_sha256": "38c2afa22411e9361413c581970d932fde869842dd4314186c2a450b6d72b583"
+    },
+    {
+      "job": "operation_avg_2020_0",
+      "status": "optimal_operation",
+      "marker_sha256": "e6d2e0f1df6138351da3774b032feb5093b48a6c2fca229510dede094a107a83"
+    },
+    {
+      "job": "operation_low_2020_0",
+      "status": "optimal_operation",
+      "marker_sha256": "4d122a656781d9cea6a66b224dcee7b0ca04f782f2d9e7dcb5406814bceb3ec4"
+    },
+    {
+      "job": "operation_high_2020_0",
+      "status": "optimal_operation",
+      "marker_sha256": "3858011c770510aaeff89d0a139077a4e55ba97954b526ff02ce999035b3271c"
+    },
+    {
+      "job": "operation_avg_2021_100",
+      "status": "optimal_operation",
+      "marker_sha256": "ee1a4fd9d92708c1fab21af43fd4f0246354909339b57acd7e22dc8679d78b2e"
+    },
+    {
+      "job": "operation_low_2021_100",
+      "status": "optimal_operation",
+      "marker_sha256": "030b9f21f9e64bf3cb5cd7f7472163571d8fe312f33278dab167bfafb4149c2c"
+    },
+    {
+      "job": "operation_high_2021_100",
+      "status": "optimal_operation",
+      "marker_sha256": "c2b9767f40193bf22ad9652d234f028cf53f4bd7fe8b43066f7b6eefc37f1248"
+    },
+    {
+      "job": "operation_avg_2021_50",
+      "status": "optimal_operation",
+      "marker_sha256": "64d73dd0fbaf6e9bfb9bd48757ddea2ce1f09005984fc3a91e732fc5681223e8"
+    },
+    {
+      "job": "operation_low_2021_50",
+      "status": "optimal_operation",
+      "marker_sha256": "b4a77ab80ce639d4785fd2c377a819941f04eecd1acabfb405d3bbbe4ffbe7aa"
+    },
+    {
+      "job": "operation_high_2021_50",
+      "status": "optimal_operation",
+      "marker_sha256": "79e050f94554b7febfea4e03c1ef58fe8fb1190db615c67de25f8d8b037d75ed"
+    },
+    {
+      "job": "operation_avg_2021_0",
+      "status": "optimal_operation",
+      "marker_sha256": "8949228cdfcccdb0c744104db5b84355871877bf9ade62c651a47e05a886799e"
+    },
+    {
+      "job": "operation_low_2021_0",
+      "status": "optimal_operation",
+      "marker_sha256": "3fa03d6e4bae7c3aa98fcd4c4d97153270949b69652a404fb3a2debed3402bca"
+    },
+    {
+      "job": "operation_high_2021_0",
+      "status": "optimal_operation",
+      "marker_sha256": "4724dcea2112542a27375db759173f3e5126ada42cb9d6f8a004ff3ca22832b4"
+    },
+    {
+      "job": "operation_avg_2022_100",
+      "status": "optimal_operation",
+      "marker_sha256": "f0aafc7b357715e4473c16af5d9804a7c4f6bb6873a3e76ad15bfbadf715137a"
+    },
+    {
+      "job": "operation_low_2022_100",
+      "status": "optimal_operation",
+      "marker_sha256": "c5459f6d3b477bcb66c8fda7c24182b9f4c74ca9987f981536c43355938e06b9"
+    },
+    {
+      "job": "operation_high_2022_100",
+      "status": "optimal_operation",
+      "marker_sha256": "8588cf48c5b9ff679a4c3c1a41386da2513f83a9ee0d0764b3991b2e436d2636"
+    },
+    {
+      "job": "operation_avg_2022_50",
+      "status": "optimal_operation",
+      "marker_sha256": "f2820d327b8bbd0ce3a74350864c3357ff1a59410efceb63ca15beaab3bcff97"
+    },
+    {
+      "job": "operation_low_2022_50",
+      "status": "optimal_operation",
+      "marker_sha256": "b5601172ff9e08bfd2adb98bcf08e5831d841e9cb0173d6938b60f8ae155b321"
+    },
+    {
+      "job": "operation_high_2022_50",
+      "status": "optimal_operation",
+      "marker_sha256": "5280eb915fb7a86395758f1590587709ccffdd0046b013738b96055bee82de7a"
+    },
+    {
+      "job": "operation_avg_2022_0",
+      "status": "optimal_operation",
+      "marker_sha256": "b8f677349a34103d4c5f3aea71f1f81818cc9f47055566d7ef5ef22f3be053d4"
+    },
+    {
+      "job": "operation_low_2022_0",
+      "status": "optimal_operation",
+      "marker_sha256": "594dc5363fe934a71d879b837e4d744d03552928f7f5a10ab40e3ac257c00a70"
+    },
+    {
+      "job": "operation_high_2022_0",
+      "status": "optimal_operation",
+      "marker_sha256": "ebfc062c67f9d832f35880a6e12377c6daaf93fcb139e901a1bf870a7e7666ad"
+    },
+    {
+      "job": "operation_avg_2023_100",
+      "status": "optimal_operation",
+      "marker_sha256": "cdec63a737e6dbd8dd39ec42dcef9b6e74f5a5e005f34463ccfb623917f9fbf5"
+    },
+    {
+      "job": "operation_low_2023_100",
+      "status": "optimal_operation",
+      "marker_sha256": "0ce111d15951af374dfce56033d28ee9e9ed5a9f6ae270b1d654f24d920b8d3a"
+    },
+    {
+      "job": "operation_high_2023_100",
+      "status": "optimal_operation",
+      "marker_sha256": "c723fa58c8469102c36871044c61215bdec5cfa8ad69d84ba043c9d1120abac2"
+    },
+    {
+      "job": "operation_avg_2023_50",
+      "status": "optimal_operation",
+      "marker_sha256": "c5dfb6774db528b999e03442910418703d56606807be90d6df937ab8dd36567d"
+    },
+    {
+      "job": "operation_low_2023_50",
+      "status": "optimal_operation",
+      "marker_sha256": "f2d664676e2c24d8a8561bc4852e2d82ee6be85fe0a88bdfb9aec3efa0afe945"
+    },
+    {
+      "job": "operation_high_2023_50",
+      "status": "optimal_operation",
+      "marker_sha256": "aa63f408666103a18b508d29a111c5aacd9933c121ff3ef9256fb2ba4bf49bec"
+    },
+    {
+      "job": "operation_avg_2023_0",
+      "status": "optimal_operation",
+      "marker_sha256": "101b3bea7dc0c82ceb009818a6a222d1cce0febfe2fb4d4110ab60d369b0802f"
+    },
+    {
+      "job": "operation_low_2023_0",
+      "status": "optimal_operation",
+      "marker_sha256": "a2e3a298136f34458981027a9087748675d160522b1f69caca84a8ba9c4183f9"
+    },
+    {
+      "job": "operation_high_2023_0",
+      "status": "optimal_operation",
+      "marker_sha256": "fd0b28342418add69ff16e2e08e2604c36cbe8e18b6d823be51a568808f66621"
+    },
+    {
+      "job": "operation_avg_2024_100",
+      "status": "optimal_operation",
+      "marker_sha256": "1a4de60db842bb8a19d90be49668f5727fcb274549201dbdad073c814314668e"
+    },
+    {
+      "job": "operation_low_2024_100",
+      "status": "optimal_operation",
+      "marker_sha256": "f801f6ed607523c2f58b233b664b168b160b459019841609b47a23e0e393a40f"
+    },
+    {
+      "job": "operation_high_2024_100",
+      "status": "optimal_operation",
+      "marker_sha256": "98dcd372c884e67ee728e7753f5b40fdfa2733a3b4cfbfc2f95c3ac961231d28"
+    },
+    {
+      "job": "operation_avg_2024_50",
+      "status": "optimal_operation",
+      "marker_sha256": "3d9a5f69cd50726d8e991f610489ac92a54259484b630ee937d937e8bdef109f"
+    },
+    {
+      "job": "operation_low_2024_50",
+      "status": "optimal_operation",
+      "marker_sha256": "41be7dec295daaf3c687f2cec505d804930c19173143746fbd7721f1da2617f7"
+    },
+    {
+      "job": "operation_high_2024_50",
+      "status": "optimal_operation",
+      "marker_sha256": "fc44dd9f7d228bc9308b81416f59105c02e5a84317519d3c4f2c875a6f141c5e"
+    },
+    {
+      "job": "operation_avg_2024_0",
+      "status": "optimal_operation",
+      "marker_sha256": "304a796fe85a465d1dfb6af96fd0efd376268ef931402b3d6df9b063f7dc7496"
+    },
+    {
+      "job": "operation_low_2024_0",
+      "status": "optimal_operation",
+      "marker_sha256": "1f3af1ba4ff574a6aa4c2bbc22c41da69b7d06e9547f5842c153234d7a7a7f7f"
+    },
+    {
+      "job": "operation_high_2024_0",
+      "status": "optimal_operation",
+      "marker_sha256": "e8130f3578f0825e34e82dfa80db84382813bb695c2c83db18ef11d2acdaa688"
+    }
+  ],
+  "total": 48,
+  "workers": [],
+  "utc": "2026-11-06T15:47:52.565513+00:00",
+  "stage": "completed_verified",
+  "current": null,
+  "max_workers": 2,
+  "resources": null,
+  "pending": 0,
+  "results_sha256": "3a3a8b224a3203d130f8627fdf19e0335a698a255d71fc17765d28de669ae64a"
+}

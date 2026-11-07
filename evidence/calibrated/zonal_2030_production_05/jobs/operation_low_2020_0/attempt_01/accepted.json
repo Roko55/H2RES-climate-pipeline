@@ -1,0 +1,215 @@
+{
+  "case": "low",
+  "weather": 2020,
+  "fraction": 0.0,
+  "hours": 8760,
+  "utc": "2026-11-06T14:43:09.381186+00:00",
+  "diagnostic_sha256": "47d594d1b822203fff2f9ac614abc8dd2092c12bc71c28628ab89cc8e86bde4b",
+  "weather_overlay_sha256": "8ea303ea640989c6056c200e3927515e8144eea310cf0836a3e1572e4c1951e6",
+  "solver": {
+    "solver_status": 2,
+    "solutions": 1,
+    "runtime_seconds": 30.700999975204468,
+    "fingerprint": 682516096,
+    "attempts": [
+      {
+        "method": 2,
+        "status": 2,
+        "runtime_seconds": 16.750999927520752
+      },
+      {
+        "method": 1,
+        "status": 2,
+        "runtime_seconds": 30.700999975204468
+      }
+    ],
+    "objective_model_units": 14134.096757028634,
+    "bound_violation": 0.0,
+    "constraint_violation": 0.0,
+    "objective_closure_error": -1.8189894035458565e-12
+  },
+  "no_new_investment_choices": true,
+  "parent_portfolio_sha256": "e7321be1afb5d7b0768d86edab52d7312d724b1e0a337fe6c7e7dc2f4852c165",
+  "status": "optimal_operation",
+  "objective": {
+    "capex": 2535.684745358354,
+    "fixed_opex": 419.6069561442669,
+    "variable_opex": 11178.805055526012,
+    "operating_excluding_capex": 11598.41201167028,
+    "closure_error": -3.979039320256561e-13,
+    "unit": "native scaled objective units"
+  },
+  "service": {
+    "HR": {
+      "eens_mwh": 0.0,
+      "eens_hours": 0,
+      "ceep_mwh": 1896036.0044939397,
+      "ceep_hours": 1764
+    },
+    "SI": {
+      "eens_mwh": 0.0,
+      "eens_hours": 0,
+      "ceep_mwh": 0.0,
+      "ceep_hours": 0
+    },
+    "BA": {
+      "eens_mwh": 0.0,
+      "eens_hours": 0,
+      "ceep_mwh": 0.0,
+      "ceep_hours": 0
+    }
+  },
+  "croatia": {
+    "unserved_mwh": 0.0,
+    "unserved_hours": 0,
+    "curtailed_mwh": 1896036.0044939397,
+    "curtailed_hours": 1764,
+    "gross_import_mwh": 0.0,
+    "gross_export_mwh": 0.0,
+    "stationary_grid_charge_mwh": 70295.34911994444,
+    "stationary_grid_discharge_mwh": 56939.23278715499,
+    "stationary_simultaneous_hours": 659,
+    "stationary_simultaneous_grid_overlap_mwh": 11495.595243812963,
+    "ceep_limit_active": false,
+    "ceep_limit_fraction": null,
+    "ceep_allowance_from_gross_stationary_charging_mwh": null,
+    "ceep_allowance_from_simultaneous_overlap_mwh": null
+  },
+  "hourly": {
+    "rows": 26280,
+    "zones": {
+      "HR": {
+        "annual": {
+          "load_mwh": 20012798.482489,
+          "eens_mwh": 0.0,
+          "ceep_mwh": 1896036.0044939397,
+          "generation_mwh": 22494173.16434857,
+          "solar_mwh": 1251517.0899003523,
+          "wind_mwh": 10344878.061010651,
+          "gross_import_pre_loss_mwh": 0.0,
+          "import_delivered_mwh": 0.0,
+          "gross_export_sending_mwh": 0.0,
+          "battery_charge_grid_mwh": 70295.34911994444,
+          "battery_discharge_grid_mwh": 56939.23278715499,
+          "battery_overlap_grid_mwh": 11495.595243812963,
+          "reservoir_generation_mwh": 4058725.5992063493,
+          "ror_generation_mwh": 1474078.369075318,
+          "pumped_generation_mwh": 1123622.549996343,
+          "pumped_charge_grid_mwh": 571982.5610328412,
+          "pumped_overlap_grid_mwh": 0.0,
+          "natural_reservoir_mwh_e": 4058725.5992063493,
+          "natural_ror_mwh_e": 1893501.5277777778,
+          "natural_pumped_mwh_e": 737876.0833333334,
+          "hydro_pump_credit_mwh_e": 463305.8744366014,
+          "hydro_spill_mwh_e": 77559.40777359174,
+          "ror_unused_mwh_e": 419423.15870245965,
+          "hydro_storage_delta_mwh_e": 2.7138291613937326e-11
+        },
+        "hours": {
+          "eens_mwh": 0,
+          "ceep_mwh": 1764,
+          "battery_overlap_grid_mwh": 659,
+          "pumped_overlap_grid_mwh": 0
+        },
+        "max_hourly_grid_residual_mwh": 1.3642420526593924e-12,
+        "max_hourly_water_residual_mwh_e": 2.2509993868879974e-10,
+        "annual_water_residual_mwh_e": 0.0
+      },
+      "SI": {
+        "annual": {
+          "load_mwh": 16462900.001555556,
+          "eens_mwh": 0.0,
+          "ceep_mwh": 0.0,
+          "generation_mwh": 13520447.24094661,
+          "solar_mwh": 2251237.884,
+          "wind_mwh": 9183.168,
+          "gross_import_pre_loss_mwh": 4438326.072983131,
+          "import_delivered_mwh": 4438326.072983131,
+          "gross_export_sending_mwh": 739678.7903051864,
+          "battery_charge_grid_mwh": 37543.05027434842,
+          "battery_discharge_grid_mwh": 30409.870722222222,
+          "battery_overlap_grid_mwh": 0.0,
+          "reservoir_generation_mwh": 0.0,
+          "ror_generation_mwh": 3331012.7893518517,
+          "pumped_generation_mwh": 538371.0012810439,
+          "pumped_charge_grid_mwh": 749061.3425168721,
+          "pumped_overlap_grid_mwh": 40879.92275543757,
+          "natural_reservoir_mwh_e": 0.0,
+          "natural_ror_mwh_e": 3334553.75,
+          "natural_pumped_mwh_e": 0.0,
+          "hydro_pump_credit_mwh_e": 538371.0012810437,
+          "hydro_spill_mwh_e": 0.0,
+          "ror_unused_mwh_e": 3540.9606481481524,
+          "hydro_storage_delta_mwh_e": -3.406266935179758e-11
+        },
+        "hours": {
+          "eens_mwh": 0,
+          "ceep_mwh": 0,
+          "battery_overlap_grid_mwh": 0,
+          "pumped_overlap_grid_mwh": 305
+        },
+        "max_hourly_grid_residual_mwh": 9.094947017729282e-13,
+        "max_hourly_water_residual_mwh_e": 3.410605131648481e-13,
+        "annual_water_residual_mwh_e": 0.0
+      },
+      "BA": {
+        "annual": {
+          "load_mwh": 11799999.99175,
+          "eens_mwh": 0.0,
+          "ceep_mwh": 0.0,
+          "generation_mwh": 13853377.86718224,
+          "solar_mwh": 1411241.17991,
+          "wind_mwh": 590042.07,
+          "gross_import_pre_loss_mwh": 4278180.297242814,
+          "import_delivered_mwh": 4278180.297242814,
+          "gross_export_sending_mwh": 5831697.876842045,
+          "battery_charge_grid_mwh": 0.0,
+          "battery_discharge_grid_mwh": 0.0,
+          "battery_overlap_grid_mwh": 0.0,
+          "reservoir_generation_mwh": 4379120.11904765,
+          "ror_generation_mwh": 698677.5798611111,
+          "pumped_generation_mwh": 727556.2834693849,
+          "pumped_charge_grid_mwh": 499860.29583300924,
+          "pumped_overlap_grid_mwh": 0.0,
+          "natural_reservoir_mwh_e": 4379120.119047619,
+          "natural_ror_mwh_e": 700670.5,
+          "natural_pumped_mwh_e": 378481.67063492065,
+          "hydro_pump_credit_mwh_e": 349074.61283446423,
+          "hydro_spill_mwh_e": 0.0,
+          "ror_unused_mwh_e": 1992.9201388888887,
+          "hydro_storage_delta_mwh_e": -4.231992534187157e-11
+        },
+        "hours": {
+          "eens_mwh": 0,
+          "ceep_mwh": 0,
+          "battery_overlap_grid_mwh": 0,
+          "pumped_overlap_grid_mwh": 0
+        },
+        "max_hourly_grid_residual_mwh": 4.547473508864641e-13,
+        "max_hourly_water_residual_mwh_e": 1.7212187231052667e-10,
+        "annual_water_residual_mwh_e": -3.073364496231079e-08
+      }
+    },
+    "flow_meter": "Gross import before model line losses; delivered import after losses; export on the sending side.",
+    "water_meter": "Electrical energy equivalent; pump credit uses native round-trip conversion; spill and unused RoR are separate."
+  },
+  "exchange": {
+    "rows": 87600,
+    "solved": true,
+    "worst_solved_excess_mw": 0.0
+  },
+  "neighbor_exchange": {
+    "rows": 35040,
+    "worst_excess_mw": 0.0
+  },
+  "max_fixed_stock_delta": 0.0,
+  "max_storage_cycle_error": 0.0,
+  "storage_cycles": 8,
+  "files": {
+    "matrix.json": "4760f40f072a062c1b2d8a545abd26c6f34a818b06f42681942865f1c3c8e5e2",
+    "solver_status.json": "624e3e6052b72e118af443d7e423a5dc454e14886fc4d4fa5cbf44bb926659f2",
+    "input_manifest.json": "d05cb57033c539b6e0392e5fc21e071c30a9fd37653cbbb3ce464dc69641ef84",
+    "portfolio.json": "e7321be1afb5d7b0768d86edab52d7312d724b1e0a337fe6c7e7dc2f4852c165",
+    "hourly.csv.gz": "a926844e8ef2b528e8d763e4c920a30b9ae75ce949ab6c49b6e939ec8ee37f1b"
+  }
+}

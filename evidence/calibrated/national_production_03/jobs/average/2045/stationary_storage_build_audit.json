@@ -1,0 +1,15 @@
+{
+  "cyclic": true,
+  "existing": {
+    "Liion_storage/2045": {
+      "energy_mwh": 0.0,
+      "grid_power_mw": 0.0
+    },
+    "Liion_storage/2050": {
+      "energy_mwh": 0.0,
+      "grid_power_mw": 0.0
+    }
+  },
+  "hours": 17520,
+  "spill_grid_meter": true
+}

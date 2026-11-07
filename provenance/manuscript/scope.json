@@ -1,7 +1,19 @@
 {
-  "manuscript_version": "V6",
-  "manuscript_sha256": "54313b834d431079adb30b61e9d4ff5c608a472f66df5651dac70fae208123dd",
+  "manuscript_version": "V6.1",
+  "manuscript_sha256": "2a0bada6c1d530fd762598497608df78473a0cbf4ebedc0c964a7b24e44aebaf",
   "figures": [
+    {
+      "figure": "1",
+      "caption": "Figure 1. Overview of the method.",
+      "file": "results/manuscript/figures/figure_01.png",
+      "sha256": "d0799d8434a1c8c4811f72aa9d11282f9eda3c42339514beed65cf862fd9e41b"
+    },
+    {
+      "figure": "2",
+      "caption": "Figure 2. Common 2020 base and seven planning paths.",
+      "file": "results/manuscript/figures/figure_02.png",
+      "sha256": "48e8f0bdc3cd57d3664ab5f37d8b60356910cb17c963e1232b8764881a7964cb"
+    },
     {
       "figure": "3",
       "caption": "Figure 3. Generated profiles, default H2RES inputs and historical references.",
@@ -30,86 +42,88 @@
       "figure": "7",
       "caption": "Figure 7. Solar cost differences from Average.",
       "file": "results/manuscript/figures/figure_07.png",
-      "sha256": "129a70e3b1f32b10d234a9a1e5be2ab74b834507aefcd9bd09aa4ef828ffc528"
+      "sha256": "f72f7a89b981c6333810e6bef0badeb1f19eae1507fee52fae1bd1884aa6667e"
     },
     {
       "figure": "8",
       "caption": "Figure 8. Solar cost components.",
       "file": "results/manuscript/figures/figure_08.png",
-      "sha256": "f7a2655a2ef6e4da8da2e9f8a8bf8a77f78a0563741a196b5641c63890f4438e"
+      "sha256": "47ea7f9c65bc8752b8d3dbe967e8a97b337288dd912601fbb3b4481b85f83444"
     },
     {
       "figure": "9",
       "caption": "Figure 9. Wind cost differences from Average.",
       "file": "results/manuscript/figures/figure_09.png",
-      "sha256": "0d359441d34e2b9d070768ac418a4c313dacdea92abe0b12e7f8ac8bcdce3055"
+      "sha256": "7140d0ce2a8b245ab6ff5f92be643847063627976f3127f1a3e5cdb51d019530"
     },
     {
       "figure": "10",
       "caption": "Figure 10. Wind cost components.",
       "file": "results/manuscript/figures/figure_10.png",
-      "sha256": "c8159ddcf4112a5779f8afe4e502703442926125b6954b0cf6d237f7f9c32fb4"
+      "sha256": "407d26e30b873fb9d12b6b611618cdbd87881aaaf4360c3aa2179bff765fc4b1"
     },
     {
       "figure": "11",
       "caption": "Figure 11. Temperature cost differences from Average.",
       "file": "results/manuscript/figures/figure_11.png",
-      "sha256": "0254c14dfe2252d3db030842139a0e4a2d269e6a7025aeba7e655d971934e13b"
+      "sha256": "74016422b77b4d5d5a9c5c34ee1580d2e8460c7c73808c952ece4c3011deebc4"
     },
     {
       "figure": "12",
       "caption": "Figure 12. Temperature cost components.",
       "file": "results/manuscript/figures/figure_12.png",
-      "sha256": "013d50e670bf207a6f4f21c1e6a0ea366fd4e6d871fdee779ba2e2bd70cebb02"
+      "sha256": "4319fe56d6ae0226259f19eec8a85ffd434eab3ac8f7bf6418972e4919d6130e"
     },
     {
       "figure": "13",
-      "caption": "Figure 13. Average costs by decision year and cost per demand MWh.",
+      "caption": "Figure 13. Average costs and cost per model-demand MWh.",
       "file": "results/manuscript/figures/figure_13.png",
-      "sha256": "21e2919ffce75396d0918bb399daa10cc4bc42304a34e008189f3958adacde7e"
+      "sha256": "a28c82fcf6b243d22e70be23cd7ebe845422e36ae11d1481cb96a68d5cbbddda"
     },
     {
       "figure": "14",
-      "caption": "Figure 14. Average new electricity and heating capacity by decision year.",
+      "caption": "Figure 14. Average new heating capacity by decision year.",
       "file": "results/manuscript/figures/figure_14.png",
-      "sha256": "0069ba3f4bcde1014e083ec227e5b90a6e24547e93d3283228c4687fa32bfd51"
+      "sha256": "a00b6dfe80a817dbc064c6c171f93a2edc2855f222ed6407c2228cea5a024309"
     },
     {
       "figure": "15a",
-      "caption": "Figure 15(a). Average annual electricity supply and delivered heat.",
+      "caption": "Figure 15(a). Average electricity supply and delivered heat.",
       "file": "results/manuscript/figures/figure_15a.png",
-      "sha256": "a2524ee34910fed525e5a6fcc0a8ce43ade8e4ce0c22ee5477a16ed8508006bd"
+      "sha256": "ad53b9a5e4182c6bc260186d2b5ede5bb70a38a2d9a41c4912eb6d7dd7817905"
     },
     {
       "figure": "15b",
       "caption": "Figure 15(b). Average annual direct domestic CO\u2082 emissions by sector.",
       "file": "results/manuscript/figures/figure_15b.png",
-      "sha256": "54ba256c7ba904476c9c30c8ce0c8a809c3f40f7c9c035d5d8525c4026ba3b95"
+      "sha256": "2df3b013bf80dfa8c804756a611699d87ab6acffcdc8091153340c14c62ed124"
     },
     {
       "figure": "16",
-      "caption": "Figure 16. Surplus electricity in the 45 fixed-portfolio operating tests.",
+      "caption": "Figure 16. Croatian electricity surplus in the 45 operating tests. Asterisks mark cases with unserved demand.",
       "file": "results/manuscript/figures/figure_16.png",
-      "sha256": "d3d078b2ca55a969ed0e285a2d443ccb276495ece9986bded2bad75eff1d0926"
+      "sha256": "9b5709a68af4c86aaab05bdaac758364b4167bbbce7732ba770e250ff4f3a59f"
     }
   ],
-  "planning_experiment": "channel_sensitivity_20261102",
-  "planning_windows": 49,
-  "new_planning_windows": 49,
-  "reused_windows": 0,
+  "planning_experiment": "national_production_03",
+  "planning_windows": 42,
+  "new_planning_windows": 42,
+  "common_calibrated_base_year": 2020,
+  "operational_experiment": "zonal_2030_production_05",
+  "planning_portfolios": 3,
   "operational_cases": 45,
-  "operational_portfolios": "Three fixed 2030 electricity-only Low/Average/High portfolios",
-  "scope": "Results and supporting records for V6 sections 4.1-4.6",
-  "excluded_from_current_results": [
-    "Earlier trend experiment",
-    "Earlier combined-resource and separate thermal planning results",
-    "Autoencoder benchmark",
-    "Additional historical-year planning experiments",
-    "Training-calendar median comparison",
-    "Previous solar-model comparison"
+  "hours": 8760,
+  "zones": [
+    "HR",
+    "SI",
+    "BA"
   ],
-  "previous_releases_preserved": [
-    "v0.5.1",
-    "v0.6.0"
-  ]
+  "source_manifest": "evidence/calibrated/source_manifest.json",
+  "statistical_figures_unchanged": [
+    "3",
+    "4",
+    "5",
+    "6"
+  ],
+  "scope": "Checked V6.1 snapshot; unchanged climate generator and revised calibrated energy cohorts"
 }

@@ -1,0 +1,5 @@
+{
+  "utc": "2026-11-06T07:53:46.575714+00:00",
+  "status": "stopped",
+  "error": "Traceback (most recent call last):\n  File \"E:\\Roko\\remote_access\\national_production_03\\recovery_01\\national_production_recovery.py\", line 136, in run_controller\n    controller.run()\n    ~~~~~~~~~~~~~~^^\n  File \"E:\\Roko\\remote_access\\national_production_03\\national_production_controller.py\", line 95, in run\n    case,case,'0'],cwd=R,env=env,stdin=subprocess.DEVNULL,\n                                       ^^^^^^^^^^^^^^^^^^\nAttributeError: 'types.SimpleNamespace' object has no attribute 'DEVNULL'\n"
+}

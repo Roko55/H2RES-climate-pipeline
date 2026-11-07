@@ -1,0 +1,22 @@
+{
+  "case": "temperature_hot",
+  "job": "temperature_hot",
+  "year": 2040,
+  "window_years": [
+    2040,
+    2045
+  ],
+  "fence": "ade12a1aa972d93a2fd58e95415ef54420104d29519fc614ba843013296e74d8",
+  "inherited_state_sha256": "402a3e44b401a064de1c3c7a85a0bc71737d5d5ac3927612a525b65f809f5a39",
+  "model_fingerprint": -155374162,
+  "hashes": {
+    "heat_demand": "c2f8aa12e88821ea6681ef8032e42d8ba4517227a9cfccecbd57afbec101b675",
+    "cooling_demand": "0db3960be5ea8571fd320f21111791c9ec73c2b51633c31c40fe07e318067b98",
+    "HP_COP_period": "31415865b36d0f36366e97dea8843c3ab025e87a4ac40833d0fa7b143c7c8e45",
+    "aval_factor_plant": "f8af8f139ce818a3d09196ab52f16eeb2cc814df6f0a8e94a472479167f3c620"
+  },
+  "NPV": {
+    "2040": 0.38,
+    "2045": 0.3
+  }
+}

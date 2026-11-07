@@ -1,4 +1,4 @@
-"""Stationary single-channel profiles for the V6 multisector experiment."""
+"""Stationary single-channel profiles for the V6.1 multisector experiment."""
 import hashlib
 import json
 import numpy as np
@@ -6,7 +6,7 @@ import pandas as pd
 from sklearn.cluster import KMeans
 from .release_runtime import accepted_array
 
-YEARS = tuple(range(2020, 2051, 5))
+YEARS = tuple(range(2025, 2051, 5))
 DONORS = {'average': (65, 65, 65), 'solar_low': (2, 65, 65),
           'solar_high': (28, 65, 65), 'wind_low': (65, 20, 65),
           'wind_high': (65, 72, 65), 'temperature_cold': (65, 65, 41),
@@ -15,7 +15,7 @@ DONORS = {'average': (65, 65, 65), 'solar_low': (2, 65, 65),
 
 def channel_cases(root, year):
     if year not in YEARS:
-        raise ValueError('Choose a five-year anchor from 2020 through 2050')
+        raise ValueError('Choose a five-year anchor from 2025 through 2050; 2020 is the common calibrated historical base')
     ensemble = accepted_array(root)
     records = pd.read_csv(root/'results/channel_sensitivity/scenario_inputs.csv')
     cases = {}

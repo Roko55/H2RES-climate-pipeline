@@ -1,0 +1,61 @@
+{
+  "status": "verified_source_comparators",
+  "scope": "Dated capacity and annual meter comparisons for the separate 2030 electricity experiment. These are distinct from simulated 2020 investments, hourly availability and 2030 forecasts.",
+  "bosnia_herzegovina": {
+    "source_url": "https://www.derk.ba/DocumentsPDFs/DERK-Izvjestaj-o-radu-2025-h.pdf",
+    "source_file": "inputs/derk_annual_2025.pdf",
+    "source_sha256": "bf6b1058abf8e4e80abf2b3067d1e5b39712de795c4643bfaa9984cc5e6bd5ef",
+    "pdf_pages": [83, 89],
+    "installed_mw_2025": {"wind": 272.5, "solar": 914.39, "hydro": 2299.29, "pumped_hydro": 420.0, "small_hydro": 171.27, "large_hydro_excluding_pumped": 1708.02, "coal_main_plants": 1965.0, "industrial_power": 92.85, "biomass": 1.12, "biogas": 2.27},
+    "available_mw_2025_by_plant": {"Gacko": 276.0, "Kakanj": 398.0, "Stanari": 283.0, "Tuzla": 550.0, "Ugljevik": 279.0},
+    "annual_2025_gwh": {"gross_balance_demand": 12330.4, "net_of_plant_use_and_pumping": 12252.31, "end_user_demand": 10987.71, "plant_use_and_pumping": 78.09, "transmission_losses": 350.02, "distribution_losses": 914.58},
+    "hydro_scope": "The 18 individually listed large hydro facilities sum to 2236.02 MW. The DERK country total for large hydro is 2128.02 MW after removing Croatia's 108 MW from the Dubrovnik line, so the BA aggregate already retains only BA's 126 MW.",
+    "battery_scope": "No independently verified active dispatchable BA stock from the dated report. The 43.5 MW/174 MWh Zenica registry entry concerns a September 2026 grid-connection decision. Credit zero existing BA grid-dispatchable battery capacity as a scenario assumption.",
+    "battery_source_url": "https://www.nosbih.ba/en/dokumenti/registri/bilansirani-korisnici/"
+  },
+  "slovenia": {
+    "source_url": "https://www.agen-rs.si/documents/10926/38704/Poro%C4%8Dilo-stanju-na-podro%C4%8Dju-energetike-za-leto-2025/86f978f2-3492-48fe-b780-5a055954cb11",
+    "source_file": "inputs/slovenia_energy_agency_2025.pdf",
+    "source_sha256": "b1017332b67c830cda9951b67a68733dc1f0f1cb9bf88015c6aa0760b89c66cf",
+    "pdf_pages": [11, 13, 14, 22, 23],
+    "installed_mw_2025": {"wind": 4.5, "solar": 1626.1, "hydro": 1313.1, "pumped_hydro_generation": 185.0, "pumped_hydro_pumping": 180.0, "other_hydro": 1128.1, "wood_biomass": 19.5, "biogas": 36.5, "municipal_waste": 3.2, "sostanj_total_thermal": 942.0, "gen_group_thermal": 406.0, "energetika_ljubljana_chp": 222.2, "nuclear_model_physical": 696.0},
+    "annual_2025_gwh": {"grid_end_user_demand_including_losses_excluding_pumping": 13228.0, "avce_pumping": 437.0, "distribution_solar_grid_injections": 1118.3, "smaller_producer_solar_including_own_use": 1598.1, "actual_krsko_grid_generation_both_shares": 5540.7},
+    "scope_notes": "The regulator's capacity table reports Slovenia's 50% nuclear ownership share and includes behind-the-meter solar generation. The physical zonal model counts all 696 MW in Slovenia. Do not use the grid-only load meter with unadjusted gross solar output without accounting for own use.",
+    "hydro_source_url": "https://www.hse.si/sl/che-avce-slavnostna-otvoritev-perspektive-energije-se-spreminjajo/",
+    "dispatchable_thermal_crosschecks": {
+      "sostanj_6_net_mw": 542.3,
+      "sostanj_6_gross_mw": 600.0,
+      "sostanj_6_source_url": "https://www.te-sostanj.si/proizvodnja/blok-6/",
+      "sostanj_5_net_mw_cold_reserve": 305.0,
+      "sostanj_5_source_url": "https://www.te-sostanj.si/proizvodnja/blok-5/",
+      "sostanj_gas_generator_mw": 84.0,
+      "sostanj_gas_source_url": "https://www.te-sostanj.si/proizvodnja/plinski-turbini-pe-51-in-52/",
+      "brestanica_installed_mw": 406.0,
+      "brestanica_source_url": "https://www.teb.si/si/proizvodnja/",
+      "ljubljana_gas_net_or_coupled_output_note": "The whole Energetika Ljubljana CHP fleet is 222.2 MW at the reported boundary. PPE-TOL is gas and entered full operation in May 2025. The 2 x 57 MW turbines plus 42 MW steam turbine are individual nominal equipment ratings, not a verified simultaneous power-and-heat limit.",
+      "ljubljana_source_url": "https://www.energetika.si/sites/www.jhl.si/files/dokumenti/letno_porocilo_enlj_2025.pdf"
+    },
+    "verified_battery_assets": [
+      {"name": "Jesenice", "first_year": 2019, "mw": 12.0, "mwh": 24.0, "source": "https://ngen-group.eu/projects/slovenia-jesenice"},
+      {"name": "Talum 1", "first_year": 2020, "mw": 15.0, "mwh": 30.0, "source": "https://ngen-group.eu/projects/slovenia-talum1"},
+      {"name": "Talum 2", "first_year": 2022, "mw": 20.0, "mwh": 40.0, "source": "https://ngen-group.eu/projects/slovenia-talum2"},
+      {"name": "SINCRO.GRID Okroglo and Pekre", "first_year": 2021, "mw": 10.0, "mwh": 50.0, "source": "https://www.eles.si/Portals/0/DSP_ELES_2026-2030_ENG_final.pdf"}
+    ],
+    "verified_grid_battery_mw_mwh_2020": [27.0, 54.0],
+    "verified_grid_battery_mw_mwh_2025": [57.0, 144.0],
+    "battery_scope": "Named projects provide a verified minimum. Their power and energy ratings are separate. ELES reports the two SINCRO.GRID sites as 10 MW/50 MWh together. Talum 3, 70 MW/140 MWh, remains a post-2025 addition whose commissioning was still planned in the project update. Distributed batteries are not assumed fully dispatchable.",
+    "talum_3_source_url": "https://ngen-group.eu/projects/slovenia-talum3"
+  },
+  "croatia_bosnia_crosswalk": {
+    "hops_source_file": "inputs/hops_security_2025.pdf",
+    "hops_source_sha256": "fefca143c34d6bdd5125a7382560629837f14632396c68e3128ec487a38c82b5",
+    "hops_pdf_page": 33,
+    "dubrovnik_croatian_available_mw": 108.0,
+    "dubrovnik_ba_mw": 126.0,
+    "combined_allocated_mw": 234.0,
+    "hep_combined_connection_mw": 235.0,
+    "hep_source_url": "https://www.hep.hr/proizvodnja/UserDocsImages/dokumenti/tehnicki_podaci_hidroelektrane/HE_Dubrovnik.pdf",
+    "zonal_hr_reservoir_candidate_mw": 1358.7,
+    "scope": "The archived 1485.7 MW HR reservoir group includes the whole 235 MW simultaneous connection. For a zonal inventory that already credits BA's 126 MW in BA, replace the 235 MW entry by HOPS's 108 MW HR availability. The historical model run is archived separately. A nameplate reconciliation does not authorize creating or scaling water inflows."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "2025": {
+    "ev_grid_mwh": 28808.219000000005,
+    "ev_terminal_mwh": 28.829733431367004,
+    "hours": 8760,
+    "household_cooling_grid_mwh": 531922.4923333335,
+    "max_native_error_mwh": 0.0
+  },
+  "2030": {
+    "ev_grid_mwh": 160045.662,
+    "ev_terminal_mwh": 160.16518661936985,
+    "hours": 8760,
+    "household_cooling_grid_mwh": 559055.8853333333,
+    "max_native_error_mwh": 0.0
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "dedicated_end_use_mwh": 0.0,
+  "existing_storage_mwh": 0.0,
+  "zero_investment_rows": {
+    "cap_inv_FC": 2,
+    "h2_electrolysis_max_cap": 3,
+    "h2_sto_max_cap": 1
+  }
+}

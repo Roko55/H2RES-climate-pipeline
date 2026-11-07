@@ -1,0 +1,5 @@
+{
+  "utc": "2026-11-06T09:42:39.521620+00:00",
+  "status": "stopped",
+  "error": "Traceback (most recent call last):\n  File \"E:\\Roko\\remote_access\\national_production_03\\recovery_02\\national_production_recovery.py\", line 149, in run_controller\n    raise ValueError('Recovery stopped before all 42 windows were accepted')\nValueError: Recovery stopped before all 42 windows were accepted\n"
+}

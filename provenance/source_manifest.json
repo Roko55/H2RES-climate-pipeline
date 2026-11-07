@@ -8,7 +8,7 @@
     "source_role": "Delivered generation or integration implementation"
   },
   "scripts/channel_profiles.py": {
-    "sha256": "8a39cb7fee3518ebd6664ac8e01f6000cd1f3bdfbf6a3b6dbf94cf9a466752d2",
+    "sha256": "90cc3de49b9cca52cda6939d28c94b949d928ba927afcc8781b071de56abbad8",
     "source_role": "Delivered generation or integration implementation"
   },
   "scripts/channel_runtime.py": {
@@ -16,7 +16,7 @@
     "source_role": "Delivered generation or integration implementation"
   },
   "scripts/final_selection.py": {
-    "sha256": "ac26926b2c075d77dc6c6b09f34864e4d05dae65057347fdb6f662c27de103b1",
+    "sha256": "6e1e960e97d63e3d8c06c15fef1b3527b6213219b1545831f54881fc03964c38",
     "source_role": "Delivered generation or integration implementation"
   },
   "scripts/prepared_thermal.py": {
@@ -54,5 +54,21 @@
   "scripts/xgboost_climate_model.py": {
     "sha256": "a0e5c054f18afe1f8eaca36c11e37ef93d4b8d83d715269ca4779795dd44dc99",
     "source_role": "Delivered generation or integration implementation"
+  },
+  "analysis/channel_results.py": {
+    "sha256": "9a16f1e8a3f33fd0c063fe6e4ae6b5c3288c1813ea70ae26879d95dad944b178",
+    "source_role": "Portable calibrated result verification and summary extraction"
+  },
+  "analysis/manuscript_results.py": {
+    "sha256": "671c167692d7270dc466b6c03610285c2d843b2f48393b92a9555fea138287dd",
+    "source_role": "Portable calibrated result verification and summary extraction"
+  },
+  "analysis/native_results.py": {
+    "sha256": "218e08cd8c6bc02134660763024872b2de8847b0f551540a942389bee38a89f7",
+    "source_role": "Portable calibrated result verification and summary extraction"
+  },
+  "analysis/zonal_results.py": {
+    "sha256": "e9754f15191d71b60f4be4c988320c5f31e5cb840bf73af20e5ce7c05bded17b",
+    "source_role": "Portable calibrated result verification and summary extraction"
   }
 }

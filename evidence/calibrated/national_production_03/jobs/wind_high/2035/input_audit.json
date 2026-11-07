@@ -1,0 +1,22 @@
+{
+  "case": "wind_high",
+  "job": "wind_high",
+  "year": 2035,
+  "window_years": [
+    2035,
+    2040
+  ],
+  "fence": "ade12a1aa972d93a2fd58e95415ef54420104d29519fc614ba843013296e74d8",
+  "inherited_state_sha256": "4c58af7621a0f31dca752a0b1617348ea0434da60519acbf0785848e76a703f5",
+  "model_fingerprint": -951811665,
+  "hashes": {
+    "heat_demand": "c2c78114d1c0cefb18aaac262b367289a8f87ba5977ba86e438d8bce2d573b06",
+    "cooling_demand": "c015ff8a74507365a9014f3fbf09b6c704b93e6c93d3af3dba17261c9bb09154",
+    "HP_COP_period": "31aa37c8c2288fcbbc96e7b7709d9929a1c0241e13241649cefe8aa79481840b",
+    "aval_factor_plant": "b3d747cd4b9cb1565f6e3857ec847d7004a0da04041de64d2b92bab3a5efd537"
+  },
+  "NPV": {
+    "2035": 0.48,
+    "2040": 0.38
+  }
+}

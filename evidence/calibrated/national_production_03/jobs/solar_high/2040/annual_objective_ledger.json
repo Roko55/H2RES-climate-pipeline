@@ -1,0 +1,15 @@
+{
+  "NPV": {
+    "2040": 0.38,
+    "2045": 0.3
+  },
+  "constant": 0.0,
+  "gap": -1.5497207641601562e-05,
+  "meaning": "Original objective contributions by anchor, including one-off investment; not annualized system cost or five-year integral",
+  "objective": 781480132.0425708,
+  "unassigned": 0.0,
+  "values_by_anchor": {
+    "2040": 394720818.87847435,
+    "2045": 386759313.164081
+  }
+}

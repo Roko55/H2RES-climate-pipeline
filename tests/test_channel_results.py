@@ -17,23 +17,23 @@ ROOT = Path(__file__).resolve().parents[1]
 class ChannelResultTests(unittest.TestCase):
     def test_final_inputs_donors_fresh_windows_and_accounting(self):
         report = results.verify_results(ROOT)
-        self.assertEqual(report['input_profile_hashes'], 49)
-        self.assertEqual(report['new_operational_tests'], 0)
-        self.assertEqual(report['new_windows'], 49)
-        self.assertEqual(report['reused_windows'], 0)
+        self.assertEqual(report['input_profile_hashes'], 42)
+        self.assertEqual(report['new_operational_tests'], 45)
+        self.assertEqual(report['new_windows'], 42)
+        self.assertEqual(report['common_calibrated_base_year'], 2020)
 
     def test_stationary_weather_at_all_planning_anchors(self):
-        baseline = channel_cases(ROOT, 2020)
+        baseline = channel_cases(ROOT, 2025)
         for year in range(2025, 2051, 5):
             for case, actual in channel_cases(ROOT, year).items():
                 np.testing.assert_array_equal(actual, baseline[case])
 
-    def test_cli_exports_match_all_49_executed_profile_hashes(self):
+    def test_cli_exports_match_all_42_executed_profile_hashes(self):
         import pipeline
         records = pd.read_csv(ROOT/'results/channel_sensitivity/scenario_inputs.csv')
         (ROOT/'exports').mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(dir=ROOT/'exports') as folder:
-            for year in range(2020, 2051, 5):
+            for year in range(2025, 2051, 5):
                 output = Path(folder)/f'cases_{year}.npz'
                 pipeline.main(['select-final', '--design', 'channel', '--year', str(year),
                                '--output', str(output)])

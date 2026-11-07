@@ -1,0 +1,16 @@
+{
+  "2030": {
+    "delivered_heat_mwh": 826302.0797456247,
+    "direct_site_co2_t": 272758.67155222583,
+    "gas_input_mwh": 1350290.4532288406,
+    "maximum_heat_balance_residual_mwh": 4.405364961712621e-13,
+    "maximum_stock_change_mwh": 150.00000000000006
+  },
+  "2035": {
+    "delivered_heat_mwh": 775454.7216696821,
+    "direct_site_co2_t": 217708.10233267501,
+    "gas_input_mwh": 1077762.8828350247,
+    "maximum_heat_balance_residual_mwh": 6.252776074688882e-13,
+    "maximum_stock_change_mwh": 150.0
+  }
+}

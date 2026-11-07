@@ -1,0 +1,22 @@
+{
+  "case": "solar_low",
+  "job": "solar_low",
+  "year": 2035,
+  "window_years": [
+    2035,
+    2040
+  ],
+  "fence": "ade12a1aa972d93a2fd58e95415ef54420104d29519fc614ba843013296e74d8",
+  "inherited_state_sha256": "4c58af7621a0f31dca752a0b1617348ea0434da60519acbf0785848e76a703f5",
+  "model_fingerprint": 914389396,
+  "hashes": {
+    "heat_demand": "c2c78114d1c0cefb18aaac262b367289a8f87ba5977ba86e438d8bce2d573b06",
+    "cooling_demand": "c015ff8a74507365a9014f3fbf09b6c704b93e6c93d3af3dba17261c9bb09154",
+    "HP_COP_period": "31aa37c8c2288fcbbc96e7b7709d9929a1c0241e13241649cefe8aa79481840b",
+    "aval_factor_plant": "da37c173313a64f6a6aaa88f1646245caa6f29afb5dc2548f4b429b3076c93b3"
+  },
+  "NPV": {
+    "2035": 0.48,
+    "2040": 0.38
+  }
+}

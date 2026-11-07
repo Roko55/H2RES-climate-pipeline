@@ -1,0 +1,303 @@
+{
+  "status": "verified",
+  "windows": 42,
+  "sources": [
+    {
+      "case": "average",
+      "window_start": 2025,
+      "source": "national_production_03/jobs/average/2025/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "f0ad9b46ea9d67da95064d8c17eae7dce77314a4f70b3a66ce86fd8bf1e370e1",
+      "accepted_sha256": "bacf2b5b19a092e7478e48eb6b14f77343f3e628fda717f5e001b3a2267e2775"
+    },
+    {
+      "case": "average",
+      "window_start": 2030,
+      "source": "national_production_03/jobs/average/2030/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "0a1eea86d3535fd7fb50c0120e3418edbc691abe1dbb63078d33cc409fae7e4a",
+      "accepted_sha256": "cabd9aadee9cb942e82a2adcc3ea521e92ed6b549f1cc1771e4f70105233ac84"
+    },
+    {
+      "case": "average",
+      "window_start": 2035,
+      "source": "national_production_03/jobs/average/2035/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "8688e71d32bae83dd72382f5e06c092adab800640c8f1799066277205297fd4a",
+      "accepted_sha256": "4132298f9cdc0a5529a480d754538103ed170a9d9069c605d2a253c28a97e9c6"
+    },
+    {
+      "case": "average",
+      "window_start": 2040,
+      "source": "national_production_03/jobs/average/2040/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "eacba2dadd3a3b5ef5308c09c5fc50f9ccd3d3e2c7d8164f901b4e31db054ef6",
+      "accepted_sha256": "5f7a83b8839ce9785e58fe9c40f61deb561008b685b2e2b9f42472abb8e5aa4b"
+    },
+    {
+      "case": "average",
+      "window_start": 2045,
+      "source": "national_production_03/jobs/average/2045/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "22e27f27b02c3302225af5b54e702473a7c79ec46d5ddc7f9c02d1b562150dc8",
+      "accepted_sha256": "706b05088ccc42c209cebe42576525d876709bde328f6ec90b233c42cf591a80"
+    },
+    {
+      "case": "average",
+      "window_start": 2050,
+      "source": "national_production_03/jobs/average/2050/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "02f3583c298eee2d46acf44e83678f3a1e994e4f8f420471bf85fb0e18f7e185",
+      "accepted_sha256": "ea0908a174fe519608c8bcaa9c6f34dceb080c883b08e432a8d1d9ab061eabab"
+    },
+    {
+      "case": "solar_high",
+      "window_start": 2025,
+      "source": "national_production_03/jobs/solar_high/2025/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "ccf53f277ba57456c4243cf28c6ab0c3e203aced454fc10f3213198e79fac332",
+      "accepted_sha256": "74951b1f3bb2dfebe5c19ec9e3039895a9ce5aa6dbfc811ace4408d714072472"
+    },
+    {
+      "case": "solar_high",
+      "window_start": 2030,
+      "source": "national_production_03/jobs/solar_high/2030/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "136d4edf37805ae95d2d680e5f4f7c8e5f5491fa2e4884250e85f10e2c63752c",
+      "accepted_sha256": "ff40b629fd7c3a65b751de8cececc406bbc126e4649c9524e1e49c000357b524"
+    },
+    {
+      "case": "solar_high",
+      "window_start": 2035,
+      "source": "national_production_03/jobs/solar_high/2035/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "b560952d23db2bbfe3b995fc1c324805864e38cdb9a6c758c519b261af85c464",
+      "accepted_sha256": "1af0a314890a70d952d9b55929d15297b36e7c2982be2a79fe96c2468655efb4"
+    },
+    {
+      "case": "solar_high",
+      "window_start": 2040,
+      "source": "national_production_03/jobs/solar_high/2040/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "e80a509da9ec57d9012f76aacc085211b2185ce87a313c48de46c773a5a20895",
+      "accepted_sha256": "a37adf23349965f32abed06bbde600339d6d7e695fcba1498e1cf249c78d3d35"
+    },
+    {
+      "case": "solar_high",
+      "window_start": 2045,
+      "source": "national_production_03/jobs/solar_high/2045/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "fc0d8c4c0bcc72e9303a072e7f73a58c5557bbe03dfdeaa5eb912cb0c845eff2",
+      "accepted_sha256": "220360c18d3930531d2f0ceb178ea7fb50700365497dd428859f5f05cbeab591"
+    },
+    {
+      "case": "solar_high",
+      "window_start": 2050,
+      "source": "national_production_03/jobs/solar_high/2050/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "de98b4576584192ecc4a9b1af5a89b2da3c359e82bdd81b6fce40ef1852db6ca",
+      "accepted_sha256": "5ef0f74cc929745b784c33e7c86f9ae4e2ae56bd86057385d028c129fda7bb76"
+    },
+    {
+      "case": "solar_low",
+      "window_start": 2025,
+      "source": "national_production_03/jobs/solar_low/2025/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "87fa7e364c19335171f25ca74c46142d3fac8d234a39c5e6758087a3a44cfe48",
+      "accepted_sha256": "19e0a057672a8aa5f2d089cbe6433e123bdc46cbf726215f496d53faf1f9f24f"
+    },
+    {
+      "case": "solar_low",
+      "window_start": 2030,
+      "source": "national_production_03/jobs/solar_low/2030/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "e2b0796ea3589a5abb66237a04a327e6421ed3fead168970b6f892f7d9a9ec4a",
+      "accepted_sha256": "4ca772775bcb111c7d6172e0645467e9582bcf1c5e9de206f4de563d6917d6d0"
+    },
+    {
+      "case": "solar_low",
+      "window_start": 2035,
+      "source": "national_production_03/jobs/solar_low/2035/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "7e1f860db2f499af9c2d9ea62586c36396bfb5b21d45e0d224c8aa451ad8af6c",
+      "accepted_sha256": "90e86e95a7b681fd1d15c2c44641258a150ba039e842175892e47bf825618c6e"
+    },
+    {
+      "case": "solar_low",
+      "window_start": 2040,
+      "source": "national_production_03/jobs/solar_low/2040/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "440e9f91a467d4b6999a9de81a455cad66add2c5fc7e499e6d769a2c4b8277c9",
+      "accepted_sha256": "c64e015c4129640dcfdf047cc1672ade62825672adbebc1cddbd9ff8e3cffd23"
+    },
+    {
+      "case": "solar_low",
+      "window_start": 2045,
+      "source": "national_production_03/jobs/solar_low/2045/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "5f68ebda9ae67171c6d180037a0efda63fffb0ce839c98d091cc67cb3936e49e",
+      "accepted_sha256": "c33cd75f3e0b242d861ac41e1d110cd4f174dec51d15afd56c2385aaa24c6955"
+    },
+    {
+      "case": "solar_low",
+      "window_start": 2050,
+      "source": "national_production_03/jobs/solar_low/2050/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "906aadc20307b6430e3c17ed2b45f8ab133ced4acd01508191d0ee2eec5740a1",
+      "accepted_sha256": "f0c03f673a4a7b83e4b118cae5788279937ca4f68f04742e74b18b2c994b2493"
+    },
+    {
+      "case": "temperature_cold",
+      "window_start": 2025,
+      "source": "national_production_03/jobs/temperature_cold/2025/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "a347c3172cc4574450acb9ab7152edaec7241dd9fea8486dbbab709367e83912",
+      "accepted_sha256": "2ee8fb79d63ba3c13f59521793fc0a12e9e8980f9b822a6caa3668d4c8282238"
+    },
+    {
+      "case": "temperature_cold",
+      "window_start": 2030,
+      "source": "national_production_03/jobs/temperature_cold/2030/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "a5b87c2b6946d4595f6bf340b51c700f61bcd2580ae4b6c639253055d5597665",
+      "accepted_sha256": "9441153e8a31e3c52902e31d82bad631632cb18228ce4ebb83569a4d764ef3bc"
+    },
+    {
+      "case": "temperature_cold",
+      "window_start": 2035,
+      "source": "national_production_03/jobs/temperature_cold/2035/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "f52ca048c14444cdad0ee64daf3533e6672cc96d0004565c5ef6619c5ab5f009",
+      "accepted_sha256": "2395b1d2f73f3fddf304f2e50904bee6b404962ae3acd3f2bc57b71d548e81ad"
+    },
+    {
+      "case": "temperature_cold",
+      "window_start": 2040,
+      "source": "national_production_03/jobs/temperature_cold/2040/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "63e662e10e70c21c0aceb7e29dd68b177048d7cf4add5b921a7a100c97e997fb",
+      "accepted_sha256": "fac606306cfdd1672f79dcf7781c76f79c2b318d2603484ef53a728ccf6ca7c7"
+    },
+    {
+      "case": "temperature_cold",
+      "window_start": 2045,
+      "source": "national_production_03/jobs/temperature_cold/2045/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "2d124e85b9c6bdf768857e22a62e86b6fbce33971812a941894165db962bb4ce",
+      "accepted_sha256": "3135ecb91ed4e7adf44e0d7f7e58a36b471d0f1bafda1b48fc70b2ecd3b7af14"
+    },
+    {
+      "case": "temperature_cold",
+      "window_start": 2050,
+      "source": "national_production_03/jobs/temperature_cold/2050/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "ce3645211d0513fc2143ddfcf5d3d8ddd535d9f7be9fffff7ff9432fb613e890",
+      "accepted_sha256": "92eae12dd5e0cc077e270fba5f79b20ab8976e8f380668f8df4ad69c16dcb713"
+    },
+    {
+      "case": "temperature_hot",
+      "window_start": 2025,
+      "source": "national_production_03/jobs/temperature_hot/2025/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "082873dc8bc6ad6d2158181a65af4dd258616f960dc4dd9239b11c371d9ba339",
+      "accepted_sha256": "58d156eb24dfb02448c838fac85c6b5dca87d53fe2e9f528d4afa4769461a7c9"
+    },
+    {
+      "case": "temperature_hot",
+      "window_start": 2030,
+      "source": "national_production_03/jobs/temperature_hot/2030/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "c8d038ab8bae3b646344b79a4dc07d7fd433bdef127021a83b37a7e4b12bd7ce",
+      "accepted_sha256": "447a6d55d6217aa32c8aaa8a0e3df02aaf56cfe6adf4900b592fb2b0216149eb"
+    },
+    {
+      "case": "temperature_hot",
+      "window_start": 2035,
+      "source": "national_production_03/jobs/temperature_hot/2035/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "e3a86e36b5592630286995a5d15f4cec55acd3888de92f328a6ec995d3eab5a9",
+      "accepted_sha256": "8c70100e5be5d40428812cef0d73baaf8afd5533492ed14216e61ea5014c3749"
+    },
+    {
+      "case": "temperature_hot",
+      "window_start": 2040,
+      "source": "national_production_03/jobs/temperature_hot/2040/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "56f9b0b000a97464b0d0b0dee366b32bcb91e689999edb02968b85dbebac0fbe",
+      "accepted_sha256": "93b8c63d0d3519f0fd3d8911dc1ceb65a38acbffe423b0ae16474b46e786b011"
+    },
+    {
+      "case": "temperature_hot",
+      "window_start": 2045,
+      "source": "national_production_03/jobs/temperature_hot/2045/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "041c6b2c7a00e853d8ccb38bc1f40646211dc7ae20efa2cdca75db8b665af279",
+      "accepted_sha256": "1b39d7544da61d7126b7d7d6536092b163e612e5f863c04123e61628e8788077"
+    },
+    {
+      "case": "temperature_hot",
+      "window_start": 2050,
+      "source": "national_production_03/jobs/temperature_hot/2050/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "04f67f863cec7ce5b4d9befd790f35b857b3f753380fa1789a4ff69b1038fea8",
+      "accepted_sha256": "2027e39c90f97fee89330639fb04e54621a1c81d2672115575abda10614097dc"
+    },
+    {
+      "case": "wind_high",
+      "window_start": 2025,
+      "source": "national_production_03/jobs/wind_high/2025/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "7b0e380212fc57525059691ef7e46a0ac05fd61f0611096c6c8071a6c280f6f2",
+      "accepted_sha256": "c252c5135afd4fda7dd0db14ae5950890d87df096de8a42d8d72a2788d2f7705"
+    },
+    {
+      "case": "wind_high",
+      "window_start": 2030,
+      "source": "national_production_03/jobs/wind_high/2030/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "20030a59c1302ee09d3e8c97d2ff48ed7f63b0c43aaf1dd80f96ffe089dcedb7",
+      "accepted_sha256": "23ba5990c270361764e5c8812e470e84cd715be6d89fa62931dd6446d4309bc9"
+    },
+    {
+      "case": "wind_high",
+      "window_start": 2035,
+      "source": "national_production_03/jobs/wind_high/2035/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "7f2f948216eba2b9a579fe67ca0941de86ef3ffa3bb59d646e50b8bf4871e2f8",
+      "accepted_sha256": "dd06d73807d0e164affbfb8b7fd2a556cbd47fa81e5e15d6e22666e42531ee8b"
+    },
+    {
+      "case": "wind_high",
+      "window_start": 2040,
+      "source": "national_production_03/jobs/wind_high/2040/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "8d464856e4e84c62bef0fed62ff89dd55ba39d84bff4738485949d5908a67154",
+      "accepted_sha256": "65451715db4c7648c2cdff303d81184e3916e1ecf3bb96d9bd7facd1b0b1eac8"
+    },
+    {
+      "case": "wind_high",
+      "window_start": 2045,
+      "source": "national_production_03/jobs/wind_high/2045/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "b75d0b2b4df45d2660d88fda35a4a6af96ba7f1f596f35169b2760c3c5938d9e",
+      "accepted_sha256": "7db41b1061ed4be42928efdcc3f6dce11536d25b774fc5c1b6aee33e4981a62b"
+    },
+    {
+      "case": "wind_high",
+      "window_start": 2050,
+      "source": "national_production_03/jobs/wind_high/2050/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "a3408015addb9afaba76e0441184bc71074aae5e29c58f67be18dd95bf9a1056",
+      "accepted_sha256": "fa41b87d011fb550f07c0da4676000c5952b8750a181b7bf8ad51d05e89050b9"
+    },
+    {
+      "case": "wind_low",
+      "window_start": 2025,
+      "source": "national_production_03/jobs/wind_low/2025/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "5456cb10b736209a878174df16cbb69d82360d011310e60bc5a8be03277a19fe",
+      "accepted_sha256": "b115a38de5de47bacff89d8a96eb4a565e892b83e8b08625cafe82d690be4b0e"
+    },
+    {
+      "case": "wind_low",
+      "window_start": 2030,
+      "source": "national_production_03/jobs/wind_low/2030/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "3aacb3c12820fdb1422bfa6e2b0d6e2a6271b9f231081053ce6194f053f1a531",
+      "accepted_sha256": "c93d545c3f17da4ea37c5e5f4f0bd67da8bf093fabe3988bae8a062951b183f6"
+    },
+    {
+      "case": "wind_low",
+      "window_start": 2035,
+      "source": "national_production_03/jobs/wind_low/2035/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "e5ce35a20e9af5d43391743f50c8416fd186191ae93192f1886f1c6c3a118fbd",
+      "accepted_sha256": "696ccd14610ebb405a711942239bc09db095fae8be616c76ec547eaefb3d0395"
+    },
+    {
+      "case": "wind_low",
+      "window_start": 2040,
+      "source": "national_production_03/jobs/wind_low/2040/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "ed705f3bc7bb2d7fa3bb240311eb66ba3c4eb9cf723c5fa0ed3249dc3e8b5fca",
+      "accepted_sha256": "b7dee4befe2e98464789d0ec640110eff494772dde0aba45cb03febe0269f31e"
+    },
+    {
+      "case": "wind_low",
+      "window_start": 2045,
+      "source": "national_production_03/jobs/wind_low/2045/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "a7e40d307a296cecac7979599fc67f5c8e346d460250595132aa7e181896e176",
+      "accepted_sha256": "10600d364cbfb4801cf90f806f0cc09a66e1f6512e86c0300e79f2721ef79b89"
+    },
+    {
+      "case": "wind_low",
+      "window_start": 2050,
+      "source": "national_production_03/jobs/wind_low/2050/runtime_accounting_inputs.csv.gz",
+      "source_sha256": "de55a02aeaa378ad4a1066361e00bcf1ea1531866ef79a2a707e6587b0f27fbf",
+      "accepted_sha256": "c2694a6353d635fcbeecb635669b98aca2c1b7700f9cefab9930b9e8d997a564"
+    }
+  ],
+  "statistics_sha256": "8e6508705fe442ad023894db7851f6adf14df450ad44832f8962825f45453a64",
+  "derivation_script_sha256": "2d29662a5f2f9aa4b78ac5e2a965db8a2304d79480340778e39e7b76e30d4108",
+  "new_optimization": false
+}

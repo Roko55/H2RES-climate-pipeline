@@ -1,0 +1,75 @@
+{
+  "utc": "2026-11-06T14:04:36.994315+00:00",
+  "status": "completed_verified",
+  "pid": 22788,
+  "execution_fence": "ade12a1aa972d93a2fd58e95415ef54420104d29519fc614ba843013296e74d8",
+  "completed": {
+    "average": [
+      2025,
+      2030,
+      2035,
+      2040,
+      2045,
+      2050
+    ],
+    "solar_low": [
+      2025,
+      2030,
+      2035,
+      2040,
+      2045,
+      2050
+    ],
+    "solar_high": [
+      2025,
+      2030,
+      2035,
+      2040,
+      2045,
+      2050
+    ],
+    "wind_low": [
+      2025,
+      2030,
+      2035,
+      2040,
+      2045,
+      2050
+    ],
+    "wind_high": [
+      2025,
+      2030,
+      2035,
+      2040,
+      2045,
+      2050
+    ],
+    "temperature_cold": [
+      2025,
+      2030,
+      2035,
+      2040,
+      2045,
+      2050
+    ],
+    "temperature_hot": [
+      2025,
+      2030,
+      2035,
+      2040,
+      2045,
+      2050
+    ]
+  },
+  "failed": {},
+  "current_case": null,
+  "resources": {
+    "available_ram_gib": 730.56,
+    "available_disk_gib": 766.08,
+    "other_gurobi_process_count": 0,
+    "inaccessible_python_count": 0,
+    "ready": true
+  },
+  "worker": null,
+  "last_worker_progress": null
+}

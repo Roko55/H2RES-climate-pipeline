@@ -1,0 +1,13 @@
+{
+  "boiler_stock_mw": 348.0,
+  "district_initial_and_terminal_mwh": 375.0,
+  "first_hour_inflows_verified": true,
+  "fuel": {
+    "boiler_efficiency": 0.9000020659372365,
+    "carbon_price_applies_to_power_terms": true,
+    "effective_chp_efficiency": 0.4684032141491073,
+    "hourly_fuel_rows": 17520,
+    "total_efficiency_ceiling": 0.95
+  },
+  "storage_power_rows": 35040
+}

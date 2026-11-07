@@ -1,0 +1,355 @@
+{
+  "native": {
+    "year": 2030,
+    "hours": 8760,
+    "zone_balances": 26280,
+    "zones": [
+      [
+        "BA1",
+        "BA"
+      ],
+      [
+        "HR1",
+        "HR"
+      ],
+      [
+        "SI1",
+        "SI"
+      ]
+    ],
+    "operating_multiplier": 4.428571428571429,
+    "variables": 1270606,
+    "constraints": 1428179,
+    "nonzeros": 6144188,
+    "fingerprint": -662350121,
+    "active_native_inputs": {
+      "flex_tech_dat": "data\\flex_tech_HR_2020_2050_sdewes_regular6.xlsx",
+      "genco_dat": "diagnostic_inputs\\genco_data_avg_yield__normal.csv",
+      "policy_dat": "diagnostic_inputs\\policy14_avg_yield__normal_myopic5.xlsx",
+      "el_hourly_cost_dat": "data\\prices_hourly.csv",
+      "fuel_price_dat": "data\\fuel_cost_2020_2050_sdewes_4.csv",
+      "demand_dat": "data\\demand_2020_2050_sdewes8.csv",
+      "demand_industry_el": "data\\demand_industry_el1.csv",
+      "demand_heating_el": "data\\demand_heating_el1.csv",
+      "inflows_dat": "diagnostic_inputs\\scaled_inflows_avg_yield__normal.csv",
+      "avl_factor_plant_dat": "diagnostic_inputs\\ncre_aval_factor_avg_yield__normal.csv"
+    },
+    "spatial_cf": {
+      "HR_Wind_HR032": {
+        "hours": 8760,
+        "matrix_rows": 8760,
+        "min": 0.0,
+        "max": 1.0,
+        "max_error": 2.220446049250313e-16
+      },
+      "HR_Wind_HR033": {
+        "hours": 8760,
+        "matrix_rows": 8760,
+        "min": 0.0,
+        "max": 1.0,
+        "max_error": 2.220446049250313e-16
+      },
+      "HR_Wind_HR034": {
+        "hours": 8760,
+        "matrix_rows": 8760,
+        "min": 0.0,
+        "max": 1.0,
+        "max_error": 2.220446049250313e-16
+      },
+      "HR_Wind_HR035": {
+        "hours": 8760,
+        "matrix_rows": 8760,
+        "min": 0.0,
+        "max": 1.0,
+        "max_error": 2.220446049250313e-16
+      },
+      "HR_Wind_HR037": {
+        "hours": 8760,
+        "matrix_rows": 8760,
+        "min": 0.0,
+        "max": 1.0,
+        "max_error": 2.220446049250313e-16
+      },
+      "HR_Solar_HR_COAST_SOUTH": {
+        "hours": 8760,
+        "matrix_rows": 8760,
+        "min": 0.0,
+        "max": 0.6212205309153702,
+        "max_error": 1.1102230246251565e-16
+      },
+      "HR_Solar_HR_NORTH_CENTRAL": {
+        "hours": 8760,
+        "matrix_rows": 8760,
+        "min": 0.0,
+        "max": 0.5649101418936252,
+        "max_error": 1.1102230246251565e-16
+      },
+      "HR_Solar_HR_EAST": {
+        "hours": 8760,
+        "matrix_rows": 8760,
+        "min": 0.0,
+        "max": 0.5767122136427388,
+        "max_error": 1.1102230246251565e-16
+      }
+    },
+    "krsko_mw": 696,
+    "exchange": {
+      "fraction": 0.0,
+      "native": {
+        "primary_ratings": 4,
+        "outside_ratings": 3,
+        "rows_verified_from_native_columns": 7,
+        "primary_hourly_chain_rows": 35040,
+        "direction_rows": {
+          "hr_primary_rows": 70080,
+          "hr_outside_rows": 17520,
+          "other_rows": 35040,
+          "max_hr_link_flow_mwh": null
+        }
+      },
+      "envelope": {
+        "rows": 87600,
+        "solved": false,
+        "worst_solved_excess_mw": null
+      },
+      "interpretation": "NTC envelope, not a full flow-based network"
+    },
+    "prices": {
+      "pairs": 26280,
+      "min_spread": 5.647597049999977e-09,
+      "negative_buy_coefficients": 69,
+      "import_objective_coefficients": [
+        -0.0002552659027081857,
+        0.0019691385227878573
+      ],
+      "export_objective_coefficients": [
+        -0.0018706815966484645,
+        0.0002687009502191428
+      ]
+    }
+  },
+  "physical": {
+    "demand_annual_mwh": {
+      "HR": 20012798.482489,
+      "SI": 16462900.001555556,
+      "BA": 11799999.99175
+    },
+    "battery": {
+      "removed_mandatory_minimum": [
+        "stat_storage_inv_min_period[SI1,SI,2030,Liion_storage]",
+        "stat_storage_inv_min_period[HR1,HR,2030,Liion_storage]",
+        "stat_storage_inv_min_period[BA1,BA,2030,Liion_storage]"
+      ],
+      "power_rows": 26280,
+      "new_grid_duration_hours": 2.0
+    },
+    "generation": {
+      "checked_dated_units": 61,
+      "production_approved": false,
+      "annual_power_ceiling_mwh": {
+        "HR_Biomass_Existing": 618958.621,
+        "HR_Biogas_Existing": 333100.0
+      },
+      "power_balance_roster": {
+        "units": {
+          "HR_Biogas_Existing": {
+            "system": "HR",
+            "zone": "HR1",
+            "fuel": "Biogas",
+            "existing_mw": 60.0,
+            "efficiency": 0.38,
+            "co2_t_per_mwh": 0.0,
+            "native_var_cost": 55.78947368421052
+          },
+          "Waste_SI": {
+            "system": "SI",
+            "zone": "SI1",
+            "fuel": "Waste",
+            "existing_mw": 3.2,
+            "efficiency": 0.35,
+            "co2_t_per_mwh": 0.123,
+            "native_var_cost": 10.285714285714286
+          }
+        },
+        "rows": 17520
+      },
+      "dated_units_in_grid_balance": 44
+    },
+    "hydro": {
+      "HDAM_HR": {
+        "system": "HR",
+        "category": "reservoir",
+        "capacity_mw": 1358.7,
+        "storage_gwh": 1780.856,
+        "pump_mw": null,
+        "source_annual_mwh": {
+          "reservoir": 4058725.5992063493
+        },
+        "natural_water_above_ror_turbine_mwh": 0.0,
+        "hours_above_ror_turbine": 0,
+        "terminal_cycle": true,
+        "hours": 8760
+      },
+      "HPHS_HR": {
+        "system": "HR",
+        "category": "open_pumped",
+        "capacity_mw": 275.4,
+        "storage_gwh": 14.8,
+        "pump_mw": 240.0,
+        "source_annual_mwh": {
+          "open_pumped": 737876.0833333334
+        },
+        "natural_water_above_ror_turbine_mwh": 0.0,
+        "hours_above_ror_turbine": 0,
+        "terminal_cycle": true,
+        "hours": 8760
+      },
+      "HROR_HR": {
+        "system": "HR",
+        "category": "run_of_river",
+        "capacity_mw": 438.3,
+        "storage_gwh": 0.0,
+        "pump_mw": null,
+        "source_annual_mwh": {
+          "pondage": 1627179.611111111,
+          "run_of_river": 266321.9166666667
+        },
+        "natural_water_above_ror_turbine_mwh": 0.0,
+        "hours_above_ror_turbine": 0,
+        "terminal_cycle": false,
+        "hours": 8760
+      },
+      "HPHS_SI": {
+        "system": "SI",
+        "category": "open_pumped",
+        "capacity_mw": 185.0,
+        "storage_gwh": 2.6,
+        "pump_mw": 180.0,
+        "source_annual_mwh": {
+          "open_pumped": 0.0
+        },
+        "natural_water_above_ror_turbine_mwh": 0.0,
+        "hours_above_ror_turbine": 0,
+        "terminal_cycle": true,
+        "hours": 8760
+      },
+      "HROR_SI": {
+        "system": "SI",
+        "category": "run_of_river",
+        "capacity_mw": 1128.1,
+        "storage_gwh": 0.0,
+        "pump_mw": null,
+        "source_annual_mwh": {
+          "pondage": 2902041.222222222,
+          "run_of_river": 432512.52777777775
+        },
+        "natural_water_above_ror_turbine_mwh": 0.0,
+        "hours_above_ror_turbine": 0,
+        "terminal_cycle": false,
+        "hours": 8760
+      },
+      "HDAM_BA": {
+        "system": "BA",
+        "category": "reservoir",
+        "capacity_mw": 1619.29,
+        "storage_gwh": 1669.0,
+        "pump_mw": null,
+        "source_annual_mwh": {
+          "reservoir": 4379120.119047619
+        },
+        "natural_water_above_ror_turbine_mwh": 0.0,
+        "hours_above_ror_turbine": 0,
+        "terminal_cycle": true,
+        "hours": 8760
+      },
+      "HPHS_BA": {
+        "system": "BA",
+        "category": "open_pumped",
+        "capacity_mw": 420.0,
+        "storage_gwh": 3.4,
+        "pump_mw": 420.0,
+        "source_annual_mwh": {
+          "open_pumped": 378481.67063492065
+        },
+        "natural_water_above_ror_turbine_mwh": 0.0,
+        "hours_above_ror_turbine": 0,
+        "terminal_cycle": true,
+        "hours": 8760
+      },
+      "HROR_BA": {
+        "system": "BA",
+        "category": "run_of_river",
+        "capacity_mw": 260.0,
+        "storage_gwh": 0.0,
+        "pump_mw": null,
+        "source_annual_mwh": {
+          "pondage": 613389.25,
+          "run_of_river": 87281.25
+        },
+        "natural_water_above_ror_turbine_mwh": 0.0,
+        "hours_above_ror_turbine": 0,
+        "terminal_cycle": false,
+        "hours": 8760
+      }
+    },
+    "si_ba_directional_rows": 35040,
+    "no_optimization": true
+  },
+  "capex": {
+    "HR_Wind_HR032": {
+      "source_model_units": 0.99,
+      "active_row_coefficient": 0.8316,
+      "life_fraction": 0.84
+    },
+    "HR_Wind_HR033": {
+      "source_model_units": 0.99,
+      "active_row_coefficient": 0.8316,
+      "life_fraction": 0.84
+    },
+    "HR_Wind_HR034": {
+      "source_model_units": 0.99,
+      "active_row_coefficient": 0.8316,
+      "life_fraction": 0.84
+    },
+    "HR_Wind_HR035": {
+      "source_model_units": 0.99,
+      "active_row_coefficient": 0.8316,
+      "life_fraction": 0.84
+    },
+    "HR_Wind_HR037": {
+      "source_model_units": 0.99,
+      "active_row_coefficient": 0.8316,
+      "life_fraction": 0.84
+    },
+    "HR_Solar_HR_COAST_SOUTH": {
+      "source_model_units": 0.504,
+      "active_row_coefficient": 0.42336,
+      "life_fraction": 0.84
+    },
+    "HR_Solar_HR_NORTH_CENTRAL": {
+      "source_model_units": 0.504,
+      "active_row_coefficient": 0.42336,
+      "life_fraction": 0.84
+    },
+    "HR_Solar_HR_EAST": {
+      "source_model_units": 0.504,
+      "active_row_coefficient": 0.42336,
+      "life_fraction": 0.84
+    },
+    "Liion_storage_SI": {
+      "source_model_units": 0.15,
+      "active_row_coefficient": 0.15,
+      "life_fraction": 1.0
+    },
+    "Liion_storage_HR": {
+      "source_model_units": 0.15,
+      "active_row_coefficient": 0.15,
+      "life_fraction": 1.0
+    },
+    "Liion_storage_BA": {
+      "source_model_units": 0.15,
+      "active_row_coefficient": 0.15,
+      "life_fraction": 1.0
+    }
+  }
+}

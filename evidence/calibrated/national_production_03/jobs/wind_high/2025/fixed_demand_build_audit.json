@@ -1,0 +1,16 @@
+{
+  "2025": {
+    "excluded_reference_electric_heat_mwh": 1432435.8503699,
+    "excluded_reference_pumping_mwh": 228980.0,
+    "hours": 8760,
+    "status": "built_fixed_ev_passed",
+    "year": 2025
+  },
+  "2030": {
+    "excluded_reference_electric_heat_mwh": 1386913.6096632017,
+    "excluded_reference_pumping_mwh": 228980.0,
+    "hours": 8760,
+    "status": "built_fixed_ev_passed",
+    "year": 2030
+  }
+}

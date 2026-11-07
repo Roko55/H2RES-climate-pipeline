@@ -1,34 +1,4 @@
 year,technology,unit,new_capacity
-2020,Air-to-water HP,MW,0.0
-2020,Alkaline_EC,MW,0.0
-2020,CHP,MW,0.0
-2020,District gas boiler,MW,0.0
-2020,Electric boiler,MW,0.0
-2020,Geothermal HP,MW,0.0
-2020,HECombo,MW,0.0
-2020,HEDubrovnik_HR,MW,0.0
-2020,HESenj,MW,0.0
-2020,HEZakucac,MW,0.0
-2020,Individual biomass boiler,MW,0.0
-2020,Individual gas boiler,MW,0.0
-2020,Individual oil boiler,MW,0.0
-2020,Nuclear,MW,0.0
-2020,PEMFC_CHP,MW,0.0
-2020,PEM_elec,MW,0.0
-2020,RHEOrlovac,MW,0.0
-2020,RHEVelebit,MW,0.0
-2020,RHEVinodol,MW,0.0
-2020,SOEC_elec,MW,0.0
-2020,SOFC_CHP,MW,0.0
-2020,Solar PV,MW,0.0
-2020,TEBiomassHR,MW,0.0
-2020,TEPlomin1,MW,0.0
-2020,TEPlomin2,MW,0.0
-2020,TERijeka,MW,0.0
-2020,Wind,MW,0.0
-2020,bio_boilers,MW,0.0
-2020,hror,MW,0.0
-2020,oil_boilers,MW,0.0
 2025,Air-to-water HP,MW,0.0
 2025,Alkaline_EC,MW,0.0
 2025,CHP,MW,0.0
@@ -36,23 +6,30 @@ year,technology,unit,new_capacity
 2025,Electric boiler,MW,0.0
 2025,Geothermal HP,MW,0.0
 2025,HECombo,MW,0.0
-2025,HEDubrovnik_HR,MW,0.0
-2025,HESenj,MW,0.0
-2025,HEZakucac,MW,0.0
+2025,HRBiogas2020,MW,0.0
+2025,HRCoalIndustrialProxy,MW,0.0
+2025,HREL_TO_Zagreb_HJ,MW,0.0
+2025,HREL_TO_Zagreb_L,MW,0.0
+2025,HRGasOther2020,MW,0.0
+2025,HRGeothermal2020,MW,0.0
+2025,HRJertovec2020,MW,0.0
+2025,HRNewGasCCGT,MW,0.0
+2025,HROilIndustrialProxy,MW,0.0
+2025,HRSisakC2020,MW,0.0
+2025,HRSmallHydro2020,MW,0.0
+2025,HRTE_TO_Osijek,MW,0.0
+2025,HRTE_TO_ZagrebOther,MW,0.0
 2025,Individual biomass boiler,MW,0.0
-2025,Individual gas boiler,MW,3842.8627156637167
+2025,Individual gas boiler,MW,1417.998354252929
 2025,Individual oil boiler,MW,0.0
 2025,Nuclear,MW,0.0
 2025,PEMFC_CHP,MW,0.0
 2025,PEM_elec,MW,0.0
-2025,RHEOrlovac,MW,0.0
 2025,RHEVelebit,MW,0.0
-2025,RHEVinodol,MW,0.0
 2025,SOEC_elec,MW,0.0
 2025,SOFC_CHP,MW,0.0
 2025,Solar PV,MW,0.0
 2025,TEBiomassHR,MW,0.0
-2025,TEPlomin1,MW,0.0
 2025,TEPlomin2,MW,0.0
 2025,TERijeka,MW,0.0
 2025,Wind,MW,0.0
@@ -66,143 +43,178 @@ year,technology,unit,new_capacity
 2030,Electric boiler,MW,0.0
 2030,Geothermal HP,MW,0.0
 2030,HECombo,MW,0.0
-2030,HEDubrovnik_HR,MW,0.0
-2030,HESenj,MW,0.0
-2030,HEZakucac,MW,0.0
+2030,HRBiogas2020,MW,0.0
+2030,HRCoalIndustrialProxy,MW,0.0
+2030,HREL_TO_Zagreb_HJ,MW,0.0
+2030,HREL_TO_Zagreb_L,MW,0.0
+2030,HRGasOther2020,MW,0.0
+2030,HRGeothermal2020,MW,0.0
+2030,HRJertovec2020,MW,0.0
+2030,HRNewGasCCGT,MW,0.0
+2030,HROilIndustrialProxy,MW,0.0
+2030,HRSisakC2020,MW,0.0
+2030,HRSmallHydro2020,MW,0.0
+2030,HRTE_TO_Osijek,MW,0.0
+2030,HRTE_TO_ZagrebOther,MW,0.0
 2030,Individual biomass boiler,MW,0.0
-2030,Individual gas boiler,MW,3699.8128605772927
+2030,Individual gas boiler,MW,3776.87408402596
 2030,Individual oil boiler,MW,0.0
 2030,Nuclear,MW,0.0
 2030,PEMFC_CHP,MW,0.0
 2030,PEM_elec,MW,0.0
-2030,RHEOrlovac,MW,0.0
 2030,RHEVelebit,MW,0.0
-2030,RHEVinodol,MW,0.0
 2030,SOEC_elec,MW,0.0
 2030,SOFC_CHP,MW,0.0
 2030,Solar PV,MW,0.0
 2030,TEBiomassHR,MW,0.0
-2030,TEPlomin1,MW,0.0
 2030,TEPlomin2,MW,0.0
 2030,TERijeka,MW,0.0
 2030,Wind,MW,0.0
 2030,bio_boilers,MW,0.0
 2030,hror,MW,0.0
 2030,oil_boilers,MW,0.0
-2035,Air-to-water HP,MW,0.7415417032946735
+2035,Air-to-water HP,MW,0.1418439716312056
 2035,Alkaline_EC,MW,0.0
 2035,CHP,MW,0.0
-2035,District gas boiler,MW,0.0
+2035,District gas boiler,MW,114.59604461782452
 2035,Electric boiler,MW,0.1418439716312056
 2035,Geothermal HP,MW,0.1418439716312056
 2035,HECombo,MW,0.0
-2035,HEDubrovnik_HR,MW,0.0
-2035,HESenj,MW,0.0
-2035,HEZakucac,MW,0.0
+2035,HRBiogas2020,MW,0.0
+2035,HRCoalIndustrialProxy,MW,0.0
+2035,HREL_TO_Zagreb_HJ,MW,0.0
+2035,HREL_TO_Zagreb_L,MW,0.0
+2035,HRGasOther2020,MW,0.0
+2035,HRGeothermal2020,MW,0.0
+2035,HRJertovec2020,MW,0.0
+2035,HRNewGasCCGT,MW,0.0
+2035,HROilIndustrialProxy,MW,0.0
+2035,HRSisakC2020,MW,0.0
+2035,HRSmallHydro2020,MW,0.0
+2035,HRTE_TO_Osijek,MW,0.0
+2035,HRTE_TO_ZagrebOther,MW,0.0
 2035,Individual biomass boiler,MW,0.0
-2035,Individual gas boiler,MW,3360.569947330937
+2035,Individual gas boiler,MW,3505.644153557726
 2035,Individual oil boiler,MW,0.0
 2035,Nuclear,MW,0.0
 2035,PEMFC_CHP,MW,0.0
 2035,PEM_elec,MW,0.0
-2035,RHEOrlovac,MW,0.0
 2035,RHEVelebit,MW,0.0
-2035,RHEVinodol,MW,0.0
 2035,SOEC_elec,MW,0.0
 2035,SOFC_CHP,MW,0.0
 2035,Solar PV,MW,0.0
 2035,TEBiomassHR,MW,0.0
-2035,TEPlomin1,MW,0.0
 2035,TEPlomin2,MW,0.0
 2035,TERijeka,MW,0.0
 2035,Wind,MW,0.0
 2035,bio_boilers,MW,0.0
 2035,hror,MW,0.0
 2035,oil_boilers,MW,0.0
-2040,Air-to-water HP,MW,0.0617861539831498
+2040,Air-to-water HP,MW,0.0
 2040,Alkaline_EC,MW,0.0
 2040,CHP,MW,0.0
-2040,District gas boiler,MW,202.12767612531064
+2040,District gas boiler,MW,85.63002755390555
 2040,Electric boiler,MW,0.0
 2040,Geothermal HP,MW,0.0
 2040,HECombo,MW,0.0
-2040,HEDubrovnik_HR,MW,0.0
-2040,HESenj,MW,0.0
-2040,HEZakucac,MW,0.0
+2040,HRBiogas2020,MW,0.0
+2040,HRCoalIndustrialProxy,MW,0.0
+2040,HREL_TO_Zagreb_HJ,MW,0.0
+2040,HREL_TO_Zagreb_L,MW,0.0
+2040,HRGasOther2020,MW,0.0
+2040,HRGeothermal2020,MW,0.0
+2040,HRJertovec2020,MW,0.0
+2040,HRNewGasCCGT,MW,0.0
+2040,HROilIndustrialProxy,MW,0.0
+2040,HRSisakC2020,MW,0.0
+2040,HRSmallHydro2020,MW,0.0
+2040,HRTE_TO_Osijek,MW,0.0
+2040,HRTE_TO_ZagrebOther,MW,0.0
 2040,Individual biomass boiler,MW,0.0
 2040,Individual gas boiler,MW,0.0
 2040,Individual oil boiler,MW,0.0
 2040,Nuclear,MW,0.0
 2040,PEMFC_CHP,MW,0.0
 2040,PEM_elec,MW,0.0
-2040,RHEOrlovac,MW,0.0
 2040,RHEVelebit,MW,0.0
-2040,RHEVinodol,MW,0.0
 2040,SOEC_elec,MW,0.0
 2040,SOFC_CHP,MW,0.0
 2040,Solar PV,MW,0.0
 2040,TEBiomassHR,MW,0.0
-2040,TEPlomin1,MW,0.0
 2040,TEPlomin2,MW,0.0
 2040,TERijeka,MW,0.0
 2040,Wind,MW,0.0
 2040,bio_boilers,MW,0.0
 2040,hror,MW,0.0
 2040,oil_boilers,MW,0.0
-2045,Air-to-water HP,MW,0.0649378689332423
+2045,Air-to-water HP,MW,0.0
 2045,Alkaline_EC,MW,0.0
 2045,CHP,MW,0.0
-2045,District gas boiler,MW,58.98698537290356
+2045,District gas boiler,MW,31.172835495545755
 2045,Electric boiler,MW,0.0
 2045,Geothermal HP,MW,0.0
 2045,HECombo,MW,0.0
-2045,HEDubrovnik_HR,MW,0.0
-2045,HESenj,MW,0.0
-2045,HEZakucac,MW,0.0
+2045,HRBiogas2020,MW,0.0
+2045,HRCoalIndustrialProxy,MW,0.0
+2045,HREL_TO_Zagreb_HJ,MW,0.0
+2045,HREL_TO_Zagreb_L,MW,0.0
+2045,HRGasOther2020,MW,0.0
+2045,HRGeothermal2020,MW,0.0
+2045,HRJertovec2020,MW,0.0
+2045,HRNewGasCCGT,MW,0.0
+2045,HROilIndustrialProxy,MW,0.0
+2045,HRSisakC2020,MW,0.0
+2045,HRSmallHydro2020,MW,0.0
+2045,HRTE_TO_Osijek,MW,0.0
+2045,HRTE_TO_ZagrebOther,MW,0.0
 2045,Individual biomass boiler,MW,0.0
 2045,Individual gas boiler,MW,0.0
 2045,Individual oil boiler,MW,0.0
 2045,Nuclear,MW,0.0
 2045,PEMFC_CHP,MW,0.0
 2045,PEM_elec,MW,0.0
-2045,RHEOrlovac,MW,0.0
 2045,RHEVelebit,MW,0.0
-2045,RHEVinodol,MW,0.0
 2045,SOEC_elec,MW,0.0
 2045,SOFC_CHP,MW,0.0
 2045,Solar PV,MW,0.0
 2045,TEBiomassHR,MW,0.0
-2045,TEPlomin1,MW,0.0
 2045,TEPlomin2,MW,0.0
 2045,TERijeka,MW,0.0
 2045,Wind,MW,0.0
 2045,bio_boilers,MW,0.0
 2045,hror,MW,0.0
 2045,oil_boilers,MW,0.0
-2050,Air-to-water HP,MW,0.0682503532637252
+2050,Air-to-water HP,MW,0.0
 2050,Alkaline_EC,MW,0.0
-2050,CHP,MW,17.380717513189484
+2050,CHP,MW,0.0
 2050,District gas boiler,MW,0.0
 2050,Electric boiler,MW,0.0
 2050,Geothermal HP,MW,0.0
 2050,HECombo,MW,0.0
-2050,HEDubrovnik_HR,MW,0.0
-2050,HESenj,MW,0.0
-2050,HEZakucac,MW,0.0
+2050,HRBiogas2020,MW,0.0
+2050,HRCoalIndustrialProxy,MW,0.0
+2050,HREL_TO_Zagreb_HJ,MW,0.0
+2050,HREL_TO_Zagreb_L,MW,0.0
+2050,HRGasOther2020,MW,0.0
+2050,HRGeothermal2020,MW,0.0
+2050,HRJertovec2020,MW,0.0
+2050,HRNewGasCCGT,MW,0.0
+2050,HROilIndustrialProxy,MW,0.0
+2050,HRSisakC2020,MW,0.0
+2050,HRSmallHydro2020,MW,0.0
+2050,HRTE_TO_Osijek,MW,0.0
+2050,HRTE_TO_ZagrebOther,MW,0.0
 2050,Individual biomass boiler,MW,0.0
 2050,Individual gas boiler,MW,0.0
 2050,Individual oil boiler,MW,0.0
-2050,Nuclear,MW,100.0
+2050,Nuclear,MW,0.0
 2050,PEMFC_CHP,MW,0.0
 2050,PEM_elec,MW,0.0
-2050,RHEOrlovac,MW,0.0
 2050,RHEVelebit,MW,0.0
-2050,RHEVinodol,MW,0.0
 2050,SOEC_elec,MW,0.0
 2050,SOFC_CHP,MW,0.0
-2050,Solar PV,MW,120.59257606961056
+2050,Solar PV,MW,0.0
 2050,TEBiomassHR,MW,0.0
-2050,TEPlomin1,MW,0.0
 2050,TEPlomin2,MW,0.0
 2050,TERijeka,MW,0.0
 2050,Wind,MW,0.0

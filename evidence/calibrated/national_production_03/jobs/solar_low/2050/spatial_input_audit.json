@@ -1,0 +1,16 @@
+{
+  "wind": {
+    "first_utc": "1980-01-01T00:00:00+00:00",
+    "last_utc": "2015-12-31T23:00:00+00:00",
+    "hourly_rows": 315576,
+    "profile": "data\\SC\\HR_wind_nuts_profiles.parquet",
+    "transfer": "data\\SC\\HR_wind_transfer_nuts_to_units.csv"
+  },
+  "solar": {
+    "first_utc": "1980-01-01T00:00:00+00:00",
+    "last_utc": "2015-12-31T23:00:00+00:00",
+    "hourly_rows": 315576,
+    "profile": "data\\SC\\HR_solar_macro_profiles.parquet",
+    "transfer": "data\\SC\\HR_solar_transfer_macro_to_units.csv"
+  }
+}

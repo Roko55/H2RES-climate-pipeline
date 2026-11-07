@@ -1,0 +1,10 @@
+{
+  "maximum_operation_mwh": {
+    "H2tInd": 0.0,
+    "generation_FC": 0.0,
+    "generation_H2": 0.0,
+    "h2_sto_out": 0.0,
+    "h2_sto_soc": 0.0,
+    "power_to_h2": 0.0
+  }
+}

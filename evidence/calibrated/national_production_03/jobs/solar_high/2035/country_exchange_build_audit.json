@@ -1,0 +1,12 @@
+{
+  "hours": 17520,
+  "krsko_included_in_physical_net_import": true,
+  "price": {
+    "discounted_coefficient": {
+      "2035": 21.762568230344762,
+      "2040": 17.27181469193637
+    },
+    "mode": "symmetric_native_model_units",
+    "source": "Retain the executed native multisector Import_Price, Imp_price_inc and NPV inputs; not an observed market series."
+  }
+}

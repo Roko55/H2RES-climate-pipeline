@@ -1,0 +1,55 @@
+{
+  "utc": "2026-11-06T03:08:59.675497+00:00",
+  "status": "solved",
+  "solver_status": 2,
+  "solutions": 1,
+  "planning_approved": false,
+  "objective_model_units": 758854551.063158,
+  "constraint_violation": 8.924018857214833e-09,
+  "bound_violation": 0.0,
+  "generation_mwh": {
+    "biogas": 363449.45162863325,
+    "biomass": 484339.29068964603,
+    "coal": 1098702.864088843,
+    "gas": 3279378.608854147,
+    "geothermal": 76300.00000000077,
+    "hydro_pumped": 436134.6619853886,
+    "hydro_reservoir": 3426362.5361421597,
+    "hydro_run_of_river": 1787271.733443485,
+    "hydro_small": 97831.06842902374,
+    "oil": 17229.784737946782,
+    "solar": 95299.99999999888,
+    "wind": 1712800.000000021
+  },
+  "net_import_mwh": 1618900.0000000002,
+  "worst_constraint": "R902327",
+  "annual_generation_residual_mwh": {
+    "biogas": 8.905772119760513e-09,
+    "biomass": -1.3387762010097504e-09,
+    "coal": 3.073364496231079e-08,
+    "gas": -8.209608495235443e-07,
+    "geothermal": 7.712515071034431e-10,
+    "hydro_pumped": -1.6996636986732483e-08,
+    "hydro_reservoir": 6.891787052154541e-08,
+    "hydro_run_of_river": 4.190951585769653e-09,
+    "hydro_small": -8.731149137020111e-11,
+    "oil": -4.802132025361061e-10,
+    "solar": -1.1204974725842476e-09,
+    "wind": 2.0954757928848267e-08
+  },
+  "annual_signed_exchange_difference_mwh": -3.026798367500305e-09,
+  "unserved_mwh": {
+    "noload_elec": 0.0,
+    "noload_heat_ind": 0.0,
+    "noload_heat_dh": 0.0
+  },
+  "terminal_hydro_mwh": {
+    "reservoir": 890428.0,
+    "pumped": 7400.0
+  },
+  "terminal_ev_mwh": 0.0,
+  "maximum_new_capacity": 0.0,
+  "thermal_report_saved": true,
+  "electric_heat_mwh": 1477958.091070021,
+  "curtailment_mwh": 0.0
+}

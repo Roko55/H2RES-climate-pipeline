@@ -1,0 +1,14 @@
+{
+  "carbon_price_active": true,
+  "hourly_fuel_co2_objective_audited": true,
+  "initial_gas_mw": 1037.1,
+  "new_gas_limit_mw": {
+    "2040": 500.0,
+    "2045": 500.0
+  },
+  "policy_flags": {
+    "carbonLimit": false,
+    "res_inv": true,
+    "rps_inv": false
+  }
+}

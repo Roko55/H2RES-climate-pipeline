@@ -1,0 +1,52 @@
+{
+  "pumping": {
+    "RHEVelebit": {
+      "2045": {
+        "electricity_generated_mwh": 791295.3498835064,
+        "grid_pumping_mwh": 0.0,
+        "hours_sharing_pumping_and_generation": 0,
+        "maximum_hour_fraction_excess": 2.220446049250313e-16,
+        "maximum_water_balance_error_mwh": 9.379164112033322e-13,
+        "natural_inflow_hydraulic_mwh": 879217.0554261183,
+        "spill_hydraulic_mwh": 0.0,
+        "terminal_stock_change_mwh": 0.0
+      },
+      "2050": {
+        "electricity_generated_mwh": 791295.3498835064,
+        "grid_pumping_mwh": 0.0,
+        "hours_sharing_pumping_and_generation": 0,
+        "maximum_hour_fraction_excess": 2.220446049250313e-16,
+        "maximum_water_balance_error_mwh": 1.3784529073745944e-12,
+        "natural_inflow_hydraulic_mwh": 879217.0554261183,
+        "spill_hydraulic_mwh": 0.0,
+        "terminal_stock_change_mwh": 0.0
+      }
+    }
+  },
+  "reservoir": {
+    "HECombo/2045": {
+      "generation_mwh": 4159702.000000007,
+      "maximum_water_balance_error_mwh": 1.7143975128419697e-10,
+      "spill_hydraulic_mwh": 0.0
+    },
+    "HECombo/2050": {
+      "generation_mwh": 4159702.000000005,
+      "maximum_water_balance_error_mwh": 1.9883827917510644e-10,
+      "spill_hydraulic_mwh": 0.0
+    }
+  },
+  "run_of_river": {
+    "HRSmallHydro2020/2045": {
+      "generation_mwh": 134282.01069209128
+    },
+    "HRSmallHydro2020/2050": {
+      "generation_mwh": 134282.01069209128
+    },
+    "hror/2045": {
+      "generation_mwh": 1649227.2404092303
+    },
+    "hror/2050": {
+      "generation_mwh": 1649227.2404092303
+    }
+  }
+}

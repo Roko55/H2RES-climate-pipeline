@@ -1,0 +1,38 @@
+{
+  "cap_inv": {
+    "max_surviving_capacity_residual": 0.0,
+    "units": 29
+  },
+  "cap_inv_FC": {
+    "max_surviving_capacity_residual": 0.0,
+    "units": 2
+  },
+  "h2_electrolysis_max_cap": {
+    "max_surviving_capacity_residual": 0.0,
+    "units": 3
+  },
+  "h2_sto_max_cap": {
+    "max_surviving_capacity_residual": 0.0,
+    "units": 1
+  },
+  "heat_pump_dh_cap": {
+    "max_surviving_capacity_residual": 0.0,
+    "units": 3
+  },
+  "heat_pump_ind_cap": {
+    "max_surviving_capacity_residual": 0.0,
+    "units": 3
+  },
+  "stat_sto_cap_inv": {
+    "max_surviving_capacity_residual": 0.0,
+    "units": 1
+  },
+  "trad_boiler_dh_cap_inv": {
+    "max_surviving_capacity_residual": 0.0,
+    "units": 3
+  },
+  "trad_boiler_ind_cap_inv": {
+    "max_surviving_capacity_residual": 0.0,
+    "units": 3
+  }
+}

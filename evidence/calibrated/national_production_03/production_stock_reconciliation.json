@@ -1,0 +1,77 @@
+{
+  "all_native_families_reconciled": true,
+  "direct_supply_by_group_mw": {
+    "biogas": 60.0,
+    "biomass": 101.483,
+    "coal": 215.0,
+    "gas": 1037.1,
+    "geothermal": 10.0,
+    "nuclear": 348.0,
+    "oil": 343.5,
+    "pumped_hydro": 275.40000000000003,
+    "reservoir_hydro": 1485.7,
+    "run_of_river": 438.3,
+    "solar": 1278.742,
+    "wind": 1181.15
+  },
+  "district_heat": {
+    "boiler_stock_mw": 348.0,
+    "district_initial_and_terminal_mwh": 375.0,
+    "first_hour_inflows_verified": true,
+    "fuel": {
+      "boiler_efficiency": 0.9000020659372365,
+      "carbon_price_applies_to_power_terms": true,
+      "effective_chp_efficiency": 0.4684032141491073,
+      "hourly_fuel_rows": 17520,
+      "total_efficiency_ceiling": 0.95
+    },
+    "storage_power_rows": 35040
+  },
+  "evidence_scope": "existing stock and first native future build; zero historical additions",
+  "hydrogen": {
+    "dedicated_end_use_mwh": 0.0,
+    "existing_storage_mwh": 0.0,
+    "zero_investment_rows": {
+      "cap_inv_FC": 4,
+      "h2_electrolysis_max_cap": 6,
+      "h2_sto_max_cap": 2
+    }
+  },
+  "matrix_fingerprint": -956836259,
+  "matrix_input_sha256": "d07f4743eaa6457667e3d5a413089d83423af86a03d5f326092f5e07e7bb0344",
+  "matrix_sha256": "0c8b8c67bd08895f1d6cb441a020c10fa84bec7f6048a6f84f31ddc6155d606c",
+  "native_zero_investment_keys": {
+    "cap_inv_FC_cumulative": 14,
+    "cap_inv_cumulative": 203,
+    "h2_electrolysis_max_cap_cumulative": 21,
+    "h2_sto_max_cap_cumulative": 7,
+    "heat_pump_dh_cap_cumulative": 21,
+    "heat_pump_ind_cap_cumulative": 21,
+    "stat_sto_cap_inv_cumulative": 7,
+    "trad_boiler_dh_cap_inv_cumulative": 21,
+    "trad_boiler_ind_cap_inv_cumulative": 21,
+    "values_cap_inv": 0,
+    "values_cap_inv_FC": 0,
+    "values_h2_electrolysis_max_cap": 0,
+    "values_h2_sto_max_cap": 0,
+    "values_heat_pump_dh_cap": 0,
+    "values_heat_pump_ind_cap": 0,
+    "values_stat_sto_cap_inv": 0,
+    "values_trad_boiler_dh_cap_inv": 0,
+    "values_trad_boiler_ind_cap_inv": 0
+  },
+  "production_inventory_sha256": "bfd155abefca4785c4d6ebe7bda1c274e5fa785a66051ac49c2c55ae499af44a",
+  "production_supply_inventory_sha256": "01f7babbfc3422b7c4dd128e22677b51e324bbd15902201fa7db57269e8faac1",
+  "scope": "multisector",
+  "stationary_storage": {
+    "Liion_storage/2025": {
+      "energy_mwh": 1.44,
+      "grid_power_mw": 1.0
+    },
+    "Liion_storage/2030": {
+      "energy_mwh": 121.44,
+      "grid_power_mw": 61.0
+    }
+  },
+  "status": "passed"
+}

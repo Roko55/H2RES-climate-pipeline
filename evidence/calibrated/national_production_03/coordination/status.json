@@ -1,0 +1,5 @@
+{
+  "utc": "2026-11-06T07:53:34.962738+00:00",
+  "status": "stopped",
+  "error": "Traceback (most recent call last):\n  File \"E:\\Roko\\remote_access\\national_production_03\\coordinate_national_production.py\", line 76, in run\n    raise ValueError('Not all national paths were accepted; read their server records')\nValueError: Not all national paths were accepted; read their server records\n"
+}

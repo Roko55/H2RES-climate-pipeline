@@ -1,0 +1,24 @@
+{
+  "evidence_sha256": {
+    "historical_terminal": {
+      "path": "national_seed_evidence/historical_terminal.json",
+      "sha256": "392211ae86a827b2743731f0c178cef2903a7ecce3d163b2c79713dafd4071b2"
+    },
+    "independent_physical_audit": {
+      "path": "national_seed_evidence/independent_physical_audit.json",
+      "sha256": "bc83b59bb3981c831a33b2a8380302a0174fd7724043eac616b565e485414d96"
+    },
+    "production_stock_reconciliation": {
+      "path": "production_stock_reconciliation.json",
+      "sha256": "9f9ce3bdc4152395d46adc09ea3882b265b372c50a8932ecbde9433beca62d2f"
+    }
+  },
+  "maximum_new_capacity": 0.0,
+  "planning_approved": true,
+  "production_inventory_sha256": "bfd155abefca4785c4d6ebe7bda1c274e5fa785a66051ac49c2c55ae499af44a",
+  "production_supply_inventory_sha256": "01f7babbfc3422b7c4dd128e22677b51e324bbd15902201fa7db57269e8faac1",
+  "scope": "multisector",
+  "solver_status": 2,
+  "status": "accepted",
+  "year": 2020
+}

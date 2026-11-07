@@ -1,0 +1,22 @@
+{
+  "case": "temperature_cold",
+  "job": "temperature_cold",
+  "year": 2030,
+  "window_years": [
+    2030,
+    2035
+  ],
+  "fence": "ade12a1aa972d93a2fd58e95415ef54420104d29519fc614ba843013296e74d8",
+  "inherited_state_sha256": "9a86f3a2e6405f3aa930d83c44bf25d714473684928dde8f4706b94601d177be",
+  "model_fingerprint": 1221094318,
+  "hashes": {
+    "heat_demand": "cc3fe2232b2e6bfaa770ecb5a1feccee1e37ea74d2d5b0097f47897059ca1948",
+    "cooling_demand": "3397abb80e58cb29bb0dfdabfab28dab008546017317f296a0e2840f382a3d63",
+    "HP_COP_period": "7fc4dc61ed9a4265ae75810f2f6b90025ab9991850d2e416ba58800dc1f70da2",
+    "aval_factor_plant": "e2781bfe2bae469207dda829892363d5a6a96d4f4b3001ecdc9c9a70c3ef73fc"
+  },
+  "NPV": {
+    "2030": 0.61,
+    "2035": 0.48
+  }
+}

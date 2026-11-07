@@ -1,0 +1,14 @@
+{
+  "utc": "2026-11-06T14:05:52.684281+00:00",
+  "pid": 22220,
+  "planning_approved": false,
+  "optimize_called": false,
+  "state": "prepared_before_model_creation",
+  "resources": {
+    "available_ram_gib": 727.97,
+    "available_disk_gib": 765.23,
+    "other_gurobi_process_count": 0,
+    "inaccessible_python_count": 0,
+    "ready": true
+  }
+}

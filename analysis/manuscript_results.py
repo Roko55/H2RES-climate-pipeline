@@ -1,4 +1,4 @@
-"""Reproduce the numerical tables supporting V6 sections 4.1 through 4.6."""
+"""Reproduce the numerical tables supporting V6.1 sections 4.1 through 4.6."""
 from pathlib import Path
 import argparse
 import hashlib
@@ -55,22 +55,9 @@ def summaries(root=ROOT):
     groups['difference_million_EUR'] = (groups.value-groups.value_average)/1e6
     groups = groups[['case', 'window_start', 'component_group', 'difference_million_EUR']]
 
-    # Each realized anchor is counted once, with its own discount weight removed.
+    from analysis.native_results import annual_costs
     investments = data['investments_by_technology']
-    accounting = json.loads((root/'provenance/channel_sensitivity/post_audit.json').read_text())['accounting']
-    annual = []
-    for record in accounting:
-        case, year = record['case'], record['window_start']
-        term = next(t for t in record['terms'] if t['year'] == year)
-        selected = investments[(investments['case'] == case) & (investments.decision_year == year)]
-        np.testing.assert_allclose(selected.NPV, term['NPV'], rtol=0, atol=0)
-        total = term['objective_contribution']/term['NPV']
-        capacity = selected.objective_contribution.sum()/term['NPV']
-        annual.append({'case': case, 'year': year, 'discount_weight': term['NPV'],
-            'year_total_EUR': total, 'capacity_terms_EUR': capacity,
-            'other_active_terms_EUR': total-capacity,
-            'demand_MWh': term['native_demand_sum_MWh'],
-            'EUR_per_demand_MWh': total/term['native_demand_sum_MWh']})
+    annual = annual_costs(root)
 
     capacity = investments[(investments['case'] == 'average') &
         (investments.capacity_addition == 1) & (investments.unit == 'MW')].copy()
@@ -84,13 +71,15 @@ def summaries(root=ROOT):
     for row in average.itertuples(index=False):
         unit = json.loads(row.key_json)[0]
         scope = None
-        if row.family == 'generation':
+        if row.family == 'generation' and unit == 'NEKrskoHR':
+            scope, name = 'Electricity', 'Net imports including Krško entitlement'
+        elif row.family in ('generation', 'generation_FC'):
             scope = 'Electricity'
             name = ('Solar PV' if 'Solar' in str(unit) else 'Wind' if 'Wind' in str(unit) else
-                    'Hydro' if str(unit).startswith(('HE', 'RHE')) or unit == 'hror' else
+                    'Hydro' if str(unit).startswith(('HE', 'RHE')) or unit in ('hror', 'HRSmallHydro2020') else
                     'Other domestic generation')
         elif row.family == 'imports':
-            scope, name = 'Electricity', 'Imports'
+            scope, name = 'Electricity', 'Net imports including Krško entitlement'
         elif row.family == 'boiler_ind_generation':
             scope = 'Heat'
             name = {'gas_boilers': 'Individual gas boiler', 'bio_boilers': 'Individual biomass boiler',
@@ -115,21 +104,21 @@ def summaries(root=ROOT):
     crps['fair_CRPS_change_percent'] = 100*(crps.synthetic_fair_CRPS/crps.historical_fair_CRPS-1)
     return {'mean_profile_MAE.csv': pd.DataFrame(comparison), 'fair_crps.csv': crps,
             'window_cost_differences.csv': window,
-            'cost_component_differences.csv': groups, 'realized_annual_costs.csv': pd.DataFrame(annual),
+            'cost_component_differences.csv': groups, 'realized_annual_costs.csv': annual,
             'average_capacity.csv': capacity, 'average_energy_supply.csv': supply,
             'average_direct_emissions.csv': emissions, 'operational_surplus.csv': operations}
 
 
 def verify_manuscript(root=ROOT):
     scope = json.loads((root/'provenance/manuscript/scope.json').read_text())
-    expected = {str(i) for i in range(3, 15)} | {'15a', '15b', '16'}
+    expected = {str(i) for i in range(1, 15)} | {'15a', '15b', '16'}
     if {r['figure'] for r in scope['figures']} != expected:
-        raise ValueError('V6 result figure inventory differs')
+        raise ValueError('V6.1 figure inventory differs')
     for row in scope['figures']:
         path = (root/row['file']).resolve()
         path.relative_to(root.resolve())
         if hashlib.sha256(path.read_bytes()).hexdigest() != row['sha256']:
-            raise ValueError('V6 figure differs: '+row['figure'])
+            raise ValueError('V6.1 figure differs: '+row['figure'])
     metrics = pd.read_csv(root/'results/profile_metrics.csv')
     if (len(metrics) != 9 or set(metrics.method) !=
         {'fixed_H2RES_profile', 'ensemble_mean', 'training_calendar_mean'} or
@@ -143,7 +132,7 @@ def verify_manuscript(root=ROOT):
     if not (crps.n_reporting_hours.eq(43800).all() and crps.historical_members.eq(36).all()
             and crps.synthetic_members.eq(100).all()):
         raise ValueError('Different calendar or ensemble size in fair CRPS')
-    return {'manuscript_sha256': scope['manuscript_sha256'], 'exact_V6_result_figures': 15,
+    return {'manuscript_sha256': scope['manuscript_sha256'], 'exact_V61_figures': 17,
             'mean_profile_comparisons': 6, 'fair_CRPS_comparisons': 3}
 
 

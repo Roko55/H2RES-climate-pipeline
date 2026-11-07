@@ -1,0 +1,18 @@
+{
+  "solver_status": 2,
+  "solutions": 1,
+  "runtime_seconds": 25.06499981880188,
+  "fingerprint": -1985472759,
+  "attempts": [
+    {
+      "method": 2,
+      "status": 2,
+      "runtime_seconds": 13.865999937057495
+    },
+    {
+      "method": 1,
+      "status": 2,
+      "runtime_seconds": 25.06499981880188
+    }
+  ]
+}

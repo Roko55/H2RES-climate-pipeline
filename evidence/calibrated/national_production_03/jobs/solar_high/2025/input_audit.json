@@ -1,0 +1,22 @@
+{
+  "case": "solar_high",
+  "job": "solar_high",
+  "year": 2025,
+  "window_years": [
+    2025,
+    2030
+  ],
+  "fence": "ade12a1aa972d93a2fd58e95415ef54420104d29519fc614ba843013296e74d8",
+  "inherited_state_sha256": "8f8310e371a8749c8149d818edf461326955004b6918ac89b3ac1193288ecde5",
+  "model_fingerprint": -1577706273,
+  "hashes": {
+    "heat_demand": "7f144b8e52b3861774c78ebd6aadc47e11fbe31d855bc8b867b6f7ca3d22fc7f",
+    "cooling_demand": "881a28e979af44333c9fa2cb4dcc4ab8949c29ae6fbf8dbb49b3829bd4ad5414",
+    "HP_COP_period": "626d87ca7853af8765c9b682a40bdfdbb3f41541a2144ee3096e73407dc02f7a",
+    "aval_factor_plant": "7383ef191d2049529d7c16b8cb49755960142bf85f8e977e139f4ec64bfe52f5"
+  },
+  "NPV": {
+    "2025": 0.78,
+    "2030": 0.61
+  }
+}

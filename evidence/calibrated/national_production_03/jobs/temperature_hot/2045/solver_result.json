@@ -1,0 +1,1487 @@
+{
+  "annual_sums": {
+    "CO2_total_heat|[2045]": 3768487.5309933377,
+    "CO2_total_heat|[2050]": 3594654.8641476366,
+    "CO2_total_industry|[2045]": 2991583.0136727793,
+    "CO2_total_industry|[2050]": 2995689.282847732,
+    "CO2_total|[2045]": 87.12347242279724,
+    "CO2_total|[2050]": 0.0,
+    "Fuel_ind|[\"Coal\", 2045]": 540339.9965162537,
+    "Fuel_ind|[\"Coal\", 2050]": 514602.56383093505,
+    "Fuel_ind|[\"Gas\", 2045]": 6062811.596857151,
+    "Fuel_ind|[\"Gas\", 2050]": 6180323.849781181,
+    "Fuel_ind|[\"Oil\", 2045]": 2928646.16374899,
+    "Fuel_ind|[\"Oil\", 2050]": 2932189.321120117,
+    "H2tInd|[2045]": 0.0,
+    "H2tInd|[2050]": 0.0,
+    "ResToHeat|[2045]": 49.18040415532093,
+    "ResToHeat|[2050]": 47.56629139504951,
+    "boiler_dh_generation|[\"bio_boilers\", \"TE-TOZagreb\", 2045]": 0.0,
+    "boiler_dh_generation|[\"bio_boilers\", \"TE-TOZagreb\", 2050]": 0.0,
+    "boiler_dh_generation|[\"gas_boilers\", \"TE-TOZagreb\", 2045]": 692321.8077792518,
+    "boiler_dh_generation|[\"gas_boilers\", \"TE-TOZagreb\", 2050]": 660690.5439293325,
+    "boiler_dh_generation|[\"oil_boilers\", \"TE-TOZagreb\", 2045]": 0.0,
+    "boiler_dh_generation|[\"oil_boilers\", \"TE-TOZagreb\", 2050]": 0.0,
+    "boiler_ind_generation|[\"bio_boilers\", 2045]": 0.0,
+    "boiler_ind_generation|[\"bio_boilers\", 2050]": 0.0,
+    "boiler_ind_generation|[\"gas_boilers\", 2045]": 15709020.47526933,
+    "boiler_ind_generation|[\"gas_boilers\", 2050]": 14984203.836776443,
+    "boiler_ind_generation|[\"oil_boilers\", 2045]": 0.0,
+    "boiler_ind_generation|[\"oil_boilers\", 2050]": 0.0,
+    "ceep|[2045]": 0.0,
+    "ceep|[2050]": 0.0,
+    "cooling_pump_dh|[\"ATW_HP\", \"TE-TOZagreb\", 2045]": 0.0,
+    "cooling_pump_dh|[\"ATW_HP\", \"TE-TOZagreb\", 2050]": 0.0,
+    "cooling_pump_dh|[\"electric_boiler\", \"TE-TOZagreb\", 2045]": 0.0,
+    "cooling_pump_dh|[\"electric_boiler\", \"TE-TOZagreb\", 2050]": 0.0,
+    "cooling_pump_dh|[\"geothermal_HP\", \"TE-TOZagreb\", 2045]": 0.0,
+    "cooling_pump_dh|[\"geothermal_HP\", \"TE-TOZagreb\", 2050]": 0.0,
+    "cooling_pump_ind|[\"ATW_HP\", 2045]": 0.0,
+    "cooling_pump_ind|[\"ATW_HP\", 2050]": 0.0,
+    "cooling_pump_ind|[\"electric_boiler\", 2045]": 0.0,
+    "cooling_pump_ind|[\"electric_boiler\", 2050]": 0.0,
+    "cooling_pump_ind|[\"geothermal_HP\", 2045]": 0.0,
+    "cooling_pump_ind|[\"geothermal_HP\", 2050]": 0.0,
+    "ev_sto_in|[2045]": 884360.7309999996,
+    "ev_sto_in|[2050]": 1125799.0869999998,
+    "ev_sto_out|[2045]": 0.0,
+    "ev_sto_out|[2050]": 0.0,
+    "ev_sto_soc|[2045]": 7813229.34361195,
+    "ev_sto_soc|[2050]": 9946310.541868705,
+    "generation_FC|[\"PEMFC_CHP\", 2045]": 0.0,
+    "generation_FC|[\"PEMFC_CHP\", 2050]": 0.0,
+    "generation_FC|[\"SOFC_CHP\", 2045]": 0.0,
+    "generation_FC|[\"SOFC_CHP\", 2050]": 0.0,
+    "generation_H2|[\"Alkaline_EC\", 2045]": 0.0,
+    "generation_H2|[\"Alkaline_EC\", 2050]": 0.0,
+    "generation_H2|[\"PEM_elec\", 2045]": 0.0,
+    "generation_H2|[\"PEM_elec\", 2050]": 0.0,
+    "generation_H2|[\"SOEC_elec\", 2045]": 0.0,
+    "generation_H2|[\"SOEC_elec\", 2050]": 0.0,
+    "generation|[\"HECombo\", 2045]": 4159701.999999979,
+    "generation|[\"HECombo\", 2050]": 4159701.9999999804,
+    "generation|[\"HRBiogas2020\", 2045]": 333100.0,
+    "generation|[\"HRBiogas2020\", 2050]": 333100.0,
+    "generation|[\"HRCoalIndustrialProxy\", 2045]": 0.0,
+    "generation|[\"HRCoalIndustrialProxy\", 2050]": 0.0,
+    "generation|[\"HREL_TO_Zagreb_HJ\", 2045]": 0.0,
+    "generation|[\"HREL_TO_Zagreb_HJ\", 2050]": 0.0,
+    "generation|[\"HREL_TO_Zagreb_L\", 2045]": 0.0,
+    "generation|[\"HREL_TO_Zagreb_L\", 2050]": 0.0,
+    "generation|[\"HRGasOther2020\", 2045]": 0.0,
+    "generation|[\"HRGasOther2020\", 2050]": 0.0,
+    "generation|[\"HRGeothermal2020\", 2045]": 0.0,
+    "generation|[\"HRGeothermal2020\", 2050]": 0.0,
+    "generation|[\"HRJertovec2020\", 2045]": 0.0,
+    "generation|[\"HRJertovec2020\", 2050]": 0.0,
+    "generation|[\"HRNewGasCCGT\", 2045]": 0.0,
+    "generation|[\"HRNewGasCCGT\", 2050]": 0.0,
+    "generation|[\"HROilIndustrialProxy\", 2045]": 0.0,
+    "generation|[\"HROilIndustrialProxy\", 2050]": 0.0,
+    "generation|[\"HRSisakC2020\", 2045]": 0.0,
+    "generation|[\"HRSisakC2020\", 2050]": 0.0,
+    "generation|[\"HRSmallHydro2020\", 2045]": 134282.010692091,
+    "generation|[\"HRSmallHydro2020\", 2050]": 134282.010692091,
+    "generation|[\"HRTE_TO_Osijek\", 2045]": 0.0,
+    "generation|[\"HRTE_TO_Osijek\", 2050]": 0.0,
+    "generation|[\"HRTE_TO_ZagrebOther\", 2045]": 0.0,
+    "generation|[\"HRTE_TO_ZagrebOther\", 2050]": 0.0,
+    "generation|[\"HR_Solar_HR_COAST_SOUTH\", 2045]": 489849.2689977982,
+    "generation|[\"HR_Solar_HR_COAST_SOUTH\", 2050]": 489849.2689977982,
+    "generation|[\"HR_Solar_HR_EAST\", 2045]": 278870.04158416885,
+    "generation|[\"HR_Solar_HR_EAST\", 2050]": 278870.04158416885,
+    "generation|[\"HR_Solar_HR_NORTH_CENTRAL\", 2045]": 466885.52914853353,
+    "generation|[\"HR_Solar_HR_NORTH_CENTRAL\", 2050]": 466885.52914853353,
+    "generation|[\"HR_Wind_HR032\", 2045]": 322504.68159445375,
+    "generation|[\"HR_Wind_HR032\", 2050]": 322504.68159445375,
+    "generation|[\"HR_Wind_HR033\", 2045]": 1025709.2368958088,
+    "generation|[\"HR_Wind_HR033\", 2050]": 1025709.2368958088,
+    "generation|[\"HR_Wind_HR034\", 2045]": 694864.191461002,
+    "generation|[\"HR_Wind_HR034\", 2050]": 694864.191461002,
+    "generation|[\"HR_Wind_HR035\", 2045]": 379227.2187685586,
+    "generation|[\"HR_Wind_HR035\", 2050]": 379227.2187685586,
+    "generation|[\"HR_Wind_HR037\", 2045]": 110877.1074633146,
+    "generation|[\"HR_Wind_HR037\", 2050]": 110877.1074633146,
+    "generation|[\"NEKrskoHR\", 2045]": 0.0,
+    "generation|[\"NEKrskoHR\", 2050]": 0.0,
+    "generation|[\"RHEVelebit\", 2045]": 791295.3498835579,
+    "generation|[\"RHEVelebit\", 2050]": 791295.3498835566,
+    "generation|[\"TE-TOZagreb\", 2045]": 202.02432926073934,
+    "generation|[\"TE-TOZagreb\", 2050]": 0.0,
+    "generation|[\"TEBiomassHR\", 2045]": 618958.6209999993,
+    "generation|[\"TEBiomassHR\", 2050]": 618958.6209999992,
+    "generation|[\"TEPlomin2\", 2045]": 0.0,
+    "generation|[\"TEPlomin2\", 2050]": 0.0,
+    "generation|[\"TERijeka\", 2045]": 0.0,
+    "generation|[\"TERijeka\", 2050]": 0.0,
+    "generation|[\"hror\", 2045]": 1649227.2404092602,
+    "generation|[\"hror\", 2050]": 1649227.2404092602,
+    "h2_sto_out|[\"H2_storage_tank\", 2045]": 0.0,
+    "h2_sto_out|[\"H2_storage_tank\", 2050]": 0.0,
+    "h2_sto_soc|[\"H2_storage_tank\", 2045]": 0.0,
+    "h2_sto_soc|[\"H2_storage_tank\", 2050]": 0.0,
+    "heat_gen|[\"TE-TOZagreb\", 2045]": 692648.9537649204,
+    "heat_gen|[\"TE-TOZagreb\", 2050]": 660690.5439293267,
+    "heat_input|[\"TE-TOZagreb\", 2045]": 327.14598567477,
+    "heat_input|[\"TE-TOZagreb\", 2050]": 0.0,
+    "heat_pump_dh|[\"ATW_HP\", \"TE-TOZagreb\", 2045]": 0.0,
+    "heat_pump_dh|[\"ATW_HP\", \"TE-TOZagreb\", 2050]": 0.0,
+    "heat_pump_dh|[\"electric_boiler\", \"TE-TOZagreb\", 2045]": 0.0,
+    "heat_pump_dh|[\"electric_boiler\", \"TE-TOZagreb\", 2050]": 0.0,
+    "heat_pump_dh|[\"geothermal_HP\", \"TE-TOZagreb\", 2045]": 0.0,
+    "heat_pump_dh|[\"geothermal_HP\", \"TE-TOZagreb\", 2050]": 0.0,
+    "heat_pump_ind|[\"ATW_HP\", 2045]": 96.91595990749536,
+    "heat_pump_ind|[\"ATW_HP\", 2050]": 99.20328964278315,
+    "heat_pump_ind|[\"electric_boiler\", 2045]": 0.0,
+    "heat_pump_ind|[\"electric_boiler\", 2050]": 0.0,
+    "heat_pump_ind|[\"geothermal_HP\", 2045]": 111.71935235160507,
+    "heat_pump_ind|[\"geothermal_HP\", 2050]": 111.60370084813546,
+    "heat_pump_out|[\"ATW_HP\", 2045]": 96.91595990747868,
+    "heat_pump_out|[\"ATW_HP\", 2050]": 99.20328964276567,
+    "heat_pump_out|[\"electric_boiler\", 2045]": 0.0,
+    "heat_pump_out|[\"electric_boiler\", 2050]": 0.0,
+    "heat_pump_out|[\"geothermal_HP\", 2045]": 111.71935235158257,
+    "heat_pump_out|[\"geothermal_HP\", 2050]": 111.60370084811277,
+    "heat_pump_sto_soc|[\"ATW_HP\", 2045]": 45722.423541505705,
+    "heat_pump_sto_soc|[\"ATW_HP\", 2050]": 45481.77846311874,
+    "heat_pump_sto_soc|[\"electric_boiler\", 2045]": 0.0,
+    "heat_pump_sto_soc|[\"electric_boiler\", 2050]": 0.0,
+    "heat_pump_sto_soc|[\"geothermal_HP\", 2045]": 47959.798864941935,
+    "heat_pump_sto_soc|[\"geothermal_HP\", 2050]": 48163.4013887012,
+    "heat_sto_level|[\"TE-TOZagreb\", 2045]": 3093918.5247303564,
+    "heat_sto_level|[\"TE-TOZagreb\", 2050]": 3107003.286050923,
+    "hydro_grid_pumping|[\"RHEVelebit\", 2045]": 0.0,
+    "hydro_grid_pumping|[\"RHEVelebit\", 2050]": 0.0,
+    "imports|[2045]": 17203376.871852487,
+    "imports|[2050]": 20526773.52073342,
+    "noload_elec|[2045]": 0.0,
+    "noload_elec|[2050]": 0.0,
+    "noload_heat_dh|[\"TE-TOZagreb\", 2045]": 0.0,
+    "noload_heat_dh|[\"TE-TOZagreb\", 2050]": 0.0,
+    "noload_heat_ind|[2045]": 0.0,
+    "noload_heat_ind|[2050]": 0.0,
+    "power_to_h2|[2045]": 0.0,
+    "power_to_h2|[2050]": 0.0,
+    "stat_sto_in|[\"Liion_storage\", 2045]": 0.0,
+    "stat_sto_in|[\"Liion_storage\", 2050]": 0.0,
+    "stat_sto_out|[\"Liion_storage\", 2045]": 0.0,
+    "stat_sto_out|[\"Liion_storage\", 2050]": 0.0,
+    "stat_sto_soc|[\"Liion_storage\", 2045]": 0.0,
+    "stat_sto_soc|[\"Liion_storage\", 2050]": 0.0,
+    "sto_out_flow|[\"HECombo\", 2045]": 0.0,
+    "sto_out_flow|[\"HECombo\", 2050]": 0.0,
+    "sto_out_flow|[\"RHEVelebit\", 2045]": 0.0,
+    "sto_out_flow|[\"RHEVelebit\", 2050]": 0.0,
+    "storage_level|[\"HECombo\", 2045]": 10960422224.906837,
+    "storage_level|[\"HECombo\", 2050]": 10860821891.789145,
+    "storage_level|[\"RHEVelebit\", 2045]": 104276740.51190302,
+    "storage_level|[\"RHEVelebit\", 2050]": 103393361.68573049
+  },
+  "bound_violation": 1.7362822291033808e-10,
+  "capacity_decisions": [
+    {
+      "family": "cap_inv",
+      "key": [
+        "HECombo",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HECombo",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "RHEVelebit",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "RHEVelebit",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "hror",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "hror",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRSmallHydro2020",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRSmallHydro2020",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "TE-TOZagreb",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "TE-TOZagreb",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRGasOther2020",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRGasOther2020",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "TEPlomin2",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "TEPlomin2",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "TERijeka",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "TERijeka",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "TEBiomassHR",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "TEBiomassHR",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRBiogas2020",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRBiogas2020",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRGeothermal2020",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRGeothermal2020",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "NEKrskoHR",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "NEKrskoHR",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HR_Wind_HR032",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HR_Wind_HR032",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HR_Wind_HR033",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HR_Wind_HR033",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HR_Wind_HR034",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HR_Wind_HR034",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HR_Wind_HR035",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HR_Wind_HR035",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HR_Wind_HR037",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HR_Wind_HR037",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HR_Solar_HR_COAST_SOUTH",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HR_Solar_HR_COAST_SOUTH",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HR_Solar_HR_NORTH_CENTRAL",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HR_Solar_HR_NORTH_CENTRAL",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HR_Solar_HR_EAST",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HR_Solar_HR_EAST",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRSisakC2020",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRSisakC2020",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRCoalIndustrialProxy",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRCoalIndustrialProxy",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HROilIndustrialProxy",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HROilIndustrialProxy",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRJertovec2020",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRJertovec2020",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRTE_TO_Osijek",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRTE_TO_Osijek",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HREL_TO_Zagreb_HJ",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HREL_TO_Zagreb_HJ",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HREL_TO_Zagreb_L",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HREL_TO_Zagreb_L",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRTE_TO_ZagrebOther",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRTE_TO_ZagrebOther",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRNewGasCCGT",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv",
+      "key": [
+        "HRNewGasCCGT",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv_FC",
+      "key": [
+        "PEMFC_CHP",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv_FC",
+      "key": [
+        "PEMFC_CHP",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv_FC",
+      "key": [
+        "SOFC_CHP",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "cap_inv_FC",
+      "key": [
+        "SOFC_CHP",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "heat_pump_dh_cap",
+      "key": [
+        "ATW_HP",
+        "TE-TOZagreb",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "heat_pump_dh_cap",
+      "key": [
+        "ATW_HP",
+        "TE-TOZagreb",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "heat_pump_dh_cap",
+      "key": [
+        "geothermal_HP",
+        "TE-TOZagreb",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "heat_pump_dh_cap",
+      "key": [
+        "geothermal_HP",
+        "TE-TOZagreb",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "heat_pump_dh_cap",
+      "key": [
+        "electric_boiler",
+        "TE-TOZagreb",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "heat_pump_dh_cap",
+      "key": [
+        "electric_boiler",
+        "TE-TOZagreb",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "heat_pump_ind_cap",
+      "key": [
+        "ATW_HP",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "heat_pump_ind_cap",
+      "key": [
+        "ATW_HP",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "heat_pump_ind_cap",
+      "key": [
+        "geothermal_HP",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "heat_pump_ind_cap",
+      "key": [
+        "geothermal_HP",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "heat_pump_ind_cap",
+      "key": [
+        "electric_boiler",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "heat_pump_ind_cap",
+      "key": [
+        "electric_boiler",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "trad_boiler_ind_cap_inv",
+      "key": [
+        "gas_boilers",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "trad_boiler_ind_cap_inv",
+      "key": [
+        "gas_boilers",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "trad_boiler_ind_cap_inv",
+      "key": [
+        "bio_boilers",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "trad_boiler_ind_cap_inv",
+      "key": [
+        "bio_boilers",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "trad_boiler_ind_cap_inv",
+      "key": [
+        "oil_boilers",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "trad_boiler_ind_cap_inv",
+      "key": [
+        "oil_boilers",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "trad_boiler_dh_cap_inv",
+      "key": [
+        "gas_boilers",
+        "TE-TOZagreb",
+        2045
+      ],
+      "value": 30.648646110376358
+    },
+    {
+      "family": "trad_boiler_dh_cap_inv",
+      "key": [
+        "gas_boilers",
+        "TE-TOZagreb",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "trad_boiler_dh_cap_inv",
+      "key": [
+        "bio_boilers",
+        "TE-TOZagreb",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "trad_boiler_dh_cap_inv",
+      "key": [
+        "bio_boilers",
+        "TE-TOZagreb",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "trad_boiler_dh_cap_inv",
+      "key": [
+        "oil_boilers",
+        "TE-TOZagreb",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "trad_boiler_dh_cap_inv",
+      "key": [
+        "oil_boilers",
+        "TE-TOZagreb",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "stat_sto_cap_inv",
+      "key": [
+        "Liion_storage",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "stat_sto_cap_inv",
+      "key": [
+        "Liion_storage",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "h2_sto_max_cap",
+      "key": [
+        "H2_storage_tank",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "h2_sto_max_cap",
+      "key": [
+        "H2_storage_tank",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "h2_electrolysis_max_cap",
+      "key": [
+        "PEM_elec",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "h2_electrolysis_max_cap",
+      "key": [
+        "PEM_elec",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "h2_electrolysis_max_cap",
+      "key": [
+        "SOEC_elec",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "h2_electrolysis_max_cap",
+      "key": [
+        "SOEC_elec",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "h2_electrolysis_max_cap",
+      "key": [
+        "Alkaline_EC",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "h2_electrolysis_max_cap",
+      "key": [
+        "Alkaline_EC",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "heat_pump_cap",
+      "key": [
+        "ATW_HP",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "heat_pump_cap",
+      "key": [
+        "ATW_HP",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "heat_pump_cap",
+      "key": [
+        "geothermal_HP",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "heat_pump_cap",
+      "key": [
+        "geothermal_HP",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "heat_pump_cap",
+      "key": [
+        "electric_boiler",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "heat_pump_cap",
+      "key": [
+        "electric_boiler",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HECombo",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HECombo",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "RHEVelebit",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "RHEVelebit",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "hror",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "hror",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRSmallHydro2020",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRSmallHydro2020",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "TE-TOZagreb",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "TE-TOZagreb",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRGasOther2020",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRGasOther2020",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "TEPlomin2",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "TEPlomin2",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "TERijeka",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "TERijeka",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "TEBiomassHR",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "TEBiomassHR",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRBiogas2020",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRBiogas2020",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRGeothermal2020",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRGeothermal2020",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "NEKrskoHR",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "NEKrskoHR",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HR_Wind_HR032",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HR_Wind_HR032",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HR_Wind_HR033",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HR_Wind_HR033",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HR_Wind_HR034",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HR_Wind_HR034",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HR_Wind_HR035",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HR_Wind_HR035",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HR_Wind_HR037",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HR_Wind_HR037",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HR_Solar_HR_COAST_SOUTH",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HR_Solar_HR_COAST_SOUTH",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HR_Solar_HR_NORTH_CENTRAL",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HR_Solar_HR_NORTH_CENTRAL",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HR_Solar_HR_EAST",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HR_Solar_HR_EAST",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRSisakC2020",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRSisakC2020",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRCoalIndustrialProxy",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRCoalIndustrialProxy",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HROilIndustrialProxy",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HROilIndustrialProxy",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRJertovec2020",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRJertovec2020",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRTE_TO_Osijek",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRTE_TO_Osijek",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HREL_TO_Zagreb_HJ",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HREL_TO_Zagreb_HJ",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HREL_TO_Zagreb_L",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HREL_TO_Zagreb_L",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRTE_TO_ZagrebOther",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRTE_TO_ZagrebOther",
+        2050
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRNewGasCCGT",
+        2045
+      ],
+      "value": 0.0
+    },
+    {
+      "family": "extra_cap_inv",
+      "key": [
+        "HRNewGasCCGT",
+        2050
+      ],
+      "value": 0.0
+    }
+  ],
+  "case": "temperature_hot",
+  "complete_hourly_outputs_saved": true,
+  "constraint_violation": 1.9838353182421997e-10,
+  "fingerprint": -696300692,
+  "objective": 713238286.103741,
+  "runtime_seconds": 272.4779999256134,
+  "status": 2,
+  "window_years": [
+    2045,
+    2050
+  ],
+  "year": 2045
+}

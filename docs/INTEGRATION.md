@@ -32,7 +32,7 @@ For the individual-channel multisector experiments, use
 with complete Cold/Warm temperature chronologies. Each case retains the same
 8760-hour weather profile at every planning anchor, without additional trends. Apply the existing multisector
 thermal adapter with `scale_annual_totals=False`. Each path inherits its own
-realized stock after the common 2020 start. See [CHANNEL_RESULTS.md](CHANNEL_RESULTS.md).
+realized stock after the common calibrated historical 2020 base. See [CHANNEL_RESULTS.md](CHANNEL_RESULTS.md).
 
 `h2res_interface.couple_temperature` is the explicit-baseline multisector adapter.
 It returns new heat/cooling/COP dictionaries; callers supply temperature baselines,

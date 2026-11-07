@@ -1,135 +1,39 @@
-"""Verify and summarize the stationary-weather V6 multisector results."""
+"""Verify the calibrated V6.1 stationary-weather experiment."""
 from pathlib import Path
-import argparse
-import json
 import os
 import sys
-
 for name in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS'):
     os.environ[name] = '1'
 os.environ.setdefault('MPLBACKEND', 'Agg')
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-
-import numpy as np
 import pandas as pd
-from scripts.channel_profiles import DONORS, YEARS, channel_cases, verify_selection
-
-
-def require(condition, message):
-    if not condition:
-        raise ValueError(message)
+from analysis.native_results import national_tables, verify_national, annual_costs
+from scripts.channel_profiles import verify_selection
 
 
 def tables(root):
-    folder = root/'results/channel_sensitivity'
-    return {name: pd.read_csv(folder/(name+'.csv')) for name in (
+    return {name: pd.read_csv(root/'results/channel_sensitivity'/(name+'.csv')) for name in (
         'scenario_inputs', 'objective_comparison', 'objective_components',
-        'investments_by_technology', 'installed_stock', 'channel_comparison',
-        'system_outcomes', 'thermal_inputs')}
+        'investments_by_technology', 'system_outcomes', 'thermal_inputs')}
 
 
 def verify_results(root=ROOT):
     data = tables(root)
-    keys = {(case, year) for case in DONORS for year in YEARS}
-    objective = data['objective_comparison']
-    require(len(objective) == 49 and set(zip(objective['case'], objective.year)) == keys,
-            'Incomplete or duplicate planning windows')
-    require(np.isfinite(objective.objective).all() and
-            (objective.constraint_violation <= 1e-7).all() and
-            (objective.bound_violation <= 1e-7).all(), 'Solver numerical acceptance failed')
-    reference = objective[objective['case'] == 'average'].set_index('year')
-    expected_delta = objective.objective-objective.year.map(reference.objective)
-    np.testing.assert_allclose(objective.delta_vs_average, expected_delta, rtol=0, atol=1e-6)
-    np.testing.assert_allclose(objective.percent_vs_absolute_average,
-        100*expected_delta/objective.year.map(reference.objective).abs(), rtol=0, atol=1e-10)
-    for row in objective.itertuples():
-        require(json.loads(row.window_years) == ([row.year, row.year+5] if row.year < 2050 else [2050]),
-                'Native window definition differs')
-    components = data['objective_components']
-    totals = components[components.active_in_objective == 1].groupby(['case', 'window_start']).value.sum()
-    expected = objective.set_index(['case', 'year']).objective.reindex(totals.index)
-    require(len(totals) == 49 and expected.notna().all(), 'Missing objective components')
-    require(np.max(np.abs(totals.to_numpy()-expected.to_numpy())) < .01,
-            'Objective decomposition does not close')
-
-    investments = data['investments_by_technology']
-    require((investments.realized == 1).all() and
-            (investments.decision_year == investments.window_start).all(),
-            'Provisional decisions included as realized investment')
-    require(not investments.duplicated(['case', 'family', 'key_json']).any(),
-            'Duplicate realized investment')
-    np.testing.assert_allclose(investments.objective_contribution,
-        investments.value*investments.objective_coefficient, rtol=1e-12, atol=1e-6)
-    is_storage = investments.family.isin(['stat_sto_cap_inv', 'h2_sto_max_cap'])
-    require((investments.unit == np.where(is_storage, 'MWh', 'MW')).all(), 'Mixed capacity units')
-    require((investments.capacity_addition == (investments.family != 'extra_cap_inv').astype(int)).all(),
-            'Capacity-addition flags differ')
-    baseline = investments[investments['case'] == 'average'].set_index(['family', 'key_json'])
-    pairs = pd.MultiIndex.from_frame(investments[['family', 'key_json']])
-    comparison = data['channel_comparison']
-    key = ['case', 'family', 'key_json']
-    comparison = comparison.set_index(key).loc[pd.MultiIndex.from_frame(investments[key])]
-    np.testing.assert_allclose(comparison.capacity_delta_vs_average,
-        investments.value.to_numpy()-baseline.value.reindex(pairs).to_numpy(), rtol=0, atol=1e-8)
-    np.testing.assert_allclose(comparison.investment_objective_delta,
-        investments.objective_contribution.to_numpy()-baseline.objective_contribution.reindex(pairs).to_numpy(),
-        rtol=0, atol=1e-6)
-    stock = data['installed_stock']
-    require(len(stock) == 2009, 'Stock record dimensions differ')
-    np.testing.assert_allclose(stock.installed_native_capacity,
-        stock.remaining_original+stock.inherited_new+stock.new_addition, rtol=0, atol=1e-6)
-    evidence = root/'provenance/channel_sensitivity'
-    integrity = json.loads((evidence/'final_integrity.json').read_text())
-    require(integrity['all_passed'] and integrity['planning_windows'] == 49 and
-        integrity['new_planning_windows'] == 49 and integrity['reused_windows'] == 0 and
-        integrity['optimal'] == 49 and integrity['new_historical_stress_tests'] == 0,
-        'Completed channel integrity differs')
-    require(len(integrity['proofs']) == 49 and not any(r['reused'] for r in integrity['proofs'])
-            and {(r['case'], r['year']) for r in integrity['proofs']} == keys,
-            'Fresh-window proof identities differ')
-    completion = json.loads((evidence/'completion_audit.json').read_text())
-    require(completion['passed'] and completion['windows_checked'] == 49 and
-            completion['stationary_weather_hashes_verified'] and
-            completion['unchanged_channels_verified'] and
-            completion['native_equations_unchanged'] and
-            completion['own_complete_state_handoffs_verified'], 'Completion audit failed')
-    checks = completion['checks']
-    require(len(checks) == 49 and {(r['case'], r['year']) for r in checks} == keys and
-            all(r['status'] == 2 and r['state_handoff_verified'] and
-                r['constraint_violation'] <= 1e-7 and r['bound_violation'] <= 1e-7 and
-                abs(r['ledger_gap']) < .01 and abs(r['component_gap']) < .01 for r in checks),
-            'Fresh solution or complete-state handoff failed')
-    audit = json.loads((evidence/'post_audit.json').read_text())
-    for name, size in [('stock_checks', 2009), ('emission_checks', 273), ('balance_checks', 49)]:
-        require(len(audit[name]) == size and all(r['passed'] for r in audit[name]), name+' failed')
-    mapping = json.loads((evidence/'mapping_checks.json').read_text())
-    require(len(mapping) == 98 and max(r['max_error'] for r in mapping) <= 1e-12,
-            'Channel spatial conservation failed')
-    verify_selection(root)
     inputs = data['scenario_inputs']
-    require(len(inputs) == 49 and set(zip(inputs['case'], inputs.year)) == keys,
-            'Channel input table dimensions differ')
-    require((inputs.groupby('case').profile_sha256.nunique() == 1).all(),
-            'Weather profile changes across planning anchors')
-    for year in YEARS:
-        profiles = channel_cases(root, year)
-        for case, profile in profiles.items():
-            row = data['scenario_inputs'].query('case == @case and year == @year').iloc[0]
-            np.testing.assert_allclose([row.mean_solar_CF, row.mean_wind_CF, row.mean_temperature_C],
-                                      profile.astype(float).mean(axis=0), rtol=0, atol=1e-12)
-            np.testing.assert_allclose([row.heating_degree_hours_18C, row.cooling_degree_hours_22C],
-                [np.maximum(18-profile[:, 2], 0).sum(), np.maximum(profile[:, 2]-22, 0).sum()], rtol=0, atol=1e-8)
-            require((row.solar_member, row.wind_member, row.temperature_member) == DONORS[case],
-                    'Input table donor IDs differ')
-            changed = [c for c in range(3) if not np.array_equal(profile[:, c], profiles['average'][:, c])]
-            expected_changed = [] if case == 'average' else [0 if case.startswith('solar') else 1 if case.startswith('wind') else 2]
-            require(changed == expected_changed, 'An unchanged channel differs')
-    return {'planning_windows': 49, 'new_windows': 49, 'reused_windows': 0,
-            'weather': 'stationary', 'complete_state_handoffs': 49,
-            'stock_checks': 2009, 'emission_checks': 273, 'balance_checks': 49,
-            'input_profile_hashes': 49, 'new_operational_tests': 0}
-
+    if not inputs.groupby('case').profile_sha256.nunique().eq(1).all():
+        raise ValueError('Weather profile changes across planning anchors')
+    inv = data['investments_by_technology']
+    if not (inv.realized.eq(1).all() and inv.decision_year.eq(inv.window_start).all()):
+        raise ValueError('Provisional decisions included as realized investment')
+    report = verify_national(root)
+    verify_selection(root)
+    for name, expected in national_tables(root).items():
+        pd.testing.assert_frame_equal(data[name], expected.reset_index(drop=True),
+            check_dtype=False, rtol=1e-12, atol=1e-8, obj=name)
+    costs = pd.read_csv(root/'results/channel_sensitivity/realized_annual_costs.csv')
+    pd.testing.assert_frame_equal(costs, annual_costs(root), check_dtype=False, rtol=1e-12, atol=1e-8)
+    return report
 
 
 def main():

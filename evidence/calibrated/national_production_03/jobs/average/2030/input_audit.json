@@ -1,0 +1,22 @@
+{
+  "case": "average",
+  "job": "average",
+  "year": 2030,
+  "window_years": [
+    2030,
+    2035
+  ],
+  "fence": "ade12a1aa972d93a2fd58e95415ef54420104d29519fc614ba843013296e74d8",
+  "inherited_state_sha256": "978a807557c6072c2931f955c2a326f7d9c9161dd876ea07ed383aec9d722c3e",
+  "model_fingerprint": -492536578,
+  "hashes": {
+    "heat_demand": "a36c26c702acef68d6302f44c15c2e1b0452f504a3496b8a70ac4b6907924984",
+    "cooling_demand": "3397abb80e58cb29bb0dfdabfab28dab008546017317f296a0e2840f382a3d63",
+    "HP_COP_period": "010f5fca115b48d74f5c663577db2e2b0e05d94e199239c9034df35b6adb72e5",
+    "aval_factor_plant": "e2781bfe2bae469207dda829892363d5a6a96d4f4b3001ecdc9c9a70c3ef73fc"
+  },
+  "NPV": {
+    "2030": 0.61,
+    "2035": 0.48
+  }
+}

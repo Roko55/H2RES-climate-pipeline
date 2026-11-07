@@ -1,0 +1,33 @@
+{
+  "sources": [
+    {
+      "case": "avg",
+      "source": "packages/electricity_avg/avg_yield__normal/data/climate_profile_avg_yield__normal.csv",
+      "source_sha256": "21aa0cfccf0cbc21f9bb2ddf23125ec4c91ceabb13772de98e2defd8b1591c88",
+      "file": "electricity_avg.csv",
+      "sha256": "c26ba7b187c2fad7eeec0ec710266389594a87e3aaa7676186e6340124f20f48",
+      "hours": 8760,
+      "mapped_ncre_sha256": "e6fc0e9b9f580abfe91dceebb625bef4d78dafd5d8f7085c67c75cb4ff7613ac"
+    },
+    {
+      "case": "low",
+      "source": "packages/electricity_low/low_yield__normal/data/climate_profile_low_yield__normal.csv",
+      "source_sha256": "18e30838b5a4e27a09db113ce22da234fa3ffcae892aa7870faccf4f66e6b348",
+      "file": "electricity_low.csv",
+      "sha256": "982286de8ebea46138aecd9d4b1f486e6e11647e4153429558f357974f76f75b",
+      "hours": 8760,
+      "mapped_ncre_sha256": "8792fb36dc9feff388c1949e8a2b2e83bb14b722464853b308b9d11a8cda4bba"
+    },
+    {
+      "case": "high",
+      "source": "packages/electricity_high/high_yield__normal/data/climate_profile_high_yield__normal.csv",
+      "source_sha256": "313fc48f1296923d88f92546ca1e3691a9492723ecda294fb3c789402fdf1ca6",
+      "file": "electricity_high.csv",
+      "sha256": "e284ffcf9f65c75da26f50db2202d07bced4f6f1e0f6d5a32cc2174c3572acfb",
+      "hours": 8760,
+      "mapped_ncre_sha256": "96645f887c9dde1ca77dfa0ccbe981fdf98f64e037b74c79096ccf2807e47d9f"
+    }
+  ],
+  "derivation_script_sha256": "d648da6b489046a7cce1d7b52099d72f91bb496a508f38d1ba1889c6da30c3d1",
+  "new_optimization": false
+}

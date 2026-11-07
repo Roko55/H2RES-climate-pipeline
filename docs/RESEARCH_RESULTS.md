@@ -1,64 +1,73 @@
-# V6 results
+# Checked V6.1 results
 
-This result package corresponds to the V6 manuscript with SHA256
-`54313b834d431079adb30b61e9d4ff5c608a472f66df5651dac70fae208123dd`.
-The accepted ensemble is `profiles/accepted.npy`, SHA256
+Manuscript SHA256:
+`2a0bada6c1d530fd762598497608df78473a0cbf4ebedc0c964a7b24e44aebaf`.
+This identifies a fixed checked snapshot, not later manuscript revisions.
+The accepted climate ensemble is unchanged, SHA256
 `d86a855166c24d699d511010184db12d0baf1551f83254b41f661c602d7ae728`.
 
 ## Profile evaluation — section 4.1
 
-The full 43800 reporting hours cover 2020-2024. Training is 1980-2015 and
-validation is 2016-2019. Reporting was previously inspected and is retrospective.
-`results/profile_metrics.csv` contains the nine mean-profile MAE rows used for
-the generated mean, fixed H2RES reference and training-period hourly mean.
-Solar/wind errors are in capacity-factor units; temperature errors are in degrees C.
-`results/manuscript/fair_crps.csv` compares 100 generated and 36 historical members
-on the same reporting calendar, with the finite-ensemble correction.
+Training is 1980–2015, validation 2016–2019, reporting 2020–2024 (43800 hours).
+Reporting had previously been inspected and is retrospective. Figures 3–6 and
+their climate score tables are unchanged from v0.7.0. `profile_metrics.csv`
+contains nine MAE rows: three channels × generated mean, fixed H2RES reference
+and training-period hourly mean. Solar/wind use CF units; temperature uses C.
 
-Figure 5 reports `100 * (generated MAE / reference MAE - 1)`. Against the fixed
-reference, changes are -53.58% solar, -4.88% wind and -8.33% temperature.
-Against the historical mean, they are -0.16%, +0.52% and -8.33% respectively.
-The two temperature references are identical. Figure 6 fair-CRPS changes are
-+2.01%, +1.60% and -7.48%. Negative changes mean a smaller error or score.
-Mean-profile error and the distribution of annual members are distinct evaluations.
+Figure 5 uses `100*(generated MAE/reference MAE-1)`. Changes versus the fixed
+reference are −53.58% solar, −4.88% wind and −8.33% temperature; versus the
+historical mean they are −0.16%, +0.52% and −8.33%. Both temperature references
+are identical. Fair CRPS compares 100 generated and 36 historical members on
+the same calendar, with finite-ensemble correction: +2.01%, +1.60%, −7.48%.
+Negative changes indicate smaller error/score. These are different evaluations
+from investment and operating outcomes.
 
-## Planning comparisons — sections 4.2-4.5
+## National planning — sections 4.2–4.5
 
-Seven [single-channel paths](CHANNEL_RESULTS.md) use stationary weather through
-2020-2050. All 49 native windows are newly solved; none reuse an Average window.
-Every case starts from the same 2020 stock and subsequently inherits its own
-investments and retirements. Solar Low/High, Wind Low/High and Cold/Warm change
-one complete hourly input against the common Average case.
+The [seven stationary-weather paths](CHANNEL_RESULTS.md) share a calibrated 2020
+base, followed by 42 newly solved windows in 2025–2050. Each inherits its own
+complete realized state. Solar and wind costs follow Low > Average > High at
+every future window. No new electricity-generation capacity is selected.
+Average cumulative heating additions are 8932.341 MW; Figure 14 therefore
+contains the heating panel only. Cold/Warm outcomes require the annual heat
+normalization explanation in [the accounting notes](CHANNEL_RESULTS.md).
 
-The original supporting tables are under `results/channel_sensitivity/`.
-They retain all assets and active components needed to reconcile the reported
-49 windows. `results/manuscript/tables/` contains their manuscript summaries.
-Costs use the model's EUR coefficients and discount weights. Window differences
-are in million EUR; overlapping windows are reported separately. Realized annual
-costs count each anchor once and remove its own discount weight. The cost per
-demand MWh uses the same year's covered multisector demand. MW capacity additions,
-MWh storage energy, TWh annual supply and Mt direct emissions remain distinct.
-
-Solar yield preserves the cost ranking in these cases. Wind Low is more expensive
-through 2040, then less expensive in the windows starting in 2045 and 2050.
-Cold is initially less expensive and later more expensive. These results are
-conditional on the selected hourly profiles, inherited stock and the executed
-model's cost treatment. Annual heating/cooling totals are preserved while their
-hourly distribution and heat-pump COP change.
+The first Average window objective is 2035059737.039034 EUR. Its realized 2025
+contribution, removing the 0.78 discount weight, is 991952417.121068 EUR.
+These two quantities are different. Net imports, including existing Krško rights
+once, are 5.36944 TWh in 2025, 6.77610 TWh in 2030 and 20.5272 TWh in 2050.
+Costs, MW additions, TWh flows and Mt direct domestic emissions are kept separate.
+Imported electricity's foreign emissions are outside domestic direct emissions.
+The native coefficient convention does not establish a uniform real price year.
 
 ## Fixed-portfolio operation — section 4.6
 
-`results/operational_checks.csv` contains 45 full 8760-hour checks: three separately
-optimized 2030 electricity portfolios, five historical years and exchange-capacity
-fractions 1.0, 0.5 and 0.0. Portfolio design used 8736 hours; operation covers all
-8760 hours with no capacity expansion and cyclic storage. All cases are optimal
-with zero unserved Croatian electricity. Maximum CEEP is 0, 0.574591588 and
-4.658303801 TWh for full, half and zero exchange respectively. These checks apply
-to the three electricity portfolios, separately from the seven multisector paths.
+`zonal_2030_production_05` contains three full 8760-hour 2030 planning portfolios
+(Low, Average, High), then 45 fixed-stock operating checks: three portfolios ×
+five historical years (2020–2024) × full/half/zero HR exchange. HR, SI and BA are
+separate balanced zones; SI–BA exchange remains represented. These portfolios
+are distinct from the seven national multisector paths. Historical weather
+years do not change the exogenous 2030 zonal load totals.
+
+All 30 full/half-exchange checks have zero HR unserved energy. At zero HR
+exchange, 12 of 15 do; three checks in weather year 2021 have shortfalls:
+
+| Fixed portfolio | HR unserved MWh | Hours |
+|---|---:|---:|
+| Average | 70.40645 | 1 |
+| Low | 158.21978 | 3 |
+| High | 65.22580 | 1 |
+
+Zero-exchange gross HR imports and exports are zero; CEEP is approximately
+1.52–3.42 TWh. All 45 cases, including these shortfalls, are published.
+CEEP is surplus electricity; it is distinct from energy not served. Cyclic
+storage and fixed solved stocks are verified. Some solutions show simultaneous
+battery charge/discharge; the overlap is recorded. No exclusive-operation
+sensitivity or additional historical years are claimed.
 
 ## Manuscript figure index
 
-The files below are exact copies of the corresponding V6 embedded images.
+The files below are exact copies of the corresponding V6.1 embedded images.
 Their identities and captions are recorded in `provenance/manuscript/scope.json`.
 
 | Figure | Reported content | File |
@@ -71,19 +80,23 @@ Their identities and captions are recorded in `provenance/manuscript/scope.json`
 | 9-10 | Wind cost differences and components | [9](../results/manuscript/figures/figure_09.png), [10](../results/manuscript/figures/figure_10.png) |
 | 11-12 | Temperature cost differences and components | [11](../results/manuscript/figures/figure_11.png), [12](../results/manuscript/figures/figure_12.png) |
 | 13 | Average realized annual costs and cost per demand MWh | [Figure 13](../results/manuscript/figures/figure_13.png) |
-| 14 | Average new electricity/heating capacity | [Figure 14](../results/manuscript/figures/figure_14.png) |
+| 14 | Average new heating capacity (electricity additions are zero) | [Figure 14](../results/manuscript/figures/figure_14.png) |
 | 15(a)-(b) | Average supply and direct emissions | [15(a)](../results/manuscript/figures/figure_15a.png), [15(b)](../results/manuscript/figures/figure_15b.png) |
 | 16 | CEEP in the 45 operating cases | [Figure 16](../results/manuscript/figures/figure_16.png) |
+
+Figures 1–2 (workflow/method) are also included. All 17 embedded image files and
+captions are indexed in `provenance/manuscript/scope.json`.
 
 ## Reproduction
 
 ```bash
-python analysis/manuscript_results.py --output exports/v6_tables
+python audit.py
+python analysis/manuscript_results.py --output exports/v61_tables
 ```
 
-The command regenerates supporting tables from the included numerical records,
-checks all figure hashes and draws the six MAE comparisons from their table.
-Original embedded figure images are retained for exact manuscript correspondence.
-Recomputing profile scores and historical-weather plots requires the excluded
-source weather corpus. Re-solving H2RES requires its original model, inputs and
-licensed optimizer. No solver is invoked by this command.
+The commands verify evidence and reproduce the numerical summary tables and
+MAE comparison plot without a solver. Embedded manuscript images are retained
+exactly; the commands do not redraw every manuscript figure. Recomputing climate
+scores/historical plots needs the excluded weather corpus. Re-solving H2RES
+needs its original full database, runtime and licensed optimizer. See
+[native evidence](../evidence/calibrated/README.md) for the precise archive scope.

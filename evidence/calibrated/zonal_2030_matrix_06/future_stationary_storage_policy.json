@@ -1,0 +1,38 @@
+{
+  "scope": "future_national_stationary_storage",
+  "sources": {
+    "vis_ratings": "https://www.hep.hr/projekti/obnovljivi-izvori-energije/neintegrirane-suncane-elektrane/3422",
+    "vis_in_service_since_2022": "https://www.hep.hr/UserDocsImages/dokumenti/vjesnik/2024/3_2024.pdf",
+    "sibenik_first_phase_commercial_start_january_2026": "https://ngen-group.eu/projects/croatia-sibenik1",
+    "sibenik_full_project_2026": "https://ngen-group.eu/news/ngen-and-nextgrid-energy-open-bess-sibenik-60-mw-120-mwh",
+    "native_capex_anchor_comparator": "https://doi.org/10.1016/j.rser.2022.112781 (Table 3, Li-ion battery CAPEX in M EUR/MWh; the four 2020/2030/2040/2050 values match the workbook after rounding; the price base year is not established here.)",
+    "native_cost_and_limit": "flex_tech_HR_2020_2050_sdewes_limited.xlsx tech_cost_years and flex_tech sheets, SHA256 24e4e9bce9e98750c40d9a2753d37a75c51b1f7f4d529fc452b91c6bf3f1a718"
+  },
+  "assumptions": {
+    "existing_scope": "Documented commercial installations. Vis enters by the 2025 anchor. Both Sibenik phases enter by 2030 and total 60 MW, 120 MWh.",
+    "energy_basis": "Reported MWh are taken as usable internal SOC limits in the absence of a DC-to-AC metering boundary for both assets. New two-hour duration refers to grid-delivered discharge.",
+    "life_years": 15,
+    "new_grid_discharge_duration_h": "Two-hour scenario based on the documented Sibenik project. The project's nameplate ratio is an analogy for the scenario, not a fleet measurement.",
+    "one_way_efficiency": "Retain 0.90 from the active H2RES input, giving 0.81 round trip.",
+    "commercial_stock_replacement": "Future investments may replace retired capacity within the existing model's build limits. Legacy battery CAPEX and annual build limits are not revised by this policy."
+  },
+  "units": {
+    "Liion_storage": {
+      "new_grid_discharge_duration_h": 2.0,
+      "new_service_life_years": 15,
+      "one_way_efficiency": 0.9,
+      "maximum_new_mwh_per_anchor": 14.285714285714286,
+      "new_capex_model_units_per_mwh": {
+        "2025": 832100, "2030": 622200, "2035": 508100, "2040": 394000, "2045": 324500, "2050": 255000
+      },
+      "existing_by_year": {
+        "2025": {"energy_mwh": 1.44, "grid_power_mw": 1.0},
+        "2030": {"energy_mwh": 121.44, "grid_power_mw": 61.0},
+        "2035": {"energy_mwh": 121.44, "grid_power_mw": 61.0},
+        "2040": {"energy_mwh": 120.0, "grid_power_mw": 60.0},
+        "2045": {"energy_mwh": 0.0, "grid_power_mw": 0.0},
+        "2050": {"energy_mwh": 0.0, "grid_power_mw": 0.0}
+      }
+    }
+  }
+}

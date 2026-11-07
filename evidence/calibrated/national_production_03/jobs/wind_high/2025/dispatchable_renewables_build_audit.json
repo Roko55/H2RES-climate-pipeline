@@ -1,0 +1,12 @@
+{
+  "annual_max_mwh": {
+    "HRBiogas2020": 333100.0,
+    "HRGeothermal2020": 0.0,
+    "TEBiomassHR": 618958.621
+  },
+  "hourly_cost_and_fossil_co2_audited": true,
+  "years": [
+    2025,
+    2030
+  ]
+}
