@@ -449,7 +449,7 @@ def select_release(args):
         "design": args.design, "year": args.year,
         "interpretation": "Designed sensitivity cases, not calibrated weather-event probabilities"}
     if args.design == 'channel':
-        metadata.update(experiment='national_production_03', weather='stationary',
+        metadata.update(experiment='national_production_thermal_20261107_01', weather='stationary',
             solar_factor_2050=1.0, wind_factor_2050=1.0, temperature_offset_2050_C=0.0,
             channels=CHANNELS, units=['capacity factor', 'capacity factor', 'degrees C'])
     save_json(output.with_suffix(".json"), metadata)
@@ -461,7 +461,7 @@ def main(argv=None):
     frozen = commands.add_parser("replay", help="Reproduce the accepted cohort: regenerate solar and retain frozen wind/temperature")
     frozen.add_argument("--output", required=True)
     frozen.set_defaults(function=replay_release)
-    final_cases = commands.add_parser("select-final", help="Export the V6.1 single-channel profiles or fixed-portfolio electricity inputs")
+    final_cases = commands.add_parser("select-final", help="Export the V6.2 single-channel profiles or fixed-portfolio electricity inputs")
     final_cases.add_argument("--design", required=True, choices=("electricity", "channel"))
     final_cases.add_argument("--year", type=int, default=2025)
     final_cases.add_argument("--output", required=True)

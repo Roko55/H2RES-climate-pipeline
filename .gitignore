@@ -13,3 +13,10 @@ data/
 *.joblib
 .env
 *.lic
+!data/
+data/*
+!data/weather_energy/
+data/weather_energy/*
+!data/weather_energy/thermal_by_member.csv.gz
+!data/weather_energy/case_summary.csv
+!data/weather_energy/thermal_manifest.json

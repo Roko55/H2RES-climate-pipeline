@@ -18,7 +18,7 @@ class ChannelResultTests(unittest.TestCase):
     def test_final_inputs_donors_fresh_windows_and_accounting(self):
         report = results.verify_results(ROOT)
         self.assertEqual(report['input_profile_hashes'], 42)
-        self.assertEqual(report['new_operational_tests'], 45)
+        self.assertEqual(report['operating_records_retained'], 45)
         self.assertEqual(report['new_windows'], 42)
         self.assertEqual(report['common_calibrated_base_year'], 2020)
 

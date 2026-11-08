@@ -1,0 +1,435 @@
+{
+  "status": "verified",
+  "windows": 42,
+  "cases": 7,
+  "national_optimization_calls": 0,
+  "evidence": [
+    {
+      "status": "verified_prefix",
+      "case": "average",
+      "windows": 6,
+      "evidence": [
+        {
+          "case": "average",
+          "year": 2025,
+          "objective_model_units": 1551137209.109303,
+          "constraint_violation": 2.0591528482327703e-11,
+          "bound_violation": 1.8335555296289385e-11,
+          "objective_gap": 0.0005620718002319336,
+          "accepted_sha256": "43293ecd794e552d63a15670829b427b98ae2bff24a2481f100deb1266a1f85b"
+        },
+        {
+          "case": "average",
+          "year": 2030,
+          "objective_model_units": 1876137369.4383466,
+          "constraint_violation": 4.7776893552509136e-11,
+          "bound_violation": 3.9186431877169525e-11,
+          "objective_gap": 0.0010339021682739258,
+          "accepted_sha256": "c630e49e75bc50ce2d9277d073b00cb3a8add7f722a6f7e07f939ae26edc8d27"
+        },
+        {
+          "case": "average",
+          "year": 2035,
+          "objective_model_units": 1263808582.3485637,
+          "constraint_violation": 6.150457920739427e-11,
+          "bound_violation": 5.2175153086864157e-11,
+          "objective_gap": 0.0010236501693725586,
+          "accepted_sha256": "545cf069516515b017708cd260e392b2dcb19ff0e49828fd084ee1b4ff766b38"
+        },
+        {
+          "case": "average",
+          "year": 2040,
+          "objective_model_units": 774202167.128131,
+          "constraint_violation": 1.7473666957812384e-10,
+          "bound_violation": 1.4658496638730867e-10,
+          "objective_gap": 6.556510925292969e-05,
+          "accepted_sha256": "7710c30825623bfdbc42f4c558b23071f7f5828d53ce3f5ab72b869d9443af03"
+        },
+        {
+          "case": "average",
+          "year": 2045,
+          "objective_model_units": 708668359.9992561,
+          "constraint_violation": 2.1611867850879207e-10,
+          "bound_violation": 1.859064013842726e-10,
+          "objective_gap": 0.0001169443130493164,
+          "accepted_sha256": "85d4bf95153c35fdfd3eafab2f26f7689331d1f97e9215027b751a781f34150e"
+        },
+        {
+          "case": "average",
+          "year": 2050,
+          "objective_model_units": 325135136.2502293,
+          "constraint_violation": 2.1611867850879207e-10,
+          "bound_violation": 1.859064013842726e-10,
+          "objective_gap": 0.00019657611846923828,
+          "accepted_sha256": "f18d69ebbdfd6b3b81ae472c7e130caa623f8c9f7aae0eb603a7d329a68266f1"
+        }
+      ]
+    },
+    {
+      "status": "verified_prefix",
+      "case": "temperature_cold",
+      "windows": 6,
+      "evidence": [
+        {
+          "case": "temperature_cold",
+          "year": 2025,
+          "objective_model_units": 1735076696.9073188,
+          "constraint_violation": 2.0591528482327703e-11,
+          "bound_violation": 1.8335555296289385e-11,
+          "objective_gap": 0.0006042718887329102,
+          "accepted_sha256": "24ffd0328ad452ec2b94685e250132597677c082026a8b8995aeb9c64e851828"
+        },
+        {
+          "case": "temperature_cold",
+          "year": 2030,
+          "objective_model_units": 1865668848.932348,
+          "constraint_violation": 4.7776893552509136e-11,
+          "bound_violation": 3.9186431877169525e-11,
+          "objective_gap": 1.811981201171875e-05,
+          "accepted_sha256": "78ea402b6fc04ffb87b50f7315701d5ed2b93c0a8750e91abdb38381896ce6ee"
+        },
+        {
+          "case": "temperature_cold",
+          "year": 2035,
+          "objective_model_units": 1300204338.2614326,
+          "constraint_violation": 6.150457920739427e-11,
+          "bound_violation": 5.2175153086864157e-11,
+          "objective_gap": 0.00030159950256347656,
+          "accepted_sha256": "5dd92d82c6ca3b203ac74798ecc176b8d960ba7636bf420cd396f3218408ffe0"
+        },
+        {
+          "case": "temperature_cold",
+          "year": 2040,
+          "objective_model_units": 791482167.981028,
+          "constraint_violation": 1.7473666957812384e-10,
+          "bound_violation": 1.4658496638730867e-10,
+          "objective_gap": 0.0004328489303588867,
+          "accepted_sha256": "0d69991e14b4ae53c4fe4ffbe428f8f8bcf22cf3de90a899bfdec651c74d9b29"
+        },
+        {
+          "case": "temperature_cold",
+          "year": 2045,
+          "objective_model_units": 721651141.3806577,
+          "constraint_violation": 2.1611867850879207e-10,
+          "bound_violation": 1.859064013842726e-10,
+          "objective_gap": 0.0006849169731140137,
+          "accepted_sha256": "2bdb2487a8af429e91e409f56a4084f94b65a54cbd053bd5433698795a554e56"
+        },
+        {
+          "case": "temperature_cold",
+          "year": 2050,
+          "objective_model_units": 330673031.5859389,
+          "constraint_violation": 2.1611867850879207e-10,
+          "bound_violation": 1.859064013842726e-10,
+          "objective_gap": 6.556510925292969e-06,
+          "accepted_sha256": "bc649a6edd5346de1a5d3da75847e4b2b011b75bdfb6c5c2b558bf86d05e8032"
+        }
+      ]
+    },
+    {
+      "status": "verified_prefix",
+      "case": "temperature_hot",
+      "windows": 6,
+      "evidence": [
+        {
+          "case": "temperature_hot",
+          "year": 2025,
+          "objective_model_units": 1431307434.3188608,
+          "constraint_violation": 2.7896351895151383e-11,
+          "bound_violation": 1.8335555296289385e-11,
+          "objective_gap": 0.00031703710556030273,
+          "accepted_sha256": "aeab8bfa890f9cbec65a48408bff590daf5d469c54ac1b3862a23af64a74d5c9"
+        },
+        {
+          "case": "temperature_hot",
+          "year": 2030,
+          "objective_model_units": 1851096845.2018814,
+          "constraint_violation": 4.7776893552509136e-11,
+          "bound_violation": 3.9186431877169525e-11,
+          "objective_gap": 0.0012034177780151367,
+          "accepted_sha256": "94afa94edd50a00bd979f92e84ca6d5c49c8ff1ab6b172dae6da5e37a39d5fcd"
+        },
+        {
+          "case": "temperature_hot",
+          "year": 2035,
+          "objective_model_units": 1256828975.3937137,
+          "constraint_violation": 6.150457920739427e-11,
+          "bound_violation": 5.2175153086864157e-11,
+          "objective_gap": 0.0014497637748718262,
+          "accepted_sha256": "052f3354a2f2d14b8947a7c09d14acdcf0aa74922e5d082736cac15d55e53abd"
+        },
+        {
+          "case": "temperature_hot",
+          "year": 2040,
+          "objective_model_units": 769334375.7182323,
+          "constraint_violation": 1.7473666957812384e-10,
+          "bound_violation": 1.4658496638730867e-10,
+          "objective_gap": 0.0009704232215881348,
+          "accepted_sha256": "55e82412a0eab74eb09827a48a36377a47bea3500f490fd3d8a90bec92562a80"
+        },
+        {
+          "case": "temperature_hot",
+          "year": 2045,
+          "objective_model_units": 717822993.2216651,
+          "constraint_violation": 2.1611867850879207e-10,
+          "bound_violation": 1.859064013842726e-10,
+          "objective_gap": 0.0012645721435546875,
+          "accepted_sha256": "3ecf127dbf687c76eb290dc4fc6f0eb3935a4144597bf901885ba1dab3281d69"
+        },
+        {
+          "case": "temperature_hot",
+          "year": 2050,
+          "objective_model_units": 336282292.31791246,
+          "constraint_violation": 2.1611867850879207e-10,
+          "bound_violation": 1.859064013842726e-10,
+          "objective_gap": 0.00029140710830688477,
+          "accepted_sha256": "452323f29e5650310eb1d2017c7a94424d5164234b5f397bde30cd8dcf93744c"
+        }
+      ]
+    },
+    {
+      "status": "verified_prefix",
+      "case": "wind_low",
+      "windows": 6,
+      "evidence": [
+        {
+          "case": "wind_low",
+          "year": 2025,
+          "objective_model_units": 1563137507.8723717,
+          "constraint_violation": 2.0591528482327703e-11,
+          "bound_violation": 1.8335555296289385e-11,
+          "objective_gap": 0.00031620264053344727,
+          "accepted_sha256": "689567b9ea915e46604fa8686e64a196f5af52b66b7fa38132d92adc89779a55"
+        },
+        {
+          "case": "wind_low",
+          "year": 2030,
+          "objective_model_units": 1885571260.7649157,
+          "constraint_violation": 4.7776893552509136e-11,
+          "bound_violation": 3.9186431877169525e-11,
+          "objective_gap": 0.001283884048461914,
+          "accepted_sha256": "214a26813b6d634d731bcc8865ca8f026c5a911eee47ddd38470b69962c2f881"
+        },
+        {
+          "case": "wind_low",
+          "year": 2035,
+          "objective_model_units": 1271270490.6653101,
+          "constraint_violation": 6.150457920739427e-11,
+          "bound_violation": 5.2175153086864157e-11,
+          "objective_gap": 0.0010215044021606445,
+          "accepted_sha256": "cb8535b2dc110245529e91ab39dc537a455562cda8f9742e90e7c06f075614be"
+        },
+        {
+          "case": "wind_low",
+          "year": 2040,
+          "objective_model_units": 780117035.609152,
+          "constraint_violation": 1.7473666957812384e-10,
+          "bound_violation": 1.4658496638730867e-10,
+          "objective_gap": 6.4849853515625e-05,
+          "accepted_sha256": "0f640a9f84bcc8fc1d0d36bb02ba767c00ebd766e55f1c234a02ee15846be41d"
+        },
+        {
+          "case": "wind_low",
+          "year": 2045,
+          "objective_model_units": 713289957.8974916,
+          "constraint_violation": 2.1611867850879207e-10,
+          "bound_violation": 1.859064013842726e-10,
+          "objective_gap": 0.00011515617370605469,
+          "accepted_sha256": "217b45080afbe5492abc40624ef727031fafb8158376196cb596e155bba1bd4b"
+        },
+        {
+          "case": "wind_low",
+          "year": 2050,
+          "objective_model_units": 327143588.09896266,
+          "constraint_violation": 2.1611867850879207e-10,
+          "bound_violation": 1.859064013842726e-10,
+          "objective_gap": 0.0001963973045349121,
+          "accepted_sha256": "42f59a76b6e8cb02a780443743f637a706331e4a815875406845a391238ebd70"
+        }
+      ]
+    },
+    {
+      "status": "verified_prefix",
+      "case": "wind_high",
+      "windows": 6,
+      "evidence": [
+        {
+          "case": "wind_high",
+          "year": 2025,
+          "objective_model_units": 1540510638.4080691,
+          "constraint_violation": 2.0591528482327703e-11,
+          "bound_violation": 1.8335555296289385e-11,
+          "objective_gap": 0.0005626082420349121,
+          "accepted_sha256": "3f9918b0dea8a88d385e4afb26fb37d87d5362eabd074101f04a7b946a5dfd45"
+        },
+        {
+          "case": "wind_high",
+          "year": 2030,
+          "objective_model_units": 1867783417.9952295,
+          "constraint_violation": 4.7776893552509136e-11,
+          "bound_violation": 3.9186431877169525e-11,
+          "objective_gap": 0.0010339021682739258,
+          "accepted_sha256": "28cddb189e7820f3fbb697a9820e0612b618b37797127a3c356f75e4bbe66922"
+        },
+        {
+          "case": "wind_high",
+          "year": 2035,
+          "objective_model_units": 1257200872.1690416,
+          "constraint_violation": 6.150457920739427e-11,
+          "bound_violation": 5.2175153086864157e-11,
+          "objective_gap": 0.0010235309600830078,
+          "accepted_sha256": "205786d1d7025b851207c4a96381703e2df5c7e0410e2634fb82c40d96e2ba73"
+        },
+        {
+          "case": "wind_high",
+          "year": 2040,
+          "objective_model_units": 768964400.1905707,
+          "constraint_violation": 1.7473666957812384e-10,
+          "bound_violation": 1.4658496638730867e-10,
+          "objective_gap": 6.687641143798828e-05,
+          "accepted_sha256": "050b66fecf55711f73e60dc13692cca8599eae4c1c0f8310082c19161ceed684"
+        },
+        {
+          "case": "wind_high",
+          "year": 2045,
+          "objective_model_units": 704575820.0125247,
+          "constraint_violation": 2.1611867850879207e-10,
+          "bound_violation": 1.859064013842726e-10,
+          "objective_gap": 0.00011789798736572266,
+          "accepted_sha256": "067159b660e9acb1a04964011b0dead02e26fc68628451c5d6b4173167c8ae4d"
+        },
+        {
+          "case": "wind_high",
+          "year": 2050,
+          "objective_model_units": 323356603.7558029,
+          "constraint_violation": 2.1611867850879207e-10,
+          "bound_violation": 1.859064013842726e-10,
+          "objective_gap": 0.0001977086067199707,
+          "accepted_sha256": "ec3415931a1e8fcb7d93792e65c20d1a3b7a290019f615a755d0fa140697b902"
+        }
+      ]
+    },
+    {
+      "status": "verified_prefix",
+      "case": "solar_low",
+      "windows": 6,
+      "evidence": [
+        {
+          "case": "solar_low",
+          "year": 2025,
+          "objective_model_units": 1554697334.6326966,
+          "constraint_violation": 2.0591528482327703e-11,
+          "bound_violation": 1.8335555296289385e-11,
+          "objective_gap": 0.00031435489654541016,
+          "accepted_sha256": "4f312aee63a3998c3ba3aed8aabaa3279c149fdc20f3132e8234ef1f4b7628d0"
+        },
+        {
+          "case": "solar_low",
+          "year": 2030,
+          "objective_model_units": 1878936119.5328043,
+          "constraint_violation": 4.7776893552509136e-11,
+          "bound_violation": 3.9186431877169525e-11,
+          "objective_gap": 0.0012819766998291016,
+          "accepted_sha256": "92bdbc5cea92e837a4285472ea21ea358052867cf7902094574c22f6b2283567"
+        },
+        {
+          "case": "solar_low",
+          "year": 2035,
+          "objective_model_units": 1266022304.7546606,
+          "constraint_violation": 6.150457920739427e-11,
+          "bound_violation": 5.2175153086864157e-11,
+          "objective_gap": 0.0010246038436889648,
+          "accepted_sha256": "0233310d416ba6df0255ec88713872f6500ffbec53214d4cada87eb9781b794d"
+        },
+        {
+          "case": "solar_low",
+          "year": 2040,
+          "objective_model_units": 775956929.6271771,
+          "constraint_violation": 1.7473666957812384e-10,
+          "bound_violation": 1.4658496638730867e-10,
+          "objective_gap": 6.29425048828125e-05,
+          "accepted_sha256": "708a49d557961333b094aaf6ae28ea77b8a7ff3514274191e489fa52a52b8e60"
+        },
+        {
+          "case": "solar_low",
+          "year": 2045,
+          "objective_model_units": 710039440.4365041,
+          "constraint_violation": 2.1611867850879207e-10,
+          "bound_violation": 1.859064013842726e-10,
+          "objective_gap": 0.00011777877807617188,
+          "accepted_sha256": "9bb41c642cc945ed059a4c4d03ece89272d20bf49dd9cb35b25ed2c764698f43"
+        },
+        {
+          "case": "solar_low",
+          "year": 2050,
+          "objective_model_units": 325730975.3263347,
+          "constraint_violation": 2.1611867850879207e-10,
+          "bound_violation": 1.859064013842726e-10,
+          "objective_gap": 0.00019627809524536133,
+          "accepted_sha256": "3ef68580cb6d4c634ca5aadf75601ed648fa1df3741be75c9dfa60ce8cbe8a07"
+        }
+      ]
+    },
+    {
+      "status": "verified_prefix",
+      "case": "solar_high",
+      "windows": 6,
+      "evidence": [
+        {
+          "case": "solar_high",
+          "year": 2025,
+          "objective_model_units": 1548126189.7324526,
+          "constraint_violation": 2.0591528482327703e-11,
+          "bound_violation": 1.8335555296289385e-11,
+          "objective_gap": 0.0005599260330200195,
+          "accepted_sha256": "d23bb837339bb7320ef91397b77dcb5d9162cbe99edfaf4aa6b5135736d04380"
+        },
+        {
+          "case": "solar_high",
+          "year": 2030,
+          "objective_model_units": 1873770292.572656,
+          "constraint_violation": 4.7776893552509136e-11,
+          "bound_violation": 3.9186431877169525e-11,
+          "objective_gap": 0.0010373592376708984,
+          "accepted_sha256": "3bc9981130abcdff98d93cafb22d0e37885a0a242969817c8e0cc4dd81d99c17"
+        },
+        {
+          "case": "solar_high",
+          "year": 2035,
+          "objective_model_units": 1261936299.7518039,
+          "constraint_violation": 6.150457920739427e-11,
+          "bound_violation": 5.2175153086864157e-11,
+          "objective_gap": 0.001025080680847168,
+          "accepted_sha256": "abd367d59612bba414c08dcbf2fb8c223330b6599cfd3ae5146f6550f5926ce3"
+        },
+        {
+          "case": "solar_high",
+          "year": 2040,
+          "objective_model_units": 772718055.4439545,
+          "constraint_violation": 1.7473666957812384e-10,
+          "bound_violation": 1.4658496638730867e-10,
+          "objective_gap": 6.508827209472656e-05,
+          "accepted_sha256": "128daf0e6aad167cfb5e99d7cc940d4658b7c271b38566f3bbab6419d166cc24"
+        },
+        {
+          "case": "solar_high",
+          "year": 2045,
+          "objective_model_units": 707508752.0762647,
+          "constraint_violation": 2.1611867850879207e-10,
+          "bound_violation": 1.859064013842726e-10,
+          "objective_gap": 0.00011682510375976562,
+          "accepted_sha256": "21e3ed88a8b59daa9bdd8e1d67f5860d519fdd60fdd6388de129111a6a72af01"
+        },
+        {
+          "case": "solar_high",
+          "year": 2050,
+          "objective_model_units": 324631198.1188764,
+          "constraint_violation": 2.1611867850879207e-10,
+          "bound_violation": 1.859064013842726e-10,
+          "objective_gap": 0.00019669532775878906,
+          "accepted_sha256": "8c04106e7b56f8274823a38ed6e930a0282fb9b23c1710e23ec89f8b32127307"
+        }
+      ]
+    }
+  ]
+}

@@ -56,19 +56,31 @@
     "source_role": "Delivered generation or integration implementation"
   },
   "analysis/channel_results.py": {
-    "sha256": "9a16f1e8a3f33fd0c063fe6e4ae6b5c3288c1813ea70ae26879d95dad944b178",
+    "sha256": "60818b07ae83f82cd91452ca1459a6aab3abda81c931529bed1513efe687e79d",
     "source_role": "Portable calibrated result verification and summary extraction"
   },
   "analysis/manuscript_results.py": {
-    "sha256": "671c167692d7270dc466b6c03610285c2d843b2f48393b92a9555fea138287dd",
+    "sha256": "a7f6020ec1c4c40cb435c405577a98e213597702abe5e5ba1f727987c9eb3fa5",
     "source_role": "Portable calibrated result verification and summary extraction"
   },
   "analysis/native_results.py": {
-    "sha256": "218e08cd8c6bc02134660763024872b2de8847b0f551540a942389bee38a89f7",
+    "sha256": "3b95a9b34bcad90abce6eeda219aed11bd083ac7a0108e6ba4f1d79260b57f91",
     "source_role": "Portable calibrated result verification and summary extraction"
   },
   "analysis/zonal_results.py": {
     "sha256": "e9754f15191d71b60f4be4c988320c5f31e5cb840bf73af20e5ce7c05bded17b",
     "source_role": "Portable calibrated result verification and summary extraction"
+  },
+  "scripts/weather_energy.py": {
+    "sha256": "8a62ea4e631db1822fdd23aafed7bb312024d089a91ef8674464228a7bcc8c85",
+    "source_role": "V6.2 weather-service conversion or accepted result extraction"
+  },
+  "scripts/weather_energy_coupling.py": {
+    "sha256": "39931ffecff1a811973e352ebeb76b90ed08782fb281fe5d6cf674890c4ac9f0",
+    "source_role": "V6.2 weather-service conversion or accepted result extraction"
+  },
+  "analysis/thermal_results.py": {
+    "sha256": "28bd926a6ab00622040a771218e0b33767a0adb7f97dc9c2d4b1f2f119dc8955",
+    "source_role": "V6.2 weather-service conversion or accepted result extraction"
   }
 }

@@ -1,0 +1,57 @@
+{
+  "reference_year": 2020,
+  "reference_scope": "Energy-system calibration on 2020; not training or tuning the climate generator.",
+  "reference_hdd": 63037.28408604206,
+  "reference_cdd": 4925.841277565329,
+  "general_water_fraction": 0.12776256223313748,
+  "district_water_fraction": 0.07216989527823467,
+  "service_water_fraction": 0.08390014583289399,
+  "cooling_cop": 3.0,
+  "cop_multiplier": 1.130404757464719,
+  "annual_targets": {
+    "2020": {
+      "general_demand": 19970698.10329167,
+      "TE-TOZagreb": 880545.0,
+      "Industry_HT": 9069178.5071137
+    },
+    "2025": {
+      "general_demand": 19355585.31254282,
+      "TE-TOZagreb": 853423.539872276,
+      "Industry_HT": 9159870.2921737
+    },
+    "2030": {
+      "general_demand": 18740472.521705396,
+      "TE-TOZagreb": 826302.0797456247,
+      "Industry_HT": 9251468.9951148
+    },
+    "2035": {
+      "general_demand": 17587258.04952018,
+      "TE-TOZagreb": 775454.7216696818,
+      "Industry_HT": 9343983.6850451
+    },
+    "2040": {
+      "general_demand": 16434043.577442156,
+      "TE-TOZagreb": 724607.3636007422,
+      "Industry_HT": 9437423.5218988
+    },
+    "2045": {
+      "general_demand": 15709229.110581525,
+      "TE-TOZagreb": 692648.9537649204,
+      "Industry_HT": 9531797.7571224
+    },
+    "2050": {
+      "general_demand": 14984414.643766906,
+      "TE-TOZagreb": 660690.543929327,
+      "Industry_HT": 9627115.7347322
+    }
+  },
+  "ensemble_sha256": "d86a855166c24d699d511010184db12d0baf1551f83254b41f661c602d7ae728",
+  "reference_cop_proxy_electricity_mwh": 6058725.376570248,
+  "outputs_sha256": {
+    "thermal_by_member.csv.gz": "66559bc4ad65a86108eec97fffb2a4f735b7683e246981592737f3d2dbedd912",
+    "case_summary.csv": "1450333387337f52f92a42d2a914a93bcda0fe99d24b4273000794a8bfec5adf"
+  },
+  "source_preparation_manifest_sha256": "0d8f304b0062513d77006e5da3dbc369b90748ab44d926bb304e9b07f9b8acc4",
+  "design": "weather_energy_v1",
+  "scope": "Selected synthetic temperature schedules and derived services; raw reference weather and database excluded"
+}

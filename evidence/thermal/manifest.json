@@ -1,0 +1,33 @@
+{
+  "scope": "Accepted thermal source extract and source audit; optimizer not rerun",
+  "files": {
+    "audit_national_completion.py": {
+      "bytes": 10002,
+      "sha256": "0da9b2f5a9f5bad43dde7af26e2a1d46acca290798543637d69a68198d649d90"
+    },
+    "audit_preserved_national.py": {
+      "bytes": 1099,
+      "sha256": "c17800345bd797e41caebbb805e8c2a87c815fe786c81e25dc0dd3eb933be8a7"
+    },
+    "export_v62_remote.py": {
+      "bytes": 6495,
+      "sha256": "187e94de738c7d739553a6901e1cbaecd880c2901021403a70b8bef3cbeb84f6"
+    },
+    "national_plot_inputs.json": {
+      "bytes": 325271,
+      "sha256": "6bbbb04ccda0075a85a5ce057100f4cd849c17817e97855c4b167f0f2ecfd503"
+    },
+    "preserved_national_audit.json": {
+      "bytes": 17735,
+      "sha256": "5b1f69a3569b290c52c4f7c458040aab1023eec005fd4bf37c06c09597963c11"
+    },
+    "README.md": {
+      "bytes": 1878,
+      "sha256": "c563433ae84817eaa780fe07a5d4bb0f90df36673556bd7ff7ec9e305532f5cc"
+    },
+    "source_manifest.json": {
+      "bytes": 26314,
+      "sha256": "69caa53106bba8fcb34866857c06e07566a1466a80e95eff996149c109d85b99"
+    }
+  }
+}

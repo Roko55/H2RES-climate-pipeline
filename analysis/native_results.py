@@ -39,7 +39,7 @@ def national_job(root, case, year):
     return evidence(root)/'national_production_03/jobs'/case/str(year)
 
 
-def annual_costs(root=ROOT):
+def annual_costs_v61(root=ROOT):
     """Realized first anchor only, removing that anchor's saved discount weight.
 
     The demand denominator follows the manuscript's native multisector service
@@ -70,7 +70,7 @@ def annual_costs(root=ROOT):
     return pd.DataFrame(output)
 
 
-def national_tables(root=ROOT):
+def national_tables_v61(root=ROOT):
     """Extract native annual output families and realized asset decisions."""
     from scripts.channel_profiles import DONORS
     from scripts.release_runtime import accepted_array
@@ -139,7 +139,7 @@ def operational_table(root=ROOT):
     return pd.DataFrame(rows)
 
 
-def verify_national(root=ROOT):
+def verify_national_v61(root=ROOT):
     """Verify included bytes and locally check annual accounting and input identities."""
     base = evidence(root)
     inventory = read(base/'source_manifest.json')
@@ -207,3 +207,25 @@ def verify_national(root=ROOT):
         input_profile_hashes=42, complete_state_handoffs_audited_on_server=42,
         native_annual_ledgers_verified=42, new_operational_tests=45,
         scope='Included annual/asset records verified locally; full national state stores audited at source')
+
+
+def _thermal_snapshot(root):
+    return read(root/'provenance/manuscript/scope.json')['manuscript_version']=='V6.2'
+
+def annual_costs(root=ROOT):
+    if _thermal_snapshot(root):
+        from analysis.thermal_results import annual_costs as current
+        return current(root)
+    return annual_costs_v61(root)
+
+def national_tables(root=ROOT):
+    if _thermal_snapshot(root):
+        from analysis.thermal_results import national_tables as current
+        return current(root)
+    return national_tables_v61(root)
+
+def verify_national(root=ROOT):
+    if _thermal_snapshot(root):
+        from analysis.thermal_results import verify_national as current
+        return current(root)
+    return verify_national_v61(root)

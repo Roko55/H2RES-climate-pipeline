@@ -1,55 +1,55 @@
 year,scope,technology,TWh
-2025,Electricity,Hydro,6.734506600984919
-2025,Electricity,Net imports including Krško entitlement,5.369440745559079
-2025,Electricity,Other domestic generation,1.7916775791936481
+2025,Electricity,Hydro,6.734506600984912
+2025,Electricity,Net imports including Krško entitlement,5.262963475644449
+2025,Electricity,Other domestic generation,1.7988954437225955
 2025,Electricity,Solar PV,1.2356048397305006
 2025,Electricity,Wind,2.5331824361831377
-2025,Heat,District heat and heat pumps,1.0772271400677673
-2025,Heat,Individual biomass boiler,12.970194354423148
-2025,Heat,Individual gas boiler,6.144267678542085
-2025,Heat,Individual oil boiler,0.017319679381628067
-2030,Electricity,Hydro,6.734506600984902
-2030,Electricity,Net imports including Krško entitlement,6.776098060444432
-2030,Electricity,Other domestic generation,1.3895430492525482
+2025,Heat,District heat and heat pumps,1.0619144950513102
+2025,Heat,Individual biomass boiler,13.854022250784448
+2025,Heat,Individual gas boiler,4.700291800180048
+2025,Heat,Individual oil boiler,0.024322837907388897
+2030,Electricity,Hydro,6.734506600984904
+2030,Electricity,Net imports including Krško entitlement,6.671286920319375
+2030,Electricity,Other domestic generation,1.3943730677881678
 2030,Electricity,Solar PV,1.2356048397305006
 2030,Electricity,Wind,2.5331824361831377
-2030,Heat,District heat and heat pumps,0.9790169580410858
-2030,Heat,Individual biomass boiler,7.410356329550569
-2030,Heat,Individual gas boiler,11.1743091352076
-2030,Heat,Individual oil boiler,0.00309217865132734
-2035,Electricity,Hydro,6.734506600984893
-2035,Electricity,Net imports including Krško entitlement,10.266768669087226
-2035,Electricity,Other domestic generation,1.2113567944854295
+2030,Heat,District heat and heat pumps,0.9908557385960598
+2030,Heat,Individual biomass boiler,8.323073476115209
+2030,Heat,Individual gas boiler,9.698274867689632
+2030,Heat,Individual oil boiler,0.0041784024586626195
+2035,Electricity,Hydro,6.734506600984885
+2035,Electricity,Net imports including Krško entitlement,10.136450658597303
+2035,Electricity,Other domestic generation,1.2258219522317768
 2035,Electricity,Solar PV,1.2356048397305006
 2035,Electricity,Wind,2.5331824361831377
-2035,Heat,District heat and heat pumps,0.7778114592583297
+2035,Heat,District heat and heat pumps,0.7547471087909611
 2035,Heat,Individual biomass boiler,0.0
-2035,Heat,Individual gas boiler,17.58490131193151
+2035,Heat,Individual gas boiler,17.09144249727258
 2035,Heat,Individual oil boiler,0.0
-2040,Electricity,Hydro,6.734506600984882
-2040,Electricity,Net imports including Krško entitlement,13.867654374447252
-2040,Electricity,Other domestic generation,0.9652578257741409
+2040,Electricity,Hydro,6.734506600984888
+2040,Electricity,Net imports including Krško entitlement,13.743443006140431
+2040,Electricity,Other domestic generation,0.9677047022171925
 2040,Electricity,Solar PV,1.2356048397305006
 2040,Electricity,Wind,2.5331824361831377
-2040,Heat,District heat and heat pumps,0.7268575763666997
+2040,Heat,District heat and heat pumps,0.705285334547559
 2040,Heat,Individual biomass boiler,0.0
-2040,Heat,Individual gas boiler,16.4317933646762
+2040,Heat,Individual gas boiler,15.97071139282929
 2040,Heat,Individual oil boiler,0.0
-2045,Electricity,Hydro,6.734506600984885
-2045,Electricity,Net imports including Krško entitlement,17.203583243386028
-2045,Electricity,Other domestic generation,0.9525392188151764
+2045,Electricity,Hydro,6.734506600984891
+2045,Electricity,Net imports including Krško entitlement,17.075523094324012
+2045,Electricity,Other domestic generation,0.9526179137320756
 2045,Electricity,Solar PV,1.2356048397305006
 2045,Electricity,Wind,2.5331824361831377
-2045,Heat,District heat and heat pumps,0.6949305140486093
+2045,Heat,District heat and heat pumps,0.6743057151154332
 2045,Heat,Individual biomass boiler,0.0
-2045,Heat,Individual gas boiler,15.706947550297858
+2045,Heat,Individual gas boiler,15.266205334597066
 2045,Heat,Individual oil boiler,0.0
-2050,Electricity,Hydro,6.734506600984886
-2050,Electricity,Net imports including Krško entitlement,20.527246736911927
-2050,Electricity,Other domestic generation,0.9520586210000007
+2050,Electricity,Hydro,6.734506600984883
+2050,Electricity,Net imports including Krško entitlement,20.39273577961113
+2050,Electricity,Other domestic generation,0.9520586209999989
 2050,Electricity,Solar PV,1.2356048397305006
 2050,Electricity,Wind,2.5331824361831377
-2050,Heat,District heat and heat pumps,0.6630060049222328
+2050,Heat,District heat and heat pumps,0.6432955992294832
 2050,Heat,Individual biomass boiler,0.0
-2050,Heat,Individual gas boiler,14.982099182774045
+2050,Heat,Individual gas boiler,14.561729772865737
 2050,Heat,Individual oil boiler,0.0

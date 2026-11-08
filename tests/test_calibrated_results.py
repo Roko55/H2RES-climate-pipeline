@@ -1,4 +1,4 @@
-"""Accounting boundaries and service deficits in the checked V6.1 snapshot."""
+"""Accounting boundaries and service deficits in the checked V6.2 snapshot."""
 from pathlib import Path
 import unittest
 import pandas as pd
@@ -31,12 +31,12 @@ class CalibratedResultTests(unittest.TestCase):
         supply = summaries(ROOT)['average_energy_supply.csv']
         first = supply.query("year == 2025 and technology == 'Net imports including Krško entitlement'")
         self.assertEqual(len(first), 1)
-        self.assertAlmostEqual(first.iloc[0].TWh, 5.36944074555908, places=10)
+        self.assertAlmostEqual(first.iloc[0].TWh, 5.262963475644448, places=10)
 
     def test_industrial_heat_is_not_duplicated_in_cost_denominator(self):
         first = annual_costs(ROOT).query("case == 'average' and year == 2025").iloc[0]
         self.assertAlmostEqual(first.demand_MWh,
-            17569133.61288213+20209008.85241509+9159870.292173693+25927.3971, places=5)
+            17464260.09216237+19640551.383923855+9159870.2921737+25927.3971, places=5)
 
     def test_cost_ranking_and_zero_generation_additions(self):
         folder = ROOT/'results/channel_sensitivity'
@@ -45,7 +45,7 @@ class CalibratedResultTests(unittest.TestCase):
             self.assertTrue((costs[resource+'_low'] > costs['average']).all())
             self.assertTrue((costs['average'] > costs[resource+'_high']).all())
         inv = pd.read_csv(folder/'investments_by_technology.csv')
-        self.assertLess(inv[inv.family.eq('cap_inv')].value.abs().max(), 1e-7)
+        self.assertTrue(inv[inv.family.eq('cap_inv')].value.abs().le(1e-7).all())
 
 
 if __name__ == '__main__':

@@ -36,40 +36,30 @@ with your mapped export and actual solver names. Use the matching set without
 `hror` when exporting with `--exclude-hror`. The API returns new dictionaries: assign the returned
 value to the solver parameter mapping before building the model.
 
-## Thermal coupling and experiment designs
+## Thermal coupling used in V6.2
 
-For the individual-channel multisector experiments, use
-`select-final --design channel --year 2030`. It exports all seven named cases
-with complete Cold/Warm temperature chronologies. Each case retains the same
-8760-hour weather profile at every planning anchor, without additional trends. Apply the existing multisector
-thermal adapter with `scale_annual_totals=False`. Each path inherits its own
-realized stock after the common calibrated historical 2020 base. See [CHANNEL_RESULTS.md](CHANNEL_RESULTS.md).
+Select the seven cases with `select-final --design channel --year 2030`.
+Use `h2res_interface.couple_temperature_v62` with the complete selected temperature
+year and the initialized Croatian heat, cooling and COP dictionaries. Pass
+`data/weather_energy` explicitly. The returned dictionaries are copies.
+Run `python examples/v62_thermal.py` for a complete no-solver example.
 
-`h2res_interface.couple_temperature` is the explicit-baseline multisector adapter.
-It returns new heat/cooling/COP dictionaries; callers supply temperature baselines,
-unit lists and complete annual dictionaries. See `examples/demo.py` for a complete
-call. It preserves annual thermal demand, changing hourly shape and COP.
-The public `couple_temperature` function fixes `scale_annual_totals=False`
-internally; that flag is not an additional public argument. Its return value
-contains `heat_demand`, `cooling_demand`, `hp_cop_period` and `diagnostics`.
-Pass the appropriate baseline dictionaries and explicit unit groups, then assign
-the returned dictionaries in your initialized model before constructing equations.
-The 8760-element temperature vector is `selected_profile[:, 2]`; solar/wind CF
-vectors alone do not replace thermal demand or COP parameters.
+The adapter uses the archived 2020-calibrated schedules, permits annual heat and
+cooling totals to vary and applies one shared COP curve without per-case mean
+normalization. Returned `household_cooling_electric_mwh` belongs in the explicit
+power-demand ledger: subtract the old common cooling reference once and add
+this vector once. Do not add household cooling a second time as endogenous
+district cooling. The full executed power-meter implementation and source audit
+remain part of the original H2RES project; the public example prepares inputs.
 
-The separate 2030 electricity portfolios use `select-final --design electricity`.
-Their 45 operating checks retain the fixed capacities and the historical weather
-years. They are separate from the seven multisector planning paths.
+For other sites, `h2res_climate.weather_energy` exposes `signals`, `heat_service`,
+`cooling_service`, `calibrate_cop` and `cop_curve`. Supply suitable reference-year
+service quantities and weather; the Croatian coefficients are case-study inputs.
 
-For explicit-baseline access to the prepared-demand utilities, the installed
-`h2res_climate.prepared_thermal` module exposes
-`_reshape_prepared_temperature_demand` and `_temperature_sensitive_cop`.
-Demand uses 18/22 C drivers, bounded and smoothed multipliers,
-annual-total restoration and optional peak caps. COP scales the existing baseline
-by a Carnot-ratio response, restores its arithmetic mean **before** clipping to
-1.2..5.5; clipping can alter the final mean. The caller supplies unit groups,
-baseline demand and COP, and baseline/scenario temperatures.
+The older `couple_temperature` and `prepared_thermal` helpers preserve annual
+totals and remain for legacy/generic experiments. They are not the V6.2 method.
 
-Reproducing the archived energy optimizations requires the original solver
-database, stock-updating controller and licensed optimizer. The climate demo
-covers input preparation with illustrative data.
+The separate `select-final --design electricity` exports the three fixed 2030
+portfolios' source profiles. Their 45 operating checks are distinct from the
+seven multisector planning paths. Full energy re-solving requires the original
+database, myopic state controller and licensed optimizer.

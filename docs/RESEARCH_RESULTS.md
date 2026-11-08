@@ -1,7 +1,7 @@
-# Checked V6.1 results
+# Checked V6.2 results
 
 Manuscript SHA256:
-`2a0bada6c1d530fd762598497608df78473a0cbf4ebedc0c964a7b24e44aebaf`.
+`30ffa94de1bd022085d4a7811d70f384b41da98248716953c08331c5e323fdc8`.
 This identifies a fixed checked snapshot, not later manuscript revisions.
 See [Result columns and units](RESULT_COLUMNS.md) to interpret the CSV fields
 and [Getting started](GETTING_STARTED.md) to use the pipeline.
@@ -30,17 +30,17 @@ The [seven stationary-weather paths](CHANNEL_RESULTS.md) share a calibrated 2020
 base, followed by 42 newly solved windows in 2025–2050. Each inherits its own
 complete realized state. Solar and wind costs follow Low > Average > High at
 every future window. No new electricity-generation capacity is selected.
-Average cumulative heating additions are 8932.341 MW; Figure 14 therefore
-contains the heating panel only. Cold/Warm outcomes require the annual heat
-normalization explanation in [the accounting notes](CHANNEL_RESULTS.md).
+Average cumulative heating additions are 7788.839 MW; Cold requires 8204.488 MW
+and Warm 7373.401 MW. Figure 14 shows heating additions only. Temperature now
+changes annual heat/cooling needs through common 2020-calibrated coefficients.
 
-The first Average window objective is 2035059737.039034 EUR. Its realized 2025
-contribution, removing the 0.78 discount weight, is 991952417.121068 EUR.
-These two quantities are different. Net imports, including existing Krško rights
-once, are 5.36944 TWh in 2025, 6.77610 TWh in 2030 and 20.5272 TWh in 2050.
-Costs, MW additions, TWh flows and Mt direct domestic emissions are kept separate.
-Imported electricity's foreign emissions are outside domestic direct emissions.
-The native coefficient convention does not establish a uniform real price year.
+The first Average window objective is 1551137209.109303 EUR. Its realized 2025
+contribution is 635884950.3005005 EUR. These are different quantities.
+Average net imports, including existing Krško rights once, are 5.26296 TWh in 2025,
+6.67129 TWh in 2030 and 20.39274 TWh in 2050. Warm 2050 includes a one-hour
+49.64909 MWh electricity shortfall, whose penalty affects the window cost.
+Solar cost differences come from net purchases; wind non-purchase differences
+are below 27 EUR. Figure 12 uses separate panels for full and later Cold windows.
 
 ## Fixed-portfolio operation — section 4.6
 
@@ -64,12 +64,13 @@ Zero-exchange gross HR imports and exports are zero; CEEP is approximately
 1.52–3.42 TWh. All 45 cases, including these shortfalls, are published.
 CEEP is surplus electricity; it is distinct from energy not served. Cyclic
 storage and fixed solved stocks are verified. Some solutions show simultaneous
-battery charge/discharge; the overlap is recorded. No exclusive-operation
-sensitivity or additional historical years are claimed.
+battery charge/discharge; the overlap is recorded. Three exclusive-operation controls for 2021/zero HR exchange are being checked
+separately. Their latest completion has not been verified; the 45 original
+operating results above are retained until that comparison is accepted.
 
 ## Manuscript figure index
 
-The files below are exact copies of the corresponding V6.1 embedded images.
+The files below are exact copies of the corresponding V6.2 embedded images.
 Their identities and captions are recorded in `provenance/manuscript/scope.json`.
 
 | Figure | Reported content | File |
@@ -93,7 +94,7 @@ captions are indexed in `provenance/manuscript/scope.json`.
 
 ```bash
 python audit.py
-python analysis/manuscript_results.py --output exports/v61_tables
+python analysis/manuscript_results.py --output exports/v62_tables
 ```
 
 The commands verify evidence and reproduce the numerical summary tables and

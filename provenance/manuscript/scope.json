@@ -1,12 +1,12 @@
 {
-  "manuscript_version": "V6.1",
-  "manuscript_sha256": "2a0bada6c1d530fd762598497608df78473a0cbf4ebedc0c964a7b24e44aebaf",
+  "manuscript_version": "V6.2",
+  "manuscript_sha256": "30ffa94de1bd022085d4a7811d70f384b41da98248716953c08331c5e323fdc8",
   "figures": [
     {
       "figure": "1",
       "caption": "Figure 1. Overview of the method.",
       "file": "results/manuscript/figures/figure_01.png",
-      "sha256": "d0799d8434a1c8c4811f72aa9d11282f9eda3c42339514beed65cf862fd9e41b"
+      "sha256": "08f358ac0f29093b2db0a3a143d0007dc2e59c20fa9309bd790518b0d475a441"
     },
     {
       "figure": "2",
@@ -46,9 +46,9 @@
     },
     {
       "figure": "8",
-      "caption": "Figure 8. Solar cost components.",
+      "caption": "Figure 8. Solar cost differences by component.",
       "file": "results/manuscript/figures/figure_08.png",
-      "sha256": "47ea7f9c65bc8752b8d3dbe967e8a97b337288dd912601fbb3b4481b85f83444"
+      "sha256": "4a10269066578b632476a158ab7c5d5bbbd1c3a42ca0822d9833e3f66318fb12"
     },
     {
       "figure": "9",
@@ -58,45 +58,45 @@
     },
     {
       "figure": "10",
-      "caption": "Figure 10. Wind cost components.",
+      "caption": "Figure 10. Wind cost differences by component.",
       "file": "results/manuscript/figures/figure_10.png",
-      "sha256": "407d26e30b873fb9d12b6b611618cdbd87881aaaf4360c3aa2179bff765fc4b1"
+      "sha256": "0216f4ce19a97225cd1b5172cac8c83bb0d0d92851b2b936a22a28d927fa6e5a"
     },
     {
       "figure": "11",
       "caption": "Figure 11. Temperature cost differences from Average.",
       "file": "results/manuscript/figures/figure_11.png",
-      "sha256": "74016422b77b4d5d5a9c5c34ee1580d2e8460c7c73808c952ece4c3011deebc4"
+      "sha256": "823e22d0b715e60eaba2174d68cbdcce506be50d7f6cfa145d733bc18a561b93"
     },
     {
       "figure": "12",
-      "caption": "Figure 12. Temperature cost components.",
+      "caption": "Figure 12. Temperature cost differences by component.",
       "file": "results/manuscript/figures/figure_12.png",
-      "sha256": "4319fe56d6ae0226259f19eec8a85ffd434eab3ac8f7bf6418972e4919d6130e"
+      "sha256": "7901d32717af8193f6a9531451c799ce8711ccee465a5ddbb6583df75b09faeb"
     },
     {
       "figure": "13",
       "caption": "Figure 13. Average costs and cost per model-demand MWh.",
       "file": "results/manuscript/figures/figure_13.png",
-      "sha256": "a28c82fcf6b243d22e70be23cd7ebe845422e36ae11d1481cb96a68d5cbbddda"
+      "sha256": "a4fecc6cad53e83228cf6993a6b76503b1e2f296db45c78e6bfc0654f07bd2e7"
     },
     {
       "figure": "14",
       "caption": "Figure 14. Average new heating capacity by decision year.",
       "file": "results/manuscript/figures/figure_14.png",
-      "sha256": "a00b6dfe80a817dbc064c6c171f93a2edc2855f222ed6407c2228cea5a024309"
+      "sha256": "446371e020ed94c4cbb7862f57e9740dfde91fca023903ae4a72bfa655720c91"
     },
     {
       "figure": "15a",
       "caption": "Figure 15(a). Average electricity supply and delivered heat.",
       "file": "results/manuscript/figures/figure_15a.png",
-      "sha256": "ad53b9a5e4182c6bc260186d2b5ede5bb70a38a2d9a41c4912eb6d7dd7817905"
+      "sha256": "9cf8211b0e4d09ec5a7222901f5038e45fdcef06ca0f4c13272423e18c7921b5"
     },
     {
       "figure": "15b",
-      "caption": "Figure 15(b). Average annual direct domestic CO\u2082 emissions by sector.",
+      "caption": "Figure 15(b). Average annual direct domestic CO₂ emissions by sector.",
       "file": "results/manuscript/figures/figure_15b.png",
-      "sha256": "2df3b013bf80dfa8c804756a611699d87ab6acffcdc8091153340c14c62ed124"
+      "sha256": "9676ac11037f6de568e8db0cc246d3b3ed17198d7376d998b6d9185fc93dd691"
     },
     {
       "figure": "16",
@@ -105,7 +105,7 @@
       "sha256": "9b5709a68af4c86aaab05bdaac758364b4167bbbce7732ba770e250ff4f3a59f"
     }
   ],
-  "planning_experiment": "national_production_03",
+  "planning_experiment": "national_production_thermal_20261107_01",
   "planning_windows": 42,
   "new_planning_windows": 42,
   "common_calibrated_base_year": 2020,
@@ -118,12 +118,17 @@
     "SI",
     "BA"
   ],
-  "source_manifest": "evidence/calibrated/source_manifest.json",
+  "source_manifest": "evidence/thermal/source_manifest.json",
   "statistical_figures_unchanged": [
     "3",
     "4",
     "5",
     "6"
   ],
-  "scope": "Checked V6.1 snapshot; unchanged climate generator and revised calibrated energy cohorts"
+  "battery_controls": {
+    "scope": "three 2021 zero-HR-exchange checks",
+    "status": "running; 0 of 3 accepted; Average and Low active, High pending; original 45 results retained",
+    "latest_verified_snapshot_utc": "2026-11-08T15:49:59Z"
+  },
+  "scope": "Checked V6.2 thermal-demand results and exact figures; unchanged climate ensemble and original operating cohort"
 }

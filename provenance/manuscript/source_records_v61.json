@@ -1,0 +1,16 @@
+{
+  "manuscript_version": "V6.1",
+  "manuscript_sha256": "2a0bada6c1d530fd762598497608df78473a0cbf4ebedc0c964a7b24e44aebaf",
+  "climate_scores": "Unchanged from v0.7.0; original source records retained in that tag",
+  "national": "evidence/calibrated/national_production_03",
+  "operational": "evidence/calibrated/zonal_2030_production_05",
+  "native_manifest": "evidence/calibrated/source_manifest.json",
+  "transformation": "Native first-anchor extraction, stated unit conversions and accounting; no new experiments",
+  "manuscript_plot_crosscheck": {
+    "status": "verified",
+    "national_records": 42,
+    "operating_records": 45,
+    "numeric_comparisons": 1701,
+    "scope": "Native results against the exact checked V6.1 plotting input records"
+  }
+}

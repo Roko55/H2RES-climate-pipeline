@@ -1,4 +1,4 @@
-"""Verify the calibrated V6.1 stationary-weather experiment."""
+"""Verify the calibrated V6.2 stationary-weather experiment."""
 from pathlib import Path
 import os
 import sys

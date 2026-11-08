@@ -1,4 +1,4 @@
-"""Reproduce the numerical tables supporting V6.1 sections 4.1 through 4.6."""
+"""Reproduce the numerical tables supporting V6.2 sections 4.1 through 4.6."""
 from pathlib import Path
 import argparse
 import hashlib
@@ -113,12 +113,12 @@ def verify_manuscript(root=ROOT):
     scope = json.loads((root/'provenance/manuscript/scope.json').read_text())
     expected = {str(i) for i in range(1, 15)} | {'15a', '15b', '16'}
     if {r['figure'] for r in scope['figures']} != expected:
-        raise ValueError('V6.1 figure inventory differs')
+        raise ValueError('V6.2 figure inventory differs')
     for row in scope['figures']:
         path = (root/row['file']).resolve()
         path.relative_to(root.resolve())
         if hashlib.sha256(path.read_bytes()).hexdigest() != row['sha256']:
-            raise ValueError('V6.1 figure differs: '+row['figure'])
+            raise ValueError('V6.2 figure differs: '+row['figure'])
     metrics = pd.read_csv(root/'results/profile_metrics.csv')
     if (len(metrics) != 9 or set(metrics.method) !=
         {'fixed_H2RES_profile', 'ensemble_mean', 'training_calendar_mean'} or
@@ -132,7 +132,7 @@ def verify_manuscript(root=ROOT):
     if not (crps.n_reporting_hours.eq(43800).all() and crps.historical_members.eq(36).all()
             and crps.synthetic_members.eq(100).all()):
         raise ValueError('Different calendar or ensemble size in fair CRPS')
-    return {'manuscript_sha256': scope['manuscript_sha256'], 'exact_V61_figures': 17,
+    return {'manuscript_sha256': scope['manuscript_sha256'], 'exact_manuscript_figures': 17,
             'mean_profile_comparisons': 6, 'fair_CRPS_comparisons': 3}
 
 

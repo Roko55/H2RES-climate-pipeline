@@ -1,16 +1,14 @@
 {
-  "manuscript_version": "V6.1",
-  "manuscript_sha256": "2a0bada6c1d530fd762598497608df78473a0cbf4ebedc0c964a7b24e44aebaf",
-  "climate_scores": "Unchanged from v0.7.0; original source records retained in that tag",
-  "national": "evidence/calibrated/national_production_03",
-  "operational": "evidence/calibrated/zonal_2030_production_05",
-  "native_manifest": "evidence/calibrated/source_manifest.json",
-  "transformation": "Native first-anchor extraction, stated unit conversions and accounting; no new experiments",
-  "manuscript_plot_crosscheck": {
-    "status": "verified",
-    "national_records": 42,
-    "operating_records": 45,
-    "numeric_comparisons": 1701,
-    "scope": "Native results against the exact checked V6.1 plotting input records"
-  }
+  "manuscript_version": "V6.2",
+  "manuscript_sha256": "30ffa94de1bd022085d4a7811d70f384b41da98248716953c08331c5e323fdc8",
+  "native_thermal_extract_sha256": "6bbbb04ccda0075a85a5ce057100f4cd849c17817e97855c4b167f0f2ecfd503",
+  "source_manifest": "evidence/thermal/source_manifest.json",
+  "original_source_audit_sha256": "5b1f69a3569b290c52c4f7c458040aab1023eec005fd4bf37c06c09597963c11",
+  "original_operating_cohort": "evidence/calibrated/zonal_2030_production_05",
+  "battery_controls": {
+    "scope": "three 2021 zero-HR-exchange checks",
+    "status": "running; 0 of 3 accepted; Average and Low active, High pending; original 45 results retained",
+    "latest_verified_snapshot_utc": "2026-11-08T15:49:59Z"
+  },
+  "new_optimization": false
 }

@@ -1,7 +1,8 @@
 # Result columns and units
 
-The checked V6.1 experiment definitions are in [Research results](RESEARCH_RESULTS.md).
-This index describes the public CSVs. Native receipts and hourly files retain
+The checked V6.2 experiment definitions are in [Research results](RESEARCH_RESULTS.md).
+This index describes the public CSVs. The V6.2 tables derive from the compact accepted thermal extract in `evidence/thermal`.
+Original V6.1 receipts and unchanged zonal hourly files retain
 their original schemas under [the evidence archive](../evidence/calibrated/README.md).
 CSV files can be loaded with `pandas.read_csv`; `key_json` and `window_years` are
 JSON strings, parsed with `json.loads`, not Python expressions.
@@ -45,7 +46,6 @@ All electrical years contain 8760 hours, with February 29 removed.
 | `delta_vs_average` | Case objective minus Average for the same window, EUR |
 | `percent_vs_absolute_average` | `100*delta_vs_average/abs(Average objective)`, percent |
 | `constraint_violation`, `bound_violation` | Solver-reported maximum violations in native model units; not an energy-service metric |
-| `runtime_seconds` | Saved solver runtime in seconds; not end-to-end workflow time, model-training time or a RAM benchmark |
 
 Windows overlap. Do not sum their objectives to obtain a transition cost.
 Positive differences mean a higher cost than Average; negative differences a
@@ -56,17 +56,12 @@ price year for every input.
 
 | Columns | Definition and unit |
 |---|---|
-| `year` | Native window label, equal to `window_start` here; not a separate allocation of the component to each anchor |
-| `component` | Native objective component identifier |
 | `component_group` | Reporting group, e.g. `optimized_import_cost` or `heat_sector_investment_cost` |
 | `value` | Component's full-window contribution, EUR |
 | `active_in_objective` | 1 if included in objective reconciliation, 0 otherwise |
-| `objective_total` | Full-window objective, repeated for context |
-| `active_component_sum` | Sum of the active components for that window, repeated for context |
-| `gap_to_objective` | Saved active component sum minus objective, EUR; small numerical closure residual |
 
 Sum `value` only where `active_in_objective == 1`, grouped by `case,window_start`.
-Do not sum the repeated `objective_total` or `active_component_sum` columns.
+Diagnostic groups have `active_in_objective=0` and must not be added.
 
 ## Realized investments and annual costs
 
@@ -75,16 +70,12 @@ Do not sum the repeated `objective_total` or `active_component_sum` columns.
 | Columns | Definition and unit |
 |---|---|
 | `family` | Native investment decision family |
-| `key_json` | Native decision indices (asset/system/year as applicable), encoded as a JSON list |
-| `variable` | Native solver variable name |
+| `key_json` | Aggregated unit and realized year encoded as a JSON list; the compact V6.2 extract groups nonzero physical additions |
 | `value` | Realized decision quantity in `unit`; not total installed capacity |
 | `unit` | MW for equipment capacity or MWh for storage energy capacity |
-| `objective_coefficient` | Saved discounted objective coefficient per unit of the decision |
-| `objective_contribution` | `value*objective_coefficient`, EUR |
 | `decision_year` | Anchor at which the decision is realized |
 | `realized` | 1 in this table; next-anchor provisional decisions are excluded |
 | `capacity_addition` | 0/1 physical-capacity inclusion flag; `extra_cap_inv` is an objective term excluded from physical-addition totals |
-| `NPV` | Saved dimensionless discount weight for the decision anchor |
 
 For these rows, `decision_year == window_start`. Different families can refer
 to the same asset: group by family and key before interpreting quantities.
@@ -96,7 +87,6 @@ Do not add MW and MWh. Original native files retain provisional decisions.
 | Columns | Definition and unit |
 |---|---|
 | `year` | Realized first anchor of the window |
-| `discount_weight` | Saved first-anchor NPV weight |
 | `year_total_EUR` | First-anchor objective-ledger contribution divided by that weight |
 | `capacity_terms_EUR` | Realized first-anchor investment contributions divided by the same weight |
 | `other_active_terms_EUR` | `year_total_EUR-capacity_terms_EUR` |
@@ -124,11 +114,11 @@ Only the realized anchor of each window is included. The family determines the u
 | `ev_sto_soc`, `h2_sto_soc`, `heat_pump_sto_soc`, `heat_sto_level`, `stat_sto_soc`, `storage_level` | Sums of hourly storage states; neither annual production nor terminal state. Divide by 8760 for a mean state on the native energy basis |
 
 `results/channel_sensitivity/thermal_inputs.csv` is a parameter-statistics table,
-not solved dispatch. It includes current and next-anchor parameters:
+not solved dispatch. The current V6.2 extract includes realized first-anchor parameters only:
 
 | Columns | Definition and unit |
 |---|---|
-| `year` | Parameter anchor within the window; can differ from `window_start` |
+| `year` | Realized parameter anchor; equal to `window_start` in V6.2 |
 | `family` | `demand`, `heat_demand`, `cooling_demand`, `Industry_HT_demand`, `H2_demand`, `ev_Demand` or `HP_COP_period` |
 | `unit` | Native asset identifier for heat/cooling/COP, or `all` for the other grouped families; here this column is not a physical measurement unit |
 | `count` | Number of native parameter entries aggregated; may include several systems or an annual EV entry, so not always 8760 |
@@ -193,7 +183,7 @@ The other files under `results/manuscript/tables/` are reporting summaries:
 | `mean_profile_MAE.csv` | `channel`, `reference`, `reference_MAE`, `generated_MAE`, `change_percent` = `100*(generated/reference-1)`; negative means smaller MAE |
 | `window_cost_differences.csv` | `case`, `year`, `window_years`, `difference_million_EUR` = full-window cost difference from same-window Average divided by 1e6 |
 | `cost_component_differences.csv` | `case`, `window_start`, `component_group`, `difference_million_EUR` = grouped active-component difference from Average divided by 1e6 |
-| `average_capacity.csv` | `year`, `technology`, `unit`, `new_capacity`: summed realized Average additions; zero rows retained; not total installed stock |
+| `average_capacity.csv` | `year`, `technology`, `unit`, `new_capacity`: summed realized Average additions; nonzero physical additions; not total installed stock |
 | `average_energy_supply.csv` | `year`, `scope` (Electricity/Heat), `technology`, `TWh`: annual grouped supply. Net imports include existing Krško rights once and exclude them from domestic generation |
 | `average_direct_emissions.csv` | `year`, `electricity_Mt`, `heat_Mt`, `industry_Mt`: direct domestic emissions in million tonnes CO2; foreign emissions associated with imports excluded |
 | `operational_surplus.csv` | `portfolio`, `historical_year`, `availability_fraction`, `HR_unserved_MWh`, `HR_CEEP_TWh`: abbreviated view of all 45 operating checks |

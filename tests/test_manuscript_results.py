@@ -8,9 +8,9 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class ManuscriptResultTests(unittest.TestCase):
-    def test_exact_v61_figure_and_score_inventory(self):
+    def test_exact_v62_figure_and_score_inventory(self):
         evidence = verify_manuscript(ROOT)
-        self.assertEqual(evidence['exact_V61_figures'], 17)
+        self.assertEqual(evidence['exact_manuscript_figures'], 17)
         self.assertEqual(evidence['mean_profile_comparisons'], 6)
         self.assertEqual(evidence['fair_CRPS_comparisons'], 3)
 
@@ -32,8 +32,8 @@ class ManuscriptResultTests(unittest.TestCase):
         self.assertFalse(frame.duplicated(['case', 'year']).any())
         first = frame.query("case == 'average' and year == 2025").iloc[0]
         # Independent manuscript source: the first anchor alone, not its two-year window.
-        self.assertAlmostEqual(first.year_total_EUR, 991952417.1210676, places=4)
-        self.assertAlmostEqual(first.EUR_per_demand_MWh, 21.1215756995, places=9)
+        self.assertAlmostEqual(first.year_total_EUR, 635884950.3005005, places=4)
+        self.assertAlmostEqual(first.EUR_per_demand_MWh, 13.736802383156892, places=9)
 
 
 if __name__ == '__main__':

@@ -36,7 +36,7 @@ The workflow has four steps:
 3. Map aggregate solar/wind CF to generation units using training-period regional
    profiles, transfer weights and unit capacities. Capacity-weighted aggregation
    recovers the input CF within the checked tolerance.
-4. Apply temperature-dependent heat/cooling demand shapes and heat-pump COP,
+4. Apply temperature-dependent annual and hourly heating/cooling needs and heat-pump COP,
    then export the availability and thermal parameter dictionaries for H2RES.
 
 ```bash
@@ -60,15 +60,16 @@ stationary-weather inputs are defined in [CHANNEL_RESULTS.md](docs/CHANNEL_RESUL
 Map these profiles to your declared generation units with `export-units`, then use
 `h2res_interface.py` for availability dictionaries or CSVs. See the
 [data schemas](docs/DATA.md) and [integration examples](docs/INTEGRATION.md).
-Frozen executed model sources and audited outputs are included under
-[`evidence/calibrated`](evidence/calibrated/README.md). Re-solving the energy
+The current national extract and source audit are under
+[`evidence/thermal`](evidence/thermal/README.md). The previous national cohort and
+unchanged zonal operating evidence remain under [`evidence/calibrated`](evidence/calibrated/README.md). Re-solving the energy
 experiments additionally requires the original input database and licensed optimizer.
 
 ## Results
 
-The current result package corresponds to the checked V6.1 manuscript, sections 4.1-4.6:
+The current result package corresponds to the checked V6.2 manuscript, sections 4.1-4.6:
 
-| V6.1 section | Contents |
+| V6.2 section | Contents |
 |---|---|
 | 4.1 | Mean-profile MAE against both fixed and historical references; fair CRPS against the historical ensemble |
 | 4.2-4.4 | Solar, wind and temperature in seven stationary-weather multisector paths; 42 new planning windows (2025–2050), after one common calibrated 2020 base |
@@ -76,13 +77,13 @@ The current result package corresponds to the checked V6.1 manuscript, sections 
 | 4.6 | 45 full-year operating checks of three separate fixed 2030 electricity portfolios |
 
 [Results and figure index](docs/RESEARCH_RESULTS.md) maps every reported result to
-the manuscript. Included result figures are byte-identical to those in the V6.1
+the manuscript. Included result figures are byte-identical to those in the V6.2
 manuscript identified in `provenance/manuscript/scope.json`.
 [Result columns and units](docs/RESULT_COLUMNS.md) defines the identifiers,
 reference comparisons, time labels and accounting fields in every public result CSV.
 
 ```bash
-python analysis/manuscript_results.py --output exports/v61_tables
+python analysis/manuscript_results.py --output exports/v62_tables
 ```
 
 The command verifies experiment and figure identities, regenerates the supporting
@@ -95,11 +96,21 @@ Both temperature markers show the same comparison: the fixed temperature
 reference is the training-period hourly mean. These are two reference labels
 for the same score.
 
-The revised energy cohort has no new national electricity-generation additions.
+The V6.2 energy cohort has no new national electricity-generation additions.
+New heating capacity totals 7.789 GW in Average, 8.204 GW in Cold and 7.373 GW in Warm.
+Warm 2050 has 49.65 MWh of unserved electricity in one hour; this result is included.
 Solar and wind cost rankings are Low > Average > High at every future window.
 All 30 full/half-exchange operating checks serve HR demand; three 2021
 zero-exchange cases have small HR shortfalls. All 45 checks are retained.
 See [the results index](docs/RESEARCH_RESULTS.md) for accounting boundaries and units.
+
+## Thermal method used in V6.2
+
+Run `python examples/v62_thermal.py` to apply the archived selected-temperature
+schedules without an optimizer. `couple_temperature_v62` is the current Croatian
+result adapter. The older generic `couple_temperature` helper remains available
+for fixed-annual-total experiments and is not the V6.2 result method.
+See [thermal integration](docs/INTEGRATION.md).
 
 ## Reproducibility
 
@@ -112,9 +123,10 @@ designed sensitivities. Cluster fractions describe membership in the generated e
 The [autoencoder study](https://github.com/Roko55/H2RES-autoencoder/tree/v0.1.0)
 retains its own model and historical comparison corpus.
 
-For a fixed reference, cite [version 0.8.1](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.8.1).
-Version 0.8.1 clarifies usage and result columns; its scientific artifacts are
-unchanged from v0.8.0.
+For a fixed reference, cite [version 0.9.0](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.9.0).
+Version 0.9.0 supplies the V6.2 thermal-demand method, accepted national results and exact figures.
+The original 45 operating tests are retained; the three additional battery controls
+are listed separately until their completion and comparison are verified.
 Earlier publication snapshots remain available through their original version tags.
 Raw weather and full solver inputs are excluded. Reuse rights are described in
 [RIGHTS.md](RIGHTS.md).

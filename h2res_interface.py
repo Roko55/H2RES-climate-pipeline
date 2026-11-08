@@ -109,3 +109,28 @@ def couple_temperature(temp_profile, baseline_temp_profile, year, *,
         scale_annual_totals=False, baseline_temp_profile=baseline_temp)
     return {"heat_demand": heat, "cooling_demand": cooling,
             "hp_cop_period": cop, "diagnostics": diagnostics}
+
+
+def couple_temperature_v62(temp_profile, year, *, heat_demand, cooling_demand,
+                           hp_cop_period, data_directory):
+    """Apply the exact archived V6.2 Croatian schedules to copied native dictionaries.
+
+    Use data/weather_energy from this checkout. The reference coefficients are
+    calibrated once to 2020; annual heat/cooling totals can change with weather.
+    Household cooling electricity is returned separately and must replace its
+    old common cooling component exactly once in the power-demand ledger.
+    """
+    try:
+        from h2res_climate import weather_energy_coupling as current
+    except ModuleNotFoundError as error:
+        if error.name != 'h2res_climate': raise
+        from scripts import weather_energy_coupling as current
+    temp=annual_array(temp_profile,'Temperature');year=validate_year(year)
+    heat,cooling,cop=dict(heat_demand),dict(cooling_demand),dict(hp_cop_period)
+    diagnostic=current.apply_temperature_coupling_to_runtime(temp,year,'HR',list(range(1,8761)),
+        heat,cooling,cop,heat_demand,cooling_demand,hp_cop_period,
+        data_directory=data_directory,scale_annual_totals=True)
+    _,tables=current.load_inputs(str(__import__('pathlib').Path(data_directory).resolve()))
+    rows=tables[year,diagnostic['temperature_member']]
+    return dict(heat_demand=heat,cooling_demand=cooling,hp_cop_period=cop,
+        household_cooling_electric_mwh=rows.cooling_electric_mwh.to_numpy(copy=True),diagnostics=diagnostic)
