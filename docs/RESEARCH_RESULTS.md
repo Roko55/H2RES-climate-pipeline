@@ -1,7 +1,7 @@
-# Checked V6.2 results
+# Checked V6.1 results
 
 Manuscript SHA256:
-`77c2073de4a49522036e19ff97abeaf8b665331807fa1a8b4c6a112c748c5565`.
+`ea616fc2372f506f53dd444e26aa97dc8c15572c5b569a4f42a5b49541d9e5c5`.
 This identifies a fixed checked snapshot, not later manuscript revisions.
 See [Result columns and units](RESULT_COLUMNS.md) to interpret the CSV fields
 and [Getting started](GETTING_STARTED.md) to use the pipeline.
@@ -63,14 +63,18 @@ exchange, 12 of 15 do; three checks in weather year 2021 have shortfalls:
 Zero-exchange gross HR imports and exports are zero; CEEP is approximately
 1.52–3.42 TWh. All 45 cases, including these shortfalls, are published.
 CEEP is surplus electricity; it is distinct from energy not served. Cyclic
-storage and fixed solved stocks are verified. Some solutions show simultaneous
-battery charge/discharge; the overlap is recorded. Three exclusive-operation controls for 2021/zero HR exchange are being checked
-separately. Their latest completion has not been verified; the 45 original
-operating results above are retained until that comparison is accepted.
+storage and fixed solved stocks are verified. Some original solutions show simultaneous battery charge/discharge; the
+overlap is recorded. The user cancelled the long strict optimum searches.
+Their server shutdown could not be confirmed through the VS Code tunnel.
+The original 45 operating results are retained. A separate constructive check
+removes simultaneous battery flows while preserving hourly SOC changes,
+electricity balance and unserved energy; extra curtailment is about 0.10–0.14%.
+It does not certify the exclusive global optimum. Run
+`python analysis/constructive_battery_check.py` to reproduce this check.
 
 ## Manuscript figure index
 
-The files below are exact copies of the corresponding V6.2 embedded images.
+The files below are exact copies of the corresponding V6.1 embedded images.
 Their identities and captions are recorded in `provenance/manuscript/scope.json`.
 
 | Figure | Reported content | File |
@@ -103,3 +107,5 @@ exactly; the commands do not redraw every manuscript figure. Recomputing climate
 scores/historical plots needs the excluded weather corpus. Re-solving H2RES
 needs its original full database, runtime and licensed optimizer. See
 [native evidence](../evidence/calibrated/README.md) for the precise archive scope.
+
+The V6.1 wind description is shortened; full calibration data, dates and fleet assumptions remain in the archived wind recipe.

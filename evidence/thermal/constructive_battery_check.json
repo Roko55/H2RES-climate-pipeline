@@ -1,0 +1,177 @@
+{
+  "status": "constructive_hourly_balance_check_passed",
+  "optimization_calls": 0,
+  "original_results_modified": false,
+  "global_optimum_claimed": false,
+  "full_native_model_reoptimized": false,
+  "interpretation": "An exclusive hourly battery schedule exists with the same hourly SOC changes, generation, demand, exchange and unserved energy; removed battery cycling losses become extra curtailment. This does not determine the exclusive global optimum.",
+  "charging_efficiency": 0.9,
+  "discharge_efficiency": 0.9,
+  "cases": [
+    {
+      "case": "avg",
+      "source_marker": "C:\\Rad\\Projekti\\H2RES_SingleZone_Myopic_v1.2\\GitHub_Publication_20261019\\H2RES-climate-pipeline\\evidence\\calibrated\\zonal_2030_production_05\\jobs\\operation_avg_2021_0\\attempt_01\\accepted.json",
+      "source_marker_sha256": "8949228cdfcccdb0c744104db5b84355871877bf9ade62c651a47e05a886799e",
+      "original_hourly_sha256": "a857cdf66af742330a39384004734bbc5fcbca9004128dc4d67b24dd15396204",
+      "zones": {
+        "HR": {
+          "changed_hours": 812,
+          "max_soc_delta_error": 7.105427357601002e-15,
+          "max_grid_residual": 1.8189894035458565e-12,
+          "max_power_increase": 0.0,
+          "max_overlap": 3.552713678800501e-15,
+          "old_ceep_mwh": 3175192.6739821066,
+          "new_ceep_mwh": 3178312.568966194,
+          "old_charge_mwh": 97223.57646899822,
+          "old_discharge_mwh": 78751.09693988854,
+          "new_charge_mwh": 80803.07655275063,
+          "new_discharge_mwh": 65450.492007728004,
+          "unserved_mwh": 70.40645261339347,
+          "unserved_hours": 1
+        },
+        "SI": {
+          "changed_hours": 0,
+          "max_soc_delta_error": 0.0,
+          "max_grid_residual": 9.094947017729282e-13,
+          "max_power_increase": 0.0,
+          "max_overlap": 0.0,
+          "old_ceep_mwh": 0.0,
+          "new_ceep_mwh": 0.0,
+          "old_charge_mwh": 37543.05027434842,
+          "old_discharge_mwh": 30409.870722222222,
+          "new_charge_mwh": 37543.05027434842,
+          "new_discharge_mwh": 30409.870722222222,
+          "unserved_mwh": 0.0,
+          "unserved_hours": 0
+        },
+        "BA": {
+          "changed_hours": 0,
+          "max_soc_delta_error": 0.0,
+          "max_grid_residual": 4.547473508864641e-13,
+          "max_power_increase": 0.0,
+          "max_overlap": 0.0,
+          "old_ceep_mwh": 0.0,
+          "new_ceep_mwh": 0.0,
+          "old_charge_mwh": 0.0,
+          "old_discharge_mwh": 0.0,
+          "new_charge_mwh": 0.0,
+          "new_discharge_mwh": 0.0,
+          "unserved_mwh": 0.0,
+          "unserved_hours": 0
+        }
+      },
+      "croatian_import_export_unchanged_and_zero": true,
+      "constructed_output": "C:\\Rad\\Projekti\\H2RES_SingleZone_Myopic_v1.2\\battery_recovery_20261108\\algebraic_check\\avg_2021_zero_exchange_exclusive_constructed.csv.gz"
+    },
+    {
+      "case": "low",
+      "source_marker": "C:\\Rad\\Projekti\\H2RES_SingleZone_Myopic_v1.2\\GitHub_Publication_20261019\\H2RES-climate-pipeline\\evidence\\calibrated\\zonal_2030_production_05\\jobs\\operation_low_2021_0\\attempt_01\\accepted.json",
+      "source_marker_sha256": "3fa03d6e4bae7c3aa98fcd4c4d97153270949b69652a404fb3a2debed3402bca",
+      "original_hourly_sha256": "f5e0edad13409be11da27d9d7ce52da81d070f7f0e9b7ff69bc15514066ef622",
+      "zones": {
+        "HR": {
+          "changed_hours": 651,
+          "max_soc_delta_error": 7.105427357601002e-15,
+          "max_grid_residual": 1.8189894035458565e-12,
+          "max_power_increase": 0.0,
+          "max_overlap": 3.552713678800501e-15,
+          "old_ceep_mwh": 1718585.9444836266,
+          "new_ceep_mwh": 1721021.9196407546,
+          "old_charge_mwh": 76420.86288896254,
+          "old_discharge_mwh": 61900.89894005965,
+          "new_charge_mwh": 63599.94100934106,
+          "new_discharge_mwh": 51515.95221756625,
+          "unserved_mwh": 158.21977562370336,
+          "unserved_hours": 3
+        },
+        "SI": {
+          "changed_hours": 0,
+          "max_soc_delta_error": 0.0,
+          "max_grid_residual": 9.094947017729282e-13,
+          "max_power_increase": 0.0,
+          "max_overlap": 0.0,
+          "old_ceep_mwh": 0.0,
+          "new_ceep_mwh": 0.0,
+          "old_charge_mwh": 37543.05027434842,
+          "old_discharge_mwh": 30409.870722222222,
+          "new_charge_mwh": 37543.05027434842,
+          "new_discharge_mwh": 30409.870722222222,
+          "unserved_mwh": 0.0,
+          "unserved_hours": 0
+        },
+        "BA": {
+          "changed_hours": 0,
+          "max_soc_delta_error": 0.0,
+          "max_grid_residual": 4.547473508864641e-13,
+          "max_power_increase": 0.0,
+          "max_overlap": 0.0,
+          "old_ceep_mwh": 0.0,
+          "new_ceep_mwh": 0.0,
+          "old_charge_mwh": 0.0,
+          "old_discharge_mwh": 0.0,
+          "new_charge_mwh": 0.0,
+          "new_discharge_mwh": 0.0,
+          "unserved_mwh": 0.0,
+          "unserved_hours": 0
+        }
+      },
+      "croatian_import_export_unchanged_and_zero": true,
+      "constructed_output": "C:\\Rad\\Projekti\\H2RES_SingleZone_Myopic_v1.2\\battery_recovery_20261108\\algebraic_check\\low_2021_zero_exchange_exclusive_constructed.csv.gz"
+    },
+    {
+      "case": "high",
+      "source_marker": "C:\\Rad\\Projekti\\H2RES_SingleZone_Myopic_v1.2\\GitHub_Publication_20261019\\H2RES-climate-pipeline\\evidence\\calibrated\\zonal_2030_production_05\\jobs\\operation_high_2021_0\\attempt_01\\accepted.json",
+      "source_marker_sha256": "4724dcea2112542a27375db759173f3e5126ada42cb9d6f8a004ff3ca22832b4",
+      "original_hourly_sha256": "40e11c817ab540295c6de678315207142dbe7a2e8a27b48cacb4513b31337ee0",
+      "zones": {
+        "HR": {
+          "changed_hours": 836,
+          "max_soc_delta_error": 1.4210854715202004e-14,
+          "max_grid_residual": 1.8189894035458565e-12,
+          "max_power_increase": 0.0,
+          "max_overlap": 3.552713678800501e-15,
+          "old_ceep_mwh": 3268251.5140620815,
+          "new_ceep_mwh": 3271433.9235989507,
+          "old_charge_mwh": 96767.83433226892,
+          "old_discharge_mwh": 78381.94580913782,
+          "new_charge_mwh": 80018.31045400891,
+          "new_discharge_mwh": 64814.83146774721,
+          "unserved_mwh": 65.22580320352932,
+          "unserved_hours": 1
+        },
+        "SI": {
+          "changed_hours": 0,
+          "max_soc_delta_error": 0.0,
+          "max_grid_residual": 9.094947017729282e-13,
+          "max_power_increase": 0.0,
+          "max_overlap": 0.0,
+          "old_ceep_mwh": 0.0,
+          "new_ceep_mwh": 0.0,
+          "old_charge_mwh": 37543.05027434842,
+          "old_discharge_mwh": 30409.870722222222,
+          "new_charge_mwh": 37543.05027434842,
+          "new_discharge_mwh": 30409.870722222222,
+          "unserved_mwh": 0.0,
+          "unserved_hours": 0
+        },
+        "BA": {
+          "changed_hours": 0,
+          "max_soc_delta_error": 0.0,
+          "max_grid_residual": 4.547473508864641e-13,
+          "max_power_increase": 0.0,
+          "max_overlap": 0.0,
+          "old_ceep_mwh": 0.0,
+          "new_ceep_mwh": 0.0,
+          "old_charge_mwh": 0.0,
+          "old_discharge_mwh": 0.0,
+          "new_charge_mwh": 0.0,
+          "new_discharge_mwh": 0.0,
+          "unserved_mwh": 0.0,
+          "unserved_hours": 0
+        }
+      },
+      "croatian_import_export_unchanged_and_zero": true,
+      "constructed_output": "C:\\Rad\\Projekti\\H2RES_SingleZone_Myopic_v1.2\\battery_recovery_20261108\\algebraic_check\\high_2021_zero_exchange_exclusive_constructed.csv.gz"
+    }
+  ]
+}

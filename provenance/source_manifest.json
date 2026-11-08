@@ -64,7 +64,7 @@
     "source_role": "Portable calibrated result verification and summary extraction"
   },
   "analysis/native_results.py": {
-    "sha256": "3b95a9b34bcad90abce6eeda219aed11bd083ac7a0108e6ba4f1d79260b57f91",
+    "sha256": "94fde4fbaec349702a5a792d4543aacf51475f40ea389a3ff113de39a44c6028",
     "source_role": "Portable calibrated result verification and summary extraction"
   },
   "analysis/zonal_results.py": {
@@ -82,5 +82,9 @@
   "analysis/thermal_results.py": {
     "sha256": "28bd926a6ab00622040a771218e0b33767a0adb7f97dc9c2d4b1f2f119dc8955",
     "source_role": "V6.2 weather-service conversion or accepted result extraction"
+  },
+  "analysis/constructive_battery_check.py": {
+    "sha256": "6d82d65489435e42b6d21c5329bf7ec01ddf58ec8f0cc6df56d994382c385b2b",
+    "source_role": "Separate constructive physical balance check; no optimization"
   }
 }

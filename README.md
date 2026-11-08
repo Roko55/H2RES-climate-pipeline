@@ -67,9 +67,9 @@ experiments additionally requires the original input database and licensed optim
 
 ## Results
 
-The current result package corresponds to the checked V6.2 manuscript, sections 4.1-4.6:
+The current result package corresponds to the checked V6.1 manuscript, sections 4.1-4.6:
 
-| V6.2 section | Contents |
+| V6.1 section | Contents |
 |---|---|
 | 4.1 | Mean-profile MAE against both fixed and historical references; fair CRPS against the historical ensemble |
 | 4.2-4.4 | Solar, wind and temperature in seven stationary-weather multisector paths; 42 new planning windows (2025–2050), after one common calibrated 2020 base |
@@ -77,7 +77,7 @@ The current result package corresponds to the checked V6.2 manuscript, sections 
 | 4.6 | 45 full-year operating checks of three separate fixed 2030 electricity portfolios |
 
 [Results and figure index](docs/RESEARCH_RESULTS.md) maps every reported result to
-the manuscript. Included result figures are byte-identical to those in the V6.2
+the manuscript. Included result figures are byte-identical to those in the V6.1
 manuscript identified in `provenance/manuscript/scope.json`.
 [Result columns and units](docs/RESULT_COLUMNS.md) defines the identifiers,
 reference comparisons, time labels and accounting fields in every public result CSV.
@@ -96,7 +96,7 @@ Both temperature markers show the same comparison: the fixed temperature
 reference is the training-period hourly mean. These are two reference labels
 for the same score.
 
-The V6.2 energy cohort has no new national electricity-generation additions.
+The V6.1 energy cohort has no new national electricity-generation additions.
 New heating capacity totals 7.789 GW in Average, 8.204 GW in Cold and 7.373 GW in Warm.
 Warm 2050 has 49.65 MWh of unserved electricity in one hour; this result is included.
 Solar and wind cost rankings are Low > Average > High at every future window.
@@ -104,12 +104,12 @@ All 30 full/half-exchange operating checks serve HR demand; three 2021
 zero-exchange cases have small HR shortfalls. All 45 checks are retained.
 See [the results index](docs/RESEARCH_RESULTS.md) for accounting boundaries and units.
 
-## Thermal method used in V6.2
+## Thermal method used in V6.1
 
 Run `python examples/v62_thermal.py` to apply the archived selected-temperature
 schedules without an optimizer. `couple_temperature_v62` is the current Croatian
 result adapter. The older generic `couple_temperature` helper remains available
-for fixed-annual-total experiments and is not the V6.2 result method.
+for fixed-annual-total experiments and is not the V6.1 result method.
 See [thermal integration](docs/INTEGRATION.md).
 
 ## Reproducibility
@@ -123,10 +123,15 @@ designed sensitivities. Cluster fractions describe membership in the generated e
 The [autoencoder study](https://github.com/Roko55/H2RES-autoencoder/tree/v0.1.0)
 retains its own model and historical comparison corpus.
 
-For a fixed reference, cite [version 0.9.1](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.9.1).
-Version 0.9.1 supplies the V6.2 thermal-demand method, accepted national results and exact figures. The figure-only update removes the separate detail panel from Figure 12; all numeric results are unchanged.
-The original 45 operating tests are retained; the three additional battery controls
-are listed separately until their completion and comparison are verified.
+For a fixed reference, cite [version 0.9.2](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.9.2).
+Version 0.9.2 matches the final V6.1 manuscript name and clarifies the wind
+calibration description and temperature-cost interpretation. All accepted
+numeric results and figures are unchanged from v0.9.1.
+The three long strict battery searches were cancelled; their shutdown could
+not be confirmed through the tunnel. The original 45 operating tests remain
+the reported results. A separate constructive hourly balance check removes
+simultaneous battery flows while preserving hourly SOC changes and unserved
+energy. It is not a certificate of the exclusive global optimum.
 Earlier publication snapshots remain available through their original version tags.
 Raw weather and full solver inputs are excluded. Reuse rights are described in
 [RIGHTS.md](RIGHTS.md).

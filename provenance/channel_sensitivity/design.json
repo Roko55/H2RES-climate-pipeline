@@ -114,7 +114,7 @@
   "weather": "Each case retains the same 8760-hour profile at every planning anchor",
   "new_planning_windows": 42,
   "reused_windows": 0,
-  "manuscript_version": "V6.2",
+  "manuscript_version": "V6.1",
   "planning_years": [
     2025,
     2030,

@@ -1,6 +1,5 @@
 {
-  "scope": "Checked V6.2 climate pipeline, selected thermal schedules and accepted result evidence",
-  "reporting_period_previously_inspected": true,
+  "scope": "Final V6.1 manuscript and unchanged accepted result cohort",
   "files": {
     ".gitattributes": {
       "bytes": 72,
@@ -15,8 +14,8 @@
       "sha256": "a9fbdc90519d8a4639dfef854edefce241e9bfeaa897fd0804d5d8dca2aa05f6"
     },
     "README.md": {
-      "bytes": 7318,
-      "sha256": "7d3e6ddc84fc6b2a0562d096b7c60d45d2a2b134e5b93f6133d218c7cf78b393"
+      "bytes": 7530,
+      "sha256": "d0b3692748e164bb271202502447c5d43f44b488c620c43d9aaa38c5bc00929d"
     },
     "RIGHTS.md": {
       "bytes": 373,
@@ -26,13 +25,17 @@
       "bytes": 1856,
       "sha256": "60818b07ae83f82cd91452ca1459a6aab3abda81c931529bed1513efe687e79d"
     },
+    "analysis/constructive_battery_check.py": {
+      "bytes": 4674,
+      "sha256": "6d82d65489435e42b6d21c5329bf7ec01ddf58ec8f0cc6df56d994382c385b2b"
+    },
     "analysis/manuscript_results.py": {
       "bytes": 9918,
       "sha256": "a7f6020ec1c4c40cb435c405577a98e213597702abe5e5ba1f727987c9eb3fa5"
     },
     "analysis/native_results.py": {
-      "bytes": 13117,
-      "sha256": "3b95a9b34bcad90abce6eeda219aed11bd083ac7a0108e6ba4f1d79260b57f91"
+      "bytes": 13228,
+      "sha256": "94fde4fbaec349702a5a792d4543aacf51475f40ea389a3ff113de39a44c6028"
     },
     "analysis/thermal_results.py": {
       "bytes": 6999,
@@ -75,8 +78,8 @@
       "sha256": "1f75e0e2d0a775bab7b06d0938bdee1a4d9f82419079442a65f00a8bd431e6ba"
     },
     "docs/RESEARCH_RESULTS.md": {
-      "bytes": 6388,
-      "sha256": "0ec9c0fbf0d4c690db824a3e35abeb40e6fae8655d1b1a4a6110bb97609bcc69"
+      "bytes": 6790,
+      "sha256": "082c2c69471888f099c3b47664e0ca43830ce70ed1e4d405650560fc8e64e300"
     },
     "docs/RESULT_COLUMNS.md": {
       "bytes": 13276,
@@ -6546,6 +6549,10 @@
       "bytes": 1099,
       "sha256": "c17800345bd797e41caebbb805e8c2a87c815fe786c81e25dc0dd3eb933be8a7"
     },
+    "evidence/thermal/constructive_battery_check.json": {
+      "bytes": 7764,
+      "sha256": "4c4b643713416909e6cd65caf79ede3364b52a447a13b82ce6661c83cc4afbca"
+    },
     "evidence/thermal/export_v62_remote.py": {
       "bytes": 6495,
       "sha256": "187e94de738c7d739553a6901e1cbaecd880c2901021403a70b8bef3cbeb84f6"
@@ -6664,7 +6671,7 @@
     },
     "provenance/channel_sensitivity/design.json": {
       "bytes": 3261,
-      "sha256": "77b62dbdc0bbd9dceb24ec43aec4582341ba1bfbebbfc05cc3fe8855033a72da"
+      "sha256": "b530a7d06aff66bc92e2e94027b98614e459cdee6516ef76a36cafa5b1bd0a2d"
     },
     "provenance/executed_final/calibrate_rollouts.py": {
       "bytes": 10351,
@@ -6683,12 +6690,12 @@
       "sha256": "d4b2ad1fa39bca03be92193b74568df2be5e35f6d13f66e688baa65ffcaf4550"
     },
     "provenance/manuscript/scope.json": {
-      "bytes": 5510,
-      "sha256": "f3fb22adf70a993bada4849a1330a8375cd95e77c782b83da69798347e1bb9ad"
+      "bytes": 5710,
+      "sha256": "24e27d48775d33a6f4c7fd7733084323be961fcfb236c27d57e43b49fadfa45d"
     },
     "provenance/manuscript/source_records.json": {
-      "bytes": 764,
-      "sha256": "718f7cc488d995b6840d55e5eada06d794f9a03ac3ea04c0b425243192087458"
+      "bytes": 993,
+      "sha256": "35c1d4faedc9ab2d764af2c509d520632411645f76486965b18f0afe39ae1278"
     },
     "provenance/manuscript/source_records_v61.json": {
       "bytes": 776,
@@ -6711,12 +6718,12 @@
       "sha256": "b57ec744e364ddf377167f2867218b8a203a3c25fcf00111f17f623846a1803e"
     },
     "provenance/source_manifest.json": {
-      "bytes": 4259,
-      "sha256": "62416c1ad5d33d067301f1847e58892728a943a86ee5dbe845aad304c5bfc989"
+      "bytes": 4479,
+      "sha256": "d77a90a28a7fffeb8fe6dd05c3a3eba0a0b9113d4ffbab4a258196800ebe1e5c"
     },
     "pyproject.toml": {
       "bytes": 531,
-      "sha256": "756d70fb7fe078b3cd39633541d2ee705eb0fbaf9745f98bddcb372dd7745c1f"
+      "sha256": "b3f68a12ea445cec4a48c2e03d59f72dd2c662936e755101931b34c11b88a507"
     },
     "requirements.txt": {
       "bytes": 150,

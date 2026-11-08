@@ -1,6 +1,6 @@
 {
-  "manuscript_version": "V6.2",
-  "manuscript_sha256": "77c2073de4a49522036e19ff97abeaf8b665331807fa1a8b4c6a112c748c5565",
+  "manuscript_version": "V6.1",
+  "manuscript_sha256": "ea616fc2372f506f53dd444e26aa97dc8c15572c5b569a4f42a5b49541d9e5c5",
   "figures": [
     {
       "figure": "1",
@@ -127,8 +127,11 @@
   ],
   "battery_controls": {
     "scope": "three 2021 zero-HR-exchange checks",
-    "status": "running; 0 of 3 accepted; Average and Low active, High pending; original 45 results retained",
-    "latest_verified_snapshot_utc": "2026-11-08T15:49:59Z"
+    "status": "Lengthy strict optimum search cancelled by the user; no additional strict controls accepted",
+    "server_stop_confirmation": "Not confirmed: VS Code tunnel requests timed out",
+    "substitute": "Constructive hourly balance check; not a global optimum certificate",
+    "original_45_operating_results_retained": true
   },
-  "scope": "Checked V6.2 thermal-demand results and exact figures; unchanged climate ensemble and original operating cohort"
+  "scope": "Final V6.1 manuscript; same accepted thermal results, figures and climate ensemble",
+  "result_cohort": "national_production_thermal_20261107_01"
 }
