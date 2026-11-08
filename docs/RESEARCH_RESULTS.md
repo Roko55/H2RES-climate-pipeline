@@ -1,7 +1,7 @@
 # Checked V6.2 results
 
 Manuscript SHA256:
-`30ffa94de1bd022085d4a7811d70f384b41da98248716953c08331c5e323fdc8`.
+`77c2073de4a49522036e19ff97abeaf8b665331807fa1a8b4c6a112c748c5565`.
 This identifies a fixed checked snapshot, not later manuscript revisions.
 See [Result columns and units](RESULT_COLUMNS.md) to interpret the CSV fields
 and [Getting started](GETTING_STARTED.md) to use the pipeline.
@@ -40,7 +40,7 @@ Average net imports, including existing Krško rights once, are 5.26296 TWh in 2
 6.67129 TWh in 2030 and 20.39274 TWh in 2050. Warm 2050 includes a one-hour
 49.64909 MWh electricity shortfall, whose penalty affects the window cost.
 Solar cost differences come from net purchases; wind non-purchase differences
-are below 27 EUR. Figure 12 uses separate panels for full and later Cold windows.
+are below 27 EUR. Figure 12 has two ordinary panels, Cold and Warm, covering all planning windows.
 
 ## Fixed-portfolio operation — section 4.6
 

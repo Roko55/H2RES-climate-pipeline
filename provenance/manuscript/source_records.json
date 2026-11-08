@@ -1,6 +1,6 @@
 {
   "manuscript_version": "V6.2",
-  "manuscript_sha256": "30ffa94de1bd022085d4a7811d70f384b41da98248716953c08331c5e323fdc8",
+  "manuscript_sha256": "77c2073de4a49522036e19ff97abeaf8b665331807fa1a8b4c6a112c748c5565",
   "native_thermal_extract_sha256": "6bbbb04ccda0075a85a5ce057100f4cd849c17817e97855c4b167f0f2ecfd503",
   "source_manifest": "evidence/thermal/source_manifest.json",
   "original_source_audit_sha256": "5b1f69a3569b290c52c4f7c458040aab1023eec005fd4bf37c06c09597963c11",

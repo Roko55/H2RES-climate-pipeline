@@ -15,8 +15,8 @@
       "sha256": "a9fbdc90519d8a4639dfef854edefce241e9bfeaa897fd0804d5d8dca2aa05f6"
     },
     "README.md": {
-      "bytes": 7210,
-      "sha256": "780040f68c687743d605cb88d1fd72d5b1350dd439f215d7705fd877700c9505"
+      "bytes": 7318,
+      "sha256": "7d3e6ddc84fc6b2a0562d096b7c60d45d2a2b134e5b93f6133d218c7cf78b393"
     },
     "RIGHTS.md": {
       "bytes": 373,
@@ -75,8 +75,8 @@
       "sha256": "1f75e0e2d0a775bab7b06d0938bdee1a4d9f82419079442a65f00a8bd431e6ba"
     },
     "docs/RESEARCH_RESULTS.md": {
-      "bytes": 6371,
-      "sha256": "7df5252c34f8ee25139c5a73af3bf9c2bc169bad8eaab2a3ca2cdb1916014d77"
+      "bytes": 6388,
+      "sha256": "0ec9c0fbf0d4c690db824a3e35abeb40e6fae8655d1b1a4a6110bb97609bcc69"
     },
     "docs/RESULT_COLUMNS.md": {
       "bytes": 13276,
@@ -6683,12 +6683,12 @@
       "sha256": "d4b2ad1fa39bca03be92193b74568df2be5e35f6d13f66e688baa65ffcaf4550"
     },
     "provenance/manuscript/scope.json": {
-      "bytes": 5507,
-      "sha256": "6526a15f7825548c3b2eea1a9c4885817256f1120033cbc3c405a1840b840dcc"
+      "bytes": 5510,
+      "sha256": "f3fb22adf70a993bada4849a1330a8375cd95e77c782b83da69798347e1bb9ad"
     },
     "provenance/manuscript/source_records.json": {
       "bytes": 764,
-      "sha256": "1b415900a6a59a5c7f92fda24218adf000a4d105da47cc6e036134c9c75a0e8d"
+      "sha256": "718f7cc488d995b6840d55e5eada06d794f9a03ac3ea04c0b425243192087458"
     },
     "provenance/manuscript/source_records_v61.json": {
       "bytes": 776,
@@ -6716,7 +6716,7 @@
     },
     "pyproject.toml": {
       "bytes": 531,
-      "sha256": "bcf1c55af96eb4d051db0e7b5aab338ed2bce1de67beeb7e14d0af274d0515ff"
+      "sha256": "756d70fb7fe078b3cd39633541d2ee705eb0fbaf9745f98bddcb372dd7745c1f"
     },
     "requirements.txt": {
       "bytes": 150,
@@ -6799,8 +6799,8 @@
       "sha256": "823e22d0b715e60eaba2174d68cbdcce506be50d7f6cfa145d733bc18a561b93"
     },
     "results/manuscript/figures/figure_12.png": {
-      "bytes": 122069,
-      "sha256": "7901d32717af8193f6a9531451c799ce8711ccee465a5ddbb6583df75b09faeb"
+      "bytes": 98578,
+      "sha256": "e982dd4c333acd52380092a4a4a5c5d65097f3906bd2d558df6a88823f377c5b"
     },
     "results/manuscript/figures/figure_13.png": {
       "bytes": 98152,

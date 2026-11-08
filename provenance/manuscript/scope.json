@@ -1,6 +1,6 @@
 {
   "manuscript_version": "V6.2",
-  "manuscript_sha256": "30ffa94de1bd022085d4a7811d70f384b41da98248716953c08331c5e323fdc8",
+  "manuscript_sha256": "77c2073de4a49522036e19ff97abeaf8b665331807fa1a8b4c6a112c748c5565",
   "figures": [
     {
       "figure": "1",
@@ -72,7 +72,7 @@
       "figure": "12",
       "caption": "Figure 12. Temperature cost differences by component.",
       "file": "results/manuscript/figures/figure_12.png",
-      "sha256": "7901d32717af8193f6a9531451c799ce8711ccee465a5ddbb6583df75b09faeb"
+      "sha256": "e982dd4c333acd52380092a4a4a5c5d65097f3906bd2d558df6a88823f377c5b"
     },
     {
       "figure": "13",
@@ -94,7 +94,7 @@
     },
     {
       "figure": "15b",
-      "caption": "Figure 15(b). Average annual direct domestic CO₂ emissions by sector.",
+      "caption": "Figure 15(b). Average annual direct domestic CO\u2082 emissions by sector.",
       "file": "results/manuscript/figures/figure_15b.png",
       "sha256": "9676ac11037f6de568e8db0cc246d3b3ed17198d7376d998b6d9185fc93dd691"
     },

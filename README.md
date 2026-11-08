@@ -123,8 +123,8 @@ designed sensitivities. Cluster fractions describe membership in the generated e
 The [autoencoder study](https://github.com/Roko55/H2RES-autoencoder/tree/v0.1.0)
 retains its own model and historical comparison corpus.
 
-For a fixed reference, cite [version 0.9.0](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.9.0).
-Version 0.9.0 supplies the V6.2 thermal-demand method, accepted national results and exact figures.
+For a fixed reference, cite [version 0.9.1](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.9.1).
+Version 0.9.1 supplies the V6.2 thermal-demand method, accepted national results and exact figures. The figure-only update removes the separate detail panel from Figure 12; all numeric results are unchanged.
 The original 45 operating tests are retained; the three additional battery controls
 are listed separately until their completion and comparison are verified.
 Earlier publication snapshots remain available through their original version tags.
