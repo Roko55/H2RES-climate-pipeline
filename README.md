@@ -67,7 +67,7 @@ experiments additionally requires the original input database and licensed optim
 
 ## Current manuscript results
 
-Release 0.10.0 matches the final manuscript prepared for Energy and AI. Climate
+Release 0.10.1 matches the final manuscript prepared for Energy and AI. Climate
 models and the accepted ensemble are unchanged. The current national cohort is
 national_production_luka_4h_20261113_01: seven planning paths, 42 accepted
 windows in 2025-2050 and one common calibrated 2020 base.
@@ -130,5 +130,5 @@ Public result reproduction does not require an optimizer.
 
 The [autoencoder archive](https://github.com/Roko55/H2RES-autoencoder/tree/v0.1.0)
 is unchanged and remains an archived same-corpus comparison.
-For a fixed reference use [v0.10.0](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.10.0).
+For a fixed reference use [v0.10.1](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.10.1).
 Source/dependency rights remain in [RIGHTS.md](RIGHTS.md).

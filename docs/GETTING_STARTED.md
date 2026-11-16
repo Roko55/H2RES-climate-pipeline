@@ -97,13 +97,13 @@ This exports `low`, `avg`, `high` frozen synthetic planning profiles. It does no
 export the historical operating weather, solved portfolio capacities or the
 seven national paths. The 45 operating checks are archived results under
 `results/operational_checks.csv`; their planning year remains 2030 while their
-weather years are 2020–2024. See [result columns](RESULT_COLUMNS.md).
+weather years are 2020â€“2024. See [result columns](RESULT_COLUMNS.md).
 
 ## Integrate with your H2RES project
 
 Follow [the mapping input contracts](DATA.md) and [integration example](INTEGRATION.md).
 The mapper produces one 8760-element CF vector per generation unit. Availability
-keys are `(unit,period,year)` with periods 1–8760; names must match your initialized
+keys are `(unit,period,year)` with periods 1â€“8760; names must match your initialized
 solver database. Temperature is the third profile column and is coupled separately
 to explicit heat/cooling demand and COP baselines.
 

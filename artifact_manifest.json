@@ -16,7 +16,7 @@
     },
     "README.md": {
       "bytes": 7210,
-      "sha256": "77c07ff6c94bb303052d33cccef996c219c315ca859c3af1406bcb8876ec6986"
+      "sha256": "a87c8aead5b0f3f2ca0604fdc20e817510b811da18b22343b2e38774fa546cfe"
     },
     "RIGHTS.md": {
       "bytes": 373,
@@ -91,8 +91,8 @@
       "sha256": "36e20102b06f79572be099cbddedf02964bbdde564e7d3d126faf8737739617d"
     },
     "docs/GETTING_STARTED.md": {
-      "bytes": 5152,
-      "sha256": "ae0aa8b85c34277c934d973efee2dc88fb7adb9cce413d6e64cbe757baa86ea8"
+      "bytes": 5162,
+      "sha256": "cf01caf762de737698d622dad27b207769154193c79885a75187c8c8da6450ba"
     },
     "docs/INTEGRATION.md": {
       "bytes": 3814,
@@ -6740,11 +6740,11 @@
     },
     "provenance/manuscript/scope.json": {
       "bytes": 8771,
-      "sha256": "930cae97faca37615083573355edff4852883de7924d62d3d744e99ce49677ce"
+      "sha256": "664cebee15a973a312d6073aaa9afa27097e2c084f952c45881eaa4b00af46d1"
     },
     "provenance/manuscript/source_records.json": {
       "bytes": 405,
-      "sha256": "d5a8c453fc463fc161045389f25358e3582ba99ccc18dac26b4b3f88eab2170a"
+      "sha256": "2c4095cbf40d2e8b6d35f678c103df8f801e129c21c166e963639a8144fcab2d"
     },
     "provenance/manuscript/source_records_v61.json": {
       "bytes": 776,
@@ -6772,7 +6772,7 @@
     },
     "pyproject.toml": {
       "bytes": 532,
-      "sha256": "bad342e0bc2799b00eb8df0ce4c3aa9b8976080dff4530d6088915635bc6ba5b"
+      "sha256": "8c158a8cff9cd9e18e9260f9fb7ffb8f2a8710dd1a0e8545ceb6e3ce515c1a9d"
     },
     "requirements.txt": {
       "bytes": 150,

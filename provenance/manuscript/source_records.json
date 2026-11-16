@@ -1,6 +1,6 @@
 {
   "manuscript_version": "Final",
-  "manuscript_sha256": "73c97719c719924e94f615d97e7e57665a55d352d9a96ed2ae91630ad745233b",
+  "manuscript_sha256": "eb3e3892009be9f2bfec088a354d18f75a421f05b64179d688ca46ee2959bfa7",
   "current_result_extract_sha256": "598c95eb4b47424a77bc2bca35bf202dacbe4116b3507df962ac3f247a2f88f8",
   "source_manifest": "evidence/final/source_manifest.json",
   "original_operating_cohort": "evidence/calibrated/zonal_2030_production_05",
