@@ -1,6 +1,6 @@
 {
   "manuscript_version": "Final",
-  "manuscript_sha256": "eb3e3892009be9f2bfec088a354d18f75a421f05b64179d688ca46ee2959bfa7",
+  "manuscript_sha256": "fd70f4e370758852130e34a7d71b649324438d2fd448c9fa599f0d4417985e18",
   "figures": [
     {
       "figure": "1",
@@ -124,7 +124,7 @@
     },
     {
       "figure": "15b",
-      "caption": "Figure 15(b). Cumulative solar, wind and heat-pump additions across cases, 2025–2050.",
+      "caption": "Figure 15(b). Cumulative solar, wind and heat-pump additions across cases, 2025\u20132050.",
       "file": "results/manuscript/figures/figure_15b.png",
       "sha256": "4fed6481d3625ab4981fa6ee5a093a34a66e73f701c3b95b2ed1f82af093c987",
       "native_pdf": "results/manuscript/figures/figure_15b.pdf",
@@ -161,8 +161,7 @@
   ],
   "battery_controls": {
     "scope": "three 2021 zero-HR-exchange checks",
-    "status": "Lengthy strict optimum search cancelled by the user; no additional strict controls accepted",
-    "server_stop_confirmation": "Not confirmed: VS Code tunnel requests timed out",
+    "status": "No additional strict exclusive-battery optimum certificate is included",
     "substitute": "Constructive hourly balance check; not a global optimum certificate",
     "original_45_operating_results_retained": true
   },

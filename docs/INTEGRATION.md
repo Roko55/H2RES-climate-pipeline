@@ -36,7 +36,7 @@ with your mapped export and actual solver names. Use the matching set without
 `hror` when exporting with `--exclude-hror`. The API returns new dictionaries: assign the returned
 value to the solver parameter mapping before building the model.
 
-## Thermal coupling used in V6.2
+## Weather-dependent heating and cooling
 
 Select the seven cases with `select-final --design channel --year 2030`.
 Use `h2res_interface.couple_temperature_v62` with the complete selected temperature
@@ -56,8 +56,9 @@ For other sites, `h2res_climate.weather_energy` exposes `signals`, `heat_service
 `cooling_service`, `calibrate_cop` and `cop_curve`. Supply suitable reference-year
 service quantities and weather; the Croatian coefficients are case-study inputs.
 
-The older `couple_temperature` and `prepared_thermal` helpers preserve annual
-totals and remain for legacy/generic experiments. They are not the V6.2 method.
+The generic `couple_temperature` and `prepared_thermal` helpers preserve
+annual totals. Use `couple_temperature_v62` for the weather-dependent Croatian
+schedules used in the manuscript.
 
 The separate `select-final --design electricity` exports the three fixed 2030
 portfolios' source profiles. Their 45 operating checks are distinct from the

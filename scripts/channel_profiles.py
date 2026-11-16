@@ -1,4 +1,4 @@
-"""Stationary single-channel profiles for the V6.1 multisector experiment."""
+"""Stationary single-channel profiles for the national multisector experiment."""
 import hashlib
 import json
 import numpy as np

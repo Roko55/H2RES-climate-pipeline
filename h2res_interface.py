@@ -113,7 +113,7 @@ def couple_temperature(temp_profile, baseline_temp_profile, year, *,
 
 def couple_temperature_v62(temp_profile, year, *, heat_demand, cooling_demand,
                            hp_cop_period, data_directory):
-    """Apply the exact archived V6.2 Croatian schedules to copied native dictionaries.
+    """Apply the archived Croatian weather-dependent schedules to copied native dictionaries.
 
     Use data/weather_energy from this checkout. The reference coefficients are
     calibrated once to 2020; annual heat/cooling totals can change with weather.

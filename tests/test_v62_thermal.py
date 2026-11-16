@@ -1,4 +1,4 @@
-"""Physical and source-data contracts for the V6.2 thermal method."""
+"""Physical and source-data contracts for weather-dependent thermal schedules."""
 from pathlib import Path
 import unittest,json
 import numpy as np

@@ -1,4 +1,4 @@
-"""Frozen synthetic inputs underlying the V6.1 fixed 2030 electricity portfolios."""
+"""Frozen synthetic inputs for the fixed 2030 electricity portfolios."""
 import hashlib
 import json
 import pandas as pd
@@ -7,7 +7,7 @@ import numpy as np
 
 def select_cases(root, design, year):
     if design != 'electricity' or year != 2030:
-        raise ValueError('The V6.1 operating portfolios use the electricity design at 2030')
+        raise ValueError('The operating portfolios use the electricity design at 2030')
     folder = root/'evidence/calibrated'
     receipt = json.loads((folder/'electricity_profiles_sources.json').read_bytes())
     weather = json.loads((folder/'weather_preflight.json').read_bytes())

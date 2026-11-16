@@ -1,4 +1,4 @@
-"""Accounting boundaries and service deficits in the checked V6.2 snapshot."""
+"""Accounting boundaries and service deficits in the calibrated archive."""
 from pathlib import Path
 import unittest
 import pandas as pd

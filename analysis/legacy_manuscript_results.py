@@ -113,20 +113,20 @@ def verify_manuscript(root=ROOT):
     scope = json.loads((root/'provenance/manuscript/scope.json').read_text())
     expected = {str(i) for i in range(1, 15)} | {'15a', '15b', '16'}
     if {r['figure'] for r in scope['figures']} != expected:
-        raise ValueError('V6.2 figure inventory differs')
+        raise ValueError('Manuscript figure inventory differs')
     for row in scope['figures']:
         path = (root/row['file']).resolve()
         path.relative_to(root.resolve())
         if hashlib.sha256(path.read_bytes()).hexdigest() != row['sha256']:
-            raise ValueError('V6.2 figure differs: '+row['figure'])
+            raise ValueError('Manuscript figure differs: '+row['figure'])
     metrics = pd.read_csv(root/'results/profile_metrics.csv')
     if (len(metrics) != 9 or set(metrics.method) !=
         {'fixed_H2RES_profile', 'ensemble_mean', 'training_calendar_mean'} or
         set(metrics.n_hours) != {43800} or set(metrics['mask']) != {'complete_reporting'}):
-        raise ValueError('V6 mean-profile comparison scope differs')
+        raise ValueError('Mean-profile comparison scope differs')
     crps = pd.read_csv(root/'results/manuscript/fair_crps.csv')
     if len(crps) != 3 or set(crps.channel) != {'solar', 'wind', 'temperature'}:
-        raise ValueError('V6 fair CRPS comparison scope differs')
+        raise ValueError('Fair CRPS comparison scope differs')
     np.testing.assert_allclose(crps.fair_CRPS_change_percent,
         100*(crps.synthetic_fair_CRPS/crps.historical_fair_CRPS-1), rtol=0, atol=1e-10)
     if not (crps.n_reporting_hours.eq(43800).all() and crps.historical_members.eq(36).all()

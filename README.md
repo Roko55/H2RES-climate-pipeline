@@ -61,16 +61,16 @@ Map these profiles to your declared generation units with `export-units`, then u
 `h2res_interface.py` for availability dictionaries or CSVs. See the
 [data schemas](docs/DATA.md) and [integration examples](docs/INTEGRATION.md).
 The current national extract and source audit are under
-[`evidence/final`](evidence/final/README.md). Earlier national cohorts and
-unchanged zonal operating evidence remain under [`evidence/calibrated`](evidence/calibrated/README.md). Re-solving the energy
+[`evidence/final`](evidence/final/README.md). Supporting national archives and
+zonal operating evidence are under [`evidence/calibrated`](evidence/calibrated/README.md). Re-solving the energy
 experiments additionally requires the original input database and licensed optimizer.
 
 ## Current manuscript results
 
-Release 0.10.1 matches the final manuscript prepared for Energy and AI. Climate
-models and the accepted ensemble are unchanged. The current national cohort is
-national_production_luka_4h_20261113_01: seven planning paths, 42 accepted
-windows in 2025-2050 and one common calibrated 2020 base.
+This package accompanies the final manuscript and supplies the climate models,
+selected ensemble and result-reproduction tools. National planning covers seven
+paths, 42 accepted windows in 2025-2050 and one common calibrated 2020 base.
+Source identities are recorded in `evidence/final/source_manifest.json`.
 
 - New gas plants and gas boilers are excluded from 2025; existing boilers remain.
 - Electricity/heating have direct-emissions limits; industry follows fixed inputs.
@@ -99,24 +99,24 @@ electricity and both forms of heating. Wind cost ranking follows yield;
 solar ranking also depends on investment timing. Solar Low temporarily
 reaches 33.4% net-import share in 2035; this result is retained.
 
-The original 45 fixed-portfolio operating checks are a separate three-zone
+The 45 fixed-portfolio operating checks are a separate three-zone
 electricity experiment. All 30 full/half-exchange cases cover HR demand.
 Three zero-exchange cases in 2021 have annual unserved energy of
 0.0000704 TWh (Average), 0.0001582 TWh (Low) and 0.0000652 TWh (High).
-All 45 checks are retained; they do not test the seven new national portfolios.
+The operating portfolios are distinct from the seven national planning paths.
 
 ## Figures and provenance
 
 provenance/manuscript/scope.json records the manuscript SHA256, exact 17
 embedded PNGs and separate native PDF exports. Current tables are in
-results/final. Earlier results/channel_sensitivity, evidence/thermal and
-evidence/calibrated remain archived snapshots with their original schemas.
-Use the current reproduction command above for the final manuscript.
+`results/final`. Supporting archives in `results/channel_sensitivity`,
+`evidence/thermal` and `evidence/calibrated` have separate schemas and source
+identities. Use the reproduction command above for the manuscript tables.
 
 ## Thermal coupling and reproducibility
 
-couple_temperature_v62 remains the Croatian weather-dependent adapter;
-the function name is retained for API compatibility. Use data/weather_energy.
+`h2res_interface.couple_temperature_v62` applies the Croatian
+weather-dependent schedules from `data/weather_energy`.
 Reference coefficients are calibrated once to 2020, then annual needs change
 with temperature. The generic couple_temperature helper still supports
 separate fixed-total experiments.
@@ -129,6 +129,6 @@ a new energy solve requires those external inputs and a licensed optimizer.
 Public result reproduction does not require an optimizer.
 
 The [autoencoder archive](https://github.com/Roko55/H2RES-autoencoder/tree/v0.1.0)
-is unchanged and remains an archived same-corpus comparison.
-For a fixed reference use [v0.10.1](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.10.1).
+provides the separate same-corpus comparison.
+For a fixed reference use [v0.10.2](https://github.com/Roko55/H2RES-climate-pipeline/tree/v0.10.2).
 Source/dependency rights remain in [RIGHTS.md](RIGHTS.md).

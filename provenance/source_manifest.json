@@ -8,7 +8,7 @@
     "source_role": "Delivered generation or integration implementation"
   },
   "scripts/channel_profiles.py": {
-    "sha256": "90cc3de49b9cca52cda6939d28c94b949d928ba927afcc8781b071de56abbad8",
+    "sha256": "9b700fc4be3667b90db6662cc21ba2162e79cbc32afa54a4ef12b053071a350c",
     "source_role": "Delivered generation or integration implementation"
   },
   "scripts/channel_runtime.py": {
@@ -16,7 +16,7 @@
     "source_role": "Delivered generation or integration implementation"
   },
   "scripts/final_selection.py": {
-    "sha256": "6e1e960e97d63e3d8c06c15fef1b3527b6213219b1545831f54881fc03964c38",
+    "sha256": "a8c98706f5b7f12ebabd38c08c22292052ff3e8c8396b3eb192dd4679a32fc3a",
     "source_role": "Delivered generation or integration implementation"
   },
   "scripts/prepared_thermal.py": {
@@ -56,15 +56,15 @@
     "source_role": "Delivered generation or integration implementation"
   },
   "analysis/channel_results.py": {
-    "sha256": "e8a01b15d62d57f6e2474a73d70614b40e68f4d7450d5cebb4415c4d5db5af18",
+    "sha256": "34abc2ac01f5673bb1b1dd00924833d570f746026aa6a99d88c873ce88d4620c",
     "source_role": "Portable calibrated result verification and summary extraction"
   },
   "analysis/manuscript_results.py": {
-    "sha256": "ff1bd39390a1dc6ef595200b2eee35868eb998eb097dede5566a1c732392af2f",
+    "sha256": "f44154d4ed463135be2d6cce72766a0b322d3b86b395f15f430595f7f8986b3c",
     "source_role": "Portable calibrated result verification and summary extraction"
   },
   "analysis/native_results.py": {
-    "sha256": "6a80f1bf63efedc5c45b3cd8ec0717d02624e04aad8769468c124e5814bbc8a6",
+    "sha256": "76a4d5140d8b504665b2a7001902369471e0e44672fdfaffa8700f4f8f4cfd0a",
     "source_role": "Portable calibrated result verification and summary extraction"
   },
   "analysis/zonal_results.py": {
@@ -80,7 +80,7 @@
     "source_role": "V6.2 weather-service conversion or accepted result extraction"
   },
   "analysis/thermal_results.py": {
-    "sha256": "28bd926a6ab00622040a771218e0b33767a0adb7f97dc9c2d4b1f2f119dc8955",
+    "sha256": "85400f31eba9e8daa184a33eb6774e188b0ca86a1f7c45dd1ca1e4fb763d3cb9",
     "source_role": "V6.2 weather-service conversion or accepted result extraction"
   },
   "analysis/constructive_battery_check.py": {
@@ -100,11 +100,11 @@
     "source_role": "Current annual result reproduction or explicitly retained legacy verifier"
   },
   "analysis/final_plot_style.py": {
-    "sha256": "1d9630a68a351165ebc35e6653277b52d261e9e61e82069a2a5ce4627974e5bd",
+    "sha256": "17091d76f25508f3a9f0d1e86ee9411714058f045633366e7553174997fc9d3d",
     "source_role": "Current annual result reproduction or explicitly retained legacy verifier"
   },
   "analysis/legacy_manuscript_results.py": {
-    "sha256": "53ad0b4d773fb5a9768222a3b2b9c205ab6925c1c2673241745077c7c80b695d",
+    "sha256": "94dd181153d04220499bdaeca62d5c94ec7b68dfba914165d2bcf115e59d1500",
     "source_role": "Current annual result reproduction or explicitly retained legacy verifier"
   }
 }

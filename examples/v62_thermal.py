@@ -1,4 +1,4 @@
-"""Apply a selected V6.2 temperature schedule without invoking H2RES."""
+"""Apply a selected Croatian weather-dependent temperature schedule without invoking H2RES."""
 from pathlib import Path
 import json,sys
 import numpy as np

@@ -1,4 +1,4 @@
-"""Reproduce V6.2 tables from the hash-bound, accepted thermal result extract.
+"""Reproduce archived weather-dependent thermal tables from the hash-bound, accepted thermal result extract.
 
 This is a compact extract, not a replacement for the native hourly result stores.
 The included source auditor checked all 42 original windows and state handoffs.

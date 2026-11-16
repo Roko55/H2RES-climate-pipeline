@@ -18,8 +18,8 @@ All seven cases are checked against archived profile hashes for the requested an
 For this stationary-weather design, each case has identical hourly values at every
 future anchor from 2025 through 2050 (solar/wind multipliers 1.0/1.0, temperature
 offset 0 C). The 2020 base is calibrated separately.
-The analysis command reproduces the manuscript summary CSVs, verifies the
-original figure identities and draws the six mean-profile MAE comparisons. See [CHANNEL_RESULTS.md](CHANNEL_RESULTS.md) for units
+The analysis command reproduces the manuscript summary CSVs and verifies
+the figure identities and profile-score comparisons. See [CHANNEL_RESULTS.md](CHANNEL_RESULTS.md) for units
 and experiment definitions.
 
 ## Accepted ensemble and operating-portfolio inputs

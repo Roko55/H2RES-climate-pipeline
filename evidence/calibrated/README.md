@@ -1,4 +1,4 @@
-# Native calibrated V6.1 evidence
+# Native calibrated evidence archive
 
 This directory preserves original execution records beneath their source-relative
 paths. It is an evidence archive. Public profile export and summary entry points

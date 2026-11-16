@@ -1,4 +1,4 @@
-"""Retained manuscript chart styles; only annual data are supplied separately."""
+"""Manuscript chart styles for the annual result plots."""
 from pathlib import Path
 import numpy as np
 import matplotlib

@@ -1,4 +1,4 @@
-"""Legacy verification of the archived thermal cohort; CLI exports current results."""
+"""Verify the supporting thermal archive; export current manuscript results."""
 from pathlib import Path
 import os
 import sys

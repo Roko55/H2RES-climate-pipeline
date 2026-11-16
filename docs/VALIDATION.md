@@ -1,42 +1,45 @@
-# Current verification
-
-python audit.py verifies hashes, models, profiles, current annual results and
-the original separate 45 operating checks. Current result reproduction is
-python analysis/manuscript_results.py --output exports/current_results.
-
-The compact current extract reconciles with the preserved full-store source
-review. Checks cover 42 annual ledgers, cost closure, gross/net exchange,
-coverage, no new gas, direct electricity/heating limits and carried-capacity
-residuals. The external national stores were audited at execution time; they
-are not reverified from scratch by this compact public extract. No additional
-optimizer is run and no strict exclusive-battery optimum is claimed.
-
-## Earlier archived verification
-
 # Verification
 
-Run `python -m unittest discover -s tests -v`, `python audit.py` and
-`python analysis/manuscript_results.py --output exports/v62_tables`.
+Run these commands from the repository root:
 
-The root manifests verify delivered bytes and code. The unchanged climate
-models, 100-member ensemble, selection, profile scores and 17 exact manuscript
-images retain their recorded identities. Training/validation/reporting boundaries
-are unchanged; the retrospective reporting period had previously been inspected.
+```bash
+python -m unittest discover -s tests -v
+python audit.py
+python analysis/manuscript_results.py --output exports/current_results
+```
 
-For V6.2, `analysis/thermal_results.py` verifies the compact accepted extract
-against the original full-store audit and accepted-receipt hashes for all 42
-national windows. It checks component closure, numerical solution quality,
-net-import accounting, demand denominators and temperature-demand rankings.
-The source audit checked native ledgers, complete state handoffs and frozen
-inputs on the server. Large native stores are excluded from the public delivery;
-local table reproduction does not re-solve the energy model.
+The artifact manifest checks file sizes and SHA256 identities. The audit also
+checks ten native models, the 100-member ensemble, selected annual profiles,
+profile-score comparisons and the 17 manuscript figures. Training covers
+1980-2015, validation 2016-2019 and reporting 2020-2024. The reporting period
+had been inspected during development and is evaluated retrospectively.
 
-The unchanged zonal archive retains all three planning portfolios and 45
-operating checks. Its portable auditor rechecks the included hourly balances,
-stock, exchange and storage-cycle records. Three 2021 zero-exchange controls with
-exclusive battery operation are tracked separately and are not substituted
-until their physical/optimization checks and comparison are accepted.
+## National planning
+
+The compact extract in `evidence/final` reconciles with the preserved source
+review of the full native stores. Checks cover 42 annual ledgers, component-cost
+closure, gross/net electricity exchange, demand coverage, no new gas investment,
+direct electricity/heating emissions limits and carried-capacity residuals.
+The full-store audits were performed on the native database at execution time.
+Public table reproduction checks the compact extract; it does not rerun H2RES.
+
+## Fixed-portfolio operation
+
+The separate zonal archive contains three 2030 planning portfolios and 45
+full-year operating cases. Its auditor checks included hourly balances, stock,
+exchange limits and storage cycles. The three 2021 zero-exchange cases have
+small annual shortages. The constructive battery check is a feasible hourly
+balance comparison, not a certificate of a global exclusive-battery optimum.
+No additional exclusive-battery optimization results replace the 45 cases.
+
+## Thermal coupling and source archives
 
 Thermal tests cover weather-dependent annual service quantities, shared COP,
-unclipped cooling, exact selected-schedule application and unchanged caller data.
-The older fixed-total helpers are tested as legacy methods only.
+unclipped cooling, exact schedule application and unchanged caller dictionaries.
+Fixed-total helpers are tested separately from the weather-dependent adapter.
+
+`analysis/thermal_results.py` and `analysis/native_results.py` check supporting
+archives against their own source receipts and schemas. These archives preserve
+native execution evidence and do not supply the current national result tables.
+Raw weather, full native state stores and the third-party database are external.
+Re-solving the energy model requires those inputs and a licensed optimizer.

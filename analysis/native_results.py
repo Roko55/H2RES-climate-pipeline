@@ -1,4 +1,4 @@
-"""Portable extraction of the calibrated V6.1 receipts; no optimizer is imported.
+"""Portable extraction of the archived calibrated receipts; no optimizer is imported.
 
 National full variable/state stores were audited at their original location.
 This module checks the delivered annual/asset records against those receipts.
