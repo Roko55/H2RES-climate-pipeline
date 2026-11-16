@@ -1,0 +1,10 @@
+{
+  "result_cohort": "national_production_luka_4h_20261113_01",
+  "source_execution_fence": "e2fe5913686dbc4eaa713de5598d9f7f0c16bf96adea992b57504c3325e07d26",
+  "data_sha256": "598c95eb4b47424a77bc2bca35bf202dacbe4116b3507df962ac3f247a2f88f8",
+  "original_completion_review_sha256": "157b1c49082da47f8efaaed5731a1007e90a07d3f41c1de1000541665ee6ab92",
+  "original_cost_ledger_receipt_sha256": "f7462aa03cbaa01fa948e6fb2872f7f77f57ed88a8a52c5692ad0b2485bb84c8",
+  "scope": "Annual extract and preserved full-store source receipt; original native database/stores remain external.",
+  "external_inputs_required_for_new_solves": true,
+  "optimizer_rerun": false
+}

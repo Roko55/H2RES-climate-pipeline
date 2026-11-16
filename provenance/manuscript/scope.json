@@ -1,111 +1,145 @@
 {
-  "manuscript_version": "V6.1",
-  "manuscript_sha256": "ea616fc2372f506f53dd444e26aa97dc8c15572c5b569a4f42a5b49541d9e5c5",
+  "manuscript_version": "Final",
+  "manuscript_sha256": "73c97719c719924e94f615d97e7e57665a55d352d9a96ed2ae91630ad745233b",
   "figures": [
     {
       "figure": "1",
       "caption": "Figure 1. Overview of the method.",
       "file": "results/manuscript/figures/figure_01.png",
-      "sha256": "08f358ac0f29093b2db0a3a143d0007dc2e59c20fa9309bd790518b0d475a441"
+      "sha256": "08f358ac0f29093b2db0a3a143d0007dc2e59c20fa9309bd790518b0d475a441",
+      "native_pdf": "results/manuscript/figures/figure_01.pdf",
+      "native_pdf_sha256": "03726bbaf4c6fce3ddea2fc812a876b4af12a5f089c46361d09dd99ca148bad7"
     },
     {
       "figure": "2",
       "caption": "Figure 2. Common 2020 base and seven planning paths.",
       "file": "results/manuscript/figures/figure_02.png",
-      "sha256": "48e8f0bdc3cd57d3664ab5f37d8b60356910cb17c963e1232b8764881a7964cb"
+      "sha256": "48e8f0bdc3cd57d3664ab5f37d8b60356910cb17c963e1232b8764881a7964cb",
+      "native_pdf": "results/manuscript/figures/figure_02.pdf",
+      "native_pdf_sha256": "5d18e16c88237cb0de59683f22ed0f6c850ef626f4d7228bef0f776fe292aeff"
     },
     {
       "figure": "3",
       "caption": "Figure 3. Generated profiles, default H2RES inputs and historical references.",
       "file": "results/manuscript/figures/figure_03.png",
-      "sha256": "d0ceec6c9444ce38f816c5f3e36096911e24e105d1212d2dce72ab2379245f54"
+      "sha256": "d0ceec6c9444ce38f816c5f3e36096911e24e105d1212d2dce72ab2379245f54",
+      "native_pdf": "results/manuscript/figures/figure_03.pdf",
+      "native_pdf_sha256": "f86d7aebc2a4cef9dac5d11fd3ea4d04d6caa100c53baaef7d8f1da278d038a8"
     },
     {
       "figure": "4",
       "caption": "Figure 4. Selected Average profile and observations during one reporting week.",
       "file": "results/manuscript/figures/figure_04.png",
-      "sha256": "d7be7ff9f1b3ad98dad8a8bfd55236796dc83e96d3fd831c495c1d2df1b9925c"
+      "sha256": "d7be7ff9f1b3ad98dad8a8bfd55236796dc83e96d3fd831c495c1d2df1b9925c",
+      "native_pdf": "results/manuscript/figures/figure_04.pdf",
+      "native_pdf_sha256": "53acf1e33f32a3c025cacc507b22daa502401c505a5ebc201a6eefbc873171bf"
     },
     {
       "figure": "5",
       "caption": "Figure 5. Mean-profile MAE changes relative to default H2RES and historical references.",
       "file": "results/manuscript/figures/figure_05.png",
-      "sha256": "00f0a7cb2d2e1f25cce49999c0819d84ec0ec2470247ec15db6dac23e824c20e"
+      "sha256": "00f0a7cb2d2e1f25cce49999c0819d84ec0ec2470247ec15db6dac23e824c20e",
+      "native_pdf": "results/manuscript/figures/figure_05.pdf",
+      "native_pdf_sha256": "5de77ce38102ad80971fa27c46fb3c7a26ce2357c64d6e01c93c46a0e72e0684"
     },
     {
       "figure": "6",
       "caption": "Figure 6. Fair CRPS changes relative to the historical ensemble.",
       "file": "results/manuscript/figures/figure_06.png",
-      "sha256": "1086aa34da8cb19611027c1a933b86835949953864b3d98b650b272a3ad74673"
+      "sha256": "1086aa34da8cb19611027c1a933b86835949953864b3d98b650b272a3ad74673",
+      "native_pdf": "results/manuscript/figures/figure_06.pdf",
+      "native_pdf_sha256": "883440376adb9997615259fa7451c08143f9e4921be2ebcb63d20925e85f62c0"
     },
     {
       "figure": "7",
-      "caption": "Figure 7. Solar cost differences from Average.",
+      "caption": "Figure 7. Solar annual cost differences from Average.",
       "file": "results/manuscript/figures/figure_07.png",
-      "sha256": "f72f7a89b981c6333810e6bef0badeb1f19eae1507fee52fae1bd1884aa6667e"
+      "sha256": "ff8d7a738c3d87ca6fadd23abdf302dc7df911f6d1fc67313e10627d5c40d4db",
+      "native_pdf": "results/manuscript/figures/figure_07.pdf",
+      "native_pdf_sha256": "6aff34844ad399f93475a98eee080284b6f08c924a4313a9c80d0b9481906f15"
     },
     {
       "figure": "8",
-      "caption": "Figure 8. Solar cost differences by component.",
+      "caption": "Figure 8. Solar annual cost differences by component.",
       "file": "results/manuscript/figures/figure_08.png",
-      "sha256": "4a10269066578b632476a158ab7c5d5bbbd1c3a42ca0822d9833e3f66318fb12"
+      "sha256": "6a82129a0abf388aa995fa3761f2c18516c43baa63570ccc22face13ca087734",
+      "native_pdf": "results/manuscript/figures/figure_08.pdf",
+      "native_pdf_sha256": "e9255b4a152bb60486eecbb42cc89baf1ec717513419f864211d9206455ec285"
     },
     {
       "figure": "9",
-      "caption": "Figure 9. Wind cost differences from Average.",
+      "caption": "Figure 9. Wind annual cost differences from Average.",
       "file": "results/manuscript/figures/figure_09.png",
-      "sha256": "7140d0ce2a8b245ab6ff5f92be643847063627976f3127f1a3e5cdb51d019530"
+      "sha256": "0cbbd9cc3804f424747bb97b12592e744476309c305e9b71574a5d72cf6100ff",
+      "native_pdf": "results/manuscript/figures/figure_09.pdf",
+      "native_pdf_sha256": "fb9310cb3ec2126d47118ffe3ffae3d8eeb0165acc69b305cef26da0710acf90"
     },
     {
       "figure": "10",
-      "caption": "Figure 10. Wind cost differences by component.",
+      "caption": "Figure 10. Wind annual cost differences by component.",
       "file": "results/manuscript/figures/figure_10.png",
-      "sha256": "0216f4ce19a97225cd1b5172cac8c83bb0d0d92851b2b936a22a28d927fa6e5a"
+      "sha256": "d5dddef1060f815eaf416c94a3d335f997586ea4c41d0b56bec763027d55df81",
+      "native_pdf": "results/manuscript/figures/figure_10.pdf",
+      "native_pdf_sha256": "cada392d5003c478a3ac6800d87e5cae5b8beef68030e6519c263f3ff25275b4"
     },
     {
       "figure": "11",
-      "caption": "Figure 11. Temperature cost differences from Average.",
+      "caption": "Figure 11. Temperature annual cost differences from Average.",
       "file": "results/manuscript/figures/figure_11.png",
-      "sha256": "823e22d0b715e60eaba2174d68cbdcce506be50d7f6cfa145d733bc18a561b93"
+      "sha256": "5081ffff15e2404185249b0bf61df6eee31664c5fe988dba5198bce81b93df1a",
+      "native_pdf": "results/manuscript/figures/figure_11.pdf",
+      "native_pdf_sha256": "6d549ffc6222f69ec4a6151b6cbab17b44b368596474fff500f19e99bc593fe6"
     },
     {
       "figure": "12",
-      "caption": "Figure 12. Temperature cost differences by component.",
+      "caption": "Figure 12. Temperature annual cost differences by component.",
       "file": "results/manuscript/figures/figure_12.png",
-      "sha256": "e982dd4c333acd52380092a4a4a5c5d65097f3906bd2d558df6a88823f377c5b"
+      "sha256": "3a1cd4d21bc982292b381c2fe2936fa605890e06cf11f4b595be05a26c786322",
+      "native_pdf": "results/manuscript/figures/figure_12.pdf",
+      "native_pdf_sha256": "5f8ac26936d6d45dcfbfefdf7a0ad50e94b41ea3d5de6119a3e002628744821a"
     },
     {
       "figure": "13",
-      "caption": "Figure 13. Average costs and cost per model-demand MWh.",
+      "caption": "Figure 13. Average annual costs and cost per model-demand MWh.",
       "file": "results/manuscript/figures/figure_13.png",
-      "sha256": "a4fecc6cad53e83228cf6993a6b76503b1e2f296db45c78e6bfc0654f07bd2e7"
+      "sha256": "43da5437c4f2012ad016c35a2a78ba2a6e2fb7d34ea11898a6e497009646ac1a",
+      "native_pdf": "results/manuscript/figures/figure_13.pdf",
+      "native_pdf_sha256": "690ccdb374d6f79462141e3e1ed865ef54867423c899ea3fd93e366355a7565b"
     },
     {
       "figure": "14",
-      "caption": "Figure 14. Average new heating capacity by decision year.",
+      "caption": "Figure 14. Average new electricity and heating capacity by decision year.",
       "file": "results/manuscript/figures/figure_14.png",
-      "sha256": "446371e020ed94c4cbb7862f57e9740dfde91fca023903ae4a72bfa655720c91"
+      "sha256": "c152657a3c0877d51508881eed1bcb7b4efbb20aa042a8654fed67f1812a7af6",
+      "native_pdf": "results/manuscript/figures/figure_14.pdf",
+      "native_pdf_sha256": "28120dee432df97f60d5967d4ce80cc806e8c317e460a5fea1b56da7f1a83d60"
     },
     {
       "figure": "15a",
       "caption": "Figure 15(a). Average electricity supply and delivered heat.",
       "file": "results/manuscript/figures/figure_15a.png",
-      "sha256": "9cf8211b0e4d09ec5a7222901f5038e45fdcef06ca0f4c13272423e18c7921b5"
+      "sha256": "18c6990d67ef09712c38dc3a82d6fbe77b8bb7e944841a3dd50d1e2e1a98165d",
+      "native_pdf": "results/manuscript/figures/figure_15a.pdf",
+      "native_pdf_sha256": "048231884dbc53f93c706b6dba1a5c9251cf915d9a4a2a51eb56d29db036bddd"
     },
     {
       "figure": "15b",
-      "caption": "Figure 15(b). Average annual direct domestic CO\u2082 emissions by sector.",
+      "caption": "Figure 15(b). Cumulative solar, wind and heat-pump additions across cases, 2025–2050.",
       "file": "results/manuscript/figures/figure_15b.png",
-      "sha256": "9676ac11037f6de568e8db0cc246d3b3ed17198d7376d998b6d9185fc93dd691"
+      "sha256": "4fed6481d3625ab4981fa6ee5a093a34a66e73f701c3b95b2ed1f82af093c987",
+      "native_pdf": "results/manuscript/figures/figure_15b.pdf",
+      "native_pdf_sha256": "7b43311ebd4724732d171c7f014a6e2cbb3771e1c8b86cca9880b1961a83a747"
     },
     {
       "figure": "16",
       "caption": "Figure 16. Croatian electricity surplus in the 45 operating tests. Asterisks mark cases with unserved demand.",
       "file": "results/manuscript/figures/figure_16.png",
-      "sha256": "9b5709a68af4c86aaab05bdaac758364b4167bbbce7732ba770e250ff4f3a59f"
+      "sha256": "9b5709a68af4c86aaab05bdaac758364b4167bbbce7732ba770e250ff4f3a59f",
+      "native_pdf": "results/manuscript/figures/figure_16.pdf",
+      "native_pdf_sha256": "767f14dae3eb9a63d4687e5ca88596ba81fd4c9305c4a92256351659865a67c1"
     }
   ],
-  "planning_experiment": "national_production_thermal_20261107_01",
+  "planning_experiment": "national_production_luka_4h_20261113_01",
   "planning_windows": 42,
   "new_planning_windows": 42,
   "common_calibrated_base_year": 2020,
@@ -118,7 +152,7 @@
     "SI",
     "BA"
   ],
-  "source_manifest": "evidence/thermal/source_manifest.json",
+  "source_manifest": "evidence/final/source_manifest.json",
   "statistical_figures_unchanged": [
     "3",
     "4",
@@ -132,6 +166,8 @@
     "substitute": "Constructive hourly balance check; not a global optimum certificate",
     "original_45_operating_results_retained": true
   },
-  "scope": "Final V6.1 manuscript; same accepted thermal results, figures and climate ensemble",
-  "result_cohort": "national_production_thermal_20261107_01"
+  "scope": "Current manuscript, unchanged climate ensemble, current 42 national windows and separate original 45 operating checks",
+  "result_cohort": "national_production_luka_4h_20261113_01",
+  "legacy_result_cohort": "national_production_thermal_20261107_01",
+  "annual_costs": "Undiscounted decision-year operations, surviving annual capital payments and one-off charges; each realized year once"
 }

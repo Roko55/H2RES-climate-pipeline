@@ -1,0 +1,28 @@
+{
+  "files": {
+    "annual_results.json": {
+      "bytes": 264194,
+      "sha256": "598c95eb4b47424a77bc2bca35bf202dacbe4116b3507df962ac3f247a2f88f8"
+    },
+    "calendar_ledger_receipts.json": {
+      "bytes": 5900,
+      "sha256": "f7462aa03cbaa01fa948e6fb2872f7f77f57ed88a8a52c5692ad0b2485bb84c8"
+    },
+    "completion_review.json": {
+      "bytes": 16471,
+      "sha256": "157b1c49082da47f8efaaed5731a1007e90a07d3f41c1de1000541665ee6ab92"
+    },
+    "model_assumptions.json": {
+      "bytes": 3362,
+      "sha256": "0b9206ad13fff7b84f8188e6e934dc69575b09907bc54617979eed508e038b8e"
+    },
+    "README.md": {
+      "bytes": 820,
+      "sha256": "a03bd85cf28aa49a9ff117412374cd41516e47457430aff5ec016ac8e9a0a940"
+    },
+    "source_manifest.json": {
+      "bytes": 670,
+      "sha256": "595ae493dc78575798ac6fe1fbad5ccb4a487135b2cd4e627eacef7951665218"
+    }
+  }
+}

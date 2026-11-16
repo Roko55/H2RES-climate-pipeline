@@ -1,17 +1,8 @@
 {
-  "manuscript_version": "V6.1",
-  "manuscript_sha256": "ea616fc2372f506f53dd444e26aa97dc8c15572c5b569a4f42a5b49541d9e5c5",
-  "native_thermal_extract_sha256": "6bbbb04ccda0075a85a5ce057100f4cd849c17817e97855c4b167f0f2ecfd503",
-  "source_manifest": "evidence/thermal/source_manifest.json",
-  "original_source_audit_sha256": "5b1f69a3569b290c52c4f7c458040aab1023eec005fd4bf37c06c09597963c11",
+  "manuscript_version": "Final",
+  "manuscript_sha256": "73c97719c719924e94f615d97e7e57665a55d352d9a96ed2ae91630ad745233b",
+  "current_result_extract_sha256": "598c95eb4b47424a77bc2bca35bf202dacbe4116b3507df962ac3f247a2f88f8",
+  "source_manifest": "evidence/final/source_manifest.json",
   "original_operating_cohort": "evidence/calibrated/zonal_2030_production_05",
-  "battery_controls": {
-    "scope": "three 2021 zero-HR-exchange checks",
-    "status": "Lengthy strict optimum search cancelled by the user; no additional strict controls accepted",
-    "server_stop_confirmation": "Not confirmed: VS Code tunnel requests timed out",
-    "substitute": "Constructive hourly balance check; not a global optimum certificate",
-    "original_45_operating_results_retained": true
-  },
-  "new_optimization": false,
-  "result_cohort": "national_production_thermal_20261107_01"
+  "optimizer_rerun": false
 }

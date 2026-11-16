@@ -68,11 +68,14 @@ def main():
     pd.testing.assert_frame_equal(operations, operational_table(ROOT), check_dtype=False, rtol=1e-12, atol=1e-8)
     zonal = audit_zonal(evidence(ROOT)/'zonal_2030_production_05')
     channels = verify_results(ROOT)
+    from analysis.final_results import verify_results as verify_current
+    current_results = verify_current(ROOT)
     print(json.dumps({'status': 'passed', 'files_verified': len(manifest['files']),
         'native_models_verified': 10, 'ensemble_sha256': ENSEMBLE_SHA,
         'fixed_portfolio_operational_cases': len(operations),
         'full_hourly_zonal_verification': {k:v for k,v in zonal.items() if k != 'evidence'},
-        'single_channel_planning': channels,
+        'current_national_planning': current_results,
+        'legacy_national_archive': channels,
         'manuscript': verify_manuscript(ROOT),
         'scope': 'Artifact identities, solar runtime assets and archived solver evidence; optimizer not rerun.'}, indent=2))
 

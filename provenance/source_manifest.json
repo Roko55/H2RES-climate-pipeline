@@ -56,15 +56,15 @@
     "source_role": "Delivered generation or integration implementation"
   },
   "analysis/channel_results.py": {
-    "sha256": "60818b07ae83f82cd91452ca1459a6aab3abda81c931529bed1513efe687e79d",
+    "sha256": "e8a01b15d62d57f6e2474a73d70614b40e68f4d7450d5cebb4415c4d5db5af18",
     "source_role": "Portable calibrated result verification and summary extraction"
   },
   "analysis/manuscript_results.py": {
-    "sha256": "a7f6020ec1c4c40cb435c405577a98e213597702abe5e5ba1f727987c9eb3fa5",
+    "sha256": "ff1bd39390a1dc6ef595200b2eee35868eb998eb097dede5566a1c732392af2f",
     "source_role": "Portable calibrated result verification and summary extraction"
   },
   "analysis/native_results.py": {
-    "sha256": "94fde4fbaec349702a5a792d4543aacf51475f40ea389a3ff113de39a44c6028",
+    "sha256": "6a80f1bf63efedc5c45b3cd8ec0717d02624e04aad8769468c124e5814bbc8a6",
     "source_role": "Portable calibrated result verification and summary extraction"
   },
   "analysis/zonal_results.py": {
@@ -86,5 +86,25 @@
   "analysis/constructive_battery_check.py": {
     "sha256": "6d82d65489435e42b6d21c5329bf7ec01ddf58ec8f0cc6df56d994382c385b2b",
     "source_role": "Separate constructive physical balance check; no optimization"
+  },
+  "analysis/final_results.py": {
+    "sha256": "70d2b6f5e633a93d137cefa88f6f4f392377832a4d7eae7198ab23afdc4902e8",
+    "source_role": "Current annual result reproduction or explicitly retained legacy verifier"
+  },
+  "analysis/final_figures.py": {
+    "sha256": "a8ce38c76b6bec2735c6e14649dad7196222c78daafec4d7c3d0b15cf9a6b398",
+    "source_role": "Current annual result reproduction or explicitly retained legacy verifier"
+  },
+  "analysis/final_plot_context.py": {
+    "sha256": "fb48b9bef0bc16be8d1f26bc2b3f4a4bc97415cbdffad650ae5262cd56f8f82a",
+    "source_role": "Current annual result reproduction or explicitly retained legacy verifier"
+  },
+  "analysis/final_plot_style.py": {
+    "sha256": "1d9630a68a351165ebc35e6653277b52d261e9e61e82069a2a5ce4627974e5bd",
+    "source_role": "Current annual result reproduction or explicitly retained legacy verifier"
+  },
+  "analysis/legacy_manuscript_results.py": {
+    "sha256": "53ad0b4d773fb5a9768222a3b2b9c205ab6925c1c2673241745077c7c80b695d",
+    "source_role": "Current annual result reproduction or explicitly retained legacy verifier"
   }
 }

@@ -2,7 +2,7 @@
 from pathlib import Path
 import unittest
 import numpy as np
-from analysis.manuscript_results import summaries, verify_manuscript
+from analysis.legacy_manuscript_results import summaries, verify_manuscript
 
 ROOT = Path(__file__).resolve().parents[1]
 

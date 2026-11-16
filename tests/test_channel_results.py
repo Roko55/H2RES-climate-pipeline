@@ -8,7 +8,7 @@ from unittest.mock import patch
 import pandas as pd
 import numpy as np
 from analysis import channel_results as results
-from analysis.manuscript_results import summaries
+from analysis.legacy_manuscript_results import summaries
 from scripts.channel_profiles import channel_cases
 
 ROOT = Path(__file__).resolve().parents[1]

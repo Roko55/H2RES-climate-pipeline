@@ -1,4 +1,4 @@
-"""Verify the calibrated V6.2 stationary-weather experiment."""
+"""Legacy verification of the archived thermal cohort; CLI exports current results."""
 from pathlib import Path
 import os
 import sys

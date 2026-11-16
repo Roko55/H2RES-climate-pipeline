@@ -1,3 +1,18 @@
+# Current verification
+
+python audit.py verifies hashes, models, profiles, current annual results and
+the original separate 45 operating checks. Current result reproduction is
+python analysis/manuscript_results.py --output exports/current_results.
+
+The compact current extract reconciles with the preserved full-store source
+review. Checks cover 42 annual ledgers, cost closure, gross/net exchange,
+coverage, no new gas, direct electricity/heating limits and carried-capacity
+residuals. The external national stores were audited at execution time; they
+are not reverified from scratch by this compact public extract. No additional
+optimizer is run and no strict exclusive-battery optimum is claimed.
+
+## Earlier archived verification
+
 # Verification
 
 Run `python -m unittest discover -s tests -v`, `python audit.py` and

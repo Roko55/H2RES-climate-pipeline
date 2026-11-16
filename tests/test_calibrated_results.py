@@ -2,7 +2,7 @@
 from pathlib import Path
 import unittest
 import pandas as pd
-from analysis.manuscript_results import summaries
+from analysis.legacy_manuscript_results import summaries
 from analysis.native_results import annual_costs, operational_table
 from scripts.channel_profiles import channel_cases
 

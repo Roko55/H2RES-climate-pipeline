@@ -211,7 +211,7 @@ def verify_national_v61(root=ROOT):
 
 def _thermal_snapshot(root):
     scope = read(root/'provenance/manuscript/scope.json')
-    return (scope.get('result_cohort') == 'national_production_thermal_20261107_01'
+    return (scope.get('legacy_result_cohort', scope.get('result_cohort')) == 'national_production_thermal_20261107_01'
             or scope['manuscript_version'] == 'V6.2')
 
 def annual_costs(root=ROOT):

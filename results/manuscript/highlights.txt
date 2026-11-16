@@ -1,0 +1,4 @@
+- Solar, wind and temperature generation supplies 100 annual profiles per input.
+- Seven H2RES planning paths isolate the investment effects of each weather input.
+- Higher wind yields lower costs; solar effects depend on investment timing.
+- Colder profiles increase heating demand and heat-pump capacity.

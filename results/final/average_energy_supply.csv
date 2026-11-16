@@ -1,0 +1,49 @@
+year,scope,technology,TWh
+2025,Electricity,Net imports including Krško entitlement,2.3671910508181884
+2025,Electricity,Hydro,6.95270797329149
+2025,Electricity,Wind,4.245593558031134
+2025,Electricity,Solar PV,1.2356048397305006
+2025,Electricity,Other domestic generation,3.2342661967481128
+2025,Heat,Gas boilers,4.746920209013643
+2025,Heat,Biomass boilers,13.433210797777123
+2025,Heat,Other heat and heat pumps,1.4604203771329132
+2030,Electricity,Net imports including Krško entitlement,3.956165960128083
+2030,Electricity,Hydro,6.972057026575204
+2030,Electricity,Wind,5.958004679879129
+2030,Electricity,Solar PV,1.2356048397305006
+2030,Electricity,Other domestic generation,2.0032534815009875
+2030,Heat,Gas boilers,6.8481752980206325
+2030,Heat,Biomass boilers,7.528283160767385
+2030,Heat,Other heat and heat pumps,4.639924026073963
+2035,Electricity,Net imports including Krško entitlement,3.8995803472927184
+2035,Electricity,Hydro,6.971609291206548
+2035,Electricity,Wind,7.670415801727095
+2035,Electricity,Solar PV,5.667319651222759
+2035,Electricity,Other domestic generation,1.3623346196220332
+2035,Heat,Gas boilers,6.162582693745775
+2035,Heat,Biomass boilers,0.0
+2035,Heat,Other heat and heat pumps,11.683606912317847
+2040,Electricity,Net imports including Krško entitlement,5.384545103021002
+2040,Electricity,Hydro,6.958570834609215
+2040,Electricity,Wind,9.382826923575097
+2040,Electricity,Solar PV,7.361097901472787
+2040,Electricity,Other domestic generation,0.9868925862625009
+2040,Heat,Gas boilers,1.986071590667937
+2040,Heat,Biomass boilers,0.0
+2040,Heat,Other heat and heat pumps,14.689925136708995
+2045,Electricity,Net imports including Krško entitlement,3.8460662719075236
+2045,Electricity,Hydro,6.946895894475087
+2045,Electricity,Wind,11.095238045423109
+2045,Electricity,Solar PV,10.770972204877141
+2045,Electricity,Other domestic generation,0.9536058595877104
+2045,Heat,Gas boilers,1.3270988299607174
+2045,Heat,Biomass boilers,0.0
+2045,Heat,Other heat and heat pumps,14.613412219751828
+2050,Electricity,Net imports including Krško entitlement,4.34690283001963
+2050,Electricity,Hydro,6.938166854914103
+2050,Electricity,Wind,12.807649167271101
+2050,Electricity,Solar PV,12.231588233514609
+2050,Electricity,Other domestic generation,0.9527256596000008
+2050,Heat,Gas boilers,0.5858977625988216
+2050,Heat,Biomass boilers,0.0
+2050,Heat,Other heat and heat pumps,14.619127609496804

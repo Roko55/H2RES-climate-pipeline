@@ -1,0 +1,424 @@
+{
+  "utc": "2026-11-14T12:05:48.458865+00:00",
+  "fence": "e2fe5913686dbc4eaa713de5598d9f7f0c16bf96adea992b57504c3325e07d26",
+  "errors": [],
+  "paths": {
+    "average": {
+      "2025": {
+        "net_import_twh": 2.3671910508181884,
+        "net_import_share": 0.13364947653289894,
+        "co2_power_heat_t": 2133554.137185961,
+        "co2_limit_t": 4227794.364832657,
+        "annual_cost": 492716070.79883695,
+        "annual_capital_payments": 80600660.39255445,
+        "annual_operation": 412115410.4062825
+      },
+      "2030": {
+        "net_import_twh": 3.956165960128083,
+        "net_import_share": 0.2010789906232312,
+        "co2_power_heat_t": 2071512.0147692994,
+        "co2_limit_t": 2788985.361869686,
+        "annual_cost": 784178469.2770035,
+        "annual_capital_payments": 382361355.25916123,
+        "annual_operation": 401817114.0178423
+      },
+      "2035": {
+        "net_import_twh": 3.8995803472927184,
+        "net_import_share": 0.1552285685587034,
+        "co2_power_heat_t": 1631683.692401724,
+        "co2_limit_t": 1631683.692401724,
+        "annual_cost": 1096852388.9016457,
+        "annual_capital_payments": 720892452.0812624,
+        "annual_operation": 375959936.8203833
+      },
+      "2040": {
+        "net_import_twh": 5.384545103021002,
+        "net_import_share": 0.18191246199762268,
+        "co2_power_heat_t": 473315.1643972625,
+        "co2_limit_t": 473315.1643972625,
+        "annual_cost": 1203733326.2033026,
+        "annual_capital_payments": 791845910.382877,
+        "annual_operation": 411887415.8204256
+      },
+      "2045": {
+        "net_import_twh": 3.8460662719075236,
+        "net_import_share": 0.11672548524004524,
+        "co2_power_heat_t": 304078.9549106044,
+        "co2_limit_t": 304078.9549106044,
+        "annual_cost": 1212999981.6215467,
+        "annual_capital_payments": 696663726.0057815,
+        "annual_operation": 516336255.61576515
+      },
+      "2050": {
+        "net_import_twh": 4.34690283001963,
+        "net_import_share": 0.1193236033250541,
+        "co2_power_heat_t": 134842.7454239449,
+        "co2_limit_t": 134842.7454239449,
+        "annual_cost": 1104163911.6044583,
+        "annual_capital_payments": 538418582.2209545,
+        "annual_operation": 565745329.3835039
+      }
+    },
+    "temperature_cold": {
+      "2025": {
+        "net_import_twh": 2.505798294626337,
+        "net_import_share": 0.14014093708233788,
+        "co2_power_heat_t": 2301136.1908528125,
+        "co2_limit_t": 4227794.364832657,
+        "annual_cost": 561558566.4356278,
+        "annual_capital_payments": 123661881.7754558,
+        "annual_operation": 437896684.660172
+      },
+      "2030": {
+        "net_import_twh": 4.163971847145982,
+        "net_import_share": 0.2090645973107371,
+        "co2_power_heat_t": 2297060.495301386,
+        "co2_limit_t": 2788985.361869686,
+        "annual_cost": 855903731.2825264,
+        "annual_capital_payments": 424293384.96868116,
+        "annual_operation": 431610346.3138453
+      },
+      "2035": {
+        "net_import_twh": 4.536462186230147,
+        "net_import_share": 0.17633098179145493,
+        "co2_power_heat_t": 1631683.692401724,
+        "co2_limit_t": 1631683.692401724,
+        "annual_cost": 1170582902.520574,
+        "annual_capital_payments": 760266877.4843727,
+        "annual_operation": 410316025.0362014
+      },
+      "2040": {
+        "net_import_twh": 5.70848275243943,
+        "net_import_share": 0.18907566111766866,
+        "co2_power_heat_t": 473315.1643972625,
+        "co2_limit_t": 473315.1643972625,
+        "annual_cost": 1233372225.200053,
+        "annual_capital_payments": 795107731.6623316,
+        "annual_operation": 438264493.53772134
+      },
+      "2045": {
+        "net_import_twh": 4.045672184627595,
+        "net_import_share": 0.12072411698487603,
+        "co2_power_heat_t": 304078.9549106044,
+        "co2_limit_t": 304078.9549106044,
+        "annual_cost": 1248065036.2894132,
+        "annual_capital_payments": 715608241.5844116,
+        "annual_operation": 532456794.70500165
+      },
+      "2050": {
+        "net_import_twh": 4.1130120943073,
+        "net_import_share": 0.11162053439344448,
+        "co2_power_heat_t": 134842.7454239449,
+        "co2_limit_t": 134842.7454239449,
+        "annual_cost": 1150502580.6501756,
+        "annual_capital_payments": 602714701.0330539,
+        "annual_operation": 547787879.6171216
+      }
+    },
+    "temperature_hot": {
+      "2025": {
+        "net_import_twh": 2.375794727154154,
+        "net_import_share": 0.13389628127149455,
+        "co2_power_heat_t": 2027298.937431416,
+        "co2_limit_t": 4227794.364832657,
+        "annual_cost": 465027359.70212257,
+        "annual_capital_payments": 62434738.96725736,
+        "annual_operation": 402592620.7348652
+      },
+      "2030": {
+        "net_import_twh": 3.9285465777737247,
+        "net_import_share": 0.19993132280913445,
+        "co2_power_heat_t": 2029196.9958013813,
+        "co2_limit_t": 2788985.361869686,
+        "annual_cost": 732323885.9194038,
+        "annual_capital_payments": 339859451.00642157,
+        "annual_operation": 392464434.91298217
+      },
+      "2035": {
+        "net_import_twh": 3.833940453961662,
+        "net_import_share": 0.15333943236434627,
+        "co2_power_heat_t": 1631683.692401724,
+        "co2_limit_t": 1631683.692401724,
+        "annual_cost": 1045687925.8998489,
+        "annual_capital_payments": 678672586.5149865,
+        "annual_operation": 367015339.38486236
+      },
+      "2040": {
+        "net_import_twh": 5.113721454448886,
+        "net_import_share": 0.17342521216865997,
+        "co2_power_heat_t": 473315.1643972625,
+        "co2_limit_t": 473315.1643972625,
+        "annual_cost": 1170665020.5214214,
+        "annual_capital_payments": 772219657.1035916,
+        "annual_operation": 398445363.4178298
+      },
+      "2045": {
+        "net_import_twh": 4.000254816856905,
+        "net_import_share": 0.12182644486586226,
+        "co2_power_heat_t": 304078.9549106044,
+        "co2_limit_t": 304078.9549106044,
+        "annual_cost": 1206270698.2940345,
+        "annual_capital_payments": 693438746.5182002,
+        "annual_operation": 512831951.77583426
+      },
+      "2050": {
+        "net_import_twh": 4.509423438449997,
+        "net_import_share": 0.1241984219600272,
+        "co2_power_heat_t": 134842.7454239449,
+        "co2_limit_t": 134842.7454239449,
+        "annual_cost": 1095884012.4323888,
+        "annual_capital_payments": 534303724.9957452,
+        "annual_operation": 561580287.4366436
+      }
+    },
+    "solar_low": {
+      "2025": {
+        "net_import_twh": 2.420175494006128,
+        "net_import_share": 0.13664321672242943,
+        "co2_power_heat_t": 2133816.468028361,
+        "co2_limit_t": 4227794.364832657,
+        "annual_cost": 494297742.63251925,
+        "annual_capital_payments": 80600660.39255445,
+        "annual_operation": 413697082.23996484
+      },
+      "2030": {
+        "net_import_twh": 4.012616256492597,
+        "net_import_share": 0.20394855820826638,
+        "co2_power_heat_t": 2071651.4919032666,
+        "co2_limit_t": 2788985.361869686,
+        "annual_cost": 785460713.6756059,
+        "annual_capital_payments": 382361355.25916123,
+        "annual_operation": 403099358.4164447
+      },
+      "2035": {
+        "net_import_twh": 8.384297221778919,
+        "net_import_share": 0.3337473812251573,
+        "co2_power_heat_t": 1631683.692401724,
+        "co2_limit_t": 1631683.692401724,
+        "annual_cost": 1110955493.9495025,
+        "annual_capital_payments": 598344044.198611,
+        "annual_operation": 512611449.7508915
+      },
+      "2040": {
+        "net_import_twh": 5.797582661853638,
+        "net_import_share": 0.19588734195422222,
+        "co2_power_heat_t": 473315.1643972625,
+        "co2_limit_t": 473315.1643972625,
+        "annual_cost": 1195724439.2677145,
+        "annual_capital_payments": 774307050.6663668,
+        "annual_operation": 421417388.6013476
+      },
+      "2045": {
+        "net_import_twh": 4.935467938061497,
+        "net_import_share": 0.14980428071151197,
+        "co2_power_heat_t": 304078.9549106044,
+        "co2_limit_t": 304078.9549106044,
+        "annual_cost": 1207570657.0478868,
+        "annual_capital_payments": 666618111.2358218,
+        "annual_operation": 540952545.8120649
+      },
+      "2050": {
+        "net_import_twh": 5.384471439550276,
+        "net_import_share": 0.1478186521735167,
+        "co2_power_heat_t": 134842.7454239449,
+        "co2_limit_t": 134842.7454239449,
+        "annual_cost": 1097923484.8000388,
+        "annual_capital_payments": 510342429.6232644,
+        "annual_operation": 587581055.1767745
+      }
+    },
+    "solar_high": {
+      "2025": {
+        "net_import_twh": 2.3212556179292503,
+        "net_import_share": 0.13104257219930526,
+        "co2_power_heat_t": 2133327.476460514,
+        "co2_limit_t": 4227794.364832657,
+        "annual_cost": 491600465.4213814,
+        "annual_capital_payments": 80600660.39255445,
+        "annual_operation": 410999805.028827
+      },
+      "2030": {
+        "net_import_twh": 3.9083064203237226,
+        "net_import_share": 0.1986461952906136,
+        "co2_power_heat_t": 2071484.1187219233,
+        "co2_limit_t": 2788985.361869686,
+        "annual_cost": 783037779.507658,
+        "annual_capital_payments": 382361355.25916123,
+        "annual_operation": 400676424.2484968
+      },
+      "2035": {
+        "net_import_twh": 2.716990267402196,
+        "net_import_share": 0.108145360613992,
+        "co2_power_heat_t": 1631683.692401724,
+        "co2_limit_t": 1631683.692401724,
+        "annual_cost": 1088866214.2858489,
+        "annual_capital_payments": 746957591.9476525,
+        "annual_operation": 341908622.3381966
+      },
+      "2040": {
+        "net_import_twh": 5.114407780637367,
+        "net_import_share": 0.1727843857249495,
+        "co2_power_heat_t": 473315.1643972625,
+        "co2_limit_t": 473315.1643972625,
+        "annual_cost": 1200988794.4074388,
+        "annual_capital_payments": 795074615.0329456,
+        "annual_operation": 405914179.3744931
+      },
+      "2045": {
+        "net_import_twh": 4.432578936720978,
+        "net_import_share": 0.13452571740421168,
+        "co2_power_heat_t": 304078.9549106044,
+        "co2_limit_t": 304078.9549106044,
+        "annual_cost": 1213703334.9446242,
+        "annual_capital_payments": 679386009.9642886,
+        "annual_operation": 534317324.98033565
+      },
+      "2050": {
+        "net_import_twh": 5.074441279370584,
+        "net_import_share": 0.13929560706865773,
+        "co2_power_heat_t": 134842.7454239449,
+        "co2_limit_t": 134842.7454239449,
+        "annual_cost": 1105018162.294127,
+        "annual_capital_payments": 517633343.011359,
+        "annual_operation": 587384819.2827679
+      }
+    },
+    "wind_low": {
+      "2025": {
+        "net_import_twh": 2.908237412005838,
+        "net_import_share": 0.16421464347869477,
+        "co2_power_heat_t": 2137321.8097416703,
+        "co2_limit_t": 4227794.364832657,
+        "annual_cost": 508867782.487023,
+        "annual_capital_payments": 69033990.80363405,
+        "annual_operation": 439833791.68338895
+      },
+      "2030": {
+        "net_import_twh": 4.861466623351633,
+        "net_import_share": 0.24709175347644702,
+        "co2_power_heat_t": 2072593.4197080834,
+        "co2_limit_t": 2788985.361869686,
+        "annual_cost": 807413557.7308899,
+        "annual_capital_payments": 359836788.1649478,
+        "annual_operation": 447576769.56594217
+      },
+      "2035": {
+        "net_import_twh": 4.010359857546104,
+        "net_import_share": 0.15963108313469007,
+        "co2_power_heat_t": 1631683.692401724,
+        "co2_limit_t": 1631683.692401724,
+        "annual_cost": 1124432088.2512398,
+        "annual_capital_payments": 723950980.7788943,
+        "annual_operation": 400481107.4723454
+      },
+      "2040": {
+        "net_import_twh": 5.23436269362851,
+        "net_import_share": 0.1768384274777946,
+        "co2_power_heat_t": 473315.1643972625,
+        "co2_limit_t": 473315.1643972625,
+        "annual_cost": 1236514461.3834636,
+        "annual_capital_payments": 804436840.0281979,
+        "annual_operation": 432077621.3552658
+      },
+      "2045": {
+        "net_import_twh": 4.157447276937777,
+        "net_import_share": 0.1261749522807532,
+        "co2_power_heat_t": 304078.9549106044,
+        "co2_limit_t": 304078.9549106044,
+        "annual_cost": 1253811222.0704663,
+        "annual_capital_payments": 701899608.0230024,
+        "annual_operation": 551911614.047464
+      },
+      "2050": {
+        "net_import_twh": 4.916428381920553,
+        "net_import_share": 0.13496810366902137,
+        "co2_power_heat_t": 134842.7454239449,
+        "co2_limit_t": 134842.7454239449,
+        "annual_cost": 1162021473.305217,
+        "annual_capital_payments": 552377860.3281847,
+        "annual_operation": 609643612.9770322
+      }
+    },
+    "wind_high": {
+      "2025": {
+        "net_import_twh": 2.1210634242412,
+        "net_import_share": 0.11976550637696462,
+        "co2_power_heat_t": 2117860.113966367,
+        "co2_limit_t": 4227794.364832657,
+        "annual_cost": 476637507.3570794,
+        "annual_capital_payments": 80600660.39255445,
+        "annual_operation": 396036846.9645249
+      },
+      "2030": {
+        "net_import_twh": 3.5650559991804234,
+        "net_import_share": 0.18119930556546388,
+        "co2_power_heat_t": 2070127.2646080218,
+        "co2_limit_t": 2788985.361869686,
+        "annual_cost": 761384729.2185503,
+        "annual_capital_payments": 382361355.25916123,
+        "annual_operation": 379023373.9593891
+      },
+      "2035": {
+        "net_import_twh": 3.6123367000227926,
+        "net_import_share": 0.14380084635584658,
+        "co2_power_heat_t": 1631683.692401724,
+        "co2_limit_t": 1631683.692401724,
+        "annual_cost": 1068208041.1376102,
+        "annual_capital_payments": 714825353.2720578,
+        "annual_operation": 353382687.86555237
+      },
+      "2040": {
+        "net_import_twh": 3.893735319595458,
+        "net_import_share": 0.13155230814749816,
+        "co2_power_heat_t": 473315.1643972625,
+        "co2_limit_t": 473315.1643972625,
+        "annual_cost": 1162684111.6935334,
+        "annual_capital_payments": 812334909.8965317,
+        "annual_operation": 350349201.7970017
+      },
+      "2045": {
+        "net_import_twh": 3.3298366911934534,
+        "net_import_share": 0.10106435340046623,
+        "co2_power_heat_t": 304078.9549106044,
+        "co2_limit_t": 304078.9549106044,
+        "annual_cost": 1168522504.1106687,
+        "annual_capital_payments": 693077341.1989402,
+        "annual_operation": 475445162.9117284
+      },
+      "2050": {
+        "net_import_twh": 3.8188920718368786,
+        "net_import_share": 0.10486297357527016,
+        "co2_power_heat_t": 134842.7454239449,
+        "co2_limit_t": 134842.7454239449,
+        "annual_cost": 1050160489.478781,
+        "annual_capital_payments": 541166917.702037,
+        "annual_operation": 508993571.77674407
+      }
+    }
+  },
+  "numerical_windows": 42,
+  "verified_calendar_ledgers": 42,
+  "max_constraint_violation": 2.1611867850879207e-10,
+  "max_bound_violation": 1.859064013842726e-10,
+  "max_calendar_closure_error": 0.001861572265625,
+  "max_shortage_mwh": 0.0,
+  "max_new_gas_mw": 0.0,
+  "market_review_findings": [
+    {
+      "case": "solar_low",
+      "window": 2035,
+      "year": "2035",
+      "kind": "import_share_review",
+      "share": 0.3337473812251573,
+      "meaning": "Review criterion only, not a failed physical constraint"
+    }
+  ],
+  "source_frozen_files": 694,
+  "scientific_acceptance": false,
+  "separate_operating_benchmark": "Original separate three-zone electricity experiment previously verified; not a test of these new national portfolios",
+  "remaining": [
+    "Interpret the preserved Solar Low 2035 import-share review finding",
+    "Update affected manuscript figures, tables and text from verified outputs"
+  ],
+  "planning_and_accounting_complete": true
+}

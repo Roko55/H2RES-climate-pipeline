@@ -1,0 +1,66 @@
+{
+  "gas_ban_from": 2025,
+  "ban_new_gas_power": true,
+  "atw_ceiling_mw_per_anchor": 2900,
+  "carbon_caps_t": {
+    "2025": 4227794.364832657,
+    "2030": 2788985.361869686,
+    "2035": 1631683.692401724,
+    "2040": 473315.1643972625,
+    "2045": 304078.9549106044,
+    "2050": 134842.7454239449
+  },
+  "carbon_scope": [
+    "electricity",
+    "heating"
+  ],
+  "carbon_source": {
+    "url": "https://api.reportnet.europa.eu/dataset/exportPublicFile/dataflow/1478/dataProvider/50?fileName=HR-Table+1a1b5a5b.zip",
+    "categories": [
+      "1.A.1.a Public electricity and heat production",
+      "1.A.4.a Commercial/Institutional",
+      "1.A.4.b Residential"
+    ],
+    "interpretation": "WAM sector-emissions envelope as a scenario assumption for the covered direct power/heating emissions; not a Croatian statutory cap",
+    "projection_csv_sha256": "bb7e19202608261c60545ec18637919f5cc211e01be0166f33de60d5b79133ca"
+  },
+  "net_import_ceiling_mwh": null,
+  "market": {
+    "shape_file": "market_shape.csv",
+    "shape_sha256": "5c17716c0bc9f523ad96dedd516401702c53d899c3628f801ade4f0bace054e5",
+    "method": "12 monthly x 24 hourly observed price means; expanded to the common 8760-hour non-leap model calendar",
+    "original_observations_year": 2025,
+    "observations_sha256": "054add1887bde8715cac98bbbb2e3770439830bfcfdcd0ffc28f27f9692fbd78",
+    "source": "https://api.energy-charts.info/price?start=2025-01-01T00%3A00Z&end=2025-12-31T23%3A59Z&bzn=HR",
+    "normalized_shape_mean": 1.0,
+    "shape_min": 0.1021627233221054,
+    "shape_max": 2.1366879135018166,
+    "native_annual_price_level": 45.0,
+    "native_growth_percent": 0.05,
+    "choice": "Preserve the existing model price level and cost basis; change only the observed seasonal/diurnal shape. This is a fixed external-market scenario, not a wholesale-price forecast.",
+    "symmetric_same_hour_price": true,
+    "arbitrary_spread_added": false,
+    "negative_values_clipped": false,
+    "shape_interpretation": "Averaging removes individual-day price spikes; all derived monthly-hourly means happen to be positive. No price clipping or battery-arbitrage control is introduced."
+  },
+  "financing": {
+    "discount_rate": 0.05,
+    "method": "Annual capital payments",
+    "lifetimes": "Executed technology inputs"
+  },
+  "normal_planning_unserved_demand_ub_mwh": 0.0,
+  "future_storage_duration_h": 4.0,
+  "future_storage_duration_source": "https://atb.nlr.gov/electricity/2024/utility-scale_battery_storage",
+  "future_storage_duration_interpretation": "Declared future technology assumption. Existing installations unchanged; grid-MW growth, imports, gas ban and emissions caps unchanged.",
+  "existing_gas_boilers": {
+    "individual_available_mw": 3893.01,
+    "district_available_mw": {
+      "TE-TOZagreb": 348.0
+    }
+  },
+  "existing_gas_rule": "Retain existing 2025 individual/district gas-boiler stock through 2050; no new gas capacity.",
+  "industry_rule": "Prescribed demand/fuel inputs; industrial technology replacement is not optimized.",
+  "common_calibrated_base_year": 2020,
+  "weather": "Stationary selected annual profiles",
+  "hourly_exchange": "Effective net-import capacity 2000 MW in 2025, 3450-3600 MW thereafter; no annual quota. Per-window audits and actual peaks are included in the extract."
+}

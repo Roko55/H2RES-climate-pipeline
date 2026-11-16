@@ -1,0 +1,164 @@
+{
+  "utc": "2026-11-14T03:46:16.032816+00:00",
+  "verified": false,
+  "ledgers": {
+    "average_2025": {
+      "sha256": "5e6b759c9a6a21291cbbc025a6b7fa6567995efc689cb69adb35dfb9cc746fa7",
+      "status": "verified"
+    },
+    "average_2030": {
+      "sha256": "00a1ce155313073e144cf9bbc445c665a4a44d28e7d847f97630015570f5b862",
+      "status": "verified"
+    },
+    "average_2035": {
+      "sha256": "cceaa90ec31762f0b823e3498204be61252e95a3e7949e50ee5fc319e1b26e82",
+      "status": "verified"
+    },
+    "average_2040": {
+      "sha256": "41947809a7a2442b1c1913e19459286319cc5b4ea2086243f916b1b1287dc574",
+      "status": "verified"
+    },
+    "average_2045": {
+      "sha256": "04dd6c01e54423652fab796eddb97449a7f9258cace09a5a3f06a5c77953b7d3",
+      "status": "verified"
+    },
+    "average_2050": {
+      "sha256": "7d5319b6b639672a91fd9518ee8578d840999b830e975bd624fd8763cb61e237",
+      "status": "verified"
+    },
+    "temperature_cold_2025": {
+      "sha256": "99a47032e4106d7c3bb7bec6d581cb1a6b2cce29b77ed06943e410ec4a97c28f",
+      "status": "verified"
+    },
+    "temperature_cold_2030": {
+      "sha256": "2548209e671945a42f14d6ad121ec7709855d8663bc7782bf2d4c4dbd73127a0",
+      "status": "verified"
+    },
+    "temperature_cold_2035": {
+      "sha256": "e391743477f4b339d1b038203c9b167daf20b1809763290af1f84b0afb3e24ba",
+      "status": "verified"
+    },
+    "temperature_cold_2040": {
+      "sha256": "5a6d45db48f757563b5cd5d9c0a6b56fafcc0eeba3c7f5b1fe159a1df4aa6974",
+      "status": "verified"
+    },
+    "temperature_cold_2045": {
+      "sha256": "e373ebba687d48cbc759a5c930c8462ffd73a80f13913c6250e1d414c542d87e",
+      "status": "verified"
+    },
+    "temperature_cold_2050": {
+      "sha256": "5020dfb58d6a5300473bcc7d38c6202887f019d35ed5abae7606228034db3a9b",
+      "status": "verified"
+    },
+    "temperature_hot_2025": {
+      "sha256": "45d22e3a63ae00601545cc575c8fae06909ee37eafba4be1707db89015fae14a",
+      "status": "verified"
+    },
+    "temperature_hot_2030": {
+      "sha256": "3048e81220358e28e46514e8edb5a6a357c5d975478f6fcf268ebe8044f6f03b",
+      "status": "verified"
+    },
+    "temperature_hot_2035": {
+      "sha256": "117c8daff8a5bb0c29d8d9e1af7fb6fbb5b4688df6489cc27a9c062d3ab25add",
+      "status": "verified"
+    },
+    "temperature_hot_2040": {
+      "sha256": "d548ddbcbf3bc2d2c382f407d705e96e4921dcbccca240a8db51c4b8f8d338a4",
+      "status": "verified"
+    },
+    "temperature_hot_2045": {
+      "sha256": "ad1358429909aa3ba80eb437615da680d0f199a6f68d86ed354a754da06a80da",
+      "status": "verified"
+    },
+    "temperature_hot_2050": {
+      "sha256": "49a2f1caaaceeed9af06d3178ca41ee54883a39e1a27ea4f36e23a94ba874511",
+      "status": "verified"
+    },
+    "solar_low_2025": {
+      "sha256": "583d76a73f73f6f42cd2b808d3fcc97af386ba1e59475a8011427a2e42ec8d62",
+      "status": "verified"
+    },
+    "solar_low_2030": {
+      "sha256": "7e5a69556e4beccdde6784d10257b5629f0ae0d4c9ba646232120612bc8c8a91",
+      "status": "verified"
+    },
+    "solar_low_2035": {
+      "sha256": "ddb5ecef5f5813ec300c56df22ab2b531208b4651ff3e69b064ea9225cb72bfd",
+      "status": "verified"
+    },
+    "solar_high_2025": {
+      "sha256": "bb9caa1dee33ba8b2b749174306bc907c42c4394185f4dab534fa1b923f2c2b8",
+      "status": "verified"
+    },
+    "solar_high_2030": {
+      "sha256": "833f215c7e6a3daf2b8d0362e24b79352d49b20e02ff9618f2a44780b137fe88",
+      "status": "verified"
+    },
+    "solar_high_2035": {
+      "sha256": "0ac2e2cef1c3ec6f8a3c5e967265c4aeba7aaa8685b020d580c78e5227c67226",
+      "status": "verified"
+    },
+    "solar_high_2040": {
+      "sha256": "4e38b5f338b3f1d27b532610a512889c32df80ccb38ab825a991d92f5e2149be",
+      "status": "verified"
+    },
+    "solar_high_2045": {
+      "sha256": "5c4a56fbbd1fc08dee0835ce8844754560a96eacc6b2fa35533648f2be59d538",
+      "status": "verified"
+    },
+    "solar_high_2050": {
+      "sha256": "9daddff0e757d713ead40fd845d36b0345b33e45aac82fde29cad506c2acb131",
+      "status": "verified"
+    },
+    "wind_low_2025": {
+      "sha256": "d665db739fbc0f0f5b58d520f8cc685624a64003df6640d23745ae1404f2b9e8",
+      "status": "verified"
+    },
+    "wind_low_2030": {
+      "sha256": "6a61347e2c6ae00dc1ccbf73d81ee76203c1baaf002444931bf2892557c2ff64",
+      "status": "verified"
+    },
+    "wind_low_2035": {
+      "sha256": "722fcf79c5feb74a9cc772cd25e6e197374a450b054ada4abeb89f693b4dba21",
+      "status": "verified"
+    },
+    "wind_low_2040": {
+      "sha256": "d7e0f3ea382b6bbeba3c7f425d79e9435936cf3909ee8c1497c449d9c77089e2",
+      "status": "verified"
+    },
+    "wind_low_2045": {
+      "sha256": "f7d33027eb50f02829c311060f8fdc8feca15454e8bcf58b9855d91afe0f6133",
+      "status": "verified"
+    },
+    "wind_low_2050": {
+      "sha256": "9b1a7e31ece00fc8a51afc332bc137f18badc1a74f76f0879a3c612911491b09",
+      "status": "verified"
+    },
+    "wind_high_2025": {
+      "sha256": "233390291a6947d4bd5f8cc19b392f83e1ef68357c6ebcc4f0e09e8b6b7bd90c",
+      "status": "verified"
+    },
+    "wind_high_2030": {
+      "sha256": "11ff9964db8c7efa1fbb824acf932c2e887ef19e7a659080904927abb95c5913",
+      "status": "verified"
+    },
+    "wind_high_2035": {
+      "sha256": "28db3dbbf2500359ea8c39e4ef550614cbe72ed5b0ef4f6be5b79d921f563b60",
+      "status": "verified"
+    },
+    "wind_high_2040": {
+      "sha256": "922b933977d6085f6445e144a94b98c2518c7fdb374fcdb05d1ecec1a5609cb9",
+      "status": "verified"
+    },
+    "wind_high_2045": {
+      "sha256": "b696fb76ada02a9919a492d67d70f2f693b3285ed3bf89980584e30dc58be6bc",
+      "status": "verified"
+    },
+    "wind_high_2050": {
+      "sha256": "cd4af0ca3571b6b89119d49357887b20a405783def9be448206e85f67b73a42a",
+      "status": "verified"
+    }
+  },
+  "failures": {},
+  "new_optimizations": 0
+}
